@@ -1,9 +1,9 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "«Autorrelleno» de KeePassium";
+"CFBundleDisplayName" = "«Autorrelleno» de PassPouch";
 
 /* Bundle name */
-"CFBundleName" = "«Autorrelleno» de KeePassium";
+"CFBundleName" = "«Autorrelleno» de PassPouch";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Utilizar reconocimiento facial para desbloquear KeePassium";
+"NSFaceIDUsageDescription" = "Utilizar reconocimiento facial para desbloquear PassPouch";
 

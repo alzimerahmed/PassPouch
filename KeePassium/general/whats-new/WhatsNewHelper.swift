@@ -82,7 +82,7 @@ final class WhatsNewHelper {
                 )),
                 subtitle: .init(NSLocalizedString(
                     "[WhatsNew/Feature/AutoFillWithMemory/description]",
-                    value: "KeePassium remembers the entry you choose on each website.",
+                    value: "PassPouch remembers the entry you choose on each website.",
                     comment: "Description of a feature highlight, a call to action."
                 ))
             ))
@@ -157,13 +157,13 @@ extension LString {
         static let fullTitle = NSLocalizedString(
             "[WhatsNew/fullTitle]",
             bundle: Bundle.main,
-            value: "What's New in KeePassium",
+            value: "What's New in PassPouch",
             comment: "Full title for release highlights"
         )
         static let announcementMessage = NSLocalizedString(
             "[WhatsNew/Announcement/body]",
             bundle: Bundle.main,
-            value: "Discover new features and improvements in KeePassium.",
+            value: "Discover new features and improvements in PassPouch.",
             comment: "Call to action in What's New announcement"
         )
         static let titleWhatsNew = NSLocalizedString(

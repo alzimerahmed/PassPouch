@@ -8,7 +8,7 @@
 "[AppLock] Unlock" = "잠금 해제";
 
 /* Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt. */
-"[AppLock/Biometric/Hint] Unlock KeePassium" = "KeePassium 잠금 해제";
+"[AppLock/Biometric/Hint] Unlock PassPouch" = "PassPouch 잠금 해제";
 
 /* Action/button to switch from TouchID/FaceID prompt to manual input of the AppLock passcode. */
 "[AppLock/cancelBiometricAuth] Use Passcode" = "비밀번호 사용";
@@ -17,7 +17,7 @@
 "[AppLock/changePasscode]" = "비밀번호 변경";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/EnterPasscode/callToAction]" = "KeePassium 잠금 해제";
+"[AppLock/EnterPasscode/callToAction]" = "PassPouch 잠금 해제";
 
 /* Action: change keyboard type to enter alphanumeric passphrases */
 "[AppLock/Passcode/KeyboardType/switchAction] 123→ABC" = "123→ABC";
@@ -38,10 +38,10 @@
 "[AppLock/savePasscode]" = "비밀번호 저장";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/SetupPasscode/callToAction]" = "허가되지 않은 접근으로부터 KeePassium 보호";
+"[AppLock/SetupPasscode/callToAction]" = "허가되지 않은 접근으로부터 PassPouch 보호";
 
 /* Message shown when AutoFill cannot automatically open the main app for upgrading to a premium version. */
-"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open KeePassium from your home screen." = "업그레이드를 위해, 기기의 홈 화면에서 직접 KeePassium을 실행해주시기 바랍니다.";
+"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open PassPouch from your home screen." = "업그레이드를 위해, 기기의 홈 화면에서 직접 PassPouch을 실행해주시기 바랍니다.";
 
 /* Title of a message related to upgrading to the premium version */
 "[AutoFill/Premium/Upgrade/Manual/title] Premium Upgrade" = "프리미엄 버전 업그레이드";
@@ -224,7 +224,7 @@
 "[Database/SyncConflict/currentVersion]" = "서버에 저장된 현재 버전";
 
 /* Message shown in case of database sync conflict. */
-"[Database/SyncConflict/description]" = "데이터베이스가 KeePassium에 불러들인 이후에 변경되었습니다.";
+"[Database/SyncConflict/description]" = "데이터베이스가 PassPouch에 불러들인 이후에 변경되었습니다.";
 
 /* Title: the loaded (on-device) database version in case of sync conflict. */
 "[Database/SyncConflict/loadedVersion]" = "기기에 저장된 버전";
@@ -344,7 +344,7 @@
 "[Database2/Loading/Error] Error unpacking database: %@" = "데이터베이스 패키징 해제 중 오류: %@";
 
 /* A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String] */
-"[Database2/Loading/Warning/missingBinaries]" = "일부 항목의 첨부 파일의 데이터가 발견되지 않았습니다. 이는 마지막으로 사용한 앱(%1$@)에 의해 데이터베이스가 손상된 것일 수 있습니다. KeePassium은 이 데이터를 복구할 수는 없지만, 첨부 파일을 비운 채로 보존할 것입니다. 사용자는 백업본을 이용해 데이터베이스를 복원해야 합니다. \n\n데이터가 발견되지 않은 첨부 파일: %2$@";
+"[Database2/Loading/Warning/missingBinaries]" = "일부 항목의 첨부 파일의 데이터가 발견되지 않았습니다. 이는 마지막으로 사용한 앱(%1$@)에 의해 데이터베이스가 손상된 것일 수 있습니다. PassPouch은 이 데이터를 복구할 수는 없지만, 첨부 파일을 비운 채로 보존할 것입니다. 사용자는 백업본을 이용해 데이터베이스를 복원해야 합니다. \n\n데이터가 발견되지 않은 첨부 파일: %2$@";
 
 /* A warning about nameless attachments, shown after loading the database. [listOfEntryNames: String] */
 "[Database2/Loading/Warning/namelessAttachments]" = "일부 항목에서 이름이 없는 첨부 파일을 발견했습니다. 데이터베이스가 손상되었을 수 있습니다.\n\n 다음 항목에 첨부된 파일과 첨부 파일의 기록을 확인해 보시기 바랍니다. : %@";
@@ -508,8 +508,8 @@
 /* Error message: there is no USB drive connected to the device. */
 "[FileAccessError/FileProvider/NotFound/usbDrive]" = "USB 드라이브가 연결되어 있지 않습니다.";
 
-/* Error message shown when there's internal inconsistency in KeePassium. */
-"[FileAccessError/internalError]" = "내부 KeePassium 오류. 개발자에게 오류 내용을 알려주세요.";
+/* Error message shown when there's internal inconsistency in PassPouch. */
+"[FileAccessError/internalError]" = "내부 PassPouch 오류. 개발자에게 오류 내용을 알려주세요.";
 
 /* Error message: storage provider app (e.g. Google Drive) does not respond to requests. */
 "[FileAccessError/NoResponse/genericFileProvider]" = "저장 공간 제공자가 응답이 없습니다.";
@@ -970,7 +970,7 @@
 /* What's included in a price plan. Please leave `perpetual fallback license` in English. */
 "[Premium/Price Plan/Conditions/perpetual fallback]" = "렌탈 라이선스 (영구 라이선스 실패 대비용)";
 
-/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://keepassium.com/articles/perpetual-fallback-license/ */
+/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://passpouch.org/articles/perpetual-fallback-license/ */
 "[Premium/Price Plan/Conditions/subscription as purchase]" = "구매로서의 구독";
 
 /* What's included in a price plan */
@@ -1001,7 +1001,7 @@
 "[Premium/Upgrade/cancelOngoingSubscription]" = "이전에 구매한 구독이 있는지 확인해 주시기 바랍니다.";
 
 /* Message shown when in-app purchase is deferred until approval (parental or corporate). */
-"[Premium/Upgrade/Deferred/text] Thank you! You can use KeePassium while purchase is awaiting approval." = "감사합니다! 구매가 확정되기 전까지 계속해서 KeePassium을 사용하실 수 있습니다.";
+"[Premium/Upgrade/Deferred/text] Thank you! You can use PassPouch while purchase is awaiting approval." = "감사합니다! 구매가 확정되기 전까지 계속해서 PassPouch을 사용하실 수 있습니다.";
 
 /* Product price for monthly premium subscription. [localizedPrice: String] */
 "[Premium/Upgrade/price] %@ / month" = "%@ / 월";
@@ -1037,7 +1037,7 @@
 "[Premium/Upgrade/Success/thankYou]" = "구매해주셔서 감사합니다!";
 
 /* A generic description of a premium feature */
-"[PremiumFeature/Generic/description]" = "프리미엄 버전으로 업그레이드하고 KeePassium의 모든 기능을 사용해 보세요.";
+"[PremiumFeature/Generic/description]" = "프리미엄 버전으로 업그레이드하고 PassPouch의 모든 기능을 사용해 보세요.";
 
 /* A generic title of a premium feature */
 "[PremiumFeature/Generic/title]" = "프리미엄 기능";
@@ -1055,7 +1055,7 @@
 "[PremiumFeature/MultiDB/title] Multiple Databases" = "다중 데이터베이스";
 
 /* A brief summary of the privacy policy (for offline mode) */
-"[PrivacyPolicy/Offline/text]" = "KeePassium은 개인 정보나 통계 데이터를 수집하지 않으며, 타인 혹은 타 단체에 공유하지도 않습니다.";
+"[PrivacyPolicy/Offline/text]" = "PassPouch은 개인 정보나 통계 데이터를 수집하지 않으며, 타인 혹은 타 단체에 공유하지도 않습니다.";
 
 /* Section: privacy policy */
 "[PrivacyPolicy/title]" = "개인정보처리방침";
@@ -1112,22 +1112,22 @@
 "[Support/template] (Please describe the problem here)" = "(여기에 문제에 대한 설명을 작성해주세요.)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "KeePassium이 더 좋은 앱이 될 수 있도록 도와주세요!";
+"[TipBox/callToAction/1]" = "PassPouch이 더 좋은 앱이 될 수 있도록 도와주세요!";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "KeePassium이 더 멋진 앱이 될 수 있도록 도와주세요!";
+"[TipBox/callToAction/2]" = "PassPouch이 더 멋진 앱이 될 수 있도록 도와주세요!";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "KeePassium이 계속 무료로 유지될 수 있도록 도와주세요!";
+"[TipBox/callToAction/3]" = "PassPouch이 계속 무료로 유지될 수 있도록 도와주세요!";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "KeePassium을 잘 사용하고 계신가요?";
+"[TipBox/description/1]" = "PassPouch을 잘 사용하고 계신가요?";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "KeePassium은 무료 오픈 소스 앱입니다. 사용자의 민감한 정보가 빠져나갈 구멍을 만들 수 없죠. 광고와 추적 없이 사용자를 존중합니다.";
+"[TipBox/description/2]" = "PassPouch은 무료 오픈 소스 앱입니다. 사용자의 민감한 정보가 빠져나갈 구멍을 만들 수 없죠. 광고와 추적 없이 사용자를 존중합니다.";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "KeePassium을 잘 사용하고 있지만 프리미엄 기능은 필요하지 않으신가요?";
+"[TipBox/description/3]" = "PassPouch을 잘 사용하고 있지만 프리미엄 기능은 필요하지 않으신가요?";
 
 /* Notification after a successful donation. */
 "[TipBox/thankYou]" = "감사합니다!";
@@ -1136,7 +1136,7 @@
 "[TipBox/title/2]" = "기부";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "KeePassium 지원하기";
+"[TipBox/title/3]" = "PassPouch 지원하기";
 
 /* Human-readable file location. The file is situated either online / in cloud storage, or on the same device, but in some other app. Example: 'File Location: Cloud storage / Another app' */
 "[URLReference/Location] Cloud storage / Another app" = "클라우드 저장소 / 기타 앱";

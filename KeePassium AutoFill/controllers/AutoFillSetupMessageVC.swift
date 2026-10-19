@@ -85,7 +85,7 @@ extension AutoFillSetupMessageVC: UITableViewDataSource, UITableViewDelegate {
             cell.textLabel?.text = systemAppName
             cell.theSwitch.isOn = false
         case 1:
-            cell.textLabel?.text = "KeePassium"
+            cell.textLabel?.text = "PassPouch"
             cell.theSwitch.isOn = true
         default:
             fatalError()
@@ -113,7 +113,7 @@ extension LString {
     )
     public static let uncheckKeychainAutoFillMessageTemplate = NSLocalizedString(
         "[AutoFill/Setup/UncheckKeychain/message]",
-        value: "To make KeePassium your default password manager, uncheck \"%@\".",
+        value: "To make PassPouch your default password manager, uncheck \"%@\".",
         comment: "Instruction to deselect another app in the settings [appName: String]"
     )
     public static let autoFillSetupSectionHeader_iOS17 = NSLocalizedString(

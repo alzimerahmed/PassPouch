@@ -1,9 +1,9 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "Автозаповнення KeePassium";
+"CFBundleDisplayName" = "Автозаповнення PassPouch";
 
 /* Bundle name */
-"CFBundleName" = "Автозаповнення KeePassium";
+"CFBundleName" = "Автозаповнення PassPouch";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Використовувати Face ID, щоб розблокувати KeePassium";
+"NSFaceIDUsageDescription" = "Використовувати Face ID, щоб розблокувати PassPouch";
 

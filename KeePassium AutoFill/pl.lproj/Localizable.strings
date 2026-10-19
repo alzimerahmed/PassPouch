@@ -26,13 +26,13 @@
 "[AutoFill/RememberContext/callToAction]" = "Popraw propozycje Autouzupełniania";
 
 /* Description of the 'Remember Selected Entries` feature */
-"[AutoFill/RememberContext/description]" = "Aplikacja KeePassium zapamięta, który wpis wybierzesz na poszczególnych stronach internetowych, a następnie automatycznie go zasugeruje.";
+"[AutoFill/RememberContext/description]" = "Aplikacja PassPouch zapamięta, który wpis wybierzesz na poszczególnych stronach internetowych, a następnie automatycznie go zasugeruje.";
 
 /* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
 "[AutoFill/Search/Context/title]" = "Kontekst";
 
 /* No comment provided by engineer. */
-"[AutoFill/Setup/footer]" = "Autouzupełnianie nie może automatycznie uzyskać dostępu do plików znajdujących się w głównej aplikacji KeePassium.\n\nDlaczego? System traktuje Autouzupełnianie jako oddzielną aplikację, niezależną do głównego procesu KeePassium. Ze względów bezpieczeństwa aplikacja nie może mieć dostępu do zewnętrznych plików - chyba, że celowo dołączysz te pliki do tej aplikacji. To gwarantuje, że aplikacja może mieć dostęp do tylko plików, na które zezwolisz.\n\nW rezultacie zarówno Autouzupełnianie, jak i główna aplikacja KeePassium, muszą otrzymać własne uprawnienia do zewnętrznego pliku. Na szczęście jest to jednorazowa procedura.";
+"[AutoFill/Setup/footer]" = "Autouzupełnianie nie może automatycznie uzyskać dostępu do plików znajdujących się w głównej aplikacji PassPouch.\n\nDlaczego? System traktuje Autouzupełnianie jako oddzielną aplikację, niezależną do głównego procesu PassPouch. Ze względów bezpieczeństwa aplikacja nie może mieć dostępu do zewnętrznych plików - chyba, że celowo dołączysz te pliki do tej aplikacji. To gwarantuje, że aplikacja może mieć dostęp do tylko plików, na które zezwolisz.\n\nW rezultacie zarówno Autouzupełnianie, jak i główna aplikacja PassPouch, muszą otrzymać własne uprawnienia do zewnętrznego pliku. Na szczęście jest to jednorazowa procedura.";
 
 /* Must match Apple's translation, as found in iOS 18 Settings → General → AutoFill & Passwords. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/autofillFrom]" = "Wypełnianie";
@@ -41,7 +41,7 @@
 "[AutoFill/Setup/UncheckKeychain/callToAction]" = "Odznacz wybór pęku kluczy";
 
 /* Instruction to deselect another app in the settings [appName: String] */
-"[AutoFill/Setup/UncheckKeychain/message]" = "Aby aplikacja KeePassium stała się Twoim domyślnym menadżerem haseł, odznacz \"%@\".";
+"[AutoFill/Setup/UncheckKeychain/message]" = "Aby aplikacja PassPouch stała się Twoim domyślnym menadżerem haseł, odznacz \"%@\".";
 
 /* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "Dostawcy haseł i kluczy:";

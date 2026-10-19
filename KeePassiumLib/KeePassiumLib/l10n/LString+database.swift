@@ -45,7 +45,7 @@ extension LString {
     public static let syncConflictMessage = NSLocalizedString(
         "[Database/SyncConflict/description]",
         bundle: Bundle.framework,
-        value: "The database has changed since it was loaded in KeePassium.",
+        value: "The database has changed since it was loaded in PassPouch.",
         comment: "Message shown in case of database sync conflict."
     )
 
@@ -401,7 +401,7 @@ extension LString {
     public static let messageLocalFilesMissing = NSLocalizedString(
         "[Database/List/LocalMissing/message]",
         bundle: Bundle.framework,
-        value: "If some local files are not listed, launch the main KeePassium app first.",
+        value: "If some local files are not listed, launch the main PassPouch app first.",
         comment: "Recommendation for solving a problem with a list of files.")
     public static let callToActionOpenTheMainApp = NSLocalizedString(
         "[Database/List/LocalMissing/callToAction]",
@@ -444,7 +444,7 @@ extension LString {
     public static let databaseFormatVersionUpgradeMessageTemplate = NSLocalizedString(
         "[Database/FormatVersion/Upgrade/text]",
         bundle: Bundle.framework,
-        value: "KeePassium needs to upgrade your database file format (from %@ to %@). You might need to update other apps that use this database.",
+        value: "PassPouch needs to upgrade your database file format (from %@ to %@). You might need to update other apps that use this database.",
         comment: "Info message when the app needs to change database file format. [oldFormat, newFormat: String]")
     public static let titleDatabaseFormatConversionAllDataPreserved = NSLocalizedString(
         "[Database/FormatVersion/Conversion/allDataPreserved]",
@@ -480,7 +480,7 @@ extension LString {
     public static let titleOpenAppToSaveChanges = NSLocalizedString(
         "[Database/UnsavedChanges/OpenAppCallToAction]",
         bundle: Bundle.framework,
-        value: "To save changes, open the main KeePassium app.",
+        value: "To save changes, open the main PassPouch app.",
         comment: "Call to action shown in AutoFill module.")
     public static let titleSomeDatabasesHaveUnsavedChanges = NSLocalizedString(
         "[Database/UnsavedChanges/someDatabases]",
@@ -500,7 +500,7 @@ extension LString {
     public static let messageProblematicChangesInfo = NSLocalizedString(
         "[Database/UnsavedChanges/Problematic/info]",
         bundle: Bundle.framework,
-        value: "Some pending changes refer to missing entries or groups. KeePassium will create these items in a separate group and apply the changes there.",
+        value: "Some pending changes refer to missing entries or groups. PassPouch will create these items in a separate group and apply the changes there.",
         comment: "Notification message about a problem with unsaved/pending changes.")
     public static let actionSaveChanges = NSLocalizedString(
         "[Database/UnsavedChanges/saveAction]",

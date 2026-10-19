@@ -70,7 +70,7 @@ extension LString {
     public static let allowNetwokAccessQuestionText = NSLocalizedString(
         "[Settings/NetworkAccess/Confirmation/text]",
         bundle: Bundle.framework,
-        value: "Allow KeePassium to make network connections to external services?",
+        value: "Allow PassPouch to make network connections to external services?",
         comment: "Confirmation dialog message")
 
     public static let titleAutoDownloadFavicons = NSLocalizedString(

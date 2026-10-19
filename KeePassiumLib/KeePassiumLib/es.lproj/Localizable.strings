@@ -29,7 +29,7 @@
 "[AppLock] Unlock" = "Desbloquear";
 
 /* Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt. */
-"[AppLock/Biometric/Hint] Unlock KeePassium" = "Desbloquear KeePassium";
+"[AppLock/Biometric/Hint] Unlock PassPouch" = "Desbloquear PassPouch";
 
 /* Action/button to switch from TouchID/FaceID prompt to manual input of the AppLock passcode. */
 "[AppLock/cancelBiometricAuth] Use Passcode" = "Usar código de acceso";
@@ -38,7 +38,7 @@
 "[AppLock/changePasscode]" = "Cambiar código de acceso";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/EnterPasscode/callToAction]" = "Desbloquear KeePassium";
+"[AppLock/EnterPasscode/callToAction]" = "Desbloquear PassPouch";
 
 /* Action: change keyboard type to enter alphanumeric passphrases */
 "[AppLock/Passcode/KeyboardType/switchAction] 123→ABC" = "123 → ABC";
@@ -65,22 +65,22 @@
 "[AppLock/savePasscode]" = "Guardar código de acceso";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/SetupPasscode/callToAction]" = "Protege KeePassium de accesos no autorizados";
+"[AppLock/SetupPasscode/callToAction]" = "Protege PassPouch de accesos no autorizados";
 
 /* Message shown when AutoFill cannot automatically open the main app for upgrading to a premium version. */
-"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open KeePassium from your home screen." = "Para actualizar, inicie KeePassium manualmente desde el icono de aplicación.";
+"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open PassPouch from your home screen." = "Para actualizar, inicie PassPouch manualmente desde el icono de aplicación.";
 
 /* Title of a message related to upgrading to the premium version */
 "[AutoFill/Premium/Upgrade/Manual/title] Premium Upgrade" = "Obtener Premium";
 
 /* Call to action / instruction on how to enable accessibility permission */
-"[AutoType/AccessibilityPrompt/callToAction]" = "Abra los ajustes del sistema → Privacidad & Seguridad → Accesibilidad, y habilite ahí KeePassium.";
+"[AutoType/AccessibilityPrompt/callToAction]" = "Abra los ajustes del sistema → Privacidad & Seguridad → Accesibilidad, y habilite ahí PassPouch.";
 
 /* Message explaining why accessibility permission is needed */
-"[AutoType/AccessibilityPrompt/message]" = "KeePassium necesita su permiso para enviar pulsaciones de teclas a otras aplicaciones.";
+"[AutoType/AccessibilityPrompt/message]" = "PassPouch necesita su permiso para enviar pulsaciones de teclas a otras aplicaciones.";
 
 /* Title of a dialog asking user to provide a security permission */
-"[AutoType/AccessibilityPrompt/title]" = "KeePassium necesita su permiso";
+"[AutoType/AccessibilityPrompt/title]" = "PassPouch necesita su permiso";
 
 /* Action: send key presses to 'type in' entry data into another app */
 "[AutoType/action]" = "Realizar autoescritura";
@@ -242,7 +242,7 @@
 "[Database/FormatVersion/PasskeysNotSupported]" = "El formato actual de base de datos no admite llaves de acceso.";
 
 /* Info message when the app needs to change database file format. [oldFormat, newFormat: String] */
-"[Database/FormatVersion/Upgrade/text]" = "KeePassium necesita mejorar el formato del archivo de su base de datos (de %1$@ a %2$@). Puede que necesite actualizar otras aplicaciones que utilicen esta base de datos.";
+"[Database/FormatVersion/Upgrade/text]" = "PassPouch necesita mejorar el formato del archivo de su base de datos (de %1$@ a %2$@). Puede que necesite actualizar otras aplicaciones que utilicen esta base de datos.";
 
 /* Title of an info message when the app needs to change database file format. */
 "[Database/FormatVersion/Upgrade/title]" = "Antes de continuar";
@@ -263,7 +263,7 @@
 "[Database/List/LocalMissing/callToAction]" = "Abrir la aplicación";
 
 /* Recommendation for solving a problem with a list of files. */
-"[Database/List/LocalMissing/message]" = "Si algunos archivos locales no aparecen en la lista, primero inicia la aplicación principal de KeePassium.";
+"[Database/List/LocalMissing/message]" = "Si algunos archivos locales no aparecen en la lista, primero inicia la aplicación principal de PassPouch.";
 
 /* Title of the database picker list */
 "[Database/List/title]" = "Bases de datos";
@@ -374,7 +374,7 @@
 "[Database/Progress/writingDatabaseFile]" = "Escribiendo archivo de base de datos...";
 
 /* Suggested solution/call to action when intermediate sync app fails. */
-"[Database/RecommendRemote/callToAction]" = "Intente conectarse a su almacenamiento remoto directamente desde KeePassium.";
+"[Database/RecommendRemote/callToAction]" = "Intente conectarse a su almacenamiento remoto directamente desde PassPouch.";
 
 /* Action/button */
 "[Database/Reload/action]" = "Volver a cargar base de datos";
@@ -443,7 +443,7 @@
 "[Database/SyncConflict/currentVersion]" = "Versión actual";
 
 /* Message shown in case of database sync conflict. */
-"[Database/SyncConflict/description]" = "La base de datos ha cambiado desde que se cargó en KeePassium.";
+"[Database/SyncConflict/description]" = "La base de datos ha cambiado desde que se cargó en PassPouch.";
 
 /* Title: the loaded (on-device) database version in case of sync conflict. */
 "[Database/SyncConflict/loadedVersion]" = "Versión cargada";
@@ -485,10 +485,10 @@
 "[Database/UnsavedChanges/couldNotApply]" = "Algunos cambios pendientes no se han podido aplicar automáticamente; podrían faltar modificaciones recientes.";
 
 /* Call to action shown in AutoFill module. */
-"[Database/UnsavedChanges/OpenAppCallToAction]" = "Para guardar los cambios, abra la aplicación principal de KeePassium.";
+"[Database/UnsavedChanges/OpenAppCallToAction]" = "Para guardar los cambios, abra la aplicación principal de PassPouch.";
 
 /* Notification message about a problem with unsaved/pending changes. */
-"[Database/UnsavedChanges/Problematic/info]" = "Algunos cambios pendientes se refieren a las entradas o los grupos que faltan. KeePassium creará estos elementos en un grupo separado y aplicará los cambios allí.";
+"[Database/UnsavedChanges/Problematic/info]" = "Algunos cambios pendientes se refieren a las entradas o los grupos que faltan. PassPouch creará estos elementos en un grupo separado y aplicará los cambios allí.";
 
 /* Title of a group where problematic pending changes are saved. %@ is the date of recovery. */
 "[Database/UnsavedChanges/RecoveredEntriesGroup/name]" = "Cambios recuperados (%@)";
@@ -596,7 +596,7 @@
 "[Database2/Loading/Error] Error unpacking database: %@" = "Error al descomprimir la base de datos: %@";
 
 /* A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String] */
-"[Database2/Loading/Warning/missingBinaries]" = "Los adjuntos en algunas entradas no tienen datos. Esta es una señal de que la base de datos está dañada, posiblemente a causa de la última aplicación utilizada (%1$@). KeePassium dejará los datos adjuntos vacíos, pero no los puede restaurar. Debe restaurar la base de datos desde una copia de seguridad. \n\nArchivos adjuntos faltantes: %2$@";
+"[Database2/Loading/Warning/missingBinaries]" = "Los adjuntos en algunas entradas no tienen datos. Esta es una señal de que la base de datos está dañada, posiblemente a causa de la última aplicación utilizada (%1$@). PassPouch dejará los datos adjuntos vacíos, pero no los puede restaurar. Debe restaurar la base de datos desde una copia de seguridad. \n\nArchivos adjuntos faltantes: %2$@";
 
 /* A warning about nameless attachments, shown after loading the database. [listOfEntryNames: String] */
 "[Database2/Loading/Warning/namelessAttachments]" = "Algunas entradas tienen adjuntos sin nombre. Esta es una señal de que la base de datos anterior está dañada.\n\n Revise los archivos adjuntos en las siguientes entradas (y su historial):\n%@";
@@ -802,8 +802,8 @@
 /* Error message: there is no USB drive connected to the device. */
 "[FileAccessError/FileProvider/NotFound/usbDrive]" = "El dispositivo USB está desconectado.";
 
-/* Error message shown when there's internal inconsistency in KeePassium. */
-"[FileAccessError/internalError]" = "Error interno en KeePassium, póngase en contacto con nosotros.";
+/* Error message shown when there's internal inconsistency in PassPouch. */
+"[FileAccessError/internalError]" = "Error interno en PassPouch, póngase en contacto con nosotros.";
 
 /* Error message: organization's IT administrator has forbidden access to a data storage location. */
 "[FileAccessError/ManagedAccessDenied/title]" = "El acceso a este almacenamiento está deshabilitado por su organización.";
@@ -827,7 +827,7 @@
 "[FileAccessError/OneDriveReadOnly/recoverySuggestion]" = "Utilice la opción Exportar para guardar el archivo en otra ubicación.";
 
 /* Error message for file with an expired access permission [fileName: String]. */
-"[FileAccessError/PermissionRequired/reason]" = "KeePassium necesita su permiso para acceder a «%@».";
+"[FileAccessError/PermissionRequired/reason]" = "PassPouch necesita su permiso para acceder a «%@».";
 
 /* Action/button for error recovery */
 "[FileAccessError/PermissionRequired/recoveryAction]" = "Seleccione de nuevo el archivo para permitir el acceso";
@@ -1274,7 +1274,7 @@
 "[Intune/OrgNeedsToManage]" = "Para proteger sus datos propios, la organización debe administrar esta aplicación. Inicie sesión con la cuenta profesional o educativa para completar esta acción.";
 
 /* Info message for users who accidentally installed the enterprise version. */
-"[Intune/PersonalVersionElsewhere]" = "La versión KeePassium para uso personal está disponible en la App Store.";
+"[Intune/PersonalVersionElsewhere]" = "La versión PassPouch para uso personal está disponible en la App Store.";
 
 /* Notification that an archived/historical item (e.g entry) has been successfully restored */
 "[Item/History/Restored]" = "Versión previa recuperada";
@@ -1403,7 +1403,7 @@
 "[Org/ContactYourAdmin]" = "Póngase en contacto con el administrador de TI.";
 
 /* Error message, euphemism for missing corporate license */
-"[Org/LicenseMissing]" = "KeePassium no ha podido encontrar la cuenta de empresa de su organización.";
+"[Org/LicenseMissing]" = "PassPouch no ha podido encontrar la cuenta de empresa de su organización.";
 
 /* Name of an entry field */
 "[OTP/FieldName]" = "Contraseña de un solo uso";
@@ -1648,7 +1648,7 @@
 /* What's included in a price plan. Please leave `perpetual fallback license` in English. */
 "[Premium/Price Plan/Conditions/perpetual fallback]" = "Licencia de alquiler con opción a compra (Licencia perpetua)";
 
-/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://keepassium.com/articles/perpetual-fallback-license/ */
+/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://passpouch.org/articles/perpetual-fallback-license/ */
 "[Premium/Price Plan/Conditions/subscription as purchase]" = "Suscripción como compra";
 
 /* What's included in a price plan */
@@ -1679,7 +1679,7 @@
 "[Premium/Upgrade/cancelOngoingSubscription]" = "Compruebe si necesitas cancelar su antigua suscripción.";
 
 /* Message shown when in-app purchase is deferred until approval (parental or corporate). */
-"[Premium/Upgrade/Deferred/text] Thank you! You can use KeePassium while purchase is awaiting approval." = "¡Gracias! Puede usar KeePassium mientras la compra está pendiente de aprobación.";
+"[Premium/Upgrade/Deferred/text] Thank you! You can use PassPouch while purchase is awaiting approval." = "¡Gracias! Puede usar PassPouch mientras la compra está pendiente de aprobación.";
 
 /* Product price for monthly premium subscription. [localizedPrice: String] */
 "[Premium/Upgrade/price] %@ / month" = "%@ / mes";
@@ -1727,7 +1727,7 @@
 "[PremiumFeature/CreativeAutoFill/title]" = "Registros más rápidos";
 
 /* A generic description of a premium feature */
-"[PremiumFeature/Generic/description]" = "Actualice a Premium y disfrute de KeePassium en su máxima expresión.";
+"[PremiumFeature/Generic/description]" = "Actualice a Premium y disfrute de PassPouch en su máxima expresión.";
 
 /* A generic title of a premium feature */
 "[PremiumFeature/Generic/title]" = "Característica Premium";
@@ -1757,16 +1757,16 @@
 "[PremiumFeature/PasswordAudit/title]" = "Auditoría de contraseñas";
 
 /* Description/call to action for the `Quick AutoFill` premium feature. */
-"[PremiumFeature/QuickAutoFill/description]" = "Complete los campos de contraseñas con un toque sin siquiera abrir KeePassium.";
+"[PremiumFeature/QuickAutoFill/description]" = "Complete los campos de contraseñas con un toque sin siquiera abrir PassPouch.";
 
 /* Title of a premium feature: show relevant AutoFill entries right under the input field */
 "[PremiumFeature/QuickAutoFill/title]" = "«Autorrelleno» rápido";
 
 /* A brief summary of the privacy policy (for offline mode) */
-"[PrivacyPolicy/Offline/text]" = "KeePassium no recopila datos personales o analíticos ni los comparte con nadie.";
+"[PrivacyPolicy/Offline/text]" = "PassPouch no recopila datos personales o analíticos ni los comparte con nadie.";
 
 /* A brief summary of the privacy policy (for online mode) */
-"[PrivacyPolicy/Online/text]" = "KeePassium no recopila datos personales ni analíticos.\nAlgunas funciones pueden implicar el intercambio de datos con servicios externos (a petición suya y con el único fin de poner estos servicios a su disposición). Dicho intercambio se rige por la política de privacidad del servicio correspondiente.";
+"[PrivacyPolicy/Online/text]" = "PassPouch no recopila datos personales ni analíticos.\nAlgunas funciones pueden implicar el intercambio de datos con servicios externos (a petición suya y con el único fin de poner estos servicios a su disposición). Dicho intercambio se rige por la política de privacidad del servicio correspondiente.";
 
 /* Section: privacy policy */
 "[PrivacyPolicy/title]" = "Política de privacidad";
@@ -1793,7 +1793,7 @@
 "[RemoteConnection/Credentials]" = "Credenciales";
 
 /* Description of the `Direct connection` sync method. */
-"[RemoteConnection/Direct/description]" = "KeePassium se comunicará directamente con su almacenamiento online. Esto garantiza una transferencia de archivos fiable.";
+"[RemoteConnection/Direct/description]" = "PassPouch se comunicará directamente con su almacenamiento online. Esto garantiza una transferencia de archivos fiable.";
 
 /* Title of a list with online storage services like OneDrive, Dropbox, etc. */
 "[RemoteConnection/Direct/title]" = "Servicios en línea";
@@ -1853,7 +1853,7 @@
 "[RemoteConnection/title]" = "Conexión remota";
 
 /* Description of the `Integration via Files app` sync method. */
-"[RemoteConnection/ViaFilesApp/description]" = "KeePassium asignará la sincronización de archivos a la aplicación de su proveedor de almacenamiento. Algunas aplicaciones funcionan mejor que otras.";
+"[RemoteConnection/ViaFilesApp/description]" = "PassPouch asignará la sincronización de archivos a la aplicación de su proveedor de almacenamiento. Algunas aplicaciones funcionan mejor que otras.";
 
 /* Link to a help page for an online storage service. The parameter is the service name in fixed neutral form. Example: 'Nextcloud Setup Guide' or 'Synology NAS Setup Guide'. */
 "[RemoteConnection/WebDAVService/SetupGuide]" = "Guía de configuración de %@";
@@ -1904,7 +1904,7 @@
 "[Settings/MasterKeys/Remember/title]" = "Recordar contraseñas maestras";
 
 /* Confirmation dialog message */
-"[Settings/NetworkAccess/Confirmation/text]" = "¿Permitir que KeePassium establezca conexiones de red con servicios externos?";
+"[Settings/NetworkAccess/Confirmation/text]" = "¿Permitir que PassPouch establezca conexiones de red con servicios externos?";
 
 /* Settings section: how/whether the app is allowed to use networks/Internet */
 "[Settings/NetworkAccess/title]" = "Acceso a la red";
@@ -1982,22 +1982,22 @@
 "[Support/template] (Please describe the problem here)" = "(Describa el problema aquí)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "¡Ayúdenos a mejorar KeePassium!";
+"[TipBox/callToAction/1]" = "¡Ayúdenos a mejorar PassPouch!";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "¡Ayúdenos a mantener KeePassium brillante!";
+"[TipBox/callToAction/2]" = "¡Ayúdenos a mantener PassPouch brillante!";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "¡Ayúdenos a mantener KeePassium gratis!";
+"[TipBox/callToAction/3]" = "¡Ayúdenos a mantener PassPouch gratis!";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "¿Le gusta KeePassium?";
+"[TipBox/description/1]" = "¿Le gusta PassPouch?";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "KeePassium es una aplicación libre, de código abierto a la que confiar su información más sensible. No tiene anuncios, ni espionaje, ni tonterías, respetamos su privacidad.";
+"[TipBox/description/2]" = "PassPouch es una aplicación libre, de código abierto a la que confiar su información más sensible. No tiene anuncios, ni espionaje, ni tonterías, respetamos su privacidad.";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "¿Le gusta KeePassium pero no necesita las características premium?";
+"[TipBox/description/3]" = "¿Le gusta PassPouch pero no necesita las características premium?";
 
 /* Notification after a successful donation. */
 "[TipBox/thankYou]" = "¡Gracias!";
@@ -2006,7 +2006,7 @@
 "[TipBox/title/2]" = "Donaciones";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "Apoya a KeePassium";
+"[TipBox/title/3]" = "Apoya a PassPouch";
 
 /* Name of an entry field. Acronym `TOTP` should not be translated. */
 "[TOTP/FieldName]" = "Contraseña de un solo uso (TOTP)";

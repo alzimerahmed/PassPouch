@@ -5,17 +5,17 @@
 "KeePass Database (kdbx)" = "Baza KeeKass (kdbx)";
 
 /* Privacy - NFC Scan Usage Description */
-"NFCReaderUsageDescription" = "KeePassium potrzebuje dostępu do NFC, aby komunikować się z YubiKey.";
+"NFCReaderUsageDescription" = "PassPouch potrzebuje dostępu do NFC, aby komunikować się z YubiKey.";
 
 /* Privacy - Camera Usage Description */
-"NSCameraUsageDescription" = "KeePassium potrzebuje aparatu aby skanować kody QR.";
+"NSCameraUsageDescription" = "PassPouch potrzebuje aparatu aby skanować kody QR.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Użyj FaceID, aby odblokować KeePassium";
+"NSFaceIDUsageDescription" = "Użyj FaceID, aby odblokować PassPouch";
 
 /* Privacy - Photo Library Additions Usage Description */
-"NSPhotoLibraryAddUsageDescription" = "KeePassium potrzebuje pozwolenia na eksportowanie plików do Twojej biblioteki zdjęć.";
+"NSPhotoLibraryAddUsageDescription" = "PassPouch potrzebuje pozwolenia na eksportowanie plików do Twojej biblioteki zdjęć.";
 
 /* Privacy - Photo Library Usage Description */
-"NSPhotoLibraryUsageDescription" = "Aplikacja KeePassium potrzebuje dostępu do wybranych obrazów własnych ikon oraz do skanowania kodów QR do konfiguracji OTP.";
+"NSPhotoLibraryUsageDescription" = "Aplikacja PassPouch potrzebuje dostępu do wybranych obrazów własnych ikon oraz do skanowania kodów QR do konfiguracji OTP.";
 

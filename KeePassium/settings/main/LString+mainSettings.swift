@@ -78,7 +78,7 @@ extension LString {
 
     public static let aboutKeePassiumTitle = NSLocalizedString(
         "[About/altTitle]",
-        value: "About KeePassium",
-        comment: "Menu item that shows info about KeePassium app")
+        value: "About PassPouch",
+        comment: "Menu item that shows info about PassPouch app")
     // swiftlint:enable line_length
 }

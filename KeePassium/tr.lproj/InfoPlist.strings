@@ -5,17 +5,17 @@
 "KeePass Database (kdbx)" = "KeePass Veri Tabanı (kdbx)";
 
 /* Privacy - NFC Scan Usage Description */
-"NFCReaderUsageDescription" = "YubiKey'inizle iletişime geçmek için KeePassium'un NFC erişimine ihtiyacı var.";
+"NFCReaderUsageDescription" = "YubiKey'inizle iletişime geçmek için PassPouch'un NFC erişimine ihtiyacı var.";
 
 /* Privacy - Camera Usage Description */
-"NSCameraUsageDescription" = "QR kodları taramak için KeePassium'un kameraya ihtiyacı var.";
+"NSCameraUsageDescription" = "QR kodları taramak için PassPouch'un kameraya ihtiyacı var.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "KeePassium'un kilidini açmak için FaceID'yi kullanın";
+"NSFaceIDUsageDescription" = "PassPouch'un kilidini açmak için FaceID'yi kullanın";
 
 /* Privacy - Photo Library Additions Usage Description */
-"NSPhotoLibraryAddUsageDescription" = "Dosyaları Fotoğraf Kitaplığınıza aktarmak için KeePassium'un izne ihtiyacı var.";
+"NSPhotoLibraryAddUsageDescription" = "Dosyaları Fotoğraf Kitaplığınıza aktarmak için PassPouch'un izne ihtiyacı var.";
 
 /* Privacy - Photo Library Usage Description */
-"NSPhotoLibraryUsageDescription" = "KeePassium'un özel simgelere görüntü seçmek ve OTP kurulumu için QR kodu taramak için erişime ihtiyacı var.";
+"NSPhotoLibraryUsageDescription" = "PassPouch'un özel simgelere görüntü seçmek ve OTP kurulumu için QR kodu taramak için erişime ihtiyacı var.";
 

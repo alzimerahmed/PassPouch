@@ -83,10 +83,10 @@ public class FileKeeperNotifications: Synchronizable {
 }
 
 class FileKeeperNotifier {
-    fileprivate static let fileAddedNotification = Notification.Name("com.keepassium.fileKeeper.fileAdded")
-    fileprivate static let fileRemovedNotification = Notification.Name("com.keepassium.fileKeeper.fileRemoved")
+    fileprivate static let fileAddedNotification = Notification.Name("com.passpouch.fileKeeper.fileAdded")
+    fileprivate static let fileRemovedNotification = Notification.Name("com.passpouch.fileKeeper.fileRemoved")
     fileprivate static let fileListUpdatedNotification =
-        Notification.Name("com.keepassium.fileKeeper.fileListUpdated")
+        Notification.Name("com.passpouch.fileKeeper.fileListUpdated")
 
     fileprivate enum UserInfoKeys {
         static let urlReferenceKey = "URLReference"

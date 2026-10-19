@@ -26,13 +26,13 @@
 "[AutoFill/RememberContext/callToAction]" = "Vylepšete návrhy pro Automatické vyplňování";
 
 /* Description of the 'Remember Selected Entries` feature */
-"[AutoFill/RememberContext/description]" = "KeePassium si zapamatuje, který záznam jste vybrali pro jednotlivé webové stránky, a poté jej automaticky navrhne.";
+"[AutoFill/RememberContext/description]" = "PassPouch si zapamatuje, který záznam jste vybrali pro jednotlivé webové stránky, a poté jej automaticky navrhne.";
 
 /* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
 "[AutoFill/Search/Context/title]" = "Kontext";
 
 /* No comment provided by engineer. */
-"[AutoFill/Setup/footer]" = "Služba automatického vyplňování hesel nemá přístup k databázovým souborům, které jste přidali v hlavní aplikaci KeePassium.\n\nProč? Operační systém považuje službu automatického vyplňování za samostatnou aplikaci, která je nezávislá na té hlavní. Z bezpečnostních důvodů mohou aplikace přistupovat pouze k těm souborům, ke kterým jim dáte svolení.\n\nZ tohoto důvodu je nutné dát svolení k přístupu jak samotné aplikaci KeePassium, tak službě automatického vyplňování. Tohle je však potřeba provést pouze jednou.";
+"[AutoFill/Setup/footer]" = "Služba automatického vyplňování hesel nemá přístup k databázovým souborům, které jste přidali v hlavní aplikaci PassPouch.\n\nProč? Operační systém považuje službu automatického vyplňování za samostatnou aplikaci, která je nezávislá na té hlavní. Z bezpečnostních důvodů mohou aplikace přistupovat pouze k těm souborům, ke kterým jim dáte svolení.\n\nZ tohoto důvodu je nutné dát svolení k přístupu jak samotné aplikaci PassPouch, tak službě automatického vyplňování. Tohle je však potřeba provést pouze jednou.";
 
 /* Must match Apple's translation, as found in iOS 18 Settings → General → AutoFill & Passwords. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/autofillFrom]" = "Zdroje:";
@@ -41,7 +41,7 @@
 "[AutoFill/Setup/UncheckKeychain/callToAction]" = "Odškrtněte Klíčenku";
 
 /* Instruction to deselect another app in the settings [appName: String] */
-"[AutoFill/Setup/UncheckKeychain/message]" = "Pokud chcete, aby byl KeePassium výchozím správcem hesel, zrušte zaškrtnutí \"%@\".";
+"[AutoFill/Setup/UncheckKeychain/message]" = "Pokud chcete, aby byl PassPouch výchozím správcem hesel, zrušte zaškrtnutí \"%@\".";
 
 /* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "Používat hesla a přístupové klíče z:";

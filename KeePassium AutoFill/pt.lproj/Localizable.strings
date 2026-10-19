@@ -26,13 +26,13 @@
 "[AutoFill/RememberContext/callToAction]" = "Melhorar sugestões de preenchimento automático";
 
 /* Description of the 'Remember Selected Entries` feature */
-"[AutoFill/RememberContext/description]" = "KeePassium irá lembrar-se de qual a entrada que seleciona para cada website e depois irá fazer a sugestão automaticamente.";
+"[AutoFill/RememberContext/description]" = "PassPouch irá lembrar-se de qual a entrada que seleciona para cada website e depois irá fazer a sugestão automaticamente.";
 
 /* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
 "[AutoFill/Search/Context/title]" = "Contexto";
 
 /* No comment provided by engineer. */
-"[AutoFill/Setup/footer]" = "O Preenchimento Automático precisa de ser autorizado a aceder aos arquivos que já tem adicionados à aplicação KeePassium.\n\nPorquê? Internamente, o sistema trata o Preenchimento Automático como um se fosse a sua própria aplicação, independente do KeePassium principal. Por segurança, uma aplicação não pode aceder a ficheiros externos, a menos que lhe lhes seja dado acesso explicitamente. Assim, o sistema garante que cada aplicação só possa aceder aos ficheiros que tenham sido autorizados.\n\nPor conseguinte, tanto o Preenchimento Automático quanto a aplicação KeePassium precisam de autorização separada para cada ficheiro externo. Felizmente, é só uma vez que tem de fazer isto por ficheiro.";
+"[AutoFill/Setup/footer]" = "O Preenchimento Automático precisa de ser autorizado a aceder aos arquivos que já tem adicionados à aplicação PassPouch.\n\nPorquê? Internamente, o sistema trata o Preenchimento Automático como um se fosse a sua própria aplicação, independente do PassPouch principal. Por segurança, uma aplicação não pode aceder a ficheiros externos, a menos que lhe lhes seja dado acesso explicitamente. Assim, o sistema garante que cada aplicação só possa aceder aos ficheiros que tenham sido autorizados.\n\nPor conseguinte, tanto o Preenchimento Automático quanto a aplicação PassPouch precisam de autorização separada para cada ficheiro externo. Felizmente, é só uma vez que tem de fazer isto por ficheiro.";
 
 /* Must match Apple's translation, as found in iOS 18 Settings → General → AutoFill & Passwords. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/autofillFrom]" = "Preencher automaticamente de:";
@@ -41,7 +41,7 @@
 "[AutoFill/Setup/UncheckKeychain/callToAction]" = "Desmarcar Porta-Chaves";
 
 /* Instruction to deselect another app in the settings [appName: String] */
-"[AutoFill/Setup/UncheckKeychain/message]" = "Para definir o KeePassium como o seu “password manager” por defeito, desactive \"%@\".";
+"[AutoFill/Setup/UncheckKeychain/message]" = "Para definir o PassPouch como o seu “password manager” por defeito, desactive \"%@\".";
 
 /* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "Usar senhas e chaves de acesso de:";

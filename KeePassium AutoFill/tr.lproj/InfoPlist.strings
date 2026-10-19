@@ -1,9 +1,9 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "KeePassium Otomatik Doldurma";
+"CFBundleDisplayName" = "PassPouch Otomatik Doldurma";
 
 /* Bundle name */
-"CFBundleName" = "KeePassium Otomatik Doldurma";
+"CFBundleName" = "PassPouch Otomatik Doldurma";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "KeePassium'un kilidini açmak için FaceID'yi kullanın";
+"NSFaceIDUsageDescription" = "PassPouch'un kilidini açmak için FaceID'yi kullanın";
 

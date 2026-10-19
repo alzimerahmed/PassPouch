@@ -9,14 +9,14 @@
 import UIKit
 
 extension UIMenu.Identifier {
-    static let tools = UIMenu.Identifier("com.keepassium.menu.tools")
-    static let passwordGenerator = UIMenu.Identifier("com.keepassium.menu.passwordGenerator")
+    static let tools = UIMenu.Identifier("com.passpouch.menu.tools")
+    static let passwordGenerator = UIMenu.Identifier("com.passpouch.menu.passwordGenerator")
 
-    static let databaseFile = UIMenu.Identifier("com.keepassium.menu.databaseFile")
-    static let lockDatabase = UIMenu.Identifier("com.keepassium.menu.lockDatabase")
-    static let exportDatabase = UIMenu.Identifier("com.keepassium.menu.exportDatabase")
-    static let fileSortOrder = UIMenu.Identifier("com.keepassium.menu.fileSortOrder")
-    static let itemsSortOrder = UIMenu.Identifier("com.keepassium.menu.itemsSortOrder")
-    static let reloadDatabase = UIMenu.Identifier("com.keepassium.menu.reloadDatabase")
-    static let importDatabase = UIMenu.Identifier("com.keepassium.menu.importDatabase")
+    static let databaseFile = UIMenu.Identifier("com.passpouch.menu.databaseFile")
+    static let lockDatabase = UIMenu.Identifier("com.passpouch.menu.lockDatabase")
+    static let exportDatabase = UIMenu.Identifier("com.passpouch.menu.exportDatabase")
+    static let fileSortOrder = UIMenu.Identifier("com.passpouch.menu.fileSortOrder")
+    static let itemsSortOrder = UIMenu.Identifier("com.passpouch.menu.itemsSortOrder")
+    static let reloadDatabase = UIMenu.Identifier("com.passpouch.menu.reloadDatabase")
+    static let importDatabase = UIMenu.Identifier("com.passpouch.menu.importDatabase")
 }

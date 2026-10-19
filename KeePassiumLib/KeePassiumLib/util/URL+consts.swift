@@ -38,12 +38,12 @@ extension URL {
     }
 
     public enum AppHelp {
-        public static let helpIndex = URL(string: "https://keepassium.com/apphelp/")!
-        public static var changeLog = URL(string: "https://keepassium.com/changelog/")!
+        public static let helpIndex = URL(string: "https://passpouch.org/apphelp/")!
+        public static var changeLog = URL(string: "https://passpouch.org/changelog/")!
 
-        public static let termsAndConditions = URL(string: "https://keepassium.com/terms/app")!
-        public static let privacyPolicyOfflineMode = URL(string: "https://keepassium.com/privacy/app")!
-        public static let privacyPolicyOnlineMode = URL(string: "https://keepassium.com/privacy/app")!
+        public static let termsAndConditions = URL(string: "https://passpouch.org/terms/app")!
+        public static let privacyPolicyOfflineMode = URL(string: "https://passpouch.org/privacy/app")!
+        public static let privacyPolicyOnlineMode = URL(string: "https://passpouch.org/privacy/app")!
         public static var currentPrivacyPolicy: URL {
             if Settings.current.isNetworkAccessAllowed {
                 return privacyPolicyOnlineMode
@@ -52,10 +52,10 @@ extension URL {
             }
         }
 
-        public static let quickAutoFillIntro = URL(string: "https://keepassium.com/apphelp/quick-autofill/")!
-        public static let autoFillMemoryLimits = URL(string: "https://keepassium.com/apphelp/autofill-memory-limits/")!
-        public static let autoFillSetupGuide_iOS = URL(string: "https://keepassium.com/apphelp/how-to-set-up-autofill-ios/")!
-        public static let autoFillSetupGuide_macOS = URL(string: "https://keepassium.com/apphelp/how-to-set-up-autofill-macos/")!
+        public static let quickAutoFillIntro = URL(string: "https://passpouch.org/apphelp/quick-autofill/")!
+        public static let autoFillMemoryLimits = URL(string: "https://passpouch.org/apphelp/autofill-memory-limits/")!
+        public static let autoFillSetupGuide_iOS = URL(string: "https://passpouch.org/apphelp/how-to-set-up-autofill-ios/")!
+        public static let autoFillSetupGuide_macOS = URL(string: "https://passpouch.org/apphelp/how-to-set-up-autofill-macos/")!
         public static var autoFillSetupGuide: URL {
             if ProcessInfo.isRunningOnMac {
                 return autoFillSetupGuide_macOS
@@ -64,24 +64,24 @@ extension URL {
             }
         }
 
-        public static let perpetualFallback = URL(string: "https://keepassium.com/apphelp/perpetual-fallback-license/")!
-        public static let familySharing = URL(string: "https://keepassium.com/apphelp/family-sharing/")!
+        public static let perpetualFallback = URL(string: "https://passpouch.org/apphelp/perpetual-fallback-license/")!
+        public static let familySharing = URL(string: "https://passpouch.org/apphelp/family-sharing/")!
 
-        public static let yubikeySetup = URL(string: "https://keepassium.com/apphelp/yubikey-setup/")!
+        public static let yubikeySetup = URL(string: "https://passpouch.org/apphelp/yubikey-setup/")!
 
-        public static let usingFallbackDatabase = URL(string: "https://keepassium.com/apphelp/database-unreachable-using-fallback/")!
-        public static let databaseFileIsInTrashWarning = URL(string: "https://keepassium.com/apphelp/database-recently-deleted-warning/")!
-        public static let temporaryBackupDatabaseWarning = URL(string: "https://keepassium.com/apphelp/temporary-backup-database-warning/")!
+        public static let usingFallbackDatabase = URL(string: "https://passpouch.org/apphelp/database-unreachable-using-fallback/")!
+        public static let databaseFileIsInTrashWarning = URL(string: "https://passpouch.org/apphelp/database-recently-deleted-warning/")!
+        public static let temporaryBackupDatabaseWarning = URL(string: "https://passpouch.org/apphelp/temporary-backup-database-warning/")!
 
         public static let hibpMoreInfoURLString = "https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/#cloudflareprivacyandkanonymity"
 
-        public static let smartGroups = URL(string: "https://keepassium.com/apphelp/smart-groups/")!
+        public static let smartGroups = URL(string: "https://passpouch.org/apphelp/smart-groups/")!
 
-        public static let linkedDatabases = URL(string: "https://keepassium.com/apphelp/linked-databases/")!
+        public static let linkedDatabases = URL(string: "https://passpouch.org/apphelp/linked-databases/")!
 
-        public static let invalidDatabasePassword = URL(string: "https://keepassium.com/apphelp/invalid-database-password/")!
-        public static let fileDoesNotExist = URL(string: "https://keepassium.com/apphelp/does-not-exist/")!
-        public static let fileProviderUnresponsive = URL(string: "https://keepassium.com/apphelp/file-provider-unresponsive/")!
+        public static let invalidDatabasePassword = URL(string: "https://passpouch.org/apphelp/invalid-database-password/")!
+        public static let fileDoesNotExist = URL(string: "https://passpouch.org/apphelp/does-not-exist/")!
+        public static let fileProviderUnresponsive = URL(string: "https://passpouch.org/apphelp/file-provider-unresponsive/")!
     }
 
 }

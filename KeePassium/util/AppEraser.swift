@@ -10,7 +10,7 @@ import Foundation
 import KeePassiumLib
 
 enum AppEraser {
-    private static let failedAttemptsKey = "com.keepassium.failedAppUnlockAttempts"
+    private static let failedAttemptsKey = "com.passpouch.failedAppUnlockAttempts"
 
     public static func resetApp(completion: (() -> Void)?) {
         Diag.warning("Erasing all app data")

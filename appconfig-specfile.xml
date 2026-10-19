@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <managedAppConfiguration>
   <version>1</version>
-  <bundleId>com.keepassium.ios</bundleId>
+  <bundleId>com.passpouch.ios</bundleId>
   <dict>
     <integer keyName="configVersion">
       <defaultValue>
@@ -16,7 +16,7 @@
     </string>
     <string keyName="supportEmail">
       <defaultValue>
-        <value>org-support@keepassium.com</value>
+        <value>org-alzimerahmed84@gmail.com</value>
       </defaultValue>
       <constraint nullable="true"></constraint>
     </string>
@@ -231,7 +231,7 @@
           <language value="en-US">License key</language>
         </label>
         <description>
-          <language value="en-US">Contact sales@keepassium.com to get one.</language>
+          <language value="en-US">Contact alzimerahmed84@gmail.com to get one.</language>
         </description>
       </field>
       <field keyName="licenseSeatID" type="select">
@@ -317,7 +317,7 @@
           <language value="en-US">Require App Passcode</language>
         </label>
         <description>
-          <language value="en-US">Require that the user configures an app protection passcode. This is enforced by KeePassium, independently from PIN access that might be enforced by your MDM or the system.</language>
+          <language value="en-US">Require that the user configures an app protection passcode. This is enforced by PassPouch, independently from PIN access that might be enforced by your MDM or the system.</language>
         </description>
         <options>
           <option value="yes">
@@ -503,7 +503,7 @@
           <language value="en-US">Skip YubiKey scan when possible</language>
         </label>
         <description>
-          <language value="en-US">Sometimes KeePassium can cache database encryption keys and not require YubiKey scan. This setting controls whether such a behavior is allowed, or YubiKey scans must be enforced.</language>
+          <language value="en-US">Sometimes PassPouch can cache database encryption keys and not require YubiKey scan. This setting controls whether such a behavior is allowed, or YubiKey scans must be enforced.</language>
         </description>
         <options>
           <option value="">
@@ -993,13 +993,13 @@
           <option value="net.box.BoxNet.documentPickerFileProvider">
             <language value="en-US">Box (via Files integration)</language>
           </option>
-          <option value="com.keepassium.fileprovider.dropbox">
+          <option value="com.passpouch.fileprovider.dropbox">
             <language value="en-US">Dropbox (direct connection)</language>
           </option>
           <option value="com.getdropbox.Dropbox.FileProvider">
             <language value="en-US">Dropbox (via Files integration)</language>
           </option>
-          <option value="com.keepassium.fileprovider.googledrive">
+          <option value="com.passpouch.fileprovider.googledrive">
             <language value="en-US">Google Drive (direct connection)</language>
           </option>
           <option value="com.google.Drive.FileProviderExtension">
@@ -1011,7 +1011,7 @@
           <option value="com.apple.CloudDocs.MobileDocumentsFileProvider">
             <language value="en-US">iCloud Drive (before iOS 16.5; via Files integration)</language>
           </option>
-          <option value="com.keepassium.fileprovider.onedrive">
+          <option value="com.passpouch.fileprovider.onedrive">
             <language value="en-US">OneDrive (direct connection)</language>
           </option>
           <option value="com.microsoft.skydrive.onedrivefileprovider">
@@ -1023,7 +1023,7 @@
           <option value="com.apple.filesystems.UserFS.FileProvider">
             <language value="en-US">USB storage (via Files integration)</language>
           </option>
-          <option value="com.keepassium.fileprovider.webdav">
+          <option value="com.passpouch.fileprovider.webdav">
             <language value="en-US">WebDAV (direct connection)</language>
           </option>
         </options>

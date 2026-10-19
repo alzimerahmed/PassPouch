@@ -5,17 +5,17 @@
 "KeePass Database (kdbx)" = "KeePass databáza (kdbx)";
 
 /* Privacy - NFC Scan Usage Description */
-"NFCReaderUsageDescription" = "KeePassium potrebuje prístup k NFC pre komunikáciu s vašim YubiKey.";
+"NFCReaderUsageDescription" = "PassPouch potrebuje prístup k NFC pre komunikáciu s vašim YubiKey.";
 
 /* Privacy - Camera Usage Description */
-"NSCameraUsageDescription" = "KeePassium potrebuje prístup k fotoaparátu pre skenovanie QR kódov.";
+"NSCameraUsageDescription" = "PassPouch potrebuje prístup k fotoaparátu pre skenovanie QR kódov.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Používať FaceID na odomknutie KeePassium";
+"NSFaceIDUsageDescription" = "Používať FaceID na odomknutie PassPouch";
 
 /* Privacy - Photo Library Additions Usage Description */
-"NSPhotoLibraryAddUsageDescription" = "KeePassium vyžaduje vaše povolenie na export súborov do vašej knižnice fotografií.";
+"NSPhotoLibraryAddUsageDescription" = "PassPouch vyžaduje vaše povolenie na export súborov do vašej knižnice fotografií.";
 
 /* Privacy - Photo Library Usage Description */
-"NSPhotoLibraryUsageDescription" = "KeePassium potrebuje prístup k vybraným obrázkom pre vlastné ikony a na skenovanie QR kódov pre nastavenie OTP.";
+"NSPhotoLibraryUsageDescription" = "PassPouch potrebuje prístup k vybraným obrázkom pre vlastné ikony a na skenovanie QR kódov pre nastavenie OTP.";
 

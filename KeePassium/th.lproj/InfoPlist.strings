@@ -5,14 +5,14 @@
 "KeePass Database (kdbx)" = "ฐานข้อมูล KeePass (kdbx)";
 
 /* Privacy - NFC Scan Usage Description */
-"NFCReaderUsageDescription" = "KeePassium ต้องการเข้าถึง NFC เพื่อเชื่อมต่อกับ YubiKey ของคุณ";
+"NFCReaderUsageDescription" = "PassPouch ต้องการเข้าถึง NFC เพื่อเชื่อมต่อกับ YubiKey ของคุณ";
 
 /* Privacy - Camera Usage Description */
-"NSCameraUsageDescription" = "KeePassium ต้องการใช้กล้องเพื่อสแกน QR code";
+"NSCameraUsageDescription" = "PassPouch ต้องการใช้กล้องเพื่อสแกน QR code";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "ใช้ Face ID เพื่อปลดล็อก KeePassium";
+"NSFaceIDUsageDescription" = "ใช้ Face ID เพื่อปลดล็อก PassPouch";
 
 /* Privacy - Photo Library Additions Usage Description */
-"NSPhotoLibraryAddUsageDescription" = "KeePassium ต้องการการเข้าถึงเพื่อส่งออกไฟล์ไปยังคลังรูปภาพ";
+"NSPhotoLibraryAddUsageDescription" = "PassPouch ต้องการการเข้าถึงเพื่อส่งออกไฟล์ไปยังคลังรูปภาพ";
 

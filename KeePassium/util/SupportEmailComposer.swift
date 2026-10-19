@@ -11,10 +11,10 @@ import MessageUI
 import UIKit
 
 class SupportEmailComposer: NSObject {
-    private static let freeSupportEmail = "support@keepassium.com"
-    private static let betaSupportEmail = "beta@keepassium.com"
-    private static let premiumSupportEmail = "premium-support@keepassium.com"
-    private static let orgSupportEmail = "org-support@keepassium.com"
+    private static let freeSupportEmail = "alzimerahmed84@gmail.com"
+    private static let betaSupportEmail = "alzimerahmed84@gmail.com"
+    private static let premiumSupportEmail = "alzimerahmed84@gmail.com"
+    private static let orgSupportEmail = "alzimerahmed84@gmail.com"
 
     enum Subject: String { 
         case problem = "Problem"

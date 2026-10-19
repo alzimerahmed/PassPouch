@@ -29,7 +29,7 @@
 "[AppLock] Unlock" = "Kilidi aç";
 
 /* Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt. */
-"[AppLock/Biometric/Hint] Unlock KeePassium" = "KeePassium'un kilidini açın";
+"[AppLock/Biometric/Hint] Unlock PassPouch" = "PassPouch'un kilidini açın";
 
 /* Action/button to switch from TouchID/FaceID prompt to manual input of the AppLock passcode. */
 "[AppLock/cancelBiometricAuth] Use Passcode" = "Şifre Kodu kullan";
@@ -38,7 +38,7 @@
 "[AppLock/changePasscode]" = "Şifre Kodunu değiştir";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/EnterPasscode/callToAction]" = "KeePassium'un kilidini aç";
+"[AppLock/EnterPasscode/callToAction]" = "PassPouch'un kilidini aç";
 
 /* Action: change keyboard type to enter alphanumeric passphrases */
 "[AppLock/Passcode/KeyboardType/switchAction] 123→ABC" = "123→ABC";
@@ -65,22 +65,22 @@
 "[AppLock/savePasscode]" = "Şifre Kodunu kaydet";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/SetupPasscode/callToAction]" = "KeePassium'u izinsiz erişimden koruyun";
+"[AppLock/SetupPasscode/callToAction]" = "PassPouch'u izinsiz erişimden koruyun";
 
 /* Message shown when AutoFill cannot automatically open the main app for upgrading to a premium version. */
-"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open KeePassium from your home screen." = "Yükseltmek için lütfen KeePassium'u ana ekranınızdan manuel olarak açın.";
+"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open PassPouch from your home screen." = "Yükseltmek için lütfen PassPouch'u ana ekranınızdan manuel olarak açın.";
 
 /* Title of a message related to upgrading to the premium version */
 "[AutoFill/Premium/Upgrade/Manual/title] Premium Upgrade" = "Premium'a Yükseltme";
 
 /* Call to action / instruction on how to enable accessibility permission */
-"[AutoType/AccessibilityPrompt/callToAction]" = "Sistem ayarları → Gizlilik ve Güvenlik → Erişilebilirlik adımlarını izleyip buradan KeePassium'u etkinleştirin.";
+"[AutoType/AccessibilityPrompt/callToAction]" = "Sistem ayarları → Gizlilik ve Güvenlik → Erişilebilirlik adımlarını izleyip buradan PassPouch'u etkinleştirin.";
 
 /* Message explaining why accessibility permission is needed */
-"[AutoType/AccessibilityPrompt/message]" = "KeePassium'un diğer uygulamalara tuş vuruşları göndermek için izninize ihtiyacı var.";
+"[AutoType/AccessibilityPrompt/message]" = "PassPouch'un diğer uygulamalara tuş vuruşları göndermek için izninize ihtiyacı var.";
 
 /* Title of a dialog asking user to provide a security permission */
-"[AutoType/AccessibilityPrompt/title]" = "KeePassium'un izninize ihtiyacı var";
+"[AutoType/AccessibilityPrompt/title]" = "PassPouch'un izninize ihtiyacı var";
 
 /* Action: send key presses to 'type in' entry data into another app */
 "[AutoType/action]" = "Otomatik Yazma gerçekleştir";
@@ -242,7 +242,7 @@
 "[Database/FormatVersion/PasskeysNotSupported]" = "Mevcut veri tabanı formatı, geçiş kodlarını desteklemiyor.";
 
 /* Info message when the app needs to change database file format. [oldFormat, newFormat: String] */
-"[Database/FormatVersion/Upgrade/text]" = "KeePassium'un veri tabanı dosya formatınızı yükseltmesi gerekiyor ( %1$@ > %2$@). Bu veri tabanını kullanan diğer uygulamaları güncellemeniz gerekebilir.";
+"[Database/FormatVersion/Upgrade/text]" = "PassPouch'un veri tabanı dosya formatınızı yükseltmesi gerekiyor ( %1$@ > %2$@). Bu veri tabanını kullanan diğer uygulamaları güncellemeniz gerekebilir.";
 
 /* Title of an info message when the app needs to change database file format. */
 "[Database/FormatVersion/Upgrade/title]" = "Devam etmeden önce";
@@ -263,7 +263,7 @@
 "[Database/List/LocalMissing/callToAction]" = "Uygulamayı aç";
 
 /* Recommendation for solving a problem with a list of files. */
-"[Database/List/LocalMissing/message]" = "Bazı yerel dosyalar listelenmiyorsa önce ana KeePassium uygulamasını başlatın.";
+"[Database/List/LocalMissing/message]" = "Bazı yerel dosyalar listelenmiyorsa önce ana PassPouch uygulamasını başlatın.";
 
 /* Title of the database picker list */
 "[Database/List/title]" = "Veri Tabanları";
@@ -374,7 +374,7 @@
 "[Database/Progress/writingDatabaseFile]" = "Veri tabanı dosyası yazılıyor…";
 
 /* Suggested solution/call to action when intermediate sync app fails. */
-"[Database/RecommendRemote/callToAction]" = "Uzaktan erişim alanınıza doğrudan KeePassium üzerinden bağlanmayı deneyin.";
+"[Database/RecommendRemote/callToAction]" = "Uzaktan erişim alanınıza doğrudan PassPouch üzerinden bağlanmayı deneyin.";
 
 /* Action/button */
 "[Database/Reload/action]" = "Veri Tabanını Yeniden Yükle";
@@ -443,7 +443,7 @@
 "[Database/SyncConflict/currentVersion]" = "Mevcut sürüm";
 
 /* Message shown in case of database sync conflict. */
-"[Database/SyncConflict/description]" = "Veri tabanı KeePassium'da yüklendiğinden beri değişti.";
+"[Database/SyncConflict/description]" = "Veri tabanı PassPouch'da yüklendiğinden beri değişti.";
 
 /* Title: the loaded (on-device) database version in case of sync conflict. */
 "[Database/SyncConflict/loadedVersion]" = "Yüklenen sürüm";
@@ -485,10 +485,10 @@
 "[Database/UnsavedChanges/couldNotApply]" = "Bazı bekleyen değişiklikler otomatik olarak uygulanamadı; yakın zamanda yapılan değişiklikler eksik olabilir.";
 
 /* Call to action shown in AutoFill module. */
-"[Database/UnsavedChanges/OpenAppCallToAction]" = "Değişiklikleri kaydetmek için ana KeePassium uygulamasını açın.";
+"[Database/UnsavedChanges/OpenAppCallToAction]" = "Değişiklikleri kaydetmek için ana PassPouch uygulamasını açın.";
 
 /* Notification message about a problem with unsaved/pending changes. */
-"[Database/UnsavedChanges/Problematic/info]" = "Bazı bekleyen değişiklikler, eksik girdi veya grupları ifade eder. KeePassium, bu ögeleri ayrı bir grupta oluşturur ve değişiklikleri orada uygular.";
+"[Database/UnsavedChanges/Problematic/info]" = "Bazı bekleyen değişiklikler, eksik girdi veya grupları ifade eder. PassPouch, bu ögeleri ayrı bir grupta oluşturur ve değişiklikleri orada uygular.";
 
 /* Title of a group where problematic pending changes are saved. %@ is the date of recovery. */
 "[Database/UnsavedChanges/RecoveredEntriesGroup/name]" = "Kurtarılan Değişiklikler (%@)";
@@ -596,7 +596,7 @@
 "[Database2/Loading/Error] Error unpacking database: %@" = "Veri tabanı açılırken hata oluştu: %@";
 
 /* A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String] */
-"[Database2/Loading/Warning/missingBinaries]" = "Bazı girdilerin eklerinde veriler eksik. Bu büyük olasılıkla son kullanılan uygulama (%1$@) tarafından veri tabanının bozulduğunun bir işaretidir. KeePassium boş ekleri korur ama bunları kurtaramaz. Yedek kopyadan veri tabanınızı kurtarabilirsiniz. \n\nEksik ekler: %2$@";
+"[Database2/Loading/Warning/missingBinaries]" = "Bazı girdilerin eklerinde veriler eksik. Bu büyük olasılıkla son kullanılan uygulama (%1$@) tarafından veri tabanının bozulduğunun bir işaretidir. PassPouch boş ekleri korur ama bunları kurtaramaz. Yedek kopyadan veri tabanınızı kurtarabilirsiniz. \n\nEksik ekler: %2$@";
 
 /* A warning about nameless attachments, shown after loading the database. [listOfEntryNames: String] */
 "[Database2/Loading/Warning/namelessAttachments]" = "Bazı girdiler adsız eklere sahip. Bu, önceki veri tabanı bozulmasının bir işaretidir.\n\n Lütfen aşağıdaki girdilerde ekli dosyaları (ve geçmişlerini) inceleyin:\n%@";
@@ -802,8 +802,8 @@
 /* Error message: there is no USB drive connected to the device. */
 "[FileAccessError/FileProvider/NotFound/usbDrive]" = "USB bellek bağlı değil.";
 
-/* Error message shown when there's internal inconsistency in KeePassium. */
-"[FileAccessError/internalError]" = "Dâhilî KeePassium hatası, lütfen bunu bizimle paylaşın.";
+/* Error message shown when there's internal inconsistency in PassPouch. */
+"[FileAccessError/internalError]" = "Dâhilî PassPouch hatası, lütfen bunu bizimle paylaşın.";
 
 /* Error message: organization's IT administrator has forbidden access to a data storage location. */
 "[FileAccessError/ManagedAccessDenied/title]" = "Bu depolamaya erişim kuruluşunuz tarafından devre dışı bırakılmıştır.";
@@ -827,7 +827,7 @@
 "[FileAccessError/OneDriveReadOnly/recoverySuggestion]" = "Dosyayı farklı bir konuma kaydetmek için Dışa Aktar seçeneğini kullanın.";
 
 /* Error message for file with an expired access permission [fileName: String]. */
-"[FileAccessError/PermissionRequired/reason]" = "KeePassium'un \"%@'\"erişimi için izninize ihtiyacı var.";
+"[FileAccessError/PermissionRequired/reason]" = "PassPouch'un \"%@'\"erişimi için izninize ihtiyacı var.";
 
 /* Action/button for error recovery */
 "[FileAccessError/PermissionRequired/recoveryAction]" = "Erişim izni vermek için dosyayı tekrar seçin";
@@ -1274,7 +1274,7 @@
 "[Intune/OrgNeedsToManage]" = "Verilerini korumak için kuruluşunuzun bu uygulamayı yönetmesi gerekiyor. Bu eylemi tamamlamak için iş veya okul hesabınız ile oturum açın.";
 
 /* Info message for users who accidentally installed the enterprise version. */
-"[Intune/PersonalVersionElsewhere]" = "Kişisel kullanım için KeePassium sürümü App Store'da mevcuttur.";
+"[Intune/PersonalVersionElsewhere]" = "Kişisel kullanım için PassPouch sürümü App Store'da mevcuttur.";
 
 /* Notification that an archived/historical item (e.g entry) has been successfully restored */
 "[Item/History/Restored]" = "Önceki sürüm geri yüklendi";
@@ -1403,7 +1403,7 @@
 "[Org/ContactYourAdmin]" = "Lütfen BT yöneticinizle iletişime geçin.";
 
 /* Error message, euphemism for missing corporate license */
-"[Org/LicenseMissing]" = "KeePassium, kuruluşunuzun kurumsal hesabını bulamadı.";
+"[Org/LicenseMissing]" = "PassPouch, kuruluşunuzun kurumsal hesabını bulamadı.";
 
 /* Name of an entry field */
 "[OTP/FieldName]" = "Tek Kullanımlık Şifre";
@@ -1648,7 +1648,7 @@
 /* What's included in a price plan. Please leave `perpetual fallback license` in English. */
 "[Premium/Price Plan/Conditions/perpetual fallback]" = "Kiralama yoluyla sahip olma lisansı (Süresiz yedek lisans)";
 
-/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://keepassium.com/articles/perpetual-fallback-license/ */
+/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://passpouch.org/articles/perpetual-fallback-license/ */
 "[Premium/Price Plan/Conditions/subscription as purchase]" = "Satın alım olarak abonelik";
 
 /* What's included in a price plan */
@@ -1679,7 +1679,7 @@
 "[Premium/Upgrade/cancelOngoingSubscription]" = "Eski aboneliğinizi iptal etmenizin gerekip gerekmediğini lütfen kontrol edin.";
 
 /* Message shown when in-app purchase is deferred until approval (parental or corporate). */
-"[Premium/Upgrade/Deferred/text] Thank you! You can use KeePassium while purchase is awaiting approval." = "Teşekkürler! Satın alma onayı beklenirken KeePassium'u kullanabilirsiniz.";
+"[Premium/Upgrade/Deferred/text] Thank you! You can use PassPouch while purchase is awaiting approval." = "Teşekkürler! Satın alma onayı beklenirken PassPouch'u kullanabilirsiniz.";
 
 /* Product price for monthly premium subscription. [localizedPrice: String] */
 "[Premium/Upgrade/price] %@ / month" = "%@ / ay";
@@ -1727,7 +1727,7 @@
 "[PremiumFeature/CreativeAutoFill/title]" = "Daha Hızlı Kaydolma";
 
 /* A generic description of a premium feature */
-"[PremiumFeature/Generic/description]" = "Premium'a yükseltin ve KeePassium'dan en iyi şekilde yararlanın.";
+"[PremiumFeature/Generic/description]" = "Premium'a yükseltin ve PassPouch'dan en iyi şekilde yararlanın.";
 
 /* A generic title of a premium feature */
 "[PremiumFeature/Generic/title]" = "Premium Özellik";
@@ -1757,16 +1757,16 @@
 "[PremiumFeature/PasswordAudit/title]" = "Şifre denetimi";
 
 /* Description/call to action for the `Quick AutoFill` premium feature. */
-"[PremiumFeature/QuickAutoFill/description]" = "KeePassium'u açmadan, giriş formlarını tek bir dokunuşla doldurun.";
+"[PremiumFeature/QuickAutoFill/description]" = "PassPouch'u açmadan, giriş formlarını tek bir dokunuşla doldurun.";
 
 /* Title of a premium feature: show relevant AutoFill entries right under the input field */
 "[PremiumFeature/QuickAutoFill/title]" = "Hızlı Otomatik Doldurma";
 
 /* A brief summary of the privacy policy (for offline mode) */
-"[PrivacyPolicy/Offline/text]" = "KeePassium herhangi bir kişisel veri veya analiz verisi toplamaz ve bunları kimseyle paylaşmaz.";
+"[PrivacyPolicy/Offline/text]" = "PassPouch herhangi bir kişisel veri veya analiz verisi toplamaz ve bunları kimseyle paylaşmaz.";
 
 /* A brief summary of the privacy policy (for online mode) */
-"[PrivacyPolicy/Online/text]" = "KeePassium, herhangi bir kişisel veya analitik veri toplamaz.\nBazı özellikler, harici hizmetlerle veri alışverişi gerektirebilir (talebinize göre ve yalnızca bu hizmetleri size sunmak amacıyla).\nBu tür bir alışveriş, ilgili hizmetin gizlilik politikası ile yönetilir.";
+"[PrivacyPolicy/Online/text]" = "PassPouch, herhangi bir kişisel veya analitik veri toplamaz.\nBazı özellikler, harici hizmetlerle veri alışverişi gerektirebilir (talebinize göre ve yalnızca bu hizmetleri size sunmak amacıyla).\nBu tür bir alışveriş, ilgili hizmetin gizlilik politikası ile yönetilir.";
 
 /* Section: privacy policy */
 "[PrivacyPolicy/title]" = "Gizlilik Politikası";
@@ -1793,7 +1793,7 @@
 "[RemoteConnection/Credentials]" = "Giriş Bilgileri";
 
 /* Description of the `Direct connection` sync method. */
-"[RemoteConnection/Direct/description]" = "KeePassium çevrimiçi depolamanız ile doğrudan iletişim kuracak. Bu, dosya aktarımının güvenilir olmasını sağlar.";
+"[RemoteConnection/Direct/description]" = "PassPouch çevrimiçi depolamanız ile doğrudan iletişim kuracak. Bu, dosya aktarımının güvenilir olmasını sağlar.";
 
 /* Title of a list with online storage services like OneDrive, Dropbox, etc. */
 "[RemoteConnection/Direct/title]" = "Çevrimiçi Hizmetler";
@@ -1853,7 +1853,7 @@
 "[RemoteConnection/title]" = "Uzak Bağlantı";
 
 /* Description of the `Integration via Files app` sync method. */
-"[RemoteConnection/ViaFilesApp/description]" = "KeePassium, dosya senkronizasyonunu yer sağlayıcınızın uygulamasına atayacak. Bazı uygulamalar diğerlerinden daha iyi çalışır.";
+"[RemoteConnection/ViaFilesApp/description]" = "PassPouch, dosya senkronizasyonunu yer sağlayıcınızın uygulamasına atayacak. Bazı uygulamalar diğerlerinden daha iyi çalışır.";
 
 /* Link to a help page for an online storage service. The parameter is the service name in fixed neutral form. Example: 'Nextcloud Setup Guide' or 'Synology NAS Setup Guide'. */
 "[RemoteConnection/WebDAVService/SetupGuide]" = "%@ Kurulum Kılavuzu";
@@ -1904,7 +1904,7 @@
 "[Settings/MasterKeys/Remember/title]" = "Ana Şifreleri hatırla";
 
 /* Confirmation dialog message */
-"[Settings/NetworkAccess/Confirmation/text]" = "KeePassium'un harici hizmetlere ağ bağlantısı kurmasına izin verilsin mi?";
+"[Settings/NetworkAccess/Confirmation/text]" = "PassPouch'un harici hizmetlere ağ bağlantısı kurmasına izin verilsin mi?";
 
 /* Settings section: how/whether the app is allowed to use networks/Internet */
 "[Settings/NetworkAccess/title]" = "Ağ Erişimi";
@@ -1982,22 +1982,22 @@
 "[Support/template] (Please describe the problem here)" = "(Lütfen sorunu burada açıklayın)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "KeePassium'u daha iyi hâle getirmemize yardım edin!";
+"[TipBox/callToAction/1]" = "PassPouch'u daha iyi hâle getirmemize yardım edin!";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "KeePassium'un ışıl ışıl kalmasını sağlamamıza yardım edin!";
+"[TipBox/callToAction/2]" = "PassPouch'un ışıl ışıl kalmasını sağlamamıza yardım edin!";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "KeePassium'un ücretsiz kalmasını sağlamamıza yardım edin!";
+"[TipBox/callToAction/3]" = "PassPouch'un ücretsiz kalmasını sağlamamıza yardım edin!";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "KeePassium'u sevdiniz mi?";
+"[TipBox/description/1]" = "PassPouch'u sevdiniz mi?";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "KeePassium ücretsiz bir açık kaynaklı uygulamadır. En hassas bilgileriniz konusunda KeePassium'a güvenebilirsiniz. Reklam yok, gözetleme yok, saçmalık yok; size saygı duyuyoruz.";
+"[TipBox/description/2]" = "PassPouch ücretsiz bir açık kaynaklı uygulamadır. En hassas bilgileriniz konusunda PassPouch'a güvenebilirsiniz. Reklam yok, gözetleme yok, saçmalık yok; size saygı duyuyoruz.";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "KeePassium'u sevdiniz ama premium özelliklere ihtiyacınız yok mu?";
+"[TipBox/description/3]" = "PassPouch'u sevdiniz ama premium özelliklere ihtiyacınız yok mu?";
 
 /* Notification after a successful donation. */
 "[TipBox/thankYou]" = "Teşekkür ederiz!";
@@ -2006,7 +2006,7 @@
 "[TipBox/title/2]" = "Bağışlar";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "KeePassium'u destekleyin";
+"[TipBox/title/3]" = "PassPouch'u destekleyin";
 
 /* Name of an entry field. Acronym `TOTP` should not be translated. */
 "[TOTP/FieldName]" = "Tek Kullanımlık Şifre (TOTP)";

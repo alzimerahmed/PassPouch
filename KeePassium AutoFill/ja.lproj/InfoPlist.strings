@@ -1,9 +1,9 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "KeePassium自動入力";
+"CFBundleDisplayName" = "PassPouch自動入力";
 
 /* Bundle name */
-"CFBundleName" = "KeePassium自動入力";
+"CFBundleName" = "PassPouch自動入力";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Face IDを使用してKeePassiumのロックを解除";
+"NSFaceIDUsageDescription" = "Face IDを使用してPassPouchのロックを解除";
 

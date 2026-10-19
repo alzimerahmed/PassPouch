@@ -1,5 +1,5 @@
-/* Menu item that shows info about KeePassium app */
-"[About/altTitle]" = "เกี่ยวกับ KeePassium";
+/* Menu item that shows info about PassPouch app */
+"[About/altTitle]" = "เกี่ยวกับ PassPouch";
 
 /* Section in settings: icon for the app */
 "[Appearance/AppIcon/title]" = "ไอคอนของแอป";
@@ -131,7 +131,7 @@
 "[ProtectedTextField] Show Password" = "แสดงรหัสผ่าน";
 
 /* Description of the Quick AutoFill feature. */
-"[QuickAutoFill/description]" = "ป้อนรหัสทันทีจะแสดงรายการที่มีความสัมพันธ์กับช่องใส่รหัส โดยไม่จำเป็นต้องเปิด KeePassium";
+"[QuickAutoFill/description]" = "ป้อนรหัสทันทีจะแสดงรายการที่มีความสัมพันธ์กับช่องใส่รหัส โดยไม่จำเป็นต้องเปิด PassPouch";
 
 /* Placeholder text for empty search results */
 "[Search/EmptyResult/title]" = "ไม่พบสิ่งที่ต้องการ";
@@ -143,7 +143,7 @@
 "[Settings/AppLoc/Activate/callToAction]" = "เปิดใช้งานแอปล็อก";
 
 /* Description of `Activate app protection` call to action. */
-"[Settings/AppLock/Activate/description]" = "ปกป้อง KeePassium จากการเข้าถึงที่ไม่ได้รับอนุญาต";
+"[Settings/AppLock/Activate/description]" = "ปกป้อง PassPouch จากการเข้าถึงที่ไม่ได้รับอนุญาต";
 
 /* Description of biometric unlock settings */
 "[Settings/AppLock/Biometric/description]" = "อนุญาตให้ใช้การยืนยันด้วยไบโอเมทริกซ์เพื่อความรวดเร็ว (แต่ปลอดภัยน้อยลง) แทนการใช้รหัสผ่านแอปล็อก";
@@ -152,13 +152,13 @@
 "[Settings/AppLock/Biometric/title] Use %@" = "ใช้ %@";
 
 /* Explanation for the `Lock on App Launch` setting */
-"[Settings/AppLock/LockOnLaunch/description]" = "เพื่อให้แน่ใจว่า KeePassium ล็อกอยู่หลังจากคุณบังคับปิดแอปหรือรีสตาร์ทเครื่อง";
+"[Settings/AppLock/LockOnLaunch/description]" = "เพื่อให้แน่ใจว่า PassPouch ล็อกอยู่หลังจากคุณบังคับปิดแอปหรือรีสตาร์ทเครื่อง";
 
 /* Setting switch: whether to lock the app after it was terminated and relaunched. */
 "[Settings/AppLock/LockOnLaunch/title]" = "ล็อกแอปขณะเข้าแอป";
 
 /* Description of the `Lock on Wrong Passcode` setting */
-"[Settings/AppLock/LockOnWrongPasscode/description]" = "ถ้าคุณใส่รหัสแอปล็อกผิด KeePassium จะปิดฐานข้อมูลทั้งหมดและล้างกุญแจหลักออกจากพวงกุญแจ";
+"[Settings/AppLock/LockOnWrongPasscode/description]" = "ถ้าคุณใส่รหัสแอปล็อกผิด PassPouch จะปิดฐานข้อมูลทั้งหมดและล้างกุญแจหลักออกจากพวงกุญแจ";
 
 /* Settings: subtitle of the `App Protection` section. biometryTypeName will be either 'Touch ID' or 'Face ID'. [biometryTypeName: String] */
 "[Settings/AppLock/subtitle] App Lock, %@, timeout" = "ล็อกแอป, %@, หมดเวลาใช้งาน";
@@ -233,13 +233,13 @@
 "[Settings/Clipboard/title]" = "คลิปบอร์ด";
 
 /* Description of the 'Clipboard Timeout' setting. */
-"[Settings/ClipboardTimeout/description]" = "เมื่อใดที่คุณคัดลอก KeePassium จะล้างคลิปบอร์ดให้อัตโนมัติหลังจากคัดลอกไปชั่วครู่";
+"[Settings/ClipboardTimeout/description]" = "เมื่อใดที่คุณคัดลอก PassPouch จะล้างคลิปบอร์ดให้อัตโนมัติหลังจากคัดลอกไปชั่วครู่";
 
 /* An option in Settings. Will be shown as 'Clipboard Timeout: Never' */
 "[Settings/ClipboardTimeout/Never/title]" = "ตลอดไป";
 
 /* Description of the 'Make Backup Copies' setting */
-"[Settings/DatabaseBackup/Active/description]" = "ก่อนบันทึกฐานข้อมูล KeePassium จะทำสำเนาให้อัตโนมัติ";
+"[Settings/DatabaseBackup/Active/description]" = "ก่อนบันทึกฐานข้อมูล PassPouch จะทำสำเนาให้อัตโนมัติ";
 
 /* Title of a yes/no setting: whether to back up databases before saving them */
 "[Settings/DatabaseBackup/Active/title]" = "สร้างสำเนาการสำรองข้อมูล";
@@ -251,7 +251,7 @@
 "[Settings/DatabaseBackup/DeleteAll/title]" = "ลบไฟล์สำรองทั้งหมด (%d)";
 
 /* Description of the 'Exclude Backup Files from System Backup' setting */
-"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "กำหนดให้ฐานข้อมูลสำรองใด ๆ ที่สร้างโดย KeePassium ควรเว้นไว้ไม่ให้ iCloud/iTunes มาสำรอง แล้วนำไปใช้กับฐานข้อมูลอื่นที่มีอยู่แล้วและไฟล์สำรองอื่นในอนาคต";
+"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "กำหนดให้ฐานข้อมูลสำรองใด ๆ ที่สร้างโดย PassPouch ควรเว้นไว้ไม่ให้ iCloud/iTunes มาสำรอง แล้วนำไปใช้กับฐานข้อมูลอื่นที่มีอยู่แล้วและไฟล์สำรองอื่นในอนาคต";
 
 /* Title of a yes/no setting: whether app's internal backup copies should be excluded from global system backup */
 "[Settings/DatabaseBackup/ExcludeFromSystemBackup/title]" = "เว้นไม่ให้ระบบเครื่องมาสำรองข้อมูลไฟล์สำรองในแอป";
@@ -266,7 +266,7 @@
 "[Settings/DatabaseBackup/NoFiles/title]" = "ไม่พบไฟล์สำรองข้อมูล";
 
 /* Description of the `Periodic Cleanup` settings */
-"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "KeePassium สามารถลบไฟล์สำรองเก่าให้อัตโนมัติ เพื่อประหยัดพื้นที่ให้มากขึ้น";
+"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "PassPouch สามารถลบไฟล์สำรองเก่าให้อัตโนมัติ เพื่อประหยัดพื้นที่ให้มากขึ้น";
 
 /* Settings section: automatic deletion of old backup files */
 "[Settings/DatabaseBackup/PeriodicCleanup/title]" = "รอบการทำความสะอาด";
@@ -317,7 +317,7 @@
 "[Settings/KeyFiles/title]" = "ไฟล์กุญแจ";
 
 /* Description of the 'Cache Derived Encryption Keys' setting */
-"[Settings/MasterKeys/CacheDerived/description]" = "สำเนาคีย์ที่เก็บไว้ จะช่วยให้ KeePassium ข้ามการดึงคีย์เพื่อกลับมาใช้ใหม่ และการสแกนของ YubiKey เท่าที่ทำได้";
+"[Settings/MasterKeys/CacheDerived/description]" = "สำเนาคีย์ที่เก็บไว้ จะช่วยให้ PassPouch ข้ามการดึงคีย์เพื่อกลับมาใช้ใหม่ และการสแกนของ YubiKey เท่าที่ทำได้";
 
 /* Action: clear/erase/delete stored master keys */
 "[Settings/MasterKeys/Clear/action]" = "ล้างรหัสผ่านหลัก";
@@ -326,7 +326,7 @@
 "[Settings/MasterKeys/ClearOnTimeout/title]" = "ล้างรหัสผ่านหลักเมื่อเวลาอายุ";
 
 /* Description of the 'Remember Master Keys' setting. */
-"[Settings/MasterKeys/Remember/description]" = "เมื่อคุณปลดล็อกฐานข้อมูลแล้ว กุญแจหลักจะถูกเก็บไว้ในพวงกุญแจไว้ในเครื่องอย่างปลอดภัย ในครั้งต่อไป KeePassium จะใช้รหัสนั้นโดยที่คุณไม่ต้องพิมพ์รหัสผ่านหลักอีก";
+"[Settings/MasterKeys/Remember/description]" = "เมื่อคุณปลดล็อกฐานข้อมูลแล้ว กุญแจหลักจะถูกเก็บไว้ในพวงกุญแจไว้ในเครื่องอย่างปลอดภัย ในครั้งต่อไป PassPouch จะใช้รหัสนั้นโดยที่คุณไม่ต้องพิมพ์รหัสผ่านหลักอีก";
 
 /* Title of a section in settings */
 "[Settings/OTP/title]" = "รหัสผ่านแบบใช้ครั้งเดียว";

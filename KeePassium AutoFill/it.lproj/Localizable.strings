@@ -26,13 +26,13 @@
 "[AutoFill/RememberContext/callToAction]" = "Migliora i suggerimenti di Inserimento automatico";
 
 /* Description of the 'Remember Selected Entries` feature */
-"[AutoFill/RememberContext/description]" = "KeePassium ricorderà le voci che selezioni per ogni sito web e quindi le suggerirà automaticamente.";
+"[AutoFill/RememberContext/description]" = "PassPouch ricorderà le voci che selezioni per ogni sito web e quindi le suggerirà automaticamente.";
 
 /* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
 "[AutoFill/Search/Context/title]" = "Contesto";
 
 /* No comment provided by engineer. */
-"[AutoFill/Setup/footer]" = "L'inserimento automatico non può accedere automaticamente ai file che hai già nell'app principale di KeePassium.\n\nPerché? Dietro le quinte, il sistema tratta l'inserimento automatico come un'app separata, indipendente dal processo principale di KeePassium. Per ragioni di sicurezza, un’app non può semplicemente accedere a qualsiasi file esterno, a meno che il file non venga esplicitamente collegato all'app. In questo modo, il sistema si assicura che l'app abbia accesso solo ai file che tu hai autorizzato.\n\nDi conseguenza, sia l'inserimento automatico che l'app principale di KeePassium devono avere la loro autorizzazione specifica per ogni file esterno. Fortunatamente, dovrai dare questa autorizzazione una sola volta.";
+"[AutoFill/Setup/footer]" = "L'inserimento automatico non può accedere automaticamente ai file che hai già nell'app principale di PassPouch.\n\nPerché? Dietro le quinte, il sistema tratta l'inserimento automatico come un'app separata, indipendente dal processo principale di PassPouch. Per ragioni di sicurezza, un’app non può semplicemente accedere a qualsiasi file esterno, a meno che il file non venga esplicitamente collegato all'app. In questo modo, il sistema si assicura che l'app abbia accesso solo ai file che tu hai autorizzato.\n\nDi conseguenza, sia l'inserimento automatico che l'app principale di PassPouch devono avere la loro autorizzazione specifica per ogni file esterno. Fortunatamente, dovrai dare questa autorizzazione una sola volta.";
 
 /* Must match Apple's translation, as found in iOS 18 Settings → General → AutoFill & Passwords. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/autofillFrom]" = "Inserisci automaticamente da:";
@@ -41,7 +41,7 @@
 "[AutoFill/Setup/UncheckKeychain/callToAction]" = "Deseleziona Portachiavi";
 
 /* Instruction to deselect another app in the settings [appName: String] */
-"[AutoFill/Setup/UncheckKeychain/message]" = "Per rendere KeePassium il tuo gestore password di default, deseleziona \"%@\".";
+"[AutoFill/Setup/UncheckKeychain/message]" = "Per rendere PassPouch il tuo gestore password di default, deseleziona \"%@\".";
 
 /* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "Utilizza le password e le passkey da:";

@@ -23,7 +23,7 @@ extension LString {
         value: """
 Password audit checks your passwords against an online database of leaked passwords in a secure and private way.
 
-KeePassium will send information calculated from your passwords — a kind of a partial checksum — to the [Have I Been Pwned](https://haveibeenpwned.com) service. \
+PassPouch will send information calculated from your passwords — a kind of a partial checksum — to the [Have I Been Pwned](https://haveibeenpwned.com) service. \
 The service will return detailed information about compromised passwords with similar checksums. \
 The app will then compare the detailed checksums locally on the device and detect which of your passwords are at risk.
 

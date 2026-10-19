@@ -1,5 +1,5 @@
-/* Menu item that shows info about KeePassium app */
-"[About/altTitle]" = "關於 KeePassium";
+/* Menu item that shows info about PassPouch app */
+"[About/altTitle]" = "關於 PassPouch";
 
 /* Section in settings: icon for the app */
 "[Appearance/AppIcon/title]" = "應用程式圖示";
@@ -92,7 +92,7 @@
 "[Credits/Item/tpInappReceipt]" = "TPInAppReceipt：Pavel Tikhonenko";
 
 /* Item in the credits list */
-"[Credits/Item/translations]" = "翻譯：KeePassium 貢獻者";
+"[Credits/Item/translations]" = "翻譯：PassPouch 貢獻者";
 
 /* Item in the credits list */
 "[Credits/Item/twoFish]" = "Twofish：由 Niels Ferguson 實作";
@@ -179,7 +179,7 @@
 "[Database/Create/weakPasswordWarning]" = "此密碼很容易被猜到。請嘗試輸入強度較高的密碼。";
 
 /* Description of favicon downloader feature. */
-"[Database/DownloadFavicons/intro]" = "KeePassium 會聯絡與每個項目相連的網站。";
+"[Database/DownloadFavicons/intro]" = "PassPouch 會聯絡與每個項目相連的網站。";
 
 /* Description of favicon downloader feature. 'Doing this' refers to downloading favicons. */
 "[Database/DownloadFavicons/warning]" = "在公共或受監控的網路上執行此操作，可能會暴露您擁有帳戶的網站的清單。";
@@ -248,7 +248,7 @@
 "[Onboarding/AppProtection/activate]" = "啟用應用解鎖密碼";
 
 /* Text in the App Protection onboarding screen. */
-"[Onboarding/AppProtection/text1]" = "KeePassium 是您的保險庫。應用程式防護功能可確保只有您能開啟它。";
+"[Onboarding/AppProtection/text1]" = "PassPouch 是您的保險庫。應用程式防護功能可確保只有您能開啟它。";
 
 /* Title of the App Protection onboarding screen */
 "[Onboarding/AppProtection/title]" = "只有您可以查看";
@@ -278,7 +278,7 @@
 "[Onboarding/DataEncryption/title]" = "資料加密";
 
 /* Text in the introductory onboarding screen. */
-"[Onboarding/Intro/text1]" = "KeePassium 會安全地加密儲存您的密碼及其他敏感資訊。";
+"[Onboarding/Intro/text1]" = "PassPouch 會安全地加密儲存您的密碼及其他敏感資訊。";
 
 /* Text in the introductory onboarding screen. */
 "[Onboarding/Intro/text2]" = "無廣告，也無追蹤行為。";
@@ -293,7 +293,7 @@
 "[Onboarding/Intro/title]" = "歡迎使用";
 
 /* Text in the Security intro screen */
-"[Onboarding/Security/text1]" = "您的資訊在保險箱（資料庫）中被加密。保險箱則儲存在保險庫中（KeePassium）。";
+"[Onboarding/Security/text1]" = "您的資訊在保險箱（資料庫）中被加密。保險箱則儲存在保險庫中（PassPouch）。";
 
 /* Text in the Security intro screen */
 "[Onboarding/Security/text2]" = "保險庫和保險箱有不同金鑰，只有您知道。";
@@ -314,7 +314,7 @@
 "[PasswordAudit/ExposureCount/description]" = "該數字顯示密碼在已知資料洩漏中被發現的次數。";
 
 /* Description of the Password Audit function. */
-"[PasswordAudit/Intro/text]" = "密碼檢查根據線上密碼洩漏資料庫，以安全並私密的方式檢查您的密碼。\n\nKeePassium 會將從您的密碼計算出來的資訊（類似部分核對和）傳送給 [Have I Been Pwned](https://haveibeenpwned.com) 服務。該服務會回傳具有類似核對和的遭洩密碼的詳細資訊。然後應用程式會在本地裝置上比對詳細的核對和，並偵測出哪些密碼存在風險。\n\n您的實際密碼決不會和線上服務共享。\n[深入了解…](%@)";
+"[PasswordAudit/Intro/text]" = "密碼檢查根據線上密碼洩漏資料庫，以安全並私密的方式檢查您的密碼。\n\nPassPouch 會將從您的密碼計算出來的資訊（類似部分核對和）傳送給 [Have I Been Pwned](https://haveibeenpwned.com) 服務。該服務會回傳具有類似核對和的遭洩密碼的詳細資訊。然後應用程式會在本地裝置上比對詳細的核對和，並偵測出哪些密碼存在風險。\n\n您的實際密碼決不會和線上服務共享。\n[深入了解…](%@)";
 
 /* Result of a password audit. */
 "[PasswordAudit/Results/allGood]" = "好消息！您的所有密碼都沒出現在已知的資料洩漏中。";
@@ -380,7 +380,7 @@
 "[ProtectedTextField] Show Password" = "顯示密碼";
 
 /* Explanation why the app needs camera access permission. */
-"[QRCodeScanner/CameraPermission/description]" = "KeePassium 需要相機存取權才能掃描行動條碼。";
+"[QRCodeScanner/CameraPermission/description]" = "PassPouch 需要相機存取權才能掃描行動條碼。";
 
 /* Error message when the app cannot use the camera. */
 "[QRCodeScanner/Error/CameraBusy]" = "相機已使用中。";
@@ -401,7 +401,7 @@
 "[QRCodeScanner/Info/callToAction]" = "將相機對準行動條碼。";
 
 /* Description of the Quick AutoFill feature. */
-"[QuickAutoFill/description]" = "快速自動填寫密碼可在密碼欄位旁顯示相關項目，無需開啟 KeePassium。";
+"[QuickAutoFill/description]" = "快速自動填寫密碼可在密碼欄位旁顯示相關項目，無需開啟 PassPouch。";
 
 /* Placeholder text for empty search results */
 "[Search/EmptyResult/title]" = "沒有找到適合的東西";
@@ -419,7 +419,7 @@
 "[Settings/AppLoc/Activate/callToAction]" = "啟用應用解鎖密碼";
 
 /* Description of `Activate app protection` call to action. */
-"[Settings/AppLock/Activate/description]" = "保護KeePassium免受未經授權的訪問。";
+"[Settings/AppLock/Activate/description]" = "保護PassPouch免受未經授權的訪問。";
 
 /* Description of biometric unlock settings */
 "[Settings/AppLock/Biometric/description]" = "可以使用生物識別身份驗證作為應用解鎖密碼(但可能不這麼安全) 快速解鎖的替代方案。";
@@ -428,19 +428,19 @@
 "[Settings/AppLock/Biometric/title] Use %@" = "使用 %@";
 
 /* Explanation for the `Lock on App Launch` setting */
-"[Settings/AppLock/LockOnLaunch/description]" = "在重新啟動設備與強制關閉應用程式之前，確保 KeePassium 已經鎖定。";
+"[Settings/AppLock/LockOnLaunch/description]" = "在重新啟動設備與強制關閉應用程式之前，確保 PassPouch 已經鎖定。";
 
 /* Setting switch: whether to lock the app after it was terminated and relaunched. */
 "[Settings/AppLock/LockOnLaunch/title]" = "應用程式啟動鎖定";
 
 /* Explanation for the `Lock on macOS Screen Lock` setting */
-"[Settings/AppLock/LockOnScreenLock/description]" = "確保您鎖定 Mac 時，KeePassium 也會鎖定。";
+"[Settings/AppLock/LockOnScreenLock/description]" = "確保您鎖定 Mac 時，PassPouch 也會鎖定。";
 
 /* Title of a yes/no setting: whether to lock app when computer screen is locked (see https://support.apple.com/en-gb/guide/mac-help/mchl8e8b6a34/mac) */
 "[Settings/AppLock/LockOnScreenLock/title]" = "在 macOS 鎖定螢幕時鎖定";
 
 /* Description of the `Lock on Wrong Passcode` setting */
-"[Settings/AppLock/LockOnWrongPasscode/description]" = "如果您使用了錯誤的應用解鎖密碼, KeePassium 將會關閉所有的資料庫並從系統鑰匙圈中清除所有的主金鑰。";
+"[Settings/AppLock/LockOnWrongPasscode/description]" = "如果您使用了錯誤的應用解鎖密碼, PassPouch 將會關閉所有的資料庫並從系統鑰匙圈中清除所有的主金鑰。";
 
 /* Title in the settings: whether to lock databases when user enters a wrong app protection passcode. */
 "[Settings/AppLock/LockOnWrongPasscode/title]" = "應用解鎖密碼錯誤時鎖定";
@@ -497,7 +497,7 @@
 "[Settings/AutoFill/CopyOTP/title]" = "複製 一次性密碼OTP 到剪貼板";
 
 /* Description of the 'Remember Selected Entries' setting. */
-"[Settings/AutoFill/RememberContext/description]" = "KeePassium 會記住您為每個網站選擇的項目，然後自動建議該項目。";
+"[Settings/AutoFill/RememberContext/description]" = "PassPouch 會記住您為每個網站選擇的項目，然後自動建議該項目。";
 
 /* Title of a yes/no setting: remember which entry was used for AutoFill on which website. */
 "[Settings/AutoFill/RememberContext/title]" = "記住所選項目";
@@ -506,7 +506,7 @@
 "[Settings/AutoFill/Setup Guide/title]" = "自動填寫密碼設定教學";
 
 /* No comment provided by engineer. */
-"[Settings/AutoFill/UnavailableInIntune/description]" = "在 KeePassium for Intune 中無法使用自動填寫。";
+"[Settings/AutoFill/UnavailableInIntune/description]" = "在 PassPouch for Intune 中無法使用自動填寫。";
 
 /* Description of the 'Fill-In Perfect Result Automatically' setting */
 "[Settings/AutoFill/UsePerfectMatch/description]" = "當自動填入只找到一個並且完整匹配的項目時 - 該項目將會被自動貼上。";
@@ -536,13 +536,13 @@
 "[Settings/Clipboard/title]" = "剪貼板";
 
 /* Description of the 'Clipboard Timeout' setting. */
-"[Settings/ClipboardTimeout/description]" = "當您複製任何東西, KeePassium 會在稍後自動的為您清除剪貼板。";
+"[Settings/ClipboardTimeout/description]" = "當您複製任何東西, PassPouch 會在稍後自動的為您清除剪貼板。";
 
 /* An option in Settings. Will be shown as 'Clipboard Timeout: Never' */
 "[Settings/ClipboardTimeout/Never/title]" = "永不";
 
 /* Description of the 'Make Backup Copies' setting */
-"[Settings/DatabaseBackup/Active/description]" = "在保存資料庫時, KeePassium 會自動創建一個副本, 以防萬一。";
+"[Settings/DatabaseBackup/Active/description]" = "在保存資料庫時, PassPouch 會自動創建一個副本, 以防萬一。";
 
 /* Title of a yes/no setting: whether to back up databases before saving them */
 "[Settings/DatabaseBackup/Active/title]" = "創建備份副本";
@@ -554,7 +554,7 @@
 "[Settings/DatabaseBackup/DeleteAll/title]" = "刪除所有備份儅案(%d)";
 
 /* Description of the 'Exclude Backup Files from System Backup' setting */
-"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "定義是否應從 iCloud / iTunes 備份中排除由 KeePassium 創建的備份資料庫。適用於所有現有和將來的備份檔案。";
+"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "定義是否應從 iCloud / iTunes 備份中排除由 PassPouch 創建的備份資料庫。適用於所有現有和將來的備份檔案。";
 
 /* Title of a yes/no setting: whether app's internal backup copies should be excluded from global system backup */
 "[Settings/DatabaseBackup/ExcludeFromSystemBackup/title]" = "從系統備份中排除備份文件";
@@ -569,7 +569,7 @@
 "[Settings/DatabaseBackup/NoFiles/title]" = "沒有找到備份檔案";
 
 /* Description of the `Periodic Cleanup` settings */
-"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "KeePassium 可以自動刪除舊的備份文件幫您釋放點手機檔案空間。";
+"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "PassPouch 可以自動刪除舊的備份文件幫您釋放點手機檔案空間。";
 
 /* Settings section: automatic deletion of old backup files */
 "[Settings/DatabaseBackup/PeriodicCleanup/title]" = "定期清理";
@@ -584,7 +584,7 @@
 "[Settings/DatabaseBackup/title]" = "資料庫備份";
 
 /* Description of the `Database Timeout` setting */
-"[Settings/DatabaseLockTimeout/description]" = "如果您在一段時間內沒有與KeePassium程式交互, 資料庫將會自動關閉, 以確保您的安全。如果重新打開KeePassium程式您需要重新輸入主密碼。";
+"[Settings/DatabaseLockTimeout/description]" = "如果您在一段時間內沒有與PassPouch程式交互, 資料庫將會自動關閉, 以確保您的安全。如果重新打開PassPouch程式您需要重新輸入主密碼。";
 
 /* Title of a setting: the time after which databases will be locked. */
 "[Settings/DatabaseLockTimeout/title]" = "資料庫逾時";
@@ -626,7 +626,7 @@
 "[Settings/KeyFiles/title]" = "金鑰檔案";
 
 /* Description of the 'Cache Derived Encryption Keys' setting */
-"[Settings/MasterKeys/CacheDerived/description]" = "快取金鑰使 KeePassium 儘可能跳過金鑰衍生與 YubiKey 硬體掃描。";
+"[Settings/MasterKeys/CacheDerived/description]" = "快取金鑰使 PassPouch 儘可能跳過金鑰衍生與 YubiKey 硬體掃描。";
 
 /* Action: clear/erase/delete stored master keys */
 "[Settings/MasterKeys/Clear/action]" = "清除主金鑰";
@@ -635,7 +635,7 @@
 "[Settings/MasterKeys/ClearOnTimeout/title]" = "逾時後清除主金鑰";
 
 /* Description of the 'Remember Master Keys' setting. */
-"[Settings/MasterKeys/Remember/description]" = "當解鎖資料庫時, 主金鑰將會安全的保存在系統鑰匙圈中。在下次登入KeePassium 將會自動使用該金鑰檔案, 所以您無須再輸入您完整的主密碼。";
+"[Settings/MasterKeys/Remember/description]" = "當解鎖資料庫時, 主金鑰將會安全的保存在系統鑰匙圈中。在下次登入PassPouch 將會自動使用該金鑰檔案, 所以您無須再輸入您完整的主密碼。";
 
 /* Title of a section in settings */
 "[Settings/OTP/title]" = "一次性密碼";
@@ -725,7 +725,7 @@
 "[Tags/UsageCount/title]" = "使用次數";
 
 /* Call to action in What's New announcement */
-"[WhatsNew/Announcement/body]" = "探索 KeePassium 中的新功能和改善的項目。";
+"[WhatsNew/Announcement/body]" = "探索 PassPouch 中的新功能和改善的項目。";
 
 /* Button which opens the What's New screen. */
 "[WhatsNew/Announcement/button]" = "更新了什麼";
@@ -737,7 +737,7 @@
 "[WhatsNew/Feature/AppScopedConnections/title]" = "更安全的雲端存取";
 
 /* Description of a feature highlight, a call to action. */
-"[WhatsNew/Feature/AutoFillWithMemory/description]" = "KeePassium 會記住您在每個網站選擇的項目。";
+"[WhatsNew/Feature/AutoFillWithMemory/description]" = "PassPouch 會記住您在每個網站選擇的項目。";
 
 /* Title of a feature highlight, a noun phrase. */
 "[WhatsNew/Feature/AutoFillWithMemory/title]" = "更智慧的自動填寫";
@@ -764,5 +764,5 @@
 "[WhatsNew/FullChangelog/title]" = "詳細變更紀錄";
 
 /* Full title for release highlights */
-"[WhatsNew/fullTitle]" = "KeePassium 全新功能";
+"[WhatsNew/fullTitle]" = "PassPouch 全新功能";
 

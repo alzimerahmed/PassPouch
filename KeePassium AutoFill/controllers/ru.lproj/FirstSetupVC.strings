@@ -13,6 +13,6 @@
 /* Class = "UILabel"; text = "AutoFill Setup"; ObjectID = "pIl-6L-Msp"; */
 "pIl-6L-Msp.text" = "Настройка Автозаполнения";
 
-/* Class = "UINavigationItem"; title = "KeePassium"; ObjectID = "rzY-Ci-bd9"; */
-"rzY-Ci-bd9.title" = "KeePassium";
+/* Class = "UINavigationItem"; title = "PassPouch"; ObjectID = "rzY-Ci-bd9"; */
+"rzY-Ci-bd9.title" = "PassPouch";
 

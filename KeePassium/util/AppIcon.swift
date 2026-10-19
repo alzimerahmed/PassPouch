@@ -26,11 +26,11 @@ extension AppIcon {
     ]
 
     static let classicFree = AppIcon(
-        name: "KeePassium Classic",
+        name: "PassPouch Classic",
         key: "appicon-classic-free",
         asset: "appicon-classic-free-listitem")
     static let classicPro = AppIcon(
-        name: "KeePassium Pro Classic",
+        name: "PassPouch Pro Classic",
         key: "appicon-classic-pro",
         asset: "appicon-classic-pro-listitem")
 

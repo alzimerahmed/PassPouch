@@ -1643,7 +1643,7 @@ extension LString.Warning {
     public static let missingBinariesTemplate = NSLocalizedString(
         "[Database2/Loading/Warning/missingBinaries]",
         bundle: Bundle.framework,
-        value: "Attachments of some entries are missing data. This is a sign of database corruption, most likely by the last used app (%@). KeePassium will preserve the empty attachments, but cannot restore them. You should restore your database from a backup copy. \n\nMissing attachments: %@",
+        value: "Attachments of some entries are missing data. This is a sign of database corruption, most likely by the last used app (%@). PassPouch will preserve the empty attachments, but cannot restore them. You should restore your database from a backup copy. \n\nMissing attachments: %@",
         comment: "A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String]"
     )
     public static let namelessCustomFieldsTemplate = NSLocalizedString(

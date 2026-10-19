@@ -18,13 +18,13 @@ extension LString {
         public static let personalVersionInAppStore = NSLocalizedString(
             "[Intune/PersonalVersionElsewhere]",
             bundle: Bundle.framework,
-            value: "KeePassium version for personal use is available on the App Store.",
+            value: "PassPouch version for personal use is available on the App Store.",
             comment: "Info message for users who accidentally installed the enterprise version.")
 
         public static let orgLicenseMissing = NSLocalizedString(
             "[Org/LicenseMissing]",
             bundle: Bundle.framework,
-            value: "KeePassium could not find the enterprise account of your organization.",
+            value: "PassPouch could not find the enterprise account of your organization.",
             comment: "Error message, euphemism for missing corporate license")
         public static let orgLicenseInvalid = NSLocalizedString(
             "[Org/LicenseInvalid]",

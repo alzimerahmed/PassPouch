@@ -201,7 +201,7 @@ public class DatabaseLoader: ProgressObserver {
 
     private let operationQueue: OperationQueue = {
         let q = OperationQueue()
-        q.name = "com.keepassium.DatabaseLoader"
+        q.name = "com.passpouch.DatabaseLoader"
         q.maxConcurrentOperationCount = 1
         q.qualityOfService = .userInitiated
         return q

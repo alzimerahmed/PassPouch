@@ -96,12 +96,12 @@ extension LString {
     public static let directConnectionDescription = NSLocalizedString(
         "[RemoteConnection/Direct/description]",
         bundle: Bundle.framework,
-        value: "KeePassium will communicate directly with your online storage. This ensures reliable file transfer.",
+        value: "PassPouch will communicate directly with your online storage. This ensures reliable file transfer.",
         comment: "Description of the `Direct connection` sync method.")
     public static let integrationViaFilesAppDescription = NSLocalizedString(
         "[RemoteConnection/ViaFilesApp/description]",
         bundle: Bundle.framework,
-        value: "KeePassium will assign file synchronization to the app of your storage provider. Some apps work better than others.",
+        value: "PassPouch will assign file synchronization to the app of your storage provider. Some apps work better than others.",
         comment: "Description of the `Integration via Files app` sync method.")
 
     public static let titleAllowUntrustedCertificate = NSLocalizedString(

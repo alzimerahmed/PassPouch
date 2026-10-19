@@ -11,7 +11,7 @@
 "[AppLock] Unlock" = "ปลดล็อก";
 
 /* Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt. */
-"[AppLock/Biometric/Hint] Unlock KeePassium" = "ปลดล็อก KeePassium";
+"[AppLock/Biometric/Hint] Unlock PassPouch" = "ปลดล็อก PassPouch";
 
 /* Action/button to switch from TouchID/FaceID prompt to manual input of the AppLock passcode. */
 "[AppLock/cancelBiometricAuth] Use Passcode" = "ใช้รหัส";
@@ -20,7 +20,7 @@
 "[AppLock/changePasscode]" = "เปลี่ยนรหัส";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/EnterPasscode/callToAction]" = "ปลดล็อก KeePassium";
+"[AppLock/EnterPasscode/callToAction]" = "ปลดล็อก PassPouch";
 
 /* Action: change keyboard type to enter alphanumeric passphrases */
 "[AppLock/Passcode/KeyboardType/switchAction] 123→ABC" = "123→ABC";
@@ -44,10 +44,10 @@
 "[AppLock/savePasscode]" = "บันทึกรหัสผ่าน";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/SetupPasscode/callToAction]" = "ปกป้อง KeePassium จากการเข้าถึงที่ไม่ได้รับอนุญาต";
+"[AppLock/SetupPasscode/callToAction]" = "ปกป้อง PassPouch จากการเข้าถึงที่ไม่ได้รับอนุญาต";
 
 /* Message shown when AutoFill cannot automatically open the main app for upgrading to a premium version. */
-"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open KeePassium from your home screen." = "เพื่อที่จะอัพเกรด โปรดเข้าแอป KeePassium จากหน้าจอหลัก";
+"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open PassPouch from your home screen." = "เพื่อที่จะอัพเกรด โปรดเข้าแอป PassPouch จากหน้าจอหลัก";
 
 /* Title of a message related to upgrading to the premium version */
 "[AutoFill/Premium/Upgrade/Manual/title] Premium Upgrade" = "อัพเกรดเป็นพรีเมียม";
@@ -149,7 +149,7 @@
 "[Database/FormatVersion/Conversion/allDataPreserved]" = "ข้อมูลทั้งหมดของคุณจะคงไว้เหมือนเดิม";
 
 /* Info message when the app needs to change database file format. [oldFormat, newFormat: String] */
-"[Database/FormatVersion/Upgrade/text]" = "KeePassium ต้องการอัพเกรดรูปแบบฐานข้อมูลของคุณ (จากรูปแบบ %1$@ ไปเป็น %2$@) ซึ่งคุณอาจจะต้องอัพเดตแอปอื่นที่จะต้องใช้ฐานข้อมูลนี้ด้วย";
+"[Database/FormatVersion/Upgrade/text]" = "PassPouch ต้องการอัพเกรดรูปแบบฐานข้อมูลของคุณ (จากรูปแบบ %1$@ ไปเป็น %2$@) ซึ่งคุณอาจจะต้องอัพเดตแอปอื่นที่จะต้องใช้ฐานข้อมูลนี้ด้วย";
 
 /* Title of an info message when the app needs to change database file format. */
 "[Database/FormatVersion/Upgrade/title]" = "ก่อนที่เราจะดำเนินการต่อ";
@@ -251,7 +251,7 @@
 "[Database/Progress/resolvingFieldReferences]" = "กำลังแก้ช่องอ้างอิง...";
 
 /* Suggested solution/call to action when intermediate sync app fails. */
-"[Database/RecommendRemote/callToAction]" = "กำลังลองเชื่อมต่อที่จัดเก็บโดยตรงจาก KeePassium";
+"[Database/RecommendRemote/callToAction]" = "กำลังลองเชื่อมต่อที่จัดเก็บโดยตรงจาก PassPouch";
 
 /* Message to confirm removal of database file from the app. (This keeps the file, but removes its reference from the app.) */
 "[Database/Remove/Confirm/text] Remove database from the list?\n The file will remain intact and you can add it again later." = "ลบฐานข้อมูลออกจากรายการหรือไม่?\n ไฟล์จะยังคงเดิมและคุณยังสามารถเพิ่มไฟล์ได้ในภายหลัง";
@@ -302,7 +302,7 @@
 "[Database/SyncConflict/currentVersion]" = "เวอร์ชันปัจจุบัน";
 
 /* Message shown in case of database sync conflict. */
-"[Database/SyncConflict/description]" = "ฐานข้อมูลมีการเปลี่ยนแปลงหลังจากโหลดเข้ามาใน KeePassium";
+"[Database/SyncConflict/description]" = "ฐานข้อมูลมีการเปลี่ยนแปลงหลังจากโหลดเข้ามาใน PassPouch";
 
 /* Title: the loaded (on-device) database version in case of sync conflict. */
 "[Database/SyncConflict/loadedVersion]" = "เวอร์ชันที่โหลดเข้าเครื่อง";
@@ -425,7 +425,7 @@
 "[Database2/Loading/Error] Error unpacking database: %@" = "ไม่สามารถคลายฐานข้อมูลได้: %@";
 
 /* A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String] */
-"[Database2/Loading/Warning/missingBinaries]" = "ไฟล์แนบของบางรายการมีข้อมูลหายไป เป็นเหตุให้ฐานข้อมูลเสียหาย น่าจะเกิดขึ้นตอนการใช้แอปครั้งล่าสุด (%1$@) KeePassium จะเก็บไฟล์แนบเปล่าไว้ แต่ไม่สามารถเรียกคืนกลับมาได้ คุณควรเรียกคืนฐานข้อมูลออกมาจากที่สำรองเอาไว้แล้ว\n\nไฟล์แนบที่หายไป: %2$@";
+"[Database2/Loading/Warning/missingBinaries]" = "ไฟล์แนบของบางรายการมีข้อมูลหายไป เป็นเหตุให้ฐานข้อมูลเสียหาย น่าจะเกิดขึ้นตอนการใช้แอปครั้งล่าสุด (%1$@) PassPouch จะเก็บไฟล์แนบเปล่าไว้ แต่ไม่สามารถเรียกคืนกลับมาได้ คุณควรเรียกคืนฐานข้อมูลออกมาจากที่สำรองเอาไว้แล้ว\n\nไฟล์แนบที่หายไป: %2$@";
 
 /* A warning about nameless attachments, shown after loading the database. [listOfEntryNames: String] */
 "[Database2/Loading/Warning/namelessAttachments]" = "บางรายการที่มีไฟล์แนบโดยไม่ได้ตั้งชื่อ จะเป็นสัญญาณว่าฐานข้อมูลเดิมมีความเสียหาย\n\nโปรดทบทวนดูไฟล์แนบตามรายการข้างล่าง (และประวัติของมัน):\n%@";
@@ -595,8 +595,8 @@
 /* Error message: there is no USB drive connected to the device. */
 "[FileAccessError/FileProvider/NotFound/usbDrive]" = "ยังไม่ได้เชื่อมต่อไดรฟ์ USB";
 
-/* Error message shown when there's internal inconsistency in KeePassium. */
-"[FileAccessError/internalError]" = "ภายใน KeePassium มีปัญหา โปรดบอกรายละเอียดเกี่ยวกับมันหน่อย";
+/* Error message shown when there's internal inconsistency in PassPouch. */
+"[FileAccessError/internalError]" = "ภายใน PassPouch มีปัญหา โปรดบอกรายละเอียดเกี่ยวกับมันหน่อย";
 
 /* Error message: network access is forbidden by system or app settings. */
 "[FileAccessError/NetworkAccessDenied/generic]" = "การเข้าถึงเน็ตเวิร์คถูกบล็อคโดยการตั้งค่า";
@@ -1204,7 +1204,7 @@
 /* What's included in a price plan. Please leave `perpetual fallback license` in English. */
 "[Premium/Price Plan/Conditions/perpetual fallback]" = "สิทธิ์ในการเช่ามาเป็นเจ้าของ (Perpetual fallback license)";
 
-/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://keepassium.com/articles/perpetual-fallback-license/ */
+/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://passpouch.org/articles/perpetual-fallback-license/ */
 "[Premium/Price Plan/Conditions/subscription as purchase]" = "ซื้อเป็นแบบสมัครรับ";
 
 /* What's included in a price plan */
@@ -1235,7 +1235,7 @@
 "[Premium/Upgrade/cancelOngoingSubscription]" = "โปรดตรวจสอบให้ดี หากคุณต้องการยกเลิกการสมัครรับของครั้งก่อน";
 
 /* Message shown when in-app purchase is deferred until approval (parental or corporate). */
-"[Premium/Upgrade/Deferred/text] Thank you! You can use KeePassium while purchase is awaiting approval." = "ขอบคุณมาก! คุณสามารถใช้ KeePassium ขณะที่รอยืนยันการซื้อ";
+"[Premium/Upgrade/Deferred/text] Thank you! You can use PassPouch while purchase is awaiting approval." = "ขอบคุณมาก! คุณสามารถใช้ PassPouch ขณะที่รอยืนยันการซื้อ";
 
 /* Product price for monthly premium subscription. [localizedPrice: String] */
 "[Premium/Upgrade/price] %@ / month" = "%@ / เดือน";
@@ -1277,7 +1277,7 @@
 "[PremiumFeature/BusinessClouds/title]" = "ที่จัดเก็บบนคลาวด์ขององค์กร";
 
 /* A generic description of a premium feature */
-"[PremiumFeature/Generic/description]" = "อัพเกรดเป็นพรีเมียมและใช้งาน KeePassium ในแบบที่ดีที่สุด";
+"[PremiumFeature/Generic/description]" = "อัพเกรดเป็นพรีเมียมและใช้งาน PassPouch ในแบบที่ดีที่สุด";
 
 /* A generic title of a premium feature */
 "[PremiumFeature/Generic/title]" = "คุณสมบัติพรีเมียม";
@@ -1295,16 +1295,16 @@
 "[PremiumFeature/MultiDB/title] Multiple Databases" = "ฐานข้อมูลหลายจำนวน";
 
 /* Description/call to action for the `Quick AutoFill` premium feature. */
-"[PremiumFeature/QuickAutoFill/description]" = "ป้อนรหัสผ่านอัตโนมัติด้วยการกดครั้งเดียว โดยไม่ต้องเปิด KeePassium";
+"[PremiumFeature/QuickAutoFill/description]" = "ป้อนรหัสผ่านอัตโนมัติด้วยการกดครั้งเดียว โดยไม่ต้องเปิด PassPouch";
 
 /* Title of a premium feature: show relevant AutoFill entries right under the input field */
 "[PremiumFeature/QuickAutoFill/title]" = "ป้อนรหัสอัตโนมัติทันที";
 
 /* A brief summary of the privacy policy (for offline mode) */
-"[PrivacyPolicy/Offline/text]" = "KeePassium ไม่เก็บข้อมูลส่วนตัวหรือข้อมูลวิเคราะห์ใด ๆ และไม่แชร์ข้อมูลให้ผู้อื่น";
+"[PrivacyPolicy/Offline/text]" = "PassPouch ไม่เก็บข้อมูลส่วนตัวหรือข้อมูลวิเคราะห์ใด ๆ และไม่แชร์ข้อมูลให้ผู้อื่น";
 
 /* A brief summary of the privacy policy (for online mode) */
-"[PrivacyPolicy/Online/text]" = "KeePassium จะไม่เก็บข้อมูลส่วนตัวหรือข้อมูลเพื่อการวิเคราะห์ใด ๆ\nฟีเจอร์บางอย่างอาจจะต้องใช้การแลกเปลี่ยนข้อมูลกับบริการอื่นภายนอก (จะขึ้นอยู่กับการยินยอมของผู้ใช้ก่อนใช้งานบริการเหล่านั้น) การแลกเปลี่ยนข้อมูลจะทำตามนโยบายความเป็นส่วนตัวตามบริการที่ใช้";
+"[PrivacyPolicy/Online/text]" = "PassPouch จะไม่เก็บข้อมูลส่วนตัวหรือข้อมูลเพื่อการวิเคราะห์ใด ๆ\nฟีเจอร์บางอย่างอาจจะต้องใช้การแลกเปลี่ยนข้อมูลกับบริการอื่นภายนอก (จะขึ้นอยู่กับการยินยอมของผู้ใช้ก่อนใช้งานบริการเหล่านั้น) การแลกเปลี่ยนข้อมูลจะทำตามนโยบายความเป็นส่วนตัวตามบริการที่ใช้";
 
 /* Section: privacy policy */
 "[PrivacyPolicy/title]" = "นโยบายความเป็นส่วนตัว";
@@ -1385,7 +1385,7 @@
 "[Settings/MasterKeys/Remember/title]" = "จำรหัสผ่านหลัก";
 
 /* Confirmation dialog message */
-"[Settings/NetworkAccess/Confirmation/text]" = "ต้องการอนุญาตให้ KeePassium เชื่อมต่อกับบริการภายนอกหรือไม่";
+"[Settings/NetworkAccess/Confirmation/text]" = "ต้องการอนุญาตให้ PassPouch เชื่อมต่อกับบริการภายนอกหรือไม่";
 
 /* Settings section: how/whether the app is allowed to use networks/Internet */
 "[Settings/NetworkAccess/title]" = "การเข้าถึงเครือข่าย";
@@ -1424,22 +1424,22 @@
 "[Support/template] (Please describe the problem here)" = "(โปรดอธิบายปัญหาตรงนี้)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "ช่วยพวกเราทำ KeePassium ให้ดีขึ้น";
+"[TipBox/callToAction/1]" = "ช่วยพวกเราทำ PassPouch ให้ดีขึ้น";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "ช่วยพวกเราทำให้ KeePassium ดูดีขึ้น";
+"[TipBox/callToAction/2]" = "ช่วยพวกเราทำให้ PassPouch ดูดีขึ้น";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "ช่วยพวกเราทำให้ KeePassium สามารถใช้ฟรีได้";
+"[TipBox/callToAction/3]" = "ช่วยพวกเราทำให้ PassPouch สามารถใช้ฟรีได้";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "คุณถูกใจ KeePassium หรือไม่?";
+"[TipBox/description/1]" = "คุณถูกใจ PassPouch หรือไม่?";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "KeePassium เป็นแอปโอเพนซอร์สแบบฟรี คุณสามารถไว้ใจกับข้อมูลที่ละเอียดอ่อนของคุณได้ ไม่มีโฆษณา ไม่สอดส่องข้อมูล ไม่ทำเรื่องไร้สาระ — เราเคารพคุณ";
+"[TipBox/description/2]" = "PassPouch เป็นแอปโอเพนซอร์สแบบฟรี คุณสามารถไว้ใจกับข้อมูลที่ละเอียดอ่อนของคุณได้ ไม่มีโฆษณา ไม่สอดส่องข้อมูล ไม่ทำเรื่องไร้สาระ — เราเคารพคุณ";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "คุณถูกใจ KeePassium แต่ไม่ได้ต้องการฟีเจอร์พรีเมียมหรือไม่?";
+"[TipBox/description/3]" = "คุณถูกใจ PassPouch แต่ไม่ได้ต้องการฟีเจอร์พรีเมียมหรือไม่?";
 
 /* Notification after a successful donation. */
 "[TipBox/thankYou]" = "ขอบคุณ!";
@@ -1448,7 +1448,7 @@
 "[TipBox/title/2]" = "บริจาค";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "สนับสนุน KeePassium";
+"[TipBox/title/3]" = "สนับสนุน PassPouch";
 
 /* Name of an entry field. Acronym `TOTP` should not be translated. */
 "[TOTP/FieldName]" = "รหัสผ่านแบบใช้ครั้งเดียว (TOTP)";

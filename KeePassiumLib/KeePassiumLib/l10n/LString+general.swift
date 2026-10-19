@@ -307,18 +307,18 @@ extension LString {
     public static let titleAutoTypeAccessibility = NSLocalizedString(
         "[AutoType/AccessibilityPrompt/title]",
         bundle: Bundle.framework,
-        value: "KeePassium needs your permission",
+        value: "PassPouch needs your permission",
         comment: "Title of a dialog asking user to provide a security permission")
 
     public static let messageAutoTypeAccessibilityNeeded1 = NSLocalizedString(
         "[AutoType/AccessibilityPrompt/message]",
         bundle: Bundle.framework,
-        value: "KeePassium needs your permission to send key presses to other apps.",
+        value: "PassPouch needs your permission to send key presses to other apps.",
         comment: "Message explaining why accessibility permission is needed")
     public static let messageAutoTypeAccessibilityNeeded2 = NSLocalizedString(
         "[AutoType/AccessibilityPrompt/callToAction]",
         bundle: Bundle.framework,
-        value: "Open system settings → Privacy & Security → Accessibility and enable KeePassium there.",
+        value: "Open system settings → Privacy & Security → Accessibility and enable PassPouch there.",
         comment: "Call to action / instruction on how to enable accessibility permission")
 
     public static let actionOpenAccessibilitySettings = actionOpenSystemSettings
@@ -464,13 +464,13 @@ extension LString {
     public static let titleSetupAppPasscode = NSLocalizedString(
         "[AppLock/SetupPasscode/callToAction]",
         bundle: Bundle.framework,
-        value: "Protect KeePassium from unauthorized access",
+        value: "Protect PassPouch from unauthorized access",
         comment: "Call to action in the passcode input dialog."
     )
     public static let titleUnlockTheApp = NSLocalizedString(
         "[AppLock/EnterPasscode/callToAction]",
         bundle: Bundle.framework,
-        value: "Unlock KeePassium",
+        value: "Unlock PassPouch",
         comment: "Call to action in the passcode input dialog."
     )
 
@@ -1163,7 +1163,7 @@ extension LString {
     public static let tryRemoteConnection = NSLocalizedString(
         "[Database/RecommendRemote/callToAction]",
         bundle: Bundle.framework,
-        value: "Try connecting to your remote storage directly from KeePassium.",
+        value: "Try connecting to your remote storage directly from PassPouch.",
         comment: "Suggested solution/call to action when intermediate sync app fails.")
 
     public static let titleMasterKey = NSLocalizedString(
@@ -1428,7 +1428,7 @@ extension LString {
         comment: "Name of biometric authentication method. Trademarked, do not translate unless Apple traslated it to your language.")
 
 
-    public static let copyrightNotice = "©KeePassium Labs" 
+    public static let copyrightNotice = "©PassPouch Labs" 
     public static let previousCopyrightNotice = NSLocalizedString(
         "[About/CopyrightAuthor]",
         bundle: Bundle.framework,

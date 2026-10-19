@@ -26,13 +26,13 @@
 "[AutoFill/RememberContext/callToAction]" = "Améliorer les suggestions de saisie automatique";
 
 /* Description of the 'Remember Selected Entries` feature */
-"[AutoFill/RememberContext/description]" = "KeePassium se souviendra de l'entrée que vous sélectionnez pour chaque site web et la suggérera automatiquement.";
+"[AutoFill/RememberContext/description]" = "PassPouch se souviendra de l'entrée que vous sélectionnez pour chaque site web et la suggérera automatiquement.";
 
 /* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
 "[AutoFill/Search/Context/title]" = "Contexte";
 
 /* No comment provided by engineer. */
-"[AutoFill/Setup/footer]" = "La Saisie automatique ne peut pas accéder automatiquement aux fichiers que vous avez déjà dans l'application principale KeePassium.\n\nPourquoi ? En coulisses, le système traite la fonction de Saisie automatique comme une application distincte, indépendante du processus principal de KeePassium. Pour des raisons de sécurité, une application ne peut simplement pas accéder à des fichiers externes – sauf si vous liez explicitement ces fichiers à cette application. Ainsi, le système garantit que l'application ne peut accéder qu'aux quelques fichiers dont vous avez autorisé l'accès.\n\nPar conséquent, la fonction de Saisie automatique et l'application principale KeePassium doivent avoir leurs propres autorisations pour chaque fichier externe. Heureusement, il s'agit d'une procédure unique.";
+"[AutoFill/Setup/footer]" = "La Saisie automatique ne peut pas accéder automatiquement aux fichiers que vous avez déjà dans l'application principale PassPouch.\n\nPourquoi ? En coulisses, le système traite la fonction de Saisie automatique comme une application distincte, indépendante du processus principal de PassPouch. Pour des raisons de sécurité, une application ne peut simplement pas accéder à des fichiers externes – sauf si vous liez explicitement ces fichiers à cette application. Ainsi, le système garantit que l'application ne peut accéder qu'aux quelques fichiers dont vous avez autorisé l'accès.\n\nPar conséquent, la fonction de Saisie automatique et l'application principale PassPouch doivent avoir leurs propres autorisations pour chaque fichier externe. Heureusement, il s'agit d'une procédure unique.";
 
 /* Must match Apple's translation, as found in iOS 18 Settings → General → AutoFill & Passwords. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/autofillFrom]" = "Remplir depuis :";
@@ -41,7 +41,7 @@
 "[AutoFill/Setup/UncheckKeychain/callToAction]" = "Décocher Trousseau";
 
 /* Instruction to deselect another app in the settings [appName: String] */
-"[AutoFill/Setup/UncheckKeychain/message]" = "Pour faire de KeePassium votre gestionnaire de mots de passe par défaut, décochez \"%@\".";
+"[AutoFill/Setup/UncheckKeychain/message]" = "Pour faire de PassPouch votre gestionnaire de mots de passe par défaut, décochez \"%@\".";
 
 /* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "Utiliser des mots de passe et des clés d’identification provenant de:";

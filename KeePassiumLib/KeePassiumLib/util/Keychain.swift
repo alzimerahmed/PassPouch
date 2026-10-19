@@ -41,14 +41,14 @@ public class Keychain {
 
     private static let accessGroup: String? = nil
     private enum Service: String, CaseIterable {
-        case general = "KeePassium"
-        case databaseSettings = "KeePassium.dbSettings"
-        case pendingDatabaseTransactions = "KeePassium.pendingDBTransactions"
-        case premium = "KeePassium.premium"
-        case fileReferences = "KeePassium.fileRefs"
-        case networkCredentials = "KeePassium.networkCredentials"
-        case timestamps = "KeePassium.timestamps"
-        case recentAutoFillEntry = "KeePassium.recentAutoFillEntry"
+        case general = "PassPouch"
+        case databaseSettings = "PassPouch.dbSettings"
+        case pendingDatabaseTransactions = "PassPouch.pendingDBTransactions"
+        case premium = "PassPouch.premium"
+        case fileReferences = "PassPouch.fileRefs"
+        case networkCredentials = "PassPouch.networkCredentials"
+        case timestamps = "PassPouch.timestamps"
+        case recentAutoFillEntry = "PassPouch.recentAutoFillEntry"
     }
     private let keychainFormatVersion = "formatVersion"
     private let appPasscodeAccount = "appPasscode"
@@ -709,9 +709,9 @@ public extension LString {
     // swiftlint:disable line_length
     enum Biometrics {
         public static let titleBiometricPrompt = NSLocalizedString(
-            "[AppLock/Biometric/Hint] Unlock KeePassium",
+            "[AppLock/Biometric/Hint] Unlock PassPouch",
             bundle: Bundle.framework,
-            value: "Unlock KeePassium",
+            value: "Unlock PassPouch",
             comment: "Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt.")
         public static let actionUsePasscode = NSLocalizedString(
             "[AppLock/cancelBiometricAuth] Use Passcode",

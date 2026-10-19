@@ -151,11 +151,11 @@ final public class URLReference:
     public private(set) var fileProvider: FileProvider?
 
     fileprivate static let backgroundQueue = DispatchQueue(
-        label: "com.keepassium.URLReference",
+        label: "com.passpouch.URLReference",
         qos: .background,
         attributes: [.concurrent])
     private let resolveQueue = DispatchQueue(
-        label: "com.keepassium.URLReference.resolve",
+        label: "com.passpouch.URLReference.resolve",
         attributes: [], 
         target: URLReference.backgroundQueue
     )

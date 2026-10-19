@@ -28,7 +28,7 @@ enum PasskeyRegistrationError: LocalizedError {
 }
 
 public class Passkey {
-    let log = Logger(subsystem: "com.keepassium.autofill", category: "Passkey")
+    let log = Logger(subsystem: "com.passpouch.autofill", category: "Passkey")
 
     enum AuthDataFlags {
         static let up: UInt8   = 0x01

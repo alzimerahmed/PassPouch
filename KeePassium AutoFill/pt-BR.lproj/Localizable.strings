@@ -26,13 +26,13 @@
 "[AutoFill/RememberContext/callToAction]" = "Melhorar sugestões de Preenchimento automático";
 
 /* Description of the 'Remember Selected Entries` feature */
-"[AutoFill/RememberContext/description]" = "O KeePassium lembra qual entrada você selecionou para cada site e então a sugere automaticamente.";
+"[AutoFill/RememberContext/description]" = "O PassPouch lembra qual entrada você selecionou para cada site e então a sugere automaticamente.";
 
 /* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
 "[AutoFill/Search/Context/title]" = "Contexto";
 
 /* No comment provided by engineer. */
-"[AutoFill/Setup/footer]" = "O Preenchimento Automático precisa ser autorizado a acessar os arquivos que você já tem no app principal do KeePassium.\n\nPor quê? Por trás das cenas, o sistema trata o Preenchimento Automático como um app separado, independente do KeePassium principal. Por segurança, um app não pode acessar arquivos externos, a menos que você vincule explicitamente esses arquivos a ele. Assim, o sistema garante que o app só possa acessar os poucos arquivos que você autorizou.\n\nComo resultado, tanto o Preenchimento Automático quanto o app principal do KeePassium precisam ser autorizados separadamente para cada arquivo externo. Felizmente, você só precisa fazer isso uma vez para cada arquivo.";
+"[AutoFill/Setup/footer]" = "O Preenchimento Automático precisa ser autorizado a acessar os arquivos que você já tem no app principal do PassPouch.\n\nPor quê? Por trás das cenas, o sistema trata o Preenchimento Automático como um app separado, independente do PassPouch principal. Por segurança, um app não pode acessar arquivos externos, a menos que você vincule explicitamente esses arquivos a ele. Assim, o sistema garante que o app só possa acessar os poucos arquivos que você autorizou.\n\nComo resultado, tanto o Preenchimento Automático quanto o app principal do PassPouch precisam ser autorizados separadamente para cada arquivo externo. Felizmente, você só precisa fazer isso uma vez para cada arquivo.";
 
 /* Must match Apple's translation, as found in iOS 18 Settings → General → AutoFill & Passwords. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/autofillFrom]" = "Preencher automaticamente de:";
@@ -41,7 +41,7 @@
 "[AutoFill/Setup/UncheckKeychain/callToAction]" = "Desmarcar Keychain";
 
 /* Instruction to deselect another app in the settings [appName: String] */
-"[AutoFill/Setup/UncheckKeychain/message]" = "Para tornar o KeePassium seu gerenciador de senhas padrão, desmarque \"%@\".";
+"[AutoFill/Setup/UncheckKeychain/message]" = "Para tornar o PassPouch seu gerenciador de senhas padrão, desmarque \"%@\".";
 
 /* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "Usar senhas e chaves‑senha de:";

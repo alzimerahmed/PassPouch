@@ -26,7 +26,7 @@
 "[AutoFill/RememberContext/callToAction]" = "自動入力候補の改善";
 
 /* Description of the 'Remember Selected Entries` feature */
-"[AutoFill/RememberContext/description]" = "KeePassiumは各ウェブサイトで選択したエントリーを記憶し、自動的に提案します。";
+"[AutoFill/RememberContext/description]" = "PassPouchは各ウェブサイトで選択したエントリーを記憶し、自動的に提案します。";
 
 /* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
 "[AutoFill/Search/Context/title]" = "コンテキスト";
@@ -41,7 +41,7 @@
 "[AutoFill/Setup/UncheckKeychain/callToAction]" = "キーチェーンの無効化";
 
 /* Instruction to deselect another app in the settings [appName: String] */
-"[AutoFill/Setup/UncheckKeychain/message]" = "KeePassiumをデフォルトのパスワードマネージャーにするには、「%@」のチェックを外してください。";
+"[AutoFill/Setup/UncheckKeychain/message]" = "PassPouchをデフォルトのパスワードマネージャーにするには、「%@」のチェックを外してください。";
 
 /* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "使用するパスワードとパスキーの取得元";

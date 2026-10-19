@@ -30,7 +30,7 @@ extension LString {
         comment: "Call to action (protect the app from unauthorized access)")
     public static let appProtectionDescription = NSLocalizedString(
         "[Settings/AppLock/Activate/description]",
-        value: "Protect KeePassium from unauthorized access.",
+        value: "Protect PassPouch from unauthorized access.",
         comment: "Description of `Activate app protection` call to action.")
     public static let titleUseBiometryTypeTemplate = NSLocalizedString(
         "[Settings/AppLock/Biometric/title] Use %@",
@@ -72,7 +72,7 @@ extension LString {
         comment: "Title of a yes/no setting: whether to lock app when computer screen is locked (see https://support.apple.com/en-gb/guide/mac-help/mchl8e8b6a34/mac)")
     public static let lockAppOnScreenLockDescription = NSLocalizedString(
         "[Settings/AppLock/LockOnScreenLock/description]",
-        value: "Ensures KeePassium is locked when you lock your Mac.",
+        value: "Ensures PassPouch is locked when you lock your Mac.",
         comment: "Explanation for the `Lock on macOS Screen Lock` setting")
     public static let lockAppOnLaunchTitle = NSLocalizedString(
         "[Settings/AppLock/LockOnLaunch/title]",
@@ -80,7 +80,7 @@ extension LString {
         comment: "Setting switch: whether to lock the app after it was terminated and relaunched.")
     public static let lockAppOnLaunchDescription = NSLocalizedString(
         "[Settings/AppLock/LockOnLaunch/description]",
-        value: "Ensures KeePassium is locked after you force-close the app or restart the device.",
+        value: "Ensures PassPouch is locked after you force-close the app or restart the device.",
         comment: "Explanation for the `Lock on App Launch` setting")
 
     public static let wrongPasscodeTitle = NSLocalizedString(
@@ -94,7 +94,7 @@ extension LString {
         comment: "Title in the settings: whether to lock databases when user enters a wrong app protection passcode.")
     public static let lockOnWrongPasscodeDescription = NSLocalizedString(
         "[Settings/AppLock/LockOnWrongPasscode/description]",
-        value: "If you enter a wrong app protection passcode, KeePassium will close all databases and clear all master keys from the keychain.",
+        value: "If you enter a wrong app protection passcode, PassPouch will close all databases and clear all master keys from the keychain.",
         comment: "Description of the `Lock on Wrong Passcode` setting")
 
     public static let passcodeAttemptsUntilAppResetTitle = NSLocalizedString(

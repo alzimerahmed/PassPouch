@@ -45,7 +45,7 @@ public class Diag {
 
     private static let level = Level.debug
     private static let instance = Diag()
-    private let queue = DispatchQueue(label: "com.KeePassium.diagnostics")
+    private let queue = DispatchQueue(label: "com.PassPouch.diagnostics")
     private var items = [Item]()
     private var startTime: TimeInterval = Date.timeIntervalSinceReferenceDate
 
@@ -188,7 +188,7 @@ public class Diag {
             .getDebugModeDirURL()
             .appendingPathComponent("debug-log.txt")
 
-        let stringWithHeader = "This is a KeePassium debug log. Please send it to info@keepassium.com.\nThank you for your help!\n\n\(string)"
+        let stringWithHeader = "This is a PassPouch debug log. Please send it to alzimerahmed84@gmail.com.\nThank you for your help!\n\n\(string)"
         try? stringWithHeader.write(to: fileURL, atomically: false, encoding: .utf8)
     }
 }

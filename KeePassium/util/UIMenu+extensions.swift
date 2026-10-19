@@ -9,7 +9,7 @@
 import KeePassiumLib
 
 extension Notification.Name {
-    static let reloadToolbar = Notification.Name("com.keepassium.toolbar.reloadToolbar")
+    static let reloadToolbar = Notification.Name("com.passpouch.toolbar.reloadToolbar")
 }
 
 extension UIMenu {

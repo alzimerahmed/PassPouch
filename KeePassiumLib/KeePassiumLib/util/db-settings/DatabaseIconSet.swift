@@ -17,7 +17,7 @@ public enum DatabaseIconSet: Int, CaseIterable {
         case .sfSymbols:
             return LString.titleDatabaseIconSetSystem
         case .keepassium:
-            return "KeePassium" 
+            return "PassPouch" 
         case .keepass:
             return "KeePass" 
         case .keepassxc:

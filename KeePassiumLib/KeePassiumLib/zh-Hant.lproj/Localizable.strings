@@ -29,7 +29,7 @@
 "[AppLock] Unlock" = "解鎖";
 
 /* Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt. */
-"[AppLock/Biometric/Hint] Unlock KeePassium" = "解鎖 KeePassium";
+"[AppLock/Biometric/Hint] Unlock PassPouch" = "解鎖 PassPouch";
 
 /* Action/button to switch from TouchID/FaceID prompt to manual input of the AppLock passcode. */
 "[AppLock/cancelBiometricAuth] Use Passcode" = "使用應用解鎖密碼";
@@ -38,7 +38,7 @@
 "[AppLock/changePasscode]" = "更改應用解鎖密碼";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/EnterPasscode/callToAction]" = "解鎖 KeePassium";
+"[AppLock/EnterPasscode/callToAction]" = "解鎖 PassPouch";
 
 /* Action: change keyboard type to enter alphanumeric passphrases */
 "[AppLock/Passcode/KeyboardType/switchAction] 123→ABC" = "123→ABC";
@@ -65,22 +65,22 @@
 "[AppLock/savePasscode]" = "儲存應用解鎖密碼";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/SetupPasscode/callToAction]" = "保護KeePassium免受未經授權的訪問";
+"[AppLock/SetupPasscode/callToAction]" = "保護PassPouch免受未經授權的訪問";
 
 /* Message shown when AutoFill cannot automatically open the main app for upgrading to a premium version. */
-"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open KeePassium from your home screen." = "如果要升級，請從主屏幕右上角+號中, 手動打開升級介面。";
+"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open PassPouch from your home screen." = "如果要升級，請從主屏幕右上角+號中, 手動打開升級介面。";
 
 /* Title of a message related to upgrading to the premium version */
 "[AutoFill/Premium/Upgrade/Manual/title] Premium Upgrade" = "升級進階版";
 
 /* Call to action / instruction on how to enable accessibility permission */
-"[AutoType/AccessibilityPrompt/callToAction]" = "開啟系統設定 → 隱私及安全 → 輔助功能，然後啟用 KeePassium。";
+"[AutoType/AccessibilityPrompt/callToAction]" = "開啟系統設定 → 隱私及安全 → 輔助功能，然後啟用 PassPouch。";
 
 /* Message explaining why accessibility permission is needed */
-"[AutoType/AccessibilityPrompt/message]" = "KeePassium 需要您的授權才能將按下鍵傳送到其他應用程式。";
+"[AutoType/AccessibilityPrompt/message]" = "PassPouch 需要您的授權才能將按下鍵傳送到其他應用程式。";
 
 /* Title of a dialog asking user to provide a security permission */
-"[AutoType/AccessibilityPrompt/title]" = "KeePassium 需要您的授權";
+"[AutoType/AccessibilityPrompt/title]" = "PassPouch 需要您的授權";
 
 /* Action: send key presses to 'type in' entry data into another app */
 "[AutoType/action]" = "執行自動輸入";
@@ -242,7 +242,7 @@
 "[Database/FormatVersion/PasskeysNotSupported]" = "目前資料庫格式不支援通行密鑰。";
 
 /* Info message when the app needs to change database file format. [oldFormat, newFormat: String] */
-"[Database/FormatVersion/Upgrade/text]" = "KeePassium 需升級您的資料庫檔案格式（從 %1$@ 到 %2$@）。您可能會需要更新其他使用此資料庫的應用程式。";
+"[Database/FormatVersion/Upgrade/text]" = "PassPouch 需升級您的資料庫檔案格式（從 %1$@ 到 %2$@）。您可能會需要更新其他使用此資料庫的應用程式。";
 
 /* Title of an info message when the app needs to change database file format. */
 "[Database/FormatVersion/Upgrade/title]" = "在繼續之前";
@@ -263,7 +263,7 @@
 "[Database/List/LocalMissing/callToAction]" = "開啟應用程式";
 
 /* Recommendation for solving a problem with a list of files. */
-"[Database/List/LocalMissing/message]" = "如果未列出某些本機檔案，請先啟動主要 KeePassium 應用程式。";
+"[Database/List/LocalMissing/message]" = "如果未列出某些本機檔案，請先啟動主要 PassPouch 應用程式。";
 
 /* Title of the database picker list */
 "[Database/List/title]" = "資料庫";
@@ -374,7 +374,7 @@
 "[Database/Progress/writingDatabaseFile]" = "正在寫入資料庫檔案…";
 
 /* Suggested solution/call to action when intermediate sync app fails. */
-"[Database/RecommendRemote/callToAction]" = "嘗試直接從 KeePassium 連接到您的遠端儲存空間。";
+"[Database/RecommendRemote/callToAction]" = "嘗試直接從 PassPouch 連接到您的遠端儲存空間。";
 
 /* Action/button */
 "[Database/Reload/action]" = "重新載入資料庫";
@@ -443,7 +443,7 @@
 "[Database/SyncConflict/currentVersion]" = "雲端服務中當前的版本";
 
 /* Message shown in case of database sync conflict. */
-"[Database/SyncConflict/description]" = "雲端服務中的資料庫在 KeePassium 載入資料庫後產生了變動。";
+"[Database/SyncConflict/description]" = "雲端服務中的資料庫在 PassPouch 載入資料庫後產生了變動。";
 
 /* Title: the loaded (on-device) database version in case of sync conflict. */
 "[Database/SyncConflict/loadedVersion]" = "本機載入的版本";
@@ -485,10 +485,10 @@
 "[Database/UnsavedChanges/couldNotApply]" = "無法自動套用某些待處理的變更，可能遺失最近所做的修改。";
 
 /* Call to action shown in AutoFill module. */
-"[Database/UnsavedChanges/OpenAppCallToAction]" = "若要儲存變更，請開啟主要 KeePassium 應用程式。";
+"[Database/UnsavedChanges/OpenAppCallToAction]" = "若要儲存變更，請開啟主要 PassPouch 應用程式。";
 
 /* Notification message about a problem with unsaved/pending changes. */
-"[Database/UnsavedChanges/Problematic/info]" = "某些待處理的變更中存在遺失的項目或群組。 KeePassium 將在個別群組中建立這些項目，並在該處套用變更。";
+"[Database/UnsavedChanges/Problematic/info]" = "某些待處理的變更中存在遺失的項目或群組。 PassPouch 將在個別群組中建立這些項目，並在該處套用變更。";
 
 /* Title of a group where problematic pending changes are saved. %@ is the date of recovery. */
 "[Database/UnsavedChanges/RecoveredEntriesGroup/name]" = "已復原的變更 (%@)";
@@ -596,7 +596,7 @@
 "[Database2/Loading/Error] Error unpacking database: %@" = "解壓縮資料庫時出錯: %@";
 
 /* A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String] */
-"[Database2/Loading/Warning/missingBinaries]" = "某些條目的附件缺少資料, 這是資料庫早期損壞的跡象，最有可能是上次使用的應用程式(%1$@)。KeePassium將保留空的附件，但無法恢復它們。您應該從備份副本還原資料庫。 \n\n缺少附件：%2$@";
+"[Database2/Loading/Warning/missingBinaries]" = "某些條目的附件缺少資料, 這是資料庫早期損壞的跡象，最有可能是上次使用的應用程式(%1$@)。PassPouch將保留空的附件，但無法恢復它們。您應該從備份副本還原資料庫。 \n\n缺少附件：%2$@";
 
 /* A warning about nameless attachments, shown after loading the database. [listOfEntryNames: String] */
 "[Database2/Loading/Warning/namelessAttachments]" = "有些條目有附件沒有名字。這是資料庫早期損壞的跡象。\n\n 請查看以下條目中的附件(及其歷史記錄)：\n%@";
@@ -802,8 +802,8 @@
 /* Error message: there is no USB drive connected to the device. */
 "[FileAccessError/FileProvider/NotFound/usbDrive]" = "USB 隨身碟已斷開連接。";
 
-/* Error message shown when there's internal inconsistency in KeePassium. */
-"[FileAccessError/internalError]" = "KeePassium 內部錯誤，請告知我們。";
+/* Error message shown when there's internal inconsistency in PassPouch. */
+"[FileAccessError/internalError]" = "PassPouch 內部錯誤，請告知我們。";
 
 /* Error message: organization's IT administrator has forbidden access to a data storage location. */
 "[FileAccessError/ManagedAccessDenied/title]" = "此儲存空間的存取權已由您的組織停用。";
@@ -827,7 +827,7 @@
 "[FileAccessError/OneDriveReadOnly/recoverySuggestion]" = "使用 匯出 按鈕將檔案儲存到其他地方。";
 
 /* Error message for file with an expired access permission [fileName: String]. */
-"[FileAccessError/PermissionRequired/reason]" = "KeePassium 需要您的授權才能存取 「%@」。";
+"[FileAccessError/PermissionRequired/reason]" = "PassPouch 需要您的授權才能存取 「%@」。";
 
 /* Action/button for error recovery */
 "[FileAccessError/PermissionRequired/recoveryAction]" = "再次選擇檔案以允許存取";
@@ -1274,7 +1274,7 @@
 "[Intune/OrgNeedsToManage]" = "貴組織為了保護其資料，需要管理此應用程式。若要完成此動作，請使用您的工作或學校帳戶登入。";
 
 /* Info message for users who accidentally installed the enterprise version. */
-"[Intune/PersonalVersionElsewhere]" = "個人使用的 KeePassium 版本可在 App Store 取得。";
+"[Intune/PersonalVersionElsewhere]" = "個人使用的 PassPouch 版本可在 App Store 取得。";
 
 /* Notification that an archived/historical item (e.g entry) has been successfully restored */
 "[Item/History/Restored]" = "先前的版本已經還原";
@@ -1403,7 +1403,7 @@
 "[Org/ContactYourAdmin]" = "請連絡您的 IT 系統管理員。";
 
 /* Error message, euphemism for missing corporate license */
-"[Org/LicenseMissing]" = "KeePassium 找不到您組織的企業帳戶。";
+"[Org/LicenseMissing]" = "PassPouch 找不到您組織的企業帳戶。";
 
 /* Name of an entry field */
 "[OTP/FieldName]" = "一次性密碼";
@@ -1648,7 +1648,7 @@
 /* What's included in a price plan. Please leave `perpetual fallback license` in English. */
 "[Premium/Price Plan/Conditions/perpetual fallback]" = "永久後備許可證";
 
-/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://keepassium.com/articles/perpetual-fallback-license/ */
+/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://passpouch.org/articles/perpetual-fallback-license/ */
 "[Premium/Price Plan/Conditions/subscription as purchase]" = "訂閱即購買";
 
 /* What's included in a price plan */
@@ -1679,7 +1679,7 @@
 "[Premium/Upgrade/cancelOngoingSubscription]" = "請檢查是否需要取消舊的訂閱。";
 
 /* Message shown when in-app purchase is deferred until approval (parental or corporate). */
-"[Premium/Upgrade/Deferred/text] Thank you! You can use KeePassium while purchase is awaiting approval." = "感恩您! 您可以使用 KeePassium 直到批准購買。";
+"[Premium/Upgrade/Deferred/text] Thank you! You can use PassPouch while purchase is awaiting approval." = "感恩您! 您可以使用 PassPouch 直到批准購買。";
 
 /* Product price for monthly premium subscription. [localizedPrice: String] */
 "[Premium/Upgrade/price] %@ / month" = "%@ / 月";
@@ -1727,7 +1727,7 @@
 "[PremiumFeature/CreativeAutoFill/title]" = "註冊更快速";
 
 /* A generic description of a premium feature */
-"[PremiumFeature/Generic/description]" = "立即訂閱進階版並享受更好的KeePassium 。";
+"[PremiumFeature/Generic/description]" = "立即訂閱進階版並享受更好的PassPouch 。";
 
 /* A generic title of a premium feature */
 "[PremiumFeature/Generic/title]" = "進階版功能";
@@ -1757,16 +1757,16 @@
 "[PremiumFeature/PasswordAudit/title]" = "密碼檢查";
 
 /* Description/call to action for the `Quick AutoFill` premium feature. */
-"[PremiumFeature/QuickAutoFill/description]" = "一鍵填寫登入表單，無需開啟 KeePassium。";
+"[PremiumFeature/QuickAutoFill/description]" = "一鍵填寫登入表單，無需開啟 PassPouch。";
 
 /* Title of a premium feature: show relevant AutoFill entries right under the input field */
 "[PremiumFeature/QuickAutoFill/title]" = "快速自動填寫密碼";
 
 /* A brief summary of the privacy policy (for offline mode) */
-"[PrivacyPolicy/Offline/text]" = "KeePassium不會對任何個人資料收集或分析，也不會與任何人分享。";
+"[PrivacyPolicy/Offline/text]" = "PassPouch不會對任何個人資料收集或分析，也不會與任何人分享。";
 
 /* A brief summary of the privacy policy (for online mode) */
-"[PrivacyPolicy/Online/text]" = "KeePassium 不會收集任何個人資料或分析資料。\n若要使用某些功能可能需要和外部服務交換資料（應您的要求執行，且目的僅為向您提供這些服務）。這類資料交換各由對應服務的隱私權政策管理。";
+"[PrivacyPolicy/Online/text]" = "PassPouch 不會收集任何個人資料或分析資料。\n若要使用某些功能可能需要和外部服務交換資料（應您的要求執行，且目的僅為向您提供這些服務）。這類資料交換各由對應服務的隱私權政策管理。";
 
 /* Section: privacy policy */
 "[PrivacyPolicy/title]" = "隱私權政策";
@@ -1793,7 +1793,7 @@
 "[RemoteConnection/Credentials]" = "憑證";
 
 /* Description of the `Direct connection` sync method. */
-"[RemoteConnection/Direct/description]" = "KeePassium 會直接和您的線上儲存空間通訊。這能確保檔案傳輸安全可靠。";
+"[RemoteConnection/Direct/description]" = "PassPouch 會直接和您的線上儲存空間通訊。這能確保檔案傳輸安全可靠。";
 
 /* Title of a list with online storage services like OneDrive, Dropbox, etc. */
 "[RemoteConnection/Direct/title]" = "線上服務";
@@ -1853,7 +1853,7 @@
 "[RemoteConnection/title]" = "遠端連線";
 
 /* Description of the `Integration via Files app` sync method. */
-"[RemoteConnection/ViaFilesApp/description]" = "KeePassium 會將檔案同步指派給您的儲存空間提供商的應用程式。有些應用程式運作較佳。";
+"[RemoteConnection/ViaFilesApp/description]" = "PassPouch 會將檔案同步指派給您的儲存空間提供商的應用程式。有些應用程式運作較佳。";
 
 /* Link to a help page for an online storage service. The parameter is the service name in fixed neutral form. Example: 'Nextcloud Setup Guide' or 'Synology NAS Setup Guide'. */
 "[RemoteConnection/WebDAVService/SetupGuide]" = "%@ 設定指南";
@@ -1904,7 +1904,7 @@
 "[Settings/MasterKeys/Remember/title]" = "記住主金鑰";
 
 /* Confirmation dialog message */
-"[Settings/NetworkAccess/Confirmation/text]" = "是否允許 KeePassium 與外部服務進行網路連線？";
+"[Settings/NetworkAccess/Confirmation/text]" = "是否允許 PassPouch 與外部服務進行網路連線？";
 
 /* Settings section: how/whether the app is allowed to use networks/Internet */
 "[Settings/NetworkAccess/title]" = "網路存取";
@@ -1982,22 +1982,22 @@
 "[Support/template] (Please describe the problem here)" = "(請在此處描述問題)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "幫助我們使 KeePassium 成為更好的應用程式！";
+"[TipBox/callToAction/1]" = "幫助我們使 PassPouch 成為更好的應用程式！";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "幫助我們使 KeePassium 成為更好的應用程式！";
+"[TipBox/callToAction/2]" = "幫助我們使 PassPouch 成為更好的應用程式！";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "幫助我們使 KeePassium 持續免費！";
+"[TipBox/callToAction/3]" = "幫助我們使 PassPouch 持續免費！";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "您喜歡 KeePassium 嗎？";
+"[TipBox/description/1]" = "您喜歡 PassPouch 嗎？";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "KeePassium 是一個免費開放原始碼的應用程序，無廣告，無監視，嚴肅的，您信任它並將最敏感的資料交給它 - 我們尊敬您。";
+"[TipBox/description/2]" = "PassPouch 是一個免費開放原始碼的應用程序，無廣告，無監視，嚴肅的，您信任它並將最敏感的資料交給它 - 我們尊敬您。";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "您喜歡 KeePassium，但是不想要進階版功能嗎？";
+"[TipBox/description/3]" = "您喜歡 PassPouch，但是不想要進階版功能嗎？";
 
 /* Notification after a successful donation. */
 "[TipBox/thankYou]" = "感謝您！";
@@ -2006,7 +2006,7 @@
 "[TipBox/title/2]" = "贊助";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "支持 KeePassium";
+"[TipBox/title/3]" = "支持 PassPouch";
 
 /* Name of an entry field. Acronym `TOTP` should not be translated. */
 "[TOTP/FieldName]" = "一次性密碼 (TOTP)";

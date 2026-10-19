@@ -1,6 +1,6 @@
 /*
  * Internet Access Policy Localizations
- * This file provides localized descriptions for KeePassium's network connections
+ * This file provides localized descriptions for PassPouch's network connections
  * as declared in InternetAccessPolicy.plist
  *
  * For more information about Little Snitch's Internet Access Policy:
@@ -8,7 +8,7 @@
  */
 
 /* Top-level application description */
-"ApplicationDescription" = "KeePassium is a password manager for iOS and macOS that keeps your passwords safe and secure.";
+"ApplicationDescription" = "PassPouch is a password manager for iOS and macOS that keeps your passwords safe and secure.";
 
 /* HIBP Password Breach Check */
 "HIBPPurpose" = "Check if your passwords have been compromised in known data breaches using the Have I Been Pwned service. Only a partial hash of your password is sent to maintain privacy.";
@@ -31,7 +31,7 @@
 "GoogleDriveDenyConsequences" = "If you deny these connections, you will not be able to sync your password databases with Google Drive.";
 
 /* Help & Documentation */
-"HelpDocsPurpose" = "Access help articles, documentation, and support resources from the KeePassium website.";
+"HelpDocsPurpose" = "Access help articles, documentation, and support resources from the PassPouch website.";
 "HelpDocsDenyConsequences" = "If you deny these connections, in-app help articles will not load. You can still use the app normally.";
 
 /* WebDAV Providers - Specific Services */
@@ -47,8 +47,8 @@
 "WebDAVDenyConsequences" = "If you deny these connections, you will not be able to sync your password databases with this WebDAV server.";
 
 /* User-Configured Servers & Favicons */
-"UserServersHTTPSPurpose" = "Connect to custom servers and websites that you configure: WebDAV servers (Nextcloud, ownCloud, Synology NAS, or generic HTTP servers) for database synchronization, and websites from your saved password entries to download their icons (favicons). These connections only occur to addresses you have explicitly added to KeePassium.";
-"UserServersHTTPPurpose" = "Connect to your custom HTTP servers for database synchronization and download website icons. Only servers and websites you have configured in KeePassium are contacted.";
+"UserServersHTTPSPurpose" = "Connect to custom servers and websites that you configure: WebDAV servers (Nextcloud, ownCloud, Synology NAS, or generic HTTP servers) for database synchronization, and websites from your saved password entries to download their icons (favicons). These connections only occur to addresses you have explicitly added to PassPouch.";
+"UserServersHTTPPurpose" = "Connect to your custom HTTP servers for database synchronization and download website icons. Only servers and websites you have configured in PassPouch are contacted.";
 "UserServersDenyConsequences" = "If you deny these connections, you will not be able to sync databases with custom-configured servers (self-hosted Nextcloud, ownCloud, Synology NAS, etc.) or download website icons from your saved entries. These are optional features that only connect to addresses you specify.";
 
 /* StoreKit Service */

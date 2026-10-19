@@ -161,7 +161,7 @@ class DatabaseCreatorCoordinator: BaseCoordinator {
             "[Database/Create/TemplateEntry/password] pa$$word",
             value: "pa$$word",
             comment: "Password for a sample entry. Translation is optional.")
-        sampleEntry.rawURL = "https://keepassium.com" 
+        sampleEntry.rawURL = "https://passpouch.org" 
         sampleEntry.rawNotes = NSLocalizedString(
             "[Database/Create/TemplateEntry/notes] You can also store some notes, if you like.",
             value: "You can also store some notes, if you like.",

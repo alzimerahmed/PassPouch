@@ -29,7 +29,7 @@
 "[AppLock] Unlock" = "Odemknout";
 
 /* Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt. */
-"[AppLock/Biometric/Hint] Unlock KeePassium" = "Odemknout KeePassium";
+"[AppLock/Biometric/Hint] Unlock PassPouch" = "Odemknout PassPouch";
 
 /* Action/button to switch from TouchID/FaceID prompt to manual input of the AppLock passcode. */
 "[AppLock/cancelBiometricAuth] Use Passcode" = "Použít kód aplikace";
@@ -38,7 +38,7 @@
 "[AppLock/changePasscode]" = "Změnit přístupový kód";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/EnterPasscode/callToAction]" = "Odemknout KeePassium";
+"[AppLock/EnterPasscode/callToAction]" = "Odemknout PassPouch";
 
 /* Action: change keyboard type to enter alphanumeric passphrases */
 "[AppLock/Passcode/KeyboardType/switchAction] 123→ABC" = "123→ABC";
@@ -65,22 +65,22 @@
 "[AppLock/savePasscode]" = "Uložit přístupový kód";
 
 /* Call to action in the passcode input dialog. */
-"[AppLock/SetupPasscode/callToAction]" = "Chraňte KeePassium před neoprávněným přístupem";
+"[AppLock/SetupPasscode/callToAction]" = "Chraňte PassPouch před neoprávněným přístupem";
 
 /* Message shown when AutoFill cannot automatically open the main app for upgrading to a premium version. */
-"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open KeePassium from your home screen." = "Zakoupení prémiové verze prosím proveďte z hlavní aplikace KeePassium.";
+"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open PassPouch from your home screen." = "Zakoupení prémiové verze prosím proveďte z hlavní aplikace PassPouch.";
 
 /* Title of a message related to upgrading to the premium version */
 "[AutoFill/Premium/Upgrade/Manual/title] Premium Upgrade" = "Přejít na Premium";
 
 /* Call to action / instruction on how to enable accessibility permission */
-"[AutoType/AccessibilityPrompt/callToAction]" = "Otevřete systémová nastavení → Soukromí a zabezpečení → Přístupnost a povolte tam KeePassium.";
+"[AutoType/AccessibilityPrompt/callToAction]" = "Otevřete systémová nastavení → Soukromí a zabezpečení → Přístupnost a povolte tam PassPouch.";
 
 /* Message explaining why accessibility permission is needed */
-"[AutoType/AccessibilityPrompt/message]" = "KeePassium potřebuje vaše povolení k odesílání stisknutých kláves do jiných aplikací.";
+"[AutoType/AccessibilityPrompt/message]" = "PassPouch potřebuje vaše povolení k odesílání stisknutých kláves do jiných aplikací.";
 
 /* Title of a dialog asking user to provide a security permission */
-"[AutoType/AccessibilityPrompt/title]" = "KeePassium potřebuje vaše oprávnění";
+"[AutoType/AccessibilityPrompt/title]" = "PassPouch potřebuje vaše oprávnění";
 
 /* Action: send key presses to 'type in' entry data into another app */
 "[AutoType/action]" = "Provést automatické vyplňování";
@@ -242,7 +242,7 @@
 "[Database/FormatVersion/PasskeysNotSupported]" = "Aktuální formát databáze nepodporuje přístupové klíče.";
 
 /* Info message when the app needs to change database file format. [oldFormat, newFormat: String] */
-"[Database/FormatVersion/Upgrade/text]" = "KeePassium potřebuje aktualizovat formát vašeho databázového souboru (z %1$@ na %2$@). Možná bude nutné aktualizovat i další aplikace, které tuto databázi používají.";
+"[Database/FormatVersion/Upgrade/text]" = "PassPouch potřebuje aktualizovat formát vašeho databázového souboru (z %1$@ na %2$@). Možná bude nutné aktualizovat i další aplikace, které tuto databázi používají.";
 
 /* Title of an info message when the app needs to change database file format. */
 "[Database/FormatVersion/Upgrade/title]" = "Než budeme pokračovat";
@@ -263,7 +263,7 @@
 "[Database/List/LocalMissing/callToAction]" = "Otevřete aplikaci";
 
 /* Recommendation for solving a problem with a list of files. */
-"[Database/List/LocalMissing/message]" = "Pokud některé lokální soubory nejsou uvedeny, nejprve spusťte hlavní aplikaci KeePassium.";
+"[Database/List/LocalMissing/message]" = "Pokud některé lokální soubory nejsou uvedeny, nejprve spusťte hlavní aplikaci PassPouch.";
 
 /* Title of the database picker list */
 "[Database/List/title]" = "Databáze";
@@ -374,7 +374,7 @@
 "[Database/Progress/writingDatabaseFile]" = "Zapisování databázového souboru…";
 
 /* Suggested solution/call to action when intermediate sync app fails. */
-"[Database/RecommendRemote/callToAction]" = "Zkuste se připojit k vašemu vzdálenému úložišti přímo z KeePassium.";
+"[Database/RecommendRemote/callToAction]" = "Zkuste se připojit k vašemu vzdálenému úložišti přímo z PassPouch.";
 
 /* Action/button */
 "[Database/Reload/action]" = "Znovu načíst databázi";
@@ -443,7 +443,7 @@
 "[Database/SyncConflict/currentVersion]" = "Aktuální verze";
 
 /* Message shown in case of database sync conflict. */
-"[Database/SyncConflict/description]" = "Databáze se změnila od doby, kdy byla načtena v KeePassium.";
+"[Database/SyncConflict/description]" = "Databáze se změnila od doby, kdy byla načtena v PassPouch.";
 
 /* Title: the loaded (on-device) database version in case of sync conflict. */
 "[Database/SyncConflict/loadedVersion]" = "Lokální verze";
@@ -485,10 +485,10 @@
 "[Database/UnsavedChanges/couldNotApply]" = "Některé čekající změny nebylo možné použít automaticky. Je možné, že některé nedávné úpravy chybí.";
 
 /* Call to action shown in AutoFill module. */
-"[Database/UnsavedChanges/OpenAppCallToAction]" = "Pokud chcete uložit změny, otevřete hlavní aplikaci KeePassium.";
+"[Database/UnsavedChanges/OpenAppCallToAction]" = "Pokud chcete uložit změny, otevřete hlavní aplikaci PassPouch.";
 
 /* Notification message about a problem with unsaved/pending changes. */
-"[Database/UnsavedChanges/Problematic/info]" = "Některé čekající změny se týkají chybějících záznamů nebo skupin. KeePassium vytvoří tyto položky v samostatné skupině a změny použije tam.";
+"[Database/UnsavedChanges/Problematic/info]" = "Některé čekající změny se týkají chybějících záznamů nebo skupin. PassPouch vytvoří tyto položky v samostatné skupině a změny použije tam.";
 
 /* Title of a group where problematic pending changes are saved. %@ is the date of recovery. */
 "[Database/UnsavedChanges/RecoveredEntriesGroup/name]" = "Obnovené změny (%@)";
@@ -596,7 +596,7 @@
 "[Database2/Loading/Error] Error unpacking database: %@" = "Chyba rozbalování databáze: %@";
 
 /* A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String] */
-"[Database2/Loading/Warning/missingBinaries]" = "Přílohám některých záznamů mohou chybět data. To může znamenat poškození databáze, pravděpodobně při posledním použití aplikace (%1$@). KeePassium zachová prázdné přílohy, ale nemůže je obnovit. Můžete obnovit vaší databázi ze záložní kopie.\n\nChybějící přilohy: %2$@";
+"[Database2/Loading/Warning/missingBinaries]" = "Přílohám některých záznamů mohou chybět data. To může znamenat poškození databáze, pravděpodobně při posledním použití aplikace (%1$@). PassPouch zachová prázdné přílohy, ale nemůže je obnovit. Můžete obnovit vaší databázi ze záložní kopie.\n\nChybějící přilohy: %2$@";
 
 /* A warning about nameless attachments, shown after loading the database. [listOfEntryNames: String] */
 "[Database2/Loading/Warning/namelessAttachments]" = "Některé záznamy mají přílohy bez názvu. To může znamenat předchozí poškození databáze.\n\nProsím posuďte přílohu souborů v následujících záznamech (a jejich historii):\n%@";
@@ -802,8 +802,8 @@
 /* Error message: there is no USB drive connected to the device. */
 "[FileAccessError/FileProvider/NotFound/usbDrive]" = "USB disk je odpojen.";
 
-/* Error message shown when there's internal inconsistency in KeePassium. */
-"[FileAccessError/internalError]" = "Interní chyba v KeePassium, prosím, řekněte nám o ní.";
+/* Error message shown when there's internal inconsistency in PassPouch. */
+"[FileAccessError/internalError]" = "Interní chyba v PassPouch, prosím, řekněte nám o ní.";
 
 /* Error message: organization's IT administrator has forbidden access to a data storage location. */
 "[FileAccessError/ManagedAccessDenied/title]" = "Přístup k tomuto úložišti je zakázán vaší organizací.";
@@ -827,7 +827,7 @@
 "[FileAccessError/OneDriveReadOnly/recoverySuggestion]" = "Použijte možnost Export pro uložení souboru do jiné lokace.";
 
 /* Error message for file with an expired access permission [fileName: String]. */
-"[FileAccessError/PermissionRequired/reason]" = "KeePassium potřebuje vaše oprávnění k přístupu k „%@“.";
+"[FileAccessError/PermissionRequired/reason]" = "PassPouch potřebuje vaše oprávnění k přístupu k „%@“.";
 
 /* Action/button for error recovery */
 "[FileAccessError/PermissionRequired/recoveryAction]" = "Pro povolení přístupu vyberte soubor znovu";
@@ -1274,7 +1274,7 @@
 "[Intune/OrgNeedsToManage]" = "Aby mohla organizace chránit svoje data, musí tuto aplikaci spravovat. Pokud budete chtít správu nastavit, přihlaste se svým pracovním nebo školním účtem.";
 
 /* Info message for users who accidentally installed the enterprise version. */
-"[Intune/PersonalVersionElsewhere]" = "Verze KeePassium pro osobní použití je k dispozici na App Store.";
+"[Intune/PersonalVersionElsewhere]" = "Verze PassPouch pro osobní použití je k dispozici na App Store.";
 
 /* Notification that an archived/historical item (e.g entry) has been successfully restored */
 "[Item/History/Restored]" = "Předchozí verze obnovena";
@@ -1403,7 +1403,7 @@
 "[Org/ContactYourAdmin]" = "Obraťte se prosím na správce IT.";
 
 /* Error message, euphemism for missing corporate license */
-"[Org/LicenseMissing]" = "KeePassium nemohlo najít podnikový účet vaší organizace.";
+"[Org/LicenseMissing]" = "PassPouch nemohlo najít podnikový účet vaší organizace.";
 
 /* Name of an entry field */
 "[OTP/FieldName]" = "Jednorázové heslo";
@@ -1648,7 +1648,7 @@
 /* What's included in a price plan. Please leave `perpetual fallback license` in English. */
 "[Premium/Price Plan/Conditions/perpetual fallback]" = "Po roce předplatného zůstanou současné prémiové funkce (Perpetual fallback license)";
 
-/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://keepassium.com/articles/perpetual-fallback-license/ */
+/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://passpouch.org/articles/perpetual-fallback-license/ */
 "[Premium/Price Plan/Conditions/subscription as purchase]" = "Předplatné jako nákup";
 
 /* What's included in a price plan */
@@ -1679,7 +1679,7 @@
 "[Premium/Upgrade/cancelOngoingSubscription]" = "Zkontrolujte si prosím, zda nepotřebujete zrušit své staré předplatné.";
 
 /* Message shown when in-app purchase is deferred until approval (parental or corporate). */
-"[Premium/Upgrade/Deferred/text] Thank you! You can use KeePassium while purchase is awaiting approval." = "Děkujeme! KeePassium můžete používat, ale nákup čeká na schválení.";
+"[Premium/Upgrade/Deferred/text] Thank you! You can use PassPouch while purchase is awaiting approval." = "Děkujeme! PassPouch můžete používat, ale nákup čeká na schválení.";
 
 /* Product price for monthly premium subscription. [localizedPrice: String] */
 "[Premium/Upgrade/price] %@ / month" = "%@ / měsíc";
@@ -1727,7 +1727,7 @@
 "[PremiumFeature/CreativeAutoFill/title]" = "Rychlejší registrace";
 
 /* A generic description of a premium feature */
-"[PremiumFeature/Generic/description]" = "Upgradujte na Premium a užijte si KeePassium se všemi funkcemi.";
+"[PremiumFeature/Generic/description]" = "Upgradujte na Premium a užijte si PassPouch se všemi funkcemi.";
 
 /* A generic title of a premium feature */
 "[PremiumFeature/Generic/title]" = "Prémiová funkce";
@@ -1757,16 +1757,16 @@
 "[PremiumFeature/PasswordAudit/title]" = "Audit hesel";
 
 /* Description/call to action for the `Quick AutoFill` premium feature. */
-"[PremiumFeature/QuickAutoFill/description]" = "Vyplňujte přihlašovací formuláře jediným klepnutím, dokonce i bez otevření KeePassium.";
+"[PremiumFeature/QuickAutoFill/description]" = "Vyplňujte přihlašovací formuláře jediným klepnutím, dokonce i bez otevření PassPouch.";
 
 /* Title of a premium feature: show relevant AutoFill entries right under the input field */
 "[PremiumFeature/QuickAutoFill/title]" = "Automatické Vyplňování";
 
 /* A brief summary of the privacy policy (for offline mode) */
-"[PrivacyPolicy/Offline/text]" = "KeePassium neshromažďuje žádná osobní nebo analytická data a ani je s nikým nesdílí.";
+"[PrivacyPolicy/Offline/text]" = "PassPouch neshromažďuje žádná osobní nebo analytická data a ani je s nikým nesdílí.";
 
 /* A brief summary of the privacy policy (for online mode) */
-"[PrivacyPolicy/Online/text]" = "KeePassium neshromažďuje žádné osobní ani analytické údaje.\nNěkteré funkce mohou zahrnovat výměnu dat s externími službami (na vaši žádost a výhradně za účelem zpřístupnění těchto služeb). Taková výměna se řídí zásadami ochrany osobních údajů příslušné služby.";
+"[PrivacyPolicy/Online/text]" = "PassPouch neshromažďuje žádné osobní ani analytické údaje.\nNěkteré funkce mohou zahrnovat výměnu dat s externími službami (na vaši žádost a výhradně za účelem zpřístupnění těchto služeb). Taková výměna se řídí zásadami ochrany osobních údajů příslušné služby.";
 
 /* Section: privacy policy */
 "[PrivacyPolicy/title]" = "Zásady ochrany osobních údajů";
@@ -1793,7 +1793,7 @@
 "[RemoteConnection/Credentials]" = "Přihlašovací údaje";
 
 /* Description of the `Direct connection` sync method. */
-"[RemoteConnection/Direct/description]" = "KeePassium bude komunikovat přímo s vaším online úložištěm. Tím je zajištěn spolehlivý přenos souborů.";
+"[RemoteConnection/Direct/description]" = "PassPouch bude komunikovat přímo s vaším online úložištěm. Tím je zajištěn spolehlivý přenos souborů.";
 
 /* Title of a list with online storage services like OneDrive, Dropbox, etc. */
 "[RemoteConnection/Direct/title]" = "Online služby";
@@ -1853,7 +1853,7 @@
 "[RemoteConnection/title]" = "Vzdálené připojení";
 
 /* Description of the `Integration via Files app` sync method. */
-"[RemoteConnection/ViaFilesApp/description]" = "KeePassium přiřadí synchronizaci souborů aplikaci poskytovatele úložiště. Některé aplikace fungují lépe než jiné.";
+"[RemoteConnection/ViaFilesApp/description]" = "PassPouch přiřadí synchronizaci souborů aplikaci poskytovatele úložiště. Některé aplikace fungují lépe než jiné.";
 
 /* Link to a help page for an online storage service. The parameter is the service name in fixed neutral form. Example: 'Nextcloud Setup Guide' or 'Synology NAS Setup Guide'. */
 "[RemoteConnection/WebDAVService/SetupGuide]" = "%@ – průvodce nastavením";
@@ -1904,7 +1904,7 @@
 "[Settings/MasterKeys/Remember/title]" = "Ukládat hlavní klíče";
 
 /* Confirmation dialog message */
-"[Settings/NetworkAccess/Confirmation/text]" = "Povolit KeePassium vytvářet síťová připojení k externím službám?";
+"[Settings/NetworkAccess/Confirmation/text]" = "Povolit PassPouch vytvářet síťová připojení k externím službám?";
 
 /* Settings section: how/whether the app is allowed to use networks/Internet */
 "[Settings/NetworkAccess/title]" = "Přístup k síti";
@@ -1982,22 +1982,22 @@
 "[Support/template] (Please describe the problem here)" = "(Zde prosím popište váš problém)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "Pomozte nám vylepšit KeePassium!";
+"[TipBox/callToAction/1]" = "Pomozte nám vylepšit PassPouch!";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "Pomozte nám udržovat KeePassium!";
+"[TipBox/callToAction/2]" = "Pomozte nám udržovat PassPouch!";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "Pomozte nám zachovat KeePassium zdarma!";
+"[TipBox/callToAction/3]" = "Pomozte nám zachovat PassPouch zdarma!";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "Líbí se vám KeePassium?";
+"[TipBox/description/1]" = "Líbí se vám PassPouch?";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "KeePassium je aplikace zdarma s otevřeným zdrojovým kódem. Svěřujete jí své nejcitlivější informace. Je bez reklam, sledování a zbytečností — respektujeme Vás.";
+"[TipBox/description/2]" = "PassPouch je aplikace zdarma s otevřeným zdrojovým kódem. Svěřujete jí své nejcitlivější informace. Je bez reklam, sledování a zbytečností — respektujeme Vás.";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "Líbí se vám KeePassium, ale nepotřebujete prémiové funkce?";
+"[TipBox/description/3]" = "Líbí se vám PassPouch, ale nepotřebujete prémiové funkce?";
 
 /* Notification after a successful donation. */
 "[TipBox/thankYou]" = "Děkujeme!";
@@ -2006,7 +2006,7 @@
 "[TipBox/title/2]" = "Příspěvky";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "Podpořte KeePassium";
+"[TipBox/title/3]" = "Podpořte PassPouch";
 
 /* Name of an entry field. Acronym `TOTP` should not be translated. */
 "[TOTP/FieldName]" = "Jednorázové heslo (TOTP)";

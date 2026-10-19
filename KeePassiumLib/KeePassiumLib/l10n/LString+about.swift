@@ -18,12 +18,12 @@ extension LString {
         public static let offlinePrivacyPolicyText = NSLocalizedString(
             "[PrivacyPolicy/Offline/text]",
             bundle: Bundle.framework,
-            value: "KeePassium does not collect any personal or analytical data nor share it with anyone.",
+            value: "PassPouch does not collect any personal or analytical data nor share it with anyone.",
             comment: "A brief summary of the privacy policy (for offline mode)")
         public static let onlinePrivacyPolicyText = NSLocalizedString(
             "[PrivacyPolicy/Online/text]",
             bundle: Bundle.framework,
-            value: "KeePassium does not collect any personal or analytical data.\nSome features may involve data exchange with external services (on your request and for the sole purpose of making these services available to you). Such an exchange is governed by the privacy policy of the respective service.",
+            value: "PassPouch does not collect any personal or analytical data.\nSome features may involve data exchange with external services (on your request and for the sole purpose of making these services available to you). Such an exchange is governed by the privacy policy of the respective service.",
             comment: "A brief summary of the privacy policy (for online mode)")
     }
 }

@@ -17,7 +17,7 @@ import MSAL
 #endif
 
 class AutoFillCoordinator: BaseCoordinator {
-    let log = Logger(subsystem: "com.keepassium.autofill", category: "AutoFillCoordinator")
+    let log = Logger(subsystem: "com.passpouch.autofill", category: "AutoFillCoordinator")
 
     unowned var rootController: CredentialProviderViewController
     let extensionContext: ASCredentialProviderExtensionContext

@@ -67,7 +67,7 @@ public class FileKeeper {
 
     private let operationQueue: OperationQueue = {
         let queue = OperationQueue()
-        queue.name = "com.keepassium.FileKeeper"
+        queue.name = "com.passpouch.FileKeeper"
         queue.qualityOfService = .utility
         queue.maxConcurrentOperationCount = 8
         return queue

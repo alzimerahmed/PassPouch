@@ -1,5 +1,5 @@
-/* Menu item that shows info about KeePassium app */
-"[About/altTitle]" = "KeePassiumについて";
+/* Menu item that shows info about PassPouch app */
+"[About/altTitle]" = "PassPouchについて";
 
 /* Section in settings: icon for the app */
 "[Appearance/AppIcon/title]" = "Appのアイコン";
@@ -92,7 +92,7 @@
 "[Credits/Item/tpInappReceipt]" = "TPInAppReceipt by Pavel Tikhonenko";
 
 /* Item in the credits list */
-"[Credits/Item/translations]" = "Translation by KeePassium contributors";
+"[Credits/Item/translations]" = "Translation by PassPouch contributors";
 
 /* Item in the credits list */
 "[Credits/Item/twoFish]" = "Twofish implementation by Niels Ferguson";
@@ -179,7 +179,7 @@
 "[Database/Create/weakPasswordWarning]" = "このパスワードは簡単に推測できます。より強力なパスコードを入力してみてください。";
 
 /* Description of favicon downloader feature. */
-"[Database/DownloadFavicons/intro]" = "KeePassiumは各エントリーに関連するウェブサイトに連絡します。";
+"[Database/DownloadFavicons/intro]" = "PassPouchは各エントリーに関連するウェブサイトに連絡します。";
 
 /* Description of favicon downloader feature. 'Doing this' refers to downloading favicons. */
 "[Database/DownloadFavicons/warning]" = "公開または監視されているネットワーク上でこれを行うと、アカウントをお持ちのウェブサイトの一覧が公開される可能性があります。";
@@ -248,7 +248,7 @@
 "[Onboarding/AppProtection/activate]" = "Appロックを使用";
 
 /* Text in the App Protection onboarding screen. */
-"[Onboarding/AppProtection/text1]" = "KeePassiumは保管庫です。アプリを保護することで、開くことができるのはあなただけです。";
+"[Onboarding/AppProtection/text1]" = "PassPouchは保管庫です。アプリを保護することで、開くことができるのはあなただけです。";
 
 /* Title of the App Protection onboarding screen */
 "[Onboarding/AppProtection/title]" = "見られる人はあなただけ";
@@ -278,7 +278,7 @@
 "[Onboarding/DataEncryption/title]" = "データの暗号化";
 
 /* Text in the introductory onboarding screen. */
-"[Onboarding/Intro/text1]" = "KeePassium はパスワードやその他の機密情報を安全に暗号化します。";
+"[Onboarding/Intro/text1]" = "PassPouch はパスワードやその他の機密情報を安全に暗号化します。";
 
 /* Text in the introductory onboarding screen. */
 "[Onboarding/Intro/text2]" = "広告はなく、トラッキングもしません。";
@@ -293,7 +293,7 @@
 "[Onboarding/Intro/title]" = "はじめに";
 
 /* Text in the Security intro screen */
-"[Onboarding/Security/text1]" = "あなたの情報はセーフボックス（データベース）で暗号化されます。セーフボックスは保管庫（KeePassium）に保存されます。";
+"[Onboarding/Security/text1]" = "あなたの情報はセーフボックス（データベース）で暗号化されます。セーフボックスは保管庫（PassPouch）に保存されます。";
 
 /* Text in the Security intro screen */
 "[Onboarding/Security/text2]" = "金庫室とセーフボックスには異なる鍵があり、あなただけがそれらを知っています。";
@@ -314,7 +314,7 @@
 "[PasswordAudit/ExposureCount/description]" = "この数字は、データ漏洩しているパスワードが発見された回数を示しています。";
 
 /* Description of the Password Audit function. */
-"[PasswordAudit/Intro/text]" = "パスワードの監査は、安全かつプライベートな方法で、流出したパスワードのオンラインデータベースとあなたのパスワードを照合します。\n\nKeePassiumは、あなたのパスワードから計算された情報（部分的なチェックサムのようなもの）を[Have I Been Pwned](https://haveibeenpwned.com)サービスに送信します。このサービスは、同じチェックサムを持つ漏洩したパスワードについて詳細な情報を返します。その後、デバイス上で詳細なチェックサムをローカルで比較し、パスワードが危険にさらされているかを検出します。\n\nお使いのパスワードがオンラインサービスと共有されることはありません。\n[もっと詳しく…](%@)";
+"[PasswordAudit/Intro/text]" = "パスワードの監査は、安全かつプライベートな方法で、流出したパスワードのオンラインデータベースとあなたのパスワードを照合します。\n\nPassPouchは、あなたのパスワードから計算された情報（部分的なチェックサムのようなもの）を[Have I Been Pwned](https://haveibeenpwned.com)サービスに送信します。このサービスは、同じチェックサムを持つ漏洩したパスワードについて詳細な情報を返します。その後、デバイス上で詳細なチェックサムをローカルで比較し、パスワードが危険にさらされているかを検出します。\n\nお使いのパスワードがオンラインサービスと共有されることはありません。\n[もっと詳しく…](%@)";
 
 /* Result of a password audit. */
 "[PasswordAudit/Results/allGood]" = "ご安心ください。お使いのパスワードは既知の漏洩データにありませんでした。";
@@ -380,7 +380,7 @@
 "[ProtectedTextField] Show Password" = "パスワードを表示";
 
 /* Explanation why the app needs camera access permission. */
-"[QRCodeScanner/CameraPermission/description]" = "QRコードをスキャンするにはKeePassiumにカメラへのアクセス許可を与える必要があります。";
+"[QRCodeScanner/CameraPermission/description]" = "QRコードをスキャンするにはPassPouchにカメラへのアクセス許可を与える必要があります。";
 
 /* Error message when the app cannot use the camera. */
 "[QRCodeScanner/Error/CameraBusy]" = "カメラはすでに使用中です。";
@@ -401,7 +401,7 @@
 "[QRCodeScanner/Info/callToAction]" = "カメラをQRコードに向けてください。";
 
 /* Description of the Quick AutoFill feature. */
-"[QuickAutoFill/description]" = "クイック自動入力は、KeePassiumを開くことなく関連エントリをパスワード入力時に表示します。";
+"[QuickAutoFill/description]" = "クイック自動入力は、PassPouchを開くことなく関連エントリをパスワード入力時に表示します。";
 
 /* Placeholder text for empty search results */
 "[Search/EmptyResult/title]" = "該当するものはありません";
@@ -419,7 +419,7 @@
 "[Settings/AppLoc/Activate/callToAction]" = "Appロックを使用";
 
 /* Description of `Activate app protection` call to action. */
-"[Settings/AppLock/Activate/description]" = "KeePassiumを不正なアクセスから保護します。";
+"[Settings/AppLock/Activate/description]" = "PassPouchを不正なアクセスから保護します。";
 
 /* Description of biometric unlock settings */
 "[Settings/AppLock/Biometric/description]" = "Appロックでパスコードの代わりに動作の速い（が安全性は劣る）生体認証を使用します。";
@@ -428,19 +428,19 @@
 "[Settings/AppLock/Biometric/title] Use %@" = "%@ を使用";
 
 /* Explanation for the `Lock on App Launch` setting */
-"[Settings/AppLock/LockOnLaunch/description]" = "Appを強制終了したりデバイスを再起動した時にKeePassiumがロックされるようにします。";
+"[Settings/AppLock/LockOnLaunch/description]" = "Appを強制終了したりデバイスを再起動した時にPassPouchがロックされるようにします。";
 
 /* Setting switch: whether to lock the app after it was terminated and relaunched. */
 "[Settings/AppLock/LockOnLaunch/title]" = "起動時にロック";
 
 /* Explanation for the `Lock on macOS Screen Lock` setting */
-"[Settings/AppLock/LockOnScreenLock/description]" = "MacをロックしたときにKeePassiumがロックされるようにします。";
+"[Settings/AppLock/LockOnScreenLock/description]" = "MacをロックしたときにPassPouchがロックされるようにします。";
 
 /* Title of a yes/no setting: whether to lock app when computer screen is locked (see https://support.apple.com/en-gb/guide/mac-help/mchl8e8b6a34/mac) */
 "[Settings/AppLock/LockOnScreenLock/title]" = "macOSを画面ロックしたときにロック";
 
 /* Description of the `Lock on Wrong Passcode` setting */
-"[Settings/AppLock/LockOnWrongPasscode/description]" = "Appをロックするパスコードを間違えると、KeePassiumはすべてのデータベースを閉じ、すべてのマスターキーをキーチェーンから消去します。";
+"[Settings/AppLock/LockOnWrongPasscode/description]" = "Appをロックするパスコードを間違えると、PassPouchはすべてのデータベースを閉じ、すべてのマスターキーをキーチェーンから消去します。";
 
 /* Title in the settings: whether to lock databases when user enters a wrong app protection passcode. */
 "[Settings/AppLock/LockOnWrongPasscode/title]" = "パスコードを間違ったときにロック";
@@ -497,7 +497,7 @@
 "[Settings/AutoFill/CopyOTP/title]" = "OTPをクリップボードにコピー";
 
 /* Description of the 'Remember Selected Entries' setting. */
-"[Settings/AutoFill/RememberContext/description]" = "KeePassiumは各ウェブサイトで選択したエントリーを記憶し、自動的に提案します。";
+"[Settings/AutoFill/RememberContext/description]" = "PassPouchは各ウェブサイトで選択したエントリーを記憶し、自動的に提案します。";
 
 /* Title of a yes/no setting: remember which entry was used for AutoFill on which website. */
 "[Settings/AutoFill/RememberContext/title]" = "選択したエントリーを記憶する";
@@ -506,7 +506,7 @@
 "[Settings/AutoFill/Setup Guide/title]" = "自動入力設定ガイド";
 
 /* No comment provided by engineer. */
-"[Settings/AutoFill/UnavailableInIntune/description]" = "自動入力はKeePassium for Intuneでは使用できません。";
+"[Settings/AutoFill/UnavailableInIntune/description]" = "自動入力はPassPouch for Intuneでは使用できません。";
 
 /* Description of the 'Fill-In Perfect Result Automatically' setting */
 "[Settings/AutoFill/UsePerfectMatch/description]" = "完全に一致するエントリーが１つだけの場合、そのエントリーを自動的に入力します。";
@@ -554,7 +554,7 @@
 "[Settings/DatabaseBackup/DeleteAll/title]" = "すべてのバックアップを削除 (%d)";
 
 /* Description of the 'Exclude Backup Files from System Backup' setting */
-"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "KeePassiumのデータベースをiCloud/iTunesバックアップの対象から除外します。現在および今後のすべてのバックアップに適用されます。";
+"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "PassPouchのデータベースをiCloud/iTunesバックアップの対象から除外します。現在および今後のすべてのバックアップに適用されます。";
 
 /* Title of a yes/no setting: whether app's internal backup copies should be excluded from global system backup */
 "[Settings/DatabaseBackup/ExcludeFromSystemBackup/title]" = "システムバックアップから除外";
@@ -626,7 +626,7 @@
 "[Settings/KeyFiles/title]" = "キーファイル";
 
 /* Description of the 'Cache Derived Encryption Keys' setting */
-"[Settings/MasterKeys/CacheDerived/description]" = "キーをキャッシュすると、KeePassiumは鍵の派生やYubiKeyスキャンを省略できるようになります。";
+"[Settings/MasterKeys/CacheDerived/description]" = "キーをキャッシュすると、PassPouchは鍵の派生やYubiKeyスキャンを省略できるようになります。";
 
 /* Action: clear/erase/delete stored master keys */
 "[Settings/MasterKeys/Clear/action]" = "マスターキーをクリア";
@@ -725,7 +725,7 @@
 "[Tags/UsageCount/title]" = "使用回数";
 
 /* Call to action in What's New announcement */
-"[WhatsNew/Announcement/body]" = "KeePassiumの新機能と改善点をご覧ください。";
+"[WhatsNew/Announcement/body]" = "PassPouchの新機能と改善点をご覧ください。";
 
 /* Button which opens the What's New screen. */
 "[WhatsNew/Announcement/button]" = "バージョン履歴";
@@ -737,7 +737,7 @@
 "[WhatsNew/Feature/AppScopedConnections/title]" = "安全性の高いクラウドアクセス";
 
 /* Description of a feature highlight, a call to action. */
-"[WhatsNew/Feature/AutoFillWithMemory/description]" = "KeePassiumは各ウェブサイトで選択したエントリーを記憶します。";
+"[WhatsNew/Feature/AutoFillWithMemory/description]" = "PassPouchは各ウェブサイトで選択したエントリーを記憶します。";
 
 /* Title of a feature highlight, a noun phrase. */
 "[WhatsNew/Feature/AutoFillWithMemory/title]" = "洗練された自動入力";
@@ -764,5 +764,5 @@
 "[WhatsNew/FullChangelog/title]" = "詳細な変更履歴";
 
 /* Full title for release highlights */
-"[WhatsNew/fullTitle]" = "KeePassiumの新着情報";
+"[WhatsNew/fullTitle]" = "PassPouchの新着情報";
 

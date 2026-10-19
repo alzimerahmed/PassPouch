@@ -1,5 +1,5 @@
-/* Menu item that shows info about KeePassium app */
-"[About/altTitle]" = "Про KeePassium";
+/* Menu item that shows info about PassPouch app */
+"[About/altTitle]" = "Про PassPouch";
 
 /* Section in settings: icon for the app */
 "[Appearance/AppIcon/title]" = "Значок програми";
@@ -179,7 +179,7 @@
 "[Database/Create/weakPasswordWarning]" = "Цей пароль легко вгадати. Спробуйте ввести складніший.";
 
 /* Description of favicon downloader feature. */
-"[Database/DownloadFavicons/intro]" = "KeePassium зв’яжеться з вебсайтами, пов’язаними з кожним записом.";
+"[Database/DownloadFavicons/intro]" = "PassPouch зв’яжеться з вебсайтами, пов’язаними з кожним записом.";
 
 /* Description of favicon downloader feature. 'Doing this' refers to downloading favicons. */
 "[Database/DownloadFavicons/warning]" = "Якщо ви робите це в публічній або контрольованій мережі, список вебсайтів, де у вас є обліковий запис, може стати загальнодоступним.";
@@ -248,7 +248,7 @@
 "[Onboarding/AppProtection/activate]" = "Активувати захист додатку";
 
 /* Text in the App Protection onboarding screen. */
-"[Onboarding/AppProtection/text1]" = "KeePassium — це ваше сховище. Захист додатка гарантує, що ніхто, крім вас, його не відкриє.";
+"[Onboarding/AppProtection/text1]" = "PassPouch — це ваше сховище. Захист додатка гарантує, що ніхто, крім вас, його не відкриє.";
 
 /* Title of the App Protection onboarding screen */
 "[Onboarding/AppProtection/title]" = "Лише для ваших очей";
@@ -278,7 +278,7 @@
 "[Onboarding/DataEncryption/title]" = "Шифрування даних";
 
 /* Text in the introductory onboarding screen. */
-"[Onboarding/Intro/text1]" = "KeePassium зберігає ваші паролі й інші конфіденційні дані надійно зашифрованими.";
+"[Onboarding/Intro/text1]" = "PassPouch зберігає ваші паролі й інші конфіденційні дані надійно зашифрованими.";
 
 /* Text in the introductory onboarding screen. */
 "[Onboarding/Intro/text2]" = "Без реклами й відстеження.";
@@ -293,7 +293,7 @@
 "[Onboarding/Intro/title]" = "Ласкаво просимо";
 
 /* Text in the Security intro screen */
-"[Onboarding/Security/text1]" = "Ваша інформація зашифрована в сейфі (базі паролів). Сейфи зберігаються в сховищі (KeePassium).";
+"[Onboarding/Security/text1]" = "Ваша інформація зашифрована в сейфі (базі паролів). Сейфи зберігаються в сховищі (PassPouch).";
 
 /* Text in the Security intro screen */
 "[Onboarding/Security/text2]" = "Сховище й сейф мають різні ключі, які відомі лише вам.";
@@ -314,7 +314,7 @@
 "[PasswordAudit/ExposureCount/description]" = "Число показує скільки разів пароль було знайдено у відомих витоках даних.";
 
 /* Description of the Password Audit function. */
-"[PasswordAudit/Intro/text]" = "Ваші паролі перевіряються в онлайновій базі даних витоків паролів у безпечний і конфіденційний спосіб.\n\nKeePassium надішле інформацію, обчислену на основі ваших паролів — своєрідну часткову контрольну суму — сервісу [Have I Been Pwned](https://haveibeenpwned.com). Сервіс надасть у відповідь детальну інформацію про зламані паролі зі схожими контрольними сумами. Потім програма порівняє детальні контрольні суми локально на пристрої і визначить, які з ваших паролів знаходяться в зоні ризику.\n\nВаші фактичні паролі ніколи не надаються онлайновим сервісам.\n[Дізнатися більше…](%@)";
+"[PasswordAudit/Intro/text]" = "Ваші паролі перевіряються в онлайновій базі даних витоків паролів у безпечний і конфіденційний спосіб.\n\nPassPouch надішле інформацію, обчислену на основі ваших паролів — своєрідну часткову контрольну суму — сервісу [Have I Been Pwned](https://haveibeenpwned.com). Сервіс надасть у відповідь детальну інформацію про зламані паролі зі схожими контрольними сумами. Потім програма порівняє детальні контрольні суми локально на пристрої і визначить, які з ваших паролів знаходяться в зоні ризику.\n\nВаші фактичні паролі ніколи не надаються онлайновим сервісам.\n[Дізнатися більше…](%@)";
 
 /* Result of a password audit. */
 "[PasswordAudit/Results/allGood]" = "Гарна новина! Жоден із ваших паролів не було розкрито під час відомих витоків даних.";
@@ -380,7 +380,7 @@
 "[ProtectedTextField] Show Password" = "Показати пароль";
 
 /* Explanation why the app needs camera access permission. */
-"[QRCodeScanner/CameraPermission/description]" = "KeePassium потрібен доступ до камери для сканування QR-кодів.";
+"[QRCodeScanner/CameraPermission/description]" = "PassPouch потрібен доступ до камери для сканування QR-кодів.";
 
 /* Error message when the app cannot use the camera. */
 "[QRCodeScanner/Error/CameraBusy]" = "Камера вже використовується.";
@@ -401,7 +401,7 @@
 "[QRCodeScanner/Info/callToAction]" = "Наведіть камеру на QR-код.";
 
 /* Description of the Quick AutoFill feature. */
-"[QuickAutoFill/description]" = "Швидке автозаповнення показує потрібні записи поруч із полями введення, не відкриваючи KeePassium.";
+"[QuickAutoFill/description]" = "Швидке автозаповнення показує потрібні записи поруч із полями введення, не відкриваючи PassPouch.";
 
 /* Placeholder text for empty search results */
 "[Search/EmptyResult/title]" = "Нічого не знайдено";
@@ -419,7 +419,7 @@
 "[Settings/AppLoc/Activate/callToAction]" = "Активувати захист додатку";
 
 /* Description of `Activate app protection` call to action. */
-"[Settings/AppLock/Activate/description]" = "Захистити KeePassium від несанкціонованого доступу.";
+"[Settings/AppLock/Activate/description]" = "Захистити PassPouch від несанкціонованого доступу.";
 
 /* Description of biometric unlock settings */
 "[Settings/AppLock/Biometric/description]" = "Дозволяє використовувати біометричну аутентифікацію як альтернативу коду доступу (швидше, але менш надійно).";
@@ -428,19 +428,19 @@
 "[Settings/AppLock/Biometric/title] Use %@" = "Використовувати %@";
 
 /* Explanation for the `Lock on App Launch` setting */
-"[Settings/AppLock/LockOnLaunch/description]" = "KeePassium буде заблокований після примусового закриття програми або перезавантаження пристрою.";
+"[Settings/AppLock/LockOnLaunch/description]" = "PassPouch буде заблокований після примусового закриття програми або перезавантаження пристрою.";
 
 /* Setting switch: whether to lock the app after it was terminated and relaunched. */
 "[Settings/AppLock/LockOnLaunch/title]" = "Блокувати додаток при запуску";
 
 /* Explanation for the `Lock on macOS Screen Lock` setting */
-"[Settings/AppLock/LockOnScreenLock/description]" = "Забезпечує блокування KeePassium, коли ви блокуєте ваш Mac.";
+"[Settings/AppLock/LockOnScreenLock/description]" = "Забезпечує блокування PassPouch, коли ви блокуєте ваш Mac.";
 
 /* Title of a yes/no setting: whether to lock app when computer screen is locked (see https://support.apple.com/en-gb/guide/mac-help/mchl8e8b6a34/mac) */
 "[Settings/AppLock/LockOnScreenLock/title]" = "Блокувати під час блокування екрана macOS";
 
 /* Description of the `Lock on Wrong Passcode` setting */
-"[Settings/AppLock/LockOnWrongPasscode/description]" = "Якщо ввести неправильний код доступу, KeePassium закриє всі бази паролів і видалить усі майстер-ключі які пам'ятав з системної зв'язки ключів.";
+"[Settings/AppLock/LockOnWrongPasscode/description]" = "Якщо ввести неправильний код доступу, PassPouch закриє всі бази паролів і видалить усі майстер-ключі які пам'ятав з системної зв'язки ключів.";
 
 /* Title in the settings: whether to lock databases when user enters a wrong app protection passcode. */
 "[Settings/AppLock/LockOnWrongPasscode/title]" = "Блокувати в разі введення неправильного коду доступу";
@@ -497,7 +497,7 @@
 "[Settings/AutoFill/CopyOTP/title]" = "Скопіювати одноразовий пароль";
 
 /* Description of the 'Remember Selected Entries' setting. */
-"[Settings/AutoFill/RememberContext/description]" = "KeePassium запам’ятає, який запис ви вибрали для кожного вебсайту й запропонує його автоматично.";
+"[Settings/AutoFill/RememberContext/description]" = "PassPouch запам’ятає, який запис ви вибрали для кожного вебсайту й запропонує його автоматично.";
 
 /* Title of a yes/no setting: remember which entry was used for AutoFill on which website. */
 "[Settings/AutoFill/RememberContext/title]" = "Запам’ятати вибрані записи";
@@ -506,7 +506,7 @@
 "[Settings/AutoFill/Setup Guide/title]" = "Інструкція з налаштування Автозаповнення";
 
 /* No comment provided by engineer. */
-"[Settings/AutoFill/UnavailableInIntune/description]" = "Автозаповнення недоступне в KeePassium для Intune.";
+"[Settings/AutoFill/UnavailableInIntune/description]" = "Автозаповнення недоступне в PassPouch для Intune.";
 
 /* Description of the 'Fill-In Perfect Result Automatically' setting */
 "[Settings/AutoFill/UsePerfectMatch/description]" = "Коли автозаповнення знаходить тільки один запис, що ідеально підходить, він буде обраний автоматично.";
@@ -536,13 +536,13 @@
 "[Settings/Clipboard/title]" = "Буфер обміну";
 
 /* Description of the 'Clipboard Timeout' setting. */
-"[Settings/ClipboardTimeout/description]" = "Після копіювання KeePassium автоматично очистить буфер обміну через деякий час.";
+"[Settings/ClipboardTimeout/description]" = "Після копіювання PassPouch автоматично очистить буфер обміну через деякий час.";
 
 /* An option in Settings. Will be shown as 'Clipboard Timeout: Never' */
 "[Settings/ClipboardTimeout/Never/title]" = "Ніколи";
 
 /* Description of the 'Make Backup Copies' setting */
-"[Settings/DatabaseBackup/Active/description]" = "Перед тим як зберігати базу паролів, KeePassium створить її копію, про всяк випадок.";
+"[Settings/DatabaseBackup/Active/description]" = "Перед тим як зберігати базу паролів, PassPouch створить її копію, про всяк випадок.";
 
 /* Title of a yes/no setting: whether to back up databases before saving them */
 "[Settings/DatabaseBackup/Active/title]" = "Створювати резервні копії";
@@ -554,7 +554,7 @@
 "[Settings/DatabaseBackup/DeleteAll/title]" = "Видалити ВСІ резервні копії (%d)";
 
 /* Description of the 'Exclude Backup Files from System Backup' setting */
-"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "Визначає, чи повинні резервні бази паролів, створені KeePassium, виключатися з резервної копії iCloud/iTunes. Стосується всіх існуючих і майбутніх резервних копій.";
+"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "Визначає, чи повинні резервні бази паролів, створені PassPouch, виключатися з резервної копії iCloud/iTunes. Стосується всіх існуючих і майбутніх резервних копій.";
 
 /* Title of a yes/no setting: whether app's internal backup copies should be excluded from global system backup */
 "[Settings/DatabaseBackup/ExcludeFromSystemBackup/title]" = "Виключити резервні копії з системного резервного копіювання";
@@ -569,7 +569,7 @@
 "[Settings/DatabaseBackup/NoFiles/title]" = "Немає резервних копій";
 
 /* Description of the `Periodic Cleanup` settings */
-"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "KeePassium може автоматично видаляти старі резервні копії, для звільнення місця.";
+"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "PassPouch може автоматично видаляти старі резервні копії, для звільнення місця.";
 
 /* Settings section: automatic deletion of old backup files */
 "[Settings/DatabaseBackup/PeriodicCleanup/title]" = "Періодичне очищення";
@@ -626,7 +626,7 @@
 "[Settings/KeyFiles/title]" = "Ключові файли";
 
 /* Description of the 'Cache Derived Encryption Keys' setting */
-"[Settings/MasterKeys/CacheDerived/description]" = "Кешовані ключі дозволяють KeePassium пропускати етап формування ключів і сканування YubiKey, коли це можливо.";
+"[Settings/MasterKeys/CacheDerived/description]" = "Кешовані ключі дозволяють PassPouch пропускати етап формування ключів і сканування YubiKey, коли це можливо.";
 
 /* Action: clear/erase/delete stored master keys */
 "[Settings/MasterKeys/Clear/action]" = "Видалити майстер-ключі";
@@ -635,7 +635,7 @@
 "[Settings/MasterKeys/ClearOnTimeout/title]" = "Видаляти майстер-ключі після закінчення затримки";
 
 /* Description of the 'Remember Master Keys' setting. */
-"[Settings/MasterKeys/Remember/description]" = "При відкритті бази паролів її майстер-ключ буде збережений в зв'язці ключів пристрою. Наступного разу KeePassium використає цей майстер-ключ, щоб вам не довелося заново вводити майстер-пароль.";
+"[Settings/MasterKeys/Remember/description]" = "При відкритті бази паролів її майстер-ключ буде збережений в зв'язці ключів пристрою. Наступного разу PassPouch використає цей майстер-ключ, щоб вам не довелося заново вводити майстер-пароль.";
 
 /* Title of a section in settings */
 "[Settings/OTP/title]" = "Одноразові паролі";
@@ -725,7 +725,7 @@
 "[Tags/UsageCount/title]" = "Кількість використань";
 
 /* Call to action in What's New announcement */
-"[WhatsNew/Announcement/body]" = "Дізнайтеся про нові функції та покращення в KeePassium.";
+"[WhatsNew/Announcement/body]" = "Дізнайтеся про нові функції та покращення в PassPouch.";
 
 /* Button which opens the What's New screen. */
 "[WhatsNew/Announcement/button]" = "Що нового";
@@ -737,7 +737,7 @@
 "[WhatsNew/Feature/AppScopedConnections/title]" = "Безпечніший доступ до хмари";
 
 /* Description of a feature highlight, a call to action. */
-"[WhatsNew/Feature/AutoFillWithMemory/description]" = "KeePassium запам’ятовує запис, який ви вибираєте на кожному вебсайті.";
+"[WhatsNew/Feature/AutoFillWithMemory/description]" = "PassPouch запам’ятовує запис, який ви вибираєте на кожному вебсайті.";
 
 /* Title of a feature highlight, a noun phrase. */
 "[WhatsNew/Feature/AutoFillWithMemory/title]" = "Розумніше автозаповнення";
@@ -764,5 +764,5 @@
 "[WhatsNew/FullChangelog/title]" = "Детальний журнал змін";
 
 /* Full title for release highlights */
-"[WhatsNew/fullTitle]" = "Що нового в KeePassium";
+"[WhatsNew/fullTitle]" = "Що нового в PassPouch";
 

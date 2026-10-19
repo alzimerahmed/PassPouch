@@ -1,5 +1,5 @@
-/* Menu item that shows info about KeePassium app */
-"[About/altTitle]" = "KeePassium 소개";
+/* Menu item that shows info about PassPouch app */
+"[About/altTitle]" = "PassPouch 소개";
 
 /* Section in settings: icon for the app */
 "[Appearance/AppIcon/title]" = "앱 아이콘";
@@ -131,7 +131,7 @@
 "[Settings/AppLoc/Activate/callToAction]" = "앱 잠금 활성화";
 
 /* Description of `Activate app protection` call to action. */
-"[Settings/AppLock/Activate/description]" = "허가되지 않은 접근으로부터 KeePassium을 보호합니다.";
+"[Settings/AppLock/Activate/description]" = "허가되지 않은 접근으로부터 PassPouch을 보호합니다.";
 
 /* Description of biometric unlock settings */
 "[Settings/AppLock/Biometric/description]" = "앱 잠금 비밀번호 대신 더 빠른 생체 인식 인증(덜 안전함)을 사용합니다.";
@@ -140,13 +140,13 @@
 "[Settings/AppLock/Biometric/title] Use %@" = "%@ 사용";
 
 /* Explanation for the `Lock on App Launch` setting */
-"[Settings/AppLock/LockOnLaunch/description]" = "KeePassium이 강제 종료되거나 기기를 재시동할 때 앱 잠금을 확실시하고 싶으시다면 이 설정을 활성화하세요.";
+"[Settings/AppLock/LockOnLaunch/description]" = "PassPouch이 강제 종료되거나 기기를 재시동할 때 앱 잠금을 확실시하고 싶으시다면 이 설정을 활성화하세요.";
 
 /* Setting switch: whether to lock the app after it was terminated and relaunched. */
 "[Settings/AppLock/LockOnLaunch/title]" = "앱 실행 시 잠금";
 
 /* Description of the `Lock on Wrong Passcode` setting */
-"[Settings/AppLock/LockOnWrongPasscode/description]" = "앱 잠금 비밀번호를 잘못 입력한 경우, KeePassium은 모든 데이터베이스를 닫고 키체인에 등록된 모든 마스터 키를 지웁니다.";
+"[Settings/AppLock/LockOnWrongPasscode/description]" = "앱 잠금 비밀번호를 잘못 입력한 경우, PassPouch은 모든 데이터베이스를 닫고 키체인에 등록된 모든 마스터 키를 지웁니다.";
 
 /* Settings: subtitle of the `App Protection` section. biometryTypeName will be either 'Touch ID' or 'Face ID'. [biometryTypeName: String] */
 "[Settings/AppLock/subtitle] App Lock, %@, timeout" = "앱 잠금, %@, 시간 제한";
@@ -218,7 +218,7 @@
 "[Settings/ClipboardTimeout/Never/title]" = "잠그지 않음";
 
 /* Description of the 'Make Backup Copies' setting */
-"[Settings/DatabaseBackup/Active/description]" = "데이터베이스를 저장하기 전에, KeePassium은 자동으로 데이터베이스 파일의 백업본을 만듭니다.";
+"[Settings/DatabaseBackup/Active/description]" = "데이터베이스를 저장하기 전에, PassPouch은 자동으로 데이터베이스 파일의 백업본을 만듭니다.";
 
 /* Title of a yes/no setting: whether to back up databases before saving them */
 "[Settings/DatabaseBackup/Active/title]" = "백업 파일 생성";
@@ -230,7 +230,7 @@
 "[Settings/DatabaseBackup/DeleteAll/title]" = "모든 백업 파일 삭제 (%d개)";
 
 /* Description of the 'Exclude Backup Files from System Backup' setting */
-"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "KeePassium에서 생성한 데이터베이스 백업 파일을 iCloud/iTunes 백업으로부터 제외할지의 여부를 선택합니다. 모든 기존 백업 파일 및 향후 생성될 백업 파일에 적용됩니다.";
+"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "PassPouch에서 생성한 데이터베이스 백업 파일을 iCloud/iTunes 백업으로부터 제외할지의 여부를 선택합니다. 모든 기존 백업 파일 및 향후 생성될 백업 파일에 적용됩니다.";
 
 /* Title of a yes/no setting: whether app's internal backup copies should be excluded from global system backup */
 "[Settings/DatabaseBackup/ExcludeFromSystemBackup/title]" = "시스템 백업 시 백업 파일 제외";
@@ -245,7 +245,7 @@
 "[Settings/DatabaseBackup/NoFiles/title]" = "백업 파일 없음";
 
 /* Description of the `Periodic Cleanup` settings */
-"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "KeePassium은 저장 공간을 비우기 위해 이전 백업 파일을 자동으로 삭제할 수 있습니다.";
+"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "PassPouch은 저장 공간을 비우기 위해 이전 백업 파일을 자동으로 삭제할 수 있습니다.";
 
 /* Settings section: automatic deletion of old backup files */
 "[Settings/DatabaseBackup/PeriodicCleanup/title]" = "주기적 정리";
@@ -296,7 +296,7 @@
 "[Settings/KeyFiles/title]" = "키 파일";
 
 /* Description of the 'Cache Derived Encryption Keys' setting */
-"[Settings/MasterKeys/CacheDerived/description]" = "캐시에 등록된 키는 가능한 경우 KeePassium이 키 파생 및 YubiKey 스캐닝을 건너뛰도록 해줍니다.";
+"[Settings/MasterKeys/CacheDerived/description]" = "캐시에 등록된 키는 가능한 경우 PassPouch이 키 파생 및 YubiKey 스캐닝을 건너뛰도록 해줍니다.";
 
 /* Action: clear/erase/delete stored master keys */
 "[Settings/MasterKeys/Clear/action]" = "마스터 키 비우기";
@@ -305,7 +305,7 @@
 "[Settings/MasterKeys/ClearOnTimeout/title]" = "시간 제한 도달 시 마스터 키 비우기";
 
 /* Description of the 'Remember Master Keys' setting. */
-"[Settings/MasterKeys/Remember/description]" = "데이터베이스를 처음 잠금 해제할 때, 마스터 키는 기기의 키체인에 보관되게 됩니다. 이후 KeePassium은 키체인에 보관된 키를 이용해 잠금 해제를 시도할 것이며 사용자는 마스터 패스워드를 다시 입력할 필요가 없어집니다.";
+"[Settings/MasterKeys/Remember/description]" = "데이터베이스를 처음 잠금 해제할 때, 마스터 키는 기기의 키체인에 보관되게 됩니다. 이후 PassPouch은 키체인에 보관된 키를 이용해 잠금 해제를 시도할 것이며 사용자는 마스터 패스워드를 다시 입력할 필요가 없어집니다.";
 
 /* Title of a section in settings */
 "[Settings/OTP/title]" = "일회용 비밀번호";

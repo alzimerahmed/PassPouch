@@ -1,9 +1,9 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "KeePassium: automatisches Ausfüllen";
+"CFBundleDisplayName" = "PassPouch: automatisches Ausfüllen";
 
 /* Bundle name */
-"CFBundleName" = "KeePassium: automatisches Ausfüllen";
+"CFBundleName" = "PassPouch: automatisches Ausfüllen";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Verwende FaceID um KeePassium zu entsperren";
+"NSFaceIDUsageDescription" = "Verwende FaceID um PassPouch zu entsperren";
 

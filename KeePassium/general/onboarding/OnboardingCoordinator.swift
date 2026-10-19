@@ -235,7 +235,7 @@ extension LString {
         )
         public static let introText1 = NSLocalizedString(
             "[Onboarding/Intro/text1]",
-            value: "KeePassium keeps your passwords and other sensitive info securely encrypted.",
+            value: "PassPouch keeps your passwords and other sensitive info securely encrypted.",
             comment: "Text in the introductory onboarding screen."
         )
         public static let introText2 = NSLocalizedString(
@@ -261,7 +261,7 @@ extension LString {
         )
         public static let securityText1 = NSLocalizedString(
             "[Onboarding/Security/text1]",
-            value: "Your info is encrypted in a safe box (database). Safe boxes are stored in a vault (KeePassium).",
+            value: "Your info is encrypted in a safe box (database). Safe boxes are stored in a vault (PassPouch).",
             comment: "Text in the Security intro screen"
         )
         public static let securityText2 = NSLocalizedString(
@@ -277,7 +277,7 @@ extension LString {
         )
         public static let appProtectionText1 = NSLocalizedString(
             "[Onboarding/AppProtection/text1]",
-            value: "KeePassium is your vault. App protection ensures that only you can open it.",
+            value: "PassPouch is your vault. App protection ensures that only you can open it.",
             comment: "Text in the App Protection onboarding screen."
         )
         public static let actionActivateAppProtection = NSLocalizedString(

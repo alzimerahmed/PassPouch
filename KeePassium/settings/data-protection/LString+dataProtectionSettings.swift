@@ -21,7 +21,7 @@ extension LString {
         comment: "Title of a section in settings")
     public static let rememberMasterKeysDescription = NSLocalizedString(
         "[Settings/MasterKeys/Remember/description]",
-        value: "Once you unlock a database, its master key can be stored in device's secure keychain. The next time, KeePassium will use that key so you won't have to type your full master password again.",
+        value: "Once you unlock a database, its master key can be stored in device's secure keychain. The next time, PassPouch will use that key so you won't have to type your full master password again.",
         comment: "Description of the 'Remember Master Keys' setting.")
     public static let clearMasterKeysAction = NSLocalizedString(
         "[Settings/MasterKeys/Clear/action]",
@@ -80,7 +80,7 @@ extension LString {
         comment: "Title of a setting: time after which clipboard will be cleared")
     public static let clipboardTimeoutDescription = NSLocalizedString(
         "[Settings/ClipboardTimeout/description]",
-        value: "When you copy anything, KeePassium will automatically clear your clipboard after some time.",
+        value: "When you copy anything, PassPouch will automatically clear your clipboard after some time.",
         comment: "Description of the 'Clipboard Timeout' setting.")
     public static let clipboardTimeoutNeverTitle = NSLocalizedString(
         "[Settings/ClipboardTimeout/Never/title]",
@@ -145,7 +145,7 @@ extension LString {
         comment: "Section title: advanced/expert settings")
     public static let cacheDerivedKeysDescription = NSLocalizedString(
         "[Settings/MasterKeys/CacheDerived/description]",
-        value: "Cached keys allow KeePassium to skip key derivation and YubiKey scans whenever possible.",
+        value: "Cached keys allow PassPouch to skip key derivation and YubiKey scans whenever possible.",
         comment: "Description of the 'Cache Derived Encryption Keys' setting")
 
     // swiftlint:enable line_length

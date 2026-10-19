@@ -1,5 +1,5 @@
-/* Menu item that shows info about KeePassium app */
-"[About/altTitle]" = "KeePassium hakkında";
+/* Menu item that shows info about PassPouch app */
+"[About/altTitle]" = "PassPouch hakkında";
 
 /* Section in settings: icon for the app */
 "[Appearance/AppIcon/title]" = "Uygulama Simgesi";
@@ -92,7 +92,7 @@
 "[Credits/Item/tpInappReceipt]" = "Pavel Tikhonenko'dan TPInAppReceipt";
 
 /* Item in the credits list */
-"[Credits/Item/translations]" = "KeePassium'a katkıda bulunanların çevirileri";
+"[Credits/Item/translations]" = "PassPouch'a katkıda bulunanların çevirileri";
 
 /* Item in the credits list */
 "[Credits/Item/twoFish]" = "Niels Ferguson'dan Twofish uygulaması";
@@ -179,7 +179,7 @@
 "[Database/Create/weakPasswordWarning]" = "Bu şifreyi tahmin etmesi kolay. Daha güçlü bir şifre girmeyi deneyin.";
 
 /* Description of favicon downloader feature. */
-"[Database/DownloadFavicons/intro]" = "KeePassium, her girdi ile ilişkili web siteleriyle iletişime geçecek.";
+"[Database/DownloadFavicons/intro]" = "PassPouch, her girdi ile ilişkili web siteleriyle iletişime geçecek.";
 
 /* Description of favicon downloader feature. 'Doing this' refers to downloading favicons. */
 "[Database/DownloadFavicons/warning]" = "Bunu herkese açık veya izlenen bir ağda yapmak, hesabınız olan web sitelerinin listesini açığa çıkarabilir.";
@@ -248,7 +248,7 @@
 "[Onboarding/AppProtection/activate]" = "Uygulama Korumasını etkinleştir";
 
 /* Text in the App Protection onboarding screen. */
-"[Onboarding/AppProtection/text1]" = "KeePassium kasa odanızda. Uygulama koruması, yalnızca sizin açabilmenizi sağlar.";
+"[Onboarding/AppProtection/text1]" = "PassPouch kasa odanızda. Uygulama koruması, yalnızca sizin açabilmenizi sağlar.";
 
 /* Title of the App Protection onboarding screen */
 "[Onboarding/AppProtection/title]" = "Yalnızca Size Özel";
@@ -278,7 +278,7 @@
 "[Onboarding/DataEncryption/title]" = "Veri Şifreleme";
 
 /* Text in the introductory onboarding screen. */
-"[Onboarding/Intro/text1]" = "KeePassium, şifrelerinizi ve diğer hassas bilgilerinizi güvenli bir şekilde şifrelenmiş hâlde tutar.";
+"[Onboarding/Intro/text1]" = "PassPouch, şifrelerinizi ve diğer hassas bilgilerinizi güvenli bir şekilde şifrelenmiş hâlde tutar.";
 
 /* Text in the introductory onboarding screen. */
 "[Onboarding/Intro/text2]" = "Reklam veya takip yok.";
@@ -293,7 +293,7 @@
 "[Onboarding/Intro/title]" = "Hoş geldiniz";
 
 /* Text in the Security intro screen */
-"[Onboarding/Security/text1]" = "Verileriniz bir kasada (veri tabanı) şifrelenir. Kasalar, kasa odasında (KeePassium) saklanır.";
+"[Onboarding/Security/text1]" = "Verileriniz bir kasada (veri tabanı) şifrelenir. Kasalar, kasa odasında (PassPouch) saklanır.";
 
 /* Text in the Security intro screen */
 "[Onboarding/Security/text2]" = "Kasa odası ve kasaların farklı anahtarları vardır ve bunları yalnızca siz bilirsiniz.";
@@ -314,7 +314,7 @@
 "[PasswordAudit/ExposureCount/description]" = "Sayı, şifrenin bilinen veri sızıntılarında kaç kez bulunduğunu gösterir.";
 
 /* Description of the Password Audit function. */
-"[PasswordAudit/Intro/text]" = "Şifre denetimi, şifrelerinizi güvenli ve gizli bir şekilde çevrimiçi sızdırılmış şifreler veri tabanında kontrol eder.\n\nKeePassium, şifrelerinizden hesaplanan bilgileri (bir tür kısmi sağlama toplamı) [Have I Been Pwned](https://haveibeenpwned.com) hizmetine gönderir. Hizmet, benzer sağlama toplamlarına sahip tehlikeye giren şifreler hakkında ayrıntılı bilgi döndürür. Uygulama ardından ayrıntılı sağlama toplamlarını cihazınızda yerel olarak karşılaştırır ve hangi şifrelerinizin risk altında olduğunu tespit eder.\n\nGerçek şifreleriniz çevrimiçi hizmetle asla paylaşılmaz.\n[Daha fazla bilgi…](%@)";
+"[PasswordAudit/Intro/text]" = "Şifre denetimi, şifrelerinizi güvenli ve gizli bir şekilde çevrimiçi sızdırılmış şifreler veri tabanında kontrol eder.\n\nPassPouch, şifrelerinizden hesaplanan bilgileri (bir tür kısmi sağlama toplamı) [Have I Been Pwned](https://haveibeenpwned.com) hizmetine gönderir. Hizmet, benzer sağlama toplamlarına sahip tehlikeye giren şifreler hakkında ayrıntılı bilgi döndürür. Uygulama ardından ayrıntılı sağlama toplamlarını cihazınızda yerel olarak karşılaştırır ve hangi şifrelerinizin risk altında olduğunu tespit eder.\n\nGerçek şifreleriniz çevrimiçi hizmetle asla paylaşılmaz.\n[Daha fazla bilgi…](%@)";
 
 /* Result of a password audit. */
 "[PasswordAudit/Results/allGood]" = "İyi haber! Şifrelerinizin hiçbiri bilinen veri sızıntılarında görünmedi.";
@@ -380,7 +380,7 @@
 "[ProtectedTextField] Show Password" = "Şifreyi göster";
 
 /* Explanation why the app needs camera access permission. */
-"[QRCodeScanner/CameraPermission/description]" = "Kare kodları taramak için KeePassium'un kameraya erişmesi gerekiyor.";
+"[QRCodeScanner/CameraPermission/description]" = "Kare kodları taramak için PassPouch'un kameraya erişmesi gerekiyor.";
 
 /* Error message when the app cannot use the camera. */
 "[QRCodeScanner/Error/CameraBusy]" = "Kamera zaten kullanımda.";
@@ -401,7 +401,7 @@
 "[QRCodeScanner/Info/callToAction]" = "Kamerayı bir QR koduna yöneltin.";
 
 /* Description of the Quick AutoFill feature. */
-"[QuickAutoFill/description]" = "Hızlı Otomatik Doldurma, KeePassium'u açmadan, şifre alanının hemen yanında ilgili girdileri gösterir.";
+"[QuickAutoFill/description]" = "Hızlı Otomatik Doldurma, PassPouch'u açmadan, şifre alanının hemen yanında ilgili girdileri gösterir.";
 
 /* Placeholder text for empty search results */
 "[Search/EmptyResult/title]" = "Uygun bir şey bulunamadı";
@@ -419,7 +419,7 @@
 "[Settings/AppLoc/Activate/callToAction]" = "Uygulama Korumasını etkinleştir";
 
 /* Description of `Activate app protection` call to action. */
-"[Settings/AppLock/Activate/description]" = "KeePassium'u izinsiz erişimden koruyun.";
+"[Settings/AppLock/Activate/description]" = "PassPouch'u izinsiz erişimden koruyun.";
 
 /* Description of biometric unlock settings */
 "[Settings/AppLock/Biometric/description]" = "Uygulama Kilidi şifresi yerine hızlı (ama daha güvensiz) bir alternatif olan biyometrik yetkilendirmeye izin verir.";
@@ -428,19 +428,19 @@
 "[Settings/AppLock/Biometric/title] Use %@" = "%@ kullan";
 
 /* Explanation for the `Lock on App Launch` setting */
-"[Settings/AppLock/LockOnLaunch/description]" = "Uygulamayı zorla kapattıktan veya cihazı tekrar başlattıktan sonra KeePassium'un kilitlenmesini sağlar.";
+"[Settings/AppLock/LockOnLaunch/description]" = "Uygulamayı zorla kapattıktan veya cihazı tekrar başlattıktan sonra PassPouch'un kilitlenmesini sağlar.";
 
 /* Setting switch: whether to lock the app after it was terminated and relaunched. */
 "[Settings/AppLock/LockOnLaunch/title]" = "Uygulama Başlatıldığında kilitle";
 
 /* Explanation for the `Lock on macOS Screen Lock` setting */
-"[Settings/AppLock/LockOnScreenLock/description]" = "Mac'inizi kilitlediğinizde KeePassium'un kilitli kalmasını sağlar.";
+"[Settings/AppLock/LockOnScreenLock/description]" = "Mac'inizi kilitlediğinizde PassPouch'un kilitli kalmasını sağlar.";
 
 /* Title of a yes/no setting: whether to lock app when computer screen is locked (see https://support.apple.com/en-gb/guide/mac-help/mchl8e8b6a34/mac) */
 "[Settings/AppLock/LockOnScreenLock/title]" = "macOS Ekran Kilidi açık olduğunda kilitle";
 
 /* Description of the `Lock on Wrong Passcode` setting */
-"[Settings/AppLock/LockOnWrongPasscode/description]" = "Yanlış bir uygulama koruma şifre kodu girerseniz KeePassium tüm veri tabanlarını kapatır ve tüm ana anahtarları anahtar zincirinden temizler.";
+"[Settings/AppLock/LockOnWrongPasscode/description]" = "Yanlış bir uygulama koruma şifre kodu girerseniz PassPouch tüm veri tabanlarını kapatır ve tüm ana anahtarları anahtar zincirinden temizler.";
 
 /* Title in the settings: whether to lock databases when user enters a wrong app protection passcode. */
 "[Settings/AppLock/LockOnWrongPasscode/title]" = "Yanlış Şifre Kodu girildiğinde kilitle";
@@ -497,7 +497,7 @@
 "[Settings/AutoFill/CopyOTP/title]" = "Tek Kullanımlık Şifreyi Panoya kopyala";
 
 /* Description of the 'Remember Selected Entries' setting. */
-"[Settings/AutoFill/RememberContext/description]" = "KeePassium her bir web sitesi için seçtiğiniz girdiyi hatırlar ve otomatik olarak önerir.";
+"[Settings/AutoFill/RememberContext/description]" = "PassPouch her bir web sitesi için seçtiğiniz girdiyi hatırlar ve otomatik olarak önerir.";
 
 /* Title of a yes/no setting: remember which entry was used for AutoFill on which website. */
 "[Settings/AutoFill/RememberContext/title]" = "Seçilen Girdileri hatırla";
@@ -506,7 +506,7 @@
 "[Settings/AutoFill/Setup Guide/title]" = "Otomatik Doldurma Kurulum Rehberi";
 
 /* No comment provided by engineer. */
-"[Settings/AutoFill/UnavailableInIntune/description]" = "Otomatik Doldurma, Intune için KeePassium'da kullanılamıyor.";
+"[Settings/AutoFill/UnavailableInIntune/description]" = "Otomatik Doldurma, Intune için PassPouch'da kullanılamıyor.";
 
 /* Description of the 'Fill-In Perfect Result Automatically' setting */
 "[Settings/AutoFill/UsePerfectMatch/description]" = "Otomatik Doldurma, birebir eşleşen bir girdi bulduğunda; otomatik olarak bu girdi kopyalanır.";
@@ -536,13 +536,13 @@
 "[Settings/Clipboard/title]" = "Pano";
 
 /* Description of the 'Clipboard Timeout' setting. */
-"[Settings/ClipboardTimeout/description]" = "Herhangi bir şeyi kopyaladığınızda, KeePassium bir süre sonra panonuzu (çalışma alanını) otomatik olarak temizler.";
+"[Settings/ClipboardTimeout/description]" = "Herhangi bir şeyi kopyaladığınızda, PassPouch bir süre sonra panonuzu (çalışma alanını) otomatik olarak temizler.";
 
 /* An option in Settings. Will be shown as 'Clipboard Timeout: Never' */
 "[Settings/ClipboardTimeout/Never/title]" = "Asla";
 
 /* Description of the 'Make Backup Copies' setting */
-"[Settings/DatabaseBackup/Active/description]" = "Her ihtimale karşı bir veri tabanını kaydetmeden önce KeePassium otomatik olarak bir kopya çıkarır.";
+"[Settings/DatabaseBackup/Active/description]" = "Her ihtimale karşı bir veri tabanını kaydetmeden önce PassPouch otomatik olarak bir kopya çıkarır.";
 
 /* Title of a yes/no setting: whether to back up databases before saving them */
 "[Settings/DatabaseBackup/Active/title]" = "Yedek Kopyaları Hazırlayın";
@@ -554,7 +554,7 @@
 "[Settings/DatabaseBackup/DeleteAll/title]" = "TÜM Yedekleme Dosyalarını Sil (%d)";
 
 /* Description of the 'Exclude Backup Files from System Backup' setting */
-"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "KeePassium tarafından oluşturulan yedekleme veritabanlarının iCloud / iTunes yedeklemesinin dışında bırakılıp bırakılmayacağını tanımlar. Tüm mevcut ve gelecekteki yedekleme dosyaları için geçerlidir.";
+"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "PassPouch tarafından oluşturulan yedekleme veritabanlarının iCloud / iTunes yedeklemesinin dışında bırakılıp bırakılmayacağını tanımlar. Tüm mevcut ve gelecekteki yedekleme dosyaları için geçerlidir.";
 
 /* Title of a yes/no setting: whether app's internal backup copies should be excluded from global system backup */
 "[Settings/DatabaseBackup/ExcludeFromSystemBackup/title]" = "Yedek Dosyalarını, Sistem Geri Yükleme'den Muaf Tut";
@@ -569,7 +569,7 @@
 "[Settings/DatabaseBackup/NoFiles/title]" = "Yedekleme Dosyası Bulunamadı";
 
 /* Description of the `Periodic Cleanup` settings */
-"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "Yer kazanmak için KeePassium otomatik olarak eski yedek dosyalarını siler.";
+"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "Yer kazanmak için PassPouch otomatik olarak eski yedek dosyalarını siler.";
 
 /* Settings section: automatic deletion of old backup files */
 "[Settings/DatabaseBackup/PeriodicCleanup/title]" = "Periyodik temizlik";
@@ -626,7 +626,7 @@
 "[Settings/KeyFiles/title]" = "Anahtar Dosyalar";
 
 /* Description of the 'Cache Derived Encryption Keys' setting */
-"[Settings/MasterKeys/CacheDerived/description]" = "Önbelleğe alınan şifreler, KeePassium'un şifre türetmeyi atlamasına ve mümkün olduğunda YubiKey taramalarına izin verir.";
+"[Settings/MasterKeys/CacheDerived/description]" = "Önbelleğe alınan şifreler, PassPouch'un şifre türetmeyi atlamasına ve mümkün olduğunda YubiKey taramalarına izin verir.";
 
 /* Action: clear/erase/delete stored master keys */
 "[Settings/MasterKeys/Clear/action]" = "Ana Şifreleri Sil";
@@ -635,7 +635,7 @@
 "[Settings/MasterKeys/ClearOnTimeout/title]" = "Zamanaşımı Dolduğunda Ana Şifreleri Sil";
 
 /* Description of the 'Remember Master Keys' setting. */
-"[Settings/MasterKeys/Remember/description]" = "Bir veritabanının kilidini açtığınızda, ana anahtar; anahtar zincirinde saklanır. Bir dahaki sefere, KeePassium bu anahtarı kullanır, böylece ana şifrenizi en baştan tekrar yazmanız gerekmez.";
+"[Settings/MasterKeys/Remember/description]" = "Bir veritabanının kilidini açtığınızda, ana anahtar; anahtar zincirinde saklanır. Bir dahaki sefere, PassPouch bu anahtarı kullanır, böylece ana şifrenizi en baştan tekrar yazmanız gerekmez.";
 
 /* Title of a section in settings */
 "[Settings/OTP/title]" = "Tek kullanımlık şifre";
@@ -725,7 +725,7 @@
 "[Tags/UsageCount/title]" = "Kullanım sayısı";
 
 /* Call to action in What's New announcement */
-"[WhatsNew/Announcement/body]" = "KeePassium'daki yeni özellik ve iyileştirmeleri keşfedin.";
+"[WhatsNew/Announcement/body]" = "PassPouch'daki yeni özellik ve iyileştirmeleri keşfedin.";
 
 /* Button which opens the What's New screen. */
 "[WhatsNew/Announcement/button]" = "Neler Değişti?";
@@ -737,7 +737,7 @@
 "[WhatsNew/Feature/AppScopedConnections/title]" = "Daha Güvenli Bulut Erişimi";
 
 /* Description of a feature highlight, a call to action. */
-"[WhatsNew/Feature/AutoFillWithMemory/description]" = "KeePassium, her bir web sitesinde seçtiğiniz girdiyi hatırlar.";
+"[WhatsNew/Feature/AutoFillWithMemory/description]" = "PassPouch, her bir web sitesinde seçtiğiniz girdiyi hatırlar.";
 
 /* Title of a feature highlight, a noun phrase. */
 "[WhatsNew/Feature/AutoFillWithMemory/title]" = "Daha Akıllı Otomatik Doldurma";
@@ -764,5 +764,5 @@
 "[WhatsNew/FullChangelog/title]" = "Ayrıntılı Değişiklik Günlüğü";
 
 /* Full title for release highlights */
-"[WhatsNew/fullTitle]" = "KeePassium'daki Yenilikler";
+"[WhatsNew/fullTitle]" = "PassPouch'daki Yenilikler";
 

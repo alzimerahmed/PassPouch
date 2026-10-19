@@ -77,8 +77,8 @@ extension FileAccessError {
             return NSLocalizedString(
                 "[FileAccessError/internalError]",
                 bundle: Bundle.framework,
-                value: "Internal KeePassium error, please tell us about it.",
-                comment: "Error message shown when there's internal inconsistency in KeePassium.")
+                value: "Internal PassPouch error, please tell us about it.",
+                comment: "Error message shown when there's internal inconsistency in PassPouch.")
         case .fileProviderDoesNotRespond(let fileProvider):
             if let fileProvider {
                 return String.localizedStringWithFormat(
@@ -261,7 +261,7 @@ extension LString.Error {
     fileprivate static let filePermissionRequiredDescriptionTemplate = NSLocalizedString(
         "[FileAccessError/PermissionRequired/reason]",
         bundle: Bundle.framework,
-        value: "KeePassium needs your permission to access '%@'.",
+        value: "PassPouch needs your permission to access '%@'.",
         comment: "Error message for file with an expired access permission [fileName: String]."
     )
     fileprivate static let actionReAddFileToAllowAccess = NSLocalizedString(

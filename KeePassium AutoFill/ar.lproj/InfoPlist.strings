@@ -1,9 +1,9 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "التعبئة التلقائية لـKeePassium";
+"CFBundleDisplayName" = "التعبئة التلقائية لـPassPouch";
 
 /* Bundle name */
-"CFBundleName" = "التعبئة التلقائية لـKeePassium";
+"CFBundleName" = "التعبئة التلقائية لـPassPouch";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "استخدم مُعرف الوجه (FaceID) لفتح KeePassium";
+"NSFaceIDUsageDescription" = "استخدم مُعرف الوجه (FaceID) لفتح PassPouch";
 

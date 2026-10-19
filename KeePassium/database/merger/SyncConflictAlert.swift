@@ -65,7 +65,7 @@ final class SyncConflictAlert: UIViewController, Refreshable {
     private var isShowFileInfo = false
 
     private let infoRefreshQueue = DispatchQueue(
-        label: "com.keepassium.SyncConflictInfoRefresh",
+        label: "com.passpouch.SyncConflictInfoRefresh",
         qos: .utility
     )
 

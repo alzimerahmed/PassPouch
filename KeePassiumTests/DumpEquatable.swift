@@ -1,4 +1,4 @@
-//  PassPouch Password Manager
+//  KeePassium Password Manager
 //  Copyright © 2026 Alzimer Ahmed <alzimerahmed84@gmail.com>
 //
 //  Based on KeePassium (https://github.com/keepassium/KeePassium),

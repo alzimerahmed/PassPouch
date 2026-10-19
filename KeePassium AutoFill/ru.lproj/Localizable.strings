@@ -26,7 +26,7 @@
 "[AutoFill/RememberContext/callToAction]" = "Улучшите подсказки Автозаполнения";
 
 /* Description of the 'Remember Selected Entries` feature */
-"[AutoFill/RememberContext/description]" = "KeePassium будет запоминать какие записи вы выбираете для каждого сайта, а затем автоматически предлагать их.";
+"[AutoFill/RememberContext/description]" = "PassPouch будет запоминать какие записи вы выбираете для каждого сайта, а затем автоматически предлагать их.";
 
 /* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
 "[AutoFill/Search/Context/title]" = "Контекст";
@@ -41,7 +41,7 @@
 "[AutoFill/Setup/UncheckKeychain/callToAction]" = "Отключите Связку ключей";
 
 /* Instruction to deselect another app in the settings [appName: String] */
-"[AutoFill/Setup/UncheckKeychain/message]" = "Чтобы сделать KeePassium своим основным менеджером паролей, выключите \"%@\".";
+"[AutoFill/Setup/UncheckKeychain/message]" = "Чтобы сделать PassPouch своим основным менеджером паролей, выключите \"%@\".";
 
 /* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "Использовать пароли и ключи входа от:";

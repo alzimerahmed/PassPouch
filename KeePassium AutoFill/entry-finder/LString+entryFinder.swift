@@ -60,7 +60,7 @@ extension LString {
     )
     public static let rememberAutoFillContextDescription = NSLocalizedString(
         "[AutoFill/RememberContext/description]",
-        value: "KeePassium will remember which entry you select for each website and then suggest it automatically.",
+        value: "PassPouch will remember which entry you select for each website and then suggest it automatically.",
         comment: "Description of the 'Remember Selected Entries` feature"
     )
     public static let actionRememberAutoFillContext = NSLocalizedString(

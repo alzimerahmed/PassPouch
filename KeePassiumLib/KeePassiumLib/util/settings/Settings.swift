@@ -96,7 +96,7 @@ public class Settings {
     }
 
     internal enum Notifications {
-        static let settingsChanged = Notification.Name("com.keepassium.SettingsChanged")
+        static let settingsChanged = Notification.Name("com.passpouch.SettingsChanged")
         static let userInfoKey = "changedKey" 
     }
 

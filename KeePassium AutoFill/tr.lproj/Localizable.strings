@@ -26,13 +26,13 @@
 "[AutoFill/RememberContext/callToAction]" = "Otomatik Doldurma önerilerini iyileştir";
 
 /* Description of the 'Remember Selected Entries` feature */
-"[AutoFill/RememberContext/description]" = "KeePassium her bir web sitesi için seçtiğiniz girdiyi hatırlar ve otomatik olarak önerir.";
+"[AutoFill/RememberContext/description]" = "PassPouch her bir web sitesi için seçtiğiniz girdiyi hatırlar ve otomatik olarak önerir.";
 
 /* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
 "[AutoFill/Search/Context/title]" = "Bağlam";
 
 /* No comment provided by engineer. */
-"[AutoFill/Setup/footer]" = "Otomatik Doldurma, hâlihazırda ana KeePassium uygulamasında bulunan dosyalara otomatik olarak erişemez.\n\nNeden mi? Arka planda, sistem Otomatik Doldurma'yı KeePassium işleminden bağımsız, ayrı bir uygulama olarak kabul eder. Güvenlik sebebiyle, bu dosyaları o uygulamaya özel olarak bağlamazsanız uygulama harici dosyalara erişemez. Dolayısıyla sistem, uygulamanın yalnızca izin verdiğiniz birkaç dosyaya erişebilmesini garantiler.\n\nSonuç olarak hem Otomatik Doldurmaya hem de ana KeePassium uygulamasına her bir harici dosya için kendi izinlerinin verilmesi gerekir. Neyse ki, bu tek seferlik bir prosedürdür.";
+"[AutoFill/Setup/footer]" = "Otomatik Doldurma, hâlihazırda ana PassPouch uygulamasında bulunan dosyalara otomatik olarak erişemez.\n\nNeden mi? Arka planda, sistem Otomatik Doldurma'yı PassPouch işleminden bağımsız, ayrı bir uygulama olarak kabul eder. Güvenlik sebebiyle, bu dosyaları o uygulamaya özel olarak bağlamazsanız uygulama harici dosyalara erişemez. Dolayısıyla sistem, uygulamanın yalnızca izin verdiğiniz birkaç dosyaya erişebilmesini garantiler.\n\nSonuç olarak hem Otomatik Doldurmaya hem de ana PassPouch uygulamasına her bir harici dosya için kendi izinlerinin verilmesi gerekir. Neyse ki, bu tek seferlik bir prosedürdür.";
 
 /* Must match Apple's translation, as found in iOS 18 Settings → General → AutoFill & Passwords. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/autofillFrom]" = "Otomatik Doldurma kaynağı:";
@@ -41,7 +41,7 @@
 "[AutoFill/Setup/UncheckKeychain/callToAction]" = "Anahtar Zinciri seçimini kaldır";
 
 /* Instruction to deselect another app in the settings [appName: String] */
-"[AutoFill/Setup/UncheckKeychain/message]" = "KeePassium'u varsayılan şifre yöneticiniz yapmak için \"%@\" seçimini kaldırın.";
+"[AutoFill/Setup/UncheckKeychain/message]" = "PassPouch'u varsayılan şifre yöneticiniz yapmak için \"%@\" seçimini kaldırın.";
 
 /* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
 "[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "Şuradaki parolaları ve geçiş anahtarlarını kullan:";

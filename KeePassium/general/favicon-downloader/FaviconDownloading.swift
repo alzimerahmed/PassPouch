@@ -127,7 +127,7 @@ extension FaviconDownloading {
 extension LString {
     public static let faviconDownloaderIntro = NSLocalizedString(
         "[Database/DownloadFavicons/intro]",
-        value: "KeePassium will contact websites associated with each entry.",
+        value: "PassPouch will contact websites associated with each entry.",
         comment: "Description of favicon downloader feature."
     )
     public static let faviconDownloaderWarning = NSLocalizedString(

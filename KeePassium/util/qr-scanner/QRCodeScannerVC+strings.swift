@@ -18,6 +18,6 @@ public extension LString {
     static let qrScannerCameraPermissionDescription = NSLocalizedString(
         "[QRCodeScanner/CameraPermission/description]",
         bundle: Bundle.main,
-        value: "KeePassium needs camera access to scan QR codes.",
+        value: "PassPouch needs camera access to scan QR codes.",
         comment: "Explanation why the app needs camera access permission.")
 }

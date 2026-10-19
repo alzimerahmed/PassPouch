@@ -1,4 +1,4 @@
-/* Menu item that shows info about KeePassium app */
+/* Menu item that shows info about PassPouch app */
 "[About/altTitle]" = "O aplikácii";
 
 /* Section in settings: icon for the app */
@@ -92,7 +92,7 @@
 "[Credits/Item/tpInappReceipt]" = "TPInAppReceipt by Pavel Tikhonenko";
 
 /* Item in the credits list */
-"[Credits/Item/translations]" = "Slovenský preklad KeePassium";
+"[Credits/Item/translations]" = "Slovenský preklad PassPouch";
 
 /* Item in the credits list */
 "[Credits/Item/twoFish]" = "Twofish implementation by Niels Ferguson";
@@ -179,7 +179,7 @@
 "[Database/Create/weakPasswordWarning]" = "Toto heslo sa dá ľahko uhádnuť. Skúste zadať silnejšie heslo.";
 
 /* Description of favicon downloader feature. */
-"[Database/DownloadFavicons/intro]" = "KeePassium bude kontaktovať webové stránky spojené s každým záznamom.";
+"[Database/DownloadFavicons/intro]" = "PassPouch bude kontaktovať webové stránky spojené s každým záznamom.";
 
 /* Description of favicon downloader feature. 'Doing this' refers to downloading favicons. */
 "[Database/DownloadFavicons/warning]" = "Ak to urobíte vo verejnej alebo monitorovanej sieti, môžete odhaliť zoznam webových lokalít, na ktorých máte vytvorený účet.";
@@ -248,7 +248,7 @@
 "[Onboarding/AppProtection/activate]" = "Zapnúť zámok";
 
 /* Text in the App Protection onboarding screen. */
-"[Onboarding/AppProtection/text1]" = "KeePassium je váš trezor. Ochrana aplikácie zaručuje, že ho môžete otvoriť len vy.";
+"[Onboarding/AppProtection/text1]" = "PassPouch je váš trezor. Ochrana aplikácie zaručuje, že ho môžete otvoriť len vy.";
 
 /* Title of the App Protection onboarding screen */
 "[Onboarding/AppProtection/title]" = "Iba pre vaše oči";
@@ -278,7 +278,7 @@
 "[Onboarding/DataEncryption/title]" = "Šifrovanie údajov";
 
 /* Text in the introductory onboarding screen. */
-"[Onboarding/Intro/text1]" = "KeePassium uchováva vaše heslá a ďalšie citlivé informácie bezpečne zašifrované.";
+"[Onboarding/Intro/text1]" = "PassPouch uchováva vaše heslá a ďalšie citlivé informácie bezpečne zašifrované.";
 
 /* Text in the introductory onboarding screen. */
 "[Onboarding/Intro/text2]" = "Nie sú tu žiadne reklamy ani sledovanie.";
@@ -293,7 +293,7 @@
 "[Onboarding/Intro/title]" = "Vitajte";
 
 /* Text in the Security intro screen */
-"[Onboarding/Security/text1]" = "Vaše informácie sú zašifrované v bezpečnej schránke (databáze). Bezpečnostné schránky sú uložené v trezore (KeePassium).";
+"[Onboarding/Security/text1]" = "Vaše informácie sú zašifrované v bezpečnej schránke (databáze). Bezpečnostné schránky sú uložené v trezore (PassPouch).";
 
 /* Text in the Security intro screen */
 "[Onboarding/Security/text2]" = "Trezor a bezpečnostné schránky majú rôzne kľúče a poznáte ich len vy.";
@@ -380,7 +380,7 @@
 "[ProtectedTextField] Show Password" = "Zobraziť heslo";
 
 /* Explanation why the app needs camera access permission. */
-"[QRCodeScanner/CameraPermission/description]" = "Na skenovanie QR kódov potrebuje aplikácia KeePassium prístup ku kamere.";
+"[QRCodeScanner/CameraPermission/description]" = "Na skenovanie QR kódov potrebuje aplikácia PassPouch prístup ku kamere.";
 
 /* Error message when the app cannot use the camera. */
 "[QRCodeScanner/Error/CameraBusy]" = "Kamera sa už používa.";
@@ -401,7 +401,7 @@
 "[QRCodeScanner/Info/callToAction]" = "Nasmerujte fotoaparát na QR kód.";
 
 /* Description of the Quick AutoFill feature. */
-"[QuickAutoFill/description]" = "Rýchle automatické dopĺňanie zobrazuje relevantné položky hneď vedľa poľa hesla bez otvárania KeePassium.";
+"[QuickAutoFill/description]" = "Rýchle automatické dopĺňanie zobrazuje relevantné položky hneď vedľa poľa hesla bez otvárania PassPouch.";
 
 /* Placeholder text for empty search results */
 "[Search/EmptyResult/title]" = "Nenašli sa žiadne výsledky";
@@ -419,7 +419,7 @@
 "[Settings/AppLoc/Activate/callToAction]" = "Zapnúť zámok";
 
 /* Description of `Activate app protection` call to action. */
-"[Settings/AppLock/Activate/description]" = "Chráňte KeePassium pred neoprávneným prístupom.";
+"[Settings/AppLock/Activate/description]" = "Chráňte PassPouch pred neoprávneným prístupom.";
 
 /* Description of biometric unlock settings */
 "[Settings/AppLock/Biometric/description]" = "Umožňuje biometrickú autentifikáciu ako rýchlu (ale menej bezpečnú) alternatívu ku kódu aplikácie.";
@@ -428,19 +428,19 @@
 "[Settings/AppLock/Biometric/title] Use %@" = "Používať %@";
 
 /* Explanation for the `Lock on App Launch` setting */
-"[Settings/AppLock/LockOnLaunch/description]" = "Zaisťuje uzamknutie aplikácie KeePassium po vynútenom zatvorení aplikácie alebo reštartovaní zariadenia.";
+"[Settings/AppLock/LockOnLaunch/description]" = "Zaisťuje uzamknutie aplikácie PassPouch po vynútenom zatvorení aplikácie alebo reštartovaní zariadenia.";
 
 /* Setting switch: whether to lock the app after it was terminated and relaunched. */
 "[Settings/AppLock/LockOnLaunch/title]" = "Zamknúť pri spustení aplikácie";
 
 /* Explanation for the `Lock on macOS Screen Lock` setting */
-"[Settings/AppLock/LockOnScreenLock/description]" = "Zabezpečuje, že KeePassium sa uzamkne, keď uzamknete svoj Mac.";
+"[Settings/AppLock/LockOnScreenLock/description]" = "Zabezpečuje, že PassPouch sa uzamkne, keď uzamknete svoj Mac.";
 
 /* Title of a yes/no setting: whether to lock app when computer screen is locked (see https://support.apple.com/en-gb/guide/mac-help/mchl8e8b6a34/mac) */
 "[Settings/AppLock/LockOnScreenLock/title]" = "Zamknúť pri uzamknutí obrazovky na macOS";
 
 /* Description of the `Lock on Wrong Passcode` setting */
-"[Settings/AppLock/LockOnWrongPasscode/description]" = "Ak zadáte nesprávny ochranný kód aplikácie, KeePassium uzavrie všetky databázy a vymaže všetky hlavné kľúče z kľúčenky.";
+"[Settings/AppLock/LockOnWrongPasscode/description]" = "Ak zadáte nesprávny ochranný kód aplikácie, PassPouch uzavrie všetky databázy a vymaže všetky hlavné kľúče z kľúčenky.";
 
 /* Title in the settings: whether to lock databases when user enters a wrong app protection passcode. */
 "[Settings/AppLock/LockOnWrongPasscode/title]" = "Uzamknúť pri nesprávnom kóde aplikácie";
@@ -497,7 +497,7 @@
 "[Settings/AutoFill/CopyOTP/title]" = "Kopírovať jednorazové heslo";
 
 /* Description of the 'Remember Selected Entries' setting. */
-"[Settings/AutoFill/RememberContext/description]" = "KeePassium si zapamätá, ktorý záznam ste vybrali pre každú webovú stránku, a potom ho automaticky navrhne.";
+"[Settings/AutoFill/RememberContext/description]" = "PassPouch si zapamätá, ktorý záznam ste vybrali pre každú webovú stránku, a potom ho automaticky navrhne.";
 
 /* Title of a yes/no setting: remember which entry was used for AutoFill on which website. */
 "[Settings/AutoFill/RememberContext/title]" = "Pamätať vybrané záznamy";
@@ -506,7 +506,7 @@
 "[Settings/AutoFill/Setup Guide/title]" = "Sprievodca nastavením automatického dopĺňania";
 
 /* No comment provided by engineer. */
-"[Settings/AutoFill/UnavailableInIntune/description]" = "Automatické doplňovanie nie je dostupné v KeePassium pre Intune.";
+"[Settings/AutoFill/UnavailableInIntune/description]" = "Automatické doplňovanie nie je dostupné v PassPouch pre Intune.";
 
 /* Description of the 'Fill-In Perfect Result Automatically' setting */
 "[Settings/AutoFill/UsePerfectMatch/description]" = "Keď bude nájdený iba jeden, presne zodpovedajúci záznam, tak sa tento záznam vloží automaticky.";
@@ -536,13 +536,13 @@
 "[Settings/Clipboard/title]" = "Schránka";
 
 /* Description of the 'Clipboard Timeout' setting. */
-"[Settings/ClipboardTimeout/description]" = "Keď niečo skopírujete, KeePassium po určitej dobe automaticky vyprázdni vašu schránku.";
+"[Settings/ClipboardTimeout/description]" = "Keď niečo skopírujete, PassPouch po určitej dobe automaticky vyprázdni vašu schránku.";
 
 /* An option in Settings. Will be shown as 'Clipboard Timeout: Never' */
 "[Settings/ClipboardTimeout/Never/title]" = "Nikdy";
 
 /* Description of the 'Make Backup Copies' setting */
-"[Settings/DatabaseBackup/Active/description]" = "KeePassium bude automaticky vytvárať zálohu pred každým uložením databázy.";
+"[Settings/DatabaseBackup/Active/description]" = "PassPouch bude automaticky vytvárať zálohu pred každým uložením databázy.";
 
 /* Title of a yes/no setting: whether to back up databases before saving them */
 "[Settings/DatabaseBackup/Active/title]" = "Vytvárať zálohy";
@@ -554,7 +554,7 @@
 "[Settings/DatabaseBackup/DeleteAll/title]" = "Vymazať VŠETKY zálohy? (%d)";
 
 /* Description of the 'Exclude Backup Files from System Backup' setting */
-"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "Určuje, či majú byť záložné databázy, vytvorené aplikáciou KeePassium, vylúčené pri zálohovaní na iCloud/iTunes. Platí pre všetky súčasné a budúce záložné súbory.";
+"[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]" = "Určuje, či majú byť záložné databázy, vytvorené aplikáciou PassPouch, vylúčené pri zálohovaní na iCloud/iTunes. Platí pre všetky súčasné a budúce záložné súbory.";
 
 /* Title of a yes/no setting: whether app's internal backup copies should be excluded from global system backup */
 "[Settings/DatabaseBackup/ExcludeFromSystemBackup/title]" = "Vynechať záložné súbory zo zálohy systému";
@@ -569,7 +569,7 @@
 "[Settings/DatabaseBackup/NoFiles/title]" = "Nenašli sa žiadne zálohy";
 
 /* Description of the `Periodic Cleanup` settings */
-"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "KeePassium môže automaticky vymazávať staré záložné súbory a uvoľniť tak miesto na vašom zariadení.";
+"[Settings/DatabaseBackup/PeriodicCleanup/description]" = "PassPouch môže automaticky vymazávať staré záložné súbory a uvoľniť tak miesto na vašom zariadení.";
 
 /* Settings section: automatic deletion of old backup files */
 "[Settings/DatabaseBackup/PeriodicCleanup/title]" = "Periodické vymazávanie";
@@ -626,7 +626,7 @@
 "[Settings/KeyFiles/title]" = "Súbory s kľúčom";
 
 /* Description of the 'Cache Derived Encryption Keys' setting */
-"[Settings/MasterKeys/CacheDerived/description]" = "Kľúče vo vyrovnávajúcej pamäti umožňujú aplikácii KeePassium preskočiť derivácie kľúčov a skenovanie YubiKey, kedykoľvek je to možné.";
+"[Settings/MasterKeys/CacheDerived/description]" = "Kľúče vo vyrovnávajúcej pamäti umožňujú aplikácii PassPouch preskočiť derivácie kľúčov a skenovanie YubiKey, kedykoľvek je to možné.";
 
 /* Action: clear/erase/delete stored master keys */
 "[Settings/MasterKeys/Clear/action]" = "Vymazať hlavné kľúče";
@@ -725,7 +725,7 @@
 "[Tags/UsageCount/title]" = "Počet použití";
 
 /* Call to action in What's New announcement */
-"[WhatsNew/Announcement/body]" = "Objavte nové funkcie a vylepšenia v programe KeePassium.";
+"[WhatsNew/Announcement/body]" = "Objavte nové funkcie a vylepšenia v programe PassPouch.";
 
 /* Button which opens the What's New screen. */
 "[WhatsNew/Announcement/button]" = "Novinky";
@@ -737,7 +737,7 @@
 "[WhatsNew/Feature/AppScopedConnections/title]" = "Bezpečnejší prístup do cloudu";
 
 /* Description of a feature highlight, a call to action. */
-"[WhatsNew/Feature/AutoFillWithMemory/description]" = "KeePassium si pamätá záznam, ktorý si vyberiete na každej webovej stránke.";
+"[WhatsNew/Feature/AutoFillWithMemory/description]" = "PassPouch si pamätá záznam, ktorý si vyberiete na každej webovej stránke.";
 
 /* Title of a feature highlight, a noun phrase. */
 "[WhatsNew/Feature/AutoFillWithMemory/title]" = "Inteligentnejšie automatické vyplňovanie";
@@ -764,5 +764,5 @@
 "[WhatsNew/FullChangelog/title]" = "Podrobný zoznam zmien";
 
 /* Full title for release highlights */
-"[WhatsNew/fullTitle]" = "Čo je nové v aplikácii KeePassium";
+"[WhatsNew/fullTitle]" = "Čo je nové v aplikácii PassPouch";
 

@@ -11,11 +11,11 @@
 "NSCameraUsageDescription" = "Приложению нужна камера для сканирования QR-кодов.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Использовать Face ID для доступа к KeePassium";
+"NSFaceIDUsageDescription" = "Использовать Face ID для доступа к PassPouch";
 
 /* Privacy - Photo Library Additions Usage Description */
-"NSPhotoLibraryAddUsageDescription" = "KeePassium нужно разрешение на сохранение файлов в медиатеке.";
+"NSPhotoLibraryAddUsageDescription" = "PassPouch нужно разрешение на сохранение файлов в медиатеке.";
 
 /* Privacy - Photo Library Usage Description */
-"NSPhotoLibraryUsageDescription" = "KeePassium нуждается в доступе к выбору изображений для своих значков и сканирования QR-кодов для настройки OTP.";
+"NSPhotoLibraryUsageDescription" = "PassPouch нуждается в доступе к выбору изображений для своих значков и сканирования QR-кодов для настройки OTP.";
 

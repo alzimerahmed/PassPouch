@@ -17,45 +17,45 @@ extension LString {
     public static let tipBoxTitle3 = NSLocalizedString(
         "[TipBox/title/3]",
         bundle: Bundle.framework,
-        value: "Support KeePassium",
+        value: "Support PassPouch",
         comment: "Call to action, title of the tip box/donation screen."
     )
 
     public static let tipBoxDescription1 = NSLocalizedString(
         "[TipBox/description/1]",
         bundle: Bundle.framework,
-        value: "Do you like KeePassium?",
+        value: "Do you like PassPouch?",
         comment: "Text in the Donations screen."
     )
     public static let tipBoxDescription2 = NSLocalizedString(
         "[TipBox/description/2]",
         bundle: Bundle.framework,
-        value: "KeePassium is a free open-source app. You trust it with your most sensitive information. There are no ads, no spying, no nonsense — we respect you.",
+        value: "PassPouch is a free open-source app. You trust it with your most sensitive information. There are no ads, no spying, no nonsense — we respect you.",
         comment: "Text in the Donations screen."
     )
     public static let tipBoxDescription3 = NSLocalizedString(
         "[TipBox/description/3]",
         bundle: Bundle.framework,
-        value: "Do you like KeePassium but don't need the premium features?",
+        value: "Do you like PassPouch but don't need the premium features?",
         comment: "Text in the Donations screen."
     )
 
     public static let tipBoxCallToAction1 = NSLocalizedString(
         "[TipBox/callToAction/1]",
         bundle: Bundle.framework,
-        value: "Help us make KeePassium better!",
+        value: "Help us make PassPouch better!",
         comment: "Call to action in the Donations screen."
     )
     public static let tipBoxCallToAction2 = NSLocalizedString(
         "[TipBox/callToAction/2]",
         bundle: Bundle.framework,
-        value: "Help us keep KeePassium shiny!",
+        value: "Help us keep PassPouch shiny!",
         comment: "Call to action in the Donations screen."
     )
     public static let tipBoxCallToAction3 = NSLocalizedString(
         "[TipBox/callToAction/3]",
         bundle: Bundle.framework,
-        value: "Help us keep KeePassium free!",
+        value: "Help us keep PassPouch free!",
         comment: "Call to action in the Donations screen. (free = gratis)"
     )
 

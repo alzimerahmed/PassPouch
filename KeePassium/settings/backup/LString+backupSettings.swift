@@ -20,7 +20,7 @@ extension LString {
         comment: "Title of a yes/no setting: whether to back up databases before saving them")
     public static let makeBackupCopiesDescription = NSLocalizedString(
         "[Settings/DatabaseBackup/Active/description]",
-        value: "Before saving a database, KeePassium will automatically make a copy, just in case.",
+        value: "Before saving a database, PassPouch will automatically make a copy, just in case.",
         comment: "Description of the 'Make Backup Copies' setting")
 
     public static let showBackupFilesDescription = NSLocalizedString(
@@ -38,7 +38,7 @@ extension LString {
         comment: "Title of a yes/no setting: whether app's internal backup copies should be excluded from global system backup")
     public static let excludeFromSystemBackupDescription = NSLocalizedString(
         "[Settings/DatabaseBackup/ExcludeFromSystemBackup/description]",
-        value: "Defines whether backup databases created by KeePassium should be excluded from iCloud/iTunes backup. Applies to all the existing and future backup files.",
+        value: "Defines whether backup databases created by PassPouch should be excluded from iCloud/iTunes backup. Applies to all the existing and future backup files.",
         comment: "Description of the 'Exclude Backup Files from System Backup' setting")
 
     public static let databaseBackupCleanupTitle = NSLocalizedString(
@@ -47,7 +47,7 @@ extension LString {
         comment: "Settings section: automatic deletion of old backup files")
     public static let databaseBackupCleanupDescription = NSLocalizedString(
         "[Settings/DatabaseBackup/PeriodicCleanup/description]",
-        value: "KeePassium can automatically delete old backup files to free up some storage space.",
+        value: "PassPouch can automatically delete old backup files to free up some storage space.",
         comment: "Description of the `Periodic Cleanup` settings")
     public static let databaseBackupKeepingDurationTitle = NSLocalizedString(
         "[Settings/DatabaseBackup/KeepingDuration/title]",

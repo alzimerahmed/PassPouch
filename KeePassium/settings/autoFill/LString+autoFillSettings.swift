@@ -23,12 +23,12 @@ extension LString {
         comment: "Description for the AutoFill setup instructions")
     public static let autoFillUnavailableInIntuneDescription = NSLocalizedString(
         "[Settings/AutoFill/UnavailableInIntune/description]",
-        value: "AutoFill is not available in KeePassium for Intune.",
+        value: "AutoFill is not available in PassPouch for Intune.",
         comment: "")
 
     public static let quickAutoFillDescription = NSLocalizedString(
         "[QuickAutoFill/description]",
-        value: "Quick AutoFill shows relevant entries right next to the password field, without opening KeePassium.",
+        value: "Quick AutoFill shows relevant entries right next to the password field, without opening PassPouch.",
         comment: "Description of the Quick AutoFill feature.")
 
     public static let automaticSearchTitle = NSLocalizedString(
@@ -63,7 +63,7 @@ extension LString {
         comment: "Title of a yes/no setting: remember which entry was used for AutoFill on which website.")
     public static let autoFillRememberContextDescription = NSLocalizedString(
         "[Settings/AutoFill/RememberContext/description]",
-        value: "KeePassium will remember which entry you select for each website and then suggest it automatically.",
+        value: "PassPouch will remember which entry you select for each website and then suggest it automatically.",
         comment: "Description of the 'Remember Selected Entries' setting.")
 
     public static let autoFillSearchScopeTitle = NSLocalizedString(

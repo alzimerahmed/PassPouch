@@ -25,7 +25,7 @@ class AppInfo {
     private static let nvb = loadInfo()
 
     private static func loadInfo() -> NameVersionBuild {
-        let appName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? "KeePassium"
+        let appName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? "PassPouch"
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0"
         let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "0"
         return NameVersionBuild(name: appName, version: appVersion, build: buildVersion)

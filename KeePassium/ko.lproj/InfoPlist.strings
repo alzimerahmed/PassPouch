@@ -11,7 +11,7 @@
 "NSCameraUsageDescription" = "QR 코드를 스캔하기 위해선 카메라 접근 권한이 필요합니다.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "KeePassium 잠금 해제에 Face ID 사용";
+"NSFaceIDUsageDescription" = "PassPouch 잠금 해제에 Face ID 사용";
 
 /* Privacy - Photo Library Additions Usage Description */
 "NSPhotoLibraryAddUsageDescription" = "사진 라이브러리에 파일을 내보내기 위한 권한이 필요합니다.";
