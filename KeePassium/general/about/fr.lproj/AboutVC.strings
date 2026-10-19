@@ -1,0 +1,24 @@
+/* Class = "UITableViewSection"; headerTitle = "Feedback"; ObjectID = "7bL-fQ-OUc"; Note = "Section: user feedback about the app"; */
+"7bL-fQ-OUc.headerTitle" = "Retour d'expérience";
+
+/* Class = "UILabel"; text = "Do you like what you see?"; ObjectID = "AMd-x7-PDa"; Note = "First part of the 'Do you like what you see? / Leave an App Store review.\""; */
+"AMd-x7-PDa.text" = "Aimez-vous ce que vous voyez ?";
+
+/* Class = "UITableViewSection"; headerTitle = "Privacy Policy"; ObjectID = "JbR-nf-D9o"; Note = "Section: privacy policy"; */
+"JbR-nf-D9o.headerTitle" = "Politique de confidentialité";
+
+/* Class = "UITableViewSection"; headerTitle = "Credits"; ObjectID = "muG-xI-muo"; Note = "Section: acknowledgements and thank-you notes"; */
+"muG-xI-muo.headerTitle" = "Crédits";
+
+/* Class = "UITableViewController"; title = "About"; ObjectID = "NLN-lQ-bh5"; */
+"NLN-lQ-bh5.title" = "À propos";
+
+/* Class = "UILabel"; text = "Contact Support"; ObjectID = "TOl-DA-gYc"; Note = "Action: contact us"; */
+"TOl-DA-gYc.text" = "Contactez l'assistance technique";
+
+/* Class = "UILabel"; text = "Leave an App Store review."; ObjectID = "uiw-Qh-pNp"; Note = "Second part of the 'Do you like what you see? / Leave an App Store review.\""; */
+"uiw-Qh-pNp.text" = "Laissez un avis sur l'App Store";
+
+/* Class = "UILabel"; text = "KeePassium"; ObjectID = "Wuj-Uw-baK"; */
+"Wuj-Uw-baK.text" = "KeePassium";
+

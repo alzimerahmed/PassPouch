@@ -1,0 +1,42 @@
+{
+  "originHash" : "2de0205983087a32442cab968f3ec78a4daeee33028d87ab915ddf1f4904ac7d",
+  "pins" : [
+    {
+      "identity" : "asn1swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/ASN1Swift",
+      "state" : {
+        "revision" : "b53bee03a942623db25afc5bfb80227b2cb3b425",
+        "version" : "1.2.4"
+      }
+    },
+    {
+      "identity" : "swiftcbor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/SwiftCBOR.git",
+      "state" : {
+        "branch" : "keepassium-156",
+        "revision" : "04ccff117f6549121d5721ec84fdf0162122b90e"
+      }
+    },
+    {
+      "identity" : "swiftdomainparser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/SwiftDomainParser",
+      "state" : {
+        "branch" : "keepassium",
+        "revision" : "17642aa186caca61ab008dc5a4ebda770d93033a"
+      }
+    },
+    {
+      "identity" : "tpinappreceipt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/TPInAppReceipt",
+      "state" : {
+        "branch" : "keepassium",
+        "revision" : "6630e3858f0d0a5803cede6f82afeaed5f5de7b6"
+      }
+    }
+  ],
+  "version" : 3
+}

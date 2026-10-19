@@ -1,0 +1,2043 @@
+/* Copyright notice */
+"[About/CopyrightAuthor]" = "©Andrei Popleteev";
+
+/* Suggestion/hint for available user action */
+"[Accessibility] Double tap to copy to clipboard" = "双击复制到剪贴板";
+
+/* Call to action: perform accessibilty `activate` action to listen to text/content. */
+"[Accessibility/activateToListen]" = "激活辅助功能以收听内容。";
+
+/* Accessibility notification for entries with attached files. */
+"[Accessibility/containsAttachments]" = "包含附件。";
+
+/* Accessibility notification for entries with a problematic passkey */
+"[Accessibility/containsIncompatiblePasskey]" = "包含与此设备不兼容的通行密钥。";
+
+/* Accessibility notification for entries with OTP codes. */
+"[Accessibility/containsOTP]" = "包含一次性密码。";
+
+/* Accessibility notification for entries with a passkey */
+"[Accessibility/containsPasskey]" = "包含一个通行密钥。";
+
+/* Action which resets the app as if it was just installed. */
+"[App/ResetEverything/action]" = "重置";
+
+/* Confirmation message before resetting the app to just-installed state. */
+"[App/ResetEverything/title]" = "是否重置应用？";
+
+/* Action/button to unlock the App Lock with passcode */
+"[AppLock] Unlock" = "解锁";
+
+/* Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt. */
+"[AppLock/Biometric/Hint] Unlock KeePassium" = "解锁 KeePassium";
+
+/* Action/button to switch from TouchID/FaceID prompt to manual input of the AppLock passcode. */
+"[AppLock/cancelBiometricAuth] Use Passcode" = "使用应用解锁密码";
+
+/* Action/button to modify the existing AppLock passcode. */
+"[AppLock/changePasscode]" = "修改应用解锁密码";
+
+/* Call to action in the passcode input dialog. */
+"[AppLock/EnterPasscode/callToAction]" = "解锁 KeePassium";
+
+/* Action: change keyboard type to enter alphanumeric passphrases */
+"[AppLock/Passcode/KeyboardType/switchAction] 123→ABC" = "123→ABC";
+
+/* Action: change keyboard type to enter PIN numbers */
+"[AppLock/Passcode/KeyboardType/switchAction] ABC→123" = "ABC→123";
+
+/* Type of keyboard to show for App Lock passcode: letters and digits. */
+"[AppLock/Passcode/KeyboardType/title] Alphanumeric" = "字母与数字";
+
+/* Type of keyboard to show for App Lock passcode: digits only (PIN code). */
+"[AppLock/Passcode/KeyboardType/title] Numeric" = "数字";
+
+/* Notification for business users when they set up too weak app protection passcode. */
+"[AppLock/Passcode/orgRequiresStonger]" = "您的组织需要更复杂的密码。";
+
+/* Hint/call to action about keyboard shortcut */
+"[AppLock/Passcode/pressEscForTouchID]" = "按Esc键使用Touch ID";
+
+/* Notification that the modified AppLock passcode has been saved. */
+"[AppLock/passcodeUpdated/title]" = "更新应用解锁密码成功";
+
+/* Action/button to save new or edited AppLock passcode. */
+"[AppLock/savePasscode]" = "保存应用解锁密码";
+
+/* Call to action in the passcode input dialog. */
+"[AppLock/SetupPasscode/callToAction]" = "保护 KeePassium 免受未经授权的访问";
+
+/* Message shown when AutoFill cannot automatically open the main app for upgrading to a premium version. */
+"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open KeePassium from your home screen." = "如果要升级，请从主屏幕右上角+号中, 手动打开升级接口。";
+
+/* Title of a message related to upgrading to the premium version */
+"[AutoFill/Premium/Upgrade/Manual/title] Premium Upgrade" = "升级高级版";
+
+/* Call to action / instruction on how to enable accessibility permission */
+"[AutoType/AccessibilityPrompt/callToAction]" = "打开“系统设置 → 隐私与安全 → 辅助功能”，并在那里启用 KeePassium。";
+
+/* Message explaining why accessibility permission is needed */
+"[AutoType/AccessibilityPrompt/message]" = "KeePassium 需要您的许可才能向其他应用发送密钥。";
+
+/* Title of a dialog asking user to provide a security permission */
+"[AutoType/AccessibilityPrompt/title]" = "KeePassium 需要您的许可";
+
+/* Action: send key presses to 'type in' entry data into another app */
+"[AutoType/action]" = "执行自动输入";
+
+/* Button to open system settings (accessibility, permissions, etc) */
+"[AutoType/Action/OpenSettings]" = "打开设置";
+
+/* Title for error when auto-type fails */
+"[AutoType/Error/Title]" = "自动输入失败";
+
+/* Name of biometric authentication method. Trademarked, do not translate unless Apple traslated it to your language. */
+"[BiometricAuthType] Face ID" = "Face ID";
+
+/* Name of biometric authentication method. Trademarked, do not translate unless Apple traslated it to your language. */
+"[BiometricAuthType] Touch ID" = "Touch ID";
+
+/* Error message when the challenge-response communication has been cancelled by the user. */
+"[ChallengeResponseError] cancelled" = "已被用户取消。";
+
+/* Error message when the hardware key is not plugged in. */
+"[ChallengeResponseError] keyNotConnected" = "硬件密钥未连接。";
+
+/* Error message when trying to use challenge-response hardware in AutoFill. */
+"[ChallengeResponseError] notAvailableInAutoFill" = "硬件密钥在自动填充中不可用。";
+
+/* Error message when trying to use challenge-response with a kdb database. */
+"[ChallengeResponseError] notSupportedByDatabaseFormat" = "硬件密钥不支持此数据库格式。";
+
+/* Error message when trying to use a hardware challenge-response key on unsupported device/iOS version. %@ will be the name of the hardware interface, such as `NFC` or `Lightning`. */
+"[ChallengeResponseError] notSupportedByDeviceOrSystem" = "此设备或 iOS 版本不支持硬件密钥 (%@)";
+
+/* Error message: the hardware key (or its slot) was not configured for challenge-response operations. */
+"[ChallengeResponseError] slotNotConfigured" = "硬件密钥没有为挑战响应配置。";
+
+/* Progress status */
+"[Cipher/Progress] Decrypting" = "解密中";
+
+/* Progress status */
+"[Cipher/Progress] Encrypting" = "加密中";
+
+/* Action copy some named value to clipboard. For example: `Copy Password`. [valueName: String] */
+"[Clipboard/Copy/namedValue]" = "复制 %@";
+
+/* Notification: an item has been copied to clipboard */
+"[Clipboard/Copy/notification]" = "已复制";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES decryption error (code %d)" = "AES 解密错误 (代码 %d)";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES encryption error (code %d)" = "AES 加密错误 (代码 %d)";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES initialization error (code %d)" = "AES 初始化错误 (代码 %d)";
+
+/* Error message about Argon2 hashing function. [errorCode: Int] */
+"[CryptoError] Argon2 hashing error (code %d)" = "Argon2 哈希错误 (代码 %d)";
+
+/* Error message about PKCS7 padding. [errorCode: Int] */
+"[CryptoError] Invalid data padding (code %d). File corrupt?" = "无效的数据填充(代码 %d)。文件损坏了吗?";
+
+/* Error message about key derivation function (KDF) parameters. [kdfName: String, paramName: String] */
+"[CryptoError] Invalid KDF parameter: %@ - %@. File corrupt?" = "无效的KDF参数: %1$@ - %2$@。文件损坏了吗?";
+
+/* Error message about random number generator. [errorCode: Int] */
+"[CryptoError] Random number generator error (code %d)" = "随机密码产生器错误(代码 %d)";
+
+/* Error message about Twofish cipher. [errorCode: Int] */
+"[CryptoError] Twofish cipher error (code %d)" = "Twofish 密码错误(代码 %d)";
+
+/* Warning when trying to add a random file as a database. [fileName: String] */
+"[Database/Add] Selected file \"%@\" does not look like a database." = "您选定的文件 \"%@\" 看起来不像是个数据库文件。";
+
+/* Action/button to create a new database */
+"[Database/Create/action] Create Database" = "创建新的数据库";
+
+/* Action: add/import an image as a custom icon */
+"[Database/CustomIcon/add]" = "添加自定义图标";
+
+/* Notification when some custom icons are about to be deleted [iconCount: Int] */
+"[Database/CustomIcon/All/count]" = "所有自定义图标：%d";
+
+/* Action: delete all custom icons */
+"[Database/CustomIcon/deleteAll]" = "全部删除";
+
+/* Action: delete unused icons */
+"[Database/CustomIcon/deleteUnused]" = "删除未使用的图标";
+
+/* Action: download icon of a website */
+"[Database/CustomIcon/DownloadFavicon/action]" = "下载图标";
+
+/* Action/button to download favicons of websites mentioned in selected entries. */
+"[Database/CustomIcon/DownloadFavicons/action]" = "下载图标";
+
+/* Report of favicon download results. */
+"[Database/CustomIcon/DownloadFavicons/stats]" = "处理条目: %1$d\n更新图标: %2$d";
+
+/* Status message: multiple website favicons are being downloaded */
+"[Database/CustomIcon/DownloadFavicons/status]" = "正在下载图标";
+
+/* Status message: a website favicon is being downloaded */
+"[Database/CustomIcon/DownloadOneFavicon/status]" = "正在下载图标";
+
+/* Notification when some custom icons are not used by any group or entry [iconCount: Int] */
+"[Database/CustomIcon/Unused/count]" = "找到未使用的图标： %d";
+
+/* Message to confirm deletion of a database file. (This deletes the file itself) */
+"[Database/Delete/Confirm/text] Delete database file?\n Make sure you have a backup." = "删除数据库文件?\n 请确保您有备份文件!";
+
+/* Action to modify database encryption settings. */
+"[Database/EncryptionSettings/Change/action]" = "更改加密设置";
+
+/* Parameter name in database encryption settings. Example: 'Encryption Algorithm: AES-256' */
+"[Database/EncryptionSettings/dataCipher]" = "加密算法";
+
+/* Parameter name in database encryption settings. Defines the number of times/iterations a calculation (transform) should be executed. Example: 'Transform Rounds: 100' */
+"[Database/EncryptionSettings/iterations]" = "迭代次数";
+
+/* Parameter name in database encryption settings. This is a term, see https://en.wikipedia.org/wiki/Key_derivation_function. Example: 'Key Derivation Function: Argon2' */
+"[Database/EncryptionSettings/kdf]" = "密匙演算函数";
+
+/* Parameter name in database encryption settings. Defines the amount of memory that should be used by an algorithm. Example: 'Memory Usage: 16 MB' */
+"[Database/EncryptionSettings/memory]" = "内存占用";
+
+/* Warning for too high value of the `Memory usage` parameter in database encryption settings. */
+"[Database/EncryptionSettings/memoryAutoFillWarning]" = "高内存占用可能使得此数据库与密码自动填充不兼容。";
+
+/* Action/button button in database encryption settings. Resets the settings to recommended values. */
+"[Database/EncryptionSettings/reset]" = "重置到推荐设置";
+
+/* Parameter name in database encryption settings. Defines the number of computations to run in parallel/simultaneously. Example: 'Parallelism: 2 threads' */
+"[Database/EncryptionSettings/threads]" = "并行";
+
+/* Title: database encryption settings. */
+"[Database/EncryptionSettings/title]" = "加密设置";
+
+/* Info message for entries that contain information for opening a different database. */
+"[Database/Entry/LinkedDatabase/message]" = "此条目指向其他数据库。";
+
+/* Notification message before database export. */
+"[Database/Export/PlainText/warning]" = "您的数据将导出为没有任何保护的纯文本文件。";
+
+/* Notification message about external changes to the loaded file. */
+"[Database/ExternalChange/notification]" = "数据库文件已更改。是否重新载入？";
+
+/* Status message: checking if currently loaded database is the latest version */
+"[Database/ExternalChange/Status/checkInProgress]" = "正在检查更改…";
+
+/* Status message: failed to check if currently loaded database is the latest version */
+"[Database/ExternalChange/Status/failed]" = "刷新失败";
+
+/* Status message: currently loaded database is the latest version */
+"[Database/ExternalChange/Status/upToDate]" = "最新";
+
+/* Info message when changing database file format. */
+"[Database/FormatVersion/Conversion/allDataPreserved]" = "您的所有数据都将被保存。";
+
+/* Error message when creating a new passkey. */
+"[Database/FormatVersion/PasskeysNotSupported]" = "当前数据库格式不支持通行密钥。";
+
+/* Info message when the app needs to change database file format. [oldFormat, newFormat: String] */
+"[Database/FormatVersion/Upgrade/text]" = "KeePassium 需要升级您的数据库文件格式 (从 %1$@ 到 %2$@)。您可能需要更新其他使用此数据库的应用。";
+
+/* Title of an info message when the app needs to change database file format. */
+"[Database/FormatVersion/Upgrade/title]" = "在继续前";
+
+/* Title of an icon collection: icons provided by the system */
+"[Database/IconSet/System/title]" = "系统";
+
+/* Status of a database item (entry or group) after it was edited. */
+"[Database/Item/Edited/state]" = "已编辑";
+
+/* Notification when user tries to copy data from KDBX to older KDB database. */
+"[Database/LesserTargetFormat/warning]" = "这是旧版的数据库格式，有些数据可能会丢失。";
+
+/* Placeholder shown when there are no database files available */
+"[Database/List/empty]" = "没有数据库文件";
+
+/* Call to action. 'Open' here is used as 'launch'. */
+"[Database/List/LocalMissing/callToAction]" = "打开应用";
+
+/* Recommendation for solving a problem with a list of files. */
+"[Database/List/LocalMissing/message]" = "如果未列出某些本地文件，请先启动 KeePassium 主应用。";
+
+/* Title of the database picker list */
+"[Database/List/title]" = "数据库";
+
+/* Error message */
+"[Database/Load/Error] Cannot find database file" = "找不到数据库文件";
+
+/* Error message */
+"[Database/Load/Error] Cannot find key file" = "找不到密钥文件";
+
+/* Error message */
+"[Database/Load/Error] Cannot open database file" = "无法打开数据库文件";
+
+/* Error message */
+"[Database/Load/Error] Cannot open key file" = "无法打开密钥文件";
+
+/* Error message, when the real file format is recognized. For example: 'Incorrect database format: JPEG.' */
+"[Database/Load/Error] Incorrect database format" = "不正确的数据库格式： %@";
+
+/* Error shown when both master password and key file are empty */
+"[Database/Load/Error] Please provide at least a password or a key file" = "请至少输入一个密码或者选择一个密钥文件";
+
+/* Error message */
+"[Database/Load/Error] Unrecognized database format" = "未知的数据库格式";
+
+/* Error message */
+"[Database/Load/Error/encryptedByIntune]" = "这个数据库受您企业 IT 条例和 Microsoft Intune 保护。";
+
+/* Message shown after we show a cached local database instead of the (unavailable) original database. */
+"[Database/Loading/FromCache/text]" = "数据库无法访问。\n这是其最新的本地副本。";
+
+/* Message shown if current database cannot be edited */
+"[Database/Loading/ReadOnly/text]" = "数据库为只读模式";
+
+/* Status message: loading a database */
+"[Database/Loading/Status] Loading..." = "载入中...";
+
+/* Action/button: change master key of a database. */
+"[Database/MasterKey/Change/action]" = "变更主密钥";
+
+/* Notification after changing database master key */
+"[Database/MasterKey/changed] Master key successfully changed" = "主密码修改成功";
+
+/* A warning shown when changing database password. Is preceded with `Remember your database password`. */
+"[Database/MasterKey/RememberYourPassword/text]" = "如果您忘记了它，您将无法访问您的数据。并且没有密码重置选项。";
+
+/* Imperative/recommendation: title of a warning when changing database password. */
+"[Database/MasterKey/RememberYourPassword/title]" = "请记住您的数据库密码";
+
+/* Glossary term: noun, a master key for encrypting the database */
+"[Database/MasterKey/title]" = "主密码";
+
+/* Title of database creation dialog */
+"[Database/New/title]" = "新建数据库";
+
+/* Action/button */
+"[Database/Open/action] Open Database" = "打开数据库";
+
+/* Action/button to lock current database (the next time, it will ask for the master key). */
+"[Database/Opened/action] Lock Database" = "锁定数据库";
+
+/* Action: lock database */
+"[Database/Opened/Warning/action] Close Database" = "关闭数据库";
+
+/* Action: ignore warnings and proceed to work with the database */
+"[Database/Opened/Warning/action] Ignore and Continue" = "忽略并继续";
+
+/* Status message: name of the app that was last to write/create the database file. [lastUsedAppName: String] */
+"[Database/Opened/Warning/lastEdited] Database was last edited by: %@" = "数据库最后由 %@ 编辑。";
+
+/* Title of a warning message, shown after opening a problematic database */
+"[Database/Opened/Warning/title] Your database is ready, but there was an issue." = "您的数据库已经准备就绪, 但还有点问题。";
+
+/* Title of a list with database-related actions (e.g. lock database, change master key, etc) */
+"[Database/Operations/title]" = "数据库操作";
+
+/* Error message about creation of a new passkey. */
+"[Database/Passkey/Error/UnsupportedAlgorithm/description]" = "不支持的通行密钥算法";
+
+/* Status message: preparing database print preview. */
+"[Database/Print/preparingPreview]" = "正在准备预览...";
+
+/* Progress status: finished loading database */
+"[Database/Progress] Done" = "完成";
+
+/* Progress status */
+"[Database/Progress] Loading key file..." = "载入密钥文件中...";
+
+/* Database loading/saving status: checking whether our database was modified from another device. */
+"[Database/Progress/checkingDatabaseForModifications]" = "正在检查数据库的修改…";
+
+/* Database loading status: fetching the database file from disk/cloud */
+"[Database/Progress/downloading]" = "加载数据库文件...";
+
+/* Database saving status: making a local backup copy of the database */
+"[Database/Progress/makingDatabaseBackup]" = "正在生成备份副本...";
+
+/* Progress status */
+"[Database/Progress/resolving]" = "正在联系存储提供商...";
+
+/* Database loading/saving status: replacing field references with their values */
+"[Database/Progress/resolvingFieldReferences]" = "正在解析字段引用…";
+
+/* Database saving status: deciding how to handle conflicting changes. */
+"[Database/Progress/resolvingSyncConflict]" = "正在解决同步冲突…";
+
+/* Database saving status */
+"[Database/Progress/writingDatabaseFile]" = "正在写入数据库文件…";
+
+/* Suggested solution/call to action when intermediate sync app fails. */
+"[Database/RecommendRemote/callToAction]" = "尝试直接通过 KeePassium 连接到您的远程存储。";
+
+/* Action/button */
+"[Database/Reload/action]" = "重新载入数据库";
+
+/* Message to confirm removal of database file from the app. (This keeps the file, but removes its reference from the app.) */
+"[Database/Remove/Confirm/text] Remove database from the list?\n The file will remain intact and you can add it again later." = "从列表中删除数据库?\n 不会对文件进行更改或删除, 您可以在稍后添加回来。";
+
+/* Action/button to save the current database. */
+"[Database/Save/action] Save Database" = "保存数据库";
+
+/* Action/button to save file to a remote server. */
+"[Database/SaveToServer/action]" = "保存到服务器";
+
+/* Status message: finished saving a database */
+"[Database/Saving/Status] Done" = "完成";
+
+/* Status message: saving a database */
+"[Database/Saving/Status] Saving..." = "正在保存...";
+
+/* File access parameter. Will be shown as 'Consider File Unreachable: Immediately' */
+"[Database/Settings/ConsiderFileUnreachable/Immediately]" = "立刻";
+
+/* File settings parameter: time after which file will be considered unreachable. Example: `Consider File Unreachable: in 10 seconds`.) */
+"[Database/Settings/ConsiderFileUnreachable/title]" = "无法访问文件";
+
+/* File settings parameter: what to do when file was changed by another app/device. (For example: `Database Modified Externally: Don't check`) */
+"[Database/Settings/ExternalChanges/dontCheck]" = "不检查";
+
+/* File settings parameter: what to do when file was changed by another app/device. (For example: `Database Modified Externally: Notify`) */
+"[Database/Settings/ExternalChanges/notify]" = "通知";
+
+/* File settings parameter: what to do when file was changed by another app/device. (For example: `Database Modified Externally: Reload Automatically`) */
+"[Database/Settings/ExternalChanges/reload]" = "自动重新加载";
+
+/* File settings parameter: what to do when file was changed by another app/device. (For example: `Database Modified Externally: Notify`) */
+"[Database/Settings/ExternalChanges/title]" = "外部修改的数据库";
+
+/* Title: what to do when a cloud-stored file cannot be loaded. (For example: `If File is Unreachable: Re-add File`.) */
+"[Database/Settings/FallbackStrategy/ReAddFile/title]" = "重新添加文件";
+
+/* Title: what to do when (remote) file cannot be loaded. (For example: `If File is Unreachable: Show Error`.) */
+"[Database/Settings/FallbackStrategy/ShowError/title]" = "显示错误";
+
+/* File settings parameter: what to do when (remote) file cannot be loaded. (For example: `If File is Unreachable: Use Local Copy`.) */
+"[Database/Settings/FallbackStrategy/title]" = "如果文件无法访问";
+
+/* Title: what to do when (remote) file cannot be loaded. (For example: `If File is Unreachable: Use Local Copy`.) */
+"[Database/Settings/FallbackStrategy/UseCache/title]" = "使用本地副本";
+
+/* Title of settings section (read-only, backup-able, etc) */
+"[Database/Settings/FileAccess/title]" = "文件权限";
+
+/* File setting title, whether the file can be modified (yes/no). */
+"[Database/Settings/ReadOnly/title]" = "只读";
+
+/* Title of database-related settings screen */
+"[Database/Settings/title]" = "数据库设置";
+
+/* Action/button to switch from current to some other database. */
+"[Database/Switch/action]" = "切换数据库";
+
+/* Explanation of the database sync conflict `Cancel` option. */
+"[Database/SyncConflict/Cancel/description]" = "取消保存，保留目标文件不变。";
+
+/* Title: the current (on-server) database version in case of sync conflict. */
+"[Database/SyncConflict/currentVersion]" = "当前版本";
+
+/* Message shown in case of database sync conflict. */
+"[Database/SyncConflict/description]" = "数据库自从上次在 KeePassium 中加载后已经发生改变。";
+
+/* Title: the loaded (on-device) database version in case of sync conflict. */
+"[Database/SyncConflict/loadedVersion]" = "加载版本";
+
+/* Action: combine changes in two conflicting databases. */
+"[Database/SyncConflict/Merge/action]" = "合并";
+
+/* Explanation of the database sync conflict `Merge` option. */
+"[Database/SyncConflict/Merge/description]" = "保存前合并更改。";
+
+/* Explanation of the database sync conflict `Overwrite` option. */
+"[Database/SyncConflict/Overwrite/description]" = "用本地版本覆盖目标文件。";
+
+/* Explanation of the database sync conflict `Save as` option. */
+"[Database/SyncConflict/SaveAs/description]" = "保存更改到另一个文件。";
+
+/* Title of a message shown when saving to a database that has already been modified elsewhere. */
+"[Database/SyncConflict/title]" = "同步出现冲突";
+
+/* Error message */
+"[Database/Unlock/Error] Failed to open key file" = "无法打开密钥文件";
+
+/* Error message */
+"[Database/Unlock/Error] Password and key file are both empty." = "密码和密钥都是空的。";
+
+/* Action: load a local (on-device) copy of a remote database */
+"[Database/Unlock/UseFallback/action]" = "使用本地副本";
+
+/* Message shown when user enters an invalid database password */
+"[Database/Unlock/wrongPassword/question]" = "忘记密码？";
+
+/* Notification message */
+"[Database/UnsavedChanges/autoFillCrashed]" = "由于技术限制，自动填充无法保存一些更改。";
+
+/* Notification message */
+"[Database/UnsavedChanges/cannotModifyYet]" = "不幸的是，自动填充还不能修改大型数据库。我们正在努力解决此问题。";
+
+/* Notification message */
+"[Database/UnsavedChanges/couldNotApply]" = "一些待处理的更改无法自动应用；最近的修改可能已丢失。";
+
+/* Call to action shown in AutoFill module. */
+"[Database/UnsavedChanges/OpenAppCallToAction]" = "若要保存更改，请打开 KeePassium 主程序。";
+
+/* Notification message about a problem with unsaved/pending changes. */
+"[Database/UnsavedChanges/Problematic/info]" = "一些待处理的更改涉及缺失的条目或群组。KeePassium 会在一个单独的群组中创建这些缺失的项目，并在那里应用更改。";
+
+/* Title of a group where problematic pending changes are saved. %@ is the date of recovery. */
+"[Database/UnsavedChanges/RecoveredEntriesGroup/name]" = "恢复的更改 (%@)";
+
+/* Action/button to save accummulated modifications */
+"[Database/UnsavedChanges/saveAction]" = "保存更改";
+
+/* Notification message */
+"[Database/UnsavedChanges/someDatabases]" = "一个或多个数据库在自动填充中有未保存的更改。";
+
+/* Notification message */
+"[Database/UnsavedChanges/thisDatabase]" = "此数据库在自动填充中有未保存的更改。";
+
+/* Title: there are temporary changes to be saved */
+"[Database/UnsavedChanges/title]" = "未保存的更改";
+
+/* Error message */
+"[Database1/FormatError] Database file is corrupted." = "数据库文件损毁。";
+
+/* Error message [fieldName: String] */
+"[Database1/FormatError] Error parsing field %@. Corrupted database file?" = "解析 %@ 字段错误。数据库文件损坏?";
+
+/* Error message */
+"[Database1/FormatError] Found an entry outside any group. Corrupted DB file?" = "在群组外找到条目。数据库文件损坏?";
+
+/* Error message */
+"[Database1/FormatError] Unexpected end of file. Corrupted database file?" = "文件意外的结束。数据库文件损坏?";
+
+/* Error message when reading database header */
+"[Database1/Header1/Error] Header reading error. DB file corrupt?" = "头部讯息加载错误。数据库文件损坏?";
+
+/* Error message. [flagsHexString: String] */
+"[Database1/Header1/Error] Unsupported cipher. (Code: %@)" = "不支持的密码。(代码:%@)";
+
+/* Error message when opening a database. [version: String] */
+"[Database1/Header1/Error] Unsupported database format version: %@." = "不支持的数据库格式版本:%@。";
+
+/* Error message when opening a database */
+"[Database1/Header1/Error] Wrong file signature. Not a KeePass database?" = "错误的文件签名。不是一个KeePass数据库?";
+
+/* Status message: collecting database items into a single package */
+"[Database1/Progress] Packing the content" = "打包内容";
+
+/* Status message: processing the content of a database */
+"[Database1/Progress] Parsing content" = "解析内容";
+
+/* Name of a group which contains deleted entries */
+"[Database2/backupGroupName] Recycle Bin" = "回收站";
+
+/* Error message. Parsing refers to the analysis/understanding of file content. [reason: String] */
+"[Database2/FormatError] Cannot parse database. %@" = "无法解析数据库。%@";
+
+/* Error message [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (block %d has negative size)" = "数据库文件损坏(区块 %d 具有负大小)";
+
+/* Error message: hash(checksum) of a data block is wrong. [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (hash mismatch in block %d)" = "数据库文件损坏(区块 %d 哈希值不匹配)";
+
+/* Error message: HMAC value (kind of checksum) of a data block is wrong. [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (HMAC mismatch in block %d)" = "数据库文件损坏(区块 %d HMAC值不匹配)";
+
+/* Error message about Gzip compression algorithm. [reason: String] */
+"[Database2/FormatError] Gzip error: %@" = "Gzip 错误: %@";
+
+/* Error message: wrong ID of a data block */
+"[Database2/FormatError] Unexpected block ID." = "意外的区块ID。";
+
+/* Error message */
+"[Database2/FormatError] Unexpected end of file. Corrupted file?" = "文件意外的结束。文件损坏?";
+
+/* Error message when saving a database. [reason: String] */
+"[Database2/Header2/Error] Failed to uncompress attachment data: %@" = "解压缩附件的数据失败:%@";
+
+/* Error message, with the name of problematic field. [fieldName: String] */
+"[Database2/Header2/Error] Header field %@ is corrupted." = "标头字段 %@ 已损坏。";
+
+/* Error message */
+"[Database2/Header2/Error] Header hash mismatch. DB file corrupt?" = "标头哈希值不匹配。数据库文件损坏?";
+
+/* Error message. HMAC = https://en.wikipedia.org/wiki/HMAC */
+"[Database2/Header2/Error] Header HMAC mismatch. DB file corrupt?" = "标头 HMAC 不匹配。数据库文件损坏?";
+
+/* Error message when reading database header */
+"[Database2/Header2/Error] Header reading error. DB file corrupt?" = "头部讯息加载错误。数据库文件损坏?";
+
+/* Error message when opening a database */
+"[Database2/Header2/Error] Unknown compression algorithm." = "未知的压缩算法。";
+
+/* Error message. [uuidHexString: String] */
+"[Database2/Header2/Error] Unsupported data cipher: %@" = "不支持的数据密码: %@";
+
+/* Error message when opening a database. [version: String] */
+"[Database2/Header2/Error] Unsupported database format version: %@." = "不支持的数据库格式版本:%@。";
+
+/* Error message when opening a database. [id: UInt32] */
+"[Database2/Header2/Error] Unsupported inner stream cipher (ID %d)" = "不支持的内部数据流密码(ID %d)";
+
+/* Error message about Key Derivation Function. [uuidString: String] */
+"[Database2/Header2/Error] Unsupported KDF: %@" = "不支持的 KDF:%@";
+
+/* Error message when opening a database */
+"[Database2/Header2/Error] Wrong file signature. Not a KeePass database?" = "错误的文件签名。不是一个KeePass数据库?";
+
+/* Error message about Gzip compression algorithm. [errorMessage: String] */
+"[Database2/Loading/Error] Error unpacking database: %@" = "解压缩数据库时出错: %@";
+
+/* A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String] */
+"[Database2/Loading/Warning/missingBinaries]" = "某些条目的附件缺少数据, 这是数据库早期损坏的迹象，最有可能是上次使用的应用程序(%1$@)。KeePassium将保留空的附件，但无法恢复它们。您应该从备份副本还原数据库。 \n\n缺少附件：%2$@";
+
+/* A warning about nameless attachments, shown after loading the database. [listOfEntryNames: String] */
+"[Database2/Loading/Warning/namelessAttachments]" = "有些条目有附件没有名字。这是数据库早期损坏的迹象。\n\n 请查看以下条目中的附件(及其历史记录)：\n%@";
+
+/* A warning about misformatted custom fields after loading the database. [entryPaths: String] */
+"[Database2/Loading/Warning/namelessCustomFields]" = "某些条目具有空名称的自定义字段。这是数据库早期损坏的迹象。请检查以下条目：\n\n%@";
+
+/* A warning about unused attachments after loading the database. [lastUsedAppName: String] */
+"[Database2/Loading/Warning/unusedAttachments]" = "数据库包含一些未在任何条目中使用的附件。最有可能的是，它们已被上次使用的应用程序(%@) 遗忘。但是，这也可能是数据库早期损坏的迹象。在更改任何内容之前,\n请确保数据库已经备份。";
+
+/* Progress bar status */
+"[Database2/Progress] Loading database" = "加载数据库";
+
+/* Progress bar status */
+"[Database2/Progress] Reading database content" = "读取数据库内容";
+
+/* Progress bar status */
+"[Database2/Progress] Writing encrypted blocks" = "写入加密区块";
+
+/* Progress bar status: un-zipping the database content */
+"[Database2/Progress/decompressing]" = "解压缩数据库";
+
+/* Progress bar status */
+"[Database2/Progress/integrityCheck]" = "正在检查完整性";
+
+/* Progress bar status: parsing decrypted XML content */
+"[Database2/Progress/parsingXML]" = "正在解析数据库";
+
+/* Error message while saving a database. [errorDescription: String] */
+"[Database2/Saving/Error] Data compression error: %@" = "数据压缩错误: %@";
+
+/* Error message while saving a database. [errorDescription: String] */
+"[Database2/Saving/Error] Encryption error: %@" = "加密错误: %@";
+
+/* Error message about XML parsing. [value: String, tag: String] */
+"[Database2/Xml2/ParsingError] Malformed value '%@' in %@" = "%2$@ 中的值 %1$@ 错误";
+
+/* Error message about XML parsing. [tag: String] */
+"[Database2/Xml2/ParsingError] Nil value in %@" = "在%@中找到\"Nil\"值";
+
+/* Error message about XML parsing. [actualTag: String] */
+"[Database2/Xml2/ParsingError] Unexpected tag '%@'" = "意外的标签 '%@'";
+
+/* Error message about XML parsing. [actualTag: String, expectedTag: String] */
+"[Database2/Xml2/ParsingError] Unexpected tag '%@' (instead of '%@')" = "'%1$@'标签错误(而不是'%2$@')";
+
+/* Generic error while parsing XML. [errorDetails: String] */
+"[Database2/Xml2/ParsingError] XML error: %@" = "XML 数据错误:%@";
+
+/* Error message while opening a database */
+"[DatabaseError] Cannot open database" = "数据库无法开启";
+
+/* Error message while saving a database */
+"[DatabaseError] Cannot save database" = "数据库保存错误";
+
+/* Error message: user provided a wrong master key for decryption. */
+"[DatabaseError] Invalid password or key file" = "错误的密码或者密钥文件";
+
+/* Title of the diagnostic info screen */
+"[DiagLog/title]" = "诊断日志";
+
+/* Notification/confirmation message */
+"[Diagnostics] Diagnostic log has been copied to clipboard." = "诊断日志复制到剪贴板成功。";
+
+/* Action: select a different icon for an item */
+"[EditEntry/Icon/change]" = "变更图示";
+
+/* Action: choose a username from a list */
+"[EditEntry/UserName/choose]" = "选择";
+
+/* Action/button to add a file to entry attachments */
+"[Entry/Attachment/add]" = "新增文件";
+
+/* Action/button to pick a file from a list */
+"[Entry/Attachment/chooseFile]" = "选择文件";
+
+/* Action/button to select an (existing) photo from Photo Library */
+"[Entry/Attachment/choosePhoto]" = "选择照片";
+
+/* Default name for a photo attachment */
+"[Entry/Attachment/Photo/defaultName]" = "照片";
+
+/* Action/button to take a new photo from camera */
+"[Entry/Attachment/takePhoto]" = "拍摄照片";
+
+/* Action to preview one or several attached documents or images */
+"[Entry/Attachments/preview]" = "预览";
+
+/* Action/button to create a new entry in the current group */
+"[Entry/Create/action] Create Entry" = "创建新条目";
+
+/* Action/button to modify an entry */
+"[Entry/Edit/action]" = "编辑条目";
+
+/* Default name of a newly created entry field */
+"[Entry/Edit/CreateField/defaultName] Field Name" = "域名";
+
+/* Action/button to add a new field to the entry */
+"[Entry/Field/Add/action]" = "添加字段";
+
+/* On/off state: whether to show full-size or compact menu */
+"[Entry/Field/CompactMenu/title]" = "紧凑视图";
+
+/* Notification: a reference to an entry field has been copied to clipboard */
+"[Entry/Field/CopyReference/acknowledgement]" = "字段参考已复制到剪贴板";
+
+/* Action: copy a reference to the selected entry field to clipboard */
+"[Entry/Field/CopyReference/action]" = "复制字段引用";
+
+/* Title for a generic user-defined entry field. */
+"[Entry/Field/Custom/title]" = "自定义字段";
+
+/* Action: display text using large font */
+"[Entry/Field/LargeType/action]" = "以大号字体显示";
+
+/* Name of an entry field */
+"[Entry/Field/name] Icon" = "图标";
+
+/* Name of an entry field */
+"[Entry/Field/name] Notes" = "备注";
+
+/* Title of an entry field */
+"[Entry/Field/name] Passkey" = "通行密钥";
+
+/* Name of an entry field */
+"[Entry/Field/name] Password" = "密码";
+
+/* Name of an entry field */
+"[Entry/Field/name] Title" = "标题";
+
+/* Name of an entry field */
+"[Entry/Field/name] URL" = "网址";
+
+/* Name of an entry field */
+"[Entry/Field/name] User Name" = "用户名称";
+
+/* Title of a setting: whether the entry's field is protected (shown as asterisks). */
+"[Entry/Field/Protected/title]" = "受保护字段";
+
+/* Action: display text using QR code */
+"[Entry/Field/QRCode/action]" = "显示为二维码";
+
+/* Name of an entry field */
+"[Entry/Field/tags] Tags" = "标签";
+
+/* Title of an alternative URL, with a number [number: String] */
+"[Entry/Field/URL/Extra/title]" = "URL (%d)";
+
+/* Status message: loading file to be attached to an entry */
+"[Entry/Files/Add] Loading attachment file" = "加载附件";
+
+/* Title of a list with frequently used entry fields. */
+"[Entry/FrequentlyUsedFields/title]" = "常用";
+
+/* Title of a field with entry creation date and time */
+"[Entry/History] Creation Date" = "建立时间";
+
+/* Title of a field with date and time when the entry will no longer be valid. 'Never' is also a possible value */
+"[Entry/History] Expiry Date" = "到期日期";
+
+/* Title of a field with date and time when the entry was last accessed/viewed */
+"[Entry/History] Last Access Date" = "上次访问时间";
+
+/* Title of a field with entry's last modification date and time */
+"[Entry/History] Last Modification Date" = "最后修改日期";
+
+/* Title of a field with entry's modification date and time */
+"[Entry/History] Modification Date" = "修改日期";
+
+/* Title of a list with previous versions/revisions of an entry. */
+"[Entry/History] Previous Versions" = "之前的版本";
+
+/* Expiry Date of an entry which does not expire. */
+"[Entry/History/ExpiryDate] Never" = "永不";
+
+/* Default title of a new entry */
+"[Entry/New/defaultTitle] New Entry" = "新条目";
+
+/* Glossary term: noun, an entry in database. */
+"[Entry/title]" = "条目";
+
+/* Warning shown when opening files from Recycle Bin location. Translation of 'Recently Deleted' should match that in the Files app. [fileName: String] */
+"[File/In Trash/warning]" = "'%@'位于“最近删除”，可能很快被删除。要保存您的数据，请移动文件到一个永久的位置。";
+
+/* A suggestion shown after specific file errors (either databases or key files). */
+"[File/PermissionDenied] Try to remove the file from the app, then add it again." = "尝试从应用中删除该文件，然后重新添加它。";
+
+/* Action: re-add (a broken) database or key file to the app. */
+"[File/Re-add/title]" = "再次添加文件";
+
+/* Notification when user opens an in-app backup database. */
+"[File/TemporaryBackup/warning]" = "这是一个临时备份数据库。它可以在没有警告的情况下自动删除。不要使用它作为您的主数据库。";
+
+/* Error message: storage provider app was logged out or uninstalled. */
+"[FileAccessError/FileProvider/NotFound/generic]" = "存储提供商不可用。请检查是否已安装并登录到您的帐户。";
+
+/* Error message: storage provider app was logged out or uninstalled [fileProviderName: String]. */
+"[FileAccessError/FileProvider/NotFound/other]" = "%@ 不可用。请检查它是否已安装并登录到您的帐户。";
+
+/* Error message: the required network drive is not connected. */
+"[FileAccessError/FileProvider/NotFound/smbShare]" = "网络存储已断开连接。";
+
+/* Error message: there is no USB drive connected to the device. */
+"[FileAccessError/FileProvider/NotFound/usbDrive]" = "USB驱动器已断开连接。";
+
+/* Error message shown when there's internal inconsistency in KeePassium. */
+"[FileAccessError/internalError]" = "KeePassium内部错误，请告诉我们。";
+
+/* Error message: organization's IT administrator has forbidden access to a data storage location. */
+"[FileAccessError/ManagedAccessDenied/title]" = "此存储空间的访问权限被您的组织禁用。";
+
+/* Error message: network access is forbidden by system or app settings. */
+"[FileAccessError/NetworkAccessDenied/generic]" = "网络访问已被屏蔽。";
+
+/* Error message: storage provider app (e.g. Google Drive) does not respond to requests. */
+"[FileAccessError/NoResponse/genericFileProvider]" = "存储提供商没有响应。";
+
+/* Error message: file provider does not respond to requests. For example: `Google Drive does not respond.` */
+"[FileAccessError/NoResponse/knownFileProvider]" = "%@没有响应。";
+
+/* Error message: file provider does not support write operations. For example: `Cannot save file (OneDrive)` */
+"[FileAccessError/NoWritePermission/title]" = "无法保存文件 （%@）";
+
+/* Explanation of a file writing error */
+"[FileAccessError/OneDriveReadOnly/reason]" = "微软最近将 OneDrive 与 iOS 档案的整合设定为仅读模式。";
+
+/* Suggestion for error recovery */
+"[FileAccessError/OneDriveReadOnly/recoverySuggestion]" = "使用导出选项将文件保存到其他位置。";
+
+/* Error message for file with an expired access permission [fileName: String]. */
+"[FileAccessError/PermissionRequired/reason]" = "KeePassium 需要您的权限访问 '%@'。";
+
+/* Action/button for error recovery */
+"[FileAccessError/PermissionRequired/recoveryAction]" = "再次选择文件以访问";
+
+/* Error message: storage provider app (e.g. Google Drive) does not respond to requests (quickly enough). */
+"[FileAccessError/Timeout/genericFileProvider]" = "存储提供商没有响应。";
+
+/* Error message: file provider does not respond to requests (quickly enough). For example: `Google Drive does not respond` */
+"[FileAccessError/Timeout/knownFileProvider]" = "%@没有响应。";
+
+/* Section header for attributes of a file (e.g. hidden, excluded from backup, etc) */
+"[FileInfo/Attributes/header]" = "文件属性";
+
+/* Title of a setting: is the file hidden */
+"[FileInfo/Attributes/Hidden/title]" = "隐藏";
+
+/* Warning message for 'hidden' files. */
+"[FileInfo/Attributes/Hidden/warning]" = "对于普通用户来说，隐藏文件的可见度较低，但并不能提高数据的安全性。";
+
+/* Section header: file backup settings */
+"[FileInfo/Backup/header]" = "备份";
+
+/* Error message shown when the user tries to change file attributes (such as creation/modification date, backup flag, etc) */
+"[FileInfo/Error/failed to change attributes]" = "更新文件属性失败。";
+
+/* Field title */
+"[FileInfo/Field/title] Creation Date" = "建立时间";
+
+/* Field title */
+"[FileInfo/Field/title] File Location" = "文件位置";
+
+/* Field title */
+"[FileInfo/Field/title] File Name" = "文件名";
+
+/* Field title */
+"[FileInfo/Field/title] File Size" = "文件大小";
+
+/* Field title */
+"[FileInfo/Field/title] Last Modification Date" = "最后修改日期";
+
+/* Title of a field with an error message */
+"[FileInfo/Field/valueError] Error" = "错误";
+
+/* Title of a setting: is the file exluded from iCloud/iTunes backup. For example: `Exclude From Backup: <Yes>` */
+"[FileInfo/isExcludedFromBackup/title]" = "从 iCloud/iTunes 中排除备份";
+
+/* Title of a dialog with file details (name, size, dates) */
+"[FileInfo/title]" = "文件信息";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to delete file. Reason: %@" = "删除文件错误。原因:%@";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to import file. Reason: %@" = "文件导入失败。原因: %@";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to open file. Reason: %@" = "文件打开失败。原因: %@";
+
+/* Error message: tried to import URL which does not point to a file */
+"[FileKeeper] Not a file URL" = "不是一个文件网址";
+
+/* Localized name of the storage service: Amerigo (https://www.amerigo-app.com) */
+"[FileProvider/Amerigo/name]" = "Amerigo";
+
+/* Localized name of the storage service: Box (https://box.com) */
+"[FileProvider/Box/name]" = "Box";
+
+/* Localized name of the storage service: Boxcryptor (https://boxcryptor.com) */
+"[FileProvider/Boxcryptor/name]" = "Boxcryptor";
+
+/* Localized name of the storage service: Cryptomator (https://cryptomator.org) */
+"[FileProvider/Cryptomator/name]" = "Cryptomator";
+
+/* Localized name of the storage service: Dropbox (https://dropbox.com) */
+"[FileProvider/Dropbox/name]" = "Dropbox";
+
+/* Localized name of the storage service: FE File Explorer (https://apps.apple.com/app/fe-file-explorer-file-manager/id510282524) */
+"[FileProvider/FE File Explorer/name]" = "FE File Explorer";
+
+/* Localized name of the storage service: Google Drive (https://drive.google.com) */
+"[FileProvider/Google Drive/name]" = "Google Drive";
+
+/* Localized name of the storage service iCloud Drive (https://icloud.com/iclouddrive) */
+"[FileProvider/iCloud Drive/name]" = "iCloud 云盘";
+
+/* Localized name of the storage service: MagentaCLOUD (https://www.telekom.de/zubuchoptionen/magenta-cloud) */
+"[FileProvider/MagentaCloud/name]" = "MagentaCLOUD";
+
+/* Localized name of the storage service: MEGA (https://mega.nz) */
+"[FileProvider/Mega.nz/name]" = "MEGA.nz";
+
+/* Localized name of the storage service: Nextcloud (https://nextcloud.com) */
+"[FileProvider/Nextcloud/name]" = "Nextcloud";
+
+/* Localized name of the local on-device storage, as shown in the Files app. */
+"[FileProvider/On My iPad/name]" = "在我的 iPad 上";
+
+/* Localized name of the local on-device storage, as shown in the Files app. */
+"[FileProvider/On My iPhone/name]" = "在我的 iPhone 上";
+
+/* Localized name of the storage service: OneDrive (https://onedrive.com) */
+"[FileProvider/OneDrive/name]" = "OneDrive";
+
+/* Localized name of the storage service: ownCloud (https://owncloud.com) */
+"[FileProvider/ownCloud/name]" = "ownCloud";
+
+/* Localized name of the storage service: pCloud (https://pcloud.com) */
+"[FileProvider/pCloud/name]" = "pCloud";
+
+/* Localized name of the storage service: Proton Drive (https://proton.me/drive) */
+"[FileProvider/ProtonDrive/name]" = "Proton Drive";
+
+/* Localized name of the storage service: QNAP Qfile (https://apps.apple.com/app/qfile/id526330408) */
+"[FileProvider/qnapQFile/name]" = "Qfile";
+
+/* Localized name of the storage service: Documents by Readdle (https://apps.apple.com/app/id364901807) */
+"[FileProvider/Readdle Documents/name]" = "Documents by Readdle";
+
+/* Localized name of the storage service: Resilio Sync (https://https://apps.apple.com/us/app/id1126282325) */
+"[FileProvider/Resilio Sync/name]" = "Resilio Sync";
+
+/* Localized name of the storage app: Seafile Pro (https://apps.apple.com/us/app/seafile-pro/id639202512) */
+"[FileProvider/Seafile Pro/name]" = "Seafile Pro";
+
+/* Localized name of the storage app: Secure ShellFish (https://apps.apple.com/app/ssh-files-secure-shellfish/id1336634154) */
+"[FileProvider/Secure ShellFish/name]" = "Secure ShellFish";
+
+/* Localized name of the storage service: SMB server (network share) via native iOS integration. */
+"[FileProvider/SMB/name]" = "SMB 服务器";
+
+/* Localized name of the storage service: Stratospherix FileBrowser (https://apps.apple.com/us/app/filebrowser-document-manager/id364738545) */
+"[FileProvider/Stratospherix FileBrowser/name]" = "FileBrowser";
+
+/* Localized name of the storage service: Sync.com (https://sync.com) */
+"[FileProvider/sync.com/name]" = "Sync.com";
+
+/* Localized name of the storage service: Synology Drive (https://apps.apple.com/us/app/synology-drive/id1267275421) */
+"[FileProvider/Synology Drive/name]" = "Synology Drive";
+
+/* Localized name of the storage service: Synology DS file (https://apps.apple.com/us/app/ds-file/id416751772) */
+"[FileProvider/Synology DS file/name]" = "Synology DS 文件";
+
+/* Localized name of the storage service: Tresorit (https://tresorit.com) */
+"[FileProvider/Tresorit/name]" = "Tresorit";
+
+/* Localized name of the storage service: local USB drive (native iOS integration) */
+"[FileProvider/USB drive/name]" = "U 盘";
+
+/* Localized name of the storage service: Yandex.Disk (https://disk.yandex.com) */
+"[FileProvider/Yandex.Disk/name]" = "Yandex.Disk";
+
+/* Title of the dialog for picking the destination group for move/copy operations */
+"[General/DestinationGroup/title] Choose a Destination" = "选择目标位置";
+
+/* Feature status: disabled/inactive. Keep it short, possibly abbreviated. */
+"[General/Feature/Off]" = "关闭";
+
+/* Feature status: enabled/active. Keep it short, possibly abbreviated. */
+"[General/Feature/On]" = "启用";
+
+/* Placeholder for folders without files */
+"[General/FileList/Empty/title]" = "文件夹为空";
+
+/* Info message for keyboard-assisted selection */
+"[General/MultiSelectionKeys/hint]" = "长按 Cmd 或 Shift 键选择多个项目。";
+
+/* Action/button to cancel whatever is going on */
+"[Generic] Cancel" = "取消";
+
+/* Action/button to write an email to support */
+"[Generic] Contact Support" = "联络支持团队";
+
+/* Action/button to write an email to support */
+"[Generic] Contact Us" = "联系我们";
+
+/* Action/button to proceed with the action */
+"[Generic] Continue" = "继续";
+
+/* Action/button to move an item (to another group/folder/etc) */
+"[Generic] Copy" = "复制";
+
+/* Action/button to create an item (entry, group, file — depending on context) */
+"[Generic] Create" = "创建";
+
+/* Action/button to delete an item (destroys the item/file) */
+"[Generic] Delete" = "删除";
+
+/* Action/button to delete all relevant/selected items */
+"[Generic] Delete All" = "全部删除";
+
+/* Action/button to discard any unsaved changes */
+"[Generic] Discard" = "舍弃";
+
+/* Action/button to close an error message. */
+"[Generic] Dismiss" = "关闭";
+
+/* Action/button to finish (editing) and keep changes */
+"[Generic] Done" = "完成";
+
+/* Action/button to edit an item */
+"[Generic] Edit" = "编辑";
+
+/* Action/button to export an item to another app */
+"[Generic] Export" = "汇出";
+
+/* Action/button shown below error messages. Tapping the button will start the fixing/repairing workflow described in the error message. */
+"[Generic] Fix this" = "修复错误";
+
+/* Action/button to import an item to another app */
+"[Generic] Import" = "导入";
+
+/* Action/button to view more help/info about some topic */
+"[Generic] Learn more" = "了解更多";
+
+/* Checkbox/Button to show additional actions */
+"[Generic] More Actions" = "更多动作";
+
+/* Action/button to move an item (to another group/folder/etc) */
+"[Generic] Move" = "移动";
+
+/* Action/button: generic OK */
+"[Generic] OK" = "确定";
+
+/* Action/button to open URL in the appropriate app (usually, web browser) */
+"[Generic] Open URL" = "打开链接";
+
+/* Action/button to replace/overwrite an item */
+"[Generic] Overwrite" = "覆盖";
+
+/* Action/button to print a document */
+"[Generic] Print" = "打印";
+
+/* Action/button to rename an item */
+"[Generic] Rename" = "重新命名";
+
+/* Action/button to replace an item with another one */
+"[Generic] Replace" = "替换";
+
+/* Action/button to restore a backup/archived item in its original place */
+"[Generic] Restore" = "还原";
+
+/* Action: repeat the previous (failed) action */
+"[Generic] Retry" = "重试";
+
+/* Action/button to open Finder (macOS file manager) and highlight a given file */
+"[Generic] Reveal in Finder" = "在“访达”中查看";
+
+/* Action/button to share an item with another app (AirDrop, send an email, etc) */
+"[Generic] Share" = "分享";
+
+/* Action/button to show additional information about an error or item */
+"[Generic] Show Details" = "显示详细信息";
+
+/* Action/button to show sensitive info as it is, in plain text (as opposed to asterisks) */
+"[Generic] Show In Plain Text" = "以纯文本形式查看";
+
+/* Checkbox/Button to show a text field in its full size */
+"[Generic] Show more" = "显示更多";
+
+/* Action/button to skip the current step and proceed with the next one */
+"[Generic] Skip" = "跳过";
+
+/* Action/button to change the order of items in a list (move them higher/lower). */
+"[Generic/Action/ReorderItems]" = "重新排序";
+
+/* Action/button to select some items in a list. */
+"[Generic/Action/SelectItems]" = "选择";
+
+/* Number of entries found in an incoming file. For example: 'Found entries: 42' [itemCount: Int] */
+"[Generic/Count/ImportedEntries]" = "找到的条目数：%d";
+
+/* Name of the Recently Deleted (Recycle Bin) directory, as shown in the Files app */
+"[Generic/Directory/Recently Deleted/name]" = "最近删除";
+
+/* Title of a notification when the user tries to close a document with unsaved changes */
+"[Generic/Edit/Aborting/title] There are unsaved changes" = "此处有未存档的变更";
+
+/* Action/button to delete a file (destroys the file forever) */
+"[Generic/File] Delete" = "删除";
+
+/* Action/button to remove a file from the app (the file remains, but the app forgets about it) */
+"[Generic/File] Remove" = "移除";
+
+/* Title of a generic file export screen. */
+"[Generic/File/Export/title]" = "导出文件";
+
+/* Action to save data, when we ignore minor problems in the process. */
+"[Generic/File/ForceSave]" = "强制保存";
+
+/* Action/button to save data to a different file */
+"[Generic/File/Save as]" = "另存为…";
+
+/* Title of an error message about file export */
+"[Generic/File/title] Export Error" = "汇出错误";
+
+/* Message shown when trying to copy into an existing file. */
+"[Generic/File/title] File already exists" = "文件已存在";
+
+/* Title of an error message about file import */
+"[Generic/File/title] Import Error" = "汇入错误";
+
+/* Action to proceed after a warning, basically 'I understand the risk' */
+"[Generic/GotIt/action]" = "已了解";
+
+/* Title of a list with predefined quick-choice values (for example: 'Presets: 1 week, 1 months, 1 year') */
+"[Generic/Presets]" = "预设值";
+
+/* Action: refresh list of items, usually files */
+"[Generic/RefreshList/action]" = "刷新列表";
+
+/* Title of a search field (a noun, not verb) */
+"[Generic/Search/title]" = "搜索​​​​";
+
+/* Title of an error message notification */
+"[Generic/title] Error" = "错误";
+
+/* Title of an error message about iOS system keychain */
+"[Generic/title] Keychain Error" = "钥匙圈错误";
+
+/* Title of an warning message */
+"[Generic/title] Warning" = "警告";
+
+/* Title of a menu with various utilities */
+"[Generic/Tools/title]" = "工具";
+
+/* Action/button to open an online support article (about a specific error) */
+"[Generic/ViewHelpArticle/action]" = "查看帮助文章";
+
+/* Title of a screen/list view configuration: sort order, visible items, etc */
+"[Generic/ViewOptions/title]" = "显示选项";
+
+/* Warning message template. Swap the icon and message for right-to-left languages. */
+"[Generic/WarningWithIcon/template]" = "⚠️ %@";
+
+/* VoiceOver description of a group [groupTitle: String, itemCount: Int] */
+"[Group/a11y/description]" = "%@, 群组";
+
+/* Action/button to create a new sub-group in the current group */
+"[Group/Create/action] Create Group" = "建立群组";
+
+/* Title of a form for editing a group */
+"[Group/Edit/title] Edit Group" = "编辑群组";
+
+/* VoiceOver description of a menu with group-related actions */
+"[Group/Menu/a11y/title]" = "群组菜单";
+
+/* Default name of a new group */
+"[Group/New/defaultName] New Group" = "新建群组";
+
+/* Title for the Notes field in group editor */
+"[Group/Notes/title]" = "备注";
+
+/* Action/button to delete everything inside the Recycle Bin */
+"[Group/RecycleBin/Empty/action]" = "清空回收站";
+
+/* Title of the confirmation dialog for `Empty Recycle Bin` action */
+"[Group/RecycleBin/Empty/confirmTitle]" = "是否永久删除回收站中的所有内容？";
+
+/* Title of the Entries section visible while editing */
+"[Group/Section/Entries/title]" = "条目";
+
+/* Title of the Groups section visible while editing */
+"[Group/Section/Groups/title]" = "群组";
+
+/* VoiceOver description of a smart group [groupTitle: String] */
+"[Group/Smart/a11y/description]" = "%@，智能群组";
+
+/* Action/button to show a help article */
+"[Group/Smart/about]" = "关于智能群组…";
+
+/* Action/button to create a new Smart Group */
+"[Group/Smart/Create/action]" = "创建智能群组";
+
+/* Default name of a new smart group */
+"[Group/Smart/New/defaultName]" = "新建智能群组";
+
+/* Title of a list: all entries in the database */
+"[Group/Smart/Preset/allEntries]" = "所有条目";
+
+/* Title of a list: entries that are beyond their expiration date. */
+"[Group/Smart/Preset/expiredEntries]" = "过期条目";
+
+/* Title of a list: entries with one-time passwords (OTP) */
+"[Group/Smart/Preset/otpEntries]" = "带 OTP 的条目";
+
+/* Title of a list: entries that contain passkeys */
+"[Group/Smart/Preset/passkeyEntries]" = "包含通行密钥的条目";
+
+/* Title for the Smart Group search conditions in group editor */
+"[Group/Smart/Query/title]" = "智能群组筛选器";
+
+/* Glossary term: noun, a smart group in database. */
+"[Group/Smart/title]" = "智能群组";
+
+/* Glossary term: noun, a group in database. */
+"[Group/title]" = "群组";
+
+/* Title of an input field for group name */
+"[GroupEditor/Name/placeholder]" = "组名";
+
+/* A notification that hardware keys (e.g. YubiKey) cannot be used in AutoFill (the OS does not allow the AutoFill to use NFC/MFI). */
+"[HardwareKey/AutoFill/NotAvailable] Hardware keys are not available in AutoFill." = "硬件密钥在自动填充中不可用。";
+
+/* Information notice for a list of hardware keys. */
+"[HardwareKey/AutoFill/TheseNotAvailable]" = "硬件密钥在密码自动填充中不可用。";
+
+/* Name of an input field which shows selected hardware key */
+"[HardwareKey/Field/title]" = "硬件密钥";
+
+/* Connector type for older Apple devices, used through a USB adapter. https://en.wikipedia.org/wiki/Lightning_(connector) */
+"[HardwareKey/Interface/LightningViaUSBAdapter]" = "Lightning (通过 USB 适配器)";
+
+/* A notice for hardware keys that need an adapter for physical connection to device. */
+"[HardwareKey/LightningOverUSB/RequiresAdapter]" = "需要 Apple USB to Lighting 适配器";
+
+/* Master key/unlock option: don't use hardware keys */
+"[HardwareKey/None] No Hardware Key" = "没有硬件密钥";
+
+/* Title of a list with possible hardware key connections */
+"[HardwareKey/Picker/title]" = "硬件密钥";
+
+/* Title of a slot of a hardware key. For example: `YubiKey Slot 1`. */
+"[HardwareKey/Slot/title]" = "%1$@ 栏位 %2$d";
+
+/* Hardware key slot number. [slotNumber: Int] */
+"[HardwareKey/SlotN]" = "栏位 %d";
+
+/* Title for hardware key slot selection menu. */
+"[HardwareKey/SlotTitle]" = "栏位";
+
+/* Information notice. 'Challenge-response' is a glossary term. */
+"[HardwareKey/USB/chalRespNotSupported]" = "此设备不支持通过 USB 连接的质询—响应认证。";
+
+/* Information notice */
+"[HardwareKey/USB/iPadAppOnMac]" = "USB 不可用，因为这是在 macOS 上运行的 iPad 应用。请使用原生的 Mac 应用程序。";
+
+/* Generic title of in-app help article */
+"[Help Viewer/title]" = "帮助";
+
+/* Name of an entry field. Acronym `HOTP` should not be translated. */
+"[HOTP/FieldName]" = "一次性密码 (OTP)";
+
+/* Info message for enterprise users */
+"[Intune/OrgNeedsToManage]" = "为了保护组织数据，你的组织需要管理此应用。要完成此操作，请使用工作或学校帐户登录。";
+
+/* Info message for users who accidentally installed the enterprise version. */
+"[Intune/PersonalVersionElsewhere]" = "个人使用的 KeePassium 版本可于 App Store 获取。";
+
+/* Notification that an archived/historical item (e.g entry) has been successfully restored */
+"[Item/History/Restored]" = "已还原上一个版本";
+
+/* Title of a list with advanced/expert-level properties of a database item (e.g. entry) */
+"[Item/Properties/Advanced/title]" = "高级选项";
+
+/* Possible value of the `Password AutoFill` setting. For example: 'Password AutoFill: Allowed' */
+"[Item/Properties/AutoFill/allowed]" = "允许";
+
+/* Possible value of the `Password AutoFill` setting. For example: 'Password AutoFill: Disabled' */
+"[Item/Properties/AutoFill/disabled]" = "禁用";
+
+/* Title of a setting: whether the item (e.g. entry) should be used in AutoFill feature. App-specific setting for KeePassXC. */
+"[Item/Properties/AutoFill/KeePassXC/title]" = "密码自动填充 (KeePassXC)";
+
+/* Title of a setting: whether the item (e.g. entry) should be used in AutoFill feature */
+"[Item/Properties/AutoFill/title]" = "密码自动填充";
+
+/* Default value of an item property. For example: 'Password Audit: Inherit from parent group (Allowed)'. [inheritedValue: String] */
+"[Item/Properties/inheritedValue]" = "从父组继承 (%@)";
+
+/* Possible value of the `Password Audit` setting. For example: 'Password Audit: Allowed' */
+"[Item/Properties/PasswordAudit/allowed]" = "允许";
+
+/* Possible value of the `Password Audit` setting. For example: 'Password Audit: Disabled' */
+"[Item/Properties/PasswordAudit/disabled]" = "禁用";
+
+/* Title of a setting: whether the item (e.g. entry) should be included in password audit */
+"[Item/Properties/PasswordAudit/title]" = "密码检查器";
+
+/* Possible value of the `Search` setting. Example: 'Search: Allowed' */
+"[Item/Properties/Search/allowed]" = "允许";
+
+/* Possible value of the `Search` setting, when the item should be excluded from search results. Example: 'Search: Disabled' */
+"[Item/Properties/Search/disabled]" = "禁用";
+
+/* Title of a setting: whether the item (e.g. entry) should be considered during search. Example: 'Search: Allowed' */
+"[Item/Properties/Search/title] Search" = "搜索​​​​";
+
+/* Title of a list with item (e.g. entry) properties/settings, such as searchability, auto-typing, etc */
+"[Item/Properties/title]" = "属性";
+
+/* Name of an entry/group category (visual style): default one, like in KeePass */
+"[ItemCategory] Default (KeePass)" = "默认(KeePass)";
+
+/* Title of a list with custom (user-imported) icons for groups and entries */
+"[ItemIconPicker/CustomIcons]" = "自定义图标";
+
+/* Title of a list with standard/default icons for groups and entries */
+"[ItemIconPicker/StandardIcons]" = "标准图标";
+
+/* Status message: processing of the master key is in progress */
+"[KDF/Progress] Processing the master key" = "主密钥处理中";
+
+/* Generic error message about system keychain. [errorCode: Int] */
+"[KeychainError/generic] Keychain error (code %d) " = "钥匙圈错误(代码 %d) ";
+
+/* Error message about system keychain. */
+"[KeychainError/unexpectedFormat] Keychain error: unexpected data format" = "钥匙圈错误: 意外的数据格式";
+
+/* Action: add a key file into the app, by importing or creating one. `Key file` is a glossary term. */
+"[KeyFile/Add/action]" = "添加密钥文件";
+
+/* Action: create new key file. */
+"[KeyFile/Create/action]" = "创建密钥文件";
+
+/* Default name for new key files. Should match the `key file` term in the glossary. */
+"[KeyFile/Create/defaultName]" = "keyfile.dat";
+
+/* Message to confirm deletion of a key file. */
+"[KeyFile/Delete/Confirm/text] Delete key file?\n Make sure you have a backup." = "删除密钥文件?\n 请确保您有备份文件!";
+
+/* Error message related to key file. [errorDetails: String] */
+"[KeyFile/error]" = "密钥文件异常: %@";
+
+/* Name of an input field which shows selected key file */
+"[KeyFile/Field/title]" = "密钥文件";
+
+/* Action: import/add a key file into the app. `Key file` is a glossary term. */
+"[KeyFile/Import/action]" = "导入密钥文件";
+
+/* Description of the `Import Key File` action. */
+"[KeyFile/Import/actionDescription]" = "将文件添加到应用程序";
+
+/* Placeholder shown when there are no key files available */
+"[KeyFile/List/empty]" = "没有密钥文件";
+
+/* Title of the list with key files. */
+"[KeyFile/List/title]" = "密钥文件";
+
+/* Description of the 'No Key File' option. */
+"[KeyFile/None/description]" = "仅使用密码";
+
+/* Title: don't use key file */
+"[KeyFile/None/title]" = "没有密钥文件";
+
+/* Message to confirm removal of a key file from the app. (This keeps the file, but removes its reference from the app.) */
+"[KeyFile/Remove/Confirm/text] Remove key file from the list?\n The file will remain intact and you can add it again later." = "从列表中删除密钥文件？\n 该文件将保持完整，您可以稍后重新添加。";
+
+/* Action: use a key file at its storage location, without importing to the app. */
+"[KeyFile/Use/action]" = "选择密钥文件";
+
+/* Description of the `Select Key File` action. */
+"[KeyFile/Use/actionDescription]" = "使用时只读";
+
+/* Error message when the key file is misformatted or damaged */
+"[KeyFileError/Corrupted/title]" = "密钥文件已损坏";
+
+/* Error message: unsupported/unknown format of a key file */
+"[KeyFileError/UnsupportedFormat/title]" = "不支持的密钥文件格式";
+
+/* Menu item: show information about file (name, size, dates) */
+"[Menu/FileInfo/title]" = "文件信息";
+
+/* Menu title: app settings */
+"[Menu/Settings/title]" = "设置";
+
+/* Title of a menu: sort order of files in a list */
+"[Menu/Sort] Sort Files By" = "文件排序通过";
+
+/* Title of a menu: sort order of groups and entries in a list */
+"[Menu/Sort] Sort Items By" = "项目排序通过";
+
+/* Suggestion/hint on how to fix an accompanying error. */
+"[Org/ContactYourAdmin]" = "请联系 IT 管理员。";
+
+/* Error message, euphemism for missing corporate license */
+"[Org/LicenseMissing]" = "KeePassium无法找到您组织的企业账户。";
+
+/* Name of an entry field */
+"[OTP/FieldName]" = "一次性密码";
+
+/* Error shown when scanned QR code cannot be used for OTP */
+"[OTP/Scan/InvalidData]" = "此二维码不适用于两步验证(OTP)设置";
+
+/* Error shown when a manually entered OTP secret is misformatted. */
+"[OTP/Scan/InvalidSecretCode]" = "此二维码不适用于两步验证 OTP 设置";
+
+/* Message to confirm user intentions */
+"[OTP/Scan/OverwriteWarning]" = "此条目已存在两步验证(OTP)配置。您是否想要覆盖它？";
+
+/* Call for action. Acronym `OTP` should not be translated. */
+"[OTP/Setup]" = "设置两步验证密码(OTP)";
+
+/* Button/action: proceed with manual OTP setup */
+"[OTP/Setup/EnterManually]" = "手动输入";
+
+/* Call to action: type in the secret key for OTP setup. */
+"[OTP/Setup/EnterSecretCode/callToAction]" = "输入秘密代码";
+
+/* Button/action: proceed with QR code based OTP setup */
+"[OTP/Setup/ScanQRCode]" = "扫描二维码";
+
+/* Action: pick an image (from files) to scan as QR code */
+"[OTP/Setup/ScanQRImageFile]" = "从文件扫描二维码";
+
+/* Action: pick a photo (from gallery) to scan as QR code */
+"[OTP/Setup/ScanQRPhoto]" = "从照片扫描二维码";
+
+/* Call to action/instruction during setup of OTP codes. */
+"[OTP/Setup/SelectDatabase/message]" = "选择数据库以设置验证码（一次性密码）。";
+
+/* Call to action/instruction during setup of OTP codes. */
+"[OTP/Setup/SelectEntry/message]" = "选择条目以设置验证码（一次性密码）。";
+
+/* Confirmation message after successful OTP setup */
+"[OTP/Setup/Success]" = "OTP 设置完成";
+
+/* Title of a dialog related to setup of one-time passwords (OTP) */
+"[OTP/Setup/Title]" = "验证码设置";
+
+/* Description of an OTP code; sentence case. */
+"[OTP/Title/sentenceCase]" = "一次性密码";
+
+/* Action/button: accept/use the generated password */
+"[PasswordGenerator/Accept/action]" = "接受";
+
+/* Error message from the random text generator. */
+"[PasswordGenerator/CannotGenerateText/title]" = "无法生成文本";
+
+/* Description of an empty character set for password generator. 'Empty' as 'there are no characters'. */
+"[PasswordGenerator/CustomSet/Empty/title]" = "空";
+
+/* User-defined set of characters for password generator. */
+"[PasswordGenerator/CustomSet/title]" = "自定义字符：";
+
+/* Error message/call to action from the random text generator. */
+"[PasswordGenerator/DesiredLengthTooShort/title]" = "将长度参数增加到至少 %d。";
+
+/* Action/button: generate random text/password/phrase */
+"[PasswordGenerator/Generate/action]" = "生成";
+
+/* Description of randomly generated text/password/phrase */
+"[PasswordGenerator/GeneratedText/title]" = "已生成的文本";
+
+/* Inclusion criterion for a password generator. For example: `Digits: Allowed` */
+"[PasswordGenerator/InclusionCondition/allowed]" = "允许";
+
+/* Inclusion criterion for a password generator. For example: `Uppercase Letters: Excluded` */
+"[PasswordGenerator/InclusionCondition/excluded]" = "不包含";
+
+/* Inclusion criterion for a password generator — a disabled/inactive one that won't be taken into account. For example: `Uppercase Letters: Inactive` */
+"[PasswordGenerator/InclusionCondition/inactive]" = "未启用";
+
+/* Inclusion criterion for a password generator. For example: `Special Symbols: Required` */
+"[PasswordGenerator/InclusionCondition/required]" = "必填";
+
+/* Length (number of characters) of the random text to generate */
+"[PasswordGenerator/Length/title]" = "长度";
+
+/* Description of a password generator parameter. For example, the digit in 'abc222def'. */
+"[PasswordGenerator/MaxConsecutive/description]" = "连续相同字符的最大数量。";
+
+/* Error message/call to action from the random text generator. */
+"[PasswordGenerator/MaxConsecutiveNotSatisfiable/title]" = "增加连续相同字符的最大数量。";
+
+/* One of the operation modes of the random text generator */
+"[PasswordGenerator/Mode/Basic/title]" = "基础";
+
+/* One of the operation modes of the random text generator */
+"[PasswordGenerator/Mode/Expert/title]" = "专家";
+
+/* One of the operation modes of the random text generator, where it generates random phrases. */
+"[PasswordGenerator/Mode/Passphrase/title]" = "口令";
+
+/* Operation mode of the random text generator (for example, `Basic`, `Expert`, `Passphrase`) */
+"[PasswordGenerator/Mode/title]" = "模式";
+
+/* Error message from the random text generator. */
+"[PasswordGenerator/NotEnoughElementsToSample/title]" = "需要更多元素以供挑选。";
+
+/* Length (number of characters) of the password to generate */
+"[PasswordGenerator/PasswordLength/title]" = "密码长度";
+
+/* Error message from the random text generator. `required` and `excluded` are as in [PasswordGenerator/InclusionCondition/required] and [PasswordGenerator/InclusionCondition/excluded] */
+"[PasswordGenerator/RequiredSetCompletelyExcluded/title]" = "其中一个字符集既是必需又是排除。";
+
+/* Title for digits (like '123') */
+"[PasswordGenerator/Set/Digits/title]" = "位数";
+
+/* Title for look-alike symbols (like '1lI', that is: digit `1`, small `L`, capital `i`). */
+"[PasswordGenerator/Set/Lookalikes/title]" = "相似字符";
+
+/* Title for lowercase letters (like 'abc') */
+"[PasswordGenerator/Set/Lowercase/title]" = "小写字母";
+
+/* Title for special symbols (like '@#$') */
+"[PasswordGenerator/Set/Specials/title]" = "特殊符号";
+
+/* Title for uppercase letters (like 'ABC') */
+"[PasswordGenerator/Set/Uppercase/title]" = "大写字母";
+
+/* Name of the space character. https://en.wikipedia.org/wiki/Space_(punctuation) */
+"[PasswordGenerator/SpaceCharacter/name]" = "空格";
+
+/* Title of the random text/password/username generator dialog. */
+"[PasswordGenerator/title]" = "随机生成器";
+
+/* Character to be inserted between words of a passphrase. */
+"[PasswordGenerator/Word Separtor/title]" = "分隔符";
+
+/* Word capitalization style. Written in that style, if possible. */
+"[PasswordGenerator/WordCase/lowerCase]" = "小写";
+
+/* Case of letters in a word (e.g. UPPER, lower, Title Case) */
+"[PasswordGenerator/WordCase/title]" = "大小写";
+
+/* Word capitalization style: first letters of significant words capitalized. Written in that style, if possible. */
+"[PasswordGenerator/WordCase/titleCase]" = "标题大小写 ";
+
+/* Word capitalization style. Written in that style, if possible. */
+"[PasswordGenerator/WordCase/upperCase]" = "大写";
+
+/* Number of words in a generated passphrase. In context: 'Words: 5' */
+"[PasswordGenerator/WordCount/title]" = "词数";
+
+/* Name of a wordlist for passphrase generator. `EFF` is an organization name. */
+"[PasswordGenerator/Wordlist/EFFLarge/title]" = "EFF 大词表（7776 个单词）";
+
+/* Name of a wordlist for passphrase generator. `EFF` is an organization name. */
+"[PasswordGenerator/Wordlist/EFFShort/title]" = "EFF 短词表 #%d（1296 个单词）";
+
+/* Error message when importing a text file [lineNumber: Int, problemDescription: String] */
+"[PasswordGenerator/Wordlist/ImportError/reason]" = "无法导入文件，因为第 %1$d 行出现问题 (%2$@)";
+
+/* List of words to be used for a passphrase. */
+"[PasswordGenerator/Wordlist/title]" = "词表";
+
+/* Title of a premium feature */
+"[Premium/Benefits/BusinessClouds/title]" = "与企业存储同步";
+
+/* Call to action / Title of a premium feature */
+"[Premium/Benefits/CreativeAutoFill/title]" = "创建账户速度更快";
+
+/* Explanation of the premium feature */
+"[Premium/Benefits/HardwareKeys/details]" = "使用硬件密钥保护您的资料，比如 YubiKey 等。";
+
+/* Title of a premium feature */
+"[Premium/Benefits/HardwareKeys/title]" = "使用硬件密钥";
+
+/* Explanation of the premium feature */
+"[Premium/Benefits/LinkedDatabases/details]" = "使用存储在条目中的凭据，一步打开其他数据库。";
+
+/* Title of a premium feature */
+"[Premium/Benefits/LinkedDatabases/title]" = "打开链接的数据库";
+
+/* Explanation of the premium feature */
+"[Premium/Benefits/MultiDB/details]" = "添加多个数据库并快速切换它们。";
+
+/* Title of a premium feature */
+"[Premium/Benefits/MultiDB/title]" = "与团队同步";
+
+/* List of premium benefits/advantages */
+"[Premium/Benefits/Negative/header] " = "您缺少的内容";
+
+/* Title of a premium feature */
+"[Premium/Benefits/PasswordAudit/title]" = "检查您的密码";
+
+/* List of premium benefits/advantages */
+"[Premium/Benefits/Positive/header] " = "您得到的内容";
+
+/* Call to action */
+"[Premium/CallToAction/buyNow]" = "立即购买";
+
+/* Call to action: continue using the free version */
+"[Premium/CallToAction/free]" = "继续测试";
+
+/* Call to action: start free trial */
+"[Premium/CallToAction/startTrial]" = "免费试用";
+
+/* Call to action: upgrade to premium */
+"[Premium/CallToAction/upgradeNow]" = "立即升级";
+
+/* Action: open AppStore subscription management page */
+"[Premium/ManageSubscriptions/action]" = "管理订阅";
+
+/* Name of the permanent/never-ending license. */
+"[Premium/perpetualLicense]" = "终生订阅";
+
+/* [formattedDate: String] */
+"[Premium/PerpetualLicense/status]" = "在 %@ 之前，您拥有一个所有功能的终身订阅。";
+
+/* What's included in a price plan: 1 year of support via email */
+"[Premium/Price Plan/Conditions/1 year email support]" = "一年的电子邮件支持";
+
+/* What's included in a price plan */
+"[Premium/Price Plan/Conditions/all premium features]" = "高级版所有功能";
+
+/* What's included in a free plan: support via forums (as opposed to email support) */
+"[Premium/Price Plan/Conditions/community support]" = "用户支持：在线论坛";
+
+/* What's included in a price plan: existing premium features only (as opposed to `current + future`) */
+"[Premium/Price Plan/Conditions/current premium features]" = "当前高级版功能";
+
+/* What's included in a price plan: support via email */
+"[Premium/Price Plan/Conditions/email support]" = "用户支持：电子邮件";
+
+/* Family Sharing programme. Translation must match Apple's: https://www.apple.com/family-sharing/ */
+"[Premium/Price Plan/Conditions/family sharing]" = "家人共享";
+
+/* What's included in a free plan: reminders that the version is free */
+"[Premium/Price Plan/Conditions/freemium reminders]" = "免费版提醒";
+
+/* Upgrade conditions for current-version premium purchase. */
+"[Premium/Price Plan/Conditions/full price upgrade]" = "将来添加的高级功能需要全额购买。";
+
+/* What's included in a price plan: upcoming premium features (as opposed to `current only`) */
+"[Premium/Price Plan/Conditions/future premium features]" = "高级版未来功能";
+
+/* What's included in a price plan. Please leave `perpetual fallback license` in English. */
+"[Premium/Price Plan/Conditions/perpetual fallback]" = "共享许可证(Perpetual backbacking licse)";
+
+/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://keepassium.com/articles/perpetual-fallback-license/ */
+"[Premium/Price Plan/Conditions/subscription as purchase]" = "视为购买的订阅";
+
+/* What's included in a price plan */
+"[Premium/Price Plan/Conditions/updates and bug fixes]" = "更新和漏洞修复";
+
+/* Price of the free pricing plan */
+"[Premium/Price Plan/Free/price]" = "免费";
+
+/* Name of the free pricing plan */
+"[Premium/Price Plan/Free/title]" = "免费";
+
+/* Marks the default pricing plan */
+"[Premium/Price Plan/popular]" = "人气";
+
+/* Subscription conditions */
+"[Premium/Subscription/Legal/text]" = "在确认购买时，将会从您的Apple ID账户中收取付款。 \n\n除非在到期前至少24小时取消，否则订阅会自动续订。您的账户将在到期前24小时内收取续订费用。 \n\n您可以在购买后转到App Store上的账户设置来管理和取消订阅。";
+
+/* Trial conditions. For example `30 days free, then $1 per month` */
+"[Premium/Trial/trial then price]" = "%1$@ 免费，然后 %2$@";
+
+/* Error message: AppStore returned no available in-app purchase options */
+"[Premium/Upgrade] Hmm, there are no upgrades available. This should not happen, please contact support." = "没有可用的升级, 这不应该发生, 请联系技术支持。";
+
+/* Action/button to start choosing premium versions and possibly buying one */
+"[Premium/Upgrade/action] Upgrade to Premium" = "升级到高级版";
+
+/* Message shown after buying a lifetime version. */
+"[Premium/Upgrade/cancelOngoingSubscription]" = "请检查您是否需要取消您的旧订阅。";
+
+/* Message shown when in-app purchase is deferred until approval (parental or corporate). */
+"[Premium/Upgrade/Deferred/text] Thank you! You can use KeePassium while purchase is awaiting approval." = "谢谢！您可以在 KeePassium 等待批准时使用。";
+
+/* Product price for monthly premium subscription. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ / month" = "%@ / 月";
+
+/* Product price for annual premium subscription. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ / year" = "%@ / 年";
+
+/* Product price for once-and-forever premium. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ once" = "%@ 一次性付费";
+
+/* Equivalent monthly price for an annual subscription. For example: `$12/year ≈ $1 / month` */
+"[Premium/Upgrade/price] around %@ / month" = "≈ %@ / 月";
+
+/* Status message when downloading available in-app purchases */
+"[Premium/Upgrade/Progress] Contacting AppStore..." = "联系 AppStore...";
+
+/* Status: in-app purchase started */
+"[Premium/Upgrade/Progress] Purchasing..." = "购买中…";
+
+/* Text of the message shown after in-app purchase was successfully restored */
+"[Premium/Upgrade/Restored/text] Upgrade successful, enjoy the app!" = "升级成功, 享受它!";
+
+/* Title of the message shown after in-app purchase was successfully restored */
+"[Premium/Upgrade/Restored/title] Purchase Restored" = "恢复购买";
+
+/* Text of an error message: there were no in-app purchases that can be restored */
+"[Premium/Upgrade/RestoreFailed/text] No previous purchase could be restored." = "没有可以还原的内购。";
+
+/* Title of an error message: there were no in-app purchases that can be restored */
+"[Premium/Upgrade/RestoreFailed/title] Sorry" = "很抱歉";
+
+/* Message shown after buying or subscribing. */
+"[Premium/Upgrade/Success/thankYou]" = "感谢您的购买";
+
+/* Description/call to action for the `Business Cloud Storage` premium feature. */
+"[PremiumFeature/BusinessClouds/description]" = "直接连接到企业存储账户，如 OneDrive for Business。";
+
+/* Title of a premium feature: access to company's cloud accounts like 'OneDrive for Business' */
+"[PremiumFeature/BusinessClouds/title]" = "企业云存储";
+
+/* Description/advertisement for the `Faster Sign-Ups` premium feature */
+"[PremiumFeature/CreativeAutoFill/description]" = "在自动填充中创建新条目，并预填主要字段。";
+
+/* Title of a premium feature: easier registration of new accounts, directly in AutoFill dialog */
+"[PremiumFeature/CreativeAutoFill/title]" = "注册速度更快";
+
+/* A generic description of a premium feature */
+"[PremiumFeature/Generic/description]" = "升级到高级版并享受最好的KeePassium。";
+
+/* A generic title of a premium feature */
+"[PremiumFeature/Generic/title]" = "高级版功能";
+
+/* Description/advertisement for the `Hardware Keys` premium feature */
+"[PremiumFeature/HardwareKeys/description]" = "在高级版中使用硬件密钥 (Yubikey) 加强您的安全。";
+
+/* Title of a premium feature: ability use hardware keys (e.g. YubiKey) for encryption (In Title Case) */
+"[PremiumFeature/HardwareKeys/title] Hardware Keys" = "硬件密钥";
+
+/* Description/advertisement for the `Linked Databases` premium feature */
+"[PremiumFeature/LinkedDatabases/description]" = "升级到高级版，一步打开链接的数据库。";
+
+/* Title of a premium feature: ability to open databases referenced in another database (In Title Case) */
+"[PremiumFeature/LinkedDatabases/title]" = "链接的数据库";
+
+/* Description/advertisement for the `Multiple Databases` premium feature */
+"[PremiumFeature/MultiDB/description] Easily switch between databases in the premium version." = "在高级版本中快速切换多个数据库。";
+
+/* Title of a premium feature: ability to use multiple databases (In Title Case) */
+"[PremiumFeature/MultiDB/title] Multiple Databases" = "多个数据库";
+
+/* Description/call to action for the `Password Audit` premium feature. */
+"[PremiumFeature/PasswordAudit/description]" = "了解您的密码是否在已知的数据泄露中遭到泄露。";
+
+/* Title of a premium feature: discover which passwords are known to be compromized */
+"[PremiumFeature/PasswordAudit/title]" = "密码检查器";
+
+/* Description/call to action for the `Quick AutoFill` premium feature. */
+"[PremiumFeature/QuickAutoFill/description]" = "一键填写登录表单，甚至无需打开 KeePassium。";
+
+/* Title of a premium feature: show relevant AutoFill entries right under the input field */
+"[PremiumFeature/QuickAutoFill/title]" = "快速自动填充";
+
+/* A brief summary of the privacy policy (for offline mode) */
+"[PrivacyPolicy/Offline/text]" = "KeePassium不会对任何个人资料收集或分析，也不会与任何人分享。";
+
+/* A brief summary of the privacy policy (for online mode) */
+"[PrivacyPolicy/Online/text]" = "KeePassium 不会收集任何个人或分析数据。\n某些功能可能涉及与外部服务的数据交换（根据您的请求，并且仅为了向您提供这些服务）。此类数据交换受相应服务的隐私政策约束。";
+
+/* Section: privacy policy */
+"[PrivacyPolicy/title]" = "隐私权政策";
+
+/* Explanation/notification when a long-running operation was cancelled by user */
+"[Progress/CancellationReason] Cancelled by user" = "已被使用者取消";
+
+/* Error message when a long-running operation was cancelled due to the lack of free memory (RAM). */
+"[Progress/CancellationReason/lowMemory]" = "没有足够的内存供继续程序继续。\n较大的数据库或过于消耗内存的数据库设置(Argon2内存参数) 可能会发生这种情况。";
+
+/* Name of a feature that shows relevant entries directly next to the login/password forms. */
+"[QuickAutoFill/title]" = "快速自动填充";
+
+/* Network security setting */
+"[RemoteConnection/AllowUntrusted/title]" = "允许不受信任的证书";
+
+/* Network connection. For example `Connection: WebDAV` or `Connection: MyCloud`. */
+"[RemoteConnection/Connection/title]" = "连接";
+
+/* Action: connect to a network server */
+"[RemoteConnection/connectToServer]" = "连接到服务器";
+
+/* Title of a section: username, password, etc */
+"[RemoteConnection/Credentials]" = "凭据";
+
+/* Description of the `Direct connection` sync method. */
+"[RemoteConnection/Direct/description]" = "KeePassium 将直接与您的在线存储进行通信。这可以确保可靠的文件传输。";
+
+/* Title of a list with online storage services like OneDrive, Dropbox, etc. */
+"[RemoteConnection/Direct/title]" = "在线服务";
+
+/* Action: change properties of a remote network connection */
+"[RemoteConnection/Edit/action]" = "编辑连接…";
+
+/* Error message: user credentials rejected by the server */
+"[RemoteConnection/Error/AuthenticationFailed/title]" = "身份验证失败";
+
+/* Network address of a file */
+"[RemoteConnection/FileURL]" = "文件 URL";
+
+/* Complete WebDAV URL including path prefix */
+"[RemoteConnection/FullURL]" = "完整 URL";
+
+/* Name of a predefined Google Drive folder which contains user's own files */
+"[RemoteConnection/GoogleDrive/Folder/myDrive]" = "我的云端硬盘";
+
+/* Name of a predefined GoogleDrive folder which contains files shared with this user */
+"[RemoteConnection/GoogleDrive/Folder/sharedWithMe]" = "共享给我";
+
+/* Name of a predefined OneDrive folder which contains user's own files */
+"[RemoteConnection/OneDrive/Folder/files]" = "文件";
+
+/* Name of a predefined OneDrive folder which contains files shared with this user */
+"[RemoteConnection/OneDrive/Folder/sharedWithMe]" = "共享";
+
+/* Network address of a WebDAV server */
+"[RemoteConnection/ServerURL]" = "服务器 URL";
+
+/* Action: authenticate to Dropbox account */
+"[RemoteConnection/SignIn/Dropbox/action]" = "登录 Dropbox";
+
+/* Error description: the user should manually sign in to their Dropbox account */
+"[RemoteConnection/SignIn/Dropbox/authorizationRequried]" = "Dropbox 需要您重新登录。";
+
+/* Action: authenticate to Google Drive account */
+"[RemoteConnection/SignIn/GoogleDrive/action]" = "登录 Google 云端硬盘";
+
+/* Error description: the user should manually sign in to their Google Drive account */
+"[RemoteConnection/SignIn/GoogleDrive/authorizationRequried]" = "Google 云端硬盘需要您重新登录。";
+
+/* Action: authenticate to OneDrive account */
+"[RemoteConnection/SignIn/OneDrive/action]" = "登录 OneDrive";
+
+/* Error description: the user should manually sign in to their OneDrive account */
+"[RemoteConnection/SignIn/OneDrive/authorizationRequried]" = "OneDrive 需要您重新登录。";
+
+/* No comment provided by engineer. */
+"[RemoteConnection/SignIn/PrivateMode/description]" = "在私密网页浏览器模式中打开登录页面";
+
+/* No comment provided by engineer. */
+"[RemoteConnection/SignIn/PrivateMode/title]" = "私密模式";
+
+/* Title: connection to a network storage */
+"[RemoteConnection/title]" = "远程连接";
+
+/* Description of the `Integration via Files app` sync method. */
+"[RemoteConnection/ViaFilesApp/description]" = "KeePassium 会将文件同步分配给存储提供商的应用。有些应用会比其他应用运行得更好。";
+
+/* Link to a help page for an online storage service. The parameter is the service name in fixed neutral form. Example: 'Nextcloud Setup Guide' or 'Synology NAS Setup Guide'. */
+"[RemoteConnection/WebDAVService/SetupGuide]" = "%@ 设置指南";
+
+/* Name of an input field for entering the password again */
+"[Repeat Password/Field/title]" = "重复密码";
+
+/* Description of the auto-download favicons feature */
+"[Settings/AutoDownloadFavicons/description]" = "编辑条目后自动下载网站图标。";
+
+/* Settings option: automatically download website icons/favicons */
+"[Settings/AutoDownloadFavicons/title]" = "自动下载网站图标";
+
+/* Title of AutoFill settings screen */
+"[Settings/AutoFill/title]" = "自动填写密码";
+
+/* Title of a yes/no setting: whether to include backup copies in the file list */
+"[Settings/DatabaseBackup/ShowBackupFiles/title]" = "显示备份文件";
+
+/* Settings section: protection of databases, their keys and data inside them */
+"[Settings/DataProtection/title]" = "数据保护";
+
+/* An option in Group Viewer settings. Will be shown as 'Entry Subtitle: None', meanining that no entry details will be shown in any lists. */
+"[Settings/EntryListDetail/longTitle] None" = "无";
+
+/* Title of a settings section: which entry field to show along with entry title */
+"[Settings/GroupViewer] Entry Subtitle" = "条目副标题";
+
+/* Title of a settings section: sort order of groups and entries in a list */
+"[Settings/GroupViewer] Sort Order" = "排序顺序";
+
+/* Title of a yes/no setting */
+"[Settings/KeyFiles/Remember/title]" = "记住密钥文件";
+
+/* Title of list view configuration screen */
+"[Settings/ListSettings/title]" = "列表设置";
+
+/* Notification when corporate user tries to use a feature forbidden by organization's IT department. */
+"[Settings/Managed/BlockedFeature/notification]" = "此功能已被您的组织屏蔽。";
+
+/* Notification when corporate user tries to change an app setting controlled by organization's IT department. */
+"[Settings/Managed/notification]" = "此设置由您的组织管理。";
+
+/* Setting: preserve (cache) calculated database keys */
+"[Settings/MasterKeys/CacheDerived/title]" = "缓存衍生加密密钥";
+
+/* Title of a yes/no setting */
+"[Settings/MasterKeys/Remember/title]" = "记住主密钥";
+
+/* Confirmation dialog message */
+"[Settings/NetworkAccess/Confirmation/text]" = "是否允许 KeePassium 与外部服务建立网络连接？";
+
+/* Settings section: how/whether the app is allowed to use networks/Internet */
+"[Settings/NetworkAccess/title]" = "网络访问";
+
+/* Description of the `Stay Offline` mode. */
+"[Settings/NetworkAccessMode/Offline/description]" = "最大私密性";
+
+/* Setting option: the app should work offline */
+"[Settings/NetworkAccessMode/Offline/title]" = "保持离线";
+
+/* Description of the `Allow Network Access` mode. */
+"[Settings/NetworkAccessMode/Online/description]" = "最大功能性";
+
+/* Setting option: the app is permitted to use online features */
+"[Settings/NetworkAccessMode/Online/title]" = "允许网络访问";
+
+/* Action/button which resets some settings to their default state. */
+"[Settings/RestoreDefaults/action]" = "恢复默认";
+
+/* Call to action (explains why a setting is disabled) */
+"[Settings/ShakeGestureAction/LockApp/disabledTitle]" = "先激活应用保护";
+
+/* An option in Settings. Will be shown as 'When Shaken: Lock App' */
+"[Settings/ShakeGestureAction/LockApp/shortTitle]" = "锁定应用";
+
+/* An option in Settings. Will be shown as 'When Shaken: Lock All Databases' */
+"[Settings/ShakeGestureAction/LockDatabases/shortTitle]" = "锁定所有数据库";
+
+/* An option in Settings. Will be shown as 'When Shaken: Do Nothing' */
+"[Settings/ShakeGestureAction/Nothing/shortTitle]" = "无操作";
+
+/* An option in Settings. Will be shown as 'When Shaken: Quit App' */
+"[Settings/ShakeGestureAction/QuitApp/shortTitle]" = "退出应用";
+
+/* Title of the app settings screen */
+"[Settings/title]" = "设置";
+
+/* Title of a settings value. For example: `Remember Master Keys: No` */
+"[Settings/Value/No/title]" = "否";
+
+/* Title of a settings value, when it is not customized and we default to app's global settings. For example: `Remember Master Keys: Use App Settings (No)` */
+"[Settings/Value/UseAppSettings/title]" = "使用应用设置 (%@)";
+
+/* Title of a settings value. For example: `Remember Master Keys: Yes` */
+"[Settings/Value/Yes/title]" = "是";
+
+/* List sorting option (for file names). Example: 'Sort by: Name' */
+"[SortBy/FileName]" = "名称";
+
+/* List sorting option, when no sorting is selected. Example: 'Sort by: None' */
+"[SortBy/None]" = "无";
+
+/* List sorting option, when items are manually ordered by the user. Example: 'Sort order: Custom' */
+"[SortOrder/Custom]" = "自定义";
+
+/* Subtitle for a storage service: the app will have access only to its own dedicated folder. */
+"[StorageService/DedicatedAppFolder/title]" = "仅限应用文件夹";
+
+/* Name of a cloud storage service */
+"[StorageService/DropboxBusiness/title]" = "Dropbox Business";
+
+/* Name of a cloud storage service */
+"[StorageService/DropboxPro/title]" = "Dropbox Pro";
+
+/* Name of a cloud storage service */
+"[StorageService/GoogleWorkspace/title]" = "Google Workspace";
+
+/* Name of a cloud storage service. Must match Microsoft's translation, see  https://partner.microsoft.com/solutions/onedrive-for-business */
+"[StorageService/OneDriveForBusiness/title]" = "OneDrive 商业版";
+
+/* Title of a file storage service option (for example: Dropbox, OneDrive, Other Services) */
+"[StorageService/OtherServices/title]" = "其他服务";
+
+/* Template text of a bug report email */
+"[Support/template] (Please describe the problem here)" = "(请在此处描述问题)";
+
+/* Call to action in the Donations screen. */
+"[TipBox/callToAction/1]" = "帮助我们让 KeePassium 变得更好！";
+
+/* Call to action in the Donations screen. */
+"[TipBox/callToAction/2]" = "帮助我们让 KeePassium 保持卓越！";
+
+/* Call to action in the Donations screen. (free = gratis) */
+"[TipBox/callToAction/3]" = "帮助我们让 KeePassium 得以继续提供免费版本！";
+
+/* Text in the Donations screen. */
+"[TipBox/description/1]" = "您喜欢KeePassium吗？";
+
+/* Text in the Donations screen. */
+"[TipBox/description/2]" = "KeePassium是一款免费的开源应用。您可以信任它并把敏感信息托付给它。没有广告，没有隐私窥探，没有废话 — 我们尊重你。";
+
+/* Text in the Donations screen. */
+"[TipBox/description/3]" = "您喜欢KeePassium，但不需要高级功能吗？";
+
+/* Notification after a successful donation. */
+"[TipBox/thankYou]" = "谢谢您！";
+
+/* Title of the tip box/donation screen. */
+"[TipBox/title/2]" = "捐赠支持作者";
+
+/* Call to action, title of the tip box/donation screen. */
+"[TipBox/title/3]" = "支持 KeePassium";
+
+/* Name of an entry field. Acronym `TOTP` should not be translated. */
+"[TOTP/FieldName]" = "一次性密码 (TOTP)";
+
+/* Human-readable file location. The file is situated either online / in cloud storage, or on the same device, but in some other app. Example: 'File Location: Cloud storage / Another app' */
+"[URLReference/Location] Cloud storage / Another app" = "云端存档 / 其他app应用";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. 'Backup' is a dedicated directory for database backup files. Example: 'File Location: Internal backup' */
+"[URLReference/Location] Internal backup" = "内部备份";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. 'Inbox' is a special directory for files that are being imported. Can be also 'Internal import'. Example: 'File Location: Internal inbox' */
+"[URLReference/Location] Internal inbox" = "内部导入";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. Example: 'File Location: Local copy' */
+"[URLReference/Location] Local copy" = "本地副本";
+
+/* Human-readable file location. Example: 'File Location: Remote server' */
+"[URLReference/Location/RemoteServer]" = "远程服务器";
+
+/* Error shown when user selects a file path instead of folder path in WebDAV. */
+"[WebDAV/Export/NeedsFolder]" = "请选择文件夹路径";
+
+/* Call for action: insert YubiKey 5Ci to the Lightning port */
+"[YubiKey] Insert the key" = "导入密钥";
+
+/* Call for action: touch the sides of YubiKey 5Ci to continue */
+"[YubiKey] Touch the key" = "触摸密钥";
+
+/* Action/button to add database to the app */
+"Add Database" = "添加数据库";
+
+/* Warning message when the user tries to use a database as a key file */
+"KeePass database should not be used as key file. Please pick a different file." = "KeePass数据库文件不应该当作密钥文件使用。 请选择其他文件。";
+

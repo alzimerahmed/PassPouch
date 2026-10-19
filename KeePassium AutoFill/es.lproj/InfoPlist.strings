@@ -1,0 +1,9 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "«Autorrelleno» de KeePassium";
+
+/* Bundle name */
+"CFBundleName" = "«Autorrelleno» de KeePassium";
+
+/* Privacy - Face ID Usage Description */
+"NSFaceIDUsageDescription" = "Utilizar reconocimiento facial para desbloquear KeePassium";
+

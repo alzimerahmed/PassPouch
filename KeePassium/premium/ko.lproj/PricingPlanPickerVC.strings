@@ -1,0 +1,12 @@
+/* Class = "UIButton"; normalTitle = "Privacy Policy"; ObjectID = "fC2-en-cOo"; */
+"fC2-en-cOo.normalTitle" = "개인정보처리방침";
+
+/* Class = "UIButton"; normalTitle = "Already purchased?"; ObjectID = "j7c-Gd-QEh"; */
+"j7c-Gd-QEh.normalTitle" = "이미 구매하셨나요?";
+
+/* Class = "UINavigationItem"; title = "Premium"; ObjectID = "LNd-e9-YY7"; */
+"LNd-e9-YY7.title" = "프리미엄";
+
+/* Class = "UIButton"; normalTitle = "Terms and Conditions"; ObjectID = "NSz-U1-2ye"; */
+"NSz-U1-2ye.normalTitle" = "이용 약관";
+

@@ -1,0 +1,1164 @@
+/* Copyright notice */
+"[About/CopyrightAuthor]" = "© Andrei Popleteev";
+
+/* Suggestion/hint for available user action */
+"[Accessibility] Double tap to copy to clipboard" = "두 번 탭하여 클립보드에 복사";
+
+/* Action/button to unlock the App Lock with passcode */
+"[AppLock] Unlock" = "잠금 해제";
+
+/* Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt. */
+"[AppLock/Biometric/Hint] Unlock KeePassium" = "KeePassium 잠금 해제";
+
+/* Action/button to switch from TouchID/FaceID prompt to manual input of the AppLock passcode. */
+"[AppLock/cancelBiometricAuth] Use Passcode" = "비밀번호 사용";
+
+/* Action/button to modify the existing AppLock passcode. */
+"[AppLock/changePasscode]" = "비밀번호 변경";
+
+/* Call to action in the passcode input dialog. */
+"[AppLock/EnterPasscode/callToAction]" = "KeePassium 잠금 해제";
+
+/* Action: change keyboard type to enter alphanumeric passphrases */
+"[AppLock/Passcode/KeyboardType/switchAction] 123→ABC" = "123→ABC";
+
+/* Action: change keyboard type to enter PIN numbers */
+"[AppLock/Passcode/KeyboardType/switchAction] ABC→123" = "ABC→123";
+
+/* Type of keyboard to show for App Lock passcode: letters and digits. */
+"[AppLock/Passcode/KeyboardType/title] Alphanumeric" = "영문자 및 숫자";
+
+/* Type of keyboard to show for App Lock passcode: digits only (PIN code). */
+"[AppLock/Passcode/KeyboardType/title] Numeric" = "숫자";
+
+/* Notification that the modified AppLock passcode has been saved. */
+"[AppLock/passcodeUpdated/title]" = "비밀번호가 성공적으로 업데이트되었습니다.";
+
+/* Action/button to save new or edited AppLock passcode. */
+"[AppLock/savePasscode]" = "비밀번호 저장";
+
+/* Call to action in the passcode input dialog. */
+"[AppLock/SetupPasscode/callToAction]" = "허가되지 않은 접근으로부터 KeePassium 보호";
+
+/* Message shown when AutoFill cannot automatically open the main app for upgrading to a premium version. */
+"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open KeePassium from your home screen." = "업그레이드를 위해, 기기의 홈 화면에서 직접 KeePassium을 실행해주시기 바랍니다.";
+
+/* Title of a message related to upgrading to the premium version */
+"[AutoFill/Premium/Upgrade/Manual/title] Premium Upgrade" = "프리미엄 버전 업그레이드";
+
+/* Name of biometric authentication method. Trademarked, do not translate unless Apple traslated it to your language. */
+"[BiometricAuthType] Face ID" = "Face ID";
+
+/* Name of biometric authentication method. Trademarked, do not translate unless Apple traslated it to your language. */
+"[BiometricAuthType] Touch ID" = "Touch ID";
+
+/* Error message when the challenge-response communication has been cancelled by the user. */
+"[ChallengeResponseError] cancelled" = "사용자에 의해 취소됨.";
+
+/* Error message when the hardware key is not plugged in. */
+"[ChallengeResponseError] keyNotConnected" = "하드웨어 키가 연결되지 않았습니다.";
+
+/* Error message when trying to use challenge-response hardware in AutoFill. */
+"[ChallengeResponseError] notAvailableInAutoFill" = "하드웨어 키는 자동 완성에서 사용할 수 없습니다.";
+
+/* Error message when trying to use challenge-response with a kdb database. */
+"[ChallengeResponseError] notSupportedByDatabaseFormat" = "하드웨어 키가 이 데이터베이스 포맷에서 지원되지 않습니다.";
+
+/* Error message when trying to use a hardware challenge-response key on unsupported device/iOS version. %@ will be the name of the hardware interface, such as `NFC` or `Lightning`. */
+"[ChallengeResponseError] notSupportedByDeviceOrSystem" = "이 기기 혹은 iOS 버전에서 하드웨어 키를 지원하지 않습니다. (%@)";
+
+/* Error message: the hardware key (or its slot) was not configured for challenge-response operations. */
+"[ChallengeResponseError] slotNotConfigured" = "하드웨어 키가 도전-응답 작업에 사용되도록 구성되지 않았습니다.";
+
+/* Progress status */
+"[Cipher/Progress] Decrypting" = "복호화 중";
+
+/* Progress status */
+"[Cipher/Progress] Encrypting" = "암호화 중";
+
+/* Action copy some named value to clipboard. For example: `Copy Password`. [valueName: String] */
+"[Clipboard/Copy/namedValue]" = "%@ 복사";
+
+/* Notification: an item has been copied to clipboard */
+"[Clipboard/Copy/notification]" = "복사됨";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES decryption error (code %d)" = "AES 복호화 오류 (코드 %d)";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES encryption error (code %d)" = "AES 암호화 오류 (코드 %d)";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES initialization error (code %d)" = "AES 초기화 오류 (코드 %d)";
+
+/* Error message about Argon2 hashing function. [errorCode: Int] */
+"[CryptoError] Argon2 hashing error (code %d)" = "Argon2 해싱 오류 (코드 %d)";
+
+/* Error message about PKCS7 padding. [errorCode: Int] */
+"[CryptoError] Invalid data padding (code %d). File corrupt?" = "유효하지 않은 데이터 패딩 (코드 %d). 손상된 파일인 것 같습니다.";
+
+/* Error message about key derivation function (KDF) parameters. [kdfName: String, paramName: String] */
+"[CryptoError] Invalid KDF parameter: %@ - %@. File corrupt?" = "유효하지 않은 KDF 파라미터: %1$@ - %2$@. 손상된 파일인 것 같습니다.";
+
+/* Error message about random number generator. [errorCode: Int] */
+"[CryptoError] Random number generator error (code %d)" = "랜덤 숫자 생성기 오류 (코드 %d)";
+
+/* Error message about Twofish cipher. [errorCode: Int] */
+"[CryptoError] Twofish cipher error (code %d)" = "Twofish 사이퍼 오류 (코드 %d)";
+
+/* Warning when trying to add a random file as a database. [fileName: String] */
+"[Database/Add] Selected file \"%@\" does not look like a database." = "선택한 파일 “%@“은(는) 데이터베이스 파일이 아닌 것 같습니다.";
+
+/* Action/button to create a new database */
+"[Database/Create/action] Create Database" = "데이터베이스 만들기";
+
+/* Action: add/import an image as a custom icon */
+"[Database/CustomIcon/add]" = "사용자 지정 아이콘 추가";
+
+/* Action: delete all custom icons */
+"[Database/CustomIcon/deleteAll]" = "모두 삭제";
+
+/* Message to confirm deletion of a database file. (This deletes the file itself) */
+"[Database/Delete/Confirm/text] Delete database file?\n Make sure you have a backup." = "데이터베이스 파일을 삭제하시겠습니까?\n 백업을 생성해뒀는지 확인해주세요.";
+
+/* Parameter name in database encryption settings. This is a term, see https://en.wikipedia.org/wiki/Key_derivation_function. Example: 'Key Derivation Function: Argon2' */
+"[Database/EncryptionSettings/kdf]" = "키 유도 함수";
+
+/* Title of the database picker list */
+"[Database/List/title]" = "데이터베이스";
+
+/* Error message */
+"[Database/Load/Error] Cannot find database file" = "데이터베이스 파일을 찾을 수 없습니다";
+
+/* Error message */
+"[Database/Load/Error] Cannot find key file" = "키 파일을 찾을 수 없습니다";
+
+/* Error message */
+"[Database/Load/Error] Cannot open database file" = "데이터베이스 파일을 열 수 없습니다";
+
+/* Error message */
+"[Database/Load/Error] Cannot open key file" = "키 파일을 열 수 없습니다";
+
+/* Error shown when both master password and key file are empty */
+"[Database/Load/Error] Please provide at least a password or a key file" = "패스워드나 키 파일을 제공해주시기 바랍니다.";
+
+/* Error message */
+"[Database/Load/Error] Unrecognized database format" = "데이터베이스 포맷이 인식되지 않음";
+
+/* Message shown if current database cannot be edited */
+"[Database/Loading/ReadOnly/text]" = "데이터베이스가 읽기 전용입니다.";
+
+/* Status message: loading a database */
+"[Database/Loading/Status] Loading..." = "불러오는 중...";
+
+/* Action/button: change master key of a database. */
+"[Database/MasterKey/Change/action]" = "마스터 키 변경";
+
+/* Notification after changing database master key */
+"[Database/MasterKey/changed] Master key successfully changed" = "마스터 키가 성공적으로 변경되었습니다";
+
+/* A warning shown when changing database password. Is preceded with `Remember your database password`. */
+"[Database/MasterKey/RememberYourPassword/text]" = "패스워드를 잊어버리면 더 이상 데이터에 접근할 수 없게 됩니다. 패스워드를 리셋할 수 있는 방법은 없습니다.";
+
+/* Imperative/recommendation: title of a warning when changing database password. */
+"[Database/MasterKey/RememberYourPassword/title]" = "데이터베이스 패스워드를 기억해두세요!";
+
+/* Glossary term: noun, a master key for encrypting the database */
+"[Database/MasterKey/title]" = "마스터 키";
+
+/* Action/button */
+"[Database/Open/action] Open Database" = "데이터베이스 열기";
+
+/* Action/button to lock current database (the next time, it will ask for the master key). */
+"[Database/Opened/action] Lock Database" = "데이터베이스 잠그기";
+
+/* Action: lock database */
+"[Database/Opened/Warning/action] Close Database" = "데이터베이스 닫기";
+
+/* Action: ignore warnings and proceed to work with the database */
+"[Database/Opened/Warning/action] Ignore and Continue" = "무시하고 계속하기";
+
+/* Status message: name of the app that was last to write/create the database file. [lastUsedAppName: String] */
+"[Database/Opened/Warning/lastEdited] Database was last edited by: %@" = "데이터베이스 최종 편집 앱/프로그램: %@";
+
+/* Title of a warning message, shown after opening a problematic database */
+"[Database/Opened/Warning/title] Your database is ready, but there was an issue." = "데이터베이스가 준비되었지만, 문제가 있습니다.";
+
+/* Progress status: finished loading database */
+"[Database/Progress] Done" = "완료";
+
+/* Progress status */
+"[Database/Progress] Loading key file..." = "키 파일 불러오는 중...";
+
+/* Database loading status: fetching the database file from disk/cloud */
+"[Database/Progress/downloading]" = "데이터베이스 파일 다운로드 중...";
+
+/* Database saving status: making a local backup copy of the database */
+"[Database/Progress/makingDatabaseBackup]" = "백업 파일 생성 중...";
+
+/* Progress status */
+"[Database/Progress/resolving]" = "저장 공간 제공자 연결 중...";
+
+/* Database loading/saving status: replacing field references with their values */
+"[Database/Progress/resolvingFieldReferences]" = "필드 레퍼런스 분석 중…";
+
+/* Message to confirm removal of database file from the app. (This keeps the file, but removes its reference from the app.) */
+"[Database/Remove/Confirm/text] Remove database from the list?\n The file will remain intact and you can add it again later." = "데이터베이스를 목록에서 제거하시겠습니까?\n 원본 파일은 삭제되지 않으며, 나중에 목록에 다시 추가할 수 있습니다.";
+
+/* Action/button to save the current database. */
+"[Database/Save/action] Save Database" = "데이터베이스 저장";
+
+/* Status message: finished saving a database */
+"[Database/Saving/Status] Done" = "완료";
+
+/* Status message: saving a database */
+"[Database/Saving/Status] Saving..." = "저장 중...";
+
+/* Action/button to switch from current to some other database. */
+"[Database/Switch/action]" = "데이터베이스 전환";
+
+/* Explanation of the database sync conflict `Cancel` option. */
+"[Database/SyncConflict/Cancel/description]" = "저장을 중단하고 기기의 파일을 보존합니다.";
+
+/* Title: the current (on-server) database version in case of sync conflict. */
+"[Database/SyncConflict/currentVersion]" = "서버에 저장된 현재 버전";
+
+/* Message shown in case of database sync conflict. */
+"[Database/SyncConflict/description]" = "데이터베이스가 KeePassium에 불러들인 이후에 변경되었습니다.";
+
+/* Title: the loaded (on-device) database version in case of sync conflict. */
+"[Database/SyncConflict/loadedVersion]" = "기기에 저장된 버전";
+
+/* Action: combine changes in two conflicting databases. */
+"[Database/SyncConflict/Merge/action]" = "병합";
+
+/* Explanation of the database sync conflict `Merge` option. */
+"[Database/SyncConflict/Merge/description]" = "저장하기 전에 변경 사항을 합칩니다.";
+
+/* Explanation of the database sync conflict `Overwrite` option. */
+"[Database/SyncConflict/Overwrite/description]" = "기기에 저장된 버전을 덮어씁니다.";
+
+/* Explanation of the database sync conflict `Save as` option. */
+"[Database/SyncConflict/SaveAs/description]" = "다른 이름의 파일로 변경 사항을 저장합니다.";
+
+/* Title of a message shown when saving to a database that has already been modified elsewhere. */
+"[Database/SyncConflict/title]" = "동기화 충돌";
+
+/* Error message */
+"[Database/Unlock/Error] Failed to open key file" = "키 파일을 열 수 없습니다";
+
+/* Error message */
+"[Database/Unlock/Error] Password and key file are both empty." = "패스워드와 키 파일 항목이 공란입니다.";
+
+/* Message shown when user enters an invalid database password */
+"[Database/Unlock/wrongPassword/question]" = "암호를 잊으셨습니까?";
+
+/* Error message */
+"[Database1/FormatError] Database file is corrupted." = "데이터베이스 파일이 손상되었습니다.";
+
+/* Error message [fieldName: String] */
+"[Database1/FormatError] Error parsing field %@. Corrupted database file?" = "필드 %@ 해석 오류. 손상된 데이터베이스 파일인 것 같습니다.";
+
+/* Error message */
+"[Database1/FormatError] Found an entry outside any group. Corrupted DB file?" = "어떠한 그룹에도 속하지 않은 항목 발견. 손상된 데이터베이스 파일인 것 같습니다.";
+
+/* Error message */
+"[Database1/FormatError] Unexpected end of file. Corrupted database file?" = "예상되지 않은 파일의 끝. 손상된 데이터베이스 파일인 것 같습니다.";
+
+/* Error message when reading database header */
+"[Database1/Header1/Error] Header reading error. DB file corrupt?" = "헤더 읽기 오류. 손상된 데이터베이스 파일인 것 같습니다.";
+
+/* Error message. [flagsHexString: String] */
+"[Database1/Header1/Error] Unsupported cipher. (Code: %@)" = "지원되지 않는 사이퍼입니다. (코드: %@)";
+
+/* Error message when opening a database. [version: String] */
+"[Database1/Header1/Error] Unsupported database format version: %@." = "지원되지 않는 데이터베이스 포맷 버전: %@.";
+
+/* Error message when opening a database */
+"[Database1/Header1/Error] Wrong file signature. Not a KeePass database?" = "파일 시그니처가 잘못되었습니다. KeePass 데이터베이스가 맞는지 확인해주세요.";
+
+/* Status message: collecting database items into a single package */
+"[Database1/Progress] Packing the content" = "콘텐츠 패키징 중";
+
+/* Status message: processing the content of a database */
+"[Database1/Progress] Parsing content" = "콘텐츠 구문 분석 중";
+
+/* Name of a group which contains deleted entries */
+"[Database2/backupGroupName] Recycle Bin" = "삭제한 항목";
+
+/* Error message. Parsing refers to the analysis/understanding of file content. [reason: String] */
+"[Database2/FormatError] Cannot parse database. %@" = "데이터베이스를 구문 분석할 수 없습니다. %@";
+
+/* Error message [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (block %d has negative size)" = "손상된 데이터베이스 파일 (블록 %d이(가) 음수 크기임)";
+
+/* Error message: hash(checksum) of a data block is wrong. [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (hash mismatch in block %d)" = "손상된 데이터베이스 파일 (블록 %d에서 해시 불일치)";
+
+/* Error message: HMAC value (kind of checksum) of a data block is wrong. [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (HMAC mismatch in block %d)" = "손상된 데이터베이스 파일 (블록 %d에서 HMAC 불일치)";
+
+/* Error message about Gzip compression algorithm. [reason: String] */
+"[Database2/FormatError] Gzip error: %@" = "Gzip 오류: %@";
+
+/* Error message: wrong ID of a data block */
+"[Database2/FormatError] Unexpected block ID." = "예상되지 않은 블록 ID입니다.";
+
+/* Error message */
+"[Database2/FormatError] Unexpected end of file. Corrupted file?" = "예상되지 않은 파일의 끝. 손상된 파일인 것 같습니다.";
+
+/* Error message when saving a database. [reason: String] */
+"[Database2/Header2/Error] Failed to uncompress attachment data: %@" = "첨부 파일 데이터 압축 해제 실패: %@";
+
+/* Error message, with the name of problematic field. [fieldName: String] */
+"[Database2/Header2/Error] Header field %@ is corrupted." = "헤더 필드 %@가 손상되었습니다.";
+
+/* Error message */
+"[Database2/Header2/Error] Header hash mismatch. DB file corrupt?" = "헤더 해시 불일치. 손상된 데이터베이스 파일인 것 같습니다.";
+
+/* Error message. HMAC = https://en.wikipedia.org/wiki/HMAC */
+"[Database2/Header2/Error] Header HMAC mismatch. DB file corrupt?" = "헤더 HMAC 불일치. 손상된 데이터베이스 파일인 것 같습니다.";
+
+/* Error message when reading database header */
+"[Database2/Header2/Error] Header reading error. DB file corrupt?" = "헤더 읽기 오류. 손상된 데이터베이스 파일인 것 같습니다.";
+
+/* Error message when opening a database */
+"[Database2/Header2/Error] Unknown compression algorithm." = "알 수 없는 압축 알고리즘입니다.";
+
+/* Error message. [uuidHexString: String] */
+"[Database2/Header2/Error] Unsupported data cipher: %@" = "지원되지 않는 데이터 사이퍼: %@";
+
+/* Error message when opening a database. [version: String] */
+"[Database2/Header2/Error] Unsupported database format version: %@." = "지원되지 않는 데이터베이스 포맷 버전: %@.";
+
+/* Error message when opening a database. [id: UInt32] */
+"[Database2/Header2/Error] Unsupported inner stream cipher (ID %d)" = "지원되지 않는 내부 스트림 사이퍼 (ID %d)";
+
+/* Error message about Key Derivation Function. [uuidString: String] */
+"[Database2/Header2/Error] Unsupported KDF: %@" = "지원되지 않는 KDF: %@";
+
+/* Error message when opening a database */
+"[Database2/Header2/Error] Wrong file signature. Not a KeePass database?" = "파일 시그니처가 잘못되었습니다. KeePass 데이터베이스가 맞는지 확인해주세요.";
+
+/* Error message about Gzip compression algorithm. [errorMessage: String] */
+"[Database2/Loading/Error] Error unpacking database: %@" = "데이터베이스 패키징 해제 중 오류: %@";
+
+/* A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String] */
+"[Database2/Loading/Warning/missingBinaries]" = "일부 항목의 첨부 파일의 데이터가 발견되지 않았습니다. 이는 마지막으로 사용한 앱(%1$@)에 의해 데이터베이스가 손상된 것일 수 있습니다. KeePassium은 이 데이터를 복구할 수는 없지만, 첨부 파일을 비운 채로 보존할 것입니다. 사용자는 백업본을 이용해 데이터베이스를 복원해야 합니다. \n\n데이터가 발견되지 않은 첨부 파일: %2$@";
+
+/* A warning about nameless attachments, shown after loading the database. [listOfEntryNames: String] */
+"[Database2/Loading/Warning/namelessAttachments]" = "일부 항목에서 이름이 없는 첨부 파일을 발견했습니다. 데이터베이스가 손상되었을 수 있습니다.\n\n 다음 항목에 첨부된 파일과 첨부 파일의 기록을 확인해 보시기 바랍니다. : %@";
+
+/* A warning about misformatted custom fields after loading the database. [entryPaths: String] */
+"[Database2/Loading/Warning/namelessCustomFields]" = "일부 항목에 이름이 없는 사용자 지정 필드가 발견되었습니다. 데이터베이스가 손상되었을 수 있습니다. 다음 항목을 확인해 보시기 바랍니다. :\n\n%@";
+
+/* A warning about unused attachments after loading the database. [lastUsedAppName: String] */
+"[Database2/Loading/Warning/unusedAttachments]" = "이 데이터베이스는 어떠한 항목에도 포함되지 않은 첨부 파일을 포함하고 있습니다. 대다수의 경우 마지막으로 사용한 앱(%@)에서 “잊혀진” 것이지만, 데이터 손상의 지표일 수도 있습니다. \n데이터베이스에 변경 사항이 생길 때마다 백업본을 만들어두는 것을 잊지 마세요.";
+
+/* Progress bar status */
+"[Database2/Progress] Loading database" = "데이터베이스 불러오는 중";
+
+/* Progress bar status */
+"[Database2/Progress] Reading database content" = "데이터베이스 콘텐츠 읽는 중";
+
+/* Progress bar status */
+"[Database2/Progress] Writing encrypted blocks" = "압호화된 블럭 작성 중";
+
+/* Progress bar status: un-zipping the database content */
+"[Database2/Progress/decompressing]" = "데이터베이스 압축 해제 중";
+
+/* Progress bar status */
+"[Database2/Progress/integrityCheck]" = "무결성 확인 중";
+
+/* Progress bar status: parsing decrypted XML content */
+"[Database2/Progress/parsingXML]" = "데이터베이스 구문 분석 중";
+
+/* Error message while saving a database. [errorDescription: String] */
+"[Database2/Saving/Error] Data compression error: %@" = "데이터 압축 오류: %@";
+
+/* Error message while saving a database. [errorDescription: String] */
+"[Database2/Saving/Error] Encryption error: %@" = "암호화 오류: %@";
+
+/* Error message about XML parsing. [value: String, tag: String] */
+"[Database2/Xml2/ParsingError] Malformed value '%@' in %@" = "%2$@에서 잘못된 값 ‘%1$@’";
+
+/* Error message about XML parsing. [tag: String] */
+"[Database2/Xml2/ParsingError] Nil value in %@" = "%@에 nil 값";
+
+/* Error message about XML parsing. [actualTag: String] */
+"[Database2/Xml2/ParsingError] Unexpected tag '%@'" = "예상되지 않은 태그 ‘%@‘";
+
+/* Error message about XML parsing. [actualTag: String, expectedTag: String] */
+"[Database2/Xml2/ParsingError] Unexpected tag '%@' (instead of '%@')" = "예상되지 않은 태그 ‘%1$@’ (‘%2$@‘이(가) 예상됨)";
+
+/* Generic error while parsing XML. [errorDetails: String] */
+"[Database2/Xml2/ParsingError] XML error: %@" = "XML 오류: %@";
+
+/* Error message while opening a database */
+"[DatabaseError] Cannot open database" = "데이터베이스를 열 수 없습니다";
+
+/* Error message while saving a database */
+"[DatabaseError] Cannot save database" = "데이터베이스를 저장할 수 없습니다";
+
+/* Error message: user provided a wrong master key for decryption. */
+"[DatabaseError] Invalid password or key file" = "잘못된 비밀번호 또는 키 파일입니다";
+
+/* Title of the diagnostic info screen */
+"[DiagLog/title]" = "진단 로그";
+
+/* Notification/confirmation message */
+"[Diagnostics] Diagnostic log has been copied to clipboard." = "진단 로그가 클립보드에 복사되었습니다.";
+
+/* Action: select a different icon for an item */
+"[EditEntry/Icon/change]" = "아이콘 변경";
+
+/* Action: choose a username from a list */
+"[EditEntry/UserName/choose]" = "선택";
+
+/* Action/button to add a file to entry attachments */
+"[Entry/Attachment/add]" = "파일 추가";
+
+/* Action/button to pick a file from a list */
+"[Entry/Attachment/chooseFile]" = "파일 선택";
+
+/* Action/button to select an (existing) photo from Photo Library */
+"[Entry/Attachment/choosePhoto]" = "사진 선택";
+
+/* Default name for a photo attachment */
+"[Entry/Attachment/Photo/defaultName]" = "사진";
+
+/* Action/button to take a new photo from camera */
+"[Entry/Attachment/takePhoto]" = "사진 촬영";
+
+/* Action to preview one or several attached documents or images */
+"[Entry/Attachments/preview]" = "미리 보기";
+
+/* Action/button to create a new entry in the current group */
+"[Entry/Create/action] Create Entry" = "항목 만들기";
+
+/* Action/button to modify an entry */
+"[Entry/Edit/action]" = "항목 편집";
+
+/* Default name of a newly created entry field */
+"[Entry/Edit/CreateField/defaultName] Field Name" = "필드 이름";
+
+/* Name of an entry field */
+"[Entry/Field/name] Notes" = "메모";
+
+/* Name of an entry field */
+"[Entry/Field/name] Password" = "패스워드";
+
+/* Name of an entry field */
+"[Entry/Field/name] Title" = "제목";
+
+/* Name of an entry field */
+"[Entry/Field/name] URL" = "URL";
+
+/* Name of an entry field */
+"[Entry/Field/name] User Name" = "사용자 이름";
+
+/* Status message: loading file to be attached to an entry */
+"[Entry/Files/Add] Loading attachment file" = "첨부 파일 불러오는 중";
+
+/* Title of a field with entry creation date and time */
+"[Entry/History] Creation Date" = "생성 일자";
+
+/* Title of a field with date and time when the entry will no longer be valid. 'Never' is also a possible value */
+"[Entry/History] Expiry Date" = "만료 일자";
+
+/* Title of a field with date and time when the entry was last accessed/viewed */
+"[Entry/History] Last Access Date" = "마지막 접근 일자";
+
+/* Title of a field with entry's last modification date and time */
+"[Entry/History] Last Modification Date" = "마지막 수정 일자";
+
+/* Title of a list with previous versions/revisions of an entry. */
+"[Entry/History] Previous Versions" = "이전 버전";
+
+/* Expiry Date of an entry which does not expire. */
+"[Entry/History/ExpiryDate] Never" = "잠그지 않음";
+
+/* Default title of a new entry */
+"[Entry/New/defaultTitle] New Entry" = "새로운 항목";
+
+/* Glossary term: noun, an entry in database. */
+"[Entry/title]" = "항목";
+
+/* Warning shown when opening files from Recycle Bin location. Translation of 'Recently Deleted' should match that in the Files app. [fileName: String] */
+"[File/In Trash/warning]" = "’%@‘은(는) ‘최근 삭제된 항목’에 있으며 곧 삭제될 것입니다. 데이터를 보존하려면 파일을 영구적인 위치로 이동해주시기 바랍니다.";
+
+/* A suggestion shown after specific file errors (either databases or key files). */
+"[File/PermissionDenied] Try to remove the file from the app, then add it again." = "파일을 앱에서 제거한 후, 다시 추가해보세요.";
+
+/* Action: re-add (a broken) database or key file to the app. */
+"[File/Re-add/title]" = "파일을 다시 추가하세요";
+
+/* Notification when user opens an in-app backup database. */
+"[File/TemporaryBackup/warning]" = "임시 백업 데이터베이스입니다. 추후 경고 없이 자동으로 삭제될 수 있으니, 사용자의 메인 데이터베이스로 사용하지 마세요.";
+
+/* Error message: storage provider app was logged out or uninstalled. */
+"[FileAccessError/FileProvider/NotFound/generic]" = "저장 공간 제공자를 현재 사용할 수 없습니다. 앱이 설치되어 있는지, 또는 사용자 계정에 로그인되어 있는지 확인해주세요.";
+
+/* Error message: storage provider app was logged out or uninstalled [fileProviderName: String]. */
+"[FileAccessError/FileProvider/NotFound/other]" = "%@을(를) 현재 사용할 수 없습니다. 앱이 설치되어 있는지, 또는 사용자 계정에 로그인되어 있는지 확인해주세요.";
+
+/* Error message: the required network drive is not connected. */
+"[FileAccessError/FileProvider/NotFound/smbShare]" = "네트워크 저장 공간이 연결되어 있지 않습니다.";
+
+/* Error message: there is no USB drive connected to the device. */
+"[FileAccessError/FileProvider/NotFound/usbDrive]" = "USB 드라이브가 연결되어 있지 않습니다.";
+
+/* Error message shown when there's internal inconsistency in KeePassium. */
+"[FileAccessError/internalError]" = "내부 KeePassium 오류. 개발자에게 오류 내용을 알려주세요.";
+
+/* Error message: storage provider app (e.g. Google Drive) does not respond to requests. */
+"[FileAccessError/NoResponse/genericFileProvider]" = "저장 공간 제공자가 응답이 없습니다.";
+
+/* Error message: file provider does not respond to requests. For example: `Google Drive does not respond.` */
+"[FileAccessError/NoResponse/knownFileProvider]" = "%@이(가) 응답이 없습니다.";
+
+/* Error message: file provider does not support write operations. For example: `Cannot save file (OneDrive)` */
+"[FileAccessError/NoWritePermission/title]" = "파일 저장 실패 (%@)";
+
+/* Explanation of a file writing error */
+"[FileAccessError/OneDriveReadOnly/reason]" = "Microsoft가 최근에 OneDrive의 iOS 통합을 “임시로” 읽기 전용 모드로 전환했습니다.";
+
+/* Suggestion for error recovery */
+"[FileAccessError/OneDriveReadOnly/recoverySuggestion]" = "내보내기 옵션을 사용하여 다른 위치에 파일을 저장하세요.";
+
+/* Error message: storage provider app (e.g. Google Drive) does not respond to requests (quickly enough). */
+"[FileAccessError/Timeout/genericFileProvider]" = "저장 공간 제공자가 응답이 없습니다.";
+
+/* Error message: file provider does not respond to requests (quickly enough). For example: `Google Drive does not respond` */
+"[FileAccessError/Timeout/knownFileProvider]" = "%@이(가) 응답이 없습니다.";
+
+/* Section header: file backup settings */
+"[FileInfo/Backup/header]" = "백업";
+
+/* Error message shown when the user tries to change file attributes (such as creation/modification date, backup flag, etc) */
+"[FileInfo/Error/failed to change attributes]" = "파일 속성 업데이트에 실패했습니다.";
+
+/* Field title */
+"[FileInfo/Field/title] Creation Date" = "생성 일자";
+
+/* Field title */
+"[FileInfo/Field/title] File Location" = "파일 경로";
+
+/* Field title */
+"[FileInfo/Field/title] File Name" = "파일명";
+
+/* Field title */
+"[FileInfo/Field/title] File Size" = "파일 크기";
+
+/* Field title */
+"[FileInfo/Field/title] Last Modification Date" = "마지막 수정 일자";
+
+/* Title of a field with an error message */
+"[FileInfo/Field/valueError] Error" = "오류";
+
+/* Title of a setting: is the file exluded from iCloud/iTunes backup. For example: `Exclude From Backup: <Yes>` */
+"[FileInfo/isExcludedFromBackup/title]" = "iCloud/iTunes 백업에서 제외";
+
+/* Title of a dialog with file details (name, size, dates) */
+"[FileInfo/title]" = "파일 정보";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to delete file. Reason: %@" = "파일 삭제 실패. 사유: %@";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to import file. Reason: %@" = "파일 불러오기 실패. 사유: %@";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to open file. Reason: %@" = "파일 열기 실패. 사유: %@";
+
+/* Error message: tried to import URL which does not point to a file */
+"[FileKeeper] Not a file URL" = "파일 URL이 아님";
+
+/* Localized name of the storage service: Amerigo (https://www.amerigo-app.com) */
+"[FileProvider/Amerigo/name]" = "Amerigo";
+
+/* Localized name of the storage service: Box (https://box.com) */
+"[FileProvider/Box/name]" = "Box";
+
+/* Localized name of the storage service: Boxcryptor (https://boxcryptor.com) */
+"[FileProvider/Boxcryptor/name]" = "Boxcryptor";
+
+/* Localized name of the storage service: Cryptomator (https://cryptomator.org) */
+"[FileProvider/Cryptomator/name]" = "Cryptomator";
+
+/* Localized name of the storage service: Dropbox (https://dropbox.com) */
+"[FileProvider/Dropbox/name]" = "Dropbox";
+
+/* Localized name of the storage service: FE File Explorer (https://apps.apple.com/app/fe-file-explorer-file-manager/id510282524) */
+"[FileProvider/FE File Explorer/name]" = "FE File Explorer";
+
+/* Localized name of the storage service: Google Drive (https://drive.google.com) */
+"[FileProvider/Google Drive/name]" = "Google 드라이브";
+
+/* Localized name of the storage service iCloud Drive (https://icloud.com/iclouddrive) */
+"[FileProvider/iCloud Drive/name]" = "iCloud Drive";
+
+/* Localized name of the storage service: MEGA (https://mega.nz) */
+"[FileProvider/Mega.nz/name]" = "MEGA.nz";
+
+/* Localized name of the storage service: Nextcloud (https://nextcloud.com) */
+"[FileProvider/Nextcloud/name]" = "Nextcloud";
+
+/* Localized name of the local on-device storage, as shown in the Files app. */
+"[FileProvider/On My iPad/name]" = "나의 iPad";
+
+/* Localized name of the local on-device storage, as shown in the Files app. */
+"[FileProvider/On My iPhone/name]" = "나의 iPhone";
+
+/* Localized name of the storage service: OneDrive (https://onedrive.com) */
+"[FileProvider/OneDrive/name]" = "OneDrive";
+
+/* Localized name of the storage service: ownCloud (https://owncloud.com) */
+"[FileProvider/ownCloud/name]" = "ownCloud";
+
+/* Localized name of the storage service: pCloud (https://pcloud.com) */
+"[FileProvider/pCloud/name]" = "pCloud";
+
+/* Localized name of the storage service: Proton Drive (https://proton.me/drive) */
+"[FileProvider/ProtonDrive/name]" = "Proton Drive";
+
+/* Localized name of the storage service: QNAP Qfile (https://apps.apple.com/app/qfile/id526330408) */
+"[FileProvider/qnapQFile/name]" = "Qfile";
+
+/* Localized name of the storage service: Documents by Readdle (https://apps.apple.com/app/id364901807) */
+"[FileProvider/Readdle Documents/name]" = "Documents by Readdle";
+
+/* Localized name of the storage service: Resilio Sync (https://https://apps.apple.com/us/app/id1126282325) */
+"[FileProvider/Resilio Sync/name]" = "Resilio Sync";
+
+/* Localized name of the storage app: Seafile Pro (https://apps.apple.com/us/app/seafile-pro/id639202512) */
+"[FileProvider/Seafile Pro/name]" = "Seafile Pro";
+
+/* Localized name of the storage service: SMB server (network share) via native iOS integration. */
+"[FileProvider/SMB/name]" = "SMB 서버";
+
+/* Localized name of the storage service: Stratospherix FileBrowser (https://apps.apple.com/us/app/filebrowser-document-manager/id364738545) */
+"[FileProvider/Stratospherix FileBrowser/name]" = "FileBrowser";
+
+/* Localized name of the storage service: Sync.com (https://sync.com) */
+"[FileProvider/sync.com/name]" = "Sync.com";
+
+/* Localized name of the storage service: Synology Drive (https://apps.apple.com/us/app/synology-drive/id1267275421) */
+"[FileProvider/Synology Drive/name]" = "Synology Drive";
+
+/* Localized name of the storage service: Synology DS file (https://apps.apple.com/us/app/ds-file/id416751772) */
+"[FileProvider/Synology DS file/name]" = "Synology DS file";
+
+/* Localized name of the storage service: Tresorit (https://tresorit.com) */
+"[FileProvider/Tresorit/name]" = "Tresorit";
+
+/* Localized name of the storage service: local USB drive (native iOS integration) */
+"[FileProvider/USB drive/name]" = "USB 드라이브";
+
+/* Localized name of the storage service: Yandex.Disk (https://disk.yandex.com) */
+"[FileProvider/Yandex.Disk/name]" = "Yandex.Disk";
+
+/* Title of the dialog for picking the destination group for move/copy operations */
+"[General/DestinationGroup/title] Choose a Destination" = "위치 선택";
+
+/* Action/button to cancel whatever is going on */
+"[Generic] Cancel" = "취소";
+
+/* Action/button to write an email to support */
+"[Generic] Contact Support" = "지원 요청하기";
+
+/* Action/button to write an email to support */
+"[Generic] Contact Us" = "문의하기";
+
+/* Action/button to proceed with the action */
+"[Generic] Continue" = "계속하기";
+
+/* Action/button to move an item (to another group/folder/etc) */
+"[Generic] Copy" = "복사";
+
+/* Action/button to create an item (entry, group, file — depending on context) */
+"[Generic] Create" = "생성";
+
+/* Action/button to delete an item (destroys the item/file) */
+"[Generic] Delete" = "삭제";
+
+/* Action/button to delete all relevant/selected items */
+"[Generic] Delete All" = "모두 삭제";
+
+/* Action/button to discard any unsaved changes */
+"[Generic] Discard" = "버리기";
+
+/* Action/button to close an error message. */
+"[Generic] Dismiss" = "닫기";
+
+/* Action/button to finish (editing) and keep changes */
+"[Generic] Done" = "완료";
+
+/* Action/button to edit an item */
+"[Generic] Edit" = "편집";
+
+/* Action/button to export an item to another app */
+"[Generic] Export" = "내보내기";
+
+/* Action/button to view more help/info about some topic */
+"[Generic] Learn more" = "자세히 알아보기";
+
+/* Checkbox/Button to show additional actions */
+"[Generic] More Actions" = "추가 작업";
+
+/* Action/button to move an item (to another group/folder/etc) */
+"[Generic] Move" = "이동";
+
+/* Action/button: generic OK */
+"[Generic] OK" = "확인";
+
+/* Action/button to open URL in the appropriate app (usually, web browser) */
+"[Generic] Open URL" = "URL 열기";
+
+/* Action/button to replace/overwrite an item */
+"[Generic] Overwrite" = "덮어쓰기";
+
+/* Action/button to rename an item */
+"[Generic] Rename" = "이름 바꾸기";
+
+/* Action/button to replace an item with another one */
+"[Generic] Replace" = "교체";
+
+/* Action/button to restore a backup/archived item in its original place */
+"[Generic] Restore" = "복원";
+
+/* Action/button to open Finder (macOS file manager) and highlight a given file */
+"[Generic] Reveal in Finder" = "Finder에 표시";
+
+/* Action/button to share an item with another app (AirDrop, send an email, etc) */
+"[Generic] Share" = "공유";
+
+/* Action/button to show additional information about an error or item */
+"[Generic] Show Details" = "세부 정보 보기";
+
+/* Action/button to show sensitive info as it is, in plain text (as opposed to asterisks) */
+"[Generic] Show In Plain Text" = "평문 텍스트로 표시";
+
+/* Checkbox/Button to show a text field in its full size */
+"[Generic] Show more" = "더 보기";
+
+/* Action/button to skip the current step and proceed with the next one */
+"[Generic] Skip" = "건너뛰기";
+
+/* Name of the Recently Deleted (Recycle Bin) directory, as shown in the Files app */
+"[Generic/Directory/Recently Deleted/name]" = "최근 삭제됨";
+
+/* Title of a notification when the user tries to close a document with unsaved changes */
+"[Generic/Edit/Aborting/title] There are unsaved changes" = "저장되지 않은 변경 사항이 있습니다";
+
+/* Action/button to delete a file (destroys the file forever) */
+"[Generic/File] Delete" = "삭제";
+
+/* Action/button to remove a file from the app (the file remains, but the app forgets about it) */
+"[Generic/File] Remove" = "제거";
+
+/* Action/button to save data to a different file */
+"[Generic/File/Save as]" = "다른 이름으로 저장…";
+
+/* Title of an error message about file export */
+"[Generic/File/title] Export Error" = "내보내기 오류";
+
+/* Message shown when trying to copy into an existing file. */
+"[Generic/File/title] File already exists" = "파일이 이미 존재합니다";
+
+/* Title of an error message about file import */
+"[Generic/File/title] Import Error" = "가져오기 오류";
+
+/* Title of a list with predefined quick-choice values (for example: 'Presets: 1 week, 1 months, 1 year') */
+"[Generic/Presets]" = "사전 설정";
+
+/* Title of a search field (a noun, not verb) */
+"[Generic/Search/title]" = "검색";
+
+/* Title of an error message notification */
+"[Generic/title] Error" = "오류";
+
+/* Title of an error message about iOS system keychain */
+"[Generic/title] Keychain Error" = "키체인 오류";
+
+/* Title of an warning message */
+"[Generic/title] Warning" = "경고";
+
+/* Title of a screen/list view configuration: sort order, visible items, etc */
+"[Generic/ViewOptions/title]" = "보기 옵션";
+
+/* VoiceOver description of a group [groupTitle: String, itemCount: Int] */
+"[Group/a11y/description]" = "%@, 그룹";
+
+/* Action/button to create a new sub-group in the current group */
+"[Group/Create/action] Create Group" = "그룹 만들기";
+
+/* Title of a form for editing a group */
+"[Group/Edit/title] Edit Group" = "그룹 편집";
+
+/* Default name of a new group */
+"[Group/New/defaultName] New Group" = "새로운 그룹";
+
+/* Title for the Notes field in group editor */
+"[Group/Notes/title]" = "메모";
+
+/* Glossary term: noun, a group in database. */
+"[Group/title]" = "그룹";
+
+/* Title of an input field for group name */
+"[GroupEditor/Name/placeholder]" = "그룹 이름";
+
+/* A notification that hardware keys (e.g. YubiKey) cannot be used in AutoFill (the OS does not allow the AutoFill to use NFC/MFI). */
+"[HardwareKey/AutoFill/NotAvailable] Hardware keys are not available in AutoFill." = "하드웨어 키는 자동 완성에서 사용할 수 없습니다.";
+
+/* Name of an input field which shows selected hardware key */
+"[HardwareKey/Field/title]" = "하드웨어 키";
+
+/* Master key/unlock option: don't use hardware keys */
+"[HardwareKey/None] No Hardware Key" = "하드웨어 키 없음";
+
+/* Title of a list with possible hardware key connections */
+"[HardwareKey/Picker/title]" = "하드웨어 키";
+
+/* Generic title of in-app help article */
+"[Help Viewer/title]" = "도움말";
+
+/* Info message for enterprise users */
+"[Intune/OrgNeedsToManage]" = "조직 데이터를 보호하려면 이 앱을 관리해야 합니다. 이 작업을 완료하려면 회사 또는 학교 계정으로 로그인하세요.";
+
+/* Notification that an archived/historical item (e.g entry) has been successfully restored */
+"[Item/History/Restored]" = "이전 버전으로 복원됨";
+
+/* Title of a list with advanced/expert-level properties of a database item (e.g. entry) */
+"[Item/Properties/Advanced/title]" = "고급";
+
+/* Title of a setting: whether the item (e.g. entry) should be considered during search. Example: 'Search: Allowed' */
+"[Item/Properties/Search/title] Search" = "검색";
+
+/* Name of an entry/group category (visual style): default one, like in KeePass */
+"[ItemCategory] Default (KeePass)" = "기본 (KeePass)";
+
+/* Title of a list with custom (user-imported) icons for groups and entries */
+"[ItemIconPicker/CustomIcons]" = "사용자 지정 아이콘";
+
+/* Title of a list with standard/default icons for groups and entries */
+"[ItemIconPicker/StandardIcons]" = "기본 아이콘";
+
+/* Status message: processing of the master key is in progress */
+"[KDF/Progress] Processing the master key" = "마스터 키 처리 중";
+
+/* Generic error message about system keychain. [errorCode: Int] */
+"[KeychainError/generic] Keychain error (code %d) " = "키체인 오류 (코드 %d) ";
+
+/* Error message about system keychain. */
+"[KeychainError/unexpectedFormat] Keychain error: unexpected data format" = "키체인 오류: 예상되지 않은 데이터 포맷";
+
+/* Action: add a key file into the app, by importing or creating one. `Key file` is a glossary term. */
+"[KeyFile/Add/action]" = "키 파일 추가";
+
+/* Message to confirm deletion of a key file. */
+"[KeyFile/Delete/Confirm/text] Delete key file?\n Make sure you have a backup." = "키 파일을 삭제하시겠습니까?\n 백업을 생성해뒀는지 확인해주세요.";
+
+/* Error message related to key file. [errorDetails: String] */
+"[KeyFile/error]" = "키 파일 오류: %@";
+
+/* Name of an input field which shows selected key file */
+"[KeyFile/Field/title]" = "키 파일";
+
+/* Title of the list with key files. */
+"[KeyFile/List/title]" = "키 파일";
+
+/* Description of the 'No Key File' option. */
+"[KeyFile/None/description]" = "패스워드만 사용";
+
+/* Title: don't use key file */
+"[KeyFile/None/title]" = "키 파일 없음";
+
+/* Message to confirm removal of a key file from the app. (This keeps the file, but removes its reference from the app.) */
+"[KeyFile/Remove/Confirm/text] Remove key file from the list?\n The file will remain intact and you can add it again later." = "키 파일을 목록에서 제거하시겠습니까?\n 원본 파일은 삭제되지 않으며, 나중에 목록에 다시 추가할 수 있습니다.";
+
+/* Error message when the key file is misformatted or damaged */
+"[KeyFileError/Corrupted/title]" = "손상된 키 파일입니다";
+
+/* Error message: unsupported/unknown format of a key file */
+"[KeyFileError/UnsupportedFormat/title]" = "지원되지 않는 키 파일 포맷입니다";
+
+/* Menu item: show information about file (name, size, dates) */
+"[Menu/FileInfo/title]" = "파일 정보";
+
+/* Menu title: app settings */
+"[Menu/Settings/title]" = "설정";
+
+/* Suggestion/hint on how to fix an accompanying error. */
+"[Org/ContactYourAdmin]" = "IT 관리자에게 문의하세요.";
+
+/* Error shown when scanned QR code cannot be used for OTP */
+"[OTP/Scan/InvalidData]" = "이 QR 코드는 OTP 설정에 사용되기에 적합하지 않습니다.";
+
+/* Message to confirm user intentions */
+"[OTP/Scan/OverwriteWarning]" = "일회용 비밀번호가 이미 이 항목에 구성되어 있습니다. 덮어쓰시겠습니까?";
+
+/* Call for action. Acronym `OTP` should not be translated. */
+"[OTP/Setup]" = "일회용 비밀번호(OTP) 설정";
+
+/* Explanation of the premium feature */
+"[Premium/Benefits/HardwareKeys/details]" = "YubiKey와 같은 하드웨어 키로 비밀을 지키세요.";
+
+/* Title of a premium feature */
+"[Premium/Benefits/HardwareKeys/title]" = "하드웨어 키 사용";
+
+/* Explanation of the premium feature */
+"[Premium/Benefits/MultiDB/details]" = "다양한 데이터베이스를 추가하고 데이터베이스 간에 빨리 전환할 수 있습니다.";
+
+/* Title of a premium feature */
+"[Premium/Benefits/MultiDB/title]" = "팀과 데이터베이스 동기화";
+
+/* List of premium benefits/advantages */
+"[Premium/Benefits/Negative/header] " = "놓치고 있는 기능";
+
+/* List of premium benefits/advantages */
+"[Premium/Benefits/Positive/header] " = "얻을 수 있는 기능";
+
+/* Call to action */
+"[Premium/CallToAction/buyNow]" = "지금 구매";
+
+/* Call to action: continue using the free version */
+"[Premium/CallToAction/free]" = "계속 무료 버전 사용";
+
+/* Call to action: start free trial */
+"[Premium/CallToAction/startTrial]" = "무료로 사용해보기";
+
+/* Call to action: upgrade to premium */
+"[Premium/CallToAction/upgradeNow]" = "지금 업그레이드";
+
+/* Action: open AppStore subscription management page */
+"[Premium/ManageSubscriptions/action]" = "구독 관리";
+
+/* Name of the permanent/never-ending license. */
+"[Premium/perpetualLicense]" = "영구 라이선스";
+
+/* [formattedDate: String] */
+"[Premium/PerpetualLicense/status]" = "%@보다 이전의 모든 버전에 대한 영구 라이선스를 소유하고 있습니다.";
+
+/* What's included in a price plan: 1 year of support via email */
+"[Premium/Price Plan/Conditions/1 year email support]" = "1년간 이메일 지원 제공";
+
+/* What's included in a price plan */
+"[Premium/Price Plan/Conditions/all premium features]" = "모든 프리미엄 기능";
+
+/* What's included in a free plan: support via forums (as opposed to email support) */
+"[Premium/Price Plan/Conditions/community support]" = "사용자 지원: 온라인 포럼";
+
+/* What's included in a price plan: existing premium features only (as opposed to `current + future`) */
+"[Premium/Price Plan/Conditions/current premium features]" = "현재 프리미엄 기능";
+
+/* What's included in a price plan: support via email */
+"[Premium/Price Plan/Conditions/email support]" = "사용자 지원: 이메일";
+
+/* Family Sharing programme. Translation must match Apple's: https://www.apple.com/family-sharing/ */
+"[Premium/Price Plan/Conditions/family sharing]" = "가족 공유";
+
+/* What's included in a free plan: reminders that the version is free */
+"[Premium/Price Plan/Conditions/freemium reminders]" = "프리미엄(Freemium) 알리미";
+
+/* Upgrade conditions for current-version premium purchase. */
+"[Premium/Price Plan/Conditions/full price upgrade]" = "향후 추가될 프리미엄 기능은 정가에 새로 구매할 것이 요구될 수 있습니다.";
+
+/* What's included in a price plan: upcoming premium features (as opposed to `current only`) */
+"[Premium/Price Plan/Conditions/future premium features]" = "향후 프리미엄 기능들";
+
+/* What's included in a price plan. Please leave `perpetual fallback license` in English. */
+"[Premium/Price Plan/Conditions/perpetual fallback]" = "렌탈 라이선스 (영구 라이선스 실패 대비용)";
+
+/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://keepassium.com/articles/perpetual-fallback-license/ */
+"[Premium/Price Plan/Conditions/subscription as purchase]" = "구매로서의 구독";
+
+/* What's included in a price plan */
+"[Premium/Price Plan/Conditions/updates and bug fixes]" = "업데이트 및 버그 수정";
+
+/* Price of the free pricing plan */
+"[Premium/Price Plan/Free/price]" = "무료";
+
+/* Name of the free pricing plan */
+"[Premium/Price Plan/Free/title]" = "무료";
+
+/* Marks the default pricing plan */
+"[Premium/Price Plan/popular]" = "인기";
+
+/* Subscription conditions */
+"[Premium/Subscription/Legal/text]" = "구매가 확인되면 사용자의 Apple ID 계정을 통해 지불됩니다.\n\n구독은 현재 구독 기간이 종료되기 최소 24시간 전에 취소하지 않는 한 자동으로 갱신됩니다. 자동 갱신 시 현재 구독 기간이 종료되기 24시간 전 이내에 지불이 발생합니다.\n\n구독 구매 후, App Store의 계정 설정에서 구독을 관리하고 취소할 수 있습니다.";
+
+/* Trial conditions. For example `30 days free, then $1 per month` */
+"[Premium/Trial/trial then price]" = "%1$@ 무료 사용 후 %2$@";
+
+/* Error message: AppStore returned no available in-app purchase options */
+"[Premium/Upgrade] Hmm, there are no upgrades available. This should not happen, please contact support." = "가능한 업그레이드가 없습니다. 이는 일어나서는 안되는 상황입니다. 개발자에게 문의해주시기 바랍니다.";
+
+/* Action/button to start choosing premium versions and possibly buying one */
+"[Premium/Upgrade/action] Upgrade to Premium" = "프리미엄으로 업그레이드";
+
+/* Message shown after buying a lifetime version. */
+"[Premium/Upgrade/cancelOngoingSubscription]" = "이전에 구매한 구독이 있는지 확인해 주시기 바랍니다.";
+
+/* Message shown when in-app purchase is deferred until approval (parental or corporate). */
+"[Premium/Upgrade/Deferred/text] Thank you! You can use KeePassium while purchase is awaiting approval." = "감사합니다! 구매가 확정되기 전까지 계속해서 KeePassium을 사용하실 수 있습니다.";
+
+/* Product price for monthly premium subscription. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ / month" = "%@ / 월";
+
+/* Product price for annual premium subscription. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ / year" = "%@ / 년";
+
+/* Product price for once-and-forever premium. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ once" = "%@ 1회 지불";
+
+/* Equivalent monthly price for an annual subscription. For example: `$12/year ≈ $1 / month` */
+"[Premium/Upgrade/price] around %@ / month" = "≈ %@ / 월";
+
+/* Status message when downloading available in-app purchases */
+"[Premium/Upgrade/Progress] Contacting AppStore..." = "App Store에 연결 중...";
+
+/* Status: in-app purchase started */
+"[Premium/Upgrade/Progress] Purchasing..." = "결제 중...";
+
+/* Text of the message shown after in-app purchase was successfully restored */
+"[Premium/Upgrade/Restored/text] Upgrade successful, enjoy the app!" = "업그레이드가 성공적으로 완료되었습니다!";
+
+/* Title of the message shown after in-app purchase was successfully restored */
+"[Premium/Upgrade/Restored/title] Purchase Restored" = "구매 내역 복원됨";
+
+/* Text of an error message: there were no in-app purchases that can be restored */
+"[Premium/Upgrade/RestoreFailed/text] No previous purchase could be restored." = "복구할 수 있는 이전 구매 내역이 없습니다.";
+
+/* Title of an error message: there were no in-app purchases that can be restored */
+"[Premium/Upgrade/RestoreFailed/title] Sorry" = "죄송합니다.";
+
+/* Message shown after buying or subscribing. */
+"[Premium/Upgrade/Success/thankYou]" = "구매해주셔서 감사합니다!";
+
+/* A generic description of a premium feature */
+"[PremiumFeature/Generic/description]" = "프리미엄 버전으로 업그레이드하고 KeePassium의 모든 기능을 사용해 보세요.";
+
+/* A generic title of a premium feature */
+"[PremiumFeature/Generic/title]" = "프리미엄 기능";
+
+/* Description/advertisement for the `Hardware Keys` premium feature */
+"[PremiumFeature/HardwareKeys/description]" = "프리미엄 버전에서 하드웨어 키(YubiKey)로 보안을 강화하세요.";
+
+/* Title of a premium feature: ability use hardware keys (e.g. YubiKey) for encryption (In Title Case) */
+"[PremiumFeature/HardwareKeys/title] Hardware Keys" = "하드웨어 키";
+
+/* Description/advertisement for the `Multiple Databases` premium feature */
+"[PremiumFeature/MultiDB/description] Easily switch between databases in the premium version." = "프리미엄 버전에서 데이터베이스 간에 쉽게 전환할 수 있습니다.";
+
+/* Title of a premium feature: ability to use multiple databases (In Title Case) */
+"[PremiumFeature/MultiDB/title] Multiple Databases" = "다중 데이터베이스";
+
+/* A brief summary of the privacy policy (for offline mode) */
+"[PrivacyPolicy/Offline/text]" = "KeePassium은 개인 정보나 통계 데이터를 수집하지 않으며, 타인 혹은 타 단체에 공유하지도 않습니다.";
+
+/* Section: privacy policy */
+"[PrivacyPolicy/title]" = "개인정보처리방침";
+
+/* Explanation/notification when a long-running operation was cancelled by user */
+"[Progress/CancellationReason] Cancelled by user" = "사용자에 의해 취소됨";
+
+/* Error message when a long-running operation was cancelled due to the lack of free memory (RAM). */
+"[Progress/CancellationReason/lowMemory]" = "메모리가 부족하여 계속 진행할 수 없습니다.\n이 현상은 규모가 큰 데이터베이스를 처리할 때나 Argon2 메모리 파라미터와 같은 데이터베이스 설정을 과도하게 설정한 경우 발생할 수 있습니다.";
+
+/* Name of a predefined OneDrive folder which contains user's own files */
+"[RemoteConnection/OneDrive/Folder/files]" = "파일";
+
+/* Name of an input field for entering the password again */
+"[Repeat Password/Field/title]" = "패스워드 재입력";
+
+/* Title of AutoFill settings screen */
+"[Settings/AutoFill/title]" = "자동 완성 패스워드";
+
+/* Title of a yes/no setting: whether to include backup copies in the file list */
+"[Settings/DatabaseBackup/ShowBackupFiles/title]" = "백업 파일 표시";
+
+/* Settings section: protection of databases, their keys and data inside them */
+"[Settings/DataProtection/title]" = "데이터 보호";
+
+/* An option in Group Viewer settings. Will be shown as 'Entry Subtitle: None', meanining that no entry details will be shown in any lists. */
+"[Settings/EntryListDetail/longTitle] None" = "없음";
+
+/* Title of a settings section: which entry field to show along with entry title */
+"[Settings/GroupViewer] Entry Subtitle" = "항목 요약";
+
+/* Title of a settings section: sort order of groups and entries in a list */
+"[Settings/GroupViewer] Sort Order" = "정렬 순서";
+
+/* Title of a yes/no setting */
+"[Settings/KeyFiles/Remember/title]" = "키 파일 기억하기";
+
+/* Title of list view configuration screen */
+"[Settings/ListSettings/title]" = "목록 설정";
+
+/* Setting: preserve (cache) calculated database keys */
+"[Settings/MasterKeys/CacheDerived/title]" = "파생된 암호화 키 캐싱";
+
+/* Title of a yes/no setting */
+"[Settings/MasterKeys/Remember/title]" = "마스터 키 기억하기";
+
+/* Title of the app settings screen */
+"[Settings/title]" = "설정";
+
+/* List sorting option, when no sorting is selected. Example: 'Sort by: None' */
+"[SortBy/None]" = "없음";
+
+/* Template text of a bug report email */
+"[Support/template] (Please describe the problem here)" = "(여기에 문제에 대한 설명을 작성해주세요.)";
+
+/* Call to action in the Donations screen. */
+"[TipBox/callToAction/1]" = "KeePassium이 더 좋은 앱이 될 수 있도록 도와주세요!";
+
+/* Call to action in the Donations screen. */
+"[TipBox/callToAction/2]" = "KeePassium이 더 멋진 앱이 될 수 있도록 도와주세요!";
+
+/* Call to action in the Donations screen. (free = gratis) */
+"[TipBox/callToAction/3]" = "KeePassium이 계속 무료로 유지될 수 있도록 도와주세요!";
+
+/* Text in the Donations screen. */
+"[TipBox/description/1]" = "KeePassium을 잘 사용하고 계신가요?";
+
+/* Text in the Donations screen. */
+"[TipBox/description/2]" = "KeePassium은 무료 오픈 소스 앱입니다. 사용자의 민감한 정보가 빠져나갈 구멍을 만들 수 없죠. 광고와 추적 없이 사용자를 존중합니다.";
+
+/* Text in the Donations screen. */
+"[TipBox/description/3]" = "KeePassium을 잘 사용하고 있지만 프리미엄 기능은 필요하지 않으신가요?";
+
+/* Notification after a successful donation. */
+"[TipBox/thankYou]" = "감사합니다!";
+
+/* Title of the tip box/donation screen. */
+"[TipBox/title/2]" = "기부";
+
+/* Call to action, title of the tip box/donation screen. */
+"[TipBox/title/3]" = "KeePassium 지원하기";
+
+/* Human-readable file location. The file is situated either online / in cloud storage, or on the same device, but in some other app. Example: 'File Location: Cloud storage / Another app' */
+"[URLReference/Location] Cloud storage / Another app" = "클라우드 저장소 / 기타 앱";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. 'Backup' is a dedicated directory for database backup files. Example: 'File Location: Internal backup' */
+"[URLReference/Location] Internal backup" = "내부 백업";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. 'Inbox' is a special directory for files that are being imported. Can be also 'Internal import'. Example: 'File Location: Internal inbox' */
+"[URLReference/Location] Internal inbox" = "내부 인박스";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. Example: 'File Location: Local copy' */
+"[URLReference/Location] Local copy" = "로컬 복사본";
+
+/* Call for action: insert YubiKey 5Ci to the Lightning port */
+"[YubiKey] Insert the key" = "키 삽입";
+
+/* Call for action: touch the sides of YubiKey 5Ci to continue */
+"[YubiKey] Touch the key" = "키 터치";
+
+/* Action/button to add database to the app */
+"Add Database" = "데이터베이스 추가";
+
+/* Warning message when the user tries to use a database as a key file */
+"KeePass database should not be used as key file. Please pick a different file." = "KeePass 데이터베이스 파일은 키 파일로 사용될 수 없습니다. 다른 파일을 선택해주세요.";
+

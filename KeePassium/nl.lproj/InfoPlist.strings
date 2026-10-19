@@ -1,0 +1,21 @@
+/* (No Comment) */
+"KeePass Database (kdb)" = "KeePass-database (kdb)";
+
+/* (No Comment) */
+"KeePass Database (kdbx)" = "KeePass-database (kdbx)";
+
+/* Privacy - NFC Scan Usage Description */
+"NFCReaderUsageDescription" = "KeePassium heeft toegang nodig tot NFC om te communiceren met je YubiKey.";
+
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "KeePassium heeft de camera nodig om QR-codes te scannen.";
+
+/* Privacy - Face ID Usage Description */
+"NSFaceIDUsageDescription" = "Gebruik FaceID om KeePassium te ontgrendelen";
+
+/* Privacy - Photo Library Additions Usage Description */
+"NSPhotoLibraryAddUsageDescription" = "KeePassium heeft toestemming nodig om bestanden te exporteren naar je galerij.";
+
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "KeePassium heeft toegang nodig tot geselecteerde afbeeldingen voor aangepaste pictogrammen en om QR-codes te scannen voor het instellen van OTP's.";
+

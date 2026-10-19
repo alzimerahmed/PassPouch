@@ -1,0 +1,24 @@
+/* Class = "UITableViewSection"; headerTitle = "Feedback"; ObjectID = "7bL-fQ-OUc"; Note = "Section: user feedback about the app"; */
+"7bL-fQ-OUc.headerTitle" = "피드백";
+
+/* Class = "UILabel"; text = "Do you like what you see?"; ObjectID = "AMd-x7-PDa"; Note = "First part of the 'Do you like what you see? / Leave an App Store review.\""; */
+"AMd-x7-PDa.text" = "앱을 만족스럽게 사용하고 있나요?";
+
+/* Class = "UITableViewSection"; headerTitle = "Privacy Policy"; ObjectID = "JbR-nf-D9o"; Note = "Section: privacy policy"; */
+"JbR-nf-D9o.headerTitle" = "개인정보처리방침";
+
+/* Class = "UITableViewSection"; headerTitle = "Credits"; ObjectID = "muG-xI-muo"; Note = "Section: acknowledgements and thank-you notes"; */
+"muG-xI-muo.headerTitle" = "크레딧 및 사용 라이브러리";
+
+/* Class = "UITableViewController"; title = "About"; ObjectID = "NLN-lQ-bh5"; */
+"NLN-lQ-bh5.title" = "앱 정보";
+
+/* Class = "UILabel"; text = "Contact Support"; ObjectID = "TOl-DA-gYc"; Note = "Action: contact us"; */
+"TOl-DA-gYc.text" = "지원 요청하기";
+
+/* Class = "UILabel"; text = "Leave an App Store review."; ObjectID = "uiw-Qh-pNp"; Note = "Second part of the 'Do you like what you see? / Leave an App Store review.\""; */
+"uiw-Qh-pNp.text" = "App Store에 리뷰를 작성해주세요.";
+
+/* Class = "UILabel"; text = "KeePassium"; ObjectID = "Wuj-Uw-baK"; */
+"Wuj-Uw-baK.text" = "KeePassium";
+

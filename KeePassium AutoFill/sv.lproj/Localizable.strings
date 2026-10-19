@@ -1,0 +1,111 @@
+/* Notification when user tries to set up too weak an app protection passcode. */
+"[AppLock/weakPasscodeWarning]" = "Det är lätt att gissa den här lösenkoden. Ange en starkare lösenkod.";
+
+/* Action in AutoFill: choose the entry and remember it for future use on this website. */
+"[AutoFill/AcceptAndRemember/action]" = "Godkänn och kom ihåg";
+
+/* Title of a list */
+"[AutoFill/AllEntries/title]" = "Alla poster";
+
+/* Title of AutoFill context when no context is available. Usage: `Context: Unknown` */
+"[AutoFill/Context/Empty/title]" = "Okänd";
+
+/* Title of a list with search results */
+"[AutoFill/FoundEntries/title]" = "Bästa matchningar";
+
+/* Call for action to select an entry field for filling out. */
+"[AutoFill/InsertText/select]" = "Välj fält";
+
+/* Section title for the recently used entry in AutoFill */
+"[AutoFill/RecentlyUsed/title]" = "Nyligen använd";
+
+/* Not an action, but a button to activate the same-named setting */
+"[AutoFill/RememberContext/action]" = "Kom ihåg valda poster";
+
+/* Call to action */
+"[AutoFill/RememberContext/callToAction]" = "Förbättra förslag för Autofyll";
+
+/* Description of the 'Remember Selected Entries` feature */
+"[AutoFill/RememberContext/description]" = "KeePassium kommer ihåg posten du väljer för varje webbplats och föreslår den sedan automatiskt.";
+
+/* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
+"[AutoFill/Search/Context/title]" = "Context";
+
+/* No comment provided by engineer. */
+"[AutoFill/Setup/footer]" = "Autofyll kan inte komma åt filerna du redan lagt till i KeePassium-appen automatiskt.\n\nVarför? Bakom kulisserna hanterar systemet Auotfyll som en separat app, som är oberoende från huvudprocessen. Av säkerhetsskäl kan inte en app komma åt externa filer – om du inte uttryckligen ger appen tillstånd till detta. På så sätt garanterar systemet att appen endast kan komma åt filer du ger tillåtelse till.\n\nDetta leder till att både Autofyll och huvudappen för KeePassium behöver ges tillstånd för varje extern fil som ska användas. Som tur är behöver detta bara göras en gång.";
+
+/* Must match Apple's translation, as found in iOS 18 Settings → General → AutoFill & Passwords. If unsure, leave untranslated. */
+"[AutoFill/Setup/UncheckKeychain/autofillFrom]" = "Autofyll från:";
+
+/* Call to action: deselect the `Keychain` option. Keychain is a glossary term. */
+"[AutoFill/Setup/UncheckKeychain/callToAction]" = "Avmarkera Nyckelring";
+
+/* Instruction to deselect another app in the settings [appName: String] */
+"[AutoFill/Setup/UncheckKeychain/message]" = "För att göra KeePassium till standardlösenordshanterare, avmarkera \"%@\".";
+
+/* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
+"[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "Använd lösenord och nycklar från:";
+
+/* Field title: name of the group that contains the entry */
+"[Database/Entry/Location/title]" = "Plats";
+
+/* Title of a list with randomly generated usernames */
+"[Database/Entry/RandomUsernames/title]" = "Slumpmässiga användarnamn";
+
+/* Action/button that shows a list of usernames to pick from */
+"[Database/Entry/SelectUsername/action]" = "Välj användarnamn";
+
+/* Action: select item from a list/menu, with item name in quotes. For example: `Select "Sample Group"` */
+"[Database/Item/SelectNamed/action]" = "Välj \"%@\"";
+
+/* Action: create a passkey and add it to existing entry */
+"[Database/Passkey/AddToExisting/action]" = "Lägg till nycklar i befintlig post";
+
+/* Call to action: select an existing entry to add a new passkey to */
+"[Database/Passkey/AddToExisting/callToAction]" = "Välj en post för den nya nyckeln";
+
+/* Confirmation message before replacing an existing passkey. */
+"[Database/Passkey/AddToExisting/confirm]" = "Posten har redan en nyckel. Ersätt den?";
+
+/* Title of an optional dialog for creating new passkeys */
+"[Database/Passkey/Create/title]" = "Skapa en nyckel?";
+
+/* Name of the Apple Passwords application, see https://support.apple.com/120758 */
+"[Generic/ApplePasswordsApp/title]" = "Lösenord";
+
+/* Apple Keychain software; is a glossary term. */
+"[Generic/Keychain/title]" = "Nyckelring";
+
+/* Menu action to add a user-provided word list file to the app. */
+"[PasswordGenerator/Wordlist/Import/menuAction]" = "Importera ordlista …";
+
+/* Password quality description. For example: `Password quality: Weak`. [level: String] */
+"[PasswordQuality/description]" = "Lösenordsstyrka: %@";
+
+/* Good password quality */
+"[PasswordQuality/Level] Good" = "Bra";
+
+/* Very good password quality */
+"[PasswordQuality/Level] Very good" = "Mycket bra";
+
+/* Very weak password quality */
+"[PasswordQuality/Level] Very weak" = "Mycket svagt";
+
+/* Weak password quality */
+"[PasswordQuality/Level] Weak" = "Svagt";
+
+/* Password quality description. Note the tilda that refers to an estimated/approximate value. For example: `Very good (~123 bits of entropy)`. [level: String, formattedBitCount: String] */
+"[PasswordQuality/LevelWithApproximateEntropy/description]" = "%1$@ (~%2$@ av entropi)";
+
+/* Password quality description. For example: `Very good (234 bits of entropy)`. [level: String, formattedBitCount: String] */
+"[PasswordQuality/LevelWithEntropy/description]" = "%1$@ (%2$@ av entropi)";
+
+/* Action/button to make password visible as plain-text */
+"[ProtectedTextField] Show Password" = "Visa lösenord";
+
+/* Call to action, invites the user to enable the Quick AutoFill feature */
+"[QuickAutoFill/Activate/callToAction]" = "Aktivera Snabb Autofyll";
+
+/* Placeholder text for empty search results */
+"[Search/EmptyResult/title]" = "Inget matchande resultat";
+

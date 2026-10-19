@@ -1,0 +1,269 @@
+//  KeePassium Password Manager
+//  Copyright © 2018-2025 KeePassium Labs <info@keepassium.com>
+// 
+//  This program is free software: you can redistribute it and/or modify it
+//  under the terms of the GNU General Public License version 3 as published
+//  by the Free Software Foundation: https://www.gnu.org/licenses/).
+//  For commercial licensing, please contact the author.
+
+import Foundation
+
+public struct AutoFillInclusionOptions: OptionSet {
+    public let rawValue: Int
+
+    public static let expiredEntries = AutoFillInclusionOptions(rawValue: 1 << 0)
+
+    public static let entriesWithAutoFillDisabled = AutoFillInclusionOptions(rawValue: 1 << 1)
+
+    public static let groupsWithAutoFillDisabled = AutoFillInclusionOptions(rawValue: 1 << 2)
+
+    public static let all: AutoFillInclusionOptions = [
+        .expiredEntries,
+        .entriesWithAutoFillDisabled,
+        .groupsWithAutoFillDisabled
+    ]
+
+    public static let strict: AutoFillInclusionOptions = []
+
+    public init(rawValue: Int) {
+        self.rawValue = rawValue
+    }
+}
+
+public class Entry: DatabaseItem, Eraseable {
+    public static let defaultIconID = IconID.key
+
+    public weak var database: Database?
+    public var iconID: IconID
+
+    public var fields: [EntryField]
+    public var isSupportsExtraFields: Bool { return false }
+    public var isSupportsMultipleAttachments: Bool { return false }
+
+    public var rawTitle: String {
+        get { return getField(EntryField.title)?.value ?? "" }
+        set { setField(name: EntryField.title, value: newValue) }
+    }
+    public var resolvedTitle: String {
+        return getField(EntryField.title)?.resolvedValue ?? ""
+    }
+
+    public var rawUserName: String {
+        get { return getField(EntryField.userName)?.value ?? "" }
+        set { setField(name: EntryField.userName, value: newValue) }
+    }
+    public var resolvedUserName: String {
+        return getField(EntryField.userName)?.resolvedValue ?? ""
+    }
+
+    public var rawPassword: String {
+        get { return getField(EntryField.password)?.value ?? "" }
+        set { setField(name: EntryField.password, value: newValue) }
+    }
+    public var resolvedPassword: String {
+        return getField(EntryField.password)?.resolvedValue ?? ""
+    }
+
+    public var rawURL: String {
+        get { return getField(EntryField.url)?.value ?? "" }
+        set { setField(name: EntryField.url, value: newValue) }
+    }
+    public var resolvedURL: String {
+        return getField(EntryField.url)?.resolvedValue ?? ""
+    }
+
+    public var rawNotes: String {
+        get { return getField(EntryField.notes)?.value ?? "" }
+        set { setField(name: EntryField.notes, value: newValue) }
+    }
+    public var resolvedNotes: String {
+        return getField(EntryField.notes)?.resolvedValue ?? ""
+    }
+
+    public internal(set) var creationTime: Date
+    public internal(set) var lastModificationTime: Date
+    public internal(set) var lastAccessTime: Date
+    public var expiryTime: Date
+    public var canExpire: Bool {
+        get { return false }
+        set { fatalError("canExpire setter must be overriden by a subclass") }
+        // swiftlint:disable:previous unused_setter_value
+    }
+    public var isExpired: Bool { return canExpire && (Date() > expiryTime) }
+    public var isDeleted: Bool
+
+    public func isAutoFillable(with options: AutoFillInclusionOptions = .strict) -> Bool {
+        guard !isDeleted else { return false }
+
+        if !options.contains(.expiredEntries) && isExpired {
+            return false
+        }
+
+        return true
+    }
+
+    public var attachments: [Attachment]
+
+    public var description: String { return "Entry[\(rawTitle)]" }
+
+    init(database: Database?, creationDate: Date = Date()) {
+        self.database = database
+        attachments = []
+        fields = []
+
+        iconID = Entry.defaultIconID
+        isDeleted = false
+
+        creationTime = creationDate
+        lastModificationTime = creationDate
+        lastAccessTime = creationDate
+        expiryTime = creationDate
+
+        super.init(uuid: UUID.ZERO)
+
+        canExpire = false
+        populateStandardFields()
+    }
+
+    deinit {
+        erase()
+    }
+
+    public func erase() {
+        attachments.erase()
+        fields.erase()
+        populateStandardFields()
+
+        uuid = UUID.ZERO
+        iconID = Entry.defaultIconID
+        isDeleted = false
+        canExpire = false
+
+        parent = nil
+
+        let now = Date()
+        creationTime = now
+        lastModificationTime = now
+        lastAccessTime = now
+        expiryTime = now
+    }
+
+    func makeEntryField(name: String, value: String, isProtected: Bool) -> EntryField {
+        return EntryField(
+            name: name,
+            value: value,
+            isProtected: isProtected,
+            resolvedValue: value, 
+            resolveStatus: .noReferences)
+    }
+
+    public func populateStandardFields() {
+        setField(name: EntryField.title, value: "")
+        setField(name: EntryField.userName, value: "")
+        setField(name: EntryField.password, value: "", isProtected: true)
+        setField(name: EntryField.url, value: "")
+        setField(name: EntryField.notes, value: "")
+    }
+
+    public func setField(name: String, value: String, isProtected: Bool? = nil) {
+        let existingField = fields.first { $0.name == name }
+        if let field = existingField {
+            field.value = value
+            if let isProtected {
+                field.isProtected = isProtected
+            } else {
+            }
+            return
+        }
+
+        fields.append(makeEntryField(name: name, value: value, isProtected: isProtected ?? false))
+    }
+
+    public func getField<T: StringProtocol>(_ name: T) -> EntryField? {
+        return fields.first(where: {
+            $0.name.compare(name) == .orderedSame
+        })
+    }
+
+    public func removeField(_ field: EntryField) {
+        if let index = fields.firstIndex(where: { $0 === field }) {
+            fields.remove(at: index)
+        }
+    }
+
+    public func clone(makeNewUUID: Bool) -> Entry {
+        fatalError("Pure virtual method")
+    }
+
+    public func apply(to target: Entry, makeNewUUID: Bool) {
+        if makeNewUUID {
+            target.uuid = UUID()
+        } else {
+            target.uuid = uuid
+        }
+        target.iconID = iconID
+        target.isDeleted = isDeleted
+        target.lastModificationTime = lastModificationTime
+        target.creationTime = creationTime
+        target.lastAccessTime = lastAccessTime
+        target.expiryTime = expiryTime
+        target.canExpire = canExpire
+
+        target.attachments.removeAll()
+        for att in attachments {
+            target.attachments.append(att.clone())
+        }
+        target.fields.removeAll()
+        for field in fields {
+            target.fields.append(field.clone())
+        }
+    }
+
+    public func backupState() {
+        fatalError("Pure virtual method")
+    }
+
+    override public func touch(_ mode: DatabaseItem.TouchMode, updateParents: Bool = true) {
+        lastAccessTime = Date.now
+        switch mode {
+        case .accessed:
+            break
+        case .modified:
+            lastModificationTime = Date.now
+        case let .modifiedAt(date):
+            lastModificationTime = date
+        }
+        if updateParents {
+            parent?.touch(mode, updateParents: true)
+        }
+    }
+
+    public func deleteWithoutBackup() {
+        parent?.remove(entry: self)
+    }
+
+    override public func move(to newGroup: Group) {
+        guard newGroup !== parent else { return }
+        parent?.remove(entry: self)
+        newGroup.add(entry: self)
+    }
+
+    public func getGroupPath() -> String {
+        var groupNames = [String]()
+        var parentGroup = self.parent
+        while parentGroup != nil {
+            let parentGroupUnwrapped = parentGroup! 
+            groupNames.append(parentGroupUnwrapped.name)
+            parentGroup = parentGroupUnwrapped.parent
+        }
+        return groupNames.reversed().joined(separator: " / ")
+    }
+}
+
+extension Array where Element == Entry {
+    mutating func remove(_ entry: Entry) {
+        if let index = firstIndex(where: { $0 === entry }) {
+            remove(at: index)
+        }
+    }
+}

@@ -1,0 +1,1482 @@
+/* Copyright notice */
+"[About/CopyrightAuthor]" = "©Andrei Popleteev";
+
+/* Suggestion/hint for available user action */
+"[Accessibility] Double tap to copy to clipboard" = "แตะสองครั้งเพื่อคัดลอกไปยังคลิปบอร์ด";
+
+/* Call to action: perform accessibilty `activate` action to listen to text/content. */
+"[Accessibility/activateToListen]" = "เปิดใช้งานฟังข้อความ";
+
+/* Action/button to unlock the App Lock with passcode */
+"[AppLock] Unlock" = "ปลดล็อก";
+
+/* Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt. */
+"[AppLock/Biometric/Hint] Unlock KeePassium" = "ปลดล็อก KeePassium";
+
+/* Action/button to switch from TouchID/FaceID prompt to manual input of the AppLock passcode. */
+"[AppLock/cancelBiometricAuth] Use Passcode" = "ใช้รหัส";
+
+/* Action/button to modify the existing AppLock passcode. */
+"[AppLock/changePasscode]" = "เปลี่ยนรหัส";
+
+/* Call to action in the passcode input dialog. */
+"[AppLock/EnterPasscode/callToAction]" = "ปลดล็อก KeePassium";
+
+/* Action: change keyboard type to enter alphanumeric passphrases */
+"[AppLock/Passcode/KeyboardType/switchAction] 123→ABC" = "123→ABC";
+
+/* Action: change keyboard type to enter PIN numbers */
+"[AppLock/Passcode/KeyboardType/switchAction] ABC→123" = "ABC→123";
+
+/* Type of keyboard to show for App Lock passcode: letters and digits. */
+"[AppLock/Passcode/KeyboardType/title] Alphanumeric" = "ตัวอักษรและตัวเลข";
+
+/* Type of keyboard to show for App Lock passcode: digits only (PIN code). */
+"[AppLock/Passcode/KeyboardType/title] Numeric" = "ตัวเลข";
+
+/* Hint/call to action about keyboard shortcut */
+"[AppLock/Passcode/pressEscForTouchID]" = "กดปุ่ม Esc เพื่อใช้ Touch ID";
+
+/* Notification that the modified AppLock passcode has been saved. */
+"[AppLock/passcodeUpdated/title]" = "เปลี่ยนรหัสแล้วเรียบร้อย";
+
+/* Action/button to save new or edited AppLock passcode. */
+"[AppLock/savePasscode]" = "บันทึกรหัสผ่าน";
+
+/* Call to action in the passcode input dialog. */
+"[AppLock/SetupPasscode/callToAction]" = "ปกป้อง KeePassium จากการเข้าถึงที่ไม่ได้รับอนุญาต";
+
+/* Message shown when AutoFill cannot automatically open the main app for upgrading to a premium version. */
+"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open KeePassium from your home screen." = "เพื่อที่จะอัพเกรด โปรดเข้าแอป KeePassium จากหน้าจอหลัก";
+
+/* Title of a message related to upgrading to the premium version */
+"[AutoFill/Premium/Upgrade/Manual/title] Premium Upgrade" = "อัพเกรดเป็นพรีเมียม";
+
+/* Name of biometric authentication method. Trademarked, do not translate unless Apple traslated it to your language. */
+"[BiometricAuthType] Face ID" = "Face ID";
+
+/* Name of biometric authentication method. Trademarked, do not translate unless Apple traslated it to your language. */
+"[BiometricAuthType] Touch ID" = "Touch ID";
+
+/* Error message when the challenge-response communication has been cancelled by the user. */
+"[ChallengeResponseError] cancelled" = "ถูกยกเลิกโดยผู้ใช้งาน";
+
+/* Error message when the hardware key is not plugged in. */
+"[ChallengeResponseError] keyNotConnected" = "ยังไม่ได้เชื่อมต่อฮาร์ดแวร์คีย์";
+
+/* Error message when trying to use challenge-response hardware in AutoFill. */
+"[ChallengeResponseError] notAvailableInAutoFill" = "ฮาร์ดแวร์คีย์ไม่สามารถใช้ในการป้อนรหัสผ่านอัตโนมัติได้";
+
+/* Error message when trying to use challenge-response with a kdb database. */
+"[ChallengeResponseError] notSupportedByDatabaseFormat" = "ฮาร์ดแวร์คีย์ไม่รองรับฟอร์แมทฐานข้อมูลนี้";
+
+/* Error message when trying to use a hardware challenge-response key on unsupported device/iOS version. %@ will be the name of the hardware interface, such as `NFC` or `Lightning`. */
+"[ChallengeResponseError] notSupportedByDeviceOrSystem" = "อุปกรณ์หรือ iOS เวอร์ชันนี้ ไม่รองรับฮาร์ดแวร์คีย์ (%@)";
+
+/* Error message: the hardware key (or its slot) was not configured for challenge-response operations. */
+"[ChallengeResponseError] slotNotConfigured" = "ฮาร์ดแวร์คีย์ยังไม่ได้ตั้งค่าให้สร้างความท้าทายในการตอบสนอง";
+
+/* Progress status */
+"[Cipher/Progress] Decrypting" = "กำลังถอดรหัส";
+
+/* Progress status */
+"[Cipher/Progress] Encrypting" = "กำลังเข้ารหัส";
+
+/* Action copy some named value to clipboard. For example: `Copy Password`. [valueName: String] */
+"[Clipboard/Copy/namedValue]" = "คัดลอก %@";
+
+/* Notification: an item has been copied to clipboard */
+"[Clipboard/Copy/notification]" = "คัดลอกแล้ว";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES decryption error (code %d)" = "AES decryption error (code %d)";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES encryption error (code %d)" = "AES encryption error (code %d)";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES initialization error (code %d)" = "AES initialization error (code %d)";
+
+/* Error message about Argon2 hashing function. [errorCode: Int] */
+"[CryptoError] Argon2 hashing error (code %d)" = "Argon2 hashing error (code %d)";
+
+/* Error message about PKCS7 padding. [errorCode: Int] */
+"[CryptoError] Invalid data padding (code %d). File corrupt?" = "Invalid data padding (code %d). File corrupt?";
+
+/* Error message about key derivation function (KDF) parameters. [kdfName: String, paramName: String] */
+"[CryptoError] Invalid KDF parameter: %@ - %@. File corrupt?" = "Invalid KDF parameter: %1$@ - %2$@. File corrupt?";
+
+/* Error message about random number generator. [errorCode: Int] */
+"[CryptoError] Random number generator error (code %d)" = "Random number generator error (code %d)";
+
+/* Error message about Twofish cipher. [errorCode: Int] */
+"[CryptoError] Twofish cipher error (code %d)" = "Twofish cipher error (code %d)";
+
+/* Warning when trying to add a random file as a database. [fileName: String] */
+"[Database/Add] Selected file \"%@\" does not look like a database." = "ไฟล์ \"%@\" ที่เลือกมา ดูไม่เหมือนฐานข้อมูล";
+
+/* Action/button to create a new database */
+"[Database/Create/action] Create Database" = "สร้างฐานข้อมูล";
+
+/* Action: add/import an image as a custom icon */
+"[Database/CustomIcon/add]" = "เพิ่มไอคอนที่กำหนดเอง";
+
+/* Action: delete all custom icons */
+"[Database/CustomIcon/deleteAll]" = "ลบทั้งหมด";
+
+/* Action: download icon of a website */
+"[Database/CustomIcon/DownloadFavicon/action]" = "ดาวน์โหลดไอคอน";
+
+/* Action/button to download favicons of websites mentioned in selected entries. */
+"[Database/CustomIcon/DownloadFavicons/action]" = "ดาวน์โหลดไอคอน";
+
+/* Report of favicon download results. */
+"[Database/CustomIcon/DownloadFavicons/stats]" = "รายการที่สำเร็จ: %1$d\nไอคอนที่อัพเดตสำเร็จ: %2$d";
+
+/* Status message: multiple website favicons are being downloaded */
+"[Database/CustomIcon/DownloadFavicons/status]" = "กำลังดาวน์โหลดไอคอน";
+
+/* Status message: a website favicon is being downloaded */
+"[Database/CustomIcon/DownloadOneFavicon/status]" = "กำลังดาวน์โหลดไอคอน";
+
+/* Message to confirm deletion of a database file. (This deletes the file itself) */
+"[Database/Delete/Confirm/text] Delete database file?\n Make sure you have a backup." = "ลบไฟล์กุญแจหรือไม่?\n ตรวจสอบให้ดีว่าคุณกู้ไว้เรียบร้อยแล้ว";
+
+/* Parameter name in database encryption settings. This is a term, see https://en.wikipedia.org/wiki/Key_derivation_function. Example: 'Key Derivation Function: Argon2' */
+"[Database/EncryptionSettings/kdf]" = "ฟังก์ชันไขกุญแจ";
+
+/* Info message when changing database file format. */
+"[Database/FormatVersion/Conversion/allDataPreserved]" = "ข้อมูลทั้งหมดของคุณจะคงไว้เหมือนเดิม";
+
+/* Info message when the app needs to change database file format. [oldFormat, newFormat: String] */
+"[Database/FormatVersion/Upgrade/text]" = "KeePassium ต้องการอัพเกรดรูปแบบฐานข้อมูลของคุณ (จากรูปแบบ %1$@ ไปเป็น %2$@) ซึ่งคุณอาจจะต้องอัพเดตแอปอื่นที่จะต้องใช้ฐานข้อมูลนี้ด้วย";
+
+/* Title of an info message when the app needs to change database file format. */
+"[Database/FormatVersion/Upgrade/title]" = "ก่อนที่เราจะดำเนินการต่อ";
+
+/* Status of a database item (entry or group) after it was edited. */
+"[Database/Item/Edited/state]" = "แก้ไขแล้ว";
+
+/* Notification when user tries to copy data from KDBX to older KDB database. */
+"[Database/LesserTargetFormat/warning]" = "ฟอร์แมทของฐานข้อมูลนี้เก่าเกินไป ข้อมูลบางอย่างอาจหาย";
+
+/* Placeholder shown when there are no database files available */
+"[Database/List/empty]" = "ไม่มีไฟล์ฐานข้อมูล";
+
+/* Title of the database picker list */
+"[Database/List/title]" = "ฐานข้อมูล";
+
+/* Error message */
+"[Database/Load/Error] Cannot find database file" = "ไม่สามารถหาฐานข้อมูลได้";
+
+/* Error message */
+"[Database/Load/Error] Cannot find key file" = "ไม่สามารถหาไฟล์กุญแจได้";
+
+/* Error message */
+"[Database/Load/Error] Cannot open database file" = "ไม่สามารถเปิดไฟล์ฐานข้อมูลได้";
+
+/* Error message */
+"[Database/Load/Error] Cannot open key file" = "ไม่สามารถเปิดไฟล์กุญแจได้";
+
+/* Error message, when the real file format is recognized. For example: 'Incorrect database format: JPEG.' */
+"[Database/Load/Error] Incorrect database format" = "รูปแบบฐานข้อมูลไม่ถูกต้อง: %@";
+
+/* Error shown when both master password and key file are empty */
+"[Database/Load/Error] Please provide at least a password or a key file" = "โปรดใส่รหัสผ่าน หรือไม่ก็ไฟล์กุญแจ";
+
+/* Error message */
+"[Database/Load/Error] Unrecognized database format" = "ฟอร์แมทฐานข้อมูลที่ไม่รู้จัก";
+
+/* Error message */
+"[Database/Load/Error/encryptedByIntune]" = "ฐานข้อมูลนี้ป้องกันโดยนโยบายไอทีขององค์กรและ Microsoft Intune";
+
+/* Message shown after we show a cached local database instead of the (unavailable) original database. */
+"[Database/Loading/FromCache/text]" = "ไม่สามารถเข้าถึงฐานข้อมูลได้\nที่ใช้อยู่นี้เป็นสำเนาที่เก็บอยู่ในเครื่อง";
+
+/* Message shown if current database cannot be edited */
+"[Database/Loading/ReadOnly/text]" = "ฐานข้อมูลนี้อ่านได้เท่านั้น";
+
+/* Status message: loading a database */
+"[Database/Loading/Status] Loading..." = "กำลังโหลด...";
+
+/* Action/button: change master key of a database. */
+"[Database/MasterKey/Change/action]" = "เปลี่ยนรหัสผ่านหลัก";
+
+/* Notification after changing database master key */
+"[Database/MasterKey/changed] Master key successfully changed" = "เปลี่ยนกุญแจหลักเรียบร้อยแล้ว";
+
+/* A warning shown when changing database password. Is preceded with `Remember your database password`. */
+"[Database/MasterKey/RememberYourPassword/text]" = "หากคุณลืมมันไป คุณจะไม่สามารถเข้าถึงข้อมูลของคุณได้อีกต่อไป เพราะไม่มีวิธีใดที่จะรีเซ็ตรหัสผ่านได้";
+
+/* Imperative/recommendation: title of a warning when changing database password. */
+"[Database/MasterKey/RememberYourPassword/title]" = "จำรหัสผ่านฐานข้อมูลของคุณ";
+
+/* Glossary term: noun, a master key for encrypting the database */
+"[Database/MasterKey/title]" = "กุญแจหลัก";
+
+/* Action/button */
+"[Database/Open/action] Open Database" = "เปิดฐานข้อมูล";
+
+/* Action/button to lock current database (the next time, it will ask for the master key). */
+"[Database/Opened/action] Lock Database" = "ล็อกฐานข้อมูล";
+
+/* Action: lock database */
+"[Database/Opened/Warning/action] Close Database" = "ปิดฐานข้อมูล";
+
+/* Action: ignore warnings and proceed to work with the database */
+"[Database/Opened/Warning/action] Ignore and Continue" = "ข้ามและไปต่อ";
+
+/* Status message: name of the app that was last to write/create the database file. [lastUsedAppName: String] */
+"[Database/Opened/Warning/lastEdited] Database was last edited by: %@" = "เปลี่ยนแปลงฐานข้อมูลครั้งล่าสุดโดย: %@";
+
+/* Title of a warning message, shown after opening a problematic database */
+"[Database/Opened/Warning/title] Your database is ready, but there was an issue." = "ฐานข้อมูลของคุณพร้อมแล้ว แต่ยังมีปัญหาอยู่";
+
+/* Progress status: finished loading database */
+"[Database/Progress] Done" = "เสร็จ";
+
+/* Progress status */
+"[Database/Progress] Loading key file..." = "กำลังโหลดไฟล์กุญแจ...";
+
+/* Database loading status: fetching the database file from disk/cloud */
+"[Database/Progress/downloading]" = "กำลังโหลดไฟล์ฐานข้อมูล...";
+
+/* Database saving status: making a local backup copy of the database */
+"[Database/Progress/makingDatabaseBackup]" = "กำลังทำสำเนาข้อมูลสำรอง...";
+
+/* Progress status */
+"[Database/Progress/resolving]" = "กำลังเชื่อมต่อระบบจัดเก็บข้อมูล...";
+
+/* Database loading/saving status: replacing field references with their values */
+"[Database/Progress/resolvingFieldReferences]" = "กำลังแก้ช่องอ้างอิง...";
+
+/* Suggested solution/call to action when intermediate sync app fails. */
+"[Database/RecommendRemote/callToAction]" = "กำลังลองเชื่อมต่อที่จัดเก็บโดยตรงจาก KeePassium";
+
+/* Message to confirm removal of database file from the app. (This keeps the file, but removes its reference from the app.) */
+"[Database/Remove/Confirm/text] Remove database from the list?\n The file will remain intact and you can add it again later." = "ลบฐานข้อมูลออกจากรายการหรือไม่?\n ไฟล์จะยังคงเดิมและคุณยังสามารถเพิ่มไฟล์ได้ในภายหลัง";
+
+/* Action/button to save the current database. */
+"[Database/Save/action] Save Database" = "บันทึกฐานข้อมูล";
+
+/* Status message: finished saving a database */
+"[Database/Saving/Status] Done" = "เสร็จ";
+
+/* Status message: saving a database */
+"[Database/Saving/Status] Saving..." = "กำลังบันทึก...";
+
+/* File access parameter. Will be shown as 'Consider File Unreachable: Immediately' */
+"[Database/Settings/ConsiderFileUnreachable/Immediately]" = "ทันที";
+
+/* File settings parameter: time after which file will be considered unreachable. Example: `Consider File Unreachable: in 10 seconds`.) */
+"[Database/Settings/ConsiderFileUnreachable/title]" = "วิธีการพิจารณาว่าเข้าถึงไฟล์ไม่ได้";
+
+/* Title: what to do when a cloud-stored file cannot be loaded. (For example: `If File is Unreachable: Re-add File`.) */
+"[Database/Settings/FallbackStrategy/ReAddFile/title]" = "เพิ่มไฟล์ใหม่อีกครั้ง";
+
+/* Title: what to do when (remote) file cannot be loaded. (For example: `If File is Unreachable: Show Error`.) */
+"[Database/Settings/FallbackStrategy/ShowError/title]" = "แสดงข้อผิดพลาด";
+
+/* File settings parameter: what to do when (remote) file cannot be loaded. (For example: `If File is Unreachable: Use Local Copy`.) */
+"[Database/Settings/FallbackStrategy/title]" = "ถ้าเข้าถึงไฟล์ไม่ได้";
+
+/* Title: what to do when (remote) file cannot be loaded. (For example: `If File is Unreachable: Use Local Copy`.) */
+"[Database/Settings/FallbackStrategy/UseCache/title]" = "ใช้สำเนาของในเครื่อง";
+
+/* Title of settings section (read-only, backup-able, etc) */
+"[Database/Settings/FileAccess/title]" = "การเข้าถึงไฟล์";
+
+/* File setting title, whether the file can be modified (yes/no). */
+"[Database/Settings/ReadOnly/title]" = "อ่านเท่านั้น";
+
+/* Title of database-related settings screen */
+"[Database/Settings/title]" = "การตั้งค่าฐานข้อมูล";
+
+/* Action/button to switch from current to some other database. */
+"[Database/Switch/action]" = "สลับฐานข้อมูล";
+
+/* Explanation of the database sync conflict `Cancel` option. */
+"[Database/SyncConflict/Cancel/description]" = "กำลังยกเลิกการบันทึก ปล่อยไฟล์ไว้ตามเดิม";
+
+/* Title: the current (on-server) database version in case of sync conflict. */
+"[Database/SyncConflict/currentVersion]" = "เวอร์ชันปัจจุบัน";
+
+/* Message shown in case of database sync conflict. */
+"[Database/SyncConflict/description]" = "ฐานข้อมูลมีการเปลี่ยนแปลงหลังจากโหลดเข้ามาใน KeePassium";
+
+/* Title: the loaded (on-device) database version in case of sync conflict. */
+"[Database/SyncConflict/loadedVersion]" = "เวอร์ชันที่โหลดเข้าเครื่อง";
+
+/* Action: combine changes in two conflicting databases. */
+"[Database/SyncConflict/Merge/action]" = "รวม";
+
+/* Explanation of the database sync conflict `Merge` option. */
+"[Database/SyncConflict/Merge/description]" = "รวมการเปลี่ยนแปลงก่อนบันทึก";
+
+/* Explanation of the database sync conflict `Overwrite` option. */
+"[Database/SyncConflict/Overwrite/description]" = "เขียนทับไฟล์นั้นด้วยไฟล์เดิมในเครื่อง";
+
+/* Explanation of the database sync conflict `Save as` option. */
+"[Database/SyncConflict/SaveAs/description]" = "กำลังเปลี่ยนไปบันทึกที่อีกไฟล์หนึ่ง";
+
+/* Title of a message shown when saving to a database that has already been modified elsewhere. */
+"[Database/SyncConflict/title]" = "การซิงค์ชนกัน";
+
+/* Error message */
+"[Database/Unlock/Error] Failed to open key file" = "ไม่สามารถเปิดไฟล์กุญแจได้";
+
+/* Error message */
+"[Database/Unlock/Error] Password and key file are both empty." = "รหัสผ่านและไฟล์กุญแจว่างเปล่า";
+
+/* Action: load a local (on-device) copy of a remote database */
+"[Database/Unlock/UseFallback/action]" = "ใช้สำเนาของในเครื่อง";
+
+/* Message shown when user enters an invalid database password */
+"[Database/Unlock/wrongPassword/question]" = "ลืมรหัสผ่านของคุณใช่หรือไม่";
+
+/* Error message */
+"[Database1/FormatError] Database file is corrupted." = "ไฟล์ฐานข้อมูลได้รับความเสียหาย";
+
+/* Error message [fieldName: String] */
+"[Database1/FormatError] Error parsing field %@. Corrupted database file?" = "มีข้อผิดพลาดในช่อง %@. ไฟล์ฐานข้อมูลเสียหายใช่ไหม?";
+
+/* Error message */
+"[Database1/FormatError] Found an entry outside any group. Corrupted DB file?" = "พบรายการที่ไม่อยู่ในกลุ่มใด ไฟล์ฐานข้อมูลเสียหายใช่ไหม?";
+
+/* Error message */
+"[Database1/FormatError] Unexpected end of file. Corrupted database file?" = "ไฟล์ส่วนท้ายไม่ถูกต้อง ไฟล์ฐานข้อมูลเสียหายใช่ไหม?";
+
+/* Error message when reading database header */
+"[Database1/Header1/Error] Header reading error. DB file corrupt?" = "ไฟล์ส่วนหัวไม่ถูกต้อง ไฟล์ฐานข้อมูลเสียหายใช่ไหม?";
+
+/* Error message. [flagsHexString: String] */
+"[Database1/Header1/Error] Unsupported cipher. (Code: %@)" = "Unsupported cipher. (Code: %@)";
+
+/* Error message when opening a database. [version: String] */
+"[Database1/Header1/Error] Unsupported database format version: %@." = "ไม่รองรับฟอร์แมทฐานข้อมูลเวอร์ชัน: %@.";
+
+/* Error message when opening a database */
+"[Database1/Header1/Error] Wrong file signature. Not a KeePass database?" = "ไฟล์ลายเซ็นไม่ถูกต้อง ไม่ใช่ฐานข้อมูล KeePass ใช่หรือไม่?";
+
+/* Status message: collecting database items into a single package */
+"[Database1/Progress] Packing the content" = "กำลังห่อข้อมูล";
+
+/* Status message: processing the content of a database */
+"[Database1/Progress] Parsing content" = "กำลังแยกวิเคราะห์ข้อมูล";
+
+/* Name of a group which contains deleted entries */
+"[Database2/backupGroupName] Recycle Bin" = "ถังขยะ";
+
+/* Error message. Parsing refers to the analysis/understanding of file content. [reason: String] */
+"[Database2/FormatError] Cannot parse database. %@" = "ไม่สามารถแยกวิเคราะห์ฐานข้อมูล %@";
+
+/* Error message [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (block %d has negative size)" = "ไฟล์ฐานข้อมูลไม่ถูกต้อง (block %d has negative size)";
+
+/* Error message: hash(checksum) of a data block is wrong. [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (hash mismatch in block %d)" = "ไฟล์ฐานข้อมูลไม่ถูกต้อง (hash mismatch in block %d)";
+
+/* Error message: HMAC value (kind of checksum) of a data block is wrong. [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (HMAC mismatch in block %d)" = "ไฟล์ฐานข้อมูลไม่ถูกต้อง (HMAC mismatch in block %d)";
+
+/* Error message about Gzip compression algorithm. [reason: String] */
+"[Database2/FormatError] Gzip error: %@" = "Gzip error: %@";
+
+/* Error message: wrong ID of a data block */
+"[Database2/FormatError] Unexpected block ID." = "Unexpected block ID.";
+
+/* Error message */
+"[Database2/FormatError] Unexpected end of file. Corrupted file?" = "ไฟล์ส่วนท้ายไม่ถูกต้อง ไฟล์ฐานข้อมูลเสียหายใช่ไหม?";
+
+/* Error message when saving a database. [reason: String] */
+"[Database2/Header2/Error] Failed to uncompress attachment data: %@" = "ไม่สามารถบีบอัดไฟล์แนบ: %@";
+
+/* Error message, with the name of problematic field. [fieldName: String] */
+"[Database2/Header2/Error] Header field %@ is corrupted." = "Header field %@ is corrupted.";
+
+/* Error message */
+"[Database2/Header2/Error] Header hash mismatch. DB file corrupt?" = "Header hash mismatch. DB file corrupt?";
+
+/* Error message. HMAC = https://en.wikipedia.org/wiki/HMAC */
+"[Database2/Header2/Error] Header HMAC mismatch. DB file corrupt?" = "Header HMAC mismatch. DB file corrupt?";
+
+/* Error message when reading database header */
+"[Database2/Header2/Error] Header reading error. DB file corrupt?" = "ไฟล์ส่วนหัวไม่ถูกต้อง ไฟล์ฐานข้อมูลเสียหายใช่ไหม?";
+
+/* Error message when opening a database */
+"[Database2/Header2/Error] Unknown compression algorithm." = "ไม่ทราบอัลกอริทึมบีบอัด";
+
+/* Error message. [uuidHexString: String] */
+"[Database2/Header2/Error] Unsupported data cipher: %@" = "Unsupported data cipher: %@";
+
+/* Error message when opening a database. [version: String] */
+"[Database2/Header2/Error] Unsupported database format version: %@." = "ไม่รองรับฟอร์แมทฐานข้อมูลเวอร์ชัน: %@.";
+
+/* Error message when opening a database. [id: UInt32] */
+"[Database2/Header2/Error] Unsupported inner stream cipher (ID %d)" = "Unsupported inner stream cipher (ID %d)";
+
+/* Error message about Key Derivation Function. [uuidString: String] */
+"[Database2/Header2/Error] Unsupported KDF: %@" = "ไม่รองรับ KDF: %@";
+
+/* Error message when opening a database */
+"[Database2/Header2/Error] Wrong file signature. Not a KeePass database?" = "ไฟล์ลายเซ็นไม่ถูกต้อง ไม่ใช่ฐานข้อมูล KeePass ใช่หรือไม่?";
+
+/* Error message about Gzip compression algorithm. [errorMessage: String] */
+"[Database2/Loading/Error] Error unpacking database: %@" = "ไม่สามารถคลายฐานข้อมูลได้: %@";
+
+/* A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String] */
+"[Database2/Loading/Warning/missingBinaries]" = "ไฟล์แนบของบางรายการมีข้อมูลหายไป เป็นเหตุให้ฐานข้อมูลเสียหาย น่าจะเกิดขึ้นตอนการใช้แอปครั้งล่าสุด (%1$@) KeePassium จะเก็บไฟล์แนบเปล่าไว้ แต่ไม่สามารถเรียกคืนกลับมาได้ คุณควรเรียกคืนฐานข้อมูลออกมาจากที่สำรองเอาไว้แล้ว\n\nไฟล์แนบที่หายไป: %2$@";
+
+/* A warning about nameless attachments, shown after loading the database. [listOfEntryNames: String] */
+"[Database2/Loading/Warning/namelessAttachments]" = "บางรายการที่มีไฟล์แนบโดยไม่ได้ตั้งชื่อ จะเป็นสัญญาณว่าฐานข้อมูลเดิมมีความเสียหาย\n\nโปรดทบทวนดูไฟล์แนบตามรายการข้างล่าง (และประวัติของมัน):\n%@";
+
+/* A warning about misformatted custom fields after loading the database. [entryPaths: String] */
+"[Database2/Loading/Warning/namelessCustomFields]" = "บางรายการมีช่องที่กำหนดเองด้วยการไม่ได้ตั้งชื่อไว้ จะเป็นสัญญาณว่าข้อมูลมีความเสียหาย โปรดตรวจสอบรายการดังต่อไปนี้:\n\n%@";
+
+/* A warning about unused attachments after loading the database. [lastUsedAppName: String] */
+"[Database2/Loading/Warning/unusedAttachments]" = "ฐานข้อมูลที่มีไฟล์แนบบางไฟล์ จะไม่สามารถใช้กับรายการใด ๆ ได้ มีความเป็นไปได้ว่าพวกมันถูกลืมทิ้งไว้หลังจากใช้แอปครั้งล่าสุด (%@) อย่างไรก็ตาม สิ่งนี้จะเป็นสัญญาณว่าข้อมูลจะมีความเสียหาย\nโปรดตรวจสอบว่าฐานข้อมูลได้สำรองข้อมูลไว้แล้วก่อนการเปลี่ยนแปลงใด ๆ";
+
+/* Progress bar status */
+"[Database2/Progress] Loading database" = "กำลังโหลดฐานข้อมูล";
+
+/* Progress bar status */
+"[Database2/Progress] Reading database content" = "กำลังอ่านเนื้อหาในฐานข้อมูล";
+
+/* Progress bar status */
+"[Database2/Progress] Writing encrypted blocks" = "Writing encrypted blocks";
+
+/* Progress bar status: un-zipping the database content */
+"[Database2/Progress/decompressing]" = "กำลังคลายการบีบอัดฐานข้อมูล";
+
+/* Progress bar status */
+"[Database2/Progress/integrityCheck]" = "กำลังตรวจสอบความสมบูรณ์";
+
+/* Progress bar status: parsing decrypted XML content */
+"[Database2/Progress/parsingXML]" = "กำลังแจกแจงฐานข้อมูล";
+
+/* Error message while saving a database. [errorDescription: String] */
+"[Database2/Saving/Error] Data compression error: %@" = "Data compression error: %@";
+
+/* Error message while saving a database. [errorDescription: String] */
+"[Database2/Saving/Error] Encryption error: %@" = "Encryption error: %@";
+
+/* Error message about XML parsing. [value: String, tag: String] */
+"[Database2/Xml2/ParsingError] Malformed value '%@' in %@" = "Malformed value '%1$@' in %2$@";
+
+/* Error message about XML parsing. [tag: String] */
+"[Database2/Xml2/ParsingError] Nil value in %@" = "Nil value in %@";
+
+/* Error message about XML parsing. [actualTag: String] */
+"[Database2/Xml2/ParsingError] Unexpected tag '%@'" = "Unexpected tag '%@'";
+
+/* Error message about XML parsing. [actualTag: String, expectedTag: String] */
+"[Database2/Xml2/ParsingError] Unexpected tag '%@' (instead of '%@')" = "Unexpected tag '%1$@' (instead of '%2$@')";
+
+/* Generic error while parsing XML. [errorDetails: String] */
+"[Database2/Xml2/ParsingError] XML error: %@" = "XML error: %@";
+
+/* Error message while opening a database */
+"[DatabaseError] Cannot open database" = "ไม่สามารถเปิดฐานข้อมูลได้";
+
+/* Error message while saving a database */
+"[DatabaseError] Cannot save database" = "ไม่สามารถบันทึกฐานข้อมูลได้";
+
+/* Error message: user provided a wrong master key for decryption. */
+"[DatabaseError] Invalid password or key file" = "รหัสผ่านหรือไฟล์กุญแจไม่ถูกต้อง";
+
+/* Title of the diagnostic info screen */
+"[DiagLog/title]" = "บันทึกการวินิจฉัย";
+
+/* Notification/confirmation message */
+"[Diagnostics] Diagnostic log has been copied to clipboard." = "บันทึกการวินิจฉัยได้คัดลอกไปยังคลิปบอร์ดเรียบร้อยแล้ว";
+
+/* Action: select a different icon for an item */
+"[EditEntry/Icon/change]" = "เปลี่ยนไอคอน";
+
+/* Action: choose a username from a list */
+"[EditEntry/UserName/choose]" = "เลือก";
+
+/* Action/button to add a file to entry attachments */
+"[Entry/Attachment/add]" = "เพิ่มไฟล์";
+
+/* Action/button to pick a file from a list */
+"[Entry/Attachment/chooseFile]" = "เลือกไฟล์";
+
+/* Action/button to select an (existing) photo from Photo Library */
+"[Entry/Attachment/choosePhoto]" = "เลือกรูปภาพ";
+
+/* Default name for a photo attachment */
+"[Entry/Attachment/Photo/defaultName]" = "รูปภาพ";
+
+/* Action/button to take a new photo from camera */
+"[Entry/Attachment/takePhoto]" = "ถ่ายภาพ";
+
+/* Action to preview one or several attached documents or images */
+"[Entry/Attachments/preview]" = "แสดงตัวอย่าง";
+
+/* Action/button to create a new entry in the current group */
+"[Entry/Create/action] Create Entry" = "สร้างรายการ";
+
+/* Action/button to modify an entry */
+"[Entry/Edit/action]" = "แก้ไขรายการ";
+
+/* Default name of a newly created entry field */
+"[Entry/Edit/CreateField/defaultName] Field Name" = "ชื่อ";
+
+/* Notification: a reference to an entry field has been copied to clipboard */
+"[Entry/Field/CopyReference/acknowledgement]" = "ช่องอ้างอิงถูกคัดลอกไปยังคลิปบอร์ดแล้ว";
+
+/* Action: copy a reference to the selected entry field to clipboard */
+"[Entry/Field/CopyReference/action]" = "คัดลอกช่องอ้างอิง";
+
+/* Name of an entry field */
+"[Entry/Field/name] Notes" = "หมายเหตุ";
+
+/* Name of an entry field */
+"[Entry/Field/name] Password" = "รหัสผ่าน";
+
+/* Name of an entry field */
+"[Entry/Field/name] Title" = "ชื่อ";
+
+/* Name of an entry field */
+"[Entry/Field/name] URL" = "URL";
+
+/* Name of an entry field */
+"[Entry/Field/name] User Name" = "ชื่อผู้ใช้งาน";
+
+/* Status message: loading file to be attached to an entry */
+"[Entry/Files/Add] Loading attachment file" = "กำลังโหลดไฟล์แนบ";
+
+/* Title of a field with entry creation date and time */
+"[Entry/History] Creation Date" = "วันที่สร้าง";
+
+/* Title of a field with date and time when the entry will no longer be valid. 'Never' is also a possible value */
+"[Entry/History] Expiry Date" = "วันหมดอายุ";
+
+/* Title of a field with date and time when the entry was last accessed/viewed */
+"[Entry/History] Last Access Date" = "วันที่เข้าถึงล่าสุด";
+
+/* Title of a field with entry's last modification date and time */
+"[Entry/History] Last Modification Date" = "วันที่แก้ไขครั้งล่าสุด";
+
+/* Title of a list with previous versions/revisions of an entry. */
+"[Entry/History] Previous Versions" = "เวอร์ชันก่อนหน้า";
+
+/* Expiry Date of an entry which does not expire. */
+"[Entry/History/ExpiryDate] Never" = "ตลอดไป";
+
+/* Default title of a new entry */
+"[Entry/New/defaultTitle] New Entry" = "รายการใหม่";
+
+/* Glossary term: noun, an entry in database. */
+"[Entry/title]" = "รายการ";
+
+/* Warning shown when opening files from Recycle Bin location. Translation of 'Recently Deleted' should match that in the Files app. [fileName: String] */
+"[File/In Trash/warning]" = "'%@' ถูกเก็บไว้ที่ที่เพิ่งลบล่าสุด และอาจจะถูกลบไปในเร็ว ๆ นี้ หากต้องการเก็บข้อมูลไว้ ให้เก็บไฟล์ไปยังที่สำหรับจัดเก็บถาวรกว่านี้";
+
+/* A suggestion shown after specific file errors (either databases or key files). */
+"[File/PermissionDenied] Try to remove the file from the app, then add it again." = "ลองลบไฟล์ออกจากแอป แล้วเพิ่มกลับเข้าไปใหม่";
+
+/* Action: re-add (a broken) database or key file to the app. */
+"[File/Re-add/title]" = "เพิ่มไฟล์อีกครั้ง";
+
+/* Notification when user opens an in-app backup database. */
+"[File/TemporaryBackup/warning]" = "นี่คือการสำรองฐานข้อมูลชั่วคราว มันจะถูกลบโดยอัตโนมัติโดยไม่มีการแจ้งไว้\nอย่าใช้มันเป็นฐานข้อมูลหลักของคุณ";
+
+/* Error message: storage provider app was logged out or uninstalled. */
+"[FileAccessError/FileProvider/NotFound/generic]" = "ระบบจัดเก็บข้อมูลยังใช้งานไม่ได้ โปรดตรวจสอบว่ามันติดตั้งและมีการเข้าสู่ระบบเรียบร้อยแล้ว";
+
+/* Error message: storage provider app was logged out or uninstalled [fileProviderName: String]. */
+"[FileAccessError/FileProvider/NotFound/other]" = "%@ ไม่สามารถใช้งานได้ โปรดตรวจสอบว่ามันติดตั้งและมีการเข้าสู่ระบบเรียบร้อยแล้ว";
+
+/* Error message: the required network drive is not connected. */
+"[FileAccessError/FileProvider/NotFound/smbShare]" = "ยังไม่ได้เชื่อมต่อที่จัดเก็บข้อมูลในเครือข่าย";
+
+/* Error message: there is no USB drive connected to the device. */
+"[FileAccessError/FileProvider/NotFound/usbDrive]" = "ยังไม่ได้เชื่อมต่อไดรฟ์ USB";
+
+/* Error message shown when there's internal inconsistency in KeePassium. */
+"[FileAccessError/internalError]" = "ภายใน KeePassium มีปัญหา โปรดบอกรายละเอียดเกี่ยวกับมันหน่อย";
+
+/* Error message: network access is forbidden by system or app settings. */
+"[FileAccessError/NetworkAccessDenied/generic]" = "การเข้าถึงเน็ตเวิร์คถูกบล็อคโดยการตั้งค่า";
+
+/* Error message: storage provider app (e.g. Google Drive) does not respond to requests. */
+"[FileAccessError/NoResponse/genericFileProvider]" = "ระบบจัดเก็บข้อมูลไม่ตอบสนอง";
+
+/* Error message: file provider does not respond to requests. For example: `Google Drive does not respond.` */
+"[FileAccessError/NoResponse/knownFileProvider]" = "%@ ไม่ตอบสนอง";
+
+/* Error message: file provider does not support write operations. For example: `Cannot save file (OneDrive)` */
+"[FileAccessError/NoWritePermission/title]" = "ไม่สามารถบันทึกไฟล์ (%@)";
+
+/* Explanation of a file writing error */
+"[FileAccessError/OneDriveReadOnly/reason]" = "Microsoft ได้เปลี่ยนการเชื่อม OneDrive ให้ iOS อ่านได้อย่างเดียว\nแค่ชั่วคราวเขาบอก";
+
+/* Suggestion for error recovery */
+"[FileAccessError/OneDriveReadOnly/recoverySuggestion]" = "ใช้ตัวเลือกส่งออกเพื่อบันทึกไฟล์ไปยังที่อื่น";
+
+/* Error message: storage provider app (e.g. Google Drive) does not respond to requests (quickly enough). */
+"[FileAccessError/Timeout/genericFileProvider]" = "ระบบจัดเก็บข้อมูลไม่ตอบสนอง";
+
+/* Error message: file provider does not respond to requests (quickly enough). For example: `Google Drive does not respond` */
+"[FileAccessError/Timeout/knownFileProvider]" = "%@ ไม่ตอบสนอง";
+
+/* Section header: file backup settings */
+"[FileInfo/Backup/header]" = "การสำรองข้อมูล";
+
+/* Error message shown when the user tries to change file attributes (such as creation/modification date, backup flag, etc) */
+"[FileInfo/Error/failed to change attributes]" = "ไม่สามารถอัพเดตคุณลักษณะได้";
+
+/* Field title */
+"[FileInfo/Field/title] Creation Date" = "วันที่สร้าง";
+
+/* Field title */
+"[FileInfo/Field/title] File Location" = "ตำแหน่งที่ตั้งไฟล์";
+
+/* Field title */
+"[FileInfo/Field/title] File Name" = "ชื่อไฟล์";
+
+/* Field title */
+"[FileInfo/Field/title] File Size" = "ขนาดไฟล์";
+
+/* Field title */
+"[FileInfo/Field/title] Last Modification Date" = "วันที่แก้ไขครั้งล่าสุด";
+
+/* Title of a field with an error message */
+"[FileInfo/Field/valueError] Error" = "ผิดพลาด";
+
+/* Title of a setting: is the file exluded from iCloud/iTunes backup. For example: `Exclude From Backup: <Yes>` */
+"[FileInfo/isExcludedFromBackup/title]" = "ยกเว้นจากการสำรองข้อมูลด้วย iCloud/iTunes";
+
+/* Title of a dialog with file details (name, size, dates) */
+"[FileInfo/title]" = "รายละเอียดไฟล์";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to delete file. Reason: %@" = "ไม่สามารถลบไฟล์ด้วยเหตุผล: %@";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to import file. Reason: %@" = "ไม่สามารถนำเข้าไฟล์ด้วยเหตุผล: %@";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to open file. Reason: %@" = "ไม่สามารถเปิดไฟล์ด้วยเหตุผล: %@";
+
+/* Error message: tried to import URL which does not point to a file */
+"[FileKeeper] Not a file URL" = "ไม่ใช่ไฟล์ URL";
+
+/* Localized name of the storage service: Amerigo (https://www.amerigo-app.com) */
+"[FileProvider/Amerigo/name]" = "Amerigo";
+
+/* Localized name of the storage service: Box (https://box.com) */
+"[FileProvider/Box/name]" = "Box";
+
+/* Localized name of the storage service: Boxcryptor (https://boxcryptor.com) */
+"[FileProvider/Boxcryptor/name]" = "Boxcryptor";
+
+/* Localized name of the storage service: Cryptomator (https://cryptomator.org) */
+"[FileProvider/Cryptomator/name]" = "Cryptomator";
+
+/* Localized name of the storage service: Dropbox (https://dropbox.com) */
+"[FileProvider/Dropbox/name]" = "Dropbox";
+
+/* Localized name of the storage service: FE File Explorer (https://apps.apple.com/app/fe-file-explorer-file-manager/id510282524) */
+"[FileProvider/FE File Explorer/name]" = "FE File Explorer";
+
+/* Localized name of the storage service: Google Drive (https://drive.google.com) */
+"[FileProvider/Google Drive/name]" = "Google Drive";
+
+/* Localized name of the storage service iCloud Drive (https://icloud.com/iclouddrive) */
+"[FileProvider/iCloud Drive/name]" = "iCloud Drive";
+
+/* Localized name of the storage service: MEGA (https://mega.nz) */
+"[FileProvider/Mega.nz/name]" = "MEGA.nz";
+
+/* Localized name of the storage service: Nextcloud (https://nextcloud.com) */
+"[FileProvider/Nextcloud/name]" = "Nextcloud";
+
+/* Localized name of the local on-device storage, as shown in the Files app. */
+"[FileProvider/On My iPad/name]" = "ใน iPad ของฉัน";
+
+/* Localized name of the local on-device storage, as shown in the Files app. */
+"[FileProvider/On My iPhone/name]" = "ใน iPhone ของฉัน";
+
+/* Localized name of the storage service: OneDrive (https://onedrive.com) */
+"[FileProvider/OneDrive/name]" = "OneDrive";
+
+/* Localized name of the storage service: ownCloud (https://owncloud.com) */
+"[FileProvider/ownCloud/name]" = "ownCloud";
+
+/* Localized name of the storage service: pCloud (https://pcloud.com) */
+"[FileProvider/pCloud/name]" = "pCloud";
+
+/* Localized name of the storage service: Proton Drive (https://proton.me/drive) */
+"[FileProvider/ProtonDrive/name]" = "Proton Drive";
+
+/* Localized name of the storage service: QNAP Qfile (https://apps.apple.com/app/qfile/id526330408) */
+"[FileProvider/qnapQFile/name]" = "Qfile";
+
+/* Localized name of the storage service: Documents by Readdle (https://apps.apple.com/app/id364901807) */
+"[FileProvider/Readdle Documents/name]" = "Documents by Readdle";
+
+/* Localized name of the storage service: Resilio Sync (https://https://apps.apple.com/us/app/id1126282325) */
+"[FileProvider/Resilio Sync/name]" = "Resilio Sync";
+
+/* Localized name of the storage app: Seafile Pro (https://apps.apple.com/us/app/seafile-pro/id639202512) */
+"[FileProvider/Seafile Pro/name]" = "Seafile Pro";
+
+/* Localized name of the storage service: SMB server (network share) via native iOS integration. */
+"[FileProvider/SMB/name]" = "SMB server";
+
+/* Localized name of the storage service: Stratospherix FileBrowser (https://apps.apple.com/us/app/filebrowser-document-manager/id364738545) */
+"[FileProvider/Stratospherix FileBrowser/name]" = "FileBrowser";
+
+/* Localized name of the storage service: Sync.com (https://sync.com) */
+"[FileProvider/sync.com/name]" = "Sync.com";
+
+/* Localized name of the storage service: Synology Drive (https://apps.apple.com/us/app/synology-drive/id1267275421) */
+"[FileProvider/Synology Drive/name]" = "Synology Drive";
+
+/* Localized name of the storage service: Synology DS file (https://apps.apple.com/us/app/ds-file/id416751772) */
+"[FileProvider/Synology DS file/name]" = "Synology DS file";
+
+/* Localized name of the storage service: Tresorit (https://tresorit.com) */
+"[FileProvider/Tresorit/name]" = "Tresorit";
+
+/* Localized name of the storage service: local USB drive (native iOS integration) */
+"[FileProvider/USB drive/name]" = "ไดรฟ์ USB";
+
+/* Localized name of the storage service: Yandex.Disk (https://disk.yandex.com) */
+"[FileProvider/Yandex.Disk/name]" = "Yandex.Disk";
+
+/* Title of the dialog for picking the destination group for move/copy operations */
+"[General/DestinationGroup/title] Choose a Destination" = "เลือกปลายทาง";
+
+/* Feature status: disabled/inactive. Keep it short, possibly abbreviated. */
+"[General/Feature/Off]" = "ปิด";
+
+/* Feature status: enabled/active. Keep it short, possibly abbreviated. */
+"[General/Feature/On]" = "เปิด";
+
+/* Placeholder for folders without files */
+"[General/FileList/Empty/title]" = "โฟลเดอร์ว่างเปล่า";
+
+/* Action/button to cancel whatever is going on */
+"[Generic] Cancel" = "ยกเลิก";
+
+/* Action/button to write an email to support */
+"[Generic] Contact Support" = "ติดต่อฝ่ายสนับสนุน";
+
+/* Action/button to write an email to support */
+"[Generic] Contact Us" = "ติดต่อเรา";
+
+/* Action/button to proceed with the action */
+"[Generic] Continue" = "ไปต่อ";
+
+/* Action/button to move an item (to another group/folder/etc) */
+"[Generic] Copy" = "คัดลอก";
+
+/* Action/button to create an item (entry, group, file — depending on context) */
+"[Generic] Create" = "สร้าง";
+
+/* Action/button to delete an item (destroys the item/file) */
+"[Generic] Delete" = "ลบ";
+
+/* Action/button to delete all relevant/selected items */
+"[Generic] Delete All" = "ลบทั้งหมด";
+
+/* Action/button to discard any unsaved changes */
+"[Generic] Discard" = "ละทิ้ง";
+
+/* Action/button to close an error message. */
+"[Generic] Dismiss" = "ไม่สนใจ";
+
+/* Action/button to finish (editing) and keep changes */
+"[Generic] Done" = "เสร็จ";
+
+/* Action/button to edit an item */
+"[Generic] Edit" = "แก้ไข";
+
+/* Action/button to export an item to another app */
+"[Generic] Export" = "ส่งออก";
+
+/* Action/button to view more help/info about some topic */
+"[Generic] Learn more" = "เรียนรู้เพิ่มเติม…";
+
+/* Checkbox/Button to show additional actions */
+"[Generic] More Actions" = "เพิ่มเติม";
+
+/* Action/button to move an item (to another group/folder/etc) */
+"[Generic] Move" = "ย้าย";
+
+/* Action/button: generic OK */
+"[Generic] OK" = "ตกลง";
+
+/* Action/button to open URL in the appropriate app (usually, web browser) */
+"[Generic] Open URL" = "เปิด URL";
+
+/* Action/button to replace/overwrite an item */
+"[Generic] Overwrite" = "เขียนทับ";
+
+/* Action/button to rename an item */
+"[Generic] Rename" = "เปลี่ยนชื่อ";
+
+/* Action/button to replace an item with another one */
+"[Generic] Replace" = "แทนที่";
+
+/* Action/button to restore a backup/archived item in its original place */
+"[Generic] Restore" = "คืนค่า";
+
+/* Action/button to open Finder (macOS file manager) and highlight a given file */
+"[Generic] Reveal in Finder" = "แสดงใน Finder";
+
+/* Action/button to share an item with another app (AirDrop, send an email, etc) */
+"[Generic] Share" = "แชร์";
+
+/* Action/button to show additional information about an error or item */
+"[Generic] Show Details" = "แสดงรายละเอียด";
+
+/* Action/button to show sensitive info as it is, in plain text (as opposed to asterisks) */
+"[Generic] Show In Plain Text" = "แสดงเป็นข้อความ";
+
+/* Checkbox/Button to show a text field in its full size */
+"[Generic] Show more" = "แสดงเพิ่มเติม";
+
+/* Action/button to skip the current step and proceed with the next one */
+"[Generic] Skip" = "ข้าม";
+
+/* Name of the Recently Deleted (Recycle Bin) directory, as shown in the Files app */
+"[Generic/Directory/Recently Deleted/name]" = "ที่เพิ่งลบล่าสุด";
+
+/* Title of a notification when the user tries to close a document with unsaved changes */
+"[Generic/Edit/Aborting/title] There are unsaved changes" = "มีการเปลี่ยนแปลงที่ยังไม่ได้บันทึก";
+
+/* Action/button to delete a file (destroys the file forever) */
+"[Generic/File] Delete" = "ลบ";
+
+/* Action/button to remove a file from the app (the file remains, but the app forgets about it) */
+"[Generic/File] Remove" = "ลบออก";
+
+/* Action/button to save data to a different file */
+"[Generic/File/Save as]" = "บันทึกเป็น...";
+
+/* Title of an error message about file export */
+"[Generic/File/title] Export Error" = "ส่งออกผิดพลาด";
+
+/* Message shown when trying to copy into an existing file. */
+"[Generic/File/title] File already exists" = "มีไฟล์อยู่แล้ว";
+
+/* Title of an error message about file import */
+"[Generic/File/title] Import Error" = "นำเข้าผิดพลาด";
+
+/* Title of a list with predefined quick-choice values (for example: 'Presets: 1 week, 1 months, 1 year') */
+"[Generic/Presets]" = "ค่าที่ตั้งไว้";
+
+/* Title of a search field (a noun, not verb) */
+"[Generic/Search/title]" = "ค้นหา";
+
+/* Title of an error message notification */
+"[Generic/title] Error" = "ผิดพลาด";
+
+/* Title of an error message about iOS system keychain */
+"[Generic/title] Keychain Error" = "พวงกุญแจผิดพลาด";
+
+/* Title of an warning message */
+"[Generic/title] Warning" = "คำเตือน";
+
+/* Title of a screen/list view configuration: sort order, visible items, etc */
+"[Generic/ViewOptions/title]" = "ตัวเลือกมุมมอง";
+
+/* Warning message template. Swap the icon and message for right-to-left languages. */
+"[Generic/WarningWithIcon/template]" = "⚠️ %@";
+
+/* VoiceOver description of a group [groupTitle: String, itemCount: Int] */
+"[Group/a11y/description]" = "%@, กลุ่ม";
+
+/* Action/button to create a new sub-group in the current group */
+"[Group/Create/action] Create Group" = "สร้างกลุ่ม";
+
+/* Title of a form for editing a group */
+"[Group/Edit/title] Edit Group" = "แก้ไขกลุ่ม";
+
+/* Default name of a new group */
+"[Group/New/defaultName] New Group" = "สร้างกลุ่มใหม่";
+
+/* Title for the Notes field in group editor */
+"[Group/Notes/title]" = "หมายเหตุ";
+
+/* Action/button to delete everything inside the Recycle Bin */
+"[Group/RecycleBin/Empty/action]" = "ล้างข้อมูลในถังรีไซเคิล";
+
+/* Title of the confirmation dialog for `Empty Recycle Bin` action */
+"[Group/RecycleBin/Empty/confirmTitle]" = "ต้องการลบข้อมูลทุกอย่างในถังรีไซเคิลโดยถาวรหรือไม่";
+
+/* Glossary term: noun, a group in database. */
+"[Group/title]" = "กลุ่ม";
+
+/* Title of an input field for group name */
+"[GroupEditor/Name/placeholder]" = "ชื่อกลุ่ม";
+
+/* A notification that hardware keys (e.g. YubiKey) cannot be used in AutoFill (the OS does not allow the AutoFill to use NFC/MFI). */
+"[HardwareKey/AutoFill/NotAvailable] Hardware keys are not available in AutoFill." = "ฮาร์ดแวร์คีย์ไม่สามารถใช้ในการป้อนรหัสผ่านอัตโนมัติได้";
+
+/* Name of an input field which shows selected hardware key */
+"[HardwareKey/Field/title]" = "ฮาร์ดแวร์คีย์";
+
+/* Master key/unlock option: don't use hardware keys */
+"[HardwareKey/None] No Hardware Key" = "ไม่มีฮาร์ดแวร์คีย์";
+
+/* Title of a list with possible hardware key connections */
+"[HardwareKey/Picker/title]" = "ฮาร์ดแวร์คีย์";
+
+/* Generic title of in-app help article */
+"[Help Viewer/title]" = "ช่วยเหลือ";
+
+/* Name of an entry field. Acronym `HOTP` should not be translated. */
+"[HOTP/FieldName]" = "รหัสผ่านแบบใช้ครั้งเดียว (HOTP)";
+
+/* Info message for enterprise users */
+"[Intune/OrgNeedsToManage]" = "เพื่อป้องกันข้อมูล องค์กรของคุณจำเป็นต้องจัดการแอปนี้ เมื่อต้องการดำเนินการนี้ให้เสร็จสมบูรณ์ ให้ลงชื่อเข้าใช้ด้วยบัญชีที่ทำงานหรือโรงเรียนของคุณ";
+
+/* Notification that an archived/historical item (e.g entry) has been successfully restored */
+"[Item/History/Restored]" = "คืนค่าเป็นรุ่นที่ผ่านมาเรียบร้อยแล้ว";
+
+/* Title of a list with advanced/expert-level properties of a database item (e.g. entry) */
+"[Item/Properties/Advanced/title]" = "ขั้นสูง";
+
+/* Possible value of the `Password AutoFill` setting. For example: 'Password AutoFill: Allowed' */
+"[Item/Properties/AutoFill/allowed]" = "อนุญาต";
+
+/* Possible value of the `Password Audit` setting. For example: 'Password Audit: Allowed' */
+"[Item/Properties/PasswordAudit/allowed]" = "อนุญาต";
+
+/* Possible value of the `Search` setting. Example: 'Search: Allowed' */
+"[Item/Properties/Search/allowed]" = "อนุญาต";
+
+/* Title of a setting: whether the item (e.g. entry) should be considered during search. Example: 'Search: Allowed' */
+"[Item/Properties/Search/title] Search" = "ค้นหา";
+
+/* Name of an entry/group category (visual style): default one, like in KeePass */
+"[ItemCategory] Default (KeePass)" = "ค่าเริ่มต้น (KeePass)";
+
+/* Title of a list with custom (user-imported) icons for groups and entries */
+"[ItemIconPicker/CustomIcons]" = "ไอคอนที่กำหนดเอง";
+
+/* Title of a list with standard/default icons for groups and entries */
+"[ItemIconPicker/StandardIcons]" = "ไอคอนมาตรฐาน";
+
+/* Status message: processing of the master key is in progress */
+"[KDF/Progress] Processing the master key" = "กำลังประมวลผลกุญแจหลัก";
+
+/* Generic error message about system keychain. [errorCode: Int] */
+"[KeychainError/generic] Keychain error (code %d) " = "พวงกุญแจเกิดข้อผิดพลาด (code %d) ";
+
+/* Error message about system keychain. */
+"[KeychainError/unexpectedFormat] Keychain error: unexpected data format" = "พวงกุญแจเกิดข้อผิดพลาด: ไม่ทราบฟอร์แมทของข้อมูล";
+
+/* Action: add a key file into the app, by importing or creating one. `Key file` is a glossary term. */
+"[KeyFile/Add/action]" = "เพิ่มไฟล์กุญแจ";
+
+/* Message to confirm deletion of a key file. */
+"[KeyFile/Delete/Confirm/text] Delete key file?\n Make sure you have a backup." = "ลบไฟล์กุญแจหรือไม่?\n ตรวจสอบให้ดีว่าคุณกู้ไว้เรียบร้อยแล้ว";
+
+/* Error message related to key file. [errorDetails: String] */
+"[KeyFile/error]" = "ไฟล์กุญแจเกิดข้อผิดพลาด: %@";
+
+/* Name of an input field which shows selected key file */
+"[KeyFile/Field/title]" = "ไฟล์กุญแจ";
+
+/* Title of the list with key files. */
+"[KeyFile/List/title]" = "ไฟล์กุญแจ";
+
+/* Description of the 'No Key File' option. */
+"[KeyFile/None/description]" = "ใช้รหัสผ่านเท่านั้น";
+
+/* Title: don't use key file */
+"[KeyFile/None/title]" = "ไม่มีไฟล์กุญแจ";
+
+/* Message to confirm removal of a key file from the app. (This keeps the file, but removes its reference from the app.) */
+"[KeyFile/Remove/Confirm/text] Remove key file from the list?\n The file will remain intact and you can add it again later." = "ลบไฟล์กุญแจออกจากรายการหรือไม่?\n ไฟล์จะยังคงเดิมและคุณยังสามารถเพิ่มไฟล์ใหม่ได้ในภายหลัง";
+
+/* Error message when the key file is misformatted or damaged */
+"[KeyFileError/Corrupted/title]" = "ไฟล์กุญแจเสียหาย";
+
+/* Error message: unsupported/unknown format of a key file */
+"[KeyFileError/UnsupportedFormat/title]" = "ไม่รองรับฟอร์แมทของไฟล์กุญแจ";
+
+/* Menu item: show information about file (name, size, dates) */
+"[Menu/FileInfo/title]" = "รายละเอียดไฟล์";
+
+/* Menu title: app settings */
+"[Menu/Settings/title]" = "การตั้งค่า";
+
+/* Name of an entry field */
+"[OTP/FieldName]" = "รหัสผ่านแบบใช้ครั้งเดียว";
+
+/* Error shown when scanned QR code cannot be used for OTP */
+"[OTP/Scan/InvalidData]" = "QR code นี้ไม่สามารถใช้กับการตั้ง OTP ได้";
+
+/* Message to confirm user intentions */
+"[OTP/Scan/OverwriteWarning]" = "รายการนี้ได้ตั้งค่ารหัสผ่านแบบใช้ครั้งเดียวไว้แล้ว คุณต้องการเขียนทับหรือไม่?";
+
+/* Call for action. Acronym `OTP` should not be translated. */
+"[OTP/Setup]" = "ตั้งค่ารหัสผ่านแบบใช้ครั้งเดียว (OTP)";
+
+/* Description of an OTP code; sentence case. */
+"[OTP/Title/sentenceCase]" = "รหัสผ่านแบบครั้งเดียว";
+
+/* Error message from the random text generator. */
+"[PasswordGenerator/CannotGenerateText/title]" = "ไม่สามารถสร้างข้อความ";
+
+/* Description of an empty character set for password generator. 'Empty' as 'there are no characters'. */
+"[PasswordGenerator/CustomSet/Empty/title]" = "ว่างเปล่า";
+
+/* User-defined set of characters for password generator. */
+"[PasswordGenerator/CustomSet/title]" = "อักขระที่เลือกเอง";
+
+/* Error message/call to action from the random text generator. */
+"[PasswordGenerator/DesiredLengthTooShort/title]" = "เพิ่มความยาวตัวอักษรให้ถึงอย่างน้อย %d";
+
+/* Action/button: generate random text/password/phrase */
+"[PasswordGenerator/Generate/action]" = "สุ่ม";
+
+/* Description of randomly generated text/password/phrase */
+"[PasswordGenerator/GeneratedText/title]" = "อักขระที่สุ่ม";
+
+/* Inclusion criterion for a password generator. For example: `Digits: Allowed` */
+"[PasswordGenerator/InclusionCondition/allowed]" = "อนุญาต";
+
+/* Inclusion criterion for a password generator. For example: `Uppercase Letters: Excluded` */
+"[PasswordGenerator/InclusionCondition/excluded]" = "ละเว้น";
+
+/* Inclusion criterion for a password generator — a disabled/inactive one that won't be taken into account. For example: `Uppercase Letters: Inactive` */
+"[PasswordGenerator/InclusionCondition/inactive]" = "ไม่ใช้งาน";
+
+/* Inclusion criterion for a password generator. For example: `Special Symbols: Required` */
+"[PasswordGenerator/InclusionCondition/required]" = "ต้องการ";
+
+/* Length (number of characters) of the random text to generate */
+"[PasswordGenerator/Length/title]" = "ความยาวอักขระ";
+
+/* Description of a password generator parameter. For example, the digit in 'abc222def'. */
+"[PasswordGenerator/MaxConsecutive/description]" = "จำนวนอักขระสูงสุดที่ให้มีความซ้ำกันหลายตัวได้";
+
+/* Error message/call to action from the random text generator. */
+"[PasswordGenerator/MaxConsecutiveNotSatisfiable/title]" = "ต้องไปเพิ่มจำนวนอักขระสูงสุดที่ให้ใช้ซ้ำกันได้";
+
+/* One of the operation modes of the random text generator */
+"[PasswordGenerator/Mode/Basic/title]" = "ง่าย";
+
+/* One of the operation modes of the random text generator */
+"[PasswordGenerator/Mode/Expert/title]" = "ยาก";
+
+/* One of the operation modes of the random text generator, where it generates random phrases. */
+"[PasswordGenerator/Mode/Passphrase/title]" = "ชุดวลี";
+
+/* Operation mode of the random text generator (for example, `Basic`, `Expert`, `Passphrase`) */
+"[PasswordGenerator/Mode/title]" = "รูปแบบ";
+
+/* Error message from the random text generator. */
+"[PasswordGenerator/NotEnoughElementsToSample/title]" = "เพิ่มประเภทอักขระเพื่อให้เลือกใช้";
+
+/* Length (number of characters) of the password to generate */
+"[PasswordGenerator/PasswordLength/title]" = "ความยาวรหัสผ่าน";
+
+/* Error message from the random text generator. `required` and `excluded` are as in [PasswordGenerator/InclusionCondition/required] and [PasswordGenerator/InclusionCondition/excluded] */
+"[PasswordGenerator/RequiredSetCompletelyExcluded/title]" = "ชุดอักขระชุดหนึ่งถูกตั้งเป็นต้องมีและเว้นไว้";
+
+/* Title for digits (like '123') */
+"[PasswordGenerator/Set/Digits/title]" = "ตัวเลข";
+
+/* Title for look-alike symbols (like '1lI', that is: digit `1`, small `L`, capital `i`). */
+"[PasswordGenerator/Set/Lookalikes/title]" = "ตัวอักษรที่ดูคล้ายกัน";
+
+/* Title for lowercase letters (like 'abc') */
+"[PasswordGenerator/Set/Lowercase/title]" = "ตัวอักษรพิมพ์เล็ก (a-z)";
+
+/* Title for special symbols (like '@#$') */
+"[PasswordGenerator/Set/Specials/title]" = "สัญลักษณ์พิเศษ";
+
+/* Title for uppercase letters (like 'ABC') */
+"[PasswordGenerator/Set/Uppercase/title]" = "ตัวอักษรพิมพ์ใหญ่ (A-Z)";
+
+/* Name of the space character. https://en.wikipedia.org/wiki/Space_(punctuation) */
+"[PasswordGenerator/SpaceCharacter/name]" = "เว้นวรรค";
+
+/* Title of the random text/password/username generator dialog. */
+"[PasswordGenerator/title]" = "เครื่องมือสุ่มรหัสผ่าน";
+
+/* Character to be inserted between words of a passphrase. */
+"[PasswordGenerator/Word Separtor/title]" = "ตัวคั่น";
+
+/* Word capitalization style. Written in that style, if possible. */
+"[PasswordGenerator/WordCase/lowerCase]" = "ตัวพิมพ์เล็ก";
+
+/* Case of letters in a word (e.g. UPPER, lower, Title Case) */
+"[PasswordGenerator/WordCase/title]" = "รูปแบบตัวพิมพ์";
+
+/* Word capitalization style: first letters of significant words capitalized. Written in that style, if possible. */
+"[PasswordGenerator/WordCase/titleCase]" = "ขึ้นต้นตัวพิมพ์";
+
+/* Word capitalization style. Written in that style, if possible. */
+"[PasswordGenerator/WordCase/upperCase]" = "ตัวพิมพ์ใหญ่";
+
+/* Number of words in a generated passphrase. In context: 'Words: 5' */
+"[PasswordGenerator/WordCount/title]" = "จำนวนคำ";
+
+/* Name of a wordlist for passphrase generator. `EFF` is an organization name. */
+"[PasswordGenerator/Wordlist/EFFLarge/title]" = "EFF Large Wordlist (7776 คำ)";
+
+/* Name of a wordlist for passphrase generator. `EFF` is an organization name. */
+"[PasswordGenerator/Wordlist/EFFShort/title]" = "EFF Short Wordlist %d (1296 คำ)";
+
+/* List of words to be used for a passphrase. */
+"[PasswordGenerator/Wordlist/title]" = "ชุดคำศัพท์";
+
+/* Title of a premium feature */
+"[Premium/Benefits/BusinessClouds/title]" = "ซิงค์กับที่จัดเก็บขององค์กร";
+
+/* Explanation of the premium feature */
+"[Premium/Benefits/HardwareKeys/details]" = "ปกป้องความลับของคุณด้วยฮาร์ดแวร์คีย์ อย่างเช่นใช้ YubiKey";
+
+/* Title of a premium feature */
+"[Premium/Benefits/HardwareKeys/title]" = "ใช้ฮาร์ดแวร์คีย์";
+
+/* Explanation of the premium feature */
+"[Premium/Benefits/MultiDB/details]" = "เพิ่มฐานข้อมูลได้หลายฐานและสลับใช้งานได้อย่างรวดเร็ว";
+
+/* Title of a premium feature */
+"[Premium/Benefits/MultiDB/title]" = "ซิงค์กับทีมงาน";
+
+/* List of premium benefits/advantages */
+"[Premium/Benefits/Negative/header] " = "อะไรที่คุณยังไม่มี";
+
+/* List of premium benefits/advantages */
+"[Premium/Benefits/Positive/header] " = "อะไรที่คุณจะได้รับ";
+
+/* Call to action */
+"[Premium/CallToAction/buyNow]" = "ซื้อตอนนี้";
+
+/* Call to action: continue using the free version */
+"[Premium/CallToAction/free]" = "ทดสอบต่อไป";
+
+/* Call to action: start free trial */
+"[Premium/CallToAction/startTrial]" = "ลองใช้ฟรี";
+
+/* Call to action: upgrade to premium */
+"[Premium/CallToAction/upgradeNow]" = "อัพเกรดทันที";
+
+/* Action: open AppStore subscription management page */
+"[Premium/ManageSubscriptions/action]" = "จัดการการสมัครรับ";
+
+/* Name of the permanent/never-ending license. */
+"[Premium/perpetualLicense]" = "สิทธิ์ใช้งานถาวร";
+
+/* [formattedDate: String] */
+"[Premium/PerpetualLicense/status]" = "คุณได้สิทธิ์ถาวรสำหรับทุกเวอร์ชันก่อน %@";
+
+/* What's included in a price plan: 1 year of support via email */
+"[Premium/Price Plan/Conditions/1 year email support]" = "ระยะเวลาหนึ่งปีสำหรับการช่วยเหลือทางอีเมล";
+
+/* What's included in a price plan */
+"[Premium/Price Plan/Conditions/all premium features]" = "คุณสมบัติพรีเมียมทั้งหมด";
+
+/* What's included in a free plan: support via forums (as opposed to email support) */
+"[Premium/Price Plan/Conditions/community support]" = "สนับสนุนลูกค้า: ฟอรัมออนไลน์";
+
+/* What's included in a price plan: existing premium features only (as opposed to `current + future`) */
+"[Premium/Price Plan/Conditions/current premium features]" = "คุณสมบัติพรีเมียมปัจจุบัน";
+
+/* What's included in a price plan: support via email */
+"[Premium/Price Plan/Conditions/email support]" = "สนับสนุนลูกค้า: อีเมล";
+
+/* Family Sharing programme. Translation must match Apple's: https://www.apple.com/family-sharing/ */
+"[Premium/Price Plan/Conditions/family sharing]" = "การแชร์ในครอบครัว";
+
+/* What's included in a free plan: reminders that the version is free */
+"[Premium/Price Plan/Conditions/freemium reminders]" = "แจ้งเตือนการใช้เวอร์ชันฟรี";
+
+/* Upgrade conditions for current-version premium purchase. */
+"[Premium/Price Plan/Conditions/full price upgrade]" = "คุณสมบัติพรีเมียมได้เพิ่มรอไว้ในอนาคตเผื่อไว้สำหรับการซื้อเต็มราคา";
+
+/* What's included in a price plan: upcoming premium features (as opposed to `current only`) */
+"[Premium/Price Plan/Conditions/future premium features]" = "คุณสมบัติพรีเมียมในอนาคต";
+
+/* What's included in a price plan. Please leave `perpetual fallback license` in English. */
+"[Premium/Price Plan/Conditions/perpetual fallback]" = "สิทธิ์ในการเช่ามาเป็นเจ้าของ (Perpetual fallback license)";
+
+/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://keepassium.com/articles/perpetual-fallback-license/ */
+"[Premium/Price Plan/Conditions/subscription as purchase]" = "ซื้อเป็นแบบสมัครรับ";
+
+/* What's included in a price plan */
+"[Premium/Price Plan/Conditions/updates and bug fixes]" = "อัพเดตและการแก้ไข";
+
+/* Price of the free pricing plan */
+"[Premium/Price Plan/Free/price]" = "ฟรี";
+
+/* Name of the free pricing plan */
+"[Premium/Price Plan/Free/title]" = "ฟรี";
+
+/* Marks the default pricing plan */
+"[Premium/Price Plan/popular]" = "ยอดนิยม";
+
+/* Subscription conditions */
+"[Premium/Subscription/Legal/text]" = "การชำระเงินจะถูกเรียกเก็บไปยังบัญชี Apple ID ของคุณเมื่อยืนยันการซื้อเรียบร้อยแล้ว\n\nการสมัครรับจะต่ออายุให้อัตโนมัติหากไม่มีคำสั่งยกเลิกอย่างน้อย 24 ชั่วโมงก่อนที่จะหมดรอบใช้งานปัจจุบัน บัญชีของคุณจะถูกเรียกเก็บเงินเพื่อต่ออายุภายใน 24 ชั่วโมงก่อนสิ้นสุดรอบใช้งานปัจจุบัน\n\nคุณสามารถจัดการและยกเลิกการสมัครรับโดยเข้าไปที่ตั้งค่าบัญชีของคุณใน App Store หลังจากซื้อเรียบร้อยแล้ว";
+
+/* Trial conditions. For example `30 days free, then $1 per month` */
+"[Premium/Trial/trial then price]" = "ฟรี %1$@, จากนั้น %2$@";
+
+/* Error message: AppStore returned no available in-app purchase options */
+"[Premium/Upgrade] Hmm, there are no upgrades available. This should not happen, please contact support." = "หืม ตอนนี้ไม่มีการอัพเกรดให้ใช้ได้ ซึ่งเป็นสิ่งที่ไม่ควรเกิดขึ้น โปรดติดต่อฝ่ายสนับสนุน";
+
+/* Action/button to start choosing premium versions and possibly buying one */
+"[Premium/Upgrade/action] Upgrade to Premium" = "อัพเกรดเป็นพรีเมียม";
+
+/* Message shown after buying a lifetime version. */
+"[Premium/Upgrade/cancelOngoingSubscription]" = "โปรดตรวจสอบให้ดี หากคุณต้องการยกเลิกการสมัครรับของครั้งก่อน";
+
+/* Message shown when in-app purchase is deferred until approval (parental or corporate). */
+"[Premium/Upgrade/Deferred/text] Thank you! You can use KeePassium while purchase is awaiting approval." = "ขอบคุณมาก! คุณสามารถใช้ KeePassium ขณะที่รอยืนยันการซื้อ";
+
+/* Product price for monthly premium subscription. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ / month" = "%@ / เดือน";
+
+/* Product price for annual premium subscription. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ / year" = "%@ / ปี";
+
+/* Product price for once-and-forever premium. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ once" = "%@ ครั้งเดียว";
+
+/* Equivalent monthly price for an annual subscription. For example: `$12/year ≈ $1 / month` */
+"[Premium/Upgrade/price] around %@ / month" = "≈ %@ / เดือน";
+
+/* Status message when downloading available in-app purchases */
+"[Premium/Upgrade/Progress] Contacting AppStore..." = "กำลังติดต่อ App Store...";
+
+/* Status: in-app purchase started */
+"[Premium/Upgrade/Progress] Purchasing..." = "กำลังซื้อ...";
+
+/* Text of the message shown after in-app purchase was successfully restored */
+"[Premium/Upgrade/Restored/text] Upgrade successful, enjoy the app!" = "อัพเกรดเรียบร้อย ใช้แอปได้เลย!";
+
+/* Title of the message shown after in-app purchase was successfully restored */
+"[Premium/Upgrade/Restored/title] Purchase Restored" = "เรียกคืนการซื้อสำเร็จ";
+
+/* Text of an error message: there were no in-app purchases that can be restored */
+"[Premium/Upgrade/RestoreFailed/text] No previous purchase could be restored." = "ไม่มีการซื้อครั้งก่อนที่สามารถนำกลับมาใช้ได้";
+
+/* Title of an error message: there were no in-app purchases that can be restored */
+"[Premium/Upgrade/RestoreFailed/title] Sorry" = "ขออภัย";
+
+/* Message shown after buying or subscribing. */
+"[Premium/Upgrade/Success/thankYou]" = "ขอบคุณสำหรับการสั่งซื้อ!";
+
+/* Description/call to action for the `Business Cloud Storage` premium feature. */
+"[PremiumFeature/BusinessClouds/description]" = "เชื่อมต่อโดยตรงกับบัญชีที่จัดเก็บขององค์กร เช่น OneDrive for Business";
+
+/* Title of a premium feature: access to company's cloud accounts like 'OneDrive for Business' */
+"[PremiumFeature/BusinessClouds/title]" = "ที่จัดเก็บบนคลาวด์ขององค์กร";
+
+/* A generic description of a premium feature */
+"[PremiumFeature/Generic/description]" = "อัพเกรดเป็นพรีเมียมและใช้งาน KeePassium ในแบบที่ดีที่สุด";
+
+/* A generic title of a premium feature */
+"[PremiumFeature/Generic/title]" = "คุณสมบัติพรีเมียม";
+
+/* Description/advertisement for the `Hardware Keys` premium feature */
+"[PremiumFeature/HardwareKeys/description]" = "เพิ่มความปลอดภัยด้วยฮาร์ดแวร์คีย์ (YubiKey) ในเวอร์ชันพรีเมียม";
+
+/* Title of a premium feature: ability use hardware keys (e.g. YubiKey) for encryption (In Title Case) */
+"[PremiumFeature/HardwareKeys/title] Hardware Keys" = "ฮาร์ดแวร์คีย์";
+
+/* Description/advertisement for the `Multiple Databases` premium feature */
+"[PremiumFeature/MultiDB/description] Easily switch between databases in the premium version." = "สามารถสลับไปมาระหว่างฐานข้อมูลได้ในเวอร์ชันพรีเมียม";
+
+/* Title of a premium feature: ability to use multiple databases (In Title Case) */
+"[PremiumFeature/MultiDB/title] Multiple Databases" = "ฐานข้อมูลหลายจำนวน";
+
+/* Description/call to action for the `Quick AutoFill` premium feature. */
+"[PremiumFeature/QuickAutoFill/description]" = "ป้อนรหัสผ่านอัตโนมัติด้วยการกดครั้งเดียว โดยไม่ต้องเปิด KeePassium";
+
+/* Title of a premium feature: show relevant AutoFill entries right under the input field */
+"[PremiumFeature/QuickAutoFill/title]" = "ป้อนรหัสอัตโนมัติทันที";
+
+/* A brief summary of the privacy policy (for offline mode) */
+"[PrivacyPolicy/Offline/text]" = "KeePassium ไม่เก็บข้อมูลส่วนตัวหรือข้อมูลวิเคราะห์ใด ๆ และไม่แชร์ข้อมูลให้ผู้อื่น";
+
+/* A brief summary of the privacy policy (for online mode) */
+"[PrivacyPolicy/Online/text]" = "KeePassium จะไม่เก็บข้อมูลส่วนตัวหรือข้อมูลเพื่อการวิเคราะห์ใด ๆ\nฟีเจอร์บางอย่างอาจจะต้องใช้การแลกเปลี่ยนข้อมูลกับบริการอื่นภายนอก (จะขึ้นอยู่กับการยินยอมของผู้ใช้ก่อนใช้งานบริการเหล่านั้น) การแลกเปลี่ยนข้อมูลจะทำตามนโยบายความเป็นส่วนตัวตามบริการที่ใช้";
+
+/* Section: privacy policy */
+"[PrivacyPolicy/title]" = "นโยบายความเป็นส่วนตัว";
+
+/* Explanation/notification when a long-running operation was cancelled by user */
+"[Progress/CancellationReason] Cancelled by user" = "ถูกยกเลิกโดยผู้ใช้งาน";
+
+/* Error message when a long-running operation was cancelled due to the lack of free memory (RAM). */
+"[Progress/CancellationReason/lowMemory]" = "หน่วยความจำไม่พอที่จะไปต่อได้\nสิ่งนี้สามารถเกิดขึ้นได้ถ้าฐานข้อมูลมีขนาดใหญ่เกินไปหรือการตั้งค่าฐานข้อมูลที่ยุ่งยาก (Argon2 memory parameter)";
+
+/* Name of a feature that shows relevant entries directly next to the login/password forms. */
+"[QuickAutoFill/title]" = "ป้อนรหัสอัตโนมัติทันที";
+
+/* Network security setting */
+"[RemoteConnection/AllowUntrusted/title]" = "อนุญาตใช้ใบอนุญาตที่ไม่น่าเชื่อถือ";
+
+/* Network connection. For example `Connection: WebDAV` or `Connection: MyCloud`. */
+"[RemoteConnection/Connection/title]" = "การเชื่อมต่อ";
+
+/* Action: connect to a network server */
+"[RemoteConnection/connectToServer]" = "เชื่อมต่อกับเซิร์ฟเวอร์";
+
+/* Title of a section: username, password, etc */
+"[RemoteConnection/Credentials]" = "ข้อมูลยืนยันตัวตน";
+
+/* Error message: user credentials rejected by the server */
+"[RemoteConnection/Error/AuthenticationFailed/title]" = "การยืนยันตัวตนไม่สำเร็จ";
+
+/* Network address of a file */
+"[RemoteConnection/FileURL]" = "URL ของไฟล์";
+
+/* Name of a predefined OneDrive folder which contains user's own files */
+"[RemoteConnection/OneDrive/Folder/files]" = "ไฟล์";
+
+/* Action: authenticate to OneDrive account */
+"[RemoteConnection/SignIn/OneDrive/action]" = "ลงชื่อเข้าใช้ OneDrive";
+
+/* No comment provided by engineer. */
+"[RemoteConnection/SignIn/PrivateMode/description]" = "เปิดหน้าลงชื่อเข้าใช้ในเบราว์เซอร์โหมดส่วนตัว";
+
+/* No comment provided by engineer. */
+"[RemoteConnection/SignIn/PrivateMode/title]" = "โหมดส่วนตัว";
+
+/* Title: connection to a network storage */
+"[RemoteConnection/title]" = "การเชื่อมต่อ";
+
+/* Name of an input field for entering the password again */
+"[Repeat Password/Field/title]" = "ยืนยันรหัสผ่าน";
+
+/* Title of AutoFill settings screen */
+"[Settings/AutoFill/title]" = "การป้อนรหัสผ่านอัตโนมัติ";
+
+/* Title of a yes/no setting: whether to include backup copies in the file list */
+"[Settings/DatabaseBackup/ShowBackupFiles/title]" = "แสดงไฟล์สำรองข้อมูล";
+
+/* Settings section: protection of databases, their keys and data inside them */
+"[Settings/DataProtection/title]" = "ปกป้องข้อมูล";
+
+/* An option in Group Viewer settings. Will be shown as 'Entry Subtitle: None', meanining that no entry details will be shown in any lists. */
+"[Settings/EntryListDetail/longTitle] None" = "ไม่มี";
+
+/* Title of a settings section: which entry field to show along with entry title */
+"[Settings/GroupViewer] Entry Subtitle" = "คำอธิบายหลังชื่อ";
+
+/* Title of a settings section: sort order of groups and entries in a list */
+"[Settings/GroupViewer] Sort Order" = "จัดเรียงลำดับ";
+
+/* Title of a yes/no setting */
+"[Settings/KeyFiles/Remember/title]" = "จำไฟล์กุญแจ";
+
+/* Title of list view configuration screen */
+"[Settings/ListSettings/title]" = "การตั้งค่ารายการ";
+
+/* Setting: preserve (cache) calculated database keys */
+"[Settings/MasterKeys/CacheDerived/title]" = "คีย์เข้ารหัสที่บันทึกไว้";
+
+/* Title of a yes/no setting */
+"[Settings/MasterKeys/Remember/title]" = "จำรหัสผ่านหลัก";
+
+/* Confirmation dialog message */
+"[Settings/NetworkAccess/Confirmation/text]" = "ต้องการอนุญาตให้ KeePassium เชื่อมต่อกับบริการภายนอกหรือไม่";
+
+/* Settings section: how/whether the app is allowed to use networks/Internet */
+"[Settings/NetworkAccess/title]" = "การเข้าถึงเครือข่าย";
+
+/* Description of the `Stay Offline` mode. */
+"[Settings/NetworkAccessMode/Offline/description]" = "มีความเป็นส่วนตัวมากกว่า";
+
+/* Setting option: the app should work offline */
+"[Settings/NetworkAccessMode/Offline/title]" = "ใช้แบบออฟไลน์";
+
+/* Description of the `Allow Network Access` mode. */
+"[Settings/NetworkAccessMode/Online/description]" = "มีความสามารถการใช้งานที่หลากหลายกว่า";
+
+/* Setting option: the app is permitted to use online features */
+"[Settings/NetworkAccessMode/Online/title]" = "อนุญาตให้เข้าถึงเครือข่าย";
+
+/* Title of the app settings screen */
+"[Settings/title]" = "การตั้งค่า";
+
+/* List sorting option (for file names). Example: 'Sort by: Name' */
+"[SortBy/FileName]" = "ชื่อ";
+
+/* List sorting option, when no sorting is selected. Example: 'Sort by: None' */
+"[SortBy/None]" = "ไม่มี";
+
+/* Name of a cloud storage service */
+"[StorageService/DropboxBusiness/title]" = "Dropbox Business";
+
+/* Name of a cloud storage service */
+"[StorageService/DropboxPro/title]" = "Dropbox Pro";
+
+/* Name of a cloud storage service. Must match Microsoft's translation, see  https://partner.microsoft.com/solutions/onedrive-for-business */
+"[StorageService/OneDriveForBusiness/title]" = "OneDrive for Business";
+
+/* Template text of a bug report email */
+"[Support/template] (Please describe the problem here)" = "(โปรดอธิบายปัญหาตรงนี้)";
+
+/* Call to action in the Donations screen. */
+"[TipBox/callToAction/1]" = "ช่วยพวกเราทำ KeePassium ให้ดีขึ้น";
+
+/* Call to action in the Donations screen. */
+"[TipBox/callToAction/2]" = "ช่วยพวกเราทำให้ KeePassium ดูดีขึ้น";
+
+/* Call to action in the Donations screen. (free = gratis) */
+"[TipBox/callToAction/3]" = "ช่วยพวกเราทำให้ KeePassium สามารถใช้ฟรีได้";
+
+/* Text in the Donations screen. */
+"[TipBox/description/1]" = "คุณถูกใจ KeePassium หรือไม่?";
+
+/* Text in the Donations screen. */
+"[TipBox/description/2]" = "KeePassium เป็นแอปโอเพนซอร์สแบบฟรี คุณสามารถไว้ใจกับข้อมูลที่ละเอียดอ่อนของคุณได้ ไม่มีโฆษณา ไม่สอดส่องข้อมูล ไม่ทำเรื่องไร้สาระ — เราเคารพคุณ";
+
+/* Text in the Donations screen. */
+"[TipBox/description/3]" = "คุณถูกใจ KeePassium แต่ไม่ได้ต้องการฟีเจอร์พรีเมียมหรือไม่?";
+
+/* Notification after a successful donation. */
+"[TipBox/thankYou]" = "ขอบคุณ!";
+
+/* Title of the tip box/donation screen. */
+"[TipBox/title/2]" = "บริจาค";
+
+/* Call to action, title of the tip box/donation screen. */
+"[TipBox/title/3]" = "สนับสนุน KeePassium";
+
+/* Name of an entry field. Acronym `TOTP` should not be translated. */
+"[TOTP/FieldName]" = "รหัสผ่านแบบใช้ครั้งเดียว (TOTP)";
+
+/* Human-readable file location. The file is situated either online / in cloud storage, or on the same device, but in some other app. Example: 'File Location: Cloud storage / Another app' */
+"[URLReference/Location] Cloud storage / Another app" = "ที่จัดเก็บในคลาวด์ / แอปอื่น";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. 'Backup' is a dedicated directory for database backup files. Example: 'File Location: Internal backup' */
+"[URLReference/Location] Internal backup" = "ข้อมูลสำรองภายใน";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. 'Inbox' is a special directory for files that are being imported. Can be also 'Internal import'. Example: 'File Location: Internal inbox' */
+"[URLReference/Location] Internal inbox" = "อินบอกภายใน";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. Example: 'File Location: Local copy' */
+"[URLReference/Location] Local copy" = "สำเนาภายใน";
+
+/* Human-readable file location. Example: 'File Location: Remote server' */
+"[URLReference/Location/RemoteServer]" = "เซิร์ฟเวอร์";
+
+/* Call for action: insert YubiKey 5Ci to the Lightning port */
+"[YubiKey] Insert the key" = "เสียบกุญแจ";
+
+/* Call for action: touch the sides of YubiKey 5Ci to continue */
+"[YubiKey] Touch the key" = "แตะกุญแจ";
+
+/* Action/button to add database to the app */
+"Add Database" = "เพิ่มฐานข้อมูล";
+
+/* Warning message when the user tries to use a database as a key file */
+"KeePass database should not be used as key file. Please pick a different file." = "ฐานข้อมูล KeePass ไม่ควรใช้เป็นไฟล์กุญแจ โปรดเลือกไฟล์ใหม่";
+

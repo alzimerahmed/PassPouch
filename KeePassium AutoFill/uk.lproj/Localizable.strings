@@ -1,0 +1,111 @@
+/* Notification when user tries to set up too weak an app protection passcode. */
+"[AppLock/weakPasscodeWarning]" = "Цей код доступу легко вгадати. Спробуйте ввести складніший.";
+
+/* Action in AutoFill: choose the entry and remember it for future use on this website. */
+"[AutoFill/AcceptAndRemember/action]" = "Прийняти й запам’ятати";
+
+/* Title of a list */
+"[AutoFill/AllEntries/title]" = "Всі записи";
+
+/* Title of AutoFill context when no context is available. Usage: `Context: Unknown` */
+"[AutoFill/Context/Empty/title]" = "Невідомо";
+
+/* Title of a list with search results */
+"[AutoFill/FoundEntries/title]" = "Найкращі збіги";
+
+/* Call for action to select an entry field for filling out. */
+"[AutoFill/InsertText/select]" = "Виберіть поле";
+
+/* Section title for the recently used entry in AutoFill */
+"[AutoFill/RecentlyUsed/title]" = "Нещодавно використані";
+
+/* Not an action, but a button to activate the same-named setting */
+"[AutoFill/RememberContext/action]" = "Запам’ятати вибрані записи";
+
+/* Call to action */
+"[AutoFill/RememberContext/callToAction]" = "Покращити пропозиції автозаповнення";
+
+/* Description of the 'Remember Selected Entries` feature */
+"[AutoFill/RememberContext/description]" = "KeePassium запам’ятає, який запис ви вибрали для кожного вебсайту й запропонує його автоматично.";
+
+/* Title for referring to the app or webpage that launched AutoFill. For example: `Context: google.com` */
+"[AutoFill/Search/Context/title]" = "Контекст";
+
+/* No comment provided by engineer. */
+"[AutoFill/Setup/footer]" = "Автозаповнення не може автоматично відкривати файли, котрі вже додані в основну програму.\n\nЧому? З точки зору системи, Автозаповнення - це окремий додаток, незалежне від основного. З метою безпеки, додаток не може просто так відкривати файли в інших додатках, якщо тільки користувач сам не зв'яже ці файли з даним додатком. Таким чином, система гарантує, що додатки можуть працювати тільки з кількома спеціально обраними файлами.\n\nВ результаті і Автозаповнення, і основний додаток повинні отримати \"окремі запрошення\" для роботи з кожним зовнішнім файлом. На щастя, ця процедура потрібна тільки один раз.";
+
+/* Must match Apple's translation, as found in iOS 18 Settings → General → AutoFill & Passwords. If unsure, leave untranslated. */
+"[AutoFill/Setup/UncheckKeychain/autofillFrom]" = "Заповнювати з:";
+
+/* Call to action: deselect the `Keychain` option. Keychain is a glossary term. */
+"[AutoFill/Setup/UncheckKeychain/callToAction]" = "Зняти позначку зі Зв’язки ключів";
+
+/* Instruction to deselect another app in the settings [appName: String] */
+"[AutoFill/Setup/UncheckKeychain/message]" = "Щоб зробити KeyPassium менеджером паролів за замовчуванням, зніміть позначку \"%@\".";
+
+/* Must match Apple's translation, as found in iOS 17 Settings → Passwords → Password Options. If unsure, leave untranslated. */
+"[AutoFill/Setup/UncheckKeychain/usePasswordsAndPasskeysFrom]" = "Використовувати паролі та ключі допуску від:";
+
+/* Field title: name of the group that contains the entry */
+"[Database/Entry/Location/title]" = "Розташування";
+
+/* Title of a list with randomly generated usernames */
+"[Database/Entry/RandomUsernames/title]" = "Випадкові імена користувачів";
+
+/* Action/button that shows a list of usernames to pick from */
+"[Database/Entry/SelectUsername/action]" = "Вибрати ім’я користувача";
+
+/* Action: select item from a list/menu, with item name in quotes. For example: `Select "Sample Group"` */
+"[Database/Item/SelectNamed/action]" = "Вибрати \"%@\"";
+
+/* Action: create a passkey and add it to existing entry */
+"[Database/Passkey/AddToExisting/action]" = "Додати ключ допуску до наявного запису";
+
+/* Call to action: select an existing entry to add a new passkey to */
+"[Database/Passkey/AddToExisting/callToAction]" = "Виберіть запис для нового ключа допуску";
+
+/* Confirmation message before replacing an existing passkey. */
+"[Database/Passkey/AddToExisting/confirm]" = "Цей запис уже має ключ допуску. Замінити його?";
+
+/* Title of an optional dialog for creating new passkeys */
+"[Database/Passkey/Create/title]" = "Створити ключ допуску?";
+
+/* Name of the Apple Passwords application, see https://support.apple.com/120758 */
+"[Generic/ApplePasswordsApp/title]" = "Паролі";
+
+/* Apple Keychain software; is a glossary term. */
+"[Generic/Keychain/title]" = "Зв'язка ключів";
+
+/* Menu action to add a user-provided word list file to the app. */
+"[PasswordGenerator/Wordlist/Import/menuAction]" = "Імпортувати список слів…";
+
+/* Password quality description. For example: `Password quality: Weak`. [level: String] */
+"[PasswordQuality/description]" = "Якість пароля: %@";
+
+/* Good password quality */
+"[PasswordQuality/Level] Good" = "Хороший";
+
+/* Very good password quality */
+"[PasswordQuality/Level] Very good" = "Дуже хороший";
+
+/* Very weak password quality */
+"[PasswordQuality/Level] Very weak" = "Дуже слабкий";
+
+/* Weak password quality */
+"[PasswordQuality/Level] Weak" = "Слабкий";
+
+/* Password quality description. Note the tilda that refers to an estimated/approximate value. For example: `Very good (~123 bits of entropy)`. [level: String, formattedBitCount: String] */
+"[PasswordQuality/LevelWithApproximateEntropy/description]" = "%1$@ (~%2$@ ентропії)";
+
+/* Password quality description. For example: `Very good (234 bits of entropy)`. [level: String, formattedBitCount: String] */
+"[PasswordQuality/LevelWithEntropy/description]" = "%1$@ (%2$@ ентропії)";
+
+/* Action/button to make password visible as plain-text */
+"[ProtectedTextField] Show Password" = "Показати пароль";
+
+/* Call to action, invites the user to enable the Quick AutoFill feature */
+"[QuickAutoFill/Activate/callToAction]" = "Увімкніть швидке автозаповнення";
+
+/* Placeholder text for empty search results */
+"[Search/EmptyResult/title]" = "Нічого не знайдено";
+

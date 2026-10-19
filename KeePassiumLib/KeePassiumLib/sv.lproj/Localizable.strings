@@ -1,0 +1,2043 @@
+/* Copyright notice */
+"[About/CopyrightAuthor]" = "©Andrei Popleteev";
+
+/* Suggestion/hint for available user action */
+"[Accessibility] Double tap to copy to clipboard" = "Dubbeltryck för att kopiera till urklipp";
+
+/* Call to action: perform accessibilty `activate` action to listen to text/content. */
+"[Accessibility/activateToListen]" = "Aktivera för att lyssna.";
+
+/* Accessibility notification for entries with attached files. */
+"[Accessibility/containsAttachments]" = "Innehåller bilagor.";
+
+/* Accessibility notification for entries with a problematic passkey */
+"[Accessibility/containsIncompatiblePasskey]" = "Innehåller en nyckel som inte är kompatibel med enheten.";
+
+/* Accessibility notification for entries with OTP codes. */
+"[Accessibility/containsOTP]" = "Innehåller engångslösenord.";
+
+/* Accessibility notification for entries with a passkey */
+"[Accessibility/containsPasskey]" = "Innehåller en nyckel.";
+
+/* Action which resets the app as if it was just installed. */
+"[App/ResetEverything/action]" = "Återställ";
+
+/* Confirmation message before resetting the app to just-installed state. */
+"[App/ResetEverything/title]" = "Återställ appen?";
+
+/* Action/button to unlock the App Lock with passcode */
+"[AppLock] Unlock" = "Lås upp";
+
+/* Hint/Description why the user is asked to provide their fingerprint. Shown in the standard Touch ID prompt. */
+"[AppLock/Biometric/Hint] Unlock KeePassium" = "Lås upp KeePassium";
+
+/* Action/button to switch from TouchID/FaceID prompt to manual input of the AppLock passcode. */
+"[AppLock/cancelBiometricAuth] Use Passcode" = "Använd PIN-kod";
+
+/* Action/button to modify the existing AppLock passcode. */
+"[AppLock/changePasscode]" = "Ändra pinkod";
+
+/* Call to action in the passcode input dialog. */
+"[AppLock/EnterPasscode/callToAction]" = "Lås upp KeePassium";
+
+/* Action: change keyboard type to enter alphanumeric passphrases */
+"[AppLock/Passcode/KeyboardType/switchAction] 123→ABC" = "123→ABC";
+
+/* Action: change keyboard type to enter PIN numbers */
+"[AppLock/Passcode/KeyboardType/switchAction] ABC→123" = "ABC→123";
+
+/* Type of keyboard to show for App Lock passcode: letters and digits. */
+"[AppLock/Passcode/KeyboardType/title] Alphanumeric" = "Alfanumerisk";
+
+/* Type of keyboard to show for App Lock passcode: digits only (PIN code). */
+"[AppLock/Passcode/KeyboardType/title] Numeric" = "Numerisk";
+
+/* Notification for business users when they set up too weak app protection passcode. */
+"[AppLock/Passcode/orgRequiresStonger]" = "Din organisation behöver ett mer komplext lösenord.";
+
+/* Hint/call to action about keyboard shortcut */
+"[AppLock/Passcode/pressEscForTouchID]" = "Tryck på Esc för Touch ID";
+
+/* Notification that the modified AppLock passcode has been saved. */
+"[AppLock/passcodeUpdated/title]" = "Pinkoden uppdaterades.";
+
+/* Action/button to save new or edited AppLock passcode. */
+"[AppLock/savePasscode]" = "Spara pinkod";
+
+/* Call to action in the passcode input dialog. */
+"[AppLock/SetupPasscode/callToAction]" = "Skydda KeePassium från obehörig åtkomst";
+
+/* Message shown when AutoFill cannot automatically open the main app for upgrading to a premium version. */
+"[AutoFill/Premium/Upgrade/Manual/text] To upgrade, please manually open KeePassium from your home screen." = "För att uppgradera öppna KeePassium från din hemskärm.";
+
+/* Title of a message related to upgrading to the premium version */
+"[AutoFill/Premium/Upgrade/Manual/title] Premium Upgrade" = "Premiumuppgradering";
+
+/* Call to action / instruction on how to enable accessibility permission */
+"[AutoType/AccessibilityPrompt/callToAction]" = "Öppna systeminställningarna → Integritet och säkerhet → Tillgänglighet, och aktivera KeePassium.";
+
+/* Message explaining why accessibility permission is needed */
+"[AutoType/AccessibilityPrompt/message]" = "KeePassium behöver din tillåtelse att skicka knapptryckningar till andra appar.";
+
+/* Title of a dialog asking user to provide a security permission */
+"[AutoType/AccessibilityPrompt/title]" = "KeePassium behöver din tillåtelse";
+
+/* Action: send key presses to 'type in' entry data into another app */
+"[AutoType/action]" = "Använd Autoskriv";
+
+/* Button to open system settings (accessibility, permissions, etc) */
+"[AutoType/Action/OpenSettings]" = "Öppna inställningarna";
+
+/* Title for error when auto-type fails */
+"[AutoType/Error/Title]" = "Autoskriv misslyckades";
+
+/* Name of biometric authentication method. Trademarked, do not translate unless Apple traslated it to your language. */
+"[BiometricAuthType] Face ID" = "Face ID";
+
+/* Name of biometric authentication method. Trademarked, do not translate unless Apple traslated it to your language. */
+"[BiometricAuthType] Touch ID" = "Touch ID";
+
+/* Error message when the challenge-response communication has been cancelled by the user. */
+"[ChallengeResponseError] cancelled" = "Avbrutet av användaren.";
+
+/* Error message when the hardware key is not plugged in. */
+"[ChallengeResponseError] keyNotConnected" = "Hårdvarunyckel är inte ansluten.";
+
+/* Error message when trying to use challenge-response hardware in AutoFill. */
+"[ChallengeResponseError] notAvailableInAutoFill" = "Hårdvarunycklar är ej tillgängliga i Autofyll.";
+
+/* Error message when trying to use challenge-response with a kdb database. */
+"[ChallengeResponseError] notSupportedByDatabaseFormat" = "Hårdvarunycklar stöds inte av detta databasformat.";
+
+/* Error message when trying to use a hardware challenge-response key on unsupported device/iOS version. %@ will be the name of the hardware interface, such as `NFC` or `Lightning`. */
+"[ChallengeResponseError] notSupportedByDeviceOrSystem" = "Denna enhet eller iOS-version stöder inte hårdvarunycklar (%@)";
+
+/* Error message: the hardware key (or its slot) was not configured for challenge-response operations. */
+"[ChallengeResponseError] slotNotConfigured" = "Hårdvarunyckeln är inte konfigurerad för challenge-response.";
+
+/* Progress status */
+"[Cipher/Progress] Decrypting" = "Dekrypterar";
+
+/* Progress status */
+"[Cipher/Progress] Encrypting" = "Krypterar";
+
+/* Action copy some named value to clipboard. For example: `Copy Password`. [valueName: String] */
+"[Clipboard/Copy/namedValue]" = "Kopiera %@";
+
+/* Notification: an item has been copied to clipboard */
+"[Clipboard/Copy/notification]" = "Kopierad";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES decryption error (code %d)" = "AES Dekrypteringsfel (Felkod %d)";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES encryption error (code %d)" = "AES Krypteringsfel (Felkod %d)";
+
+/* Error message about AES cipher. [errorCode: Int] */
+"[CryptoError] AES initialization error (code %d)" = "AES Initialiseringsfel (Felkod %d)";
+
+/* Error message about Argon2 hashing function. [errorCode: Int] */
+"[CryptoError] Argon2 hashing error (code %d)" = "Argon2 hashningsfel (Felkod %d)";
+
+/* Error message about PKCS7 padding. [errorCode: Int] */
+"[CryptoError] Invalid data padding (code %d). File corrupt?" = "Felaktig datautfyllnad (Felkod %d). Är filen skadad?";
+
+/* Error message about key derivation function (KDF) parameters. [kdfName: String, paramName: String] */
+"[CryptoError] Invalid KDF parameter: %@ - %@. File corrupt?" = "Felaktig KDF-parameter: %1$@ - %2$@. Är filen skadad?";
+
+/* Error message about random number generator. [errorCode: Int] */
+"[CryptoError] Random number generator error (code %d)" = "Slumptalsfel (Felkod %d)";
+
+/* Error message about Twofish cipher. [errorCode: Int] */
+"[CryptoError] Twofish cipher error (code %d)" = "Twofish chifferfel (Felkod %d)";
+
+/* Warning when trying to add a random file as a database. [fileName: String] */
+"[Database/Add] Selected file \"%@\" does not look like a database." = "Vald fil \"%@\" verkar inte vara en databas.";
+
+/* Action/button to create a new database */
+"[Database/Create/action] Create Database" = "Skapa databas";
+
+/* Action: add/import an image as a custom icon */
+"[Database/CustomIcon/add]" = "Lägg till egenvald ikon";
+
+/* Notification when some custom icons are about to be deleted [iconCount: Int] */
+"[Database/CustomIcon/All/count]" = "Alla anpassade ikoner: %d";
+
+/* Action: delete all custom icons */
+"[Database/CustomIcon/deleteAll]" = "Radera allt";
+
+/* Action: delete unused icons */
+"[Database/CustomIcon/deleteUnused]" = "Radera oanvända ikoner";
+
+/* Action: download icon of a website */
+"[Database/CustomIcon/DownloadFavicon/action]" = "Ladda ner Favicon";
+
+/* Action/button to download favicons of websites mentioned in selected entries. */
+"[Database/CustomIcon/DownloadFavicons/action]" = "Ladda ner Favicons";
+
+/* Report of favicon download results. */
+"[Database/CustomIcon/DownloadFavicons/stats]" = "Poster bearbetade: %1$d\nIkoner uppdaterade: %2$d";
+
+/* Status message: multiple website favicons are being downloaded */
+"[Database/CustomIcon/DownloadFavicons/status]" = "Laddar ner Favicons";
+
+/* Status message: a website favicon is being downloaded */
+"[Database/CustomIcon/DownloadOneFavicon/status]" = "Laddar ner Favicon";
+
+/* Notification when some custom icons are not used by any group or entry [iconCount: Int] */
+"[Database/CustomIcon/Unused/count]" = "Oanvända ikoner hittades: %d";
+
+/* Message to confirm deletion of a database file. (This deletes the file itself) */
+"[Database/Delete/Confirm/text] Delete database file?\n Make sure you have a backup." = "Radera databasfil?\nSäkerställ att du har en backup.";
+
+/* Action to modify database encryption settings. */
+"[Database/EncryptionSettings/Change/action]" = "Ändra krypteringsinställningar";
+
+/* Parameter name in database encryption settings. Example: 'Encryption Algorithm: AES-256' */
+"[Database/EncryptionSettings/dataCipher]" = "Krypteringsalgoritm";
+
+/* Parameter name in database encryption settings. Defines the number of times/iterations a calculation (transform) should be executed. Example: 'Transform Rounds: 100' */
+"[Database/EncryptionSettings/iterations]" = "Transformeringsomgångar";
+
+/* Parameter name in database encryption settings. This is a term, see https://en.wikipedia.org/wiki/Key_derivation_function. Example: 'Key Derivation Function: Argon2' */
+"[Database/EncryptionSettings/kdf]" = "Nyckelderiveringsfunktion";
+
+/* Parameter name in database encryption settings. Defines the amount of memory that should be used by an algorithm. Example: 'Memory Usage: 16 MB' */
+"[Database/EncryptionSettings/memory]" = "Minnesanvändning";
+
+/* Warning for too high value of the `Memory usage` parameter in database encryption settings. */
+"[Database/EncryptionSettings/memoryAutoFillWarning]" = "Krav på högt minne kan göra att databasen är inkompatibel med Autofyll lösenord. ";
+
+/* Action/button button in database encryption settings. Resets the settings to recommended values. */
+"[Database/EncryptionSettings/reset]" = "Återställ till rekommenderade inställningar";
+
+/* Parameter name in database encryption settings. Defines the number of computations to run in parallel/simultaneously. Example: 'Parallelism: 2 threads' */
+"[Database/EncryptionSettings/threads]" = "Parallellism";
+
+/* Title: database encryption settings. */
+"[Database/EncryptionSettings/title]" = "Krypteringsinställningar";
+
+/* Info message for entries that contain information for opening a different database. */
+"[Database/Entry/LinkedDatabase/message]" = "Den här posten pekar på en annan databas.";
+
+/* Notification message before database export. */
+"[Database/Export/PlainText/warning]" = "Den exporterade filen innehåller dina data i klartext utan något skydd.";
+
+/* Notification message about external changes to the loaded file. */
+"[Database/ExternalChange/notification]" = "Databasfilen har ändrats. Läs in igen?";
+
+/* Status message: checking if currently loaded database is the latest version */
+"[Database/ExternalChange/Status/checkInProgress]" = "Söker efter ändringar …";
+
+/* Status message: failed to check if currently loaded database is the latest version */
+"[Database/ExternalChange/Status/failed]" = "Uppdatering misslyckades";
+
+/* Status message: currently loaded database is the latest version */
+"[Database/ExternalChange/Status/upToDate]" = "Aktuell";
+
+/* Info message when changing database file format. */
+"[Database/FormatVersion/Conversion/allDataPreserved]" = "All din data kommer bevaras.";
+
+/* Error message when creating a new passkey. */
+"[Database/FormatVersion/PasskeysNotSupported]" = "Det nuvarande databasformatet stöder inte nycklar.";
+
+/* Info message when the app needs to change database file format. [oldFormat, newFormat: String] */
+"[Database/FormatVersion/Upgrade/text]" = "KeePassium behöver uppgradera filformatet på din databas (från %1$@ till %2$@). Du kan behöva uppdatera andra program som använder sig av samma databas.";
+
+/* Title of an info message when the app needs to change database file format. */
+"[Database/FormatVersion/Upgrade/title]" = "Innan vi fortsätter";
+
+/* Title of an icon collection: icons provided by the system */
+"[Database/IconSet/System/title]" = "System";
+
+/* Status of a database item (entry or group) after it was edited. */
+"[Database/Item/Edited/state]" = "Redigerad";
+
+/* Notification when user tries to copy data from KDBX to older KDB database. */
+"[Database/LesserTargetFormat/warning]" = "Det här är ett äldre databasformat, viss data kan gå förlorade.";
+
+/* Placeholder shown when there are no database files available */
+"[Database/List/empty]" = "Inga databasfiler";
+
+/* Call to action. 'Open' here is used as 'launch'. */
+"[Database/List/LocalMissing/callToAction]" = "Öppna appen";
+
+/* Recommendation for solving a problem with a list of files. */
+"[Database/List/LocalMissing/message]" = "Om några lokala filer inte anges kan du först starta KeePassium-huvudappen.";
+
+/* Title of the database picker list */
+"[Database/List/title]" = "Databaser";
+
+/* Error message */
+"[Database/Load/Error] Cannot find database file" = "Kan inte hitta databasfilen";
+
+/* Error message */
+"[Database/Load/Error] Cannot find key file" = "Kan inte hitta nyckelfilen";
+
+/* Error message */
+"[Database/Load/Error] Cannot open database file" = "Kan inte öppna databasfilen";
+
+/* Error message */
+"[Database/Load/Error] Cannot open key file" = "Kan inte öppna nyckelfilen";
+
+/* Error message, when the real file format is recognized. For example: 'Incorrect database format: JPEG.' */
+"[Database/Load/Error] Incorrect database format" = "Felaktigt format på databasen: %@.";
+
+/* Error shown when both master password and key file are empty */
+"[Database/Load/Error] Please provide at least a password or a key file" = "Ange som minst ett lösenord eller en nyckelfil";
+
+/* Error message */
+"[Database/Load/Error] Unrecognized database format" = "Okänt databasformat";
+
+/* Error message */
+"[Database/Load/Error/encryptedByIntune]" = "Denna databas skyddas av ditt företags IT-policyer och Microsoft Intune.";
+
+/* Message shown after we show a cached local database instead of the (unavailable) original database. */
+"[Database/Loading/FromCache/text]" = "Databasen är inte tillgänglig.\nDetta är den senaste lokala kopian.";
+
+/* Message shown if current database cannot be edited */
+"[Database/Loading/ReadOnly/text]" = "Databasen är skrivskyddad";
+
+/* Status message: loading a database */
+"[Database/Loading/Status] Loading..." = "Laddar...";
+
+/* Action/button: change master key of a database. */
+"[Database/MasterKey/Change/action]" = "Ändra huvudnyckel";
+
+/* Notification after changing database master key */
+"[Database/MasterKey/changed] Master key successfully changed" = "Huvudnyckel ändrades";
+
+/* A warning shown when changing database password. Is preceded with `Remember your database password`. */
+"[Database/MasterKey/RememberYourPassword/text]" = "Om du glömmer det kommer du inte att kunna komma åt din data igen. Det finns ingen möjlighet att återställa lösenordet.";
+
+/* Imperative/recommendation: title of a warning when changing database password. */
+"[Database/MasterKey/RememberYourPassword/title]" = "Kom ihåg lösenordet för databasen";
+
+/* Glossary term: noun, a master key for encrypting the database */
+"[Database/MasterKey/title]" = "Huvudnyckel";
+
+/* Title of database creation dialog */
+"[Database/New/title]" = "Ny databas";
+
+/* Action/button */
+"[Database/Open/action] Open Database" = "Öppna databas";
+
+/* Action/button to lock current database (the next time, it will ask for the master key). */
+"[Database/Opened/action] Lock Database" = "Lås databas";
+
+/* Action: lock database */
+"[Database/Opened/Warning/action] Close Database" = "Stäng databas";
+
+/* Action: ignore warnings and proceed to work with the database */
+"[Database/Opened/Warning/action] Ignore and Continue" = "Ignorera och fortsätt";
+
+/* Status message: name of the app that was last to write/create the database file. [lastUsedAppName: String] */
+"[Database/Opened/Warning/lastEdited] Database was last edited by: %@" = "Databasen redigerades senast av: %@";
+
+/* Title of a warning message, shown after opening a problematic database */
+"[Database/Opened/Warning/title] Your database is ready, but there was an issue." = "Din databas är färdig, men det uppstod ett problem.";
+
+/* Title of a list with database-related actions (e.g. lock database, change master key, etc) */
+"[Database/Operations/title]" = "Databasåtgärder";
+
+/* Error message about creation of a new passkey. */
+"[Database/Passkey/Error/UnsupportedAlgorithm/description]" = "Nyckelalgoritm stöds inte";
+
+/* Status message: preparing database print preview. */
+"[Database/Print/preparingPreview]" = "Förbereder förhandsvisning…";
+
+/* Progress status: finished loading database */
+"[Database/Progress] Done" = "Klar";
+
+/* Progress status */
+"[Database/Progress] Loading key file..." = "Laddar nyckelfil...";
+
+/* Database loading/saving status: checking whether our database was modified from another device. */
+"[Database/Progress/checkingDatabaseForModifications]" = "Söker efter ändringar i databasen … ";
+
+/* Database loading status: fetching the database file from disk/cloud */
+"[Database/Progress/downloading]" = "Laddar ner databasfil...";
+
+/* Database saving status: making a local backup copy of the database */
+"[Database/Progress/makingDatabaseBackup]" = "Skapar säkerhetskopia...";
+
+/* Progress status */
+"[Database/Progress/resolving]" = "Kontaktar lagringsleverantör...";
+
+/* Database loading/saving status: replacing field references with their values */
+"[Database/Progress/resolvingFieldReferences]" = "Löser fältreferenser…";
+
+/* Database saving status: deciding how to handle conflicting changes. */
+"[Database/Progress/resolvingSyncConflict]" = "Löser en synkroniseringskonflikt …";
+
+/* Database saving status */
+"[Database/Progress/writingDatabaseFile]" = "Skriver databasfil …";
+
+/* Suggested solution/call to action when intermediate sync app fails. */
+"[Database/RecommendRemote/callToAction]" = "Försök ansluta till din lagringsplats direkt från KeePassium.";
+
+/* Action/button */
+"[Database/Reload/action]" = "Ladda om databas";
+
+/* Message to confirm removal of database file from the app. (This keeps the file, but removes its reference from the app.) */
+"[Database/Remove/Confirm/text] Remove database from the list?\n The file will remain intact and you can add it again later." = "Ta bort databasen från fillistan?\nFilen kommer inte raderas, och du kan lägga till den igen vid ett senare tillfälle.";
+
+/* Action/button to save the current database. */
+"[Database/Save/action] Save Database" = "Spara databas";
+
+/* Action/button to save file to a remote server. */
+"[Database/SaveToServer/action]" = "Spara på server";
+
+/* Status message: finished saving a database */
+"[Database/Saving/Status] Done" = "Klar";
+
+/* Status message: saving a database */
+"[Database/Saving/Status] Saving..." = "Sparar...";
+
+/* File access parameter. Will be shown as 'Consider File Unreachable: Immediately' */
+"[Database/Settings/ConsiderFileUnreachable/Immediately]" = "Omedelbart";
+
+/* File settings parameter: time after which file will be considered unreachable. Example: `Consider File Unreachable: in 10 seconds`.) */
+"[Database/Settings/ConsiderFileUnreachable/title]" = "Anse fil otillgänglig";
+
+/* File settings parameter: what to do when file was changed by another app/device. (For example: `Database Modified Externally: Don't check`) */
+"[Database/Settings/ExternalChanges/dontCheck]" = "Kontrollera inte";
+
+/* File settings parameter: what to do when file was changed by another app/device. (For example: `Database Modified Externally: Notify`) */
+"[Database/Settings/ExternalChanges/notify]" = "Meddela";
+
+/* File settings parameter: what to do when file was changed by another app/device. (For example: `Database Modified Externally: Reload Automatically`) */
+"[Database/Settings/ExternalChanges/reload]" = "Läs in automatiskt";
+
+/* File settings parameter: what to do when file was changed by another app/device. (For example: `Database Modified Externally: Notify`) */
+"[Database/Settings/ExternalChanges/title]" = "Databasen har ändrats externt";
+
+/* Title: what to do when a cloud-stored file cannot be loaded. (For example: `If File is Unreachable: Re-add File`.) */
+"[Database/Settings/FallbackStrategy/ReAddFile/title]" = "Lägg till filen på nytt";
+
+/* Title: what to do when (remote) file cannot be loaded. (For example: `If File is Unreachable: Show Error`.) */
+"[Database/Settings/FallbackStrategy/ShowError/title]" = "Visa fel";
+
+/* File settings parameter: what to do when (remote) file cannot be loaded. (For example: `If File is Unreachable: Use Local Copy`.) */
+"[Database/Settings/FallbackStrategy/title]" = "Om filen är otillgänglig";
+
+/* Title: what to do when (remote) file cannot be loaded. (For example: `If File is Unreachable: Use Local Copy`.) */
+"[Database/Settings/FallbackStrategy/UseCache/title]" = "Använd lokal kopia";
+
+/* Title of settings section (read-only, backup-able, etc) */
+"[Database/Settings/FileAccess/title]" = "Filaccess";
+
+/* File setting title, whether the file can be modified (yes/no). */
+"[Database/Settings/ReadOnly/title]" = "Skrivskyddad";
+
+/* Title of database-related settings screen */
+"[Database/Settings/title]" = "Databasinställningar";
+
+/* Action/button to switch from current to some other database. */
+"[Database/Switch/action]" = "Byt databas";
+
+/* Explanation of the database sync conflict `Cancel` option. */
+"[Database/SyncConflict/Cancel/description]" = "Avbryt sparning, lämna befintlig fil orörd.";
+
+/* Title: the current (on-server) database version in case of sync conflict. */
+"[Database/SyncConflict/currentVersion]" = "Nuvarande version";
+
+/* Message shown in case of database sync conflict. */
+"[Database/SyncConflict/description]" = "Databasen har ändrats sen den öppnades av KeePassium.";
+
+/* Title: the loaded (on-device) database version in case of sync conflict. */
+"[Database/SyncConflict/loadedVersion]" = "Öppnad version";
+
+/* Action: combine changes in two conflicting databases. */
+"[Database/SyncConflict/Merge/action]" = "Sammanfoga";
+
+/* Explanation of the database sync conflict `Merge` option. */
+"[Database/SyncConflict/Merge/description]" = "Kombinera ändringarna innan sparning.";
+
+/* Explanation of the database sync conflict `Overwrite` option. */
+"[Database/SyncConflict/Overwrite/description]" = "Skriv över filen med den lokala kopian.";
+
+/* Explanation of the database sync conflict `Save as` option. */
+"[Database/SyncConflict/SaveAs/description]" = "Spara ändringar till en annan fil.";
+
+/* Title of a message shown when saving to a database that has already been modified elsewhere. */
+"[Database/SyncConflict/title]" = "Synk-konflikt";
+
+/* Error message */
+"[Database/Unlock/Error] Failed to open key file" = "Misslyckades med att öppna nyckelfil";
+
+/* Error message */
+"[Database/Unlock/Error] Password and key file are both empty." = "Både lösenord och nyckelfil saknas.";
+
+/* Action: load a local (on-device) copy of a remote database */
+"[Database/Unlock/UseFallback/action]" = "Använd lokal kopia";
+
+/* Message shown when user enters an invalid database password */
+"[Database/Unlock/wrongPassword/question]" = "Har du glömt lösenordet?";
+
+/* Notification message */
+"[Database/UnsavedChanges/autoFillCrashed]" = "Autofyll kunde inte spara några ändringar på grund av tekniska begränsningar.";
+
+/* Notification message */
+"[Database/UnsavedChanges/cannotModifyYet]" = "Autofyll kan tyvärr inte modifiera stora databaser än. Vi jobbar på att lösa det.";
+
+/* Notification message */
+"[Database/UnsavedChanges/couldNotApply]" = "Det gick inte att tillämpa några väntande ändringar automatiskt. De senaste ändringarna kanske saknas.";
+
+/* Call to action shown in AutoFill module. */
+"[Database/UnsavedChanges/OpenAppCallToAction]" = "Öppna KeePassium-huvudappen om du vill spara ändringar.";
+
+/* Notification message about a problem with unsaved/pending changes. */
+"[Database/UnsavedChanges/Problematic/info]" = "Några väntande ändringar handlar om poster eller grupper som saknas. KeePassium skapar dessa objekt i en separat grupp och tillämpar ändringarna där.";
+
+/* Title of a group where problematic pending changes are saved. %@ is the date of recovery. */
+"[Database/UnsavedChanges/RecoveredEntriesGroup/name]" = "Återställda ändringar (%@)";
+
+/* Action/button to save accummulated modifications */
+"[Database/UnsavedChanges/saveAction]" = "Spara ändringar";
+
+/* Notification message */
+"[Database/UnsavedChanges/someDatabases]" = "En eller flera databaser har osparade ändringar som gjorts i Autofyll.";
+
+/* Notification message */
+"[Database/UnsavedChanges/thisDatabase]" = "Databasen har osparade ändringar som gjorts i Autofyll.";
+
+/* Title: there are temporary changes to be saved */
+"[Database/UnsavedChanges/title]" = "Osparade ändringar";
+
+/* Error message */
+"[Database1/FormatError] Database file is corrupted." = "Databasfilen är skadad.";
+
+/* Error message [fieldName: String] */
+"[Database1/FormatError] Error parsing field %@. Corrupted database file?" = "Tolkningsfel av fält %@. Är databasfilen skadad?";
+
+/* Error message */
+"[Database1/FormatError] Found an entry outside any group. Corrupted DB file?" = "Hittade en post som inte tillhör någon grupp. Är databasfilen skadad?";
+
+/* Error message */
+"[Database1/FormatError] Unexpected end of file. Corrupted database file?" = "Oväntat slut på filen. Är databasfilen skadad?";
+
+/* Error message when reading database header */
+"[Database1/Header1/Error] Header reading error. DB file corrupt?" = "Fel när headers lästes. Är databasfilen skadad?";
+
+/* Error message. [flagsHexString: String] */
+"[Database1/Header1/Error] Unsupported cipher. (Code: %@)" = "Chiffer stöds ej. (Felkod: %@)";
+
+/* Error message when opening a database. [version: String] */
+"[Database1/Header1/Error] Unsupported database format version: %@." = "Databasversionen stöds ej: %@.";
+
+/* Error message when opening a database */
+"[Database1/Header1/Error] Wrong file signature. Not a KeePass database?" = "Felaktig signatur på filen. Inte en KeePass databas?";
+
+/* Status message: collecting database items into a single package */
+"[Database1/Progress] Packing the content" = "Packar innehållet";
+
+/* Status message: processing the content of a database */
+"[Database1/Progress] Parsing content" = "Tolkar innehåll";
+
+/* Name of a group which contains deleted entries */
+"[Database2/backupGroupName] Recycle Bin" = "Papperskorg";
+
+/* Error message. Parsing refers to the analysis/understanding of file content. [reason: String] */
+"[Database2/FormatError] Cannot parse database. %@" = "Kunde inte tolka databasen. %@";
+
+/* Error message [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (block %d has negative size)" = "Skadad databasfil (block %d har negativ storlek)";
+
+/* Error message: hash(checksum) of a data block is wrong. [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (hash mismatch in block %d)" = "Skadad databasfil (hashnyckel matchar ej i block %d)";
+
+/* Error message: HMAC value (kind of checksum) of a data block is wrong. [blockIndex: Int] */
+"[Database2/FormatError] Corrupted database file (HMAC mismatch in block %d)" = "Skadad databasfil (HMAC stämmer inte i block %d)";
+
+/* Error message about Gzip compression algorithm. [reason: String] */
+"[Database2/FormatError] Gzip error: %@" = "Gzip-fel: %@";
+
+/* Error message: wrong ID of a data block */
+"[Database2/FormatError] Unexpected block ID." = "Oväntat block-ID.";
+
+/* Error message */
+"[Database2/FormatError] Unexpected end of file. Corrupted file?" = "Oväntat slut på filen. Är filen skadad?";
+
+/* Error message when saving a database. [reason: String] */
+"[Database2/Header2/Error] Failed to uncompress attachment data: %@" = "Misslyckades dekomprimera bilagan: %@";
+
+/* Error message, with the name of problematic field. [fieldName: String] */
+"[Database2/Header2/Error] Header field %@ is corrupted." = "Headerfält %@ är skadat.";
+
+/* Error message */
+"[Database2/Header2/Error] Header hash mismatch. DB file corrupt?" = "Hashnyckel för header matchar inte. Är databasfilen skadad?";
+
+/* Error message. HMAC = https://en.wikipedia.org/wiki/HMAC */
+"[Database2/Header2/Error] Header HMAC mismatch. DB file corrupt?" = "Header HMAC matchar inte. Är databasfilen skadad?";
+
+/* Error message when reading database header */
+"[Database2/Header2/Error] Header reading error. DB file corrupt?" = "Fel när headers lästes. Är databasfilen skadad?";
+
+/* Error message when opening a database */
+"[Database2/Header2/Error] Unknown compression algorithm." = "Okänd kompressionsalgoritm.";
+
+/* Error message. [uuidHexString: String] */
+"[Database2/Header2/Error] Unsupported data cipher: %@" = "Chiffer stöds ej: %@";
+
+/* Error message when opening a database. [version: String] */
+"[Database2/Header2/Error] Unsupported database format version: %@." = "Databasversionen stöds ej: %@.";
+
+/* Error message when opening a database. [id: UInt32] */
+"[Database2/Header2/Error] Unsupported inner stream cipher (ID %d)" = "Inre chiffer stöds inte (ID %d)";
+
+/* Error message about Key Derivation Function. [uuidString: String] */
+"[Database2/Header2/Error] Unsupported KDF: %@" = "KDF stöds ej: %@";
+
+/* Error message when opening a database */
+"[Database2/Header2/Error] Wrong file signature. Not a KeePass database?" = "Felaktig signatur på filen. Inte en KeePass databas?";
+
+/* Error message about Gzip compression algorithm. [errorMessage: String] */
+"[Database2/Loading/Error] Error unpacking database: %@" = "Fel vid uppackning av databas: %@";
+
+/* A warning about missing attachments after loading the database. [lastUsedAppName: String, attachmentNames: String] */
+"[Database2/Loading/Warning/missingBinaries]" = "Bilagor för vissa poster saknar data. Detta är ett tecken på att databasen blivit skadad, troligen av den senaste använda appen (%1$@). KeePassium kommer behålla de tomma bilagorna, men kan inte återställa dem. Du bör återställa din databas från en backupkopia.\n\nSaknade bilagor: %2$@";
+
+/* A warning about nameless attachments, shown after loading the database. [listOfEntryNames: String] */
+"[Database2/Loading/Warning/namelessAttachments]" = "Några poster har bilagor utan ett namn. Det är ett tecken på tidigare skador i databasen.\n\nGranska bilagor för följande poster (och deras historik):\n%@";
+
+/* A warning about misformatted custom fields after loading the database. [entryPaths: String] */
+"[Database2/Loading/Warning/namelessCustomFields]" = "Några poster har anpassade fält med tomma namn. Detta kan vara ett tecken på skadad databas. Kontrollera följande poster:\n\n%@";
+
+/* A warning about unused attachments after loading the database. [lastUsedAppName: String] */
+"[Database2/Loading/Warning/unusedAttachments]" = "Databasen innehåller bilagor som inte är kopplade till någon post. Troligen har de glömts av den senast använda appen (%@). Detta kan också vara ett tecken på en skadad databas.\nSäkerställ att du har en backup på din databas innan du ändrar något.";
+
+/* Progress bar status */
+"[Database2/Progress] Loading database" = "Laddar databas";
+
+/* Progress bar status */
+"[Database2/Progress] Reading database content" = "Läser databasinnehåll";
+
+/* Progress bar status */
+"[Database2/Progress] Writing encrypted blocks" = "Skriver krypterade block";
+
+/* Progress bar status: un-zipping the database content */
+"[Database2/Progress/decompressing]" = "Packar upp databasen";
+
+/* Progress bar status */
+"[Database2/Progress/integrityCheck]" = "Kontrollerar integritet";
+
+/* Progress bar status: parsing decrypted XML content */
+"[Database2/Progress/parsingXML]" = "Tolkar databas";
+
+/* Error message while saving a database. [errorDescription: String] */
+"[Database2/Saving/Error] Data compression error: %@" = "Kompressionsfel: %@";
+
+/* Error message while saving a database. [errorDescription: String] */
+"[Database2/Saving/Error] Encryption error: %@" = "Krypteringsfel: %@";
+
+/* Error message about XML parsing. [value: String, tag: String] */
+"[Database2/Xml2/ParsingError] Malformed value '%@' in %@" = "Felformaterat värde '%1$@' i %2$@";
+
+/* Error message about XML parsing. [tag: String] */
+"[Database2/Xml2/ParsingError] Nil value in %@" = "Nil-värde i %@";
+
+/* Error message about XML parsing. [actualTag: String] */
+"[Database2/Xml2/ParsingError] Unexpected tag '%@'" = "Oväntad tagg '%@'";
+
+/* Error message about XML parsing. [actualTag: String, expectedTag: String] */
+"[Database2/Xml2/ParsingError] Unexpected tag '%@' (instead of '%@')" = "Oväntad tagg '%1$@' (istället för '%2$@')";
+
+/* Generic error while parsing XML. [errorDetails: String] */
+"[Database2/Xml2/ParsingError] XML error: %@" = "XML-fel: %@";
+
+/* Error message while opening a database */
+"[DatabaseError] Cannot open database" = "Kan inte öppna databas";
+
+/* Error message while saving a database */
+"[DatabaseError] Cannot save database" = "Kan inte spara databas";
+
+/* Error message: user provided a wrong master key for decryption. */
+"[DatabaseError] Invalid password or key file" = "Felaktigt lösenord eller nyckelfil";
+
+/* Title of the diagnostic info screen */
+"[DiagLog/title]" = "Diagnostisk logg";
+
+/* Notification/confirmation message */
+"[Diagnostics] Diagnostic log has been copied to clipboard." = "Diagnostisk logg har kopierats till urklipp.";
+
+/* Action: select a different icon for an item */
+"[EditEntry/Icon/change]" = "Byt ikon";
+
+/* Action: choose a username from a list */
+"[EditEntry/UserName/choose]" = "Välj";
+
+/* Action/button to add a file to entry attachments */
+"[Entry/Attachment/add]" = "Lägg till fil";
+
+/* Action/button to pick a file from a list */
+"[Entry/Attachment/chooseFile]" = "Välj fil";
+
+/* Action/button to select an (existing) photo from Photo Library */
+"[Entry/Attachment/choosePhoto]" = "Välj foto";
+
+/* Default name for a photo attachment */
+"[Entry/Attachment/Photo/defaultName]" = "Foto";
+
+/* Action/button to take a new photo from camera */
+"[Entry/Attachment/takePhoto]" = "Ta foto";
+
+/* Action to preview one or several attached documents or images */
+"[Entry/Attachments/preview]" = "Förhandsgranska";
+
+/* Action/button to create a new entry in the current group */
+"[Entry/Create/action] Create Entry" = "Skapa post";
+
+/* Action/button to modify an entry */
+"[Entry/Edit/action]" = "Redigera post";
+
+/* Default name of a newly created entry field */
+"[Entry/Edit/CreateField/defaultName] Field Name" = "Fältnamn";
+
+/* Action/button to add a new field to the entry */
+"[Entry/Field/Add/action]" = "Lägg till fält";
+
+/* On/off state: whether to show full-size or compact menu */
+"[Entry/Field/CompactMenu/title]" = "Komprimerad vy";
+
+/* Notification: a reference to an entry field has been copied to clipboard */
+"[Entry/Field/CopyReference/acknowledgement]" = "Referens till fällt kopierad";
+
+/* Action: copy a reference to the selected entry field to clipboard */
+"[Entry/Field/CopyReference/action]" = "Kopiera referens till fält";
+
+/* Title for a generic user-defined entry field. */
+"[Entry/Field/Custom/title]" = "Anpassat fält";
+
+/* Action: display text using large font */
+"[Entry/Field/LargeType/action]" = "Visa i stor typ";
+
+/* Name of an entry field */
+"[Entry/Field/name] Icon" = "Ikon";
+
+/* Name of an entry field */
+"[Entry/Field/name] Notes" = "Anteckningar";
+
+/* Title of an entry field */
+"[Entry/Field/name] Passkey" = "Nyckel";
+
+/* Name of an entry field */
+"[Entry/Field/name] Password" = "Lösenord";
+
+/* Name of an entry field */
+"[Entry/Field/name] Title" = "Titel";
+
+/* Name of an entry field */
+"[Entry/Field/name] URL" = "URL";
+
+/* Name of an entry field */
+"[Entry/Field/name] User Name" = "Användarnamn";
+
+/* Title of a setting: whether the entry's field is protected (shown as asterisks). */
+"[Entry/Field/Protected/title]" = "Skyddat fält";
+
+/* Action: display text using QR code */
+"[Entry/Field/QRCode/action]" = "Visa som QR-kod";
+
+/* Name of an entry field */
+"[Entry/Field/tags] Tags" = "Taggar";
+
+/* Title of an alternative URL, with a number [number: String] */
+"[Entry/Field/URL/Extra/title]" = "URL (%d)";
+
+/* Status message: loading file to be attached to an entry */
+"[Entry/Files/Add] Loading attachment file" = "Laddar fil att bifoga";
+
+/* Title of a list with frequently used entry fields. */
+"[Entry/FrequentlyUsedFields/title]" = "Används ofta";
+
+/* Title of a field with entry creation date and time */
+"[Entry/History] Creation Date" = "Skapad";
+
+/* Title of a field with date and time when the entry will no longer be valid. 'Never' is also a possible value */
+"[Entry/History] Expiry Date" = "Förfaller";
+
+/* Title of a field with date and time when the entry was last accessed/viewed */
+"[Entry/History] Last Access Date" = "Senast öppnad";
+
+/* Title of a field with entry's last modification date and time */
+"[Entry/History] Last Modification Date" = "Senast redigerad";
+
+/* Title of a field with entry's modification date and time */
+"[Entry/History] Modification Date" = "Ändringsdatum";
+
+/* Title of a list with previous versions/revisions of an entry. */
+"[Entry/History] Previous Versions" = "Tidigare versioner";
+
+/* Expiry Date of an entry which does not expire. */
+"[Entry/History/ExpiryDate] Never" = "Aldrig";
+
+/* Default title of a new entry */
+"[Entry/New/defaultTitle] New Entry" = "Ny post";
+
+/* Glossary term: noun, an entry in database. */
+"[Entry/title]" = "Post";
+
+/* Warning shown when opening files from Recycle Bin location. Translation of 'Recently Deleted' should match that in the Files app. [fileName: String] */
+"[File/In Trash/warning]" = "'%@' finns i Nyligen borttagna och kanske snart tas bort. För att bevara dina data kan du flytta filen till en mer permanent plats.";
+
+/* A suggestion shown after specific file errors (either databases or key files). */
+"[File/PermissionDenied] Try to remove the file from the app, then add it again." = "Försök att ta bort filen från appen, lägg sedan till den igen.";
+
+/* Action: re-add (a broken) database or key file to the app. */
+"[File/Re-add/title]" = "Lägg till filen igen";
+
+/* Notification when user opens an in-app backup database. */
+"[File/TemporaryBackup/warning]" = "Det här är en temporär säkerhetskopierad databas. Den kan tas bort automatiskt utan varning. Använd den inte som din huvuddatabas.";
+
+/* Error message: storage provider app was logged out or uninstalled. */
+"[FileAccessError/FileProvider/NotFound/generic]" = "Lagringsleverantören är inte tillgänglig. Kontrollera att appen är installerad och inloggad på ditt konto.";
+
+/* Error message: storage provider app was logged out or uninstalled [fileProviderName: String]. */
+"[FileAccessError/FileProvider/NotFound/other]" = "%@ är inte tillgänglig. Kontrollera att den är installerad och inloggad på ditt konto.";
+
+/* Error message: the required network drive is not connected. */
+"[FileAccessError/FileProvider/NotFound/smbShare]" = "Nätverkslagring är inte ansluten.";
+
+/* Error message: there is no USB drive connected to the device. */
+"[FileAccessError/FileProvider/NotFound/usbDrive]" = "USB-enheten är frånkopplad.";
+
+/* Error message shown when there's internal inconsistency in KeePassium. */
+"[FileAccessError/internalError]" = "Internt KeePassium-fel, var vänlig och rapportera det till oss.";
+
+/* Error message: organization's IT administrator has forbidden access to a data storage location. */
+"[FileAccessError/ManagedAccessDenied/title]" = "Åtkomst till lagringen är inaktiverad av din organisation.";
+
+/* Error message: network access is forbidden by system or app settings. */
+"[FileAccessError/NetworkAccessDenied/generic]" = "Nätverksåtkomst är begränsad av inställningarna.";
+
+/* Error message: storage provider app (e.g. Google Drive) does not respond to requests. */
+"[FileAccessError/NoResponse/genericFileProvider]" = "Lagringsleverantören svarar inte.";
+
+/* Error message: file provider does not respond to requests. For example: `Google Drive does not respond.` */
+"[FileAccessError/NoResponse/knownFileProvider]" = "%@ svarar inte.";
+
+/* Error message: file provider does not support write operations. For example: `Cannot save file (OneDrive)` */
+"[FileAccessError/NoWritePermission/title]" = "Kan inte spara fil (%@)";
+
+/* Explanation of a file writing error */
+"[FileAccessError/OneDriveReadOnly/reason]" = "Microsoft har nyligen ändrat sin OneDrive-integration så den bara tillåter att läsa filer, utan möjlighet att skriva till dem. Tillfälligt, enligt Microsoft.";
+
+/* Suggestion for error recovery */
+"[FileAccessError/OneDriveReadOnly/recoverySuggestion]" = "Använd Export-möjligheten för att spara filen till en annan plats.";
+
+/* Error message for file with an expired access permission [fileName: String]. */
+"[FileAccessError/PermissionRequired/reason]" = "KeePassium behöver din tillåtelse för att komma åt '%@'.";
+
+/* Action/button for error recovery */
+"[FileAccessError/PermissionRequired/recoveryAction]" = "Välj filen igen för att tillåta åtkomst";
+
+/* Error message: storage provider app (e.g. Google Drive) does not respond to requests (quickly enough). */
+"[FileAccessError/Timeout/genericFileProvider]" = "Lagringsleverantören svarar inte.";
+
+/* Error message: file provider does not respond to requests (quickly enough). For example: `Google Drive does not respond` */
+"[FileAccessError/Timeout/knownFileProvider]" = "%@ svarar inte.";
+
+/* Section header for attributes of a file (e.g. hidden, excluded from backup, etc) */
+"[FileInfo/Attributes/header]" = "Filattribut";
+
+/* Title of a setting: is the file hidden */
+"[FileInfo/Attributes/Hidden/title]" = "Dold";
+
+/* Warning message for 'hidden' files. */
+"[FileInfo/Attributes/Hidden/warning]" = "Dolda filer är mindre synliga för vanliga användare, men förbättrar inte datasäkerheten.";
+
+/* Section header: file backup settings */
+"[FileInfo/Backup/header]" = "Backup";
+
+/* Error message shown when the user tries to change file attributes (such as creation/modification date, backup flag, etc) */
+"[FileInfo/Error/failed to change attributes]" = "Uppdatering av filattribut misslyckades.";
+
+/* Field title */
+"[FileInfo/Field/title] Creation Date" = "Skapad";
+
+/* Field title */
+"[FileInfo/Field/title] File Location" = "Lagringsplats";
+
+/* Field title */
+"[FileInfo/Field/title] File Name" = "Filnamn";
+
+/* Field title */
+"[FileInfo/Field/title] File Size" = "Filstorlek";
+
+/* Field title */
+"[FileInfo/Field/title] Last Modification Date" = "Senast redigerad";
+
+/* Title of a field with an error message */
+"[FileInfo/Field/valueError] Error" = "Fel";
+
+/* Title of a setting: is the file exluded from iCloud/iTunes backup. For example: `Exclude From Backup: <Yes>` */
+"[FileInfo/isExcludedFromBackup/title]" = "Exkludera från säkerhetskopiering till iCloud/iTunes";
+
+/* Title of a dialog with file details (name, size, dates) */
+"[FileInfo/title]" = "Filinfo";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to delete file. Reason: %@" = "Misslyckades att radera filen. Anledning: %@";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to import file. Reason: %@" = "Misslyckades att importera filen. Anledning: %@";
+
+/* Error message [reason: String] */
+"[FileKeeper] Failed to open file. Reason: %@" = "Misslyckades att öppna filen. Anledning %@";
+
+/* Error message: tried to import URL which does not point to a file */
+"[FileKeeper] Not a file URL" = "Inte en fil-URL";
+
+/* Localized name of the storage service: Amerigo (https://www.amerigo-app.com) */
+"[FileProvider/Amerigo/name]" = "Amerigo";
+
+/* Localized name of the storage service: Box (https://box.com) */
+"[FileProvider/Box/name]" = "Box";
+
+/* Localized name of the storage service: Boxcryptor (https://boxcryptor.com) */
+"[FileProvider/Boxcryptor/name]" = "Boxcryptor";
+
+/* Localized name of the storage service: Cryptomator (https://cryptomator.org) */
+"[FileProvider/Cryptomator/name]" = "Cryptomator";
+
+/* Localized name of the storage service: Dropbox (https://dropbox.com) */
+"[FileProvider/Dropbox/name]" = "Dropbox";
+
+/* Localized name of the storage service: FE File Explorer (https://apps.apple.com/app/fe-file-explorer-file-manager/id510282524) */
+"[FileProvider/FE File Explorer/name]" = "FE File Explorer";
+
+/* Localized name of the storage service: Google Drive (https://drive.google.com) */
+"[FileProvider/Google Drive/name]" = "Google Drive";
+
+/* Localized name of the storage service iCloud Drive (https://icloud.com/iclouddrive) */
+"[FileProvider/iCloud Drive/name]" = "iCloud Drive";
+
+/* Localized name of the storage service: MagentaCLOUD (https://www.telekom.de/zubuchoptionen/magenta-cloud) */
+"[FileProvider/MagentaCloud/name]" = "MagentaCLOUD";
+
+/* Localized name of the storage service: MEGA (https://mega.nz) */
+"[FileProvider/Mega.nz/name]" = "MEGA.nz";
+
+/* Localized name of the storage service: Nextcloud (https://nextcloud.com) */
+"[FileProvider/Nextcloud/name]" = "Nextcloud";
+
+/* Localized name of the local on-device storage, as shown in the Files app. */
+"[FileProvider/On My iPad/name]" = "På min iPad";
+
+/* Localized name of the local on-device storage, as shown in the Files app. */
+"[FileProvider/On My iPhone/name]" = "På min iPhone";
+
+/* Localized name of the storage service: OneDrive (https://onedrive.com) */
+"[FileProvider/OneDrive/name]" = "OneDrive";
+
+/* Localized name of the storage service: ownCloud (https://owncloud.com) */
+"[FileProvider/ownCloud/name]" = "ownCloud";
+
+/* Localized name of the storage service: pCloud (https://pcloud.com) */
+"[FileProvider/pCloud/name]" = "pCloud";
+
+/* Localized name of the storage service: Proton Drive (https://proton.me/drive) */
+"[FileProvider/ProtonDrive/name]" = "Proton Drive";
+
+/* Localized name of the storage service: QNAP Qfile (https://apps.apple.com/app/qfile/id526330408) */
+"[FileProvider/qnapQFile/name]" = "Qfile";
+
+/* Localized name of the storage service: Documents by Readdle (https://apps.apple.com/app/id364901807) */
+"[FileProvider/Readdle Documents/name]" = "Documents by Readdle";
+
+/* Localized name of the storage service: Resilio Sync (https://https://apps.apple.com/us/app/id1126282325) */
+"[FileProvider/Resilio Sync/name]" = "Resilio Sync";
+
+/* Localized name of the storage app: Seafile Pro (https://apps.apple.com/us/app/seafile-pro/id639202512) */
+"[FileProvider/Seafile Pro/name]" = "Seafile Pro";
+
+/* Localized name of the storage app: Secure ShellFish (https://apps.apple.com/app/ssh-files-secure-shellfish/id1336634154) */
+"[FileProvider/Secure ShellFish/name]" = "Secure ShellFish";
+
+/* Localized name of the storage service: SMB server (network share) via native iOS integration. */
+"[FileProvider/SMB/name]" = "SMB-server";
+
+/* Localized name of the storage service: Stratospherix FileBrowser (https://apps.apple.com/us/app/filebrowser-document-manager/id364738545) */
+"[FileProvider/Stratospherix FileBrowser/name]" = "FileBrowser";
+
+/* Localized name of the storage service: Sync.com (https://sync.com) */
+"[FileProvider/sync.com/name]" = "Sync.com";
+
+/* Localized name of the storage service: Synology Drive (https://apps.apple.com/us/app/synology-drive/id1267275421) */
+"[FileProvider/Synology Drive/name]" = "Synology Drive";
+
+/* Localized name of the storage service: Synology DS file (https://apps.apple.com/us/app/ds-file/id416751772) */
+"[FileProvider/Synology DS file/name]" = "Synology DS file";
+
+/* Localized name of the storage service: Tresorit (https://tresorit.com) */
+"[FileProvider/Tresorit/name]" = "Tresorit";
+
+/* Localized name of the storage service: local USB drive (native iOS integration) */
+"[FileProvider/USB drive/name]" = "USB-enhet";
+
+/* Localized name of the storage service: Yandex.Disk (https://disk.yandex.com) */
+"[FileProvider/Yandex.Disk/name]" = "Yandex.Disk";
+
+/* Title of the dialog for picking the destination group for move/copy operations */
+"[General/DestinationGroup/title] Choose a Destination" = "Välj en målmapp";
+
+/* Feature status: disabled/inactive. Keep it short, possibly abbreviated. */
+"[General/Feature/Off]" = "Av";
+
+/* Feature status: enabled/active. Keep it short, possibly abbreviated. */
+"[General/Feature/On]" = "På";
+
+/* Placeholder for folders without files */
+"[General/FileList/Empty/title]" = "Mappen är tom";
+
+/* Info message for keyboard-assisted selection */
+"[General/MultiSelectionKeys/hint]" = "Tryck och håll ned på Cmd- eller Shift-tangenten om du vill välja flera objekt.";
+
+/* Action/button to cancel whatever is going on */
+"[Generic] Cancel" = "Avbryt";
+
+/* Action/button to write an email to support */
+"[Generic] Contact Support" = "Kontakta Support";
+
+/* Action/button to write an email to support */
+"[Generic] Contact Us" = "Kontakta oss";
+
+/* Action/button to proceed with the action */
+"[Generic] Continue" = "Fortsätt";
+
+/* Action/button to move an item (to another group/folder/etc) */
+"[Generic] Copy" = "Kopiera";
+
+/* Action/button to create an item (entry, group, file — depending on context) */
+"[Generic] Create" = "Skapa";
+
+/* Action/button to delete an item (destroys the item/file) */
+"[Generic] Delete" = "Radera";
+
+/* Action/button to delete all relevant/selected items */
+"[Generic] Delete All" = "Radera allt";
+
+/* Action/button to discard any unsaved changes */
+"[Generic] Discard" = "Överge";
+
+/* Action/button to close an error message. */
+"[Generic] Dismiss" = "Avfärda";
+
+/* Action/button to finish (editing) and keep changes */
+"[Generic] Done" = "Klar";
+
+/* Action/button to edit an item */
+"[Generic] Edit" = "Redigera";
+
+/* Action/button to export an item to another app */
+"[Generic] Export" = "Exportera";
+
+/* Action/button shown below error messages. Tapping the button will start the fixing/repairing workflow described in the error message. */
+"[Generic] Fix this" = "Åtgärda";
+
+/* Action/button to import an item to another app */
+"[Generic] Import" = "Importera";
+
+/* Action/button to view more help/info about some topic */
+"[Generic] Learn more" = "Läs mer…";
+
+/* Checkbox/Button to show additional actions */
+"[Generic] More Actions" = "Fler åtgärder";
+
+/* Action/button to move an item (to another group/folder/etc) */
+"[Generic] Move" = "Flytta";
+
+/* Action/button: generic OK */
+"[Generic] OK" = "OK";
+
+/* Action/button to open URL in the appropriate app (usually, web browser) */
+"[Generic] Open URL" = "Öppna URL";
+
+/* Action/button to replace/overwrite an item */
+"[Generic] Overwrite" = "Skriv över";
+
+/* Action/button to print a document */
+"[Generic] Print" = "Skriv ut";
+
+/* Action/button to rename an item */
+"[Generic] Rename" = "Byt namn";
+
+/* Action/button to replace an item with another one */
+"[Generic] Replace" = "Ersätt";
+
+/* Action/button to restore a backup/archived item in its original place */
+"[Generic] Restore" = "Återställ";
+
+/* Action: repeat the previous (failed) action */
+"[Generic] Retry" = "Försök igen";
+
+/* Action/button to open Finder (macOS file manager) and highlight a given file */
+"[Generic] Reveal in Finder" = "Visa i Finder";
+
+/* Action/button to share an item with another app (AirDrop, send an email, etc) */
+"[Generic] Share" = "Dela";
+
+/* Action/button to show additional information about an error or item */
+"[Generic] Show Details" = "Visa detaljer";
+
+/* Action/button to show sensitive info as it is, in plain text (as opposed to asterisks) */
+"[Generic] Show In Plain Text" = "Visa i oformaterad text";
+
+/* Checkbox/Button to show a text field in its full size */
+"[Generic] Show more" = "Visa mer";
+
+/* Action/button to skip the current step and proceed with the next one */
+"[Generic] Skip" = "Hoppa över";
+
+/* Action/button to change the order of items in a list (move them higher/lower). */
+"[Generic/Action/ReorderItems]" = "Ändra ordning";
+
+/* Action/button to select some items in a list. */
+"[Generic/Action/SelectItems]" = "Välj";
+
+/* Number of entries found in an incoming file. For example: 'Found entries: 42' [itemCount: Int] */
+"[Generic/Count/ImportedEntries]" = "Poster som hittats: %d";
+
+/* Name of the Recently Deleted (Recycle Bin) directory, as shown in the Files app */
+"[Generic/Directory/Recently Deleted/name]" = "Senast raderade";
+
+/* Title of a notification when the user tries to close a document with unsaved changes */
+"[Generic/Edit/Aborting/title] There are unsaved changes" = "Det finns osparade ändringar";
+
+/* Action/button to delete a file (destroys the file forever) */
+"[Generic/File] Delete" = "Radera";
+
+/* Action/button to remove a file from the app (the file remains, but the app forgets about it) */
+"[Generic/File] Remove" = "Ta bort";
+
+/* Title of a generic file export screen. */
+"[Generic/File/Export/title]" = "Filexport";
+
+/* Action to save data, when we ignore minor problems in the process. */
+"[Generic/File/ForceSave]" = "Tvinga att spara";
+
+/* Action/button to save data to a different file */
+"[Generic/File/Save as]" = "Spara som…";
+
+/* Title of an error message about file export */
+"[Generic/File/title] Export Error" = "Exporteringsfel";
+
+/* Message shown when trying to copy into an existing file. */
+"[Generic/File/title] File already exists" = "Filen finns redan";
+
+/* Title of an error message about file import */
+"[Generic/File/title] Import Error" = "Importeringsfel";
+
+/* Action to proceed after a warning, basically 'I understand the risk' */
+"[Generic/GotIt/action]" = "Ok";
+
+/* Title of a list with predefined quick-choice values (for example: 'Presets: 1 week, 1 months, 1 year') */
+"[Generic/Presets]" = "Förval";
+
+/* Action: refresh list of items, usually files */
+"[Generic/RefreshList/action]" = "Uppdatera lista";
+
+/* Title of a search field (a noun, not verb) */
+"[Generic/Search/title]" = "Sök";
+
+/* Title of an error message notification */
+"[Generic/title] Error" = "Fel";
+
+/* Title of an error message about iOS system keychain */
+"[Generic/title] Keychain Error" = "Nyckelringsfel";
+
+/* Title of an warning message */
+"[Generic/title] Warning" = "Varning";
+
+/* Title of a menu with various utilities */
+"[Generic/Tools/title]" = "Verktyg";
+
+/* Action/button to open an online support article (about a specific error) */
+"[Generic/ViewHelpArticle/action]" = "Visa hjälpartikel";
+
+/* Title of a screen/list view configuration: sort order, visible items, etc */
+"[Generic/ViewOptions/title]" = "Visningsalternativ";
+
+/* Warning message template. Swap the icon and message for right-to-left languages. */
+"[Generic/WarningWithIcon/template]" = "⚠️ %@";
+
+/* VoiceOver description of a group [groupTitle: String, itemCount: Int] */
+"[Group/a11y/description]" = "%@, grupp";
+
+/* Action/button to create a new sub-group in the current group */
+"[Group/Create/action] Create Group" = "Skapa grupp";
+
+/* Title of a form for editing a group */
+"[Group/Edit/title] Edit Group" = "Redigera grupp";
+
+/* VoiceOver description of a menu with group-related actions */
+"[Group/Menu/a11y/title]" = "Gruppmeny";
+
+/* Default name of a new group */
+"[Group/New/defaultName] New Group" = "Ny grupp";
+
+/* Title for the Notes field in group editor */
+"[Group/Notes/title]" = "Anteckningar";
+
+/* Action/button to delete everything inside the Recycle Bin */
+"[Group/RecycleBin/Empty/action]" = "Töm papperskorgen";
+
+/* Title of the confirmation dialog for `Empty Recycle Bin` action */
+"[Group/RecycleBin/Empty/confirmTitle]" = "Radera allt i papperskorgen permanent?";
+
+/* Title of the Entries section visible while editing */
+"[Group/Section/Entries/title]" = "Poster";
+
+/* Title of the Groups section visible while editing */
+"[Group/Section/Groups/title]" = "Grupper";
+
+/* VoiceOver description of a smart group [groupTitle: String] */
+"[Group/Smart/a11y/description]" = "%@, smart grupp";
+
+/* Action/button to show a help article */
+"[Group/Smart/about]" = "Om smarta grupper …";
+
+/* Action/button to create a new Smart Group */
+"[Group/Smart/Create/action]" = "Skapa smart grupp";
+
+/* Default name of a new smart group */
+"[Group/Smart/New/defaultName]" = "Ny smart grupp";
+
+/* Title of a list: all entries in the database */
+"[Group/Smart/Preset/allEntries]" = "Alla poster";
+
+/* Title of a list: entries that are beyond their expiration date. */
+"[Group/Smart/Preset/expiredEntries]" = "Utgångna poster";
+
+/* Title of a list: entries with one-time passwords (OTP) */
+"[Group/Smart/Preset/otpEntries]" = "Poster med engångslösenord";
+
+/* Title of a list: entries that contain passkeys */
+"[Group/Smart/Preset/passkeyEntries]" = "Poster med nycklar";
+
+/* Title for the Smart Group search conditions in group editor */
+"[Group/Smart/Query/title]" = "Filter för smart grupp";
+
+/* Glossary term: noun, a smart group in database. */
+"[Group/Smart/title]" = "Smart grupp";
+
+/* Glossary term: noun, a group in database. */
+"[Group/title]" = "Grupp";
+
+/* Title of an input field for group name */
+"[GroupEditor/Name/placeholder]" = "Gruppnamn";
+
+/* A notification that hardware keys (e.g. YubiKey) cannot be used in AutoFill (the OS does not allow the AutoFill to use NFC/MFI). */
+"[HardwareKey/AutoFill/NotAvailable] Hardware keys are not available in AutoFill." = "Hårdvarunycklar är ej tillgängliga i Autofyll.";
+
+/* Information notice for a list of hardware keys. */
+"[HardwareKey/AutoFill/TheseNotAvailable]" = "Dessa hårdvarunycklar är inte tillgängliga i Autofyll.";
+
+/* Name of an input field which shows selected hardware key */
+"[HardwareKey/Field/title]" = "Hårdvarunyckel";
+
+/* Connector type for older Apple devices, used through a USB adapter. https://en.wikipedia.org/wiki/Lightning_(connector) */
+"[HardwareKey/Interface/LightningViaUSBAdapter]" = "Lightning (via USB-adapter)";
+
+/* A notice for hardware keys that need an adapter for physical connection to device. */
+"[HardwareKey/LightningOverUSB/RequiresAdapter]" = "Kräver adapter för Apple USB-C till Lightning";
+
+/* Master key/unlock option: don't use hardware keys */
+"[HardwareKey/None] No Hardware Key" = "Ingen hårdvarunyckel";
+
+/* Title of a list with possible hardware key connections */
+"[HardwareKey/Picker/title]" = "Hårdvarunycklar";
+
+/* Title of a slot of a hardware key. For example: `YubiKey Slot 1`. */
+"[HardwareKey/Slot/title]" = "%1$@ Plats %2$d";
+
+/* Hardware key slot number. [slotNumber: Int] */
+"[HardwareKey/SlotN]" = "Plats %d";
+
+/* Title for hardware key slot selection menu. */
+"[HardwareKey/SlotTitle]" = "Plats";
+
+/* Information notice. 'Challenge-response' is a glossary term. */
+"[HardwareKey/USB/chalRespNotSupported]" = "Den här enheten stöder inte kontrollsvar via USB-anslutning.";
+
+/* Information notice */
+"[HardwareKey/USB/iPadAppOnMac]" = "USB är inte tillgängligt eftersom denna iPad använder macOS. Använd den inbyggda Mac-appen istället.";
+
+/* Generic title of in-app help article */
+"[Help Viewer/title]" = "Hjälp";
+
+/* Name of an entry field. Acronym `HOTP` should not be translated. */
+"[HOTP/FieldName]" = "Engångslösenord (HOTP)";
+
+/* Info message for enterprise users */
+"[Intune/OrgNeedsToManage]" = "För att skydda sin data måste din organisation hantera denna app. För att slutföra, logga in med ditt arbets- eller skolkonto.";
+
+/* Info message for users who accidentally installed the enterprise version. */
+"[Intune/PersonalVersionElsewhere]" = "KeePassium-version för personligt bruk är tillgänglig på App Store.";
+
+/* Notification that an archived/historical item (e.g entry) has been successfully restored */
+"[Item/History/Restored]" = "Föregående version återställd";
+
+/* Title of a list with advanced/expert-level properties of a database item (e.g. entry) */
+"[Item/Properties/Advanced/title]" = "Avancerat";
+
+/* Possible value of the `Password AutoFill` setting. For example: 'Password AutoFill: Allowed' */
+"[Item/Properties/AutoFill/allowed]" = "Tillåtet";
+
+/* Possible value of the `Password AutoFill` setting. For example: 'Password AutoFill: Disabled' */
+"[Item/Properties/AutoFill/disabled]" = "Inaktiverat";
+
+/* Title of a setting: whether the item (e.g. entry) should be used in AutoFill feature. App-specific setting for KeePassXC. */
+"[Item/Properties/AutoFill/KeePassXC/title]" = "Autofyll lösenord (KeePassXC) ";
+
+/* Title of a setting: whether the item (e.g. entry) should be used in AutoFill feature */
+"[Item/Properties/AutoFill/title]" = "Autofyll lösenord";
+
+/* Default value of an item property. For example: 'Password Audit: Inherit from parent group (Allowed)'. [inheritedValue: String] */
+"[Item/Properties/inheritedValue]" = "Ärv från överordnad grupp (%@)";
+
+/* Possible value of the `Password Audit` setting. For example: 'Password Audit: Allowed' */
+"[Item/Properties/PasswordAudit/allowed]" = "Tillåtet";
+
+/* Possible value of the `Password Audit` setting. For example: 'Password Audit: Disabled' */
+"[Item/Properties/PasswordAudit/disabled]" = "Inaktiverat";
+
+/* Title of a setting: whether the item (e.g. entry) should be included in password audit */
+"[Item/Properties/PasswordAudit/title]" = "Lösenordsgranskning";
+
+/* Possible value of the `Search` setting. Example: 'Search: Allowed' */
+"[Item/Properties/Search/allowed]" = "Tillåtet";
+
+/* Possible value of the `Search` setting, when the item should be excluded from search results. Example: 'Search: Disabled' */
+"[Item/Properties/Search/disabled]" = "Inaktiverat";
+
+/* Title of a setting: whether the item (e.g. entry) should be considered during search. Example: 'Search: Allowed' */
+"[Item/Properties/Search/title] Search" = "Sök";
+
+/* Title of a list with item (e.g. entry) properties/settings, such as searchability, auto-typing, etc */
+"[Item/Properties/title]" = "Egenskaper";
+
+/* Name of an entry/group category (visual style): default one, like in KeePass */
+"[ItemCategory] Default (KeePass)" = "Standard (KeePass)";
+
+/* Title of a list with custom (user-imported) icons for groups and entries */
+"[ItemIconPicker/CustomIcons]" = "Egenvalda ikoner";
+
+/* Title of a list with standard/default icons for groups and entries */
+"[ItemIconPicker/StandardIcons]" = "Standardikoner";
+
+/* Status message: processing of the master key is in progress */
+"[KDF/Progress] Processing the master key" = "Bearbetar masternyckel";
+
+/* Generic error message about system keychain. [errorCode: Int] */
+"[KeychainError/generic] Keychain error (code %d) " = "Nyckelring-fel (Felkod %d) ";
+
+/* Error message about system keychain. */
+"[KeychainError/unexpectedFormat] Keychain error: unexpected data format" = "Nyckelring-fel: Oväntat dataformat";
+
+/* Action: add a key file into the app, by importing or creating one. `Key file` is a glossary term. */
+"[KeyFile/Add/action]" = "Lägg till nyckelfil";
+
+/* Action: create new key file. */
+"[KeyFile/Create/action]" = "Skapa nyckelfil";
+
+/* Default name for new key files. Should match the `key file` term in the glossary. */
+"[KeyFile/Create/defaultName]" = "keyfile.dat";
+
+/* Message to confirm deletion of a key file. */
+"[KeyFile/Delete/Confirm/text] Delete key file?\n Make sure you have a backup." = "Radera nyckelfil?\nSe till att du har en säkerhetskopia.";
+
+/* Error message related to key file. [errorDetails: String] */
+"[KeyFile/error]" = "Nyckelfil-fel: %@";
+
+/* Name of an input field which shows selected key file */
+"[KeyFile/Field/title]" = "Nyckel-fil";
+
+/* Action: import/add a key file into the app. `Key file` is a glossary term. */
+"[KeyFile/Import/action]" = "Importera nyckelfil";
+
+/* Description of the `Import Key File` action. */
+"[KeyFile/Import/actionDescription]" = "Lägg till fil i appen";
+
+/* Placeholder shown when there are no key files available */
+"[KeyFile/List/empty]" = "Inga nyckelfiler";
+
+/* Title of the list with key files. */
+"[KeyFile/List/title]" = "Nyckelfiler";
+
+/* Description of the 'No Key File' option. */
+"[KeyFile/None/description]" = "Använd endast lösenord";
+
+/* Title: don't use key file */
+"[KeyFile/None/title]" = "Ingen nyckel-fil";
+
+/* Message to confirm removal of a key file from the app. (This keeps the file, but removes its reference from the app.) */
+"[KeyFile/Remove/Confirm/text] Remove key file from the list?\n The file will remain intact and you can add it again later." = "Ta bort nyckelfil från listan?\n Filen kommer vara kvar oförändrad och du kan lägga till den igen senare.";
+
+/* Action: use a key file at its storage location, without importing to the app. */
+"[KeyFile/Use/action]" = "Välj nyckelfil";
+
+/* Description of the `Select Key File` action. */
+"[KeyFile/Use/actionDescription]" = "Använd utan att lägga till";
+
+/* Error message when the key file is misformatted or damaged */
+"[KeyFileError/Corrupted/title]" = "Nyckelfilen är skadad";
+
+/* Error message: unsupported/unknown format of a key file */
+"[KeyFileError/UnsupportedFormat/title]" = "Format för nyckelfil stöds inte";
+
+/* Menu item: show information about file (name, size, dates) */
+"[Menu/FileInfo/title]" = "Filinfo";
+
+/* Menu title: app settings */
+"[Menu/Settings/title]" = "Inställningar…";
+
+/* Title of a menu: sort order of files in a list */
+"[Menu/Sort] Sort Files By" = "Sortera filer efter";
+
+/* Title of a menu: sort order of groups and entries in a list */
+"[Menu/Sort] Sort Items By" = "Sortera objekt efter";
+
+/* Suggestion/hint on how to fix an accompanying error. */
+"[Org/ContactYourAdmin]" = "Var vänlig kontakta din IT-administratör.";
+
+/* Error message, euphemism for missing corporate license */
+"[Org/LicenseMissing]" = "KeePassium kunde inte hitta enterprise-kontot för din organisation.";
+
+/* Name of an entry field */
+"[OTP/FieldName]" = "Engångslösenord";
+
+/* Error shown when scanned QR code cannot be used for OTP */
+"[OTP/Scan/InvalidData]" = "Denna QR-kod är inte lämplig för OTP-konfiguration.";
+
+/* Error shown when a manually entered OTP secret is misformatted. */
+"[OTP/Scan/InvalidSecretCode]" = "Inmatad hemlighet är inte korrekt för OTP-konfiguration.";
+
+/* Message to confirm user intentions */
+"[OTP/Scan/OverwriteWarning]" = "Engångslösenordet är redan konfigurerat för posten. Vill du skriva över det?";
+
+/* Call for action. Acronym `OTP` should not be translated. */
+"[OTP/Setup]" = "Ställ in engångslösenord (OTP)";
+
+/* Button/action: proceed with manual OTP setup */
+"[OTP/Setup/EnterManually]" = "Ange manuellt";
+
+/* Call to action: type in the secret key for OTP setup. */
+"[OTP/Setup/EnterSecretCode/callToAction]" = "Ange hemlighet";
+
+/* Button/action: proceed with QR code based OTP setup */
+"[OTP/Setup/ScanQRCode]" = "Skanna QR-kod";
+
+/* Action: pick an image (from files) to scan as QR code */
+"[OTP/Setup/ScanQRImageFile]" = "Skanna QR-kod från fil";
+
+/* Action: pick a photo (from gallery) to scan as QR code */
+"[OTP/Setup/ScanQRPhoto]" = "Skanna QR-kod från foto";
+
+/* Call to action/instruction during setup of OTP codes. */
+"[OTP/Setup/SelectDatabase/message]" = "Välj databas för att konfigurera verifieringskoden (engångslösenord).";
+
+/* Call to action/instruction during setup of OTP codes. */
+"[OTP/Setup/SelectEntry/message]" = "Välj post för att konfigurera verifieringskoden (engångslösenord).";
+
+/* Confirmation message after successful OTP setup */
+"[OTP/Setup/Success]" = "Konfiguration av engångslösenord klar";
+
+/* Title of a dialog related to setup of one-time passwords (OTP) */
+"[OTP/Setup/Title]" = "Konfiguration av verifieringskod";
+
+/* Description of an OTP code; sentence case. */
+"[OTP/Title/sentenceCase]" = "Engångslösenord";
+
+/* Action/button: accept/use the generated password */
+"[PasswordGenerator/Accept/action]" = "Acceptera";
+
+/* Error message from the random text generator. */
+"[PasswordGenerator/CannotGenerateText/title]" = "Kan inte generera text";
+
+/* Description of an empty character set for password generator. 'Empty' as 'there are no characters'. */
+"[PasswordGenerator/CustomSet/Empty/title]" = "Tom";
+
+/* User-defined set of characters for password generator. */
+"[PasswordGenerator/CustomSet/title]" = "Anpassade tecken";
+
+/* Error message/call to action from the random text generator. */
+"[PasswordGenerator/DesiredLengthTooShort/title]" = "Öka längdparametern till minst %d.";
+
+/* Action/button: generate random text/password/phrase */
+"[PasswordGenerator/Generate/action]" = "Generera";
+
+/* Description of randomly generated text/password/phrase */
+"[PasswordGenerator/GeneratedText/title]" = "Genererad text";
+
+/* Inclusion criterion for a password generator. For example: `Digits: Allowed` */
+"[PasswordGenerator/InclusionCondition/allowed]" = "Tillåtet";
+
+/* Inclusion criterion for a password generator. For example: `Uppercase Letters: Excluded` */
+"[PasswordGenerator/InclusionCondition/excluded]" = "Exkluderade";
+
+/* Inclusion criterion for a password generator — a disabled/inactive one that won't be taken into account. For example: `Uppercase Letters: Inactive` */
+"[PasswordGenerator/InclusionCondition/inactive]" = "Används ej";
+
+/* Inclusion criterion for a password generator. For example: `Special Symbols: Required` */
+"[PasswordGenerator/InclusionCondition/required]" = "Obligatoriska";
+
+/* Length (number of characters) of the random text to generate */
+"[PasswordGenerator/Length/title]" = "Längd";
+
+/* Description of a password generator parameter. For example, the digit in 'abc222def'. */
+"[PasswordGenerator/MaxConsecutive/description]" = "Maximalt antal identiska tecken i en följd.";
+
+/* Error message/call to action from the random text generator. */
+"[PasswordGenerator/MaxConsecutiveNotSatisfiable/title]" = "Öka gränsen för maximalt antal identiska tecken som tillåts i följd.";
+
+/* One of the operation modes of the random text generator */
+"[PasswordGenerator/Mode/Basic/title]" = "Grundläggande";
+
+/* One of the operation modes of the random text generator */
+"[PasswordGenerator/Mode/Expert/title]" = "Expert";
+
+/* One of the operation modes of the random text generator, where it generates random phrases. */
+"[PasswordGenerator/Mode/Passphrase/title]" = "Lösenordsfras";
+
+/* Operation mode of the random text generator (for example, `Basic`, `Expert`, `Passphrase`) */
+"[PasswordGenerator/Mode/title]" = "Läge";
+
+/* Error message from the random text generator. */
+"[PasswordGenerator/NotEnoughElementsToSample/title]" = "Behöver större urval av tecken att välja från.";
+
+/* Length (number of characters) of the password to generate */
+"[PasswordGenerator/PasswordLength/title]" = "Lösenordslängd";
+
+/* Error message from the random text generator. `required` and `excluded` are as in [PasswordGenerator/InclusionCondition/required] and [PasswordGenerator/InclusionCondition/excluded] */
+"[PasswordGenerator/RequiredSetCompletelyExcluded/title]" = "En av teckenkategorierna är både obligatorisk och exkluderad.";
+
+/* Title for digits (like '123') */
+"[PasswordGenerator/Set/Digits/title]" = "Siffror";
+
+/* Title for look-alike symbols (like '1lI', that is: digit `1`, small `L`, capital `i`). */
+"[PasswordGenerator/Set/Lookalikes/title]" = "Tecken som liknar varandra";
+
+/* Title for lowercase letters (like 'abc') */
+"[PasswordGenerator/Set/Lowercase/title]" = "Gemener";
+
+/* Title for special symbols (like '@#$') */
+"[PasswordGenerator/Set/Specials/title]" = "Specialtecken";
+
+/* Title for uppercase letters (like 'ABC') */
+"[PasswordGenerator/Set/Uppercase/title]" = "Versaler";
+
+/* Name of the space character. https://en.wikipedia.org/wiki/Space_(punctuation) */
+"[PasswordGenerator/SpaceCharacter/name]" = "Mellanslag";
+
+/* Title of the random text/password/username generator dialog. */
+"[PasswordGenerator/title]" = "Slumpgenerator";
+
+/* Character to be inserted between words of a passphrase. */
+"[PasswordGenerator/Word Separtor/title]" = "Skiljetecken";
+
+/* Word capitalization style. Written in that style, if possible. */
+"[PasswordGenerator/WordCase/lowerCase]" = "gemener";
+
+/* Case of letters in a word (e.g. UPPER, lower, Title Case) */
+"[PasswordGenerator/WordCase/title]" = "Skiftläge";
+
+/* Word capitalization style: first letters of significant words capitalized. Written in that style, if possible. */
+"[PasswordGenerator/WordCase/titleCase]" = "Inledande Versaler";
+
+/* Word capitalization style. Written in that style, if possible. */
+"[PasswordGenerator/WordCase/upperCase]" = "VERSALER";
+
+/* Number of words in a generated passphrase. In context: 'Words: 5' */
+"[PasswordGenerator/WordCount/title]" = "Ord";
+
+/* Name of a wordlist for passphrase generator. `EFF` is an organization name. */
+"[PasswordGenerator/Wordlist/EFFLarge/title]" = "EFF:s långa ordlista (7776 ord)";
+
+/* Name of a wordlist for passphrase generator. `EFF` is an organization name. */
+"[PasswordGenerator/Wordlist/EFFShort/title]" = "EFF:s korta ordlista %d (1296 ord)";
+
+/* Error message when importing a text file [lineNumber: Int, problemDescription: String] */
+"[PasswordGenerator/Wordlist/ImportError/reason]" = "Det gick inte att importera filen på grund av ett fel på rad %1$d (%2$@)";
+
+/* List of words to be used for a passphrase. */
+"[PasswordGenerator/Wordlist/title]" = "Ordlista";
+
+/* Title of a premium feature */
+"[Premium/Benefits/BusinessClouds/title]" = "Synkronisera med företagslagring";
+
+/* Call to action / Title of a premium feature */
+"[Premium/Benefits/CreativeAutoFill/title]" = "Skapa konton snabbare";
+
+/* Explanation of the premium feature */
+"[Premium/Benefits/HardwareKeys/details]" = "Skydda din data med en hårdvarunyckel, såsom YubiKey.";
+
+/* Title of a premium feature */
+"[Premium/Benefits/HardwareKeys/title]" = "Använd hårdvarunycklar";
+
+/* Explanation of the premium feature */
+"[Premium/Benefits/LinkedDatabases/details]" = "Öppna en annan databas i ett steg med inloggningsuppgifter som lagrats i en post.";
+
+/* Title of a premium feature */
+"[Premium/Benefits/LinkedDatabases/title]" = "Öppna länkade databaser";
+
+/* Explanation of the premium feature */
+"[Premium/Benefits/MultiDB/details]" = "Lägg till flera databaser och växla smidigt mellan dem.";
+
+/* Title of a premium feature */
+"[Premium/Benefits/MultiDB/title]" = "Synka med teamet";
+
+/* List of premium benefits/advantages */
+"[Premium/Benefits/Negative/header] " = "Vad du går miste om";
+
+/* Title of a premium feature */
+"[Premium/Benefits/PasswordAudit/title]" = "Kontrollera dina lösenord";
+
+/* List of premium benefits/advantages */
+"[Premium/Benefits/Positive/header] " = "Vad du får";
+
+/* Call to action */
+"[Premium/CallToAction/buyNow]" = "Köp nu";
+
+/* Call to action: continue using the free version */
+"[Premium/CallToAction/free]" = "Fortsätt prova";
+
+/* Call to action: start free trial */
+"[Premium/CallToAction/startTrial]" = "Prova gratis";
+
+/* Call to action: upgrade to premium */
+"[Premium/CallToAction/upgradeNow]" = "Uppgradera Nu";
+
+/* Action: open AppStore subscription management page */
+"[Premium/ManageSubscriptions/action]" = "Hantera prenumerationer";
+
+/* Name of the permanent/never-ending license. */
+"[Premium/perpetualLicense]" = "Evig licens";
+
+/* [formattedDate: String] */
+"[Premium/PerpetualLicense/status]" = "Du har en evig licens för alla versioner innan %@.";
+
+/* What's included in a price plan: 1 year of support via email */
+"[Premium/Price Plan/Conditions/1 year email support]" = "Ett år support via e-post";
+
+/* What's included in a price plan */
+"[Premium/Price Plan/Conditions/all premium features]" = "Alla premiumfunktioner";
+
+/* What's included in a free plan: support via forums (as opposed to email support) */
+"[Premium/Price Plan/Conditions/community support]" = "Kundsupport: Online-forum";
+
+/* What's included in a price plan: existing premium features only (as opposed to `current + future`) */
+"[Premium/Price Plan/Conditions/current premium features]" = "Nuvarande premiumfunktioner";
+
+/* What's included in a price plan: support via email */
+"[Premium/Price Plan/Conditions/email support]" = "Kundsupport: E-post";
+
+/* Family Sharing programme. Translation must match Apple's: https://www.apple.com/family-sharing/ */
+"[Premium/Price Plan/Conditions/family sharing]" = "Familjedelning";
+
+/* What's included in a free plan: reminders that the version is free */
+"[Premium/Price Plan/Conditions/freemium reminders]" = "Freemium-påminnelser";
+
+/* Upgrade conditions for current-version premium purchase. */
+"[Premium/Price Plan/Conditions/full price upgrade]" = "Premiumfunktioner som läggs till i framtiden måste köpas för fullt pris.";
+
+/* What's included in a price plan: upcoming premium features (as opposed to `current only`) */
+"[Premium/Price Plan/Conditions/future premium features]" = "Framtida premiumfunktioner";
+
+/* What's included in a price plan. Please leave `perpetual fallback license` in English. */
+"[Premium/Price Plan/Conditions/perpetual fallback]" = "Hyrlicens (Perpetual fallback license)";
+
+/* What's included in a subscription plan. By subscribing for a certain period, the user receives a permanent license for a version of the app. More info: https://keepassium.com/articles/perpetual-fallback-license/ */
+"[Premium/Price Plan/Conditions/subscription as purchase]" = "Prenumeration som ett köp";
+
+/* What's included in a price plan */
+"[Premium/Price Plan/Conditions/updates and bug fixes]" = "Uppdateringar och buggfixar";
+
+/* Price of the free pricing plan */
+"[Premium/Price Plan/Free/price]" = "Gratis";
+
+/* Name of the free pricing plan */
+"[Premium/Price Plan/Free/title]" = "Gratis";
+
+/* Marks the default pricing plan */
+"[Premium/Price Plan/popular]" = "Populär";
+
+/* Subscription conditions */
+"[Premium/Subscription/Legal/text]" = "Betalning kommer att debiteras ditt Apple-konto vid bekräftelse av köpet.\n\nPrenumerationen förnyas automatiskt om inte avbokning sker minst 24 timmar före utgången av den aktuella perioden. Kontot kommer debiteras för förnyelsen inom de sista 24-timmarna före den aktuella perioden tar slut.\n\nDu kan hantera och avsluta din prenumeration genom att gå till Kontoinställningar i App Store efter ditt köp.";
+
+/* Trial conditions. For example `30 days free, then $1 per month` */
+"[Premium/Trial/trial then price]" = "%1$@ gratis, sedan %2$@";
+
+/* Error message: AppStore returned no available in-app purchase options */
+"[Premium/Upgrade] Hmm, there are no upgrades available. This should not happen, please contact support." = "Hmm, det finns inga uppgraderingar tillgängliga. Detta ska inte hända, var vänlig kontakta supporten.";
+
+/* Action/button to start choosing premium versions and possibly buying one */
+"[Premium/Upgrade/action] Upgrade to Premium" = "Uppgradera till premium";
+
+/* Message shown after buying a lifetime version. */
+"[Premium/Upgrade/cancelOngoingSubscription]" = "Kontrollera om du måste avbryta din gamla prenumeration.";
+
+/* Message shown when in-app purchase is deferred until approval (parental or corporate). */
+"[Premium/Upgrade/Deferred/text] Thank you! You can use KeePassium while purchase is awaiting approval." = "Tack! Du kan använda KeePassium innan köpet bekräftas av en målsman.";
+
+/* Product price for monthly premium subscription. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ / month" = "%@ / månad";
+
+/* Product price for annual premium subscription. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ / year" = "%@ / år";
+
+/* Product price for once-and-forever premium. [localizedPrice: String] */
+"[Premium/Upgrade/price] %@ once" = "%@ engångsbetalning";
+
+/* Equivalent monthly price for an annual subscription. For example: `$12/year ≈ $1 / month` */
+"[Premium/Upgrade/price] around %@ / month" = "≈ %@ / månad";
+
+/* Status message when downloading available in-app purchases */
+"[Premium/Upgrade/Progress] Contacting AppStore..." = "Kontaktar App Store...";
+
+/* Status: in-app purchase started */
+"[Premium/Upgrade/Progress] Purchasing..." = "Köper...";
+
+/* Text of the message shown after in-app purchase was successfully restored */
+"[Premium/Upgrade/Restored/text] Upgrade successful, enjoy the app!" = "Uppgraderingen lyckades, njut nu av appen!";
+
+/* Title of the message shown after in-app purchase was successfully restored */
+"[Premium/Upgrade/Restored/title] Purchase Restored" = "Köp återställt";
+
+/* Text of an error message: there were no in-app purchases that can be restored */
+"[Premium/Upgrade/RestoreFailed/text] No previous purchase could be restored." = "Inga tidigare köp kunde återställas.";
+
+/* Title of an error message: there were no in-app purchases that can be restored */
+"[Premium/Upgrade/RestoreFailed/title] Sorry" = "Förlåt";
+
+/* Message shown after buying or subscribing. */
+"[Premium/Upgrade/Success/thankYou]" = "Tack för köpet!";
+
+/* Description/call to action for the `Business Cloud Storage` premium feature. */
+"[PremiumFeature/BusinessClouds/description]" = "Anslut direkt till företagskonton för lagring, till exempel OneDrive for Business.";
+
+/* Title of a premium feature: access to company's cloud accounts like 'OneDrive for Business' */
+"[PremiumFeature/BusinessClouds/title]" = "Företagslagring i molnet";
+
+/* Description/advertisement for the `Faster Sign-Ups` premium feature */
+"[PremiumFeature/CreativeAutoFill/description]" = "Skapa nya poster i Autofyll där huvudfälten redan fyllts i.";
+
+/* Title of a premium feature: easier registration of new accounts, directly in AutoFill dialog */
+"[PremiumFeature/CreativeAutoFill/title]" = "Registrera dig snabbare";
+
+/* A generic description of a premium feature */
+"[PremiumFeature/Generic/description]" = "Uppgradera till premium och upplev KeePassium när det är som bäst.";
+
+/* A generic title of a premium feature */
+"[PremiumFeature/Generic/title]" = "Premiumfunktion";
+
+/* Description/advertisement for the `Hardware Keys` premium feature */
+"[PremiumFeature/HardwareKeys/description]" = "Öka säkerheten med hårdvarunycklar (YubiKey) i premiumversionen.";
+
+/* Title of a premium feature: ability use hardware keys (e.g. YubiKey) for encryption (In Title Case) */
+"[PremiumFeature/HardwareKeys/title] Hardware Keys" = "Hårdvarunycklar";
+
+/* Description/advertisement for the `Linked Databases` premium feature */
+"[PremiumFeature/LinkedDatabases/description]" = "Uppgradera till Premium och öppna länkade databaser i ett steg.";
+
+/* Title of a premium feature: ability to open databases referenced in another database (In Title Case) */
+"[PremiumFeature/LinkedDatabases/title]" = "Länkade databaser";
+
+/* Description/advertisement for the `Multiple Databases` premium feature */
+"[PremiumFeature/MultiDB/description] Easily switch between databases in the premium version." = "Växla enkelt mellan databaser i premiumversionen.";
+
+/* Title of a premium feature: ability to use multiple databases (In Title Case) */
+"[PremiumFeature/MultiDB/title] Multiple Databases" = "Flera databaser";
+
+/* Description/call to action for the `Password Audit` premium feature. */
+"[PremiumFeature/PasswordAudit/description]" = "Ta reda på om någon av dina lösenord har komprommeterats i någon känd dataläcka.";
+
+/* Title of a premium feature: discover which passwords are known to be compromized */
+"[PremiumFeature/PasswordAudit/title]" = "Lösenordsgranskning";
+
+/* Description/call to action for the `Quick AutoFill` premium feature. */
+"[PremiumFeature/QuickAutoFill/description]" = "Logga in med en tryckning, utan att ens öppna KeePassium.";
+
+/* Title of a premium feature: show relevant AutoFill entries right under the input field */
+"[PremiumFeature/QuickAutoFill/title]" = "Snabb Autofyll";
+
+/* A brief summary of the privacy policy (for offline mode) */
+"[PrivacyPolicy/Offline/text]" = "KeePassium samlar inte in någon personlig eller analytisk data och kan därför inte heller dela något med tredje part.";
+
+/* A brief summary of the privacy policy (for online mode) */
+"[PrivacyPolicy/Online/text]" = "KeePassium samlar inte in några personliga eller analytiska uppgifter.\nVissa funktioner kan innebära datautbyte med externa tjänster (endast på din egna begäran och med enda syfte att göra tjänsterna tillgängliga för dig). Sådana utbyten regleras av regler och avtal för respektive tjänst.";
+
+/* Section: privacy policy */
+"[PrivacyPolicy/title]" = "Integritetspolicy";
+
+/* Explanation/notification when a long-running operation was cancelled by user */
+"[Progress/CancellationReason] Cancelled by user" = "Avbrutet av användaren";
+
+/* Error message when a long-running operation was cancelled due to the lack of free memory (RAM). */
+"[Progress/CancellationReason/lowMemory]" = "Inte tillräckligt med minne för att fortsätta.\nDetta kan hända med stora databaser eller för högt ställda databasinställningar (Argon2-parametrar för minnet).";
+
+/* Name of a feature that shows relevant entries directly next to the login/password forms. */
+"[QuickAutoFill/title]" = "Snabb Autofyll";
+
+/* Network security setting */
+"[RemoteConnection/AllowUntrusted/title]" = "Tillåt ej betrodda certifikat";
+
+/* Network connection. For example `Connection: WebDAV` or `Connection: MyCloud`. */
+"[RemoteConnection/Connection/title]" = "Anslutning";
+
+/* Action: connect to a network server */
+"[RemoteConnection/connectToServer]" = "Anslut till server";
+
+/* Title of a section: username, password, etc */
+"[RemoteConnection/Credentials]" = "Inloggningsuppgifter";
+
+/* Description of the `Direct connection` sync method. */
+"[RemoteConnection/Direct/description]" = "KeePassium kommunicerar direkt med din onlinelagring vilket garanterar pålitlig filöverföring.";
+
+/* Title of a list with online storage services like OneDrive, Dropbox, etc. */
+"[RemoteConnection/Direct/title]" = "Onlinetjänster";
+
+/* Action: change properties of a remote network connection */
+"[RemoteConnection/Edit/action]" = "Redigera anslutning …";
+
+/* Error message: user credentials rejected by the server */
+"[RemoteConnection/Error/AuthenticationFailed/title]" = "Autentisering misslyckades";
+
+/* Network address of a file */
+"[RemoteConnection/FileURL]" = "Fil-URL";
+
+/* Complete WebDAV URL including path prefix */
+"[RemoteConnection/FullURL]" = "Fullständig URL";
+
+/* Name of a predefined Google Drive folder which contains user's own files */
+"[RemoteConnection/GoogleDrive/Folder/myDrive]" = "Min enhet";
+
+/* Name of a predefined GoogleDrive folder which contains files shared with this user */
+"[RemoteConnection/GoogleDrive/Folder/sharedWithMe]" = "Delas med mig";
+
+/* Name of a predefined OneDrive folder which contains user's own files */
+"[RemoteConnection/OneDrive/Folder/files]" = "Filer";
+
+/* Name of a predefined OneDrive folder which contains files shared with this user */
+"[RemoteConnection/OneDrive/Folder/sharedWithMe]" = "Delat";
+
+/* Network address of a WebDAV server */
+"[RemoteConnection/ServerURL]" = "Server-URL";
+
+/* Action: authenticate to Dropbox account */
+"[RemoteConnection/SignIn/Dropbox/action]" = "Logga in på Dropbox";
+
+/* Error description: the user should manually sign in to their Dropbox account */
+"[RemoteConnection/SignIn/Dropbox/authorizationRequried]" = "Du måste logga in på Dropbox igen.";
+
+/* Action: authenticate to Google Drive account */
+"[RemoteConnection/SignIn/GoogleDrive/action]" = "Logga in på Google Drive";
+
+/* Error description: the user should manually sign in to their Google Drive account */
+"[RemoteConnection/SignIn/GoogleDrive/authorizationRequried]" = "Du måste logga in på Google Drive igen.";
+
+/* Action: authenticate to OneDrive account */
+"[RemoteConnection/SignIn/OneDrive/action]" = "Logga in på OneDrive";
+
+/* Error description: the user should manually sign in to their OneDrive account */
+"[RemoteConnection/SignIn/OneDrive/authorizationRequried]" = "Du behöver logga in på OneDrive på nytt.";
+
+/* No comment provided by engineer. */
+"[RemoteConnection/SignIn/PrivateMode/description]" = "Öppna inloggnignssidan i privat webbläsarläge";
+
+/* No comment provided by engineer. */
+"[RemoteConnection/SignIn/PrivateMode/title]" = "Privat läge";
+
+/* Title: connection to a network storage */
+"[RemoteConnection/title]" = "Fjärranslutning";
+
+/* Description of the `Integration via Files app` sync method. */
+"[RemoteConnection/ViaFilesApp/description]" = "KeePassium tilldelar filsynkronisering till din lagringsleverantörs app. Vissa appar fungerar bättre än andra.";
+
+/* Link to a help page for an online storage service. The parameter is the service name in fixed neutral form. Example: 'Nextcloud Setup Guide' or 'Synology NAS Setup Guide'. */
+"[RemoteConnection/WebDAVService/SetupGuide]" = "Inställningsguide för %@";
+
+/* Name of an input field for entering the password again */
+"[Repeat Password/Field/title]" = "Repetera lösenord";
+
+/* Description of the auto-download favicons feature */
+"[Settings/AutoDownloadFavicons/description]" = "Ladda ned webbplatsikon automatiskt efter att en post har redigerats.";
+
+/* Settings option: automatically download website icons/favicons */
+"[Settings/AutoDownloadFavicons/title]" = "Ladda ned favoritikoner automatiskt";
+
+/* Title of AutoFill settings screen */
+"[Settings/AutoFill/title]" = "Autofyll lösenord";
+
+/* Title of a yes/no setting: whether to include backup copies in the file list */
+"[Settings/DatabaseBackup/ShowBackupFiles/title]" = "Visa backupfiler";
+
+/* Settings section: protection of databases, their keys and data inside them */
+"[Settings/DataProtection/title]" = "Dataskydd";
+
+/* An option in Group Viewer settings. Will be shown as 'Entry Subtitle: None', meanining that no entry details will be shown in any lists. */
+"[Settings/EntryListDetail/longTitle] None" = "Inget";
+
+/* Title of a settings section: which entry field to show along with entry title */
+"[Settings/GroupViewer] Entry Subtitle" = "Undertext för post";
+
+/* Title of a settings section: sort order of groups and entries in a list */
+"[Settings/GroupViewer] Sort Order" = "Sortering";
+
+/* Title of a yes/no setting */
+"[Settings/KeyFiles/Remember/title]" = "Kom ihåg nyckelfiler";
+
+/* Title of list view configuration screen */
+"[Settings/ListSettings/title]" = "Listinställningar";
+
+/* Notification when corporate user tries to use a feature forbidden by organization's IT department. */
+"[Settings/Managed/BlockedFeature/notification]" = "Den här funktionen blockeras av din organisation.";
+
+/* Notification when corporate user tries to change an app setting controlled by organization's IT department. */
+"[Settings/Managed/notification]" = "Den här inställningen hanteras av din organisation.";
+
+/* Setting: preserve (cache) calculated database keys */
+"[Settings/MasterKeys/CacheDerived/title]" = "Krypteringsnycklar härledda från cache";
+
+/* Title of a yes/no setting */
+"[Settings/MasterKeys/Remember/title]" = "Kom ihåg huvudnycklar";
+
+/* Confirmation dialog message */
+"[Settings/NetworkAccess/Confirmation/text]" = "Tillåt KeePassium att göra nätverskanslutningar till externa tjänster?";
+
+/* Settings section: how/whether the app is allowed to use networks/Internet */
+"[Settings/NetworkAccess/title]" = "Nätverksåtkomst";
+
+/* Description of the `Stay Offline` mode. */
+"[Settings/NetworkAccessMode/Offline/description]" = "Maximalt integritetsskydd";
+
+/* Setting option: the app should work offline */
+"[Settings/NetworkAccessMode/Offline/title]" = "Stanna offline";
+
+/* Description of the `Allow Network Access` mode. */
+"[Settings/NetworkAccessMode/Online/description]" = "Maximal funktionalitet";
+
+/* Setting option: the app is permitted to use online features */
+"[Settings/NetworkAccessMode/Online/title]" = "Tillåt nätverksåtkomst";
+
+/* Action/button which resets some settings to their default state. */
+"[Settings/RestoreDefaults/action]" = "Återställ standardinställningar";
+
+/* Call to action (explains why a setting is disabled) */
+"[Settings/ShakeGestureAction/LockApp/disabledTitle]" = "Aktivera först appskyddet";
+
+/* An option in Settings. Will be shown as 'When Shaken: Lock App' */
+"[Settings/ShakeGestureAction/LockApp/shortTitle]" = "Lås appen";
+
+/* An option in Settings. Will be shown as 'When Shaken: Lock All Databases' */
+"[Settings/ShakeGestureAction/LockDatabases/shortTitle]" = "Lås alla databaser";
+
+/* An option in Settings. Will be shown as 'When Shaken: Do Nothing' */
+"[Settings/ShakeGestureAction/Nothing/shortTitle]" = "Gör ingenting";
+
+/* An option in Settings. Will be shown as 'When Shaken: Quit App' */
+"[Settings/ShakeGestureAction/QuitApp/shortTitle]" = "Avsluta appen";
+
+/* Title of the app settings screen */
+"[Settings/title]" = "Inställningar";
+
+/* Title of a settings value. For example: `Remember Master Keys: No` */
+"[Settings/Value/No/title]" = "Nej";
+
+/* Title of a settings value, when it is not customized and we default to app's global settings. For example: `Remember Master Keys: Use App Settings (No)` */
+"[Settings/Value/UseAppSettings/title]" = "Använd appinställningarna (%@)";
+
+/* Title of a settings value. For example: `Remember Master Keys: Yes` */
+"[Settings/Value/Yes/title]" = "Ja";
+
+/* List sorting option (for file names). Example: 'Sort by: Name' */
+"[SortBy/FileName]" = "Namn";
+
+/* List sorting option, when no sorting is selected. Example: 'Sort by: None' */
+"[SortBy/None]" = "Inget";
+
+/* List sorting option, when items are manually ordered by the user. Example: 'Sort order: Custom' */
+"[SortOrder/Custom]" = "Anpassat";
+
+/* Subtitle for a storage service: the app will have access only to its own dedicated folder. */
+"[StorageService/DedicatedAppFolder/title]" = "Endast appmappen";
+
+/* Name of a cloud storage service */
+"[StorageService/DropboxBusiness/title]" = "Dropbox Business";
+
+/* Name of a cloud storage service */
+"[StorageService/DropboxPro/title]" = "Dropbox Pro";
+
+/* Name of a cloud storage service */
+"[StorageService/GoogleWorkspace/title]" = "Google Workspace";
+
+/* Name of a cloud storage service. Must match Microsoft's translation, see  https://partner.microsoft.com/solutions/onedrive-for-business */
+"[StorageService/OneDriveForBusiness/title]" = "OneDrive for Business";
+
+/* Title of a file storage service option (for example: Dropbox, OneDrive, Other Services) */
+"[StorageService/OtherServices/title]" = "Andra tjänster";
+
+/* Template text of a bug report email */
+"[Support/template] (Please describe the problem here)" = "(Vänligen beskriv problemet här)";
+
+/* Call to action in the Donations screen. */
+"[TipBox/callToAction/1]" = "Hjälp oss göra KeePassium bättre!";
+
+/* Call to action in the Donations screen. */
+"[TipBox/callToAction/2]" = "Hjälp oss hålla KeePassium skinande!";
+
+/* Call to action in the Donations screen. (free = gratis) */
+"[TipBox/callToAction/3]" = "Hjälp oss hålla KeePassium gratis!";
+
+/* Text in the Donations screen. */
+"[TipBox/description/1]" = "Gillar du KeePassium?";
+
+/* Text in the Donations screen. */
+"[TipBox/description/2]" = "KeePassium är en gratis app med öppen källkod. Du förlitar dig på den med din känsligaste information. Det finns ingen reklam, inget spionage, inget nonsens — vi respekterar dig.";
+
+/* Text in the Donations screen. */
+"[TipBox/description/3]" = "Gillar du KeePassium men behöver inte premiumfunktionerna?";
+
+/* Notification after a successful donation. */
+"[TipBox/thankYou]" = "Tack!";
+
+/* Title of the tip box/donation screen. */
+"[TipBox/title/2]" = "Bidrag";
+
+/* Call to action, title of the tip box/donation screen. */
+"[TipBox/title/3]" = "Stöd KeePassium";
+
+/* Name of an entry field. Acronym `TOTP` should not be translated. */
+"[TOTP/FieldName]" = "Engångslösenord (TOTP)";
+
+/* Human-readable file location. The file is situated either online / in cloud storage, or on the same device, but in some other app. Example: 'File Location: Cloud storage / Another app' */
+"[URLReference/Location] Cloud storage / Another app" = "Molnlagring / Annan app";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. 'Backup' is a dedicated directory for database backup files. Example: 'File Location: Internal backup' */
+"[URLReference/Location] Internal backup" = "Intern backup";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. 'Inbox' is a special directory for files that are being imported. Can be also 'Internal import'. Example: 'File Location: Internal inbox' */
+"[URLReference/Location] Internal inbox" = "Intern dokumentkatalog";
+
+/* Human-readable file location: the file is on device, inside the app sandbox. Example: 'File Location: Local copy' */
+"[URLReference/Location] Local copy" = "Lokal kopia";
+
+/* Human-readable file location. Example: 'File Location: Remote server' */
+"[URLReference/Location/RemoteServer]" = "Fjärrserver";
+
+/* Error shown when user selects a file path instead of folder path in WebDAV. */
+"[WebDAV/Export/NeedsFolder]" = "Välj sökväg till en mapp";
+
+/* Call for action: insert YubiKey 5Ci to the Lightning port */
+"[YubiKey] Insert the key" = "Sätt i nyckeln";
+
+/* Call for action: touch the sides of YubiKey 5Ci to continue */
+"[YubiKey] Touch the key" = "Tryck på nyckeln";
+
+/* Action/button to add database to the app */
+"Add Database" = "Lägg till databas";
+
+/* Warning message when the user tries to use a database as a key file */
+"KeePass database should not be used as key file. Please pick a different file." = "KeePass databaser ska inte användas som nyckelfiler. Var vänlig välj en annan fil.";
+

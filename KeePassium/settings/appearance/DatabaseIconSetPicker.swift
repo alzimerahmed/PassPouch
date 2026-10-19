@@ -1,0 +1,100 @@
+//  KeePassium Password Manager
+//  Copyright © 2018-2025 KeePassium Labs <info@keepassium.com>
+//
+//  This program is free software: you can redistribute it and/or modify it
+//  under the terms of the GNU General Public License version 3 as published
+//  by the Free Software Foundation: https://www.gnu.org/licenses/).
+//  For commercial licensing, please contact the author.
+
+import KeePassiumLib
+
+protocol DatabaseIconSetPickerDelegate: AnyObject {
+    func didSelect(iconSet: DatabaseIconSet, in picker: DatabaseIconSetPicker)
+}
+
+class DatabaseIconSetPicker: UITableViewController {
+    private let cellID = SubtitleCell.reuseIdentifier
+
+    weak var delegate: DatabaseIconSetPickerDelegate?
+    var selectedItem: DatabaseIconSet? {
+        didSet {
+            tableView?.reloadData()
+        }
+    }
+    private var demoIconID: IconID = .key
+
+    init() {
+        super.init(style: .insetGrouped)
+        tableView.register(
+            SubtitleCell.classForCoder(),
+            forCellReuseIdentifier: SubtitleCell.reuseIdentifier)
+        title = LString.appearanceDatabaseIconsTitle
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        randomizeDemoIcon()
+    }
+
+    private func randomizeDemoIcon() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
+            self?.demoIconID = IconID.all.randomElement() ?? .key
+            self?.tableView.reloadData()
+            self?.randomizeDemoIcon()
+        }
+    }
+
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard section == 0 else {
+            assertionFailure()
+            return 0
+        }
+        return DatabaseIconSet.allCases.count
+    }
+
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: cellID,
+            for: indexPath)
+
+        var content = UIListContentConfiguration.subtitleCell()
+        let iconSet = DatabaseIconSet.allCases[indexPath.row]
+        content.text = iconSet.title
+        content.image = iconSet.getIcon(demoIconID)
+        content.imageProperties.preferredSymbolConfiguration =
+            .init(pointSize: UIImage.kpIconMaxSize, weight: .light)
+        content.imageProperties.maximumSize =
+            CGSize(width: UIImage.kpIconMaxSize, height: UIImage.kpIconMaxSize)
+        content.imageProperties.reservedLayoutSize =
+            CGSize(width: UIImage.kpIconMaxSize, height: UIImage.kpIconMaxSize)
+        cell.contentConfiguration = content
+
+        let isCurrent = iconSet == selectedItem
+        cell.accessoryType = isCurrent ? .checkmark : .none
+        return cell
+    }
+
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let iconSet = DatabaseIconSet.allCases[indexPath.row]
+        Diag.debug("Selected an icon set [title: \(iconSet.title)]")
+        selectedItem = iconSet
+        delegate?.didSelect(iconSet: iconSet, in: self)
+    }
+
+    private func _received_wrong_icon_set_id() {
+        fatalError()
+    }
+}

@@ -1,0 +1,24 @@
+//  KeePassium Password Manager
+//  Copyright © 2018-2025 KeePassium Labs <info@keepassium.com>
+//
+//  This program is free software: you can redistribute it and/or modify it
+//  under the terms of the GNU General Public License version 3 as published
+//  by the Free Software Foundation: https://www.gnu.org/licenses/).
+//  For commercial licensing, please contact the author.
+
+import KeePassiumLib
+
+final class PremiumBadgeAccessory: UIImageView {
+    required init() {
+        super.init(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        image = UIImage.premiumBadge
+        contentMode = .scaleAspectFill
+        isAccessibilityElement = true
+        accessibilityLabel = LString.premiumFeatureGenericTitle
+        accessibilityTraits = [.staticText]
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("Not implemented")
+    }
+}
