@@ -13,9 +13,6 @@ final class MainSettingsVC: BaseSettingsViewController<MainSettingsVC.Section> {
     protocol Delegate: AnyObject {
         func didPressShowAppHistory(in viewController: MainSettingsVC)
 
-        func didPressUpgradeToPremium(in viewController: MainSettingsVC)
-        func didPressManageSubscription(in viewController: MainSettingsVC)
-
         func didToggleAutoOpenPreviousDatabase(_ isOn: Bool, in viewController: MainSettingsVC)
 
         func didPressAppearanceSettings(in viewController: MainSettingsVC)
@@ -28,12 +25,10 @@ final class MainSettingsVC: BaseSettingsViewController<MainSettingsVC.Section> {
 
         func didPressShowDiagnostics(in viewController: MainSettingsVC)
         func didPressContactSupport(in viewController: MainSettingsVC)
-        func didPressDonations(in viewController: MainSettingsVC)
         func didPressAboutApp(in viewController: MainSettingsVC)
     }
 
     weak var delegate: Delegate?
-    var premiumState: SettingsPremiumState = .free(description: nil)
     var isAppProtectionVisible = true
     var isAutoOpenPreviousDatabase = false
     var biometryType: LABiometryType?
@@ -51,7 +46,6 @@ final class MainSettingsVC: BaseSettingsViewController<MainSettingsVC.Section> {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, SettingsItem>
     enum Section: SettingsSection {
         case appHistory
-        case premium(footer: String?)
         case start
         case various
         case accessControl
@@ -61,8 +55,6 @@ final class MainSettingsVC: BaseSettingsViewController<MainSettingsVC.Section> {
 
         var header: String? {
             switch self {
-            case .premium:
-                return LString.settingsPremiumSectionTitle
             case .start:
                 return LString.settingsStartSectionTitle
             case .accessControl:
@@ -79,12 +71,7 @@ final class MainSettingsVC: BaseSettingsViewController<MainSettingsVC.Section> {
         }
 
         var footer: String? {
-            switch self {
-            case .premium(let footer):
-                return footer
-            default:
-                return nil
-            }
+            return nil
         }
     }
 
@@ -102,8 +89,6 @@ final class MainSettingsVC: BaseSettingsViewController<MainSettingsVC.Section> {
                 }
             )),
         ])
-
-        configurePremiumSection(premiumState, snapshot: &snapshot)
 
         snapshot.appendSections([.start])
         snapshot.appendItems([
@@ -211,19 +196,6 @@ final class MainSettingsVC: BaseSettingsViewController<MainSettingsVC.Section> {
                 }
             ))
         ])
-        if BusinessModel.type == .freemium && !LicenseManager.shared.hasAcceptableBusinessLicense {
-            snapshot.appendItems([
-                .basic(.init(
-                    title: LString.tipBoxTitle2,
-                    subtitle: LString.tipBoxTitle3,
-                    image: .symbol(.heart, tint: .red),
-                    fixedAccessories: [.disclosureIndicator()],
-                    handler: { [unowned self] in
-                        delegate?.didPressDonations(in: self)
-                    }
-                ))
-            ])
-        }
         snapshot.appendItems([
             .basic(.init(
                 title: LString.titleDiagnosticLog,
@@ -253,63 +225,6 @@ final class MainSettingsVC: BaseSettingsViewController<MainSettingsVC.Section> {
                 biometryTypeName)
         } else {
             return LString.appLockWithPasscodeSubtitle
-        }
-    }
-
-    private func configurePremiumSection(_ premiumState: SettingsPremiumState, snapshot: inout Snapshot) {
-        switch premiumState {
-        case .prepaid:
-            return
-        case .free(let description):
-            snapshot.appendSections([.premium(footer: description)])
-            snapshot.appendItems([
-                .basic(.init(
-                    title: LString.actionUpgradeToPremium,
-                    image: .premiumBadge,
-                    fixedAccessories: [.disclosureIndicator()],
-                    handler: { [unowned self] in
-                        delegate?.didPressUpgradeToPremium(in: self)
-                    }
-                )),
-            ])
-        case .fallback(let description):
-            snapshot.appendSections([.premium(footer: nil)])
-            snapshot.appendItems([
-                .basic(.init(
-                    title: LString.premiumVersion,
-                    subtitle: description,
-                    image: .symbol(.checkmarkSeal),
-                    fixedAccessories: [.disclosureIndicator()],
-                    handler: { [unowned self] in
-                        delegate?.didPressUpgradeToPremium(in: self)
-                    }
-                )),
-            ])
-        case let .active(description, isSubscription):
-            snapshot.appendSections([.premium(footer: nil)])
-            snapshot.appendItems([
-                .basic(.init(
-                    title: LString.premiumVersion,
-                    subtitle: description,
-                    image: .symbol(.checkmarkSeal),
-                    fixedAccessories: [.disclosureIndicator()],
-                    handler: { [unowned self] in
-                        delegate?.didPressUpgradeToPremium(in: self)
-                    }
-                )),
-            ])
-            if isSubscription {
-                snapshot.appendItems([
-                    .basic(.init(
-                        title: LString.actionManageSubscriptions,
-                        image: .symbol(.gearshape),
-                        fixedAccessories: [.disclosureIndicator()],
-                        handler: { [unowned self] in
-                            delegate?.didPressManageSubscription(in: self)
-                        }
-                    )),
-                ])
-            }
         }
     }
 }

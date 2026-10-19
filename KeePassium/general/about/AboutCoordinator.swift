@@ -29,10 +29,6 @@ extension AboutCoordinator: AboutDelegate {
         SupportEmailComposer.show(subject: .supportRequest, parent: viewController, popoverAnchor: popoverAnchor)
     }
 
-    func didPressWriteReview(at popoverAnchor: PopoverAnchor, in viewController: AboutVC) {
-        AppStoreHelper.writeReview()
-    }
-
     func didPressOpenURL(_ url: URL, at popoverAnchor: PopoverAnchor, in viewController: AboutVC) {
         AppGroup.applicationShared?.open(url, options: [:], completionHandler: nil)
     }

@@ -11,14 +11,12 @@ import UIKit
 
 protocol AboutDelegate: AnyObject {
     func didPressContactSupport(at popoverAnchor: PopoverAnchor, in viewController: AboutVC)
-    func didPressWriteReview(at popoverAnchor: PopoverAnchor, in viewController: AboutVC)
     func didPressOpenURL(_ url: URL, at popoverAnchor: PopoverAnchor, in viewController: AboutVC)
 }
 
 final class AboutVC: UITableViewController {
     @IBOutlet private weak var appTitleLabel: UILabel!
     @IBOutlet private weak var contactSupportCell: UITableViewCell!
-    @IBOutlet private weak var writeReviewCell: UITableViewCell!
     @IBOutlet private weak var versionLabel: UILabel!
     @IBOutlet private weak var copyrightLabel: UILabel!
     @IBOutlet private weak var acceptInputFromAutoFillCell: UITableViewCell!
@@ -103,8 +101,6 @@ final class AboutVC: UITableViewController {
         switch selectedCell {
         case contactSupportCell:
             delegate?.didPressContactSupport(at: popoverAnchor, in: self)
-        case writeReviewCell:
-            delegate?.didPressWriteReview(at: popoverAnchor, in: self)
         case privacyPolicyCell:
             delegate?.didPressOpenURL(URL.AppHelp.currentPrivacyPolicy, at: popoverAnchor, in: self)
         case acceptInputFromAutoFillCell:

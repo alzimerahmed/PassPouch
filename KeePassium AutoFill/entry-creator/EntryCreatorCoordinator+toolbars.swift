@@ -26,26 +26,14 @@ extension EntryCreatorCoordinator {
 
         func getRightBarButtonItems() -> [UIBarButtonItem]? {
             guard let coordinator else { return nil }
-            var buttons = [UIBarButtonItem]()
-            if PremiumManager.shared.isAvailable(feature: .canCreateEntriesInAutoFill) {
-                let doneButton = UIBarButtonItem(systemItem: .done, primaryAction: UIAction {
-                    [weak coordinator] _ in
-                    coordinator?.didPressDone()
-                })
-                doneButton.isEnabled = coordinator._isEntryDataEnough
-                buttons.append(doneButton)
-            } else {
-                let premiumButton = UIBarButtonItem(
-                    title: LString.actionUpgradeToPremium,
-                    image: .premiumBadge,
-                    primaryAction: UIAction { [weak coordinator] _ in
-                        coordinator?.didPressDone()
-                    }
-                )
-                premiumButton.style = .done
-                buttons.append(premiumButton)
-            }
-            return buttons
+            // PassPouch: entry creation in AutoFill is free for everyone.
+            assert(PremiumManager.shared.isAvailable(feature: .canCreateEntriesInAutoFill))
+            let doneButton = UIBarButtonItem(systemItem: .done, primaryAction: UIAction {
+                [weak coordinator] _ in
+                coordinator?.didPressDone()
+            })
+            doneButton.isEnabled = coordinator._isEntryDataEnough
+            return [doneButton]
         }
     }
 }

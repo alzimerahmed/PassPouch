@@ -122,15 +122,6 @@ extension MainCoordinator {
         dbUnlocker.setDatabase(databaseRef, andThen: activation)
     }
 
-    internal func _showDonationScreen(in viewController: UIViewController) {
-        let modalRouter = NavigationRouter.createModal(style: .formSheet)
-        let tipBoxCoordinator = TipBoxCoordinator(router: modalRouter)
-        tipBoxCoordinator.start()
-        addChildCoordinator(tipBoxCoordinator, onDismiss: nil)
-
-        viewController.present(modalRouter, animated: true, completion: nil)
-    }
-
     internal func _showAboutScreen(
         at popoverAnchor: PopoverAnchor?,
         in viewController: UIViewController

@@ -26,12 +26,6 @@ extension DatabaseViewerCoordinator {
         _presenterForModals.present(modalRouter, animated: true, completion: nil)
     }
 
-    internal func _showTipBox() {
-        let modalRouter = NavigationRouter.createModal(style: .formSheet)
-        let tipBoxCoordinator = TipBoxCoordinator(router: modalRouter)
-        tipBoxCoordinator.start()
-        addChildCoordinator(tipBoxCoordinator, onDismiss: nil)
-        _presenterForModals.present(modalRouter, animated: true, completion: nil)
     }
 }
 

@@ -45,16 +45,6 @@ final class EntryCreatorCoordinator: BaseCoordinator {
         _makeInitialEntryData()
         _pushInitialViewController(_entryCreatorVC, to: _router, animated: true)
         refresh()
-
-        debugLogMissingPremium()
-    }
-
-    private func debugLogMissingPremium() {
-        if PremiumManager.shared.isAvailable(feature: .canCreateEntriesInAutoFill) {
-            return
-        }
-        let premiumHistory = String(describing: PremiumManager.shared.getPurchaseHistory())
-        Diag.info(premiumHistory)
     }
 
     override func refresh() {
@@ -94,32 +84,8 @@ extension EntryCreatorCoordinator {
     }
 
     func _updateAnnouncements() {
-        var announcements = [AnnouncementItem]()
-        if let premiumAnnouncement = maybeMakePremiumUpgradeAnnouncement(for: _entryCreatorVC) {
-            announcements.append(premiumAnnouncement)
-        }
-        _entryCreatorVC.setAnnouncements(announcements)
-    }
-
-    private func maybeMakePremiumUpgradeAnnouncement(
-        for viewController: UIViewController
-    ) -> AnnouncementItem? {
-        if PremiumManager.shared.isAvailable(feature: .canCreateEntriesInAutoFill) {
-            return nil
-        }
-        return AnnouncementItem(
-            title: PremiumFeature.canCreateEntriesInAutoFill.titleName,
-            body: PremiumFeature.canCreateEntriesInAutoFill.upgradeNoticeText,
-            image: .symbol(.premiumBenefitCreativeAutoFill),
-            action: UIAction(
-                title: LString.actionUpgradeToPremium,
-                handler: { [weak self, weak _entryCreatorVC] _ in
-                    guard let self, let _entryCreatorVC else { return }
-                    showPremiumUpgrade(in: _entryCreatorVC)
-                }
-            ),
-            onDidPressClose: nil
-        )
+        // PassPouch: all features are free; no premium upgrade announcements.
+        _entryCreatorVC.setAnnouncements([])
     }
 
     func _finishCreation() {

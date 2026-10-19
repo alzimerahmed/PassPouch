@@ -234,10 +234,8 @@ extension RemoteFileExportCoordinator: ConnectionTypePickerDelegate {
         connectionType: RemoteConnectionType,
         in viewController: ConnectionTypePickerVC
     ) -> Bool {
-        if connectionType.isPremiumUpgradeRequired {
-            offerPremiumUpgrade(for: .canUseBusinessClouds, in: viewController)
-            return false
-        }
+        // PassPouch: all features are free, no premium gating.
+        assert(!connectionType.isPremiumUpgradeRequired)
         return true
     }
 

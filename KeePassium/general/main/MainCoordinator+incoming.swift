@@ -79,14 +79,8 @@ extension MainCoordinator {
 
     private func processDeepLink(_ url: URL) {
         assert(url.scheme == AppGroup.appURLScheme)
-        switch url {
-        case AppGroup.upgradeToPremiumURL:
-            showPremiumUpgrade(in: _rootSplitVC)
-        case AppGroup.donateURL:
-            _showDonationScreen(in: _rootSplitVC)
-        default:
-            Diag.warning("Unrecognized URL, ignoring [url: \(url.absoluteString)]")
-        }
+        // PassPouch: no premium/donation deep links; nothing to process.
+        Diag.warning("Unrecognized URL, ignoring [url: \(url.absoluteString)]")
     }
 
     internal func _setIncomingOTPAuthURL(_ url: URL?) {

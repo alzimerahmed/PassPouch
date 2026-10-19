@@ -57,10 +57,6 @@ extension DatabaseViewerCoordinator {
             announcements.append(.macMultiSelectHint())
         }
 
-        if announcements.isEmpty,
-           let donationAnnouncement = maybeMakeDonationAnnouncement(for: _topGroupViewer) {
-            announcements.append(donationAnnouncement)
-        }
         _announcementCount = announcements.count
         _topGroupViewer.setAnnouncements(announcements)
     }
@@ -211,32 +207,5 @@ extension DatabaseViewerCoordinator {
                 delegate?.didCompleteOTPAuthURLImport(in: self)
             }
         )
-    }
-
-    private func maybeMakeDonationAnnouncement(
-        for viewController: GroupViewerVC
-    ) -> AnnouncementItem? {
-        let premiumStatus = PremiumManager.shared.status
-        guard TipBox.shouldSuggestDonation(status: premiumStatus) else {
-            return nil
-        }
-
-        let announcement = AnnouncementItem(
-            title: nil,
-            body: LString.tipBoxDescription2,
-            image: .symbol(.heart)?.withTintColor(.systemRed, renderingMode: .alwaysOriginal),
-            action: UIAction(
-                title: LString.tipBoxCallToAction2,
-                handler: { [weak self] _ in
-                    self?._showTipBox()
-                    self?._updateAnnouncements()
-                }
-            ),
-            onDidPressClose: { [weak self] _ in
-                TipBox.registerTipBoxSeen()
-                self?._updateAnnouncements()
-            }
-        )
-        return announcement
     }
 }

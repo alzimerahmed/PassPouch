@@ -127,14 +127,11 @@ final class HardwareKeyPickerCoordinator: BaseCoordinator {
     }
 
     private func maybeSelectKey(_ hardwareKey: HardwareKey?) {
-        if PremiumManager.shared.isAvailable(feature: .canUseHardwareKeys) || hardwareKey == nil {
-            setSelectedKey(hardwareKey)
-            delegate?.didSelectKey(hardwareKey, in: self)
-            dismiss()
-        } else {
-            setSelectedKey(nil) // reset visual selection to "No key"
-            offerPremiumUpgrade(for: .canUseHardwareKeys, in: hardwareKeyPickerVC)
-        }
+        // PassPouch: hardware keys are free for everyone.
+        assert(PremiumManager.shared.isAvailable(feature: .canUseHardwareKeys))
+        setSelectedKey(hardwareKey)
+        delegate?.didSelectKey(hardwareKey, in: self)
+        dismiss()
     }
 }
 

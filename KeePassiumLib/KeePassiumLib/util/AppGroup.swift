@@ -25,15 +25,11 @@ public class AppGroup {
         case .freemium:
             return "passpouch"
         case .prepaid:
-            return "keepassium.pro" // Phase 4 (monetization neutralization) owns this scheme
+            return "passpouch.pro"
         }
     }()
 
     public static let launchMainAppURL = URL(string: appURLScheme + "://")!
-
-    public static let upgradeToPremiumURL = URL(string: appURLScheme + "://upgradeToPremium")!
-
-    public static let donateURL = URL(string: appURLScheme + "://donate")! 
 
     public static var isMainApp: Bool {
         return applicationShared != nil

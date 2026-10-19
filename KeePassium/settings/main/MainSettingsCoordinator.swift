@@ -12,8 +12,6 @@ import LocalAuthentication.LAContext
 final class MainSettingsCoordinator: BaseCoordinator {
     private let mainSettingsVC: MainSettingsVC
 
-    internal var _fallbackReleaseInfo: String?
-
     override init(router: NavigationRouter) {
         mainSettingsVC = MainSettingsVC()
         super.init(router: router)
@@ -34,7 +32,6 @@ final class MainSettingsCoordinator: BaseCoordinator {
 
     private func applySettingsToVC() {
         let settings = Settings.current
-        mainSettingsVC.premiumState = _getPremiumState()
         mainSettingsVC.isAppProtectionVisible = ManagedAppConfig.shared.isAppProtectionAllowed
         mainSettingsVC.isAutoOpenPreviousDatabase = settings.isAutoUnlockStartupDatabase
         mainSettingsVC.biometryType = LAContext.getBiometryType()
@@ -47,14 +44,6 @@ extension MainSettingsCoordinator: MainSettingsVC.Delegate {
         let coordinator = AppHistoryCoordinator(router: _router)
         coordinator.start()
         addChildCoordinator(coordinator, onDismiss: nil)
-    }
-
-    func didPressUpgradeToPremium(in viewController: MainSettingsVC) {
-        showPremiumUpgrade(in: viewController)
-    }
-
-    func didPressManageSubscription(in viewController: MainSettingsVC) {
-        AppStoreHelper.openSubscriptionManagement()
     }
 
     func didToggleAutoOpenPreviousDatabase(_ isOn: Bool, in viewController: MainSettingsVC) {
@@ -124,12 +113,6 @@ extension MainSettingsCoordinator: MainSettingsVC.Delegate {
             parent: viewController,
             popoverAnchor: popoverAnchor
         )
-    }
-
-    func didPressDonations(in viewController: MainSettingsVC) {
-        let coordinator = TipBoxCoordinator(router: _router)
-        coordinator.start()
-        addChildCoordinator(coordinator, onDismiss: nil)
     }
 
     func didPressAboutApp(in viewController: MainSettingsVC) {
