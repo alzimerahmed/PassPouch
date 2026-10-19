@@ -26,6 +26,10 @@ public final class WebDAVManager: NSObject {
 
     private var webdavRequests = [RequestIdentifier: WebDAVRequest]()
 
+    /// Last ETag observed for a given (naked) URL, used to make the next
+    /// upload conditional (`If-Match`). Phase 11b conflict hardening.
+    private var observedETags = [URL: String]()
+
     private let urlSessionConfiguration: URLSessionConfiguration = {
         var config = URLSessionConfiguration.forRemoteDataSource
 
@@ -106,6 +110,7 @@ public final class WebDAVManager: NSObject {
             credential: credential.toURLCredential(),
             allowUntrustedCertificate: credential.allowUntrustedCertificate,
             data: data,
+            ifMatch: observedETags[url],
             timeout: timeout,
             completionQueue: completionQueue ?? .main,
             completion: completion
@@ -317,6 +322,29 @@ extension WebDAVManager: URLSessionDataDelegate, URLSessionTaskDelegate {
             Diag.error("Unexpected response type")
             preconditionFailure()
         }
+        updateObservedETag(for: webdavRequest, response: httpResponse)
         webdavRequest.handleResponse(httpResponse)
+    }
+
+    /// Records the ETag returned by a successful GET/HEAD (for future
+    /// `If-Match` uploads) and refreshes it after a successful PUT.
+    /// A 412 (precondition failed) invalidates the cached ETag.
+    private func updateObservedETag(
+        for webdavRequest: WebDAVRequest,
+        response: HTTPURLResponse
+    ) {
+        // caller (didCompleteWithError) already holds the self lock
+        let isContentRequest: Bool =
+            webdavRequest is WebDAVDownloadRequest
+            || webdavRequest is WebDAVInfoRequest
+            || webdavRequest is WebDAVUploadRequest
+        guard isContentRequest else { return }
+
+        let eTag = response.value(forHTTPHeaderField: "ETag")
+        if WebDAVETagPrecondition.isConflict(statusCode: response.statusCode) {
+            observedETags.removeValue(forKey: webdavRequest.url)
+        } else if (200...299).contains(response.statusCode), let eTag {
+            observedETags[webdavRequest.url] = eTag
+        }
     }
 }
