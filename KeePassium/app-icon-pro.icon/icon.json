@@ -8,7 +8,7 @@
       "layers" : [
         {
           "glass" : false,
-          "image-name" : "keepassium.svg",
+          "image-name" : "passpouch.svg",
           "name" : "symbol",
           "position" : {
             "scale" : 0.9,
