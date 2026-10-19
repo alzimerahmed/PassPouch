@@ -10,7 +10,7 @@ permissions:
 jobs:
   swiftlint:
     name: SwiftLint
-    runs-on: macos-15
+    runs-on: macos-26
     timeout-minutes: 15
     steps:
       - name: Checkout
@@ -24,7 +24,7 @@ jobs:
 
   build-and-test:
     name: Build & Unit Tests
-    runs-on: macos-15
+    runs-on: macos-26
     timeout-minutes: 45
     steps:
       - name: Checkout
@@ -48,7 +48,7 @@ jobs:
           xcodebuild
           -workspace KeePassium.xcworkspace
           -scheme KeePassium
-          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
+          -destination 'platform=iOS Simulator,name=iPhone 17,OS=latest'
           -configuration Debug
           -only-testing:KeePassiumTests
           CODE_SIGNING_ALLOWED=NO
@@ -60,7 +60,7 @@ jobs:
           xcodebuild
           -workspace KeePassium.xcworkspace
           -scheme KeePassiumLib
-          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
+          -destination 'platform=iOS Simulator,name=iPhone 17,OS=latest'
           -configuration Debug
           CODE_SIGNING_ALLOWED=NO
           build
