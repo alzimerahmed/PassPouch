@@ -14,7 +14,7 @@ extension DatabaseIconSet {
         let assetPath: String
         switch self {
         case .keepassium:
-            assetPath = "db-icons/keepassium"
+            assetPath = "db-icons/passpouch"
         case .keepass:
             assetPath = "db-icons/keepass"
         case .keepassxc:
