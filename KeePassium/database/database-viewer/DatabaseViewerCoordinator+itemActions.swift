@@ -298,7 +298,11 @@ extension DatabaseViewerCoordinator.ItemDecorator {
                 image: .symbol(.networkBadgeShield)
             ) {
                 [weak coordinator, weak entry, popoverAnchor = context.popoverAnchor] _ in
-                guard let coordinator, let entry else { assertionFailure(); return }
+                guard let coordinator, let entry else {
+                    Diag.error("Breach check action lost its coordinator or entry")
+                    assertionFailure()
+                    return
+                }
                 coordinator._checkEntryForBreach(entry, at: popoverAnchor)
             })
         }

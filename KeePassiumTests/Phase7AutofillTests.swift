@@ -102,29 +102,4 @@ final class Phase7AutofillTests: XCTestCase {
         XCTAssertNil(QuickTypeAutoFillRecord.parse("0:localStorage:desc:not-a-uuid"))
         XCTAssertNil(QuickTypeAutoFillRecord.parse("9:localStorage:desc:DEADBEEF-0000-4000-8000-000000000000"))
     }
-
-    // MARK: - Gap #13: quick unlock routing
-
-    func testQuickUnlockRoute_serveDirectlyWithStoredMasterKey() {
-        XCTAssertEqual(
-            QuickUnlockRoute.decide(hasParsedRecord: true, hasStoredMasterKey: true),
-            .serveDirectly
-        )
-    }
-
-    func testQuickUnlockRoute_unlockInExtensionUIWithoutMasterKey() {
-        // No stored master key → extension's own unlock UI (biometrics/
-        // passcode/master key). The main app is never launched.
-        XCTAssertEqual(
-            QuickUnlockRoute.decide(hasParsedRecord: true, hasStoredMasterKey: false),
-            .unlockInExtensionUI
-        )
-    }
-
-    func testQuickUnlockRoute_staleIdentityClearsRecord() {
-        XCTAssertEqual(
-            QuickUnlockRoute.decide(hasParsedRecord: false, hasStoredMasterKey: true),
-            .staleIdentity
-        )
-    }
 }

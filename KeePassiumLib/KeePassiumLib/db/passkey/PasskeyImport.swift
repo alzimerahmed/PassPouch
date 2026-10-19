@@ -108,24 +108,77 @@ public extension Passkey {
     /// Extracts the 32-byte P-256 private scalar from a DER PKCS#8 structure.
     ///
     /// PKCS#8 for secp256r1 looks like:
-    /// `30 .. 02 01 01 04 20 <32-byte scalar> a0 .. 06 08 2A 86 48 CE 3D 03 01 07`
-    /// We locate the `02 01 01 04 20` sequence and take the following 32 bytes;
-    /// the curve OID is then verified when the key is constructed by CryptoKit.
+    /// `30 .. 02 01 01 04 20 <32-byte scalar> a1 .. 03 42 04 <65-byte point>`
+    /// The scan is restricted to the region after the P-256 curve OID (the
+    /// algorithm identifier must be present in a real PKCS#8 blob), and the
+    /// extracted scalar is verified against the embedded public key when one
+    /// is present — a naive byte-scan alone could match garbage and silently
+    /// import a wrong-but-valid key.
     private static func extractP256Scalar(fromPKCS8DER der: Data) -> Data? {
+        // OID for secp256r1 / prime256v1 inside the PKCS#8 algorithm identifier.
+        let p256OID: [UInt8] = [0x06, 0x08, 0x2A, 0x86, 0x48, 0xCE, 0x3D, 0x03, 0x01, 0x07]
         let marker: [UInt8] = [0x02, 0x01, 0x01, 0x04, 0x20]
         let bytes = [UInt8](der)
-        guard bytes.count > marker.count + 32 else { return nil }
 
-        var index = 0
-        while index <= bytes.count - (marker.count + 32) {
-            guard bytes[index] == marker[0] else { index += 1; continue }
-            let window = Array(bytes[index..<(index + marker.count)])
-            guard window == marker else { index += 1; continue }
-            let scalar = Data(bytes[(index + marker.count)..<(index + marker.count + 32)])
-            // A valid EC scalar is non-zero (and < curve order; CryptoKit
-            // validates that when constructing the key).
-            guard scalar.contains(where: { $0 != 0 }) else { return nil }
-            return scalar
+        guard let oidRange = firstOccurrence(of: p256OID, in: bytes) else {
+            Diag.error("PKCS#8 blob does not contain the P-256 curve OID")
+            return nil
+        }
+        // The version+key marker must follow the algorithm identifier.
+        let searchStart = oidRange.upperBound
+        guard searchStart + marker.count + 32 <= bytes.count,
+              Array(bytes[searchStart..<(searchStart + marker.count)]) == marker
+        else {
+            Diag.error("PKCS#8 blob does not contain the expected EC private key marker")
+            return nil
+        }
+        let scalarStart = searchStart + marker.count
+        let scalar = Data(bytes[scalarStart..<(scalarStart + 32)])
+        // A valid EC scalar is non-zero (and < curve order; CryptoKit
+        // validates that when constructing the key).
+        guard scalar.contains(where: { $0 != 0 }) else { return nil }
+
+        do {
+            let privateKey = try P256.Signing.PrivateKey(dataRepresentation: scalar)
+            // If the optional [1] public key BIT STRING is present
+            // (03 42 04 <65-byte uncompressed point>), verify it matches.
+            if let publicKeyPoint = embeddedUncompressedPublicKey(in: bytes, after: scalarStart + 32) {
+                let derived = privateKey.publicKey.rawRepresentation
+                guard derived == publicKeyPoint else {
+                    Diag.error("Extracted private scalar does not match the embedded public key")
+                    return nil
+                }
+            }
+        } catch {
+            Diag.error("Extracted scalar is not a valid P-256 private key: \(error)")
+            return nil
+        }
+        return scalar
+    }
+
+    /// Finds the first occurrence of `pattern` in `bytes`, if any.
+    private static func firstOccurrence(of pattern: [UInt8], in bytes: [UInt8]) -> Range<Int>? {
+        guard pattern.count <= bytes.count else { return nil }
+        for start in 0...(bytes.count - pattern.count) {
+            if Array(bytes[start..<(start + pattern.count)]) == pattern {
+                return start..<(start + pattern.count)
+            }
+        }
+        return nil
+    }
+
+    /// Extracts a 65-byte uncompressed P-256 public point following a
+    /// `03 42 04` BIT STRING header, if present after `afterIndex`.
+    private static func embeddedUncompressedPublicKey(
+        in bytes: [UInt8],
+        after afterIndex: Int
+    ) -> Data? {
+        let header: [UInt8] = [0x03, 0x42, 0x04]
+        guard afterIndex + header.count + 65 <= bytes.count else { return nil }
+        for start in afterIndex...(bytes.count - header.count - 65) {
+            if Array(bytes[start..<(start + header.count)]) == header {
+                return Data(bytes[(start + header.count)..<(start + header.count + 65)])
+            }
         }
         return nil
     }

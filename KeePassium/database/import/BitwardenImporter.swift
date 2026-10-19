@@ -324,7 +324,7 @@ public class BitwardenImporter {
             Diag.warning("Passkey import requires a KDBX 4 database; skipping passkeys")
             return
         }
-        for fido2 in fido2Credentials {
+        for (fido2Index, fido2) in fido2Credentials.enumerated() {
             guard
                 let credentialID = fido2.credentialId, !credentialID.isEmpty,
                 let keyValue = fido2.keyValue, !keyValue.isEmpty,
@@ -346,6 +346,11 @@ public class BitwardenImporter {
                 continue
             }
 
+            if fido2Index > 0 {
+                // KPEX field names are single-valued; later credentials would
+                // silently overwrite earlier ones.
+                Diag.warning("Bitwarden item has multiple passkeys; only the last one is kept")
+            }
             entry2.setField(name: EntryField.passkeyCredentialID, value: credentialID, isProtected: true)
             entry2.setField(name: EntryField.passkeyPrivateKeyPEM, value: passkey.privateKeyPEM, isProtected: true)
             entry2.setField(name: EntryField.passkeyRelyingParty, value: relyingParty, isProtected: false)

@@ -7,7 +7,8 @@
 
 import CryptoKit
 import Foundation
-import KeePassiumLib
+@testable import KeePassium
+@testable import KeePassiumLib
 import XCTest
 
 /// Phase 8 (Security & Trust) pure-logic tests: HIBP k-anonymity helpers,
@@ -201,7 +202,12 @@ final class Phase8SecurityTests: XCTestCase {
 
     /// Builds a valid PKCS#8 (PrivateKeyInfo) DER for an EC P-256 key with the
     /// given scalar, mirroring the structure Bitwarden exports in `keyValue`.
-    private func makePKCS8DER(scalar: Data, publicKey: Data) -> Data {
+    /// The embedded public key is derived from the scalar (real Bitwarden
+    /// exports are self-consistent).
+    private func makePKCS8DER(scalar: Data) throws -> Data {
+        let privateKey = try P256.Signing.PrivateKey(dataRepresentation: scalar)
+        let publicKey = privateKey.publicKey.rawRepresentation // 0x04 || X || Y
+
         var der = Data()
         der.append(contentsOf: [0x02, 0x01, 0x01]) // INTEGER 1 (version)
         der.append(contentsOf: [0x30, 0x13]) // AlgorithmIdentifier SEQUENCE
@@ -213,8 +219,8 @@ final class Phase8SecurityTests: XCTestCase {
         der.append(contentsOf: [0x04, 0x20]) // OCTET STRING (32)
         der.append(scalar)
         der.append(contentsOf: [0xA1, 0x44]) // [1] explicit (68 bytes)
-        der.append(contentsOf: [0x03, 0x42, 0x00]) // BIT STRING (66, 0 unused bits)
-        der.append(publicKey) // 64 bytes: 0x04 || X || Y
+        der.append(contentsOf: [0x03, 0x42, 0x04]) // BIT STRING (66, 0 unused bits)
+        der.append(publicKey) // 65 bytes: 0x04 || X || Y
         // outer SEQUENCE header
         var result = Data([0x30, UInt8(der.count)])
         result.append(der)
@@ -223,8 +229,7 @@ final class Phase8SecurityTests: XCTestCase {
 
     func testBitwardenFIDO2CredentialToPasskey() throws {
         let scalar = Data((1...32).map { UInt8($0) })
-        let publicKey = Data(repeating: 0xAB, count: 64)
-        let der = makePKCS8DER(scalar: scalar, publicKey: publicKey)
+        let der = try makePKCS8DER(scalar: scalar)
 
         let credentialID = Data((0..<16).map { UInt8($0) })
         let userHandle = Data([0x01, 0x02, 0x03])
@@ -264,9 +269,26 @@ final class Phase8SecurityTests: XCTestCase {
             userHandleBase64URL: "AAAA"))
     }
 
+    func testBitwardenFIDO2CredentialRejectsKeyMismatch() throws {
+        // A DER whose embedded public key does not match the private scalar
+        // must be rejected — a naive byte-scan would silently import a
+        // wrong-but-valid key.
+        let scalar = Data((1...32).map { UInt8($0) })
+        var der = try makePKCS8DER(scalar: scalar)
+        // Flip one byte inside the embedded public key (last byte of the DER).
+        der[der.count - 1] ^= 0xFF
+
+        XCTAssertNil(Passkey.make(
+            fromBitwardenFIDO2Credential: "AAAA",
+            privateKeyBase64URL: der.base64URLEncodedString(),
+            relyingParty: "example.com",
+            username: "bob@example.com",
+            userHandleBase64URL: "AAAA"))
+    }
+
     func testBitwardenImporterImportsPasskeys() throws {
         let scalar = Data((1...32).map { UInt8($0) })
-        let der = makePKCS8DER(scalar: scalar, publicKey: Data(repeating: 0xAB, count: 64))
+        let der = try makePKCS8DER(scalar: scalar)
         let credentialID = Data((0..<16).map { UInt8($0) })
         let userHandle = Data([0x01, 0x02, 0x03])
 

@@ -78,7 +78,7 @@ Your actual passwords are never shared with the online service.
 
     static let breachCheckCompromisedTemplate = NSLocalizedString(
         "[PasswordAudit/SingleCheck/Compromised/template]",
-        value: "This password has appeared in known data leaks %@ times. You should change it.",
+        value: "This password has appeared in known data leaks %ld times. You should change it.",
         comment: "Result of a single-password breach check [count: Int].")
 
     static let breachCheckPrivacyNotice = NSLocalizedString(
