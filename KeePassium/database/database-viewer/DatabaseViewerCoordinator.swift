@@ -126,6 +126,14 @@ final class DatabaseViewerCoordinator: BaseCoordinator {
         // unlocked so it can refresh its opt-in entry snapshot.
         WatchConnectivityService.shared.databaseDidUnlock(_databaseFile)
 
+        // Phase 11d (ADR-017): let the Catalyst quick-access window see the
+        // newly unlocked database.
+        #if targetEnvironment(macCatalyst)
+        NotificationCenter.default.post(
+            name: QuickAccessNotifications.databaseDidUnlock,
+            object: _databaseFile)
+        #endif
+
         _pushInitialGroupViewers(replacingTopVC: _splitViewController.isCollapsed)
         if _splitViewController.isExpanded {
             _splitViewController.show(.primary)
@@ -216,6 +224,14 @@ final class DatabaseViewerCoordinator: BaseCoordinator {
         // Phase 11a (ADR-013): the database is leaving the unlocked state —
         // tell the watch companion to wipe its snapshot.
         WatchConnectivityService.shared.databaseDidLock()
+
+        // Phase 11d (ADR-017): the quick-access window must drop its list
+        // and hide when the database locks.
+        #if targetEnvironment(macCatalyst)
+        NotificationCenter.default.post(
+            name: QuickAccessNotifications.databaseDidLock,
+            object: nil)
+        #endif
         stop(animated: animated, completion: completion)
     }
 
