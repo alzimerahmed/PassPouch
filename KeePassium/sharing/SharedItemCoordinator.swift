@@ -191,15 +191,17 @@ struct SharedItemFieldRow: View {
 /// lives only in memory of this screen; nothing is persisted.
 final class SharedItemCoordinator: BaseCoordinator {
     private let payload: SharePayload
-    private let hostingController: UIHostingController<SharedItemView>
-
-    init(payload: SharePayload, router: NavigationRouter) {
-        self.payload = payload
+    private lazy var hostingController: UIHostingController<SharedItemView> = {
         let view = SharedItemView(payload: payload) { [weak self] in
             self?.dismiss()
         }
-        hostingController = UIHostingController(rootView: view)
-        hostingController.view.backgroundColor = .systemBackground
+        let controller = UIHostingController(rootView: view)
+        controller.view.backgroundColor = .systemBackground
+        return controller
+    }()
+
+    init(payload: SharePayload, router: NavigationRouter) {
+        self.payload = payload
         super.init(router: router)
     }
 

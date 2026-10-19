@@ -96,11 +96,7 @@ struct EntryShareFieldPickerView: View {
 /// system share sheet. Purely local: the link is never uploaded anywhere.
 final class EntryShareCoordinator: BaseCoordinator {
     private let entry: Entry
-    private let hostingController: UIHostingController<EntryShareFieldPickerView>
-
-    init(entry: Entry, router: NavigationRouter) {
-        self.entry = entry
-
+    private lazy var hostingController: UIHostingController<EntryShareFieldPickerView> = {
         var availableFields = EntryShareField.allCases
         if !entry.hasValidTOTP {
             availableFields.removeAll { $0 == .totp }
@@ -112,8 +108,13 @@ final class EntryShareCoordinator: BaseCoordinator {
                 self?.generateLink(fields: fields, expiresAt: expiresAt)
             },
             onCancel: { [weak self] in self?.dismiss() })
-        hostingController = UIHostingController(rootView: view)
-        hostingController.view.backgroundColor = .systemBackground
+        let controller = UIHostingController(rootView: view)
+        controller.view.backgroundColor = .systemBackground
+        return controller
+    }()
+
+    init(entry: Entry, router: NavigationRouter) {
+        self.entry = entry
         super.init(router: router)
     }
 

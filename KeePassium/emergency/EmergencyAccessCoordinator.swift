@@ -12,9 +12,7 @@ import UIKit
 /// Presents the offline Emergency Access screen (ADR-016): Emergency Kit
 /// PDF, Shamir split, and share recovery. No network, no storage.
 final class EmergencyAccessCoordinator: BaseCoordinator {
-    private let hostingController: UIHostingController<EmergencyAccessView>
-
-    override init(router: NavigationRouter) {
+    private lazy var hostingController: UIHostingController<EmergencyAccessView> = {
         let databaseLocations = FileKeeper.shared
             .getAllReferences(fileType: .database, includeBackup: false)
             .map { $0.visibleFileName }
@@ -25,8 +23,12 @@ final class EmergencyAccessCoordinator: BaseCoordinator {
             onGenerateKit: { [weak self] manualHint in
                 self?.generateKitPDF(manualHint: manualHint)
             })
-        hostingController = UIHostingController(rootView: view)
-        hostingController.view.backgroundColor = .systemBackground
+        let controller = UIHostingController(rootView: view)
+        controller.view.backgroundColor = .systemBackground
+        return controller
+    }()
+
+    override init(router: NavigationRouter) {
         super.init(router: router)
     }
 

@@ -40,8 +40,9 @@ final class CSVImportWizardModel: ObservableObject {
         headerRow = rows[0]
         dataRows = Array(rows.dropFirst())
         detectedFormat = CSVImportFormat.detect(headerRow: headerRow)
-        selectedFormat = detectedFormat ?? .applePasswords
-        mapping = selectedFormat.autoMapping(for: headerRow)
+        let initialFormat = detectedFormat ?? .applePasswords
+        selectedFormat = initialFormat
+        mapping = initialFormat.autoMapping(for: headerRow)
     }
 
     /// Re-applies automatic mapping for the given format (used when the user

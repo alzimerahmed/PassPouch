@@ -22,7 +22,15 @@ final class CSVImportCoordinator: BaseCoordinator, DatabaseSaving {
     private let parent: KeePassiumLib.Group
     private let wizardModel: CSVImportWizardModel
 
-    private let hostingController: UIHostingController<CSVImportWizardView>
+    private lazy var hostingController: UIHostingController<CSVImportWizardView> = {
+        let view = CSVImportWizardView(
+            model: wizardModel,
+            onImport: { [weak self] in self?.importEntries() },
+            onDone: { [weak self] in self?.dismiss() })
+        let controller = UIHostingController(rootView: view)
+        controller.view.backgroundColor = .systemBackground
+        return controller
+    }()
 
     var databaseSaver: DatabaseSaver?
     var fileExportHelper: FileExportHelper?
@@ -39,13 +47,6 @@ final class CSVImportCoordinator: BaseCoordinator, DatabaseSaving {
         self.databaseFile = databaseFile
         self.parent = parent
         wizardModel = try CSVImportWizardModel(fileName: fileName, csvText: csvText)
-
-        let view = CSVImportWizardView(
-            model: wizardModel,
-            onImport: { [weak self] in self?.importEntries() },
-            onDone: { [weak self] in self?.dismiss() })
-        hostingController = UIHostingController(rootView: view)
-        hostingController.view.backgroundColor = .systemBackground
         super.init(router: router)
     }
 

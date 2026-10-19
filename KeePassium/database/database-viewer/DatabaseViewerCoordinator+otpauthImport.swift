@@ -71,17 +71,7 @@ final class OtpauthImportCoordinator: BaseCoordinator, DatabaseSaving {
     private var payloadText: String = ""
     private var selectedURIs: Set<String> = []
 
-    private let hostingController: UIHostingController<OtpauthImportView>
-
-    var databaseSaver: DatabaseSaver?
-    var fileExportHelper: FileExportHelper?
-    var savingProgressHost: ProgressViewHost? { return _router }
-    var saveSuccessHandler: (() -> Void)?
-
-    init(router: NavigationRouter, databaseFile: DatabaseFile, parent: KeePassiumLib.Group) {
-        self.databaseFile = databaseFile
-        self.parent = parent
-
+    private lazy var hostingController: UIHostingController<OtpauthImportView> = {
         let view = OtpauthImportView(
             payloadText: .init(
                 get: { [weak self] in self?.payloadText ?? "" },
@@ -93,8 +83,19 @@ final class OtpauthImportCoordinator: BaseCoordinator, DatabaseSaving {
             onSelectAll: { [weak self] selectAll in self?.selectAll(selectAll) },
             onImport: { [weak self] in self?.importSelected() },
             onCancel: { [weak self] in self?.cancel() })
-        hostingController = UIHostingController(rootView: view)
-        hostingController.view.backgroundColor = .systemBackground
+        let controller = UIHostingController(rootView: view)
+        controller.view.backgroundColor = .systemBackground
+        return controller
+    }()
+
+    var databaseSaver: DatabaseSaver?
+    var fileExportHelper: FileExportHelper?
+    var savingProgressHost: ProgressViewHost? { return _router }
+    var saveSuccessHandler: (() -> Void)?
+
+    init(router: NavigationRouter, databaseFile: DatabaseFile, parent: KeePassiumLib.Group) {
+        self.databaseFile = databaseFile
+        self.parent = parent
         super.init(router: router)
     }
 
