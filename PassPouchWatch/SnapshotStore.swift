@@ -27,15 +27,15 @@ enum SnapshotStore {
         clear()
 
         var query = baseQuery()
-        query[kSecValueData] = payload
-        query[kSecAttrAccessible] = kSecAttrAccessibleWhenUnlockedThisDeviceOnly
+        query[kSecValueData as String] = payload
+        query[kSecAttrAccessible as String] = kSecAttrAccessibleWhenUnlockedThisDeviceOnly
         SecItemAdd(query as CFDictionary, nil)
     }
 
     static func load() -> WatchSnapshot? {
         var query = baseQuery()
-        query[kSecReturnData] = true
-        query[kSecMatchLimit] = kSecMatchLimitOne
+        query[kSecReturnData as String] = true
+        query[kSecMatchLimit as String] = kSecMatchLimitOne
 
         var result: AnyObject?
         let status = SecItemCopyMatching(query as CFDictionary, &result)
