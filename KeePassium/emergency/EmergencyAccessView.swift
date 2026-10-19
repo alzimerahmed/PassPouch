@@ -9,6 +9,7 @@ import CoreImage
 import CoreImage.CIFilterBuiltins
 import KeePassiumLib
 import SwiftUI
+import UIKit
 
 // MARK: - QR helper (no dependency; CoreImage is a system framework)
 
@@ -235,6 +236,10 @@ struct EmergencyAccessView: View {
                 Text(LString.emergencyKitWarning)
                     .font(.footnote)
                     .foregroundColor(.secondary)
+                ForEach(databaseLocations, id: \.self) { location in
+                    Label(location, systemImage: "doc")
+                        .font(.footnote)
+                }
                 TextField(
                     LString.emergencyKitHintPlaceholder,
                     text: $manualHint,
@@ -243,6 +248,9 @@ struct EmergencyAccessView: View {
                 Button(LString.emergencyKitGenerate) {
                     onGenerateKit(manualHint)
                 }
+                Text("v\(appVersion)")
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
             }
             Section(header: Text(LString.emergencySplitSection)) {
                 ShamirSplitView()

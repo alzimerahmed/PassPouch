@@ -7,6 +7,7 @@
 
 import KeePassiumLib
 import SwiftUI
+import UIKit
 
 /// Read-only viewer for a received share link (ADR-015). Shows the
 /// decrypted fields with copy buttons, a clear "shared snapshot" banner,

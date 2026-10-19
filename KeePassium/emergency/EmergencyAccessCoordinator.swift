@@ -7,6 +7,7 @@
 
 import KeePassiumLib
 import SwiftUI
+import UIKit
 
 /// Presents the offline Emergency Access screen (ADR-016): Emergency Kit
 /// PDF, Shamir split, and share recovery. No network, no storage.

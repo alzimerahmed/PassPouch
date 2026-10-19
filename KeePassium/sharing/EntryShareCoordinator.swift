@@ -7,11 +7,11 @@
 
 import KeePassiumLib
 import SwiftUI
+import UIKit
 
 /// SwiftUI field-selection screen for creating an encrypted entry-share
 /// link (ADR-015). Shows the security warning and an optional expiry.
 struct EntryShareFieldPickerView: View {
-    let entryTitle: String
     let availableFields: [EntryShareField]
     let onGenerate: (Set<EntryShareField>, Date?) -> Void
     let onCancel: () -> Void
@@ -108,7 +108,6 @@ final class EntryShareCoordinator: BaseCoordinator {
         }
 
         let view = EntryShareFieldPickerView(
-            entryTitle: entry.resolvedTitle,
             availableFields: availableFields,
             onGenerate: { [weak self] fields, expiresAt in
                 self?.generateLink(fields: fields, expiresAt: expiresAt)
