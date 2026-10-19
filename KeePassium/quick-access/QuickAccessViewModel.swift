@@ -8,6 +8,28 @@
 import Foundation
 import KeePassiumLib
 
+/// Lazily builds and caches a TOTP generator from a snapshot of the entry's
+/// OTP-related fields. Construction happens on first use (copy/refresh), not
+/// during entry mapping — mapping hundreds of entries must not parse every
+/// OTP configuration upfront.
+final class QuickAccessTOTPProvider {
+    private let fields: [EntryField]
+    private var cachedGenerator: TOTPGenerator?
+
+    init(fields: [EntryField]) {
+        self.fields = fields
+    }
+
+    /// Live TOTP code, generated fresh on every call. Returns nil when the
+    /// captured fields do not yield a usable TOTP configuration.
+    func currentCode() -> String? {
+        if cachedGenerator == nil {
+            cachedGenerator = TOTPGeneratorFactory.makeGenerator(from: fields)
+        }
+        return cachedGenerator?.generate()
+    }
+}
+
 /// Phase 11d (ADR-017): compact macOS (Catalyst) quick-access window.
 ///
 /// Pure view-model logic: maps unlocked-database entries to lightweight
@@ -20,7 +42,10 @@ struct QuickAccessEntry: Identifiable, Equatable {
     let password: String
     let url: String
     let hasTOTP: Bool
-    private let totpGenerator: TOTPGenerator?
+    /// Precomputed lowercase copies for cheap case-insensitive filtering.
+    let lowercasedTitle: String
+    let lowercasedUsername: String
+    private let totpProvider: QuickAccessTOTPProvider?
 
     init(
         id: UUID = UUID(),
@@ -29,7 +54,7 @@ struct QuickAccessEntry: Identifiable, Equatable {
         password: String,
         url: String,
         hasTOTP: Bool,
-        totpGenerator: TOTPGenerator? = nil
+        totpProvider: QuickAccessTOTPProvider? = nil
     ) {
         self.id = id
         self.title = title
@@ -37,14 +62,16 @@ struct QuickAccessEntry: Identifiable, Equatable {
         self.password = password
         self.url = url
         self.hasTOTP = hasTOTP
-        self.totpGenerator = totpGenerator
+        self.lowercasedTitle = title.lowercased()
+        self.lowercasedUsername = username.lowercased()
+        self.totpProvider = totpProvider
     }
 
     /// Live TOTP code, generated on demand via the existing KeePassiumLib
     /// `TOTPGeneratorFactory` pipeline. Returns nil when the entry has no
     /// usable TOTP configuration.
     func currentTOTPCode() -> String? {
-        return totpGenerator?.generate()
+        return totpProvider?.currentCode()
     }
 
     static func == (lhs: QuickAccessEntry, rhs: QuickAccessEntry) -> Bool {
@@ -60,17 +87,23 @@ struct QuickAccessEntry: Identifiable, Equatable {
 final class QuickAccessViewModel: ObservableObject {
     @Published var query: String = ""
     @Published var entries: [QuickAccessEntry] = []
+    /// Entries matching the current query, updated with a short debounce so
+    /// fast typing does not re-filter the whole list on every keystroke.
+    @Published private(set) var filteredEntries: [QuickAccessEntry] = []
 
-    /// Entries matching the current query (title/username, case-insensitive
-    /// contains). Empty query returns all entries.
-    var filteredEntries: [QuickAccessEntry] {
-        return Self.filter(entries, query: query)
+    private var filterTask: Task<Void, Never>?
+    /// Debounce window for query filtering, in seconds.
+    private static let filterDebounceSeconds: UInt64 = 200_000_000
+
+    init() {
+        filteredEntries = []
     }
 
     /// Populate from the currently unlocked database. Only called while a
     /// database session is unlocked; the view model never reads files itself.
     func setDatabase(_ database: Database) {
         entries = Self.mapEntries(Self.entries(in: database))
+        refilterNow()
     }
 
     /// Clear all state — called when the database locks. After this, the
@@ -78,6 +111,23 @@ final class QuickAccessViewModel: ObservableObject {
     func clear() {
         entries = []
         query = ""
+        refilterNow()
+    }
+
+    func setQuery(_ newQuery: String) {
+        query = newQuery
+        filterTask?.cancel()
+        filterTask = Task { [weak self] in
+            try? await Task.sleep(nanoseconds: Self.filterDebounceSeconds)
+            guard !Task.isCancelled else { return }
+            self?.refilterNow()
+        }
+    }
+
+    private func refilterNow() {
+        filterTask?.cancel()
+        filterTask = nil
+        filteredEntries = Self.filter(entries, query: query)
     }
 
     // MARK: - Pure logic (unit-tested)
@@ -90,24 +140,44 @@ final class QuickAccessViewModel: ObservableObject {
         guard !trimmedQuery.isEmpty else {
             return entries
         }
+        let needle = trimmedQuery.lowercased()
         return entries.filter { entry in
-            entry.title.localizedCaseInsensitiveContains(trimmedQuery)
-                || entry.username.localizedCaseInsensitiveContains(trimmedQuery)
+            entry.lowercasedTitle.contains(needle)
+                || entry.lowercasedUsername.contains(needle)
         }
     }
 
     static func mapEntries(_ entries: [Entry]) -> [QuickAccessEntry] {
         return entries.map { entry in
-            let generator = entry.totpGenerator()
+            // Cheap presence check for OTP-related fields; the (parsing)
+            // generator is built lazily on first use via the provider.
+            let hasTOTP = Self.hasOTPFields(entry)
+            let provider = hasTOTP
+                ? QuickAccessTOTPProvider(fields: entry.fields)
+                : nil
             return QuickAccessEntry(
                 id: entry.uuid,
                 title: entry.title,
                 username: entry.username,
                 password: entry.password,
                 url: entry.url,
-                hasTOTP: generator != nil,
-                totpGenerator: generator
+                hasTOTP: hasTOTP,
+                totpProvider: provider
             )
+        }
+    }
+
+    /// Cheap (no parsing) check whether the entry carries any OTP-related
+    /// field with a non-empty value.
+    static func hasOTPFields(_ entry: Entry) -> Bool {
+        let otpFieldNames = [
+            EntryField.otp,
+            EntryField.totp,
+            EntryField.otpConfig2Seed,
+            EntryField.timeOtpSecret
+        ]
+        return otpFieldNames.contains { name in
+            entry.getField(name)?.resolvedValue.isNotEmpty ?? false
         }
     }
 

@@ -64,12 +64,19 @@ struct WatchSettingsView: View {
             return
         }
         databaseName = databaseFile.visibleFileName
-        var allEntries = [Entry]()
-        collectEntries(from: databaseFile.database.root, into: &allEntries)
-        entries = allEntries.sorted { $0.resolvedTitle < $1.resolvedTitle }
+        // Collect + sort off the main actor; hop back only to assign.
+        let root = databaseFile.database.root
+        Task.detached(priority: .userInitiated) { [weak self] in
+            var allEntries = [Entry]()
+            Self.collectEntries(from: root, into: &allEntries)
+            let sorted = allEntries.sorted { $0.resolvedTitle < $1.resolvedTitle }
+            await MainActor.run { [weak self] in
+                self?.entries = sorted
+            }
+        }
     }
 
-    private func collectEntries(from group: Group?, into entries: inout [Entry]) {
+    private static func collectEntries(from group: Group?, into entries: inout [Entry]) {
         guard let group else { return }
         entries.append(contentsOf: group.entries)
         for subgroup in group.groups {

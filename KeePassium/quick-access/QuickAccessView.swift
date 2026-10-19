@@ -27,19 +27,17 @@ struct QuickAccessView: View {
     }
 
     private var searchField: some View {
-        #if canImport(UIKit)
         TextField(
             NSLocalizedString(
                 "quickAccess.search.placeholder",
                 value: "Search",
                 comment: "Quick-access window: search field placeholder"),
-            text: $viewModel.query
+            text: Binding(
+                get: { viewModel.query },
+                set: { viewModel.setQuery($0) })
         )
         .textFieldStyle(.roundedBorder)
         .padding(8)
-        #else
-        EmptyView()
-        #endif
     }
 
     private var lockedPlaceholder: some View {
@@ -82,6 +80,7 @@ private struct QuickAccessEntryRow: View {
                         value: "Copy Username",
                         comment: "Quick-access window: copy username action")) {
                         Clipboard.general.copyWithTimeout(entry.username)
+                        announceCopied()
                     }
                 }
                 Button(NSLocalizedString(
@@ -89,16 +88,13 @@ private struct QuickAccessEntryRow: View {
                     value: "Copy Password",
                     comment: "Quick-access window: copy password action")) {
                     Clipboard.general.copyWithTimeout(entry.password)
+                    announceCopied()
                 }
-                if entry.hasTOTP, let code = entry.currentTOTPCode() {
-                    Text(code)
-                        .font(.body.monospaced())
-                        .textSelection(.enabled)
-                    Button(NSLocalizedString(
-                        "quickAccess.copyTOTP",
-                        value: "Copy",
-                        comment: "Quick-access window: copy TOTP code action")) {
-                        Clipboard.general.copyWithTimeout(code)
+                if entry.hasTOTP {
+                    // TOTP codes go stale every ~30s; recompute the code on
+                    // copy and refresh the display periodically.
+                    TimelineView(.periodic(from: .now, by: 5)) { _ in
+                        totpControls
                     }
                 }
             }
@@ -106,5 +102,31 @@ private struct QuickAccessEntryRow: View {
             .controlSize(.small)
         }
         .padding(.vertical, 4)
+    }
+
+    @ViewBuilder
+    private var totpControls: some View {
+        if let code = entry.currentTOTPCode() {
+            Text(code)
+                .font(.body.monospaced())
+                .textSelection(.enabled)
+            Button(NSLocalizedString(
+                "quickAccess.copyTOTP",
+                value: "Copy",
+                comment: "Quick-access window: copy TOTP code action")) {
+                // Generate fresh at copy time — the displayed code may be
+                // seconds away from expiry.
+                if let freshCode = entry.currentTOTPCode() {
+                    Clipboard.general.copyWithTimeout(freshCode)
+                    announceCopied()
+                }
+            }
+        }
+    }
+
+    private func announceCopied() {
+        UIAccessibility.post(
+            notification: .announcement,
+            argument: LString.titleCopiedToClipboard)
     }
 }
