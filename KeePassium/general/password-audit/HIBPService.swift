@@ -80,17 +80,9 @@ final class HIBPService {
                 return
             }
 
-            let results = string
-                .split(whereSeparator: \.isNewline)
-                .compactMap { line -> PasswordRange? in
-                    let parts = line.split(separator: ":")
-                    guard parts.count == 2,
-                          let count = Int(parts[1])
-                    else {
-                        return nil
-                    }
-                    return .init(hash: hashPrefix.uppercased() + String(parts[0]), count: count)
-                }
+            let results = PasswordBreachCheck
+                .parseRangeResponse(string, prefixLength: Constants.hashPrefixLength)
+                .map { PasswordRange(hash: hashPrefix.uppercased() + $0.hashSuffix, count: $0.count) }
             completionHandler(.success(results))
         }
 

@@ -45,7 +45,7 @@ public class Passkey {
     fileprivate static let defaultBSFlagSet = true
 
     let credentialID: Data
-    private(set) var privateKeyPEM: String
+    public private(set) var privateKeyPEM: String
     public let relyingParty: String
     public let username: String
     let userHandle: Data

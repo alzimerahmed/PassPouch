@@ -292,6 +292,16 @@ extension DatabaseViewerCoordinator.ItemDecorator {
                 }
             )
         }
+        if ManagedAppConfig.shared.isPasswordAuditAllowed {
+            actions.append(UIAction(
+                title: LString.actionCheckForBreach,
+                image: .symbol(.networkBadgeShield)
+            ) {
+                [weak coordinator, weak entry, popoverAnchor = context.popoverAnchor] _ in
+                guard let coordinator, let entry else { assertionFailure(); return }
+                coordinator._checkEntryForBreach(entry, at: popoverAnchor)
+            })
+        }
         return UIMenu(children: actions)
     }
 

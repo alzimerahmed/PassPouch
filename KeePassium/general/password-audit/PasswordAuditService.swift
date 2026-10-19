@@ -6,7 +6,6 @@
 //  by the Free Software Foundation: https://www.gnu.org/licenses/).
 //  For commercial licensing, please contact the author.
 
-import CryptoKit
 import Foundation
 import KeePassiumLib
 
@@ -154,11 +153,9 @@ final class PasswordAuditService {
     private func getHashDictionary(entries: [Entry]) -> [String: Entry] {
         var result = [String: Entry]()
         entries.forEach { entry in
-            guard let data = entry.resolvedPassword.data(using: .utf8) else {
-                return
-            }
-            let hash = Insecure.SHA1.hash(data: data)
-            let hexHash = hash.compactMap { String(format: "%02x", $0) }.joined().uppercased()
+            // Full SHA-1 hex hash is computed locally and never sent anywhere;
+            // only its 5-char prefix leaves the device (k-anonymity).
+            let hexHash = PasswordBreachCheck.sha1HexHash(of: entry.resolvedPassword)
             result[hexHash] = entry
         }
         return result

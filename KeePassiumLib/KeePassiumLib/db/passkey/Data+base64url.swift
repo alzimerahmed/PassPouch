@@ -11,7 +11,7 @@ public extension Data {
         var converted = string
             .replacingOccurrences(of: "-", with: "+")
             .replacingOccurrences(of: "_", with: "/")
-        let paddingLength = converted.count % 4
+        let paddingLength = (4 - converted.count % 4) % 4
         let padding = String(repeating: "=", count: paddingLength)
         converted.append(padding)
         self.init(base64Encoded: converted)

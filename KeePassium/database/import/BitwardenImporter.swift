@@ -43,6 +43,15 @@ public class BitwardenImporter {
         let username: String?
         let password: String?
         let totp: String?
+        let fido2Credentials: [BitwardenFIDO2Credential]?
+    }
+
+    private struct BitwardenFIDO2Credential: Decodable {
+        let credentialId: String?
+        let keyValue: String?
+        let rpId: String?
+        let userName: String?
+        let userHandle: String?
     }
 
     private struct BitwardenURI: Decodable {
@@ -294,6 +303,59 @@ public class BitwardenImporter {
                 entry.setField(name: EntryField.otp, value: totp, isProtected: true)
             } else {
                 entry.setField(name: "TOTP", value: totp, isProtected: true)
+            }
+        }
+
+        importPasskeys(from: login, into: entry, fallbackUsername: login.username ?? item.name)
+    }
+
+    /// Imports Bitwarden `fido2Credentials` (passkeys) into the entry as KPEX
+    /// passkey fields (KeePassXC KDBX 4.1 conventions). Requires KDBX 4
+    /// (`Entry2`); KDBX 3 entries are skipped with a warning.
+    private func importPasskeys(
+        from login: BitwardenLogin,
+        into entry: Entry,
+        fallbackUsername: String
+    ) {
+        guard let fido2Credentials = login.fido2Credentials, !fido2Credentials.isEmpty else {
+            return
+        }
+        guard let entry2 = entry as? Entry2 else {
+            Diag.warning("Passkey import requires a KDBX 4 database; skipping passkeys")
+            return
+        }
+        for fido2 in fido2Credentials {
+            guard
+                let credentialID = fido2.credentialId, !credentialID.isEmpty,
+                let keyValue = fido2.keyValue, !keyValue.isEmpty,
+                let relyingParty = fido2.rpId, !relyingParty.isEmpty,
+                let userHandle = fido2.userHandle, !userHandle.isEmpty
+            else {
+                Diag.warning("Bitwarden passkey is missing required fields, skipping")
+                continue
+            }
+            let username = fido2.userName ?? fallbackUsername
+            guard let passkey = Passkey.make(
+                fromBitwardenFIDO2Credential: credentialID,
+                privateKeyBase64URL: keyValue,
+                relyingParty: relyingParty,
+                username: username,
+                userHandleBase64URL: userHandle
+            ) else {
+                Diag.warning("Failed to convert Bitwarden passkey, skipping")
+                continue
+            }
+
+            entry2.setField(name: EntryField.passkeyCredentialID, value: credentialID, isProtected: true)
+            entry2.setField(name: EntryField.passkeyPrivateKeyPEM, value: passkey.privateKeyPEM, isProtected: true)
+            entry2.setField(name: EntryField.passkeyRelyingParty, value: relyingParty, isProtected: false)
+            entry2.setField(name: EntryField.passkeyUserHandle, value: userHandle, isProtected: true)
+            entry2.setField(name: EntryField.passkeyUsername, value: username, isProtected: false)
+            entry2.setField(name: EntryField.passkeyFlagBE, value: "1", isProtected: false)
+            entry2.setField(name: EntryField.passkeyFlagBS, value: "1", isProtected: false)
+
+            if entry2.rawURL.isEmpty {
+                entry2.rawURL = "https://" + relyingParty
             }
         }
     }

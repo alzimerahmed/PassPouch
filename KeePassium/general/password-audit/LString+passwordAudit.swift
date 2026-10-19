@@ -60,6 +60,31 @@ Your actual passwords are never shared with the online service.
         "[PasswordAudit/Results/allGood]",
         value: "Good news! None of your passwords have appeared in known data leaks.",
         comment: "Result of a password audit.")
+
+    static let actionCheckForBreach = NSLocalizedString(
+        "[PasswordAudit/Action/CheckForBreach]",
+        value: "Check for Breach",
+        comment: "Action to check a single entry's password against the HIBP breach database.")
+
+    static let breachCheckNoPassword = NSLocalizedString(
+        "[PasswordAudit/SingleCheck/NoPassword]",
+        value: "This entry has no password to check.",
+        comment: "Message when trying to breach-check an entry without a password.")
+
+    static let breachCheckNotCompromised = NSLocalizedString(
+        "[PasswordAudit/SingleCheck/NotCompromised]",
+        value: "Good news! This password has not appeared in known data leaks.",
+        comment: "Result of a single-password breach check: password is safe.")
+
+    static let breachCheckCompromisedTemplate = NSLocalizedString(
+        "[PasswordAudit/SingleCheck/Compromised/template]",
+        value: "This password has appeared in known data leaks %@ times. You should change it.",
+        comment: "Result of a single-password breach check [count: Int].")
+
+    static let breachCheckPrivacyNotice = NSLocalizedString(
+        "[PasswordAudit/SingleCheck/Privacy]",
+        value: "Only a short fragment of the password's checksum is sent online; the password itself never leaves your device.",
+        comment: "Privacy explanation shown with the single-password breach check result.")
 }
 
 extension LString.Error {
@@ -67,5 +92,10 @@ extension LString.Error {
         "[PasswordAudit/Error/text]",
         value: "An error occured while communicating with the HIBP service. %@",
         comment: "Error message after a failed password audit request [message: String].")
+
+    static let passwordAuditNetworkDisabled = NSLocalizedString(
+        "[PasswordAudit/Error/NetworkDisabled]",
+        value: "Network access is disabled. Enable it in Settings to check passwords against the breach database.",
+        comment: "Error message when trying to breach-check passwords while network access is off.")
 }
 // swiftlint:enable line_length
