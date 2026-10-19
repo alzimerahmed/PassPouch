@@ -19,8 +19,8 @@
             <string>Owner</string>
             <key>LSItemContentTypes</key>
             <array>
-                <string>com.keepassium.kdb</string>
-                <string>com.keepassium.kdbx</string>
+                <string>com.passpouch.kdb</string>
+                <string>com.passpouch.kdbx</string>
                 <string>com.jflan.MiniKeePass.kdb</string>
                 <string>com.jflan.MiniKeePass.kdbx</string>
                 <string>com.kptouch.kdb</string>
@@ -189,23 +189,10 @@
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string></string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-              <string>$(GOOGLE_OAUTH_SCHEME)</string>
-            </array>
-        </dict>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLName</key>
             <string>$(PRODUCT_NAME)</string>
             <key>CFBundleURLSchemes</key>
             <array>
                 <string>$(APP_URL_SCHEME)</string>
-#ifdef INTUNE
-                <string>$(APP_URL_SCHEME)-intunemam</string>
-#endif
             </array>
         </dict>
         <dict>
@@ -218,47 +205,9 @@
                 <string>otpauth</string>
             </array>
         </dict>
-#ifdef INTUNE
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Viewer</string>
-            <key>CFBundleURLName</key>
-            <string>$(PRODUCT_NAME)</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>msauth.com.microsoft.intunemam</string>
-                <string>msauth.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-            </array>
-        </dict>
-#endif
     </array>
     <key>CFBundleVersion</key>
     <string>$(CURRENT_PROJECT_VERSION)</string>
-#ifdef INTUNE
-    <key>IntuneMAMSettings</key>
-    <dict>
-        <key>AppGroupIdentifiers</key>
-        <array>
-            <string>group.com.keepassium.intune</string>
-        </array>
-        <key>ADALClientId</key>
-        <string>292a80b3-139a-4165-a20d-b2d2e764e538</string>
-        <key>ADALRedirectUri</key>
-        <string>msauth.com.keepassium.intune://auth</string>
-        <key>DebugSettingsEnabled</key>
-        <false/>
-        <key>SplashDuration</key>
-        <real>1.5</real>
-        <key>MaxFileProtectionLevel</key>
-        <string>NSFileProtectionComplete</string>
-        <key>VerboseLoggingEnabled</key>
-        <true/>
-        <key>MAMTelemetryDisabled</key>
-        <true/>
-        <key>SafariViewControllerBlockedOverride</key>
-        <true/>
-    </dict>
-#endif
     <key>LSApplicationCategoryType</key>
     <string>public.app-category.productivity</string>
     <key>LSApplicationQueriesSchemes</key>
@@ -268,31 +217,6 @@
         <string>itms-apps</string>
         <string>https</string>
         <string>ftp</string>
-#ifdef INTUNE
-        <string>msauthv2</string>
-        <string>msauthv3</string>
-        <string>mailto-intunemam</string>
-        <string>ms-outlook-intunemam</string>
-        <string>http-intunemam</string>
-        <string>itms-apps-intunemam</string>
-        <string>https-intunemam</string>
-        <string>ftp-intunemam</string>
-        <string>microsoft-edge-https</string>
-        <string>microsoft-edge-http</string>
-        <string>ms-outlook</string>
-        <string>companyportal</string>
-        <string>smart-ns</string>
-        <string>zips</string>
-        <string>lacoonsecurity</string>
-        <string>wandera</string>
-        <string>lookoutwork-ase</string>
-        <string>skycure</string>
-        <string>betteractiveshield</string>
-        <string>smsec</string>
-        <string>mvisionmobile</string>
-        <string>scmx</string>
-        <string>intunemam-mtd</string>
-#endif
     </array>
     <key>LSRequiresIPhoneOS</key>
     <true/>
@@ -301,20 +225,20 @@
     <key>UIDesignRequiresCompatibility</key>
     <true/>
     <key>NFCReaderUsageDescription</key>
-    <string>KeePassium needs access to NFC to communicate with your YubiKey.</string>
+    <string>PassPouch needs access to NFC to communicate with your YubiKey.</string>
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsLocalNetworking</key>
         <true/>
     </dict>
     <key>NSCameraUsageDescription</key>
-    <string>KeePassium needs the camera to scan QR codes.</string>
+    <string>PassPouch needs the camera to scan QR codes.</string>
     <key>NSFaceIDUsageDescription</key>
-    <string>Use FaceID to unlock KeePassium</string>
+    <string>Use FaceID to unlock PassPouch</string>
     <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>KeePassium needs permission to export files to your Photo Library.</string>
+    <string>PassPouch needs permission to export files to your Photo Library.</string>
     <key>NSAppleEventsUsageDescription</key>
-    <string>KeePassium needs to control other applications to auto-type your credentials.</string>
+    <string>PassPouch needs to control other applications to auto-type your credentials.</string>
     <key>UIFileSharingEnabled</key>
     <true/>
     <key>UILaunchStoryboardName</key>
@@ -368,7 +292,7 @@
                 <string>public.content</string>
             </array>
             <key>UTTypeIdentifier</key>
-            <string>com.keepassium.keyfile</string>
+            <string>com.passpouch.keyfile</string>
             <key>UTTypeTagSpecification</key>
             <dict/>
         </dict>
@@ -381,7 +305,7 @@
             <key>UTTypeDescription</key>
             <string>KeePass Database (kdb)</string>
             <key>UTTypeIdentifier</key>
-            <string>com.keepassium.kdb</string>
+            <string>com.passpouch.kdb</string>
             <key>UTTypeTagSpecification</key>
             <dict>
                 <key>public.filename-extension</key>
@@ -399,7 +323,7 @@
             <key>UTTypeDescription</key>
             <string>KeePass Database (kdbx)</string>
             <key>UTTypeIdentifier</key>
-            <string>com.keepassium.kdbx</string>
+            <string>com.passpouch.kdbx</string>
             <key>UTTypeTagSpecification</key>
             <dict>
                 <key>public.filename-extension</key>

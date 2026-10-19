@@ -9,14 +9,11 @@
 /* Begin PBXBuildFile section */
 		75060C592B8CEADF006C7B50 /* MacUtils.bundle in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 75060C552B8CEA84006C7B50 /* MacUtils.bundle */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75060C5C2B8CEB33006C7B50 /* MacUtils.bundle in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 75060C552B8CEA84006C7B50 /* MacUtils.bundle */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		75060C5F2B8CEB3E006C7B50 /* MacUtils.bundle in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 75060C552B8CEA84006C7B50 /* MacUtils.bundle */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		750CFBC821BA9ACD00E62B09 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7550D231215D758800360E0C /* AuthenticationServices.framework */; };
 		750CFBD321BA9ACD00E62B09 /* KeePassium AutoFill.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 750CFBC721BA9ACD00E62B09 /* KeePassium AutoFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		750CFBD721BA9B6200E62B09 /* KeePassiumLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FEC2222175292C0034334B /* KeePassiumLib.framework */; };
 		751146E6233F9E2900443BCD /* KeePassiumLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751146E5233F9E2900443BCD /* KeePassiumLib.framework */; };
 		7521EAD82E8D55B700016FB8 /* WhatsNewKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7521EAD72E8D55B700016FB8 /* WhatsNewKit */; };
-		7521EADA2E8D55BE00016FB8 /* WhatsNewKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7521EAD92E8D55BE00016FB8 /* WhatsNewKit */; };
-		754A34CA2EB0F89C0050FBC4 /* IntuneMAMSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 754A34C92EB0F89C0050FBC4 /* IntuneMAMSwift */; };
 		7550D242215D792000360E0C /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7550D231215D758800360E0C /* AuthenticationServices.framework */; };
 		756D946D2BA2F27D0084BDF5 /* YubiKit in Frameworks */ = {isa = PBXBuildFile; productRef = 756D946C2BA2F27D0084BDF5 /* YubiKit */; settings = {ATTRIBUTES = (Weak, ); }; };
 		756D946F2BA2F29F0084BDF5 /* YubiKit in Frameworks */ = {isa = PBXBuildFile; productRef = 756D946E2BA2F29F0084BDF5 /* YubiKit */; };
@@ -28,25 +25,8 @@
 		75B38C4E233E5B7C006BDEFC /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CD363E21521FAE0018AF46 /* LocalAuthentication.framework */; };
 		75B38C4F233E5B7C006BDEFC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A26777228F4E820097C693 /* StoreKit.framework */; };
 		75CD363F21521FAF0018AF46 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CD363E21521FAE0018AF46 /* LocalAuthentication.framework */; };
-		75D0766C28B639D200F02E39 /* KeePassiumLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FEC2222175292C0034334B /* KeePassiumLib.framework */; };
-		75D0766D28B639D200F02E39 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CD363E21521FAE0018AF46 /* LocalAuthentication.framework */; };
-		75D0766E28B639D200F02E39 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7550D231215D758800360E0C /* AuthenticationServices.framework */; };
-		75D0766F28B639D200F02E39 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A26777228F4E820097C693 /* StoreKit.framework */; };
-		75D0767028B639D200F02E39 /* YubiKit in Frameworks */ = {isa = PBXBuildFile; productRef = 75D075AE28B639D200F02E39 /* YubiKit */; settings = {ATTRIBUTES = (Weak, ); }; };
-		75D076D328B639D200F02E39 /* KeePassiumLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75FEC2222175292C0034334B /* KeePassiumLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75D1C58627B415480079E97E /* YubiKit in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 75D1C58527B415480079E97E /* YubiKit */; settings = {ATTRIBUTES = (Weak, ); }; };
 		75D1C58827B4155E0079E97E /* YubiKit in Frameworks */ = {isa = PBXBuildFile; productRef = 75D1C58727B4155E0079E97E /* YubiKit */; settings = {ATTRIBUTES = (Weak, ); }; };
-		75D218F829C21FCB00D6F327 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D218F729C21FCB00D6F327 /* MessageUI.framework */; };
-		75D218FA29C2205100D6F327 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D218F929C2205000D6F327 /* AudioToolbox.framework */; };
-		75D218FC29C2205700D6F327 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D218FB29C2205700D6F327 /* CoreServices.framework */; };
-		75D218FE29C2206000D6F327 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D218FD29C2206000D6F327 /* ImageIO.framework */; };
-		75D2190229C2209300D6F327 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D2190129C2209300D6F327 /* QuartzCore.framework */; };
-		75D2190429C2209900D6F327 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D2190329C2209900D6F327 /* Security.framework */; };
-		75D2190629C220A000D6F327 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D2190529C220A000D6F327 /* SystemConfiguration.framework */; };
-		75D2190829C220A700D6F327 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D2190729C220A600D6F327 /* WebKit.framework */; };
-		75D2191529C2214B00D6F327 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D218FF29C2206A00D6F327 /* libc++.tbd */; };
-		75D2191629C2215600D6F327 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D2190029C2207D00D6F327 /* libsqlite3.tbd */; };
-		75D2192F29C4C24800D6F327 /* MSAL in Frameworks */ = {isa = PBXBuildFile; productRef = 75D2192E29C4C24800D6F327 /* MSAL */; };
 		75D7DFAA233E5E310029AD87 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7550D231215D758800360E0C /* AuthenticationServices.framework */; };
 		75D7DFC7233E5E8C0029AD87 /* KeePassium Pro AutoFill.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 75D7DFBE233E5E310029AD87 /* KeePassium Pro AutoFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		75FEC2232175292C0034334B /* KeePassiumLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FEC2222175292C0034334B /* KeePassiumLib.framework */; };
@@ -54,7 +34,6 @@
 		F331EF2A2A8509A10084473D /* Zxcvbn in Frameworks */ = {isa = PBXBuildFile; productRef = F331EF292A8509A10084473D /* Zxcvbn */; };
 		F331EF2C2A8509AC0084473D /* Zxcvbn in Frameworks */ = {isa = PBXBuildFile; productRef = F331EF2B2A8509AC0084473D /* Zxcvbn */; };
 		F331EF2E2A8509B30084473D /* Zxcvbn in Frameworks */ = {isa = PBXBuildFile; productRef = F331EF2D2A8509B30084473D /* Zxcvbn */; };
-		F331EF302A8509BA0084473D /* Zxcvbn in Frameworks */ = {isa = PBXBuildFile; productRef = F331EF2F2A8509BA0084473D /* Zxcvbn */; };
 		F33344362E844F90002EE262 /* WhatsNewKit in Frameworks */ = {isa = PBXBuildFile; productRef = F33344352E844F90002EE262 /* WhatsNewKit */; };
 		F37CAA492A88F7E30000EF64 /* YubiKit in Frameworks */ = {isa = PBXBuildFile; productRef = F37CAA482A88F7E30000EF64 /* YubiKit */; };
 		F37CAA4B2A88F7E30000EF64 /* Zxcvbn in Frameworks */ = {isa = PBXBuildFile; productRef = F37CAA4A2A88F7E30000EF64 /* Zxcvbn */; };
@@ -69,13 +48,6 @@
 			remoteInfo = MacBridge;
 		};
 		75060C5D2B8CEB33006C7B50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 754BF0732082A6BD00E3A292 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 75060C542B8CEA84006C7B50;
-			remoteInfo = MacBridge;
-		};
-		75060C602B8CEB3E006C7B50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 754BF0732082A6BD00E3A292 /* Project object */;
 			proxyType = 1;
@@ -152,28 +124,6 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75D076D028B639D200F02E39 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				75060C5F2B8CEB3E006C7B50 /* MacUtils.bundle in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75D076D228B639D200F02E39 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				75D076D328B639D200F02E39 /* KeePassiumLib.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -185,22 +135,8 @@
 		754D7C1E238C384A005652E1 /* KeePassium-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KeePassium-Bridging-Header.h"; sourceTree = "<group>"; };
 		7550D231215D758800360E0C /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		75A26777228F4E820097C693 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		75A5452328B64F6C00B942FE /* IntuneMAMSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IntuneMAMSwift.xcframework; path = "../ms-intune-app-sdk-ios/IntuneMAMSwift.xcframework"; sourceTree = "<group>"; };
-		75A5452628B64F9000B942FE /* IntuneMAMSwiftStub.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IntuneMAMSwiftStub.xcframework; path = "../ms-intune-app-sdk-ios/IntuneMAMSwiftStub.xcframework"; sourceTree = "<group>"; };
 		75B38C81233E5B7C006BDEFC /* KeePassium Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KeePassium Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CD363E21521FAE0018AF46 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		75D076D828B639D200F02E39 /* KeePassium Org.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KeePassium Org.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		75D218F729C21FCB00D6F327 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/iOSSupport/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
-		75D218F929C2205000D6F327 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
-		75D218FB29C2205700D6F327 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		75D218FD29C2206000D6F327 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
-		75D218FF29C2206A00D6F327 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
-		75D2190029C2207D00D6F327 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
-		75D2190129C2209300D6F327 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		75D2190329C2209900D6F327 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		75D2190529C220A000D6F327 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		75D2190729C220A600D6F327 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/iOSSupport/System/Library/PrivateFrameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
-		75D2190E29C2210000D6F327 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/LocalAuthentication.framework; sourceTree = DEVELOPER_DIR; };
 		75D7DFBE233E5E310029AD87 /* KeePassium Pro AutoFill.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "KeePassium Pro AutoFill.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75FEC2222175292C0034334B /* KeePassiumLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeePassiumLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37CAA392A88F7330000EF64 /* KeePassiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeePassiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,9 +148,6 @@
 			membershipExceptions = (
 				Configuration.storekit,
 				Info.plist,
-				intune/IntuneEnrollmentDelegateImpl.swift,
-				intune/IntunePolicyDelegateImpl.swift,
-				intune/MSALOneDriveAuthProvider.swift,
 				util/macos/MacUtilsImpl.swift,
 			);
 			target = 754BF07A2082A6BD00E3A292 /* KeePassium */;
@@ -225,7 +158,6 @@
 				/Localized/database/unlocker/DatabaseUnlockerVC.storyboard,
 				"/Localized/general/file-info/FileInfoVC.storyboard",
 				/Localized/general/PasscodeInputVC.storyboard,
-				"app-icon-emm.icon",
 				"app-icon-pro.icon",
 				"app-icon.icon",
 				Assets.xcassets,
@@ -406,9 +338,6 @@
 			membershipExceptions = (
 				Configuration.storekit,
 				Info.plist,
-				intune/IntuneEnrollmentDelegateImpl.swift,
-				intune/IntunePolicyDelegateImpl.swift,
-				intune/MSALOneDriveAuthProvider.swift,
 				util/macos/MacUtilsImpl.swift,
 			);
 			target = 75B38BEF233E5B7C006BDEFC /* KeePassium Pro */;
@@ -419,7 +348,6 @@
 				/Localized/database/unlocker/DatabaseUnlockerVC.storyboard,
 				"/Localized/general/file-info/FileInfoVC.storyboard",
 				/Localized/general/PasscodeInputVC.storyboard,
-				"app-icon-emm.icon",
 				"app-icon-pro.icon",
 				"app-icon.icon",
 				Assets.xcassets,
@@ -595,15 +523,6 @@
 			);
 			target = 75D7DF7A233E5E310029AD87 /* KeePassium Pro AutoFill */;
 		};
-		753F5DD22E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Configuration.storekit,
-				Info.plist,
-				util/macos/MacUtilsImpl.swift,
-			);
-			target = 75D075AB28B639D200F02E39 /* KeePassium Org */;
-		};
 		753F5DD32E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -645,12 +564,11 @@
 			membershipExceptions = (
 				util/QuickAutoFillPrompt.swift,
 			);
-			target = 75D075AB28B639D200F02E39 /* KeePassium Org */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		753F586F2E285A6700F4C290 /* KeePassium */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (753F5DCE2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DCF2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD02E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD12E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD22E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD32E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = KeePassium; sourceTree = "<group>"; };
+		753F586F2E285A6700F4C290 /* KeePassium */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (753F5DCE2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DCF2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD02E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD12E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD32E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = KeePassium; sourceTree = "<group>"; };
 		753F5EB42E285A7200F4C290 /* KeePassium AutoFill */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (753F5EE82E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EE92E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEA2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEB2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEC2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "KeePassium AutoFill"; sourceTree = "<group>"; };
 		753F5F022E285B1A00F4C290 /* KeePassiumTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = KeePassiumTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -702,32 +620,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75D0766B28B639D200F02E39 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75D2190629C220A000D6F327 /* SystemConfiguration.framework in Frameworks */,
-				75D2190829C220A700D6F327 /* WebKit.framework in Frameworks */,
-				75D2190229C2209300D6F327 /* QuartzCore.framework in Frameworks */,
-				75D2191529C2214B00D6F327 /* libc++.tbd in Frameworks */,
-				75D0766C28B639D200F02E39 /* KeePassiumLib.framework in Frameworks */,
-				75D2190429C2209900D6F327 /* Security.framework in Frameworks */,
-				75D0766D28B639D200F02E39 /* LocalAuthentication.framework in Frameworks */,
-				F331EF302A8509BA0084473D /* Zxcvbn in Frameworks */,
-				75D218F829C21FCB00D6F327 /* MessageUI.framework in Frameworks */,
-				75D218FC29C2205700D6F327 /* CoreServices.framework in Frameworks */,
-				7521EADA2E8D55BE00016FB8 /* WhatsNewKit in Frameworks */,
-				75D2191629C2215600D6F327 /* libsqlite3.tbd in Frameworks */,
-				75D0766E28B639D200F02E39 /* AuthenticationServices.framework in Frameworks */,
-				75D2192F29C4C24800D6F327 /* MSAL in Frameworks */,
-				75D218FE29C2206000D6F327 /* ImageIO.framework in Frameworks */,
-				75D218FA29C2205100D6F327 /* AudioToolbox.framework in Frameworks */,
-				75D0766F28B639D200F02E39 /* StoreKit.framework in Frameworks */,
-				754A34CA2EB0F89C0050FBC4 /* IntuneMAMSwift in Frameworks */,
-				75D0767028B639D200F02E39 /* YubiKit in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		75D7DFA8233E5E310029AD87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -754,19 +646,6 @@
 		16DE7C3A873A37E1B4636309 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				75D2190E29C2210000D6F327 /* LocalAuthentication.framework */,
-				75D2190729C220A600D6F327 /* WebKit.framework */,
-				75D2190529C220A000D6F327 /* SystemConfiguration.framework */,
-				75D2190329C2209900D6F327 /* Security.framework */,
-				75D2190129C2209300D6F327 /* QuartzCore.framework */,
-				75D2190029C2207D00D6F327 /* libsqlite3.tbd */,
-				75D218FF29C2206A00D6F327 /* libc++.tbd */,
-				75D218FD29C2206000D6F327 /* ImageIO.framework */,
-				75D218FB29C2205700D6F327 /* CoreServices.framework */,
-				75D218F929C2205000D6F327 /* AudioToolbox.framework */,
-				75D218F729C21FCB00D6F327 /* MessageUI.framework */,
-				75A5452628B64F9000B942FE /* IntuneMAMSwiftStub.xcframework */,
-				75A5452328B64F6C00B942FE /* IntuneMAMSwift.xcframework */,
 				751146E5233F9E2900443BCD /* KeePassiumLib.framework */,
 				751146E2233F9E1500443BCD /* KeePassiumLib.framework */,
 				75A26777228F4E820097C693 /* StoreKit.framework */,
@@ -798,7 +677,6 @@
 				750CFBC721BA9ACD00E62B09 /* KeePassium AutoFill.appex */,
 				75B38C81233E5B7C006BDEFC /* KeePassium Pro.app */,
 				75D7DFBE233E5E310029AD87 /* KeePassium Pro AutoFill.appex */,
-				75D076D828B639D200F02E39 /* KeePassium Org.app */,
 				F37CAA392A88F7330000EF64 /* KeePassiumTests.xctest */,
 				75060C552B8CEA84006C7B50 /* MacUtils.bundle */,
 			);
@@ -908,36 +786,6 @@
 			productReference = 75B38C81233E5B7C006BDEFC /* KeePassium Pro.app */;
 			productType = "com.apple.product-type.application";
 		};
-		75D075AB28B639D200F02E39 /* KeePassium Org */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 75D076D528B639D200F02E39 /* Build configuration list for PBXNativeTarget "KeePassium Org" */;
-			buildPhases = (
-				75D075B028B639D200F02E39 /* Sources */,
-				75D0766B28B639D200F02E39 /* Frameworks */,
-				75D0767128B639D200F02E39 /* Resources */,
-				75D076D028B639D200F02E39 /* Embed App Extensions */,
-				75D076D228B639D200F02E39 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				75060C612B8CEB3E006C7B50 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				753F586F2E285A6700F4C290 /* KeePassium */,
-			);
-			name = "KeePassium Org";
-			packageProductDependencies = (
-				75D075AE28B639D200F02E39 /* YubiKit */,
-				75D2192E29C4C24800D6F327 /* MSAL */,
-				F331EF2F2A8509BA0084473D /* Zxcvbn */,
-				7521EAD92E8D55BE00016FB8 /* WhatsNewKit */,
-				754A34C92EB0F89C0050FBC4 /* IntuneMAMSwift */,
-			);
-			productName = KeePassium;
-			productReference = 75D076D828B639D200F02E39 /* KeePassium Org.app */;
-			productType = "com.apple.product-type.application";
-		};
 		75D7DF7A233E5E310029AD87 /* KeePassium Pro AutoFill */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75D7DFBB233E5E310029AD87 /* Build configuration list for PBXNativeTarget "KeePassium Pro AutoFill" */;
@@ -995,7 +843,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1250;
-				ORGANIZATIONNAME = "Andrei Popleteev";
+				ORGANIZATIONNAME = "Alzimer Ahmed";
 				TargetAttributes = {
 					75060C542B8CEA84006C7B50 = {
 						CreatedOnToolsVersion = 15.2;
@@ -1089,10 +937,8 @@
 			mainGroup = 754BF0722082A6BD00E3A292;
 			packageReferences = (
 				75D1C58427B415480079E97E /* XCRemoteSwiftPackageReference "yubikit-ios" */,
-				75D2192B29C4C23700D6F327 /* XCRemoteSwiftPackageReference "microsoft-authentication-library-for-objc" */,
 				F331EF262A8509860084473D /* XCRemoteSwiftPackageReference "zxcvbn-ios" */,
 				F33344342E844F90002EE262 /* XCRemoteSwiftPackageReference "WhatsNewKit" */,
-				754A34C62EB0F81A0050FBC4 /* XCRemoteSwiftPackageReference "ms-intune-app-sdk-ios" */,
 			);
 			preferredProjectObjectVersion = 48;
 			productRefGroup = 754BF07C2082A6BD00E3A292 /* Products */;
@@ -1103,7 +949,6 @@
 				750CFBC621BA9ACD00E62B09 /* KeePassium AutoFill */,
 				75B38BEF233E5B7C006BDEFC /* KeePassium Pro */,
 				75D7DF7A233E5E310029AD87 /* KeePassium Pro AutoFill */,
-				75D075AB28B639D200F02E39 /* KeePassium Org */,
 				F37CAA382A88F7330000EF64 /* KeePassiumTests */,
 				75060C542B8CEA84006C7B50 /* MacUtils */,
 			);
@@ -1133,13 +978,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		75B38C50233E5B7C006BDEFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75D0767128B639D200F02E39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1213,13 +1051,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75D075B028B639D200F02E39 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		75D7DF7B233E5E310029AD87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1249,12 +1080,6 @@
 			target = 75060C542B8CEA84006C7B50 /* MacUtils */;
 			targetProxy = 75060C5D2B8CEB33006C7B50 /* PBXContainerItemProxy */;
 		};
-		75060C612B8CEB3E006C7B50 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilter = maccatalyst;
-			target = 75060C542B8CEA84006C7B50 /* MacUtils */;
-			targetProxy = 75060C602B8CEB3E006C7B50 /* PBXContainerItemProxy */;
-		};
 		750CFBD221BA9ACD00E62B09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 750CFBC621BA9ACD00E62B09 /* KeePassium AutoFill */;
@@ -1282,12 +1107,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 84W4PHXS24;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 KeePassium Labs. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 Alzimer Ahmed. PassPouch comes with ABSOLUTELY NO WARRANTY; see LICENSE.txt.";
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keepassium.MacUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.MacUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1308,12 +1133,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 84W4PHXS24;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 KeePassium Labs. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 Alzimer Ahmed. PassPouch comes with ABSOLUTELY NO WARRANTY; see LICENSE.txt.";
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keepassium.MacUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.MacUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1328,14 +1153,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				APP_URL_SCHEME = keepassium;
+				APP_URL_SCHEME = passpouch;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "KeePassium AutoFill/KeePassium_AutoFill.entitlements";
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "KeePassium AutoFill/KeePassium_AutoFill-macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84W4PHXS24;
 				INFOPLIST_FILE = "KeePassium AutoFill/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "$(TARGET_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "PassPouch AutoFill";
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
 				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1347,7 +1172,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.keepassium.ios.KeePassium-AutoFill";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.passpouch.ios.AutoFill";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -1361,14 +1186,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				APP_URL_SCHEME = keepassium;
+				APP_URL_SCHEME = passpouch;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "KeePassium AutoFill/KeePassium_AutoFill.entitlements";
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "KeePassium AutoFill/KeePassium_AutoFill-macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84W4PHXS24;
 				INFOPLIST_FILE = "KeePassium AutoFill/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "$(TARGET_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "PassPouch AutoFill";
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
 				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1379,7 +1204,7 @@
 				LLVM_LTO = YES;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.keepassium.ios.KeePassium-AutoFill";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.passpouch.ios.AutoFill";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -1528,7 +1353,7 @@
 		754BF0922082A6BD00E3A292 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APP_URL_SCHEME = keepassium;
+				APP_URL_SCHEME = passpouch;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon";
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = KeePassium/KeePassium.entitlements;
@@ -1539,10 +1364,9 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_UNROLL_LOOPS = YES;
-				GOOGLE_OAUTH_SCHEME = "com.googleusercontent.apps.563540931668-qep200es3dnjajnjcnk1dgfsdnm1v9f2";
 				HEADER_SEARCH_PATHS = "../YubiKit/**";
 				INFOPLIST_FILE = KeePassium/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(TARGET_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = PassPouch;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
 				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1551,7 +1375,7 @@
 				);
 				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keepassium.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG MAIN_APP";
@@ -1564,7 +1388,7 @@
 		754BF0932082A6BD00E3A292 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APP_URL_SCHEME = keepassium;
+				APP_URL_SCHEME = passpouch;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon";
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = KeePassium/KeePassium.entitlements;
@@ -1575,10 +1399,9 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_UNROLL_LOOPS = YES;
-				GOOGLE_OAUTH_SCHEME = "com.googleusercontent.apps.563540931668-qep200es3dnjajnjcnk1dgfsdnm1v9f2";
 				HEADER_SEARCH_PATHS = "../YubiKit/**";
 				INFOPLIST_FILE = KeePassium/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(TARGET_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = PassPouch;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
 				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1587,7 +1410,7 @@
 				);
 				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keepassium.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = MAIN_APP;
@@ -1610,10 +1433,9 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_UNROLL_LOOPS = YES;
-				GOOGLE_OAUTH_SCHEME = "com.googleusercontent.apps.563540931668-ig832ojb8oiko83l9no222ah4lqv7031";
 				HEADER_SEARCH_PATHS = "../YubiKit/**";
 				INFOPLIST_FILE = "$(SRCROOT)/KeePassium/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "$(TARGET_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "PassPouch Pro";
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
 				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1622,7 +1444,7 @@
 				);
 				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keepassium.ios.pro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.pro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG MAIN_APP PREPAID_VERSION";
@@ -1645,10 +1467,9 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_UNROLL_LOOPS = YES;
-				GOOGLE_OAUTH_SCHEME = "com.googleusercontent.apps.563540931668-ig832ojb8oiko83l9no222ah4lqv7031";
 				HEADER_SEARCH_PATHS = "../YubiKit/**";
 				INFOPLIST_FILE = "$(SRCROOT)/KeePassium/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "$(TARGET_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "PassPouch Pro";
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
 				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1657,86 +1478,10 @@
 				);
 				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keepassium.ios.pro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.pro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "MAIN_APP PREPAID_VERSION";
-				SWIFT_OBJC_BRIDGING_HEADER = "KeePassium-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		75D076D628B639D200F02E39 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APP_URL_SCHEME = keepassium.org;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon-emm";
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = KeePassium/KeePassiumOrg.entitlements;
-				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "KeePassium/KeePassiumOrg-macOS.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84W4PHXS24;
-				ENABLE_BITCODE = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_OPTIMIZATION_LEVEL = fast;
-				GCC_UNROLL_LOOPS = YES;
-				GOOGLE_OAUTH_SCHEME = "com.googleusercontent.apps.563540931668-j6uf253opkpmu9jbtuk19r9n1cqe65si";
-				HEADER_SEARCH_PATHS = "../YubiKit/**";
-				INFOPLIST_FILE = "$(SRCROOT)/KeePassium/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "KeePassium Org";
-				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
-				INFOPLIST_PREPROCESS = YES;
-				INFOPLIST_PREPROCESSOR_DEFINITIONS = INTUNE;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LLVM_LTO = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keepassium.intune;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_SWIFT_SYMBOLS = NO;
-				SUPPORTS_MACCATALYST = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG MAIN_APP PREPAID_VERSION INTUNE";
-				SWIFT_OBJC_BRIDGING_HEADER = "KeePassium-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		75D076D728B639D200F02E39 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APP_URL_SCHEME = keepassium.org;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon-emm";
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = KeePassium/KeePassiumOrg.entitlements;
-				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "KeePassium/KeePassiumOrg-macOS.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84W4PHXS24;
-				ENABLE_BITCODE = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_OPTIMIZATION_LEVEL = fast;
-				GCC_UNROLL_LOOPS = YES;
-				GOOGLE_OAUTH_SCHEME = "com.googleusercontent.apps.563540931668-j6uf253opkpmu9jbtuk19r9n1cqe65si";
-				HEADER_SEARCH_PATHS = "../YubiKit/**";
-				INFOPLIST_FILE = "$(SRCROOT)/KeePassium/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "KeePassium Org";
-				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
-				INFOPLIST_PREPROCESS = YES;
-				INFOPLIST_PREPROCESSOR_DEFINITIONS = INTUNE;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LLVM_LTO = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keepassium.intune;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_SWIFT_SYMBOLS = NO;
-				SUPPORTS_MACCATALYST = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "MAIN_APP PREPAID_VERSION INTUNE";
 				SWIFT_OBJC_BRIDGING_HEADER = "KeePassium-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1754,7 +1499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84W4PHXS24;
 				INFOPLIST_FILE = "$(SRCROOT)/KeePassium AutoFill/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "$(TARGET_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "PassPouch AutoFill";
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
 				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1766,7 +1511,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.keepassium.ios.pro.KeePassium-AutoFill";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.passpouch.ios.pro.AutoFill";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -1787,7 +1532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84W4PHXS24;
 				INFOPLIST_FILE = "$(SRCROOT)/KeePassium AutoFill/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "$(TARGET_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "PassPouch AutoFill";
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
 				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1798,7 +1543,7 @@
 				LLVM_LTO = YES;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.keepassium.ios.pro.KeePassium-AutoFill";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.passpouch.ios.pro.AutoFill";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -1820,7 +1565,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keepassium.ios.KeePassiumTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.KeePassiumTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1840,7 +1585,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keepassium.ios.KeePassiumTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.KeePassiumTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1897,15 +1642,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75D076D528B639D200F02E39 /* Build configuration list for PBXNativeTarget "KeePassium Org" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				75D076D628B639D200F02E39 /* Debug */,
-				75D076D728B639D200F02E39 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		75D7DFBB233E5E310029AD87 /* Build configuration list for PBXNativeTarget "KeePassium Pro AutoFill" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1927,35 +1663,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		754A34C62EB0F81A0050FBC4 /* XCRemoteSwiftPackageReference "ms-intune-app-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/keepassium/ms-intune-app-sdk-ios";
-			requirement = {
-				branch = "keepassium-168";
-				kind = branch;
-			};
-		};
-		75D075AF28B639D200F02E39 /* XCRemoteSwiftPackageReference "yubikit-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/keepassium/yubikit-ios.git";
-			requirement = {
-				branch = keepassium;
-				kind = branch;
-			};
-		};
 		75D1C58427B415480079E97E /* XCRemoteSwiftPackageReference "yubikit-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/keepassium/yubikit-ios.git";
 			requirement = {
 				branch = "keepassium-165";
-				kind = branch;
-			};
-		};
-		75D2192B29C4C23700D6F327 /* XCRemoteSwiftPackageReference "microsoft-authentication-library-for-objc" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/keepassium/microsoft-authentication-library-for-objc/";
-			requirement = {
-				branch = "keepassium-166";
 				kind = branch;
 			};
 		};
@@ -1988,11 +1700,6 @@
 			package = F33344342E844F90002EE262 /* XCRemoteSwiftPackageReference "WhatsNewKit" */;
 			productName = WhatsNewKit;
 		};
-		754A34C92EB0F89C0050FBC4 /* IntuneMAMSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 754A34C62EB0F81A0050FBC4 /* XCRemoteSwiftPackageReference "ms-intune-app-sdk-ios" */;
-			productName = IntuneMAMSwift;
-		};
 		756D946C2BA2F27D0084BDF5 /* YubiKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 75D1C58427B415480079E97E /* XCRemoteSwiftPackageReference "yubikit-ios" */;
@@ -2001,11 +1708,6 @@
 		756D946E2BA2F29F0084BDF5 /* YubiKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 75D1C58427B415480079E97E /* XCRemoteSwiftPackageReference "yubikit-ios" */;
-			productName = YubiKit;
-		};
-		75D075AE28B639D200F02E39 /* YubiKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 75D075AF28B639D200F02E39 /* XCRemoteSwiftPackageReference "yubikit-ios" */;
 			productName = YubiKit;
 		};
 		75D1C58527B415480079E97E /* YubiKit */ = {
@@ -2017,11 +1719,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 75D1C58427B415480079E97E /* XCRemoteSwiftPackageReference "yubikit-ios" */;
 			productName = YubiKit;
-		};
-		75D2192E29C4C24800D6F327 /* MSAL */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 75D2192B29C4C23700D6F327 /* XCRemoteSwiftPackageReference "microsoft-authentication-library-for-objc" */;
-			productName = MSAL;
 		};
 		F331EF272A8509860084473D /* Zxcvbn */ = {
 			isa = XCSwiftPackageProductDependency;

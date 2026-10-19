@@ -11,21 +11,21 @@ import Foundation
 public class AppGroup {
     public static var id: String = {
         if BusinessModel.isIntuneEdition {
-            return "group.com.keepassium.intune"
+            fatalError("Intune edition is not supported in PassPouch")
         } else {
-            return "group.com.keepassium"
+            return "group.com.passpouch"
         }
     }()
 
     public static let appURLScheme: String = {
         if BusinessModel.isIntuneEdition {
-            return "keepassium.org"
+            fatalError("Intune edition is not supported in PassPouch")
         }
         switch BusinessModel.type {
         case .freemium:
-            return "keepassium"
+            return "passpouch"
         case .prepaid:
-            return "keepassium.pro"
+            return "keepassium.pro" // Phase 4 (monetization neutralization) owns this scheme
         }
     }()
 

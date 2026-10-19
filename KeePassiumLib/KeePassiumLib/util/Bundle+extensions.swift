@@ -9,7 +9,7 @@
 import Foundation
 
 extension Bundle {
-    internal static let framework = Bundle(identifier: "com.keepassium.ios.KeePassiumLib")!
+    internal static let framework = Bundle(identifier: "com.passpouch.ios.KeePassiumLib")!
 
     static var mainAppURL: URL {
         let pathComponents = main.bundleURL.pathComponents
