@@ -133,6 +133,9 @@ public extension URL {
                 return $0
             }
         }
+        // The fragment can carry a secret (e.g. the key of a share link);
+        // never let it reach logs.
+        components.fragment = nil
         return components.url ?? redactedPathURL
     }
 }

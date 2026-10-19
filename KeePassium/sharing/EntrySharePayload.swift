@@ -149,8 +149,8 @@ public enum EntrySharePayload {
         guard combined.count > AES.GCM.nonceByteSize else {
             throw ShareLinkError.malformedLink
         }
-        let symmetricKey = SymmetricKey(data: key)
         guard key.count == 32 else { throw ShareLinkError.decryptionFailed }
+        let symmetricKey = SymmetricKey(data: key)
         let sealedBox: AES.GCM.SealedBox
         do {
             sealedBox = try AES.GCM.SealedBox(combined: Data(combined))
@@ -170,6 +170,11 @@ public enum EntrySharePayload {
     // MARK: Link assembly / parsing
 
     static let linkHost = "share"
+
+    /// Maximum accepted base64url payload length in a share link, in
+    /// characters. Real payloads stay far below this; the cap only blocks
+    /// memory-exhaustion attempts via a crafted link.
+    static let maxPayloadLinkLength = 4_000_000
 
     /// Assembles the share link: `passpouch://share/<payload>#<key>`.
     /// The key is in the fragment only — fragments are never sent to any
@@ -193,6 +198,11 @@ public enum EntrySharePayload {
             throw ShareLinkError.malformedLink
         }
         let payloadString = url.pathComponents.count > 1 ? url.pathComponents[1] : ""
+        // Guard against absurdly large payloads (memory-exhaustion via a
+        // crafted link) before base64-decoding anything.
+        guard payloadString.count <= Self.maxPayloadLinkLength else {
+            throw ShareLinkError.malformedLink
+        }
         guard let payloadData = Data(base64URLEncoded: payloadString),
               let keyString = url.fragment,
               let keyData = Data(base64URLEncoded: keyString),

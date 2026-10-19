@@ -57,6 +57,29 @@ final class EmergencyAccessCoordinator: BaseCoordinator {
         let shareSheet = ShareSheet(items: [temporaryURL])
         let hosting = UIHostingController(rootView: shareSheet)
         hosting.modalPresentationStyle = .formSheet
+        // Delete the temporary PDF once the share sheet is closed, so the
+        // kit does not linger in the tmp directory.
+        hosting.presentationController?.delegate = self
         _router.navigationController.present(hosting, animated: true)
+    }
+}
+
+extension EmergencyAccessCoordinator: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        cleanupKitPDF()
+    }
+
+    func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
+        cleanupKitPDF()
+    }
+
+    private func cleanupKitPDF() {
+        let temporaryURL = FileManager.default.temporaryDirectory
+            .appendingPathComponent("PassPouch-Emergency-Kit.pdf")
+        do {
+            try FileManager.default.removeItem(at: temporaryURL)
+        } catch {
+            Diag.warning("Failed to delete temporary Emergency Kit PDF")
+        }
     }
 }

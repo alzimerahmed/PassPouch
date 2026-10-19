@@ -105,18 +105,21 @@ public final class WebDAVManager: NSObject {
         completionQueue: OperationQueue? = nil,
         completion: @escaping (Result<Void, FileAccessError>) -> Void
     ) {
+        objc_sync_enter(self)
+        // Snapshot the last observed ETag under the lock so the conditional
+        // upload cannot race a concurrent completion that updates the cache.
+        let ifMatchETag: String? = observedETags[url]
         let uploadRequest = WebDAVUploadRequest(
             url: url,
             credential: credential.toURLCredential(),
             allowUntrustedCertificate: credential.allowUntrustedCertificate,
             data: data,
-            ifMatch: observedETags[url],
+            ifMatch: ifMatchETag,
             timeout: timeout,
             completionQueue: completionQueue ?? .main,
             completion: completion
         )
 
-        objc_sync_enter(self)
         let urlSession = getURLSession(for: url)
         let uploadTask = urlSession.dataTask(with: uploadRequest.makeURLRequest())
 
@@ -290,8 +293,8 @@ extension WebDAVManager: URLSessionDataDelegate, URLSessionTaskDelegate {
         }
         let requestID = RequestIdentifier(for: dataTask, in: session)
         guard let webdavRequest = webdavRequests[requestID] else {
-            Diag.warning("Invalid request identifier")
-            preconditionFailure()
+            Diag.warning("Invalid request identifier, ignoring received data chunk")
+            return
         }
         webdavRequest.appendReceivedData(data)
     }
@@ -308,8 +311,8 @@ extension WebDAVManager: URLSessionDataDelegate, URLSessionTaskDelegate {
 
         let requestID = RequestIdentifier(for: task, in: session)
         guard let webdavRequest = webdavRequests.removeValue(forKey: requestID) else {
-            Diag.error("Invalid request identifier")
-            preconditionFailure()
+            Diag.error("Invalid request identifier, ignoring completion")
+            return
         }
 
         if let error {
@@ -319,8 +322,8 @@ extension WebDAVManager: URLSessionDataDelegate, URLSessionTaskDelegate {
         guard let response = task.response,
               let httpResponse = response as? HTTPURLResponse
         else {
-            Diag.error("Unexpected response type")
-            preconditionFailure()
+            Diag.error("Unexpected response type, ignoring completion")
+            return
         }
         updateObservedETag(for: webdavRequest, response: httpResponse)
         webdavRequest.handleResponse(httpResponse)
