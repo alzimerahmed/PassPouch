@@ -108,7 +108,20 @@ extension AutoFillCoordinator {
         }
 
         let databaseSettingsManager = DatabaseSettingsManager.shared
-        guard let dbSettings = databaseSettingsManager.getSettings(for: dbRef),
+        let hasStoredMasterKey: Bool = {
+            guard let dbSettings = databaseSettingsManager.getSettings(for: dbRef) else {
+                return false
+            }
+            return dbSettings.masterKey != nil
+        }()
+        // Quick-unlock routing (Phase 7, gap #13): serve directly when a
+        // master key is already in the shared keychain; otherwise fall back
+        // to the extension's own unlock UI — the main app is never launched.
+        let quickUnlockRoute = QuickUnlockRoute.decide(
+            hasParsedRecord: true,
+            hasStoredMasterKey: hasStoredMasterKey
+        )
+        guard quickUnlockRoute == .serveDirectly, let dbSettings = databaseSettingsManager.getSettings(for: dbRef),
               let masterKey = dbSettings.masterKey
         else {
             log.warning("Failed to auto-open the DB, switching to UI")

@@ -185,6 +185,32 @@ private struct SearchableData {
 
         var result = [ASCredentialServiceIdentifier]()
         result.append(contentsOf: urlBasedPart)
+        result.append(contentsOf: QuickTypeAutoFillStorage.makeDomainServiceIdentifiers(fromURLs: Array(urls)))
+        return result
+    }
+}
+
+extension QuickTypeAutoFillStorage {
+    /// Derives `.domain`-type service identifiers from URL hosts (Phase 7,
+    /// gap #6). URL-type identifiers alone can miss matches when the system
+    /// compares bare domains; adding the host as a `.domain` identifier
+    /// improves QuickType inline suggestion coverage.
+    static func makeDomainServiceIdentifiers(fromURLs urls: [URL]) -> [ASCredentialServiceIdentifier] {
+        var seenDomains = Set<String>()
+        var result = [ASCredentialServiceIdentifier]()
+        for url in urls {
+            guard let host = url.host?.lowercased(), !host.isEmpty else {
+                continue
+            }
+            // Strip the leading "www." so example.com matches www.example.com
+            let domain = host.hasPrefix("www.") ? String(host.dropFirst(4)) : host
+            guard !domain.isEmpty, seenDomains.insert(domain).inserted else {
+                continue
+            }
+            result.append(
+                ASCredentialServiceIdentifier(identifier: domain, type: .domain)
+            )
+        }
         return result
     }
 }

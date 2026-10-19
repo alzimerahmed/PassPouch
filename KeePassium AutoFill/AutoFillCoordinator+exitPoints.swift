@@ -272,13 +272,20 @@ extension AutoFillCoordinator {
 
 extension AutoFillCoordinator {
     private func getValueForClipboard(for entry: Entry) -> String? {
-        guard Settings.current.isCopyTOTPOnAutoFill else {
+        let decision = TOTPAutoFillDecision.decide(
+            isOTPCopyEnabled: Settings.current.isCopyTOTPOnAutoFill,
+            hasTOTP: entry.totpGenerator() != nil,
+            hasUI: hasUI
+        )
+        switch decision {
+        case .returnOnly:
             return nil
+        case .copyOTPAndReturn, .requireUIForOTPCopy:
+            // In the no-UI case (.requireUIForOTPCopy) the caller's hasUI
+            // guard cancels the request with .userInteractionRequired so the
+            // extension UI can perform the explicit clipboard write.
+            log.info("Auto-copying TOTP to clipboard.")
+            return entry.totpGenerator()?.generate()
         }
-        guard let totpGenerator = entry.totpGenerator() else {
-            return nil
-        }
-        log.info("Auto-copying TOTP to clipboard.")
-        return totpGenerator.generate()
     }
 }
