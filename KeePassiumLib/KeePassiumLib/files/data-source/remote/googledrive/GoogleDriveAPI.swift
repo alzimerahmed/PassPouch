@@ -16,7 +16,7 @@ internal enum GoogleDriveAPI {
     static var clientID: String { return "" }
     static var callbackURLScheme: String { return "" }
 
-        static var authRedirectURI = callbackURLScheme + "://"
+    static var authRedirectURI = callbackURLScheme + "://"
     static func authScope(for scope: OAuthScope) -> [String] {
         switch scope {
         case .fullAccess:

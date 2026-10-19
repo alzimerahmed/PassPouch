@@ -16,7 +16,7 @@
     </string>
     <string keyName="supportEmail">
       <defaultValue>
-        <value>org-alzimerahmed84@gmail.com</value>
+        <value>alzimerahmed84@gmail.com</value>
       </defaultValue>
       <constraint nullable="true"></constraint>
     </string>
@@ -993,13 +993,13 @@
           <option value="net.box.BoxNet.documentPickerFileProvider">
             <language value="en-US">Box (via Files integration)</language>
           </option>
-          <option value="com.passpouch.fileprovider.dropbox">
+          <option value="com.keepassium.fileprovider.dropbox">
             <language value="en-US">Dropbox (direct connection)</language>
           </option>
           <option value="com.getdropbox.Dropbox.FileProvider">
             <language value="en-US">Dropbox (via Files integration)</language>
           </option>
-          <option value="com.passpouch.fileprovider.googledrive">
+          <option value="com.keepassium.fileprovider.googledrive">
             <language value="en-US">Google Drive (direct connection)</language>
           </option>
           <option value="com.google.Drive.FileProviderExtension">
@@ -1011,7 +1011,7 @@
           <option value="com.apple.CloudDocs.MobileDocumentsFileProvider">
             <language value="en-US">iCloud Drive (before iOS 16.5; via Files integration)</language>
           </option>
-          <option value="com.passpouch.fileprovider.onedrive">
+          <option value="com.keepassium.fileprovider.onedrive">
             <language value="en-US">OneDrive (direct connection)</language>
           </option>
           <option value="com.microsoft.skydrive.onedrivefileprovider">
@@ -1023,7 +1023,7 @@
           <option value="com.apple.filesystems.UserFS.FileProvider">
             <language value="en-US">USB storage (via Files integration)</language>
           </option>
-          <option value="com.passpouch.fileprovider.webdav">
+          <option value="com.keepassium.fileprovider.webdav">
             <language value="en-US">WebDAV (direct connection)</language>
           </option>
         </options>

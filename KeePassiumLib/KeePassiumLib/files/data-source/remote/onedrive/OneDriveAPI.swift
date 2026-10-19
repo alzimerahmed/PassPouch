@@ -13,7 +13,7 @@ internal enum OneDriveAPI {
     // own Azure AD app and returning its client ID here.
     static var clientID: String { return "" }
 
-        static let callbackURLScheme = AppGroup.appURLScheme
+    static let callbackURLScheme = AppGroup.appURLScheme
     static let tokenRequestURL = URL(string: "https://login.microsoftonline.com/common/oauth2/v2.0/token")!
     static let itemFields = "id,name,size,createdDateTime,lastModifiedDateTime,folder,file,remoteItem"
     static let childrenListLimit = 500
