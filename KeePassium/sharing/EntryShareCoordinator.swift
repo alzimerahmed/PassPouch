@@ -144,6 +144,12 @@ final class EntryShareCoordinator: BaseCoordinator {
         let activityVC = UIActivityViewController(
             activityItems: [link],
             applicationActivities: nil)
+        // iPad requires a popover anchor; iPhone/catalyst ignore this.
+        activityVC.popoverPresentationController?.sourceView = hostingController.view
+        activityVC.popoverPresentationController?.sourceRect = CGRect(
+            x: hostingController.view.bounds.midX,
+            y: hostingController.view.bounds.maxY,
+            width: 0, height: 0)
         _router.navigationController.present(activityVC, animated: true)
     }
 }

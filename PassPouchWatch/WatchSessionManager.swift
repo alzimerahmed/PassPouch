@@ -12,14 +12,24 @@ import WatchConnectivity
 /// sanitized snapshot from the phone and stores it in the watch's own
 /// keychain; wipes it when the phone reports a database lock. The snapshot is
 /// never written to a plain file.
-final class WatchSessionManager: NSObject, WCSessionDelegate {
+final class WatchSessionManager: NSObject, WCSessionDelegate, ObservableObject {
     static let shared = WatchSessionManager()
+
+    /// Mirror of the keychain snapshot, published so the UI clears
+    /// immediately when the phone reports a database lock (not just on next
+    /// appear).
+    @Published private(set) var snapshot: WatchSnapshot?
 
     func activate() {
         guard WCSession.isSupported() else { return }
         let session = WCSession.default
         session.delegate = self
         session.activate()
+    }
+
+    /// Reloads the published snapshot from the keychain (call on appear).
+    func reloadSnapshot() {
+        snapshot = SnapshotStore.load()
     }
 
     /// Asks the phone for a fresh snapshot (answered only if a database is
@@ -62,10 +72,12 @@ final class WatchSessionManager: NSObject, WCSessionDelegate {
     private func handle(message: [String: Any]) {
         if message[WatchMessage.locked] as? Bool == true {
             SnapshotStore.clear()
+            snapshot = nil
             return
         }
         if let data = message[WatchMessage.snapshotData] as? Data {
             SnapshotStore.save(data: data)
+            snapshot = SnapshotStore.load()
         }
     }
 }

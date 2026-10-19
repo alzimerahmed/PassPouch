@@ -112,7 +112,7 @@ struct SharedItemFieldRow: View {
                     .foregroundColor(.secondary)
                 Spacer()
                 Button {
-                    UIPasteboard.general.string = value
+                    Clipboard.general.copyWithTimeout(value)
                     HapticFeedback.play(.copiedToClipboard)
                 } label: {
                     Image(systemName: "doc.on.doc")

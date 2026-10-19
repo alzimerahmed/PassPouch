@@ -73,7 +73,7 @@ public enum Shamir {
         secret: Data,
         threshold: Int,
         sharesCount: Int,
-        using rng: RandomNumberGenerator
+        using rng: inout RandomNumberGenerator
     ) throws -> [Share] {
         guard secret.count > 0 else { throw ShamirError.invalidParameters }
         guard sharesCount >= 2, sharesCount <= 255 else { throw ShamirError.invalidParameters }

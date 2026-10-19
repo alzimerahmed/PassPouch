@@ -101,10 +101,10 @@ final class QuickAccessViewModel: ObservableObject {
             let generator = entry.totpGenerator()
             return QuickAccessEntry(
                 id: entry.uuid,
-                title: entry.title ?? "",
-                username: entry.username ?? "",
-                password: entry.password ?? "",
-                url: entry.url ?? "",
+                title: entry.title,
+                username: entry.username,
+                password: entry.password,
+                url: entry.url,
                 hasTOTP: generator != nil,
                 totpGenerator: generator
             )

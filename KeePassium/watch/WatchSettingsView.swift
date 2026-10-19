@@ -20,7 +20,13 @@ struct WatchSettingsView: View {
     var body: some View {
         Form {
             Section {
-                Toggle(LString.watchAllowOnWatch, isOn: $isSharingEnabled)
+                Toggle(
+                    LString.watchAllowOnWatch,
+                    isOn: Binding(
+                        get: { isSharingEnabled },
+                        set: { isSharingEnabled = $0; persistAndResend() }
+                    )
+                )
             } footer: {
                 Text(LString.watchPrivacyFooter)
             }

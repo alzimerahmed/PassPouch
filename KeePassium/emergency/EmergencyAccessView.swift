@@ -141,7 +141,7 @@ struct ShareRow: View {
                 .textSelection(.enabled)
         }
         .sheet(isPresented: $showQR) {
-            ShareSheet(items: [shareText, QRImageMaker.makeQRCode(for: shareText) as Any])
+            ShareSheet(items: [shareText, QRImageMaker.makeQRCode(for: shareText)].compactMap { $0 })
         }
     }
 }
@@ -197,7 +197,7 @@ struct ShamirCombineView: View {
             let secret = try Shamir.combine(shares: shares)
             revealedPassword = String(data: secret, encoding: .utf8)
                 ?? LString.emergencyBadShares
-        } catch ShamirError.notEnoughShares {
+        } catch Shamir.ShamirError.notEnoughShares {
             errorMessage = LString.emergencyNotEnoughShares
         } catch {
             errorMessage = LString.emergencyBadShares

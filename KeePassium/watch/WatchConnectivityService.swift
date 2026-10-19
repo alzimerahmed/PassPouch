@@ -121,11 +121,11 @@ final class WatchConnectivityService: NSObject, WCSessionDelegate {
         if session.isReachable {
             session.sendMessage(message, replyHandler: nil) { error in
                 Diag.warning("Watch message failed, falling back to context [message: \(error.localizedDescription)]")
-                session.updateApplicationContext(message)
+                _ = try? session.updateApplicationContext(message)
             }
         } else {
             // Delivered when the watch next becomes reachable.
-            session.updateApplicationContext(message)
+            _ = try? session.updateApplicationContext(message)
         }
     }
 

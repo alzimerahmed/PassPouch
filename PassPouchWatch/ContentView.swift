@@ -11,12 +11,12 @@ import SwiftUI
 /// iPhone app (ADR-013). Shows title, username, live TOTP code and a
 /// reveal-on-press password. No copy/paste on watchOS — view only.
 struct ContentView: View {
-    @State private var snapshot: WatchSnapshot?
+    @ObservedObject private var session = WatchSessionManager.shared
 
     var body: some View {
         NavigationStack {
             Group {
-                if let snapshot, !snapshot.entries.isEmpty {
+                if let snapshot = session.snapshot, !snapshot.entries.isEmpty {
                     List(snapshot.entries, id: \.id) { entry in
                         NavigationLink {
                             EntryDetailView(entry: entry)
@@ -41,9 +41,12 @@ struct ContentView: View {
             }
             .navigationTitle(Text("PassPouch"))
         }
+        // Reset the navigation stack when the snapshot is wiped (phone lock),
+        // so no open detail view keeps showing secrets.
+        .id(session.snapshot == nil)
         .onAppear {
-            snapshot = SnapshotStore.load()
-            WatchSessionManager.shared.requestSnapshot()
+            session.reloadSnapshot()
+            session.requestSnapshot()
         }
     }
 
