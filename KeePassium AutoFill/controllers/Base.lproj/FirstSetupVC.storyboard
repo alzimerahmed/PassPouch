@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--KeePassium-->
+        <!--PassPouch-->
         <scene sceneID="dOW-Pb-ioh">
             <objects>
                 <viewController storyboardIdentifier="FirstSetupVC" id="sWN-0A-UAO" customClass="FirstSetupVC" customModule="KeePassium_AutoFill" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
                             <constraint firstItem="UAW-0G-N5G" firstAttribute="top" secondItem="DKP-uL-37z" secondAttribute="bottom" constant="16" id="zjH-pK-aKO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="KeePassium" id="rzY-Ci-bd9">
+                    <navigationItem key="navigationItem" title="PassPouch" id="rzY-Ci-bd9">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mez-Ai-igU">
                             <connections>
                                 <action selector="didPressCancelButton:" destination="sWN-0A-UAO" id="NPc-7G-Kw3"/>
