@@ -8,6 +8,7 @@
 
 import KeePassiumLib
 import LocalAuthentication.LAContext
+import SwiftUI
 
 final class MainSettingsCoordinator: BaseCoordinator {
     private let mainSettingsVC: MainSettingsVC
@@ -98,6 +99,14 @@ extension MainSettingsCoordinator: MainSettingsVC.Delegate {
         let coordinator = BackupSettingsCoordinator(router: _router)
         coordinator.start()
         addChildCoordinator(coordinator, onDismiss: nil)
+    }
+
+    func didPressWatchSettings(in viewController: MainSettingsVC) {
+        // Phase 11a (ADR-013): SwiftUI screen per ADR-009.
+        WatchConnectivityService.shared.activate()
+        let hostingController = UIHostingController(rootView: WatchSettingsView())
+        hostingController.navigationItem.title = LString.titleWatchSettings
+        _router.push(hostingController, animated: true, onPop: nil)
     }
 
     func didPressShowDiagnostics(in viewController: MainSettingsVC) {

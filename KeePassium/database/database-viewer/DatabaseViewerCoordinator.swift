@@ -122,6 +122,10 @@ final class DatabaseViewerCoordinator: BaseCoordinator {
     override func start() {
         super.start()
 
+        // Phase 11a (ADR-013): notify the watch companion that a database is
+        // unlocked so it can refresh its opt-in entry snapshot.
+        WatchConnectivityService.shared.databaseDidUnlock(_databaseFile)
+
         _pushInitialGroupViewers(replacingTopVC: _splitViewController.isCollapsed)
         if _splitViewController.isExpanded {
             _splitViewController.show(.primary)
@@ -209,6 +213,9 @@ final class DatabaseViewerCoordinator: BaseCoordinator {
             }
         }
         Diag.debug("Database closed [locked: \(shouldLock), reason: \(reason)]")
+        // Phase 11a (ADR-013): the database is leaving the unlocked state —
+        // tell the watch companion to wipe its snapshot.
+        WatchConnectivityService.shared.databaseDidLock()
         stop(animated: animated, completion: completion)
     }
 

@@ -22,6 +22,7 @@ final class MainSettingsVC: BaseSettingsViewController<MainSettingsVC.Section> {
         func didPressDataProtectionSettings(in viewController: MainSettingsVC)
         func didPressNetworkAccessSettings(in viewController: MainSettingsVC)
         func didPressBackupSettings(in viewController: MainSettingsVC)
+        func didPressWatchSettings(in viewController: MainSettingsVC)
 
         func didPressShowDiagnostics(in viewController: MainSettingsVC)
         func didPressContactSupport(in viewController: MainSettingsVC)
@@ -180,6 +181,14 @@ final class MainSettingsVC: BaseSettingsViewController<MainSettingsVC.Section> {
                 fixedAccessories: [.disclosureIndicator()],
                 handler: { [unowned self] in
                     delegate?.didPressBackupSettings(in: self)
+                }
+            )),
+            .basic(.init(
+                title: LString.titleWatchSettings,
+                image: UIImage(systemName: "applewatch"),
+                fixedAccessories: [.disclosureIndicator()],
+                handler: { [unowned self] in
+                    delegate?.didPressWatchSettings(in: self)
                 }
             )),
         ])
