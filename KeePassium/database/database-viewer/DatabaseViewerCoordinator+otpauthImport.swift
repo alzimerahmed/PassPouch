@@ -66,7 +66,7 @@ final class OtpauthImportCoordinator: BaseCoordinator, DatabaseSaving {
     weak var delegate: Delegate?
 
     private let databaseFile: DatabaseFile
-    private let parent: Group
+    private let parent: KeePassiumLib.Group
 
     private var payloadText: String = ""
     private var selectedURIs: Set<String> = []
@@ -78,7 +78,7 @@ final class OtpauthImportCoordinator: BaseCoordinator, DatabaseSaving {
     var savingProgressHost: ProgressViewHost? { return _router }
     var saveSuccessHandler: (() -> Void)?
 
-    init(router: NavigationRouter, databaseFile: DatabaseFile, parent: Group) {
+    init(router: NavigationRouter, databaseFile: DatabaseFile, parent: KeePassiumLib.Group) {
         self.databaseFile = databaseFile
         self.parent = parent
 

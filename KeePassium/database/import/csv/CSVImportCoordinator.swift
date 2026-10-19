@@ -19,7 +19,7 @@ final class CSVImportCoordinator: BaseCoordinator, DatabaseSaving {
     weak var delegate: Delegate?
 
     private let databaseFile: DatabaseFile
-    private let parent: Group
+    private let parent: KeePassiumLib.Group
     private let wizardModel: CSVImportWizardModel
 
     private let hostingController: UIHostingController<CSVImportWizardView>
@@ -32,7 +32,7 @@ final class CSVImportCoordinator: BaseCoordinator, DatabaseSaving {
     init(
         router: NavigationRouter,
         databaseFile: DatabaseFile,
-        parent: Group,
+        parent: KeePassiumLib.Group,
         fileName: String,
         csvText: String
     ) throws {

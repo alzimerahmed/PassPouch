@@ -15,7 +15,8 @@ extension DatabaseViewerCoordinator {
     /// Security: works only on the already-unlocked database; never decrypts
     /// anything itself and never exposes the password in logs.
     func copyPasswordForDeepLink(entryUUID: UUID) {
-        guard let entry = Self.findEntry(withUUID: entryUUID, in: _database.root) else {
+        guard let root = _database.root,
+              let entry = Self.findEntry(withUUID: entryUUID, in: root) else {
             Diag.warning("Deep-link entry not found in open database [uuid: \(entryUUID.uuidString)]")
             _presenterForModals.showErrorAlert(
                 NSLocalizedString(
@@ -57,10 +58,8 @@ extension DatabaseViewerCoordinator {
     private func copyToClipboard(_ password: String) {
         Clipboard.general.copyWithTimeout(password)
         HapticFeedback.play(.copiedToClipboard)
-        _presenterForModals.makeToast(
+        _presenterForModals.showNotification(
             LString.titleCopiedToClipboard,
-            duration: 1.0,
-            position: .center,
             image: .symbol(.docOnDoc))
         if UIAccessibility.isVoiceOverRunning {
             UIAccessibility.post(
@@ -69,7 +68,7 @@ extension DatabaseViewerCoordinator {
         }
     }
 
-    private static func findEntry(withUUID uuid: UUID, in group: Group) -> Entry? {
+    private static func findEntry(withUUID uuid: UUID, in group: KeePassiumLib.Group) -> Entry? {
         if let entry = group.entries.first(where: { $0.uuid == uuid }) {
             return entry
         }

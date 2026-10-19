@@ -76,7 +76,7 @@ struct WatchSettingsView: View {
         }
     }
 
-    private static func collectEntries(from group: Group?, into entries: inout [Entry]) {
+    private static func collectEntries(from group: KeePassiumLib.Group?, into entries: inout [Entry]) {
         guard let group else { return }
         entries.append(contentsOf: group.entries)
         for subgroup in group.groups {

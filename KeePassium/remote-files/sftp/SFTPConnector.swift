@@ -6,6 +6,7 @@
 //  by the Free Software Foundation: https://www.gnu.org/licenses/).
 
 import Foundation
+import KeePassiumLib
 
 /// Connection settings for a direct SFTP backend (Phase 11b, ADR-014).
 ///

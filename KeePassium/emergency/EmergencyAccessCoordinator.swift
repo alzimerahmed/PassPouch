@@ -14,7 +14,7 @@ import UIKit
 final class EmergencyAccessCoordinator: BaseCoordinator {
     private let hostingController: UIHostingController<EmergencyAccessView>
 
-    init(router: NavigationRouter) {
+    override init(router: NavigationRouter) {
         let databaseLocations = FileKeeper.shared
             .getAllReferences(fileType: .database, includeBackup: false)
             .map { $0.visibleFileName }

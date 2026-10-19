@@ -52,7 +52,7 @@ public enum EntryShareField: String, CaseIterable, Codable {
 }
 
 /// The decrypted, self-contained share payload.
-struct SharePayload: Codable, Equatable {
+public struct SharePayload: Codable, Equatable {
     /// Payload format version.
     var version: Int
     /// Field name → resolved value. Names are EntryField standard names,

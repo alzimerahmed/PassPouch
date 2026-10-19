@@ -6,6 +6,7 @@
 //  by the Free Software Foundation: https://www.gnu.org/licenses/).
 
 import Foundation
+import KeePassiumLib
 
 extension LString {
     // swiftlint:disable line_length
