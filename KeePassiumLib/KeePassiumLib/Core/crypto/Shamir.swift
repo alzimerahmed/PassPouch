@@ -79,7 +79,7 @@ public enum Shamir {
         guard sharesCount >= 2, sharesCount <= 255 else { throw ShamirError.invalidParameters }
         guard threshold >= 2, threshold <= sharesCount else { throw ShamirError.invalidParameters }
 
-        let setID = Data((0..<setIDLength).map { _ in UInt8.random(in: .min ... .max, using: rng) })
+        let setID = Data((0..<setIDLength).map { _ in UInt8.random(in: .min ... .max, using: &rng) })
         let checksummedSecret = secret + crc32(secret)
 
         // Distinct non-zero x values for the shares.
@@ -91,7 +91,7 @@ public enum Shamir {
             var coefficients = [secretByte]
             coefficients.reserveCapacity(threshold)
             for _ in 1..<threshold {
-                coefficients.append(UInt8.random(in: .min ... .max, using: rng))
+                coefficients.append(UInt8.random(in: .min ... .max, using: &rng))
             }
             for (shareIndex, x) in xs.enumerated() {
                 ys[shareIndex][byteIndex] = evaluatePolynomial(coefficients, at: x)
@@ -103,7 +103,7 @@ public enum Shamir {
 
     /// Convenience overload using the system secure RNG.
     public static func split(secret: Data, threshold: Int, sharesCount: Int) throws -> [Share] {
-        var rng = SecureRandomNumberGenerator()
+        var rng: RandomNumberGenerator = SecureRandomNumberGenerator()
         return try split(secret: secret, threshold: threshold, sharesCount: sharesCount, using: &rng)
     }
 
@@ -254,7 +254,7 @@ public enum Shamir {
         for byte in data {
             crc ^= UInt32(byte)
             for _ in 0..<8 {
-                let mask = (crc & 1) != 0 ? 0xEDB88320 : 0
+                let mask: UInt32 = (crc & 1) != 0 ? 0xEDB88320 : 0
                 crc = (crc >> 1) ^ mask
             }
         }
