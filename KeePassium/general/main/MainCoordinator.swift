@@ -85,6 +85,7 @@ final class MainCoordinator: UIResponder, Coordinator {
         #endif
 
         _setupShakeGestureObserver()
+        _setupAppIntentObserver()
     }
 
     deinit {

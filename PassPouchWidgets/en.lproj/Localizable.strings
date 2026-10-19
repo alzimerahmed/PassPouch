@@ -1,0 +1,4 @@
+/* PassPouch widget extension — English (base) strings. */
+
+"Recent Entries" = "Recent Entries";
+"Shows entries you recently opened in PassPouch. Passwords are never shown in the widget." = "Shows entries you recently opened in PassPouch. Passwords are never shown in the widget.";

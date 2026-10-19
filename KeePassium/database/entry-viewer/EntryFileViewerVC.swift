@@ -39,6 +39,15 @@ protocol EntryFileViewerDelegate: AnyObject {
         in viewController: EntryFileViewerVC
     )
     func didPressDelete(files attachments: [Attachment], in viewController: EntryFileViewerVC)
+
+    // Phase 6 (gap #8): share-sheet and drag-and-drop support.
+    func didPressShare(
+        file attachment: Attachment,
+        at popoverAnchor: PopoverAnchor,
+        in viewController: EntryFileViewerVC
+    )
+    func canDropFiles(_ files: [UIDragItem], in viewController: EntryFileViewerVC) -> Bool
+    func didDropFiles(_ files: [UIDragItem], in viewController: EntryFileViewerVC)
 }
 
 final class EntryFileViewerVC: TableViewControllerWithContextActions, Refreshable {
@@ -66,6 +75,7 @@ final class EntryFileViewerVC: TableViewControllerWithContextActions, Refreshabl
         tableView.allowsMultipleSelectionDuringEditing = true
         tableView.dragInteractionEnabled = true
         tableView.dragDelegate = self
+        tableView.dropDelegate = self
 
         previewFilesBarButton = UIBarButtonItem(
             image: .symbol(.rectangleStack),
@@ -280,7 +290,16 @@ final class EntryFileViewerVC: TableViewControllerWithContextActions, Refreshabl
                 self?.didPressSaveAttachment(at: indexPath)
             }
         )
-        return [saveAsAction, renameFileAction, deleteAction]
+
+        let shareAction = ContextualAction(
+            title: LString.actionShare,
+            imageName: .squareAndArrowUp,
+            style: .default,
+            handler: { [weak self] in
+                self?.didPressShareAttachment(at: indexPath)
+            }
+        )
+        return [shareAction, saveAsAction, renameFileAction, deleteAction]
     }
 
     override func tableView(
@@ -403,6 +422,13 @@ private extension EntryFileViewerVC {
         delegate?.didPressSave(file: attachment, at: popoverAnchor, in: self)
     }
 
+    // Phase 6 (gap #8): share attachment via the system share sheet.
+    private func didPressShareAttachment(at indexPath: IndexPath) {
+        let attachment = attachments[indexPath.row]
+        let popoverAnchor = tableView.popoverAnchor(at: indexPath)
+        delegate?.didPressShare(file: attachment, at: popoverAnchor, in: self)
+    }
+
     private func didPressDeleteAttachment(at indexPath: IndexPath) {
         assert(canEditFiles)
         let attachment = attachments[indexPath.row]
@@ -477,5 +503,39 @@ extension EntryFileViewerVC: UITableViewDragDelegate {
             Diag.error("Failed to unzip attachment [message: \(error.localizedDescription)")
             return []
         }
+    }
+}
+
+// Phase 6 (gap #8): accept files dropped onto the attachments list.
+extension EntryFileViewerVC: UITableViewDropDelegate {
+    func tableView(
+        _ tableView: UITableView,
+        canHandle session: UIDropSession
+    ) -> Bool {
+        guard canEditFiles else { return false }
+        return session.hasItemsConforming(toTypeIdentifier: UTType.item.identifier)
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        dropSessionDidUpdate session: UIDropSession,
+        withDestinationIndexPath destinationIndexPath: IndexPath?
+    ) -> UITableViewDropProposal {
+        let canAccept = delegate?.canDropFiles(
+            session.items,
+            in: self) ?? false
+        guard canAccept else {
+            return UITableViewDropProposal(operation: .forbidden)
+        }
+        return UITableViewDropProposal(operation: .copy, intent: .insertAtDestinationIndexPath)
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        performDropWith coordinator: UITableViewDropCoordinator
+    ) {
+        let files = coordinator.items.map(\.dragItem)
+        guard !files.isEmpty else { return }
+        delegate?.didDropFiles(files, in: self)
     }
 }

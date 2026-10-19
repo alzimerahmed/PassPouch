@@ -135,6 +135,9 @@ final class DatabaseViewerCoordinator: BaseCoordinator {
 
         Settings.current.startupDatabase = _databaseFile.originalReference
 
+        // Phase 6: remember recently opened databases (names only) for widgets.
+        WidgetSharedDataSource.recordOpenedDatabase(_databaseFile)
+
         _updateUserActivityTimestamp()
         _setupDatabaseLockTimer()
 

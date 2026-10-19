@@ -189,6 +189,7 @@ extension DatabasePickerCoordinator.ToolbarDecorator {
                 coordinator?.didPressAppSettings(at: popoverAnchor)
             }
         )
+        appSettingsItem.accessibilityIdentifier = "settings_button"
 
         return [
             passGenItem,

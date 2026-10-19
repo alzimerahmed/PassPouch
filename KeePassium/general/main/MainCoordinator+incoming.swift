@@ -79,8 +79,24 @@ extension MainCoordinator {
 
     private func processDeepLink(_ url: URL) {
         assert(url.scheme == AppGroup.appURLScheme)
-        // PassPouch: no premium/donation deep links; nothing to process.
-        Diag.warning("Unrecognized URL, ignoring [url: \(url.absoluteString)]")
+        // Phase 6: widget / App Shortcuts deep links.
+        switch url.host {
+        case "entry":
+            let uuidString = url.pathComponents.count > 1 ? url.pathComponents[1] : nil
+            guard let uuidString, let entryUUID = UUID(uuidString: uuidString) else {
+                Diag.warning("Deep link has no valid entry UUID [url: \(url.absoluteString)]")
+                return
+            }
+            handleEntryDeepLink(entryUUID)
+        case "open":
+            // App is already opening; nothing extra to do.
+            Diag.info("Deep link: open PassPouch")
+        case .none:
+            // Bare `passpouch://` (e.g. AppGroup.launchMainAppURL) — just open.
+            Diag.info("Deep link: open PassPouch (bare URL)")
+        default:
+            Diag.warning("Unrecognized URL, ignoring [url: \(url.absoluteString)]")
+        }
     }
 
     internal func _setIncomingOTPAuthURL(_ url: URL?) {

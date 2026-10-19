@@ -180,6 +180,18 @@ extension DatabaseViewerCoordinator.ToolbarDecorator {
             }
         )
 
+        let importTOTPAction = UIAction(
+            title: NSLocalizedString(
+                "[Group/Actions/importTOTP] Import TOTP (otpauth)…",
+                value: "Import TOTP (otpauth)…",
+                comment: "Action to bulk-import otpauth:// URIs as new entries with TOTP"),
+            image: .symbol(.qrcode),
+            attributes: permissions.contains(.createEntry) ? [] : [.disabled],
+            handler: { [weak coordinator] _ in
+                coordinator?._showOtpauthBulkImporter()
+            }
+        )
+
         let editGroupAction = UIAction(
             title: LString.titleEditGroup,
             image: .symbol(.squareAndPencil),
@@ -204,6 +216,7 @@ extension DatabaseViewerCoordinator.ToolbarDecorator {
             reverse: false,
             children: [
                 createEntryAction,
+                importTOTPAction,
                 createGroupAction,
                 coordinator._supportsSmartGroups ? createSmartGroupAction : nil,
                 UIMenu(inlineChildren: [

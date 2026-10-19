@@ -96,6 +96,12 @@ final class EntryViewerCoordinator: BaseCoordinator {
     override func start() {
         super.start()
         entry.touch(.accessed)
+        // Phase 6: remember recently viewed entries (metadata only) for widgets.
+        // Skip history snapshots and deleted (recycle-bin) entries — their
+        // titles must not surface on the home-screen widget.
+        if !isHistoryEntry && !entry.isDeleted {
+            WidgetSharedDataSource.recordViewedEntry(entry, in: databaseFile)
+        }
         let topVC = _router.navigationController.topViewController
         let hasPlaceholderOnTop = topVC != nil && topVC is PlaceholderVC
         _pushInitialViewController(
@@ -707,6 +713,68 @@ extension EntryViewerCoordinator: EntryFileViewerDelegate {
         in viewController: EntryFileViewerVC
     ) {
         showPreview(for: attachments, at: popoverAnchor, in: viewController)
+    }
+
+    // Phase 6 (gap #8): share an attachment via the system share sheet.
+    func didPressShare(
+        file attachment: Attachment,
+        at popoverAnchor: PopoverAnchor,
+        in viewController: EntryFileViewerVC
+    ) {
+        Diag.debug("Will share attachment")
+        let temporaryURL: TemporaryFileURL
+        do {
+            temporaryURL = try saveToTemporaryURL(attachment)
+        } catch {
+            Diag.error("Failed to export attachment for sharing [reason: \(error.localizedDescription)]")
+            viewController.showErrorAlert(error)
+            return
+        }
+        temporaryAttachmentURLs.append(temporaryURL)
+
+        let activityVC = UIActivityViewController(
+            activityItems: [temporaryURL.url],
+            applicationActivities: nil)
+        popoverAnchor.apply(to: activityVC.popoverPresentationController)
+        viewController.present(activityVC, animated: true)
+    }
+
+    func canDropFiles(
+        _ files: [UIDragItem],
+        in viewController: EntryFileViewerVC
+    ) -> Bool {
+        guard canEditEntry else { return false }
+        return entry.attachments.isEmpty || entry.isSupportsMultipleAttachments
+    }
+
+    func didDropFiles(
+        _ files: [UIDragItem],
+        in viewController: EntryFileViewerVC
+    ) {
+        guard canEditEntry else {
+            Diag.warning("Tried to drop files into non-editable entry")
+            return
+        }
+        let attachmentMaker = database as AttachmentMaking
+        for dragItem in files {
+            attachmentMaker.makeAttachment(from: dragItem) { [weak self, weak viewController] result in
+                guard let self, let viewController else { return }
+                switch result {
+                case .success(let attachment):
+                    entry.backupState()
+                    entry.attachments.append(attachment)
+                    fileViewerVC.setContents(
+                        entry.attachments,
+                        canEditEntry: canEditEntry,
+                        animated: true)
+                    saveDatabase()
+                    Diag.info("Dropped attachment added OK")
+                case .failure(let fileAccessError):
+                    Diag.error("Failed to add dropped file [error: \(fileAccessError)]")
+                    viewController.showErrorAlert(fileAccessError)
+                }
+            }
+        }
     }
 
     func didPressDelete(
