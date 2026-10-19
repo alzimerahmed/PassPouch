@@ -21,6 +21,8 @@ struct SharedItemView: View {
 
     /// On-screen display window for a shared snapshot, in seconds.
     static let displayWindowSeconds = 60
+    /// Remaining-seconds value at which a VoiceOver announcement is posted.
+    static let announcementAtSecondsRemaining = 10
 
     init(payload: SharePayload, onDismiss: @escaping () -> Void) {
         self.payload = payload
@@ -29,11 +31,14 @@ struct SharedItemView: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 Section {
                     Label(LString.sharedItemBanner, systemImage: "envelope.badge.shield.half.filled")
                         .font(.footnote)
+                        .foregroundColor(.secondary)
+                    Text(countdownText)
+                        .font(.caption2)
                         .foregroundColor(.secondary)
                 }
                 if let expiresAt = payload.expiresAt {
@@ -56,14 +61,29 @@ struct SharedItemView: View {
             .navigationTitle(LString.sharedItemTitle)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    if timer != nil {
+                        Button(LString.sharedItemKeepOpen) {
+                            stopCountdown()
+                        }
+                    }
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(LString.actionDone) { onDismiss() }
                 }
             }
         }
-        .navigationViewStyle(.stack)
         .onAppear(perform: startCountdown)
         .onDisappear(perform: stopCountdown)
+    }
+
+    private var countdownText: String {
+        String.localizedStringWithFormat(
+            NSLocalizedString(
+                "[SharedItem/countdown]",
+                value: "Auto-closes in %d s",
+                comment: "Shared-item auto-close countdown. Parameter: seconds remaining"),
+            remainingSeconds)
     }
 
     private var sortedFieldNames: [String] {
@@ -86,6 +106,11 @@ struct SharedItemView: View {
         stopCountdown()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [self] _ in
             remainingSeconds -= 1
+            if remainingSeconds == Self.announcementAtSecondsRemaining {
+                UIAccessibility.post(
+                    notification: .announcement,
+                    argument: countdownText)
+            }
             if remainingSeconds <= 0 {
                 stopCountdown()
                 onDismiss()
@@ -99,10 +124,15 @@ struct SharedItemView: View {
     }
 }
 
-/// One field row with a copy button. Values are never logged.
+/// One field row with a copy button. Values are never logged. The password
+/// field is masked by default with an eye/eye-slash reveal toggle.
 struct SharedItemFieldRow: View {
     let fieldName: String
     let value: String
+
+    @State private var isValueRevealed = false
+
+    private var isPasswordField: Bool { fieldName == EntryField.password }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -111,18 +141,38 @@ struct SharedItemFieldRow: View {
                     .font(.footnote)
                     .foregroundColor(.secondary)
                 Spacer()
+                if isPasswordField {
+                    Button {
+                        isValueRevealed.toggle()
+                    } label: {
+                        Image(systemName: isValueRevealed ? "eye.slash" : "eye")
+                    }
+                    .accessibilityLabel(isValueRevealed
+                        ? LString.a11yHideValue
+                        : LString.a11yShowValue)
+                }
                 Button {
                     Clipboard.general.copyWithTimeout(value)
                     HapticFeedback.play(.copiedToClipboard)
+                    UIAccessibility.post(
+                        notification: .announcement,
+                        argument: LString.titleCopiedToClipboard)
                 } label: {
                     Image(systemName: "doc.on.doc")
                 }
                 .accessibilityLabel(LString.actionCopy)
             }
-            Text(value)
+            Text(displayValue)
                 .font(.body)
                 .textSelection(.enabled)
         }
+    }
+
+    private var displayValue: String {
+        if isPasswordField && !isValueRevealed {
+            return String(repeating: "•", count: max(value.count, 1))
+        }
+        return value
     }
 
     private var displayName: String {

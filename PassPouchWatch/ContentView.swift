@@ -34,7 +34,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .listStyle(.carousel)
+                    .listStyle(.automatic)
                 } else {
                     emptyState
                 }
@@ -55,6 +55,7 @@ struct ContentView: View {
             Image(systemName: "lock.iphone")
                 .font(.title2)
                 .foregroundStyle(.secondary)
+                .accessibilityHidden(true)
             Text(NSLocalizedString(
                     "[Watch/Empty/title]",
                     value: "Unlock PassPouch on your iPhone to see shared entries here.",
@@ -101,6 +102,12 @@ struct EntryDetailView: View {
                         Text(displayCode(params: totp))
                             .font(.system(.title2, design: .monospaced))
                             .textSelection(.disabled)
+                            .accessibilityLabel(NSLocalizedString(
+                                "[Watch/Field/TOTP]",
+                                value: "One-time code",
+                                comment: "Field label for the live TOTP code"
+                            ))
+                            .accessibilityValue(displayCode(params: totp))
                     }
                 }
             }
@@ -135,6 +142,7 @@ struct EntryDetailView: View {
                             comment: "A11y label while the password is hidden"
                         )
                 )
+                .accessibilityValue(isPasswordVisible ? entry.password : "")
             } header: {
                 Text(NSLocalizedString(
                     "[Watch/Field/Password]",
@@ -143,7 +151,7 @@ struct EntryDetailView: View {
                 ))
             }
         }
-        .listStyle(.carousel)
+        .listStyle(.automatic)
         .navigationTitle(entry.title)
         .onReceive(ticker) { date in
             now = date
@@ -151,7 +159,11 @@ struct EntryDetailView: View {
     }
 
     private func displayCode(params: WatchTOTPParams) -> String {
-        let code = WatchTOTPCore.generateCode(params: params, at: now) ?? "———"
+        let code = WatchTOTPCore.generateCode(params: params, at: now)
+            ?? NSLocalizedString(
+                "[Watch/TOTP/unavailable]",
+                value: "unavailable",
+                comment: "Shown when a one-time code cannot be generated")
         return WatchTOTPCore.formatForDisplay(code)
     }
 

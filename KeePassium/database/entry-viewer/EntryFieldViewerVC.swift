@@ -174,6 +174,8 @@ final class EntryFieldViewerVC: UITableViewController, Refreshable {
     func refresh() {
         guard isViewLoaded else { return }
         editButton.isEnabled = canEditEntry
+        // Sharing makes no sense for a history entry — it is a past revision.
+        shareButton.isEnabled = !isHistoryEntry
         navigationItem.rightBarButtonItems = [editButton, shareButton]
         tableView.reloadData()
     }

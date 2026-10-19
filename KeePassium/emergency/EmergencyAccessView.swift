@@ -123,8 +123,11 @@ struct ShareRow: View {
                     .foregroundColor(.secondary)
                 Spacer()
                 Button {
-                    UIPasteboard.general.string = shareText
+                    Clipboard.general.copyWithTimeout(shareText)
                     HapticFeedback.play(.copiedToClipboard)
+                    UIAccessibility.post(
+                        notification: .announcement,
+                        argument: LString.titleCopiedToClipboard)
                 } label: {
                     Image(systemName: "doc.on.doc")
                 }
@@ -138,7 +141,6 @@ struct ShareRow: View {
             }
             Text(shareText)
                 .font(.system(.caption, design: .monospaced))
-                .textSelection(.enabled)
         }
         .sheet(isPresented: $showQR) {
             ShareSheet(items: [shareText, QRImageMaker.makeQRCode(for: shareText)].compactMap { $0 })
@@ -154,12 +156,17 @@ struct ShamirCombineView: View {
     @State private var sharesText = ""
     @State private var revealedPassword: String?
     @State private var errorMessage: String?
+    @State private var autoClearTask: Task<Void, Never>?
+
+    /// How long the revealed password stays on screen before being erased.
+    private static let revealAutoClearSeconds: TimeInterval = 30
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             TextEditor(text: $sharesText)
                 .frame(minHeight: 120)
                 .font(.system(.footnote, design: .monospaced))
+                .accessibilityLabel(LString.emergencyCombinePlaceholder)
                 .accessibilityHint(LString.emergencyCombinePlaceholder)
             Button(LString.emergencyCombineButton) { combine() }
                 .disabled(sharesText.isEmpty)
@@ -172,8 +179,12 @@ struct ShamirCombineView: View {
                     .foregroundColor(.secondary)
                 Text(revealedPassword)
                     .font(.system(.title3, design: .monospaced))
-                    .textSelection(.enabled)
+                    .accessibilityLabel(LString.emergencyRevealedPasswordA11y)
             }
+        }
+        .onDisappear {
+            autoClearTask?.cancel()
+            revealedPassword = nil
         }
     }
 
@@ -195,14 +206,30 @@ struct ShamirCombineView: View {
         }
         do {
             let secret = try Shamir.combine(shares: shares)
-            revealedPassword = String(data: secret, encoding: .utf8)
-                ?? LString.emergencyBadShares
+            guard let password = String(data: secret, encoding: .utf8) else {
+                errorMessage = LString.emergencyBadShares
+                return
+            }
+            revealedPassword = password
+            scheduleAutoClear()
         } catch Shamir.ShamirError.notEnoughShares {
             errorMessage = LString.emergencyNotEnoughShares
         } catch {
             errorMessage = LString.emergencyBadShares
         }
         sharesText = "" // erase input as soon as possible
+    }
+
+    /// Erases the revealed password after a short window so it never
+    /// lingers on screen unattended.
+    private func scheduleAutoClear() {
+        autoClearTask?.cancel()
+        autoClearTask = Task { @MainActor in
+            try? await Task.sleep(
+                nanoseconds: UInt64(Self.revealAutoClearSeconds * 1_000_000_000))
+            guard !Task.isCancelled else { return }
+            revealedPassword = nil
+        }
     }
 }
 
@@ -255,7 +282,7 @@ struct EmergencyAccessView: View {
             Section(header: Text(LString.emergencySplitSection)) {
                 ShamirSplitView()
             }
-            Section {
+            Section(header: Text(LString.emergencyCombineSection)) {
                 ShamirCombineView()
             }
         }

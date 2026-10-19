@@ -42,25 +42,25 @@ extension LString {
         value: "Never",
         comment: "Option: the shared link never expires")
 
+    public static let shareExpiryOneHour = NSLocalizedString(
+        "[Share/EntryPicker/ExpiryOneHour]",
+        value: "1 hour",
+        comment: "Option: the shared link expires in one hour")
+
+    public static let shareExpiryOneDay = NSLocalizedString(
+        "[Share/EntryPicker/ExpiryOneDay]",
+        value: "24 hours",
+        comment: "Option: the shared link expires in 24 hours")
+
+    public static let shareExpiryOneWeek = NSLocalizedString(
+        "[Share/EntryPicker/ExpiryOneWeek]",
+        value: "7 days",
+        comment: "Option: the shared link expires in 7 days")
+
     public static let shareGenerateButton = NSLocalizedString(
         "[Share/EntryPicker/Generate]",
         value: "Create Share Link",
         comment: "Button that generates the encrypted share link")
-
-    public static let shareLinkReadyTitle = NSLocalizedString(
-        "[Share/LinkReady/title]",
-        value: "Share link is ready",
-        comment: "Title after the share link has been generated")
-
-    public static let shareLinkReadyMessage = NSLocalizedString(
-        "[Share/LinkReady/message]",
-        value: "The link is encrypted and works offline. PassPouch does not send it anywhere — you deliver it yourself.",
-        comment: "Message after the share link has been generated")
-
-    public static let shareCopyLink = NSLocalizedString(
-        "[Share/LinkReady/CopyLink]",
-        value: "Copy Link",
-        comment: "Button to copy the generated share link")
 
     public static let shareNoFieldsSelected = NSLocalizedString(
         "[Share/error/NoFields]",
@@ -78,6 +78,21 @@ extension LString {
         "[SharedItem/banner]",
         value: "Shared snapshot — not part of any database. It will disappear when you close this screen.",
         comment: "Banner in the shared-item viewer explaining the item is ephemeral")
+
+    public static let sharedItemKeepOpen = NSLocalizedString(
+        "[SharedItem/keepOpen]",
+        value: "Keep open",
+        comment: "Button that cancels the shared-item auto-close countdown")
+
+    public static let a11yShowValue = NSLocalizedString(
+        "[A11y/showValue]",
+        value: "Show value",
+        comment: "Accessibility label of the reveal-value (eye) toggle when the value is hidden")
+
+    public static let a11yHideValue = NSLocalizedString(
+        "[A11y/hideValue]",
+        value: "Hide value",
+        comment: "Accessibility label of the reveal-value (eye) toggle when the value is shown")
 
     public static let sharedItemExpired = NSLocalizedString(
         "[SharedItem/expired]",
@@ -150,6 +165,83 @@ extension LString {
         "[Emergency/Combine/section]",
         value: "Recover from Shares",
         comment: "Section header for the Shamir combine screen")
+
+    public static let emergencyRevealedPasswordA11y = NSLocalizedString(
+        "[Emergency/Reveal/A11yLabel]",
+        value: "Revealed master password",
+        comment: "Accessibility label of the revealed master password text")
+
+    // MARK: Emergency Kit PDF (ADR-016)
+
+    public static let emergencyKitPDFTitle = NSLocalizedString(
+        "[Emergency/Kit/PDFTitle]",
+        value: "PassPouch — Emergency Kit",
+        comment: "Title line of the printable Emergency Kit PDF")
+
+    public static let emergencyKitPDFVersionLine = NSLocalizedString(
+        "[Emergency/Kit/PDFVersionLine]",
+        value: "App version: %@   Generated: %@",
+        comment: "Version/generated line of the Emergency Kit PDF. Parameters: app version, generation date/time")
+
+    public static let emergencyKitPDFDatabasesHeader = NSLocalizedString(
+        "[Emergency/Kit/PDFDatabases]",
+        value: "Your databases",
+        comment: "Header of the database list in the Emergency Kit PDF")
+
+    public static let emergencyKitPDFNoDatabases = NSLocalizedString(
+        "[Emergency/Kit/PDFNoDatabases]",
+        value: "No databases found.",
+        comment: "Shown in the Emergency Kit PDF when no databases are registered")
+
+    public static let emergencyKitPDFRecoveryHeader = NSLocalizedString(
+        "[Emergency/Kit/PDFRecoveryHeader]",
+        value: "How to recover access (offline)",
+        comment: "Header of the recovery instructions in the Emergency Kit PDF")
+
+    public static let emergencyKitPDFHintsHeader = NSLocalizedString(
+        "[Emergency/Kit/PDFHintsHeader]",
+        value: "My hints (written by hand)",
+        comment: "Header of the manual hints section in the Emergency Kit PDF")
+
+    public static let emergencyKitPDFFooter = NSLocalizedString(
+        "[Emergency/Kit/PDFFooter]",
+        value: "PassPouch never stores or prints your master password. Keep this kit and any Shamir share slips in separate, safe places.",
+        comment: "Footer warning of the Emergency Kit PDF")
+
+    public static let emergencyKitPDFRecoverySteps: [String] = [
+        NSLocalizedString(
+            "[Emergency/Kit/PDFStep1]",
+            value: "1. Find the database file (.kdbx) listed above — on this device, in iCloud Drive,",
+            comment: "Recovery step 1, line 1 (Emergency Kit PDF)"),
+        NSLocalizedString(
+            "[Emergency/Kit/PDFStep1b]",
+            value: "    or in your cloud/WebDAV storage. Copy it to a safe place.",
+            comment: "Recovery step 1, line 2 (Emergency Kit PDF)"),
+        NSLocalizedString(
+            "[Emergency/Kit/PDFStep2]",
+            value: "2. Open PassPouch on any iOS device and unlock the database with your master",
+            comment: "Recovery step 2, line 1 (Emergency Kit PDF)"),
+        NSLocalizedString(
+            "[Emergency/Kit/PDFStep2b]",
+            value: "    password (or key file, if you use one).",
+            comment: "Recovery step 2, line 2 (Emergency Kit PDF)"),
+        NSLocalizedString(
+            "[Emergency/Kit/PDFStep3]",
+            value: "3. If the master password is lost, use your printed Shamir shares: Settings →",
+            comment: "Recovery step 3, line 1 (Emergency Kit PDF)"),
+        NSLocalizedString(
+            "[Emergency/Kit/PDFStep3b]",
+            value: "    Emergency Access → \"Recover from Shares\". Any M of your N shares reveal it.",
+            comment: "Recovery step 3, line 2 (Emergency Kit PDF)"),
+        NSLocalizedString(
+            "[Emergency/Kit/PDFStep4]",
+            value: "4. Each share alone reveals nothing. Never keep all shares together.",
+            comment: "Recovery step 4 (Emergency Kit PDF)"),
+        NSLocalizedString(
+            "[Emergency/Kit/PDFStep5]",
+            value: "5. PassPouch is fully offline-capable: no account, no server, no telemetry.",
+            comment: "Recovery step 5 (Emergency Kit PDF)")
+    ]
 
     public static let emergencyCombinePlaceholder = NSLocalizedString(
         "[Emergency/Combine/Placeholder]",

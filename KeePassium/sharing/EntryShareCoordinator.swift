@@ -27,7 +27,7 @@ struct EntryShareFieldPickerView: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Section(header: Text(LString.shareScreenSubtitle)) {
                     ForEach(availableFields, id: \.self) { field in
@@ -59,7 +59,6 @@ struct EntryShareFieldPickerView: View {
             .navigationTitle(LString.shareScreenTitle)
             .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationViewStyle(.stack)
     }
 
     private func binding(for field: EntryShareField) -> Binding<Bool> {
@@ -76,9 +75,9 @@ struct EntryShareFieldPickerView: View {
 
     private func expiryTitle(_ choice: ExpiryChoice) -> String {
         switch choice {
-        case .oneHour: return "+1 h"
-        case .oneDay: return "+1 day"
-        case .oneWeek: return "+1 week"
+        case .oneHour: return LString.shareExpiryOneHour
+        case .oneDay: return LString.shareExpiryOneDay
+        case .oneWeek: return LString.shareExpiryOneWeek
         case .none: return ""
         }
     }
