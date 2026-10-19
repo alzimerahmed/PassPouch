@@ -45,12 +45,7 @@ struct CSVImportMapper {
                 // Wrong column count — cannot map reliably; counted as failed.
                 continue
             }
-            let hasMeaningfulContent = [CSVColumnRole.title, .username, .password]
-                .contains { role in
-                    guard let column = mapping[role] else { return false }
-                    return column < row.count && !row[column].trimmingCharacters(in: .whitespaces).isEmpty
-                }
-            guard hasMeaningfulContent else { continue }
+            guard hasMeaningfulContent(row, mapping: mapping) else { continue }
             prepared.append(PreparedRow(rowIndex: index + 1, values: row))
         }
         return prepared
@@ -61,20 +56,27 @@ struct CSVImportMapper {
         guard row.count == headerRow.count else {
             return .failed(reason: LString.CSVImport.rowWrongColumnCount)
         }
-        let hasMeaningfulContent = [CSVColumnRole.title, .username, .password]
-            .contains { role in
-                guard let column = mapping[role] else { return false }
-                return column < row.count && !row[column].trimmingCharacters(in: .whitespaces).isEmpty
-            }
-        guard hasMeaningfulContent else {
+        guard hasMeaningfulContent(row, mapping: mapping) else {
             return .skipped(reason: LString.CSVImport.rowEmpty)
         }
         return .imported
     }
 
-    /// Creates entries in `group` (detached, so the caller controls insertion)
-    /// and returns the import summary. Passwords and TOTP seeds are stored as
-    /// protected fields.
+    /// A row is importable only if at least one of title/username/password
+    /// is mapped to an existing, non-empty column.
+    private func hasMeaningfulContent(
+        _ row: [String],
+        mapping: [CSVColumnRole: Int]
+    ) -> Bool {
+        return [CSVColumnRole.title, .username, .password].contains { role in
+            guard let column = mapping[role] else { return false }
+            return column < row.count
+                && !row[column].trimmingCharacters(in: .whitespaces).isEmpty
+        }
+    }
+
+    /// Creates entries directly inside `group` and returns the import summary.
+    /// Passwords and TOTP seeds are stored as protected fields.
     func importEntries(
         into group: Group,
         format: CSVImportFormat,
@@ -84,6 +86,17 @@ struct CSVImportMapper {
         let customFieldColumns = format.customFieldColumns(
             headerRow: headerRow,
             mapping: mapping)
+        // Standard field names (case-insensitive) must never be overwritten
+        // by unmapped custom-field columns.
+        let reservedNames: Set<String> = [
+            EntryField.title,
+            EntryField.userName,
+            EntryField.password,
+            EntryField.url,
+            EntryField.notes,
+            EntryField.otp,
+            EntryField.totp,
+        ]
 
         for row in dataRows {
             switch classifyRow(row, mapping: mapping) {
@@ -97,7 +110,7 @@ struct CSVImportMapper {
                 break
             }
 
-            let entry = group.createEntry(detached: true)
+            let entry = group.createEntry(detached: false)
             entry.populateStandardFields()
 
             func value(for role: CSVColumnRole) -> String {
@@ -118,15 +131,24 @@ struct CSVImportMapper {
                 } else {
                     // Not a valid otpauth URI — keep it as a protected custom
                     // field instead of silently dropping the data.
-                    entry.setField(name: "TOTP", value: totp, isProtected: true)
+                    entry.setField(name: EntryField.totp, value: totp, isProtected: true)
                 }
             }
 
+            // Unmapped columns must not collide with standard field names.
+            var seenNames = [String: Int]()
             for column in customFieldColumns where column < row.count {
-                let name = column < headerRow.count ? headerRow[column] : "field\(column)"
+                let rawName = column < headerRow.count ? headerRow[column] : "field\(column)"
+                let normalized = rawName.trimmingCharacters(in: .whitespaces).lowercased()
+                guard !normalized.isEmpty, !reservedNames.contains(normalized) else { continue }
+                // Deduplicate repeated header names so same-named columns do
+                // not overwrite each other's values.
+                let occurrence = (seenNames[normalized] ?? 0) + 1
+                seenNames[normalized] = occurrence
+                let fieldName = occurrence == 1 ? rawName : "\(rawName) (\(occurrence))"
                 let fieldValue = row[column]
                 guard !fieldValue.isEmpty else { continue }
-                entry.setField(name: name, value: fieldValue, isProtected: false)
+                entry.setField(name: fieldName, value: fieldValue, isProtected: false)
             }
 
             entry.touch(.modified)

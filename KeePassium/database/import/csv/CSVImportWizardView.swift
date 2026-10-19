@@ -102,7 +102,7 @@ struct CSVImportWizardView: View {
             ForEach(model.previewRows().indices, id: \.self) { index in
                 let row = model.previewRows()[index]
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(row[safe: CSVColumnRole.title.rawValue] ?? "")
+                    Text(row[safe: model.mapping[.title] ?? -1] ?? "")
                         .font(.body)
                     Text(previewSubtitle(row))
                         .font(.footnote)

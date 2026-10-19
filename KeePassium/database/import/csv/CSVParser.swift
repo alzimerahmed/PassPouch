@@ -18,6 +18,8 @@ import KeePassiumLib
 enum CSVParser {
     public enum ParserError: LocalizedError {
         case emptyFile
+        case invalidEncoding
+        case noDataRows
         case oversizedFile(maxBytes: Int)
         case unclosedQuote(line: Int)
 
@@ -25,6 +27,10 @@ enum CSVParser {
             switch self {
             case .emptyFile:
                 return LString.Error.importEmptyIncomingFile
+            case .invalidEncoding:
+                return LString.Error.importCSVInvalidEncoding
+            case .noDataRows:
+                return LString.Error.importCSVNoDataRows
             case let .oversizedFile(maxBytes):
                 return String.localizedStringWithFormat(
                     LString.Error.importCSVFileTooLargeTemplate,
@@ -55,7 +61,7 @@ enum CSVParser {
         }
         guard let text = String(data: data, encoding: .utf8) else {
             Diag.error("CSV file is not valid UTF-8")
-            throw ParserError.emptyFile
+            throw ParserError.invalidEncoding
         }
         return text
     }
@@ -145,8 +151,11 @@ enum CSVParser {
             rows.append(currentRow)
         }
 
-        // Drop trailing fully-empty rows (artifacts of trailing newlines).
-        while let lastRow = rows.last, lastRow.count == 1, lastRow[0].isEmpty {
+        // Drop trailing fully-empty rows (artifacts of trailing newlines and
+        // blank lines): a row is empty when it is `[]` or all its fields are.
+        while let lastRow = rows.last,
+              lastRow.isEmpty || lastRow.allSatisfy({ $0.trimmingCharacters(in: .whitespaces).isEmpty })
+        {
             rows.removeLast()
         }
         guard !rows.isEmpty else {

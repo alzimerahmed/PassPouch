@@ -35,7 +35,7 @@ final class CSVImportWizardModel: ObservableObject {
         let rows = try CSVParser.parse(csvText)
         guard rows.count > 1 else {
             Diag.error("CSV has a header but no data rows")
-            throw CSVParser.ParserError.emptyFile
+            throw CSVParser.ParserError.noDataRows
         }
         headerRow = rows[0]
         dataRows = Array(rows.dropFirst())

@@ -44,6 +44,11 @@ final class Phase9ImportTests: XCTestCase {
         XCTAssertEqual(rows.count, 2)
     }
 
+    func testParserDropsTrailingBlankLines() throws {
+        let rows = try CSVParser.parse("a,b\n1,2\n\n,,\n")
+        XCTAssertEqual(rows.count, 2)
+    }
+
     func testParserEmptyContentThrows() {
         XCTAssertThrowsError(try CSVParser.parse(""))
         XCTAssertThrowsError(try CSVParser.parse("\n\n  \n"))
@@ -93,6 +98,19 @@ final class Phase9ImportTests: XCTestCase {
         }
     }
 
+    func testLoadTextRejectsNonUTF8File() throws {
+        let url = FileManager.default.temporaryDirectory
+            .appendingPathComponent("phase9-latin1.csv")
+        try Data([0x50, 0xE9, 0x63, 0x68, 0xE9]).write(to: url) // invalid UTF-8
+        defer { try? FileManager.default.removeItem(at: url) }
+
+        XCTAssertThrowsError(try CSVParser.loadText(from: url)) { error in
+            guard case CSVParser.ParserError.invalidEncoding = error else {
+                return XCTFail("Expected invalidEncoding, got \(error)")
+            }
+        }
+    }
+
     // MARK: - Format auto-detection
 
     func testDetectApplePasswords() {
@@ -126,8 +144,8 @@ final class Phase9ImportTests: XCTestCase {
 
     func testDetectFirefox() {
         let header = [
-            "url", "username", "password", "httpRealm", "formUrlPath",
-            "notes", "timeCreated", "timeLastUsed", "timePasswordChanged",
+            "url", "username", "password", "httpRealm", "formActionOrigin",
+            "notes", "timeCreated", "timeLastUsed", "timePasswordChanged", "guid",
         ]
         XCTAssertEqual(CSVImportFormat.detect(headerRow: header), .firefox)
     }
@@ -186,18 +204,18 @@ final class Phase9ImportTests: XCTestCase {
 
     func testAutoMappingFirefox() throws {
         let header = [
-            "url", "username", "password", "httpRealm", "formUrlPath",
-            "notes", "timeCreated", "timeLastUsed", "timePasswordChanged",
+            "url", "username", "password", "httpRealm", "formActionOrigin",
+            "notes", "timeCreated", "timeLastUsed", "timePasswordChanged", "guid",
         ]
         let mapping = CSVImportFormat.firefox.autoMapping(for: header)
         XCTAssertEqual(mapping[.url], 0)
         XCTAssertEqual(mapping[.username], 1)
         XCTAssertEqual(mapping[.password], 2)
         XCTAssertEqual(mapping[.notes], 5)
-        // Timestamps are metadata and must be ignored.
+        // httpRealm becomes a custom field; timestamps and guid are metadata.
         let custom = CSVImportFormat.firefox.customFieldColumns(
             headerRow: header, mapping: mapping)
-        XCTAssertEqual(custom, [3, 4]) // httpRealm, formUrlPath
+        XCTAssertEqual(custom, [3, 4]) // httpRealm, formActionOrigin
     }
 
     // MARK: - Import into Database2
@@ -221,7 +239,7 @@ final class Phase9ImportTests: XCTestCase {
         Title,URL,Username,Password,Notes,OTPAuth
         "Example, Inc",https://example.com,alice@example.com,s3cret,"Multi-line
         note",otpauth://totp/Example:alice?secret=JBSWY3DPEHPK3PXP&issuer=Example
-        ,,,,,
+        ,,,,note only
         """
         let db = try makeDatabase2()
         let root = try XCTUnwrap(db.root as? Group2)
@@ -286,8 +304,8 @@ final class Phase9ImportTests: XCTestCase {
 
     func testImportFirefoxCSVRow() throws {
         let csv = """
-        url,username,password,httpRealm,formUrlPath,notes,timeCreated,timeLastUsed,timePasswordChanged
-        https://mozilla.org,fox,s3cret,moz,/login,a note,1700000000,1700000001,1700000002
+        url,username,password,httpRealm,formActionOrigin,notes,timeCreated,timeLastUsed,timePasswordChanged,guid
+        https://mozilla.org,fox,s3cret,moz,/login,a note,1700000000,1700000001,1700000002,abc-123
         """
         let db = try makeDatabase2()
         let root = try XCTUnwrap(db.root as? Group2)
@@ -338,7 +356,9 @@ final class Phase9ImportTests: XCTestCase {
     }
 
     func testEmptyRowsAreSkipped() throws {
-        let csv = "name,url,username,password\n,,,,\nGood,https://g.test,u,p"
+        // A row that exists but has none of title/username/password is skipped;
+        // fully blank lines are dropped by the parser and not counted at all.
+        let csv = "name,url,username,password,notes\n,,,,note only\nGood,https://g.test,u,p\n\n"
         let db = try makeDatabase2()
         let root = try XCTUnwrap(db.root as? Group2)
         let mapper = try makeMapper(csv: csv)
@@ -349,6 +369,42 @@ final class Phase9ImportTests: XCTestCase {
         XCTAssertEqual(summary.imported, 1)
         XCTAssertEqual(summary.skipped, 1)
         XCTAssertEqual(summary.failed, 0)
+    }
+
+    func testUnmappedStandardFieldColumnDoesNotOverwriteStandardField() throws {
+        // A duplicate "Password" column that is not mapped to the password
+        // role must NOT touch the real (protected) password field.
+        let csv = "name,url,username,password,Password\nSite,https://s.test,u,real-secret,leak-attempt"
+        let db = try makeDatabase2()
+        let root = try XCTUnwrap(db.root as? Group2)
+        let mapper = try makeMapper(csv: csv)
+        let format = try XCTUnwrap(CSVImportFormat.detect(headerRow: mapper.headerRow))
+        var mapping = format.autoMapping(for: mapper.headerRow)
+        XCTAssertEqual(mapping[.password], 3)
+        mapping[CSVColumnRole.password] = 3 // keep the first password column
+        let summary = mapper.importEntries(into: root, format: format, mapping: mapping)
+        XCTAssertEqual(summary.imported, 1)
+
+        let entry = try XCTUnwrap(root.entries.first)
+        XCTAssertEqual(entry.rawPassword, "real-secret")
+        XCTAssertTrue(entry.getField(EntryField.password)?.isProtected ?? false)
+        XCTAssertNil(entry.getField("Password"))
+    }
+
+    func testDuplicateHeaderNamesDoNotLoseData() throws {
+        let csv = "name,url,username,password,notes,notes\nSite,https://s.test,u,p,first,second"
+        let db = try makeDatabase2()
+        let root = try XCTUnwrap(db.root as? Group2)
+        let mapper = try makeMapper(csv: csv)
+        let format = try XCTUnwrap(CSVImportFormat.detect(headerRow: mapper.headerRow))
+        let summary = mapper.importEntries(
+            into: root, format: format,
+            mapping: format.autoMapping(for: mapper.headerRow))
+        XCTAssertEqual(summary.imported, 1)
+
+        let entry = try XCTUnwrap(root.entries.first)
+        XCTAssertEqual(entry.getField("notes")?.value, "first")
+        XCTAssertEqual(entry.getField("notes (2)")?.value, "second")
     }
 
     func testWizardModelEndToEnd() throws {
@@ -375,8 +431,8 @@ final class Phase9ImportTests: XCTestCase {
         XCTAssertThrowsError(
             try CSVImportWizardModel(fileName: "h.csv", csvText: "name,url,username,password")
         ) { error in
-            guard case CSVParser.ParserError.emptyFile = error else {
-                return XCTFail("Expected emptyFile, got \(error)")
+            guard case CSVParser.ParserError.noDataRows = error else {
+                return XCTFail("Expected noDataRows, got \(error)")
             }
         }
     }

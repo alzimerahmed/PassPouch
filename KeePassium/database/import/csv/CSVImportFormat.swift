@@ -60,7 +60,7 @@ enum CSVImportFormat: Int, CaseIterable, Identifiable {
         case .chrome:
             return LString.CSVImport.formatChromeCSV
         case .firefox:
-            return LString.CSVImport.formatFirefoxCCSV
+            return LString.CSVImport.formatFirefoxCSV
         }
     }
 
@@ -77,7 +77,7 @@ enum CSVImportFormat: Int, CaseIterable, Identifiable {
         case .chrome:
             return ["name", "url", "username", "password"]
         case .firefox:
-            return ["url", "username", "password", "httprealm", "formurlpath"]
+            return ["url", "username", "password", "httprealm", "formactionorigin"]
         }
     }
 
@@ -149,7 +149,10 @@ enum CSVImportFormat: Int, CaseIterable, Identifiable {
         case .chrome:
             return []
         case .firefox:
-            return ["timecreated", "timelastused", "timepasswordchanged"]
+            return [
+                "formactionorigin", "guid",
+                "timecreated", "timelastused", "timepasswordchanged",
+            ]
         }
     }
 
