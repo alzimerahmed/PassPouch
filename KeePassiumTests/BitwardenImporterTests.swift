@@ -735,5 +735,17 @@ extension BitwardenImporterTests {
     }
 }
 
-extension BitwardenImporter.ImportError: @retroactive Equatable {}
+extension BitwardenImporter.ImportError: @retroactive Equatable {
+    public static func == (lhs: BitwardenImporter.ImportError, rhs: BitwardenImporter.ImportError) -> Bool {
+        switch (lhs, rhs) {
+        case (.emptyFile, .emptyFile),
+             (.encryptedExport, .encryptedExport):
+            return true
+        case let (.parsingFailed(lhsDetails), .parsingFailed(rhsDetails)):
+            return lhsDetails == rhsDetails
+        default:
+            return false
+        }
+    }
+}
 extension BitwardenImporter.ImportError: DumpEquatable { }
