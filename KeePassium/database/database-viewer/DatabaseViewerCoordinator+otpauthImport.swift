@@ -32,11 +32,16 @@ extension DatabaseViewerCoordinator {
             return
         }
 
+        guard let parent = _currentGroup ?? _database.root else {
+            Diag.error("Bulk TOTP import: no parent group available")
+            return
+        }
+
         let modalRouter = NavigationRouter.createModal(style: .formSheet)
         let coordinator = OtpauthImportCoordinator(
             router: modalRouter,
             databaseFile: _databaseFile,
-            parent: _currentGroup ?? _database.root)
+            parent: parent)
         coordinator.delegate = self
         coordinator.start()
         addChildCoordinator(coordinator, onDismiss: { [weak self] _ in
