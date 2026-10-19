@@ -1,0 +1,31 @@
+# (Un)related files
+.related/
+
+# Temporary OS X files
+.DS_Store
+
+# User settings
+xcuserdata/
+
+# Xcode stuff
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
+DerivedData/
+KeePassium.xcodeproj/xcshareddata/
+
+# License verification files
+KeePassiumLib/KeePassiumLib/resources/licensing/v1-proofs.sha256
+
+# PassPouch private knowledge layer — never commit
+.devin/
+.switchboard/
+docs/*.md
+docs/design/
+# Note: AGENTS.md at repo root IS committed — do not ignore it
+
+# Windows reserved-name artifact
+/nul
