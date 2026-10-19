@@ -101,7 +101,6 @@ struct EntryDetailView: View {
                             .foregroundStyle(.secondary)
                         Text(displayCode(params: totp))
                             .font(.system(.title2, design: .monospaced))
-                            .textSelection(.disabled)
                             .accessibilityLabel(NSLocalizedString(
                                 "[Watch/Field/TOTP]",
                                 value: "One-time code",
@@ -173,7 +172,6 @@ struct EntryDetailView: View {
                 .font(.caption2)
                 .foregroundStyle(.secondary)
             Text(value)
-                .textSelection(.disabled)
         }
     }
 }
