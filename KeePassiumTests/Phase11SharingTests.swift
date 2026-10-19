@@ -182,7 +182,7 @@ final class Phase11SharingTests: XCTestCase {
 
     func testSplitCombineRoundTripAllSubsets() throws {
         let secret = Data(secretString.utf8)
-        var rng = SeededRNG(seed: 0xC0FFEE)
+        var rng: RandomNumberGenerator = SeededRNG(seed: 0xC0FFEE)
         let shares = try Shamir.split(
             secret: secret, threshold: 3, sharesCount: 5, using: &rng)
 
@@ -204,7 +204,7 @@ final class Phase11SharingTests: XCTestCase {
 
     func testFewerThanThresholdFails() throws {
         let secret = Data(secretString.utf8)
-        var rng = SeededRNG(seed: 7)
+        var rng: RandomNumberGenerator = SeededRNG(seed: 7)
         let shares = try Shamir.split(
             secret: secret, threshold: 3, sharesCount: 5, using: &rng)
         XCTAssertThrowsError(try Shamir.combine(shares: Array(shares.prefix(2)))) { error in
@@ -214,7 +214,7 @@ final class Phase11SharingTests: XCTestCase {
 
     func testMixedSetsRejected() throws {
         let secret = Data(secretString.utf8)
-        var rng = SeededRNG(seed: 11)
+        var rng: RandomNumberGenerator = SeededRNG(seed: 11)
         let sharesA = try Shamir.split(secret: secret, threshold: 2, sharesCount: 3, using: &rng)
         let sharesB = try Shamir.split(secret: secret, threshold: 2, sharesCount: 3, using: &rng)
         XCTAssertNotEqual(sharesA[0].setID, sharesB[0].setID)
@@ -227,7 +227,7 @@ final class Phase11SharingTests: XCTestCase {
 
     func testTamperedShareDetected() throws {
         let secret = Data(secretString.utf8)
-        var rng = SeededRNG(seed: 13)
+        var rng: RandomNumberGenerator = SeededRNG(seed: 13)
         var shares = try Shamir.split(secret: secret, threshold: 2, sharesCount: 3, using: &rng)
 
         // Flip one byte of a share's y value.
@@ -246,7 +246,7 @@ final class Phase11SharingTests: XCTestCase {
 
     func testDuplicateShareIndexRejected() throws {
         let secret = Data(secretString.utf8)
-        var rng = SeededRNG(seed: 17)
+        var rng: RandomNumberGenerator = SeededRNG(seed: 17)
         let shares = try Shamir.split(secret: secret, threshold: 2, sharesCount: 3, using: &rng)
         let duplicated = [shares[0], shares[0]]
         XCTAssertThrowsError(try Shamir.combine(shares: duplicated)) { error in
@@ -265,7 +265,7 @@ final class Phase11SharingTests: XCTestCase {
 
     func testShareEncodeDecodeRoundTrip() throws {
         let secret = Data(secretString.utf8)
-        var rng = SeededRNG(seed: 19)
+        var rng: RandomNumberGenerator = SeededRNG(seed: 19)
         let shares = try Shamir.split(secret: secret, threshold: 3, sharesCount: 5, using: &rng)
 
         for share in shares {
@@ -286,7 +286,7 @@ final class Phase11SharingTests: XCTestCase {
 
     func testPrintableSharesSurviveCombine() throws {
         let secret = Data(secretString.utf8)
-        var rng = SeededRNG(seed: 23)
+        var rng: RandomNumberGenerator = SeededRNG(seed: 23)
         let shares = try Shamir.split(secret: secret, threshold: 2, sharesCount: 4, using: &rng)
         let texts = shares.map { Shamir.encodeShare($0) }
         let decoded = try texts.map { try Shamir.decodeShare($0) }
