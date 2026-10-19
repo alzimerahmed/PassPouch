@@ -109,6 +109,13 @@ extension MainSettingsCoordinator: MainSettingsVC.Delegate {
         _router.push(hostingController, animated: true, onPop: nil)
     }
 
+    func didPressEmergencyAccess(in viewController: MainSettingsVC) {
+        // Phase 11c (ADR-016): offline emergency access, SwiftUI per ADR-009.
+        let coordinator = EmergencyAccessCoordinator(router: _router)
+        coordinator.start()
+        addChildCoordinator(coordinator, onDismiss: nil)
+    }
+
     func didPressShowDiagnostics(in viewController: MainSettingsVC) {
         let coordinator = DiagnosticsViewerCoordinator(router: _router)
         coordinator.start()
