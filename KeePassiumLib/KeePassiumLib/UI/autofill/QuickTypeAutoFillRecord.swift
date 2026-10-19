@@ -47,14 +47,15 @@ final public class QuickTypeAutoFillRecord {
             return nil
         }
         guard formatVersion == 0 else {
+            // recordIdentifier comes from the system (ASCredentialIdentityRecord);
+            // malformed input must not trap in Debug builds.
             Diag.warning("Unexpected format version, ignoring")
-            assertionFailure()
             return nil
         }
         let fileProvider = FileProvider(rawValue: String(parts[1]))
         let fileDescriptor = String(parts[2])
         guard let itemID = UUID(uuidString: String(parts[3])) else {
-            assertionFailure("Failed to parse UUID")
+            Diag.warning("Failed to parse UUID, ignoring")
             return nil
         }
         return QuickTypeAutoFillRecord(

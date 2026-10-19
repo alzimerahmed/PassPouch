@@ -115,17 +115,17 @@ final class WatchConnectivityService: NSObject, WCSessionDelegate {
     private func send(message: [String: Any]) {
         activate()
         let session = WCSession.default
+        // applicationContext is queued by the system even while the session
+        // is still activating, so it doubles as the fallback for the
+        // first-unlock race where activation has not completed yet.
+        _ = try? session.updateApplicationContext(message)
         guard session.activationState == .activated, session.isPaired else {
             return
         }
         if session.isReachable {
             session.sendMessage(message, replyHandler: nil) { error in
-                Diag.warning("Watch message failed, falling back to context [message: \(error.localizedDescription)]")
-                _ = try? session.updateApplicationContext(message)
+                Diag.warning("Watch message failed, context already queued [message: \(error.localizedDescription)]")
             }
-        } else {
-            // Delivered when the watch next becomes reachable.
-            _ = try? session.updateApplicationContext(message)
         }
     }
 

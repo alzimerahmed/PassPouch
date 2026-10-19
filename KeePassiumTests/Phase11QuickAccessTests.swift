@@ -126,7 +126,7 @@ final class Phase11QuickAccessTests: XCTestCase {
             password: "secret",
             timeOtpSecret: "JBSWY3DPEHPK3PXP")
         let items = QuickAccessViewModel.mapEntries(
-            QuickAccessViewModel.entries(in: root.database))
+            QuickAccessViewModel.entries(in: try XCTUnwrap(root.database)))
         XCTAssertEqual(items.count, 1)
         XCTAssertTrue(items[0].hasTOTP)
     }
@@ -140,7 +140,7 @@ final class Phase11QuickAccessTests: XCTestCase {
         _ = makeEntry(in: subGroup, title: "Nested", password: "b")
 
         let items = QuickAccessViewModel.mapEntries(
-            QuickAccessViewModel.entries(in: root.database))
+            QuickAccessViewModel.entries(in: try XCTUnwrap(root.database)))
         XCTAssertEqual(Set(items.map(\.title)), ["Top", "Nested"])
     }
 

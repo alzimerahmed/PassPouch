@@ -157,10 +157,10 @@ final class QuickAccessViewModel: ObservableObject {
                 : nil
             return QuickAccessEntry(
                 id: entry.uuid,
-                title: entry.title,
-                username: entry.username,
-                password: entry.password,
-                url: entry.url,
+                title: entry.resolvedTitle,
+                username: entry.resolvedUserName,
+                password: entry.resolvedPassword,
+                url: entry.resolvedURL,
                 hasTOTP: hasTOTP,
                 totpProvider: provider
             )
