@@ -49,17 +49,10 @@ public class UsageMonitor {
         cleanupObsoleteData()
     }
 
+    /// PassPouch: usage is never monitored for freemium throttling (ADR-003);
+    /// no usage statistics are recorded.
     public var isEnabled: Bool {
-        switch PremiumManager.shared.status {
-        case .initialGracePeriod,
-             .subscribed:
-            return false
-        case .lapsed, 
-             .freeLightUse,
-             .freeHeavyUse,
-             .fallback:
-            return true
-        }
+        return false
     }
 
 

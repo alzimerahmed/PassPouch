@@ -44,7 +44,6 @@ public class Keychain {
         case general = "PassPouch"
         case databaseSettings = "PassPouch.dbSettings"
         case pendingDatabaseTransactions = "PassPouch.pendingDBTransactions"
-        case premium = "PassPouch.premium"
         case fileReferences = "PassPouch.fileRefs"
         case networkCredentials = "PassPouch.networkCredentials"
         case timestamps = "PassPouch.timestamps"
@@ -53,13 +52,8 @@ public class Keychain {
     private let keychainFormatVersion = "formatVersion"
     private let appPasscodeAccount = "appPasscode"
     private let biometricControlAccount = "biometricControlItem"
-    private let premiumPurchaseHistory = "premiumPurchaseHistory"
     private let deviceBootTimestamp = "deviceBootTimestamp"
     private let userActivityTimestamp = "userActivityTimestamp"
-
-    private let premiumExpiryDateAccount = "premiumExpiryDate"
-    private let premiumProductAccount = "premiumProductID"
-    private let premiumFallbackDateAccount = "premiumFallbackDate"
 
     private let memoryProtectionKeyTagData = "SecureBytes.general".data(using: .utf8)!
 
@@ -378,80 +372,6 @@ extension Keychain {
 }
 
 extension Keychain {
-    public func setPurchaseHistory(_ purchaseHistory: PurchaseHistory) throws {
-        let encodedHistoryData: Data
-        do {
-            let encoder = JSONEncoder()
-            encoder.dateEncodingStrategy = .iso8601
-            encodedHistoryData = try encoder.encode(purchaseHistory) 
-        } catch {
-            Diag.error("Failed to encode, aborting [message: \(error.localizedDescription)]")
-            throw KeychainError.unexpectedFormat
-        }
-        try set(service: .premium, account: premiumPurchaseHistory, data: encodedHistoryData)
-    }
-
-    public func getPurchaseHistory() throws -> PurchaseHistory? {
-        guard let data = try get(service: .premium, account: premiumPurchaseHistory) else {
-            let purchaseHistory = try convertLegacyHistory()
-            return purchaseHistory
-        }
-
-        do {
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .iso8601
-            let purchaseHistory = try decoder.decode(PurchaseHistory.self, from: data)
-            return purchaseHistory
-        } catch {
-            Diag.error("Failed to decode, aborting [message: \(error.localizedDescription)]")
-            return nil
-        }
-    }
-
-    private func convertLegacyHistory() throws -> PurchaseHistory? {
-        var purchaseHistory = PurchaseHistory.empty
-        var foundLegacyData = false
-        if let productIDData = try get(service: .premium, account: premiumProductAccount),
-           let productIDString = String(data: productIDData, encoding: .utf8),
-           let product = InAppProduct(rawValue: productIDString)
-        {
-            foundLegacyData = true
-            purchaseHistory.latestPremiumProduct = product
-        }
-
-        if let expiryDateData = try get(service: .premium, account: premiumExpiryDateAccount),
-           let expiryDateTimestamp = UInt64(data: ByteArray(data: expiryDateData))
-        {
-            foundLegacyData = true
-            purchaseHistory.latestPremiumExpiryDate = Date(
-                timeIntervalSinceReferenceDate: Double(expiryDateTimestamp)
-            )
-        }
-
-        if let fallbackDateData = try get(service: .premium, account: premiumFallbackDateAccount),
-           let fallbackDateTimestamp = UInt64(data: ByteArray(data: fallbackDateData))
-        {
-            foundLegacyData = true
-            purchaseHistory.premiumFallbackDate = Date(
-                timeIntervalSinceReferenceDate: Double(fallbackDateTimestamp)
-            )
-        }
-
-        guard foundLegacyData else {
-            return nil
-        }
-        Diag.debug("Found purchase history in old format, upgrading")
-        try setPurchaseHistory(purchaseHistory)
-        try remove(service: .premium, account: premiumProductAccount)
-        try remove(service: .premium, account: premiumExpiryDateAccount)
-        try remove(service: .premium, account: premiumFallbackDateAccount)
-        Diag.info("Purchase history upgraded")
-
-        return purchaseHistory
-    }
-}
-
-extension Keychain {
     func getFileReferences(of category: URLReference.Category) throws -> [URLReference] {
         guard let data = try get(service: .fileReferences, account: category.rawValue) else {
             return []
@@ -588,9 +508,6 @@ private extension Keychain {
     private func upgradeKeychainFormatToV1() {
         if let passcodeData = try? get(service: .general, account: appPasscodeAccount) {
             try? set(service: .general, account: appPasscodeAccount, data: passcodeData)
-        }
-        if let purchaseHistoryData = try? get(service: .premium, account: premiumPurchaseHistory) {
-            try? set(service: .premium, account: premiumPurchaseHistory, data: purchaseHistoryData)
         }
         let dbAccounts = try? getAccounts(service: .databaseSettings)
         dbAccounts?.forEach { dbAccount in

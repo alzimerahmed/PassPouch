@@ -118,7 +118,6 @@ class AutoFillCoordinator: BaseCoordinator {
 
         log.trace("Coordinator is preparing")
         let premiumManager = PremiumManager.shared
-        premiumManager.reloadReceipt()
         premiumManager.usageMonitor.startInterval()
         watchdog.didBecomeActive()
         isServicesInitialized = true

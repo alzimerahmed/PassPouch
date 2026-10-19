@@ -51,10 +51,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func applicationWillTerminate(_ application: UIApplication) {
-        PremiumManager.shared.finishObservingTransactions()
-    }
-
     #if targetEnvironment(macCatalyst)
     private func loadMacUtilsPlugin() -> MacUtils? {
         let bundleFileName = "MacUtils.bundle"

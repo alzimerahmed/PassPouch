@@ -19,8 +19,6 @@ extension MainCoordinator {
             showAppResetPrompt()
             return
         }
-        PremiumManager.shared.startObservingTransactions()
-
         FileKeeper.shared.delegate = self
 
         _watchdog.didBecomeActive()
