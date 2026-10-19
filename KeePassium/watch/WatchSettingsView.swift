@@ -66,12 +66,12 @@ struct WatchSettingsView: View {
         databaseName = databaseFile.visibleFileName
         // Collect + sort off the main actor; hop back only to assign.
         let root = databaseFile.database.root
-        Task.detached(priority: .userInitiated) { [weak self] in
+        Task.detached(priority: .userInitiated) {
             var allEntries = [Entry]()
             Self.collectEntries(from: root, into: &allEntries)
             let sorted = allEntries.sorted { $0.resolvedTitle < $1.resolvedTitle }
-            await MainActor.run { [weak self] in
-                self?.entries = sorted
+            await MainActor.run {
+                self.entries = sorted
             }
         }
     }

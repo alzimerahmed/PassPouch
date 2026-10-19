@@ -5,6 +5,7 @@
 //  under the terms of the GNU General Public License version 3 as published
 //  by the Free Software Foundation: https://www.gnu.org/licenses/.
 
+import KeePassiumLib
 import SwiftUI
 
 /// SwiftUI wizard for CSV entry import: file info → format (auto-detected
