@@ -39,6 +39,16 @@
                ReferencedContainer = "container:KeePassium.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3C0DE5E5F00000000000008"
+               BuildableName = "KeePassiumUITests.xctest"
+               BlueprintName = "KeePassiumUITests"
+               ReferencedContainer = "container:KeePassium.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -253,6 +253,14 @@ final class Header2: Eraseable {
         initialized = true
     }
 
+    #if DEBUG
+    /// Test-only helper: lets unit tests build KDBX3 databases for round-trip
+    /// tests (Phase 5). Production code must not downgrade format versions.
+    func setFormatVersionForTesting(_ version: Database2.FormatVersion) {
+        formatVersion = version
+    }
+    #endif
+
     func applyEncryptionSettings(settings: EncryptionSettings) {
         dataCipher = settings.dataCipher.cipher
         fields[.cipherID] = dataCipher.uuid.data

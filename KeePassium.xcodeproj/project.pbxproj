@@ -11,6 +11,7 @@
 		75060C5C2B8CEB33006C7B50 /* MacUtils.bundle in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 75060C552B8CEA84006C7B50 /* MacUtils.bundle */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		750CFBC821BA9ACD00E62B09 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7550D231215D758800360E0C /* AuthenticationServices.framework */; };
 		750CFBD321BA9ACD00E62B09 /* KeePassium AutoFill.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 750CFBC721BA9ACD00E62B09 /* KeePassium AutoFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F3C0DE5E6F00000000000002 /* PassPouchWidgets.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3C0DE5E6F00000000000001 /* PassPouchWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		750CFBD721BA9B6200E62B09 /* KeePassiumLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FEC2222175292C0034334B /* KeePassiumLib.framework */; };
 		751146E6233F9E2900443BCD /* KeePassiumLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751146E5233F9E2900443BCD /* KeePassiumLib.framework */; };
 		7521EAD82E8D55B700016FB8 /* WhatsNewKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7521EAD72E8D55B700016FB8 /* WhatsNewKit */; };
@@ -75,6 +76,20 @@
 			remoteGlobalIDString = 754BF07A2082A6BD00E3A292;
 			remoteInfo = KeePassium;
 		};
+		F3C0DE5E5F00000000000006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 754BF0732082A6BD00E3A292 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 754BF07A2082A6BD00E3A292;
+			remoteInfo = KeePassium;
+		};
+		F3C0DE5E6F00000000000003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 754BF0732082A6BD00E3A292 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3C0DE5E6F00000000000007;
+			remoteInfo = PassPouchWidgets;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +101,7 @@
 			files = (
 				75060C592B8CEADF006C7B50 /* MacUtils.bundle in Embed App Extensions */,
 				750CFBD321BA9ACD00E62B09 /* KeePassium AutoFill.appex in Embed App Extensions */,
+				F3C0DE5E6F00000000000002 /* PassPouchWidgets.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +156,8 @@
 		75D7DFBE233E5E310029AD87 /* KeePassium Pro AutoFill.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "KeePassium Pro AutoFill.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75FEC2222175292C0034334B /* KeePassiumLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeePassiumLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37CAA392A88F7330000EF64 /* KeePassiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeePassiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C0DE5E5F00000000000001 /* KeePassiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeePassiumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C0DE5E6F00000000000001 /* PassPouchWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PassPouchWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -559,12 +577,38 @@
 				util/QuickAutoFillPrompt.swift,
 			);
 		};
+		F3C0DE5E5F0000000000000C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				util/SearchHelper.swift,
+			);
+			target = F37CAA382A88F7330000EF64 /* KeePassiumTests */;
+		};
+		F3C0DE5E5F0000000000000D /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				util/AutoFillItemKind.swift,
+				util/AutoFillMode.swift,
+				util/FuzzySearchResults.swift,
+				"util/SearchHelper+extensions.swift",
+			);
+			target = F37CAA382A88F7330000EF64 /* KeePassiumTests */;
+		};
+		F3C0DE5E6F00000000000005 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F3C0DE5E6F00000000000007 /* PassPouchWidgets */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		753F586F2E285A6700F4C290 /* KeePassium */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (753F5DCE2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DCF2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD02E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD12E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD32E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = KeePassium; sourceTree = "<group>"; };
-		753F5EB42E285A7200F4C290 /* KeePassium AutoFill */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (753F5EE82E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EE92E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEA2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEB2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEC2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "KeePassium AutoFill"; sourceTree = "<group>"; };
+		753F586F2E285A6700F4C290 /* KeePassium */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (753F5DCE2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DCF2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD02E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD12E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD32E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F3C0DE5E5F0000000000000C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = KeePassium; sourceTree = "<group>"; };
+		753F5EB42E285A7200F4C290 /* KeePassium AutoFill */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (753F5EE82E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EE92E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEA2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEB2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEC2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F3C0DE5E5F0000000000000D /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "KeePassium AutoFill"; sourceTree = "<group>"; };
 		753F5F022E285B1A00F4C290 /* KeePassiumTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = KeePassiumTests; sourceTree = "<group>"; };
+		F3C0DE5E5F00000000000002 /* KeePassiumUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = KeePassiumUITests; sourceTree = "<group>"; };
+		F3C0DE5E6F00000000000006 /* PassPouchWidgets */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F3C0DE5E6F00000000000005 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = PassPouchWidgets; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -634,6 +678,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3C0DE5E5F00000000000004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C0DE5E6F0000000000000C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -657,6 +715,8 @@
 				753F586F2E285A6700F4C290 /* KeePassium */,
 				753F5EB42E285A7200F4C290 /* KeePassium AutoFill */,
 				753F5F022E285B1A00F4C290 /* KeePassiumTests */,
+				F3C0DE5E5F00000000000002 /* KeePassiumUITests */,
+				F3C0DE5E6F00000000000006 /* PassPouchWidgets */,
 				754BF07C2082A6BD00E3A292 /* Products */,
 				16DE7C3A873A37E1B4636309 /* Frameworks */,
 			);
@@ -671,8 +731,10 @@
 				750CFBC721BA9ACD00E62B09 /* KeePassium AutoFill.appex */,
 				75B38C81233E5B7C006BDEFC /* KeePassium Pro.app */,
 				75D7DFBE233E5E310029AD87 /* KeePassium Pro AutoFill.appex */,
-				F37CAA392A88F7330000EF64 /* KeePassiumTests.xctest */,
 				75060C552B8CEA84006C7B50 /* MacUtils.bundle */,
+				F37CAA392A88F7330000EF64 /* KeePassiumTests.xctest */,
+				F3C0DE5E5F00000000000001 /* KeePassiumUITests.xctest */,
+				F3C0DE5E6F00000000000001 /* PassPouchWidgets.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -737,6 +799,7 @@
 			dependencies = (
 				750CFBD221BA9ACD00E62B09 /* PBXTargetDependency */,
 				75060C5B2B8CEADF006C7B50 /* PBXTargetDependency */,
+				F3C0DE5E6F00000000000004 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				753F586F2E285A6700F4C290 /* KeePassium */,
@@ -829,6 +892,51 @@
 			productReference = F37CAA392A88F7330000EF64 /* KeePassiumTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F3C0DE5E5F00000000000008 /* KeePassiumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C0DE5E5F0000000000000B /* Build configuration list for PBXNativeTarget "KeePassiumUITests" */;
+			buildPhases = (
+				F3C0DE5E5F00000000000003 /* Sources */,
+				F3C0DE5E5F00000000000004 /* Frameworks */,
+				F3C0DE5E5F00000000000005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3C0DE5E5F00000000000007 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F3C0DE5E5F00000000000002 /* KeePassiumUITests */,
+			);
+			name = KeePassiumUITests;
+			packageProductDependencies = (
+			);
+			productName = KeePassiumUITests;
+			productReference = F3C0DE5E5F00000000000001 /* KeePassiumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F3C0DE5E6F00000000000007 /* PassPouchWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C0DE5E6F0000000000000A /* Build configuration list for PBXNativeTarget "PassPouchWidgets" */;
+			buildPhases = (
+				F3C0DE5E6F0000000000000B /* Sources */,
+				F3C0DE5E6F0000000000000C /* Frameworks */,
+				F3C0DE5E6F0000000000000D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F3C0DE5E6F00000000000006 /* PassPouchWidgets */,
+			);
+			name = PassPouchWidgets;
+			packageProductDependencies = (
+			);
+			productName = PassPouchWidgets;
+			productReference = F3C0DE5E6F00000000000001 /* PassPouchWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -895,7 +1003,15 @@
 						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 					};
+					F3C0DE5E6F00000000000007 = {
+						CreatedOnToolsVersion = 16.0;
+						ProvisioningStyle = Automatic;
+					};
 					F37CAA382A88F7330000EF64 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 754BF07A2082A6BD00E3A292;
+					};
+					F3C0DE5E5F00000000000008 = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 754BF07A2082A6BD00E3A292;
 					};
@@ -944,7 +1060,9 @@
 				75B38BEF233E5B7C006BDEFC /* KeePassium Pro */,
 				75D7DF7A233E5E310029AD87 /* KeePassium Pro AutoFill */,
 				F37CAA382A88F7330000EF64 /* KeePassiumTests */,
+				F3C0DE5E5F00000000000008 /* KeePassiumUITests */,
 				75060C542B8CEA84006C7B50 /* MacUtils */,
+				F3C0DE5E6F00000000000007 /* PassPouchWidgets */,
 			);
 		};
 /* End PBXProject section */
@@ -986,6 +1104,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F37CAA372A88F7330000EF64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C0DE5E5F00000000000005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C0DE5E6F0000000000000D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1059,6 +1191,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3C0DE5E5F00000000000003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C0DE5E6F0000000000000B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1088,6 +1234,16 @@
 			isa = PBXTargetDependency;
 			target = 754BF07A2082A6BD00E3A292 /* KeePassium */;
 			targetProxy = F37CAA3D2A88F7330000EF64 /* PBXContainerItemProxy */;
+		};
+		F3C0DE5E5F00000000000007 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 754BF07A2082A6BD00E3A292 /* KeePassium */;
+			targetProxy = F3C0DE5E5F00000000000006 /* PBXContainerItemProxy */;
+		};
+		F3C0DE5E6F00000000000004 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3C0DE5E6F00000000000007 /* PassPouchWidgets */;
+			targetProxy = F3C0DE5E6F00000000000003 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1588,6 +1744,100 @@
 			};
 			name = Release;
 		};
+		F3C0DE5E5F00000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.KeePassiumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KeePassium;
+			};
+			name = Debug;
+		};
+		F3C0DE5E5F0000000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.KeePassiumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KeePassium;
+			};
+			name = Release;
+		};
+		F3C0DE5E6F00000000000008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = PassPouchWidgets/PassPouchWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 173;
+				DEVELOPMENT_TEAM = 84W4PHXS24;
+				INFOPLIST_FILE = PassPouchWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PassPouch Widgets";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LLVM_LTO = YES;
+				MARKETING_VERSION = 2.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3C0DE5E6F00000000000009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = PassPouchWidgets/PassPouchWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 173;
+				DEVELOPMENT_TEAM = 84W4PHXS24;
+				INFOPLIST_FILE = PassPouchWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PassPouch Widgets";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LLVM_LTO = YES;
+				MARKETING_VERSION = 2.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1650,6 +1900,24 @@
 			buildConfigurations = (
 				F37CAA402A88F7330000EF64 /* Debug */,
 				F37CAA412A88F7330000EF64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C0DE5E5F0000000000000B /* Build configuration list for PBXNativeTarget "KeePassiumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C0DE5E5F00000000000009 /* Debug */,
+				F3C0DE5E5F0000000000000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C0DE5E6F0000000000000A /* Build configuration list for PBXNativeTarget "PassPouchWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C0DE5E6F00000000000008 /* Debug */,
+				F3C0DE5E6F00000000000009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

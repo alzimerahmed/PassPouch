@@ -23,9 +23,9 @@ jobs:
         run: swiftlint
 
   build-and-test:
-    name: Build & Unit Tests
+    name: Build & Tests (unit + UI smoke)
     runs-on: macos-26
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,7 +42,7 @@ jobs:
           -workspace KeePassium.xcworkspace
           -scheme KeePassium
 
-      - name: Build and run unit tests
+      - name: Build and run tests (unit + UI smoke)
         run: >
           set -o pipefail &&
           xcodebuild
@@ -50,5 +50,27 @@ jobs:
           -scheme KeePassium
           -destination 'platform=iOS Simulator,name=iPhone 17,OS=latest'
           -configuration Debug
+          -enableCodeCoverage YES
+          -resultBundlePath TestResults.xcresult
           -only-testing:KeePassiumTests
+          -only-testing:KeePassiumUITests
           build test
+
+      - name: Extract coverage report
+        if: always()
+        run: |
+          xcrun xccov view --report TestResults.xcresult > coverage-report.txt || true
+          xcrun xcresulttool get test-results summary --path TestResults.xcresult > coverage-summary.json || true
+          head -50 coverage-report.txt
+
+      - name: Upload test results and coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-and-coverage
+          path: |
+            TestResults.xcresult
+            coverage-report.txt
+            coverage-summary.json
+          retention-days: 7
+          if-no-files-found: warn
