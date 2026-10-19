@@ -1,0 +1,55 @@
+name: Checks
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  swiftlint:
+    name: SwiftLint
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
+      - name: Run SwiftLint (repo root)
+        run: swiftlint
+
+  build-and-test:
+    name: Build & Unit Tests
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Resolve Swift package dependencies
+        run: >
+          xcodebuild -resolvePackageDependencies
+          -workspace KeePassium.xcworkspace
+          -scheme KeePassium
+
+      - name: Build and run unit tests
+        run: >
+          set -o pipefail &&
+          xcodebuild
+          -workspace KeePassium.xcworkspace
+          -scheme KeePassium
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
+          -configuration Debug
+          -only-testing:KeePassiumTests
+          CODE_SIGNING_ALLOWED=NO
+          build test
