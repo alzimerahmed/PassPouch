@@ -51,7 +51,6 @@ jobs:
           -destination 'platform=iOS Simulator,name=iPhone 17,OS=latest'
           -configuration Debug
           -only-testing:KeePassiumTests
-          CODE_SIGNING_ALLOWED=NO
           build test
 
       - name: Build KeePassiumLib framework
@@ -62,5 +61,4 @@ jobs:
           -scheme KeePassiumLib
           -destination 'platform=iOS Simulator,name=iPhone 17,OS=latest'
           -configuration Debug
-          CODE_SIGNING_ALLOWED=NO
           build
