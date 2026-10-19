@@ -2,7 +2,6 @@
 "[About/altTitle]" = "حَول PassPouch";
 
 /* Section in settings: icon for the app */
-"[Appearance/AppIcon/title]" = "أيقونة التطبيق";
 
 /* Section in settings: icons for database */
 "[Appearance/DatabaseIcons/title]" = "أيقونات قاعدة البيانات";

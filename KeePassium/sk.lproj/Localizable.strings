@@ -2,7 +2,6 @@
 "[About/altTitle]" = "O aplikácii";
 
 /* Section in settings: icon for the app */
-"[Appearance/AppIcon/title]" = "Ikona aplikácie";
 
 /* Section in settings: icons for database */
 "[Appearance/DatabaseIcons/title]" = "Ikony databázy";

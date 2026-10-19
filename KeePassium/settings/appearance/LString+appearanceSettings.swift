@@ -15,10 +15,6 @@ extension LString {
         value: "Appearance",
         comment: "Group of settings for user interface appearance (text size, icons, etc)")
 
-    public static let appearanceAppIconTitle = NSLocalizedString(
-        "[Appearance/AppIcon/title]",
-        value: "App Icon",
-        comment: "Section in settings: icon for the app")
     public static let appearanceDatabaseIconsTitle = NSLocalizedString(
         "[Appearance/DatabaseIcons/title]",
         value: "Database Icons",

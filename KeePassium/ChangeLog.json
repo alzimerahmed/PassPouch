@@ -173,10 +173,6 @@
                 {
                     "title": "Fixed: Enforcing expired business licenses",
                     "edition": "org"
-                },
-                {
-                    "title": "Fixed: Removed donations from app settings",
-                    "edition": "org"
                 }
             ]
         },
@@ -1345,10 +1341,6 @@
                     "title": "Fixed: Database unlocker could load a wrong fallback file sometimes"
                 },
                 {
-                    "title": "Fixed: Lingering donation suggestion, required database reload",
-                    "credits": "everyone"
-                },
-                {
                     "title": "Fixed: Temporary files (such as print previews) could stay around for too long",
                     "credits": "Christopher"
                 },
@@ -1496,10 +1488,6 @@
                     "title": "Fixed: Fixed beta status detection for TestFlight builds",
                     "credits": "Philipp",
                     "os": "macos"
-                },
-                {
-                    "title": "Fixed: Don't suggest donation to recent version purchasers",
-                    "credits": "T.H."
                 },
                 {
                     "title": "Fixed: Manual editing of the WebDAV file URL was cumbersome",
@@ -1789,9 +1777,6 @@
                 },
                 {
                     "title": "Changed: Database timeout 'Never' is shown as a free option (worked as such even before)"
-                },
-                {
-                    "title": "Changed: Instead, the app will suggest making a donation once in a while"
                 },
                 {
                     "title": "Changed: Password generator: fixed sets can be deactivated instead of excluded",
@@ -2287,9 +2272,6 @@
                     "title": "Added: Possibility to save attachment files (in addition to view/export)",
                     "github": "#189",
                     "credits": "Vitaly"
-                },
-                {
-                    "title": "Added: Donations! Anyone can support the development now"
                 },
                 {
                     "title": "Improved: Massive internal changes to simplify future development"

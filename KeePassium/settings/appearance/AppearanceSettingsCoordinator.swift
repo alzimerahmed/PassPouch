@@ -43,7 +43,6 @@ final class AppearanceSettingsCoordinator: BaseCoordinator {
 
     private func applySettingsToVC() {
         let settings = Settings.current
-        appearanceSettingsVC.isSupportsAlternateIcons = UIApplication.shared.supportsAlternateIcons
         appearanceSettingsVC.databaseIconSet = settings.databaseIconSet
         appearanceSettingsVC.isOpenLastUsedTab = settings.isRememberEntryViewerPage
         appearanceSettingsVC.textScale = Float(settings.textScale)
@@ -54,12 +53,6 @@ final class AppearanceSettingsCoordinator: BaseCoordinator {
 }
 
 extension AppearanceSettingsCoordinator {
-    private func showAppIconSettings() {
-        let coordinator = AppIconSwitcherCoordinator(router: _router)
-        coordinator.start()
-        addChildCoordinator(coordinator, onDismiss: nil)
-    }
-
     private func showDatabaseIconsSettings() {
         let coordinator = DatabaseIconSetSwitcherCoordinator(router: _router)
         coordinator.start()
@@ -81,10 +74,6 @@ extension AppearanceSettingsCoordinator {
 }
 
 extension AppearanceSettingsCoordinator: AppearanceSettingsVC.Delegate {
-    func didPressChangeAppIcon(in viewController: AppearanceSettingsVC) {
-        showAppIconSettings()
-    }
-
     func didPressChangeDatabaseIcons(in viewController: AppearanceSettingsVC) {
         showDatabaseIconsSettings()
     }

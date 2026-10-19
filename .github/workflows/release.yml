@@ -1,0 +1,80 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build unsigned IPA & publish GitHub Release
+    runs-on: macos-26
+    timeout-minutes: 90
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+
+      - name: Resolve Swift package dependencies
+        run: >
+          xcodebuild -resolvePackageDependencies
+          -workspace KeePassium.xcworkspace
+          -scheme KeePassium
+
+      - name: Build unsigned Release (device)
+        run: >
+          set -o pipefail &&
+          xcodebuild
+          -workspace KeePassium.xcworkspace
+          -scheme KeePassium
+          -configuration Release
+          -destination 'generic/platform=iOS'
+          -derivedDataPath build/DerivedData
+          CODE_SIGNING_ALLOWED=NO
+          CODE_SIGNING_REQUIRED=NO
+          CODE_SIGN_IDENTITY=""
+          build
+
+      - name: Package unsigned IPA
+        run: |
+          APP_DIR=$(find build/DerivedData/Build/Products -maxdepth 2 -name "*.app" -type d | head -1)
+          test -d "$APP_DIR" || { echo "No .app produced"; exit 1; }
+          mkdir -p Payload
+          cp -R "$APP_DIR" "Payload/PassPouch.app"
+          zip -qr "PassPouch-${GITHUB_REF_NAME}.ipa" Payload
+          ls -lh "PassPouch-${GITHUB_REF_NAME}.ipa"
+
+      - name: Generate release notes
+        run: |
+          gh api repos/${{ github.repository }}/releases/generate-notes \
+            -f tag_name="${GITHUB_REF_NAME}" --jq .body > changelog.md || true
+          {
+            echo "## PassPouch ${GITHUB_REF_NAME#v}"
+            echo
+            echo "### Install (sideloading)"
+            echo
+            echo "The IPA below is unsigned. Install it with a tool that signs it"
+            echo "with your own Apple ID:"
+            echo
+            echo "- [AltStore](https://altstore.io) or [SideStore](https://sidestore.io): add the IPA from the Files app."
+            echo "- [Sideloadly](https://sideloadly.io): drag the IPA in and sign with your Apple ID."
+            echo
+            echo "Free Apple ID signatures expire after 7 days (AltStore/SideStore can auto-refresh)."
+            echo
+            echo "### What's Changed"
+            echo
+            cat changelog.md
+          } > release-notes.md
+
+      - name: Publish GitHub Release
+        run: >
+          gh release create "${GITHUB_REF_NAME}"
+          --title "PassPouch ${GITHUB_REF_NAME#v}"
+          --notes-file release-notes.md
+          "PassPouch-${GITHUB_REF_NAME}.ipa"

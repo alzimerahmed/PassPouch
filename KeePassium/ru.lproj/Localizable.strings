@@ -2,7 +2,6 @@
 "[About/altTitle]" = "О программе";
 
 /* Section in settings: icon for the app */
-"[Appearance/AppIcon/title]" = "Значок приложения";
 
 /* Section in settings: icons for database */
 "[Appearance/DatabaseIcons/title]" = "Значки базы данных";
