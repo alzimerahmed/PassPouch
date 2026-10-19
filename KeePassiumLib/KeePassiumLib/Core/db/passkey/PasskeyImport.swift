@@ -97,7 +97,7 @@ public extension Passkey {
             return nil
         }
         do {
-            let privateKey = try P256.Signing.PrivateKey(dataRepresentation: scalar)
+            let privateKey = try P256.Signing.PrivateKey(rawRepresentation: scalar)
             return privateKey.pemRepresentation
         } catch {
             Diag.error("Failed to build P-256 private key from scalar: \(error)")
@@ -139,7 +139,7 @@ public extension Passkey {
         guard scalar.contains(where: { $0 != 0 }) else { return nil }
 
         do {
-            let privateKey = try P256.Signing.PrivateKey(dataRepresentation: scalar)
+            let privateKey = try P256.Signing.PrivateKey(rawRepresentation: scalar)
             // If the optional [1] public key BIT STRING is present
             // (03 42 04 <65-byte uncompressed point>), verify it matches.
             if let publicKeyPoint = embeddedUncompressedPublicKey(in: bytes, after: scalarStart + 32) {
