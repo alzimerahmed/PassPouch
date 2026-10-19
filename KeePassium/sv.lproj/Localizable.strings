@@ -1,7 +1,6 @@
 /* Menu item that shows info about PassPouch app */
 "[About/altTitle]" = "Om PassPouch";
 
-/* Section in settings: icon for the app */
 
 /* Section in settings: icons for database */
 "[Appearance/DatabaseIcons/title]" = "Databasikoner";

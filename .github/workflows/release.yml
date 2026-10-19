@@ -3,6 +3,7 @@ name: Release
 on:
   push:
     tags: ['v*']
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -43,12 +44,14 @@ jobs:
 
       - name: Package unsigned IPA
         run: |
-          APP_DIR=$(find build/DerivedData/Build/Products -maxdepth 2 -name "*.app" -type d | head -1)
+          APP_DIR="build/DerivedData/Build/Products/Release-iphoneos/KeePassium.app"
           test -d "$APP_DIR" || { echo "No .app produced"; exit 1; }
+          BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_DIR/Info.plist")
+          [ "$BUNDLE_ID" = "com.passpouch.ios" ] || { echo "Unexpected bundle ID: $BUNDLE_ID"; exit 1; }
           mkdir -p Payload
           cp -R "$APP_DIR" "Payload/PassPouch.app"
-          zip -qr "PassPouch-${GITHUB_REF_NAME}.ipa" Payload
-          ls -lh "PassPouch-${GITHUB_REF_NAME}.ipa"
+          zip -qr "PassPouch-${GITHUB_REF_NAME#v}.ipa" Payload
+          ls -lh "PassPouch-${GITHUB_REF_NAME#v}.ipa"
 
       - name: Generate release notes
         run: |
@@ -77,4 +80,4 @@ jobs:
           gh release create "${GITHUB_REF_NAME}"
           --title "PassPouch ${GITHUB_REF_NAME#v}"
           --notes-file release-notes.md
-          "PassPouch-${GITHUB_REF_NAME}.ipa"
+          "PassPouch-${GITHUB_REF_NAME#v}.ipa"

@@ -1,6 +1,42 @@
 {
     "sections": [
         {
+            "version": "1.0.0",
+            "releaseDate": "2026-10-19T00:00:00Z",
+            "items": [
+                {
+                    "title": "PassPouch 1.0 — open-source KeePass-compatible password manager, based on KeePassium"
+                },
+                {
+                    "title": "Added: Apple Watch companion app with live TOTP codes"
+                },
+                {
+                    "title": "Added: encrypted share links for single entries"
+                },
+                {
+                    "title": "Added: emergency access — split your master password with Shamir secret sharing, plus a printable Emergency Kit PDF"
+                },
+                {
+                    "title": "Added: CSV import wizard for 1Password, Bitwarden, Apple Passwords, Chrome/Edge and Firefox"
+                },
+                {
+                    "title": "Added: passkey support in AutoFill and Bitwarden passkey import"
+                },
+                {
+                    "title": "Added: opt-in breach check (Have I Been Pwned, k-anonymity)"
+                },
+                {
+                    "title": "Added: TOTP autofill, home-screen widgets, App Intents and Siri Shortcuts"
+                },
+                {
+                    "title": "Improved: WebDAV sync now uses ETag write protection; macOS gains a quick-access window"
+                },
+                {
+                    "title": "Removed: premium tier, donation prompts and all monetization — every feature is free"
+                }
+            ]
+        },
+        {
             "version": "2.6",
             "releaseDate": "2026-05-23T00:00:00Z",
             "items": [
