@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7528ABF02CF6000800AFA17A /* SwiftCBOR in Frameworks */ = {isa = PBXBuildFile; productRef = 7528ABEF2CF6000800AFA17A /* SwiftCBOR */; };
-		7544570425CAE2D50011386C /* TPInAppReceipt in Frameworks */ = {isa = PBXBuildFile; productRef = 7544570325CAE2D50011386C /* TPInAppReceipt */; };
 		757C51CF29F17D3C008986F4 /* DomainParser in Frameworks */ = {isa = PBXBuildFile; productRef = 757C51CE29F17D3C008986F4 /* DomainParser */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7544570425CAE2D50011386C /* TPInAppReceipt in Frameworks */,
 				757C51CF29F17D3C008986F4 /* DomainParser in Frameworks */,
 				7528ABF02CF6000800AFA17A /* SwiftCBOR in Frameworks */,
 			);
@@ -106,7 +104,6 @@
 			);
 			name = KeePassiumLib;
 			packageProductDependencies = (
-				7544570325CAE2D50011386C /* TPInAppReceipt */,
 				757C51CE29F17D3C008986F4 /* DomainParser */,
 				7528ABEF2CF6000800AFA17A /* SwiftCBOR */,
 			);
@@ -160,7 +157,6 @@
 			);
 			mainGroup = 75D0C7602174AF1F00C64C93;
 			packageReferences = (
-				7544570225CAE2D50011386C /* XCRemoteSwiftPackageReference "TPInAppReceipt" */,
 				757C51CD29F17D3C008986F4 /* XCRemoteSwiftPackageReference "SwiftDomainParser" */,
 				7528ABEE2CF6000800AFA17A /* XCRemoteSwiftPackageReference "SwiftCBOR" */,
 			);
@@ -431,14 +427,6 @@
 				kind = branch;
 			};
 		};
-		7544570225CAE2D50011386C /* XCRemoteSwiftPackageReference "TPInAppReceipt" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/keepassium/TPInAppReceipt";
-			requirement = {
-				branch = keepassium;
-				kind = branch;
-			};
-		};
 		757C51CD29F17D3C008986F4 /* XCRemoteSwiftPackageReference "SwiftDomainParser" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/keepassium/SwiftDomainParser";
@@ -454,11 +442,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7528ABEE2CF6000800AFA17A /* XCRemoteSwiftPackageReference "SwiftCBOR" */;
 			productName = SwiftCBOR;
-		};
-		7544570325CAE2D50011386C /* TPInAppReceipt */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7544570225CAE2D50011386C /* XCRemoteSwiftPackageReference "TPInAppReceipt" */;
-			productName = TPInAppReceipt;
 		};
 		757C51CE29F17D3C008986F4 /* DomainParser */ = {
 			isa = XCSwiftPackageProductDependency;

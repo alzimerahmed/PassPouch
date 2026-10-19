@@ -47,15 +47,6 @@
       }
     },
     {
-      "identity" : "tpinappreceipt",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/keepassium/TPInAppReceipt",
-      "state" : {
-        "branch" : "keepassium",
-        "revision" : "2f8a1cae6b578423d9941b89a0f07c6cce1e1c22"
-      }
-    },
-    {
       "identity" : "whatsnewkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/keepassium/WhatsNewKit",

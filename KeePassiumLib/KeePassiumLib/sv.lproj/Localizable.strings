@@ -1982,31 +1982,22 @@
 "[Support/template] (Please describe the problem here)" = "(Vänligen beskriv problemet här)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "Hjälp oss göra PassPouch bättre!";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "Hjälp oss hålla PassPouch skinande!";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "Hjälp oss hålla PassPouch gratis!";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "Gillar du PassPouch?";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "PassPouch är en gratis app med öppen källkod. Du förlitar dig på den med din känsligaste information. Det finns ingen reklam, inget spionage, inget nonsens — vi respekterar dig.";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "Gillar du PassPouch men behöver inte premiumfunktionerna?";
 
 /* Notification after a successful donation. */
-"[TipBox/thankYou]" = "Tack!";
 
 /* Title of the tip box/donation screen. */
-"[TipBox/title/2]" = "Bidrag";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "Stöd PassPouch";
 
 /* Name of an entry field. Acronym `TOTP` should not be translated. */
 "[TOTP/FieldName]" = "Engångslösenord (TOTP)";

@@ -146,7 +146,6 @@
 		753F5DCE2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Configuration.storekit,
 				Info.plist,
 				util/macos/MacUtilsImpl.swift,
 			);
@@ -226,8 +225,6 @@
 				"general/password-quality/PasswordQualityIndicatorIconView.swift",
 				"general/password-quality/PasswordQualityIndicatorView.swift",
 				general/PlaceholderVC.swift,
-				"premium/PremiumFeature+extension.swift",
-				"premium/SKProduct+extension.swift",
 				PrivacyInfo.xcprivacy,
 				"remote-files/connection-type-picker/ConnectionTypePickerVC.swift",
 				"remote-files/connection-type-picker/ConnectionTypePickerVC+cells.swift",
@@ -336,7 +333,6 @@
 		753F5DD02E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Configuration.storekit,
 				Info.plist,
 				util/macos/MacUtilsImpl.swift,
 			);
@@ -416,8 +412,6 @@
 				"general/password-quality/PasswordQualityIndicatorIconView.swift",
 				"general/password-quality/PasswordQualityIndicatorView.swift",
 				general/PlaceholderVC.swift,
-				"premium/PremiumFeature+extension.swift",
-				"premium/SKProduct+extension.swift",
 				PrivacyInfo.xcprivacy,
 				"remote-files/connection-type-picker/ConnectionTypePickerVC.swift",
 				"remote-files/connection-type-picker/ConnectionTypePickerVC+cells.swift",
@@ -1423,7 +1417,7 @@
 		75B38C7F233E5B7C006BDEFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APP_URL_SCHEME = keepassium.pro;
+				APP_URL_SCHEME = passpouch.pro;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon-pro";
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = KeePassium/KeePassium.entitlements;
@@ -1457,7 +1451,7 @@
 		75B38C80233E5B7C006BDEFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APP_URL_SCHEME = keepassium.pro;
+				APP_URL_SCHEME = passpouch.pro;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon-pro";
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = KeePassium/KeePassium.entitlements;
@@ -1492,7 +1486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				APP_URL_SCHEME = keepassium.pro;
+				APP_URL_SCHEME = passpouch.pro;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "KeePassium AutoFill/KeePassium_AutoFill.entitlements";
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "KeePassium AutoFill/KeePassium_AutoFill-macOS.entitlements";
@@ -1525,7 +1519,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				APP_URL_SCHEME = keepassium.pro;
+				APP_URL_SCHEME = passpouch.pro;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "KeePassium AutoFill/KeePassium_AutoFill.entitlements";
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "KeePassium AutoFill/KeePassium_AutoFill-macOS.entitlements";

@@ -1982,31 +1982,22 @@
 "[Support/template] (Please describe the problem here)" = "(請在此處描述問題)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "幫助我們使 PassPouch 成為更好的應用程式！";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "幫助我們使 PassPouch 成為更好的應用程式！";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "幫助我們使 PassPouch 持續免費！";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "您喜歡 PassPouch 嗎？";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "PassPouch 是一個免費開放原始碼的應用程序，無廣告，無監視，嚴肅的，您信任它並將最敏感的資料交給它 - 我們尊敬您。";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "您喜歡 PassPouch，但是不想要進階版功能嗎？";
 
 /* Notification after a successful donation. */
-"[TipBox/thankYou]" = "感謝您！";
 
 /* Title of the tip box/donation screen. */
-"[TipBox/title/2]" = "贊助";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "支持 PassPouch";
 
 /* Name of an entry field. Acronym `TOTP` should not be translated. */
 "[TOTP/FieldName]" = "一次性密碼 (TOTP)";

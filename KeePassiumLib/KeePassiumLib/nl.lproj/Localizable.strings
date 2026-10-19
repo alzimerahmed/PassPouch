@@ -1982,31 +1982,22 @@
 "[Support/template] (Please describe the problem here)" = "(beschrijf hier het probleem)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "Help ons PassPouch te verbeteren!";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "Help ons PassPouch mooi te houden!";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "Help ons PassPouch gratis te houden!";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "Gebruikt u PassPouch graag?";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "PassPouch is een gratis opensource-app. U legt uw vertrouwen in deze app door er uw belangrijkste informatie aan toe te voegen. Er is geen reclame, geen spionage, geen onzin — we respecteren u.";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "Gebruikt u PassPouch graag, maar heeft u geen premium-functies nodig?";
 
 /* Notification after a successful donation. */
-"[TipBox/thankYou]" = "Bedankt!";
 
 /* Title of the tip box/donation screen. */
-"[TipBox/title/2]" = "Donaties";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "Ondersteun PassPouch";
 
 /* Name of an entry field. Acronym `TOTP` should not be translated. */
 "[TOTP/FieldName]" = "Eenmalig wachtwoord (TOTP)";

@@ -1112,31 +1112,22 @@
 "[Support/template] (Please describe the problem here)" = "(여기에 문제에 대한 설명을 작성해주세요.)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "PassPouch이 더 좋은 앱이 될 수 있도록 도와주세요!";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "PassPouch이 더 멋진 앱이 될 수 있도록 도와주세요!";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "PassPouch이 계속 무료로 유지될 수 있도록 도와주세요!";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "PassPouch을 잘 사용하고 계신가요?";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "PassPouch은 무료 오픈 소스 앱입니다. 사용자의 민감한 정보가 빠져나갈 구멍을 만들 수 없죠. 광고와 추적 없이 사용자를 존중합니다.";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "PassPouch을 잘 사용하고 있지만 프리미엄 기능은 필요하지 않으신가요?";
 
 /* Notification after a successful donation. */
-"[TipBox/thankYou]" = "감사합니다!";
 
 /* Title of the tip box/donation screen. */
-"[TipBox/title/2]" = "기부";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "PassPouch 지원하기";
 
 /* Human-readable file location. The file is situated either online / in cloud storage, or on the same device, but in some other app. Example: 'File Location: Cloud storage / Another app' */
 "[URLReference/Location] Cloud storage / Another app" = "클라우드 저장소 / 기타 앱";

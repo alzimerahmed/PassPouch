@@ -1424,31 +1424,22 @@
 "[Support/template] (Please describe the problem here)" = "(โปรดอธิบายปัญหาตรงนี้)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "ช่วยพวกเราทำ PassPouch ให้ดีขึ้น";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "ช่วยพวกเราทำให้ PassPouch ดูดีขึ้น";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "ช่วยพวกเราทำให้ PassPouch สามารถใช้ฟรีได้";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "คุณถูกใจ PassPouch หรือไม่?";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "PassPouch เป็นแอปโอเพนซอร์สแบบฟรี คุณสามารถไว้ใจกับข้อมูลที่ละเอียดอ่อนของคุณได้ ไม่มีโฆษณา ไม่สอดส่องข้อมูล ไม่ทำเรื่องไร้สาระ — เราเคารพคุณ";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "คุณถูกใจ PassPouch แต่ไม่ได้ต้องการฟีเจอร์พรีเมียมหรือไม่?";
 
 /* Notification after a successful donation. */
-"[TipBox/thankYou]" = "ขอบคุณ!";
 
 /* Title of the tip box/donation screen. */
-"[TipBox/title/2]" = "บริจาค";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "สนับสนุน PassPouch";
 
 /* Name of an entry field. Acronym `TOTP` should not be translated. */
 "[TOTP/FieldName]" = "รหัสผ่านแบบใช้ครั้งเดียว (TOTP)";

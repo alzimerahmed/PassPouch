@@ -89,7 +89,6 @@
 "[Credits/Item/toastSwift]" = "Toast-Swift door Charles Schalen";
 
 /* Item in the credits list */
-"[Credits/Item/tpInappReceipt]" = "TPInAppReceipt door Pavel Tikhonenko";
 
 /* Item in the credits list */
 "[Credits/Item/translations]" = "Nederlandse vertaling door Heimen Stoffels (@Vistaus)";

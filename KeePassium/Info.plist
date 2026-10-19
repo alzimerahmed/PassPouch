@@ -214,7 +214,6 @@
     <array>
         <string>mailto</string>
         <string>http</string>
-        <string>itms-apps</string>
         <string>https</string>
         <string>ftp</string>
     </array>

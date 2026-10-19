@@ -137,11 +137,6 @@ extension Credits {
                 url: URL(string: "https://github.com/Yubico/yubikit-ios")
             ),
             Credits(
-                title: LString.creditsTPInAppReceipt,
-                license: .mit,
-                url: URL(string: "https://github.com/tikhop/TPInAppReceipt")
-            ),
-            Credits(
                 title: LString.creditsSwiftDomainParser,
                 license: .mit,
                 url: URL(string: "https://github.com/Dashlane/SwiftDomainParser")
@@ -335,12 +330,6 @@ extension LString {
         "[Credits/Item/yubico]",
         bundle: Bundle.main,
         value: "Yubico Mobile iOS SDK by Yubico AB",
-        comment: "Item in the credits list"
-    )
-    public static let creditsTPInAppReceipt = NSLocalizedString(
-        "[Credits/Item/tpInappReceipt]",
-        bundle: Bundle.main,
-        value: "TPInAppReceipt by Pavel Tikhonenko",
         comment: "Item in the credits list"
     )
     public static let creditsSwiftDomainParser = NSLocalizedString(

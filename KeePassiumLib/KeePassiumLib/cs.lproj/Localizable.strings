@@ -1982,31 +1982,22 @@
 "[Support/template] (Please describe the problem here)" = "(Zde prosím popište váš problém)";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/1]" = "Pomozte nám vylepšit PassPouch!";
 
 /* Call to action in the Donations screen. */
-"[TipBox/callToAction/2]" = "Pomozte nám udržovat PassPouch!";
 
 /* Call to action in the Donations screen. (free = gratis) */
-"[TipBox/callToAction/3]" = "Pomozte nám zachovat PassPouch zdarma!";
 
 /* Text in the Donations screen. */
-"[TipBox/description/1]" = "Líbí se vám PassPouch?";
 
 /* Text in the Donations screen. */
-"[TipBox/description/2]" = "PassPouch je aplikace zdarma s otevřeným zdrojovým kódem. Svěřujete jí své nejcitlivější informace. Je bez reklam, sledování a zbytečností — respektujeme Vás.";
 
 /* Text in the Donations screen. */
-"[TipBox/description/3]" = "Líbí se vám PassPouch, ale nepotřebujete prémiové funkce?";
 
 /* Notification after a successful donation. */
-"[TipBox/thankYou]" = "Děkujeme!";
 
 /* Title of the tip box/donation screen. */
-"[TipBox/title/2]" = "Příspěvky";
 
 /* Call to action, title of the tip box/donation screen. */
-"[TipBox/title/3]" = "Podpořte PassPouch";
 
 /* Name of an entry field. Acronym `TOTP` should not be translated. */
 "[TOTP/FieldName]" = "Jednorázové heslo (TOTP)";
