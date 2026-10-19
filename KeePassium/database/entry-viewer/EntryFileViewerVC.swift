@@ -513,7 +513,7 @@ extension EntryFileViewerVC: UITableViewDropDelegate {
         canHandle session: UIDropSession
     ) -> Bool {
         guard canEditFiles else { return false }
-        return session.hasItemsConforming(toTypeIdentifier: UTType.item.identifier)
+        return session.hasItemsConforming(toTypeIdentifiers: [UTType.item.identifier])
     }
 
     func tableView(

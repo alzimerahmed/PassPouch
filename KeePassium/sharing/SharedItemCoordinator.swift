@@ -177,11 +177,11 @@ struct SharedItemFieldRow: View {
 
     private var displayName: String {
         switch fieldName {
-        case EntryField.title: return LString.shareFieldTitle
-        case EntryField.userName: return LString.shareFieldUserName
-        case EntryField.password: return LString.shareFieldPassword
-        case EntryField.url: return LString.shareFieldURL
-        case EntryField.notes: return LString.shareFieldNotes
+        case EntryField.title: return LString.fieldTitle
+        case EntryField.userName: return LString.fieldUserName
+        case EntryField.password: return LString.fieldPassword
+        case EntryField.url: return LString.fieldURL
+        case EntryField.notes: return LString.fieldNotes
         default: return fieldName
         }
     }

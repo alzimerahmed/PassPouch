@@ -41,12 +41,12 @@ public enum EntryShareField: String, CaseIterable, Codable {
 
     var localizedTitle: String {
         switch self {
-        case .title: return LString.shareFieldTitle
-        case .userName: return LString.shareFieldUserName
-        case .password: return LString.shareFieldPassword
-        case .url: return LString.shareFieldURL
-        case .notes: return LString.shareFieldNotes
-        case .totp: return LString.shareFieldTOTP
+        case .title: return LString.fieldTitle
+        case .userName: return LString.fieldUserName
+        case .password: return LString.fieldPassword
+        case .url: return LString.fieldURL
+        case .notes: return LString.fieldNotes
+        case .totp: return LString.fieldOTP
         }
     }
 }
@@ -146,7 +146,7 @@ public enum EntrySharePayload {
             throw ShareLinkError.unsupportedPayloadVersion
         }
         let combined = payloadData.dropFirst()
-        guard combined.count > AES.GCM.nonceByteSize else {
+        guard combined.count > 28 else {
             throw ShareLinkError.malformedLink
         }
         guard key.count == 32 else { throw ShareLinkError.decryptionFailed }
