@@ -1,12 +1,16 @@
-Thank you for willing to improve KeePassium!
+Thank you for willing to improve PassPouch!
 
-Unfortunately, the project cannot accept external contributions.
+PassPouch is an open-source (GPLv3) fork of [KeePassium](https://github.com/keepassium/KeePassium) and welcomes external contributions.
 
-Due to the [conflict between GPL and AppStore terms](https://www.fsf.org/blogs/licensing/more-about-the-app-store-gpl-enforcement), GPL-licensed apps cannot be published on the App Store. The copyright owner, however, can legally relicense the project however required. Therefore, to avoid legal issues, KeePassium dev/team has to own full copyright on the project. Fulfilling this condition with external contributions would involve a substantial administrative burden (copyright transfer agreements, code review, etc). 
+## How to contribute
 
-Moreover, KeePassium has a commercial side too, and it would be unethical to make you jump through the legal hoops so that we can profit from your work. Therefore, to keep formalities simple and transparent, KeePassium does not accept external contributions (except for commissioned work-for-hire contributions).
+1. Fork the repository and create your branch from `master`.
+2. Make your change, following existing code style (SwiftLint rules apply).
+3. Use [Conventional Commits](https://www.conventionalcommits.org) (`type(scope): description`).
+4. Open a pull request against `master` — CI (lint, build, tests) must pass.
 
-You can still help the project in other ways:
+## Other ways to help
+
 - [Report bugs, suggest new features](https://github.com/alzimerahmed/PassPouch/issues)
-- [Contribute to translation](https://github.com/alzimerahmed/PassPouch/issues)
-- [Write an AppStore review](https://apps.apple.com/us/app/id1435127111)
+
+By contributing, you agree your work is licensed under the project's GPLv3 license.

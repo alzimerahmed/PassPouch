@@ -16,8 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install SwiftLint
-        run: brew install swiftlint
+      - name: Install SwiftLint (if missing)
+        run: command -v swiftlint >/dev/null || brew install swiftlint
 
       - name: Run SwiftLint (repo root)
         run: swiftlint
@@ -53,3 +53,14 @@ jobs:
           -only-testing:KeePassiumTests
           CODE_SIGNING_ALLOWED=NO
           build test
+
+      - name: Build KeePassiumLib framework
+        run: >
+          set -o pipefail &&
+          xcodebuild
+          -workspace KeePassium.xcworkspace
+          -scheme KeePassiumLib
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
+          -configuration Debug
+          CODE_SIGNING_ALLOWED=NO
+          build

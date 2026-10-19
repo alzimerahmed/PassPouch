@@ -5,7 +5,7 @@
 ![Platform](https://img.shields.io/badge/platform-iOS-blue)
 ![Language](https://img.shields.io/badge/language-Swift-orange)
 ![License](https://img.shields.io/badge/license-GPL--3.0-green)
-[![CI](https://github.com/alzimerahmed/PassPouch/actions/workflows/main.yml/badge.svg)](https://github.com/alzimerahmed/PassPouch/actions)
+[![CI](https://github.com/alzimerahmed/PassPouch/actions/workflows/test.yml/badge.svg)](https://github.com/alzimerahmed/PassPouch/actions/workflows/test.yml)
 
 Open-source, KeePass-compatible password manager for iOS — your passwords, your files, your rules.
 
@@ -50,7 +50,7 @@ PassPouch/
 ├── KeePassium AutoFill/        # AutoFill credential provider extension
 ├── KeePassiumLib/              # Shared library code
 ├── KeePassiumTests/            # Unit tests
-├── docs/                       # Documentation
+├── docs/                       # Documentation (local, not tracked)
 ├── scripts/                    # Build and tooling scripts
 ├── LICENSE.txt                 # GPLv3
 └── README.md
@@ -71,7 +71,7 @@ CI verification runs on GitHub Actions for every push and pull request.
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feat/my-feature`)
-3. Open a pull request against `main`
+3. Open a pull request against `master`
 
 Please use [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, `docs:`, etc.) for commit messages. Bug reports and feature suggestions are welcome via [GitHub Issues](https://github.com/alzimerahmed/PassPouch/issues).
 
@@ -90,6 +90,6 @@ Please use [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`
 
 PassPouch is released under the [GNU General Public License v3.0](LICENSE.txt).
 
-PassPouch is based on [KeePassium](https://github.com/keepassium/KeePassium), created by Andrei Popleteev / KeePassium Labs. Upstream code remains Copyright ©2018–2023 Andrei Popleteev, KeePassium Labs, and retains its original copyright attribution as required by the GPL.
+PassPouch is based on [KeePassium](https://github.com/keepassium/KeePassium), created by Andrei Popleteev / KeePassium Labs. Upstream code remains Copyright ©2018–2025 Andrei Popleteev, KeePassium Labs, and retains its original copyright attribution as required by the GPL.
 
 PassPouch modifications Copyright ©2026 Alzimer Ahmed.
