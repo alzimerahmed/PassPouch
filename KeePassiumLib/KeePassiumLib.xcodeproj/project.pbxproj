@@ -19,18 +19,18 @@
 		753F49AA2E28575500F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				AEXML/LICENSE,
-				AEXML/README.md,
-				GzipSwift/LICENSE,
-				GzipSwift/README.md,
+				Core/AEXML/LICENSE,
+				Core/AEXML/README.md,
+				Core/GzipSwift/LICENSE,
+				Core/GzipSwift/README.md,
 				Info.plist,
 			);
 			publicHeaders = (
-				crypto/aeskdf/aeskdf.h,
-				crypto/argon2/argon2.h,
-				crypto/chacha20/chacha20.h,
-				crypto/salsa20/salsa20.h,
-				crypto/twofish/twofish.h,
+				Core/crypto/aeskdf/aeskdf.h,
+				Core/crypto/argon2/argon2.h,
+				Core/crypto/chacha20/chacha20.h,
+				Core/crypto/salsa20/salsa20.h,
+				Core/crypto/twofish/twofish.h,
 				KeePassiumLib.h,
 			);
 			target = 75D0C7692174AF1F00C64C93 /* KeePassiumLib */;

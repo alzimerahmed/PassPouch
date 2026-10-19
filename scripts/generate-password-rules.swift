@@ -3,7 +3,7 @@
 import Foundation
 
 let githubURL = URL(string: "https://raw.githubusercontent.com/keepassium/password-manager-resources/master/quirks/password-rules.json")!
-let outputPath = "./KeePassiumLib/KeePassiumLib/util/password-generator/PasswordGeneratorParams+siteSpecific.swift"
+let outputPath = "./KeePassiumLib/KeePassiumLib/UI/password-generator/PasswordGeneratorParams+siteSpecific.swift"
 
 struct DomainRule: Codable {
     let passwordRules: String

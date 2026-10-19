@@ -1,7 +1,7 @@
 excluded: 
-    - KeePassiumLib/AEXML
-    - KeePassiumLib/base32
-    - KeePassiumLib/GzipSwift
+    - KeePassiumLib/Core/AEXML
+    - KeePassiumLib/Core/base32
+    - KeePassiumLib/Core/GzipSwift
 
 disabled_rules:
     - force_cast
