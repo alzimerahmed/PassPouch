@@ -43,6 +43,7 @@ extension DatabaseViewerCoordinator {
             case #selector(kpmReloadDatabase),
                 #selector(kpmLockDatabase),
                 #selector(kpmExportDatabaseToCSV),
+                #selector(kmpImportDatabaseFromCSVWizard),
                 #selector(kmpImportDatabaseFromApplePasswordsCSV),
                 #selector(kmpImportDatabaseFromBitwardenJSON),
                 #selector(kmpImportDatabaseFromEnpassJSON),
@@ -168,10 +169,15 @@ extension DatabaseViewerCoordinator {
                 title: LString.titleOnePassword1PUX,
                 action: #selector(kmpImportDatabaseFromOnePassword1PUX)
             )
+            let importCSVWizardCommand = UICommand(
+                title: LString.titleCSVFile,
+                action: #selector(kmpImportDatabaseFromCSVWizard)
+            )
             return UIMenu(
                 title: LString.actionImport,
                 identifier: .importDatabase,
                 children: [
+                    importCSVWizardCommand,
                     importOnePassword1PUXCommand,
                     importApplePasswordsCSVCommand,
                     importBitwardenJSONCommand,
@@ -355,6 +361,9 @@ extension DatabaseViewerCoordinator {
         }
         @objc func kmpImportDatabaseFromApplePasswordsCSV() {
             coordinator?._importDatabaseFromApplePasswordsCSV()
+        }
+        @objc func kmpImportDatabaseFromCSVWizard() {
+            coordinator?._importDatabaseFromCSVWizard()
         }
         @objc func kmpImportDatabaseFromBitwardenJSON() {
             coordinator?._importDatabaseFromBitwardenJSON()

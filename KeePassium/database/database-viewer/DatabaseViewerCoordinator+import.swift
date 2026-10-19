@@ -37,6 +37,59 @@ extension DatabaseViewerCoordinator {
             return try importer.importFrom1PUX(fileURL: fileURL, group: group)
         }
     }
+
+    /// PassPouch (Phase 9): CSV import wizard — file pick, format
+    /// auto-detection with manual override, column mapping preview, import
+    /// into the current group, and an imported/skipped/failed summary.
+    internal func _importDatabaseFromCSVWizard() {
+        guard let currentGroup = _currentGroup else {
+            assertionFailure("No group selected")
+            return
+        }
+
+        let importHelper = FileImportHelper()
+        importHelper.handler = { [weak self] fileURL in
+            defer {
+                self?.fileImportHelper = nil
+            }
+            guard let self, let fileURL else {
+                return
+            }
+            do {
+                let csvText = try CSVParser.loadText(from: fileURL)
+                let modalRouter = NavigationRouter.createModal(style: .formSheet)
+                let coordinator = try CSVImportCoordinator(
+                    router: modalRouter,
+                    databaseFile: _databaseFile,
+                    parent: currentGroup,
+                    fileName: fileURL.lastPathComponent,
+                    csvText: csvText)
+                coordinator.delegate = self
+                addChildCoordinator(coordinator, onDismiss: { [weak self] _ in
+                    self?.refresh()
+                })
+                _presenterForModals.present(modalRouter, animated: true, completion: nil)
+            } catch {
+                Diag.error("CSV import failed [message: \(error.localizedDescription)]")
+                _presenterForModals.showErrorAlert(
+                    error.localizedDescription,
+                    title: LString.titleFileImportError
+                )
+            }
+        }
+
+        self.fileImportHelper = importHelper
+        importHelper.importFile(
+            contentTypes: [.commaSeparatedText],
+            presenter: _presenterForModals
+        )
+    }
+}
+
+extension DatabaseViewerCoordinator: CSVImportCoordinator.Delegate {
+    func didImportCSVEntries(_ coordinator: CSVImportCoordinator) {
+        refresh()
+    }
 }
 
 extension DatabaseViewerCoordinator {
