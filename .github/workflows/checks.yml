@@ -52,13 +52,3 @@ jobs:
           -configuration Debug
           -only-testing:KeePassiumTests
           build test
-
-      - name: Build KeePassiumLib framework
-        run: >
-          set -o pipefail &&
-          xcodebuild
-          -workspace KeePassium.xcworkspace
-          -scheme KeePassiumLib
-          -destination 'platform=iOS Simulator,name=iPhone 17,OS=latest'
-          -configuration Debug
-          build
