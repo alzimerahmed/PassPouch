@@ -596,6 +596,15 @@ extension EntryViewerCoordinator: EntryFieldViewerDelegate {
         showEntryFieldEditor()
     }
 
+    func didPressShareEntry(in viewController: EntryFieldViewerVC) {
+        // Phase 11c (ADR-015): encrypted, serverless entry-share link.
+        let modalRouter = NavigationRouter.createModal(style: .formSheet)
+        let shareCoordinator = EntryShareCoordinator(entry: entry, router: modalRouter)
+        shareCoordinator.start()
+        addChildCoordinator(shareCoordinator, onDismiss: nil)
+        viewController.present(modalRouter, animated: true, completion: nil)
+    }
+
     func didPressCopyField(
         text: String,
         in viewController: EntryFieldViewerVC

@@ -88,6 +88,9 @@ extension MainCoordinator {
                 return
             }
             handleEntryDeepLink(entryUUID)
+        case "share":
+            // Phase 11c (ADR-015): encrypted entry-share link.
+            handleShareDeepLink(url)
         case "open":
             // App is already opening; nothing extra to do.
             Diag.info("Deep link: open PassPouch")
