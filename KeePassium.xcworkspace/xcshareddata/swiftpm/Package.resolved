@@ -1,0 +1,87 @@
+{
+  "originHash" : "e0bc3f52139c667af883664f421eab6d8da2b6cf398605bbcd3364261f7f3d33",
+  "pins" : [
+    {
+      "identity" : "asn1swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/ASN1Swift",
+      "state" : {
+        "revision" : "b53bee03a942623db25afc5bfb80227b2cb3b425",
+        "version" : "1.2.4"
+      }
+    },
+    {
+      "identity" : "microsoft-authentication-library-for-objc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/microsoft-authentication-library-for-objc/",
+      "state" : {
+        "branch" : "keepassium-166",
+        "revision" : "8d4b948242ab2b9a4ad035a0a0005a4200ccec7a"
+      }
+    },
+    {
+      "identity" : "ms-intune-app-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/ms-intune-app-sdk-ios",
+      "state" : {
+        "branch" : "keepassium-168",
+        "revision" : "c03fd5d2d9537e5b148aecdbb2b1e41339027fa1"
+      }
+    },
+    {
+      "identity" : "swiftcbor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/SwiftCBOR.git",
+      "state" : {
+        "branch" : "keepassium-156",
+        "revision" : "04ccff117f6549121d5721ec84fdf0162122b90e"
+      }
+    },
+    {
+      "identity" : "swiftdomainparser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/SwiftDomainParser",
+      "state" : {
+        "branch" : "keepassium",
+        "revision" : "17642aa186caca61ab008dc5a4ebda770d93033a"
+      }
+    },
+    {
+      "identity" : "tpinappreceipt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/TPInAppReceipt",
+      "state" : {
+        "branch" : "keepassium",
+        "revision" : "2f8a1cae6b578423d9941b89a0f07c6cce1e1c22"
+      }
+    },
+    {
+      "identity" : "whatsnewkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/WhatsNewKit",
+      "state" : {
+        "branch" : "keepassium-166",
+        "revision" : "e64c7d625ca65dfaeeddb1045757619328beff01"
+      }
+    },
+    {
+      "identity" : "yubikit-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/yubikit-ios.git",
+      "state" : {
+        "branch" : "keepassium-165",
+        "revision" : "9a463723b88af1fdc4f0f4350aeee4e156bf2cf9"
+      }
+    },
+    {
+      "identity" : "zxcvbn-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keepassium/zxcvbn-ios/",
+      "state" : {
+        "branch" : "keepassium",
+        "revision" : "7952c8fdd2cb64b2b397f8504947d92f6ee9e224"
+      }
+    }
+  ],
+  "version" : 3
+}
