@@ -64,6 +64,11 @@ extension BasicOneDriveAuthProvider {
         completion: @escaping (Result<OAuthToken, RemoteError>) -> Void
     ) {
         Diag.info("Authenticating with OneDrive [scope: \(scope)]")
+        guard !OneDriveAPI.clientID.isEmpty else {
+            Diag.error("OneDrive is disabled: no OAuth client credentials (ADR-005)")
+            completion(.failure(.appInternalError(message: "OneDrive is disabled in PassPouch")))
+            return
+        }
         let webAuthSession = ASWebAuthenticationSession(
             url: getAuthURL(config: Self.getConfig(scope: scope)),
             callbackURLScheme: OneDriveAPI.callbackURLScheme,

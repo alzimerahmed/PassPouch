@@ -7,19 +7,13 @@
 //  For commercial licensing, please contact the author.
 
 internal enum OneDriveAPI {
-    static var clientID: String {
-        if BusinessModel.isIntuneEdition {
-            return "292a80b3-139a-4165-a20d-b2d2e764e538"
-        }
-        switch BusinessModel.type {
-        case .freemium:
-            return "cd88bd1f-abdf-4d0f-921e-d8acbf02e240"
-        case .prepaid:
-            return "c3885b4b-5dac-43a6-af93-c869c1a8328b"
-        }
-    }
+    // PassPouch (ADR-005): upstream Microsoft (MSAL/OneDrive) client IDs removed — they
+    // belong to KeePassium and must not ship in PassPouch. OneDrive connections are
+    // disabled (see RemoteConnectionType.allValues); re-enable by registering PassPouch's
+    // own Azure AD app and returning its client ID here.
+    static var clientID: String { return "" }
 
-    static let callbackURLScheme = AppGroup.appURLScheme
+        static let callbackURLScheme = AppGroup.appURLScheme
     static let tokenRequestURL = URL(string: "https://login.microsoftonline.com/common/oauth2/v2.0/token")!
     static let itemFields = "id,name,size,createdDateTime,lastModifiedDateTime,folder,file,remoteItem"
     static let childrenListLimit = 500

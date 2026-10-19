@@ -9,30 +9,14 @@
 import Foundation
 
 internal enum GoogleDriveAPI {
-    static var clientID: String {
-        if BusinessModel.isIntuneEdition {
-            return "563540931668-j6uf253opkpmu9jbtuk19r9n1cqe65si.apps.googleusercontent.com"
-        }
-        switch BusinessModel.type {
-        case .freemium:
-            return "563540931668-qep200es3dnjajnjcnk1dgfsdnm1v9f2.apps.googleusercontent.com"
-        case .prepaid:
-            return "563540931668-ig832ojb8oiko83l9no222ah4lqv7031.apps.googleusercontent.com"
-        }
-    }
-    static var callbackURLScheme: String {
-        if BusinessModel.isIntuneEdition {
-            return "com.googleusercontent.apps.563540931668-j6uf253opkpmu9jbtuk19r9n1cqe65si"
-        }
-        switch BusinessModel.type {
-        case .freemium:
-            return "com.googleusercontent.apps.563540931668-qep200es3dnjajnjcnk1dgfsdnm1v9f2"
-        case .prepaid:
-            return "com.googleusercontent.apps.563540931668-ig832ojb8oiko83l9no222ah4lqv7031"
-        }
-    }
+    // PassPouch (ADR-005): upstream Google OAuth client IDs removed — they belong to
+    // KeePassium and must not ship in PassPouch. Google Drive connections are disabled
+    // (see RemoteConnectionType.allValues); re-enable by registering PassPouch's own
+    // Google OAuth client and restoring the client ID / callback scheme here.
+    static var clientID: String { return "" }
+    static var callbackURLScheme: String { return "" }
 
-    static var authRedirectURI = callbackURLScheme + "://"
+        static var authRedirectURI = callbackURLScheme + "://"
     static func authScope(for scope: OAuthScope) -> [String] {
         switch scope {
         case .fullAccess:

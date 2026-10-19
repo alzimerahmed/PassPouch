@@ -47,7 +47,7 @@ extension OneDriveItem: SerializableRemoteFileItem  {
 }
 
 private enum OneDriveURLHelper {
-    public static let schemePrefix = "keepassium"
+    public static let schemePrefix = "passpouch"
     public static let scheme = "onedrive"
     public static let prefixedScheme = schemePrefix + String(urlSchemePrefixSeparator) + scheme
 

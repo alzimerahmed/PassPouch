@@ -7,29 +7,12 @@
 //  For commercial licensing, please contact us.
 
 internal enum DropboxAPI {
+    // PassPouch (ADR-005): upstream Dropbox app keys removed — they belong to KeePassium
+    // and must not ship in PassPouch. Dropbox connections are disabled (see
+    // RemoteConnectionType.allValues); re-enable by registering PassPouch's own Dropbox
+    // app and returning its client ID here.
     static func clientID(scope: OAuthScope) -> String {
-        switch scope {
-        case .fullAccess:
-            if BusinessModel.isIntuneEdition {
-                return "ysbau47sryidrop"
-            }
-            switch BusinessModel.type {
-            case .freemium:
-                return "0der11zzfhricqu"
-            case .prepaid:
-                return "xploauielridw9m"
-            }
-        case .appFolder:
-            if BusinessModel.isIntuneEdition {
-                return "9ysj4c21rqm5ekw"
-            }
-            switch BusinessModel.type {
-            case .freemium:
-                return "60549kvyh1ngb11"
-            case .prepaid:
-                return "45gwd5365x8eulc"
-            }
-        }
+        return ""
     }
 
     static let callbackURLScheme = AppGroup.appURLScheme

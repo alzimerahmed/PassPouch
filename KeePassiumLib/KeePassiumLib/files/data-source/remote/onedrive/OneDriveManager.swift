@@ -28,7 +28,7 @@ final public class OneDriveManager: RemoteDataSourceManager {
 
     private static let backgroundQueue: OperationQueue = {
         let queue = OperationQueue()
-        queue.name = "com.keepassium.OneDriveManager"
+        queue.name = "com.passpouch.OneDriveManager"
         queue.qualityOfService = .userInitiated
         queue.maxConcurrentOperationCount = 4
         return queue

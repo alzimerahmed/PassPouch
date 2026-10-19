@@ -7,19 +7,11 @@
 //  For commercial licensing, please contact the author.
 
 public enum RemoteConnectionType: Hashable {
+    // PassPouch (ADR-005): OAuth-based cloud providers (Dropbox, Google Drive, OneDrive)
+    // are disabled — upstream OAuth client credentials must not ship. Re-enable after
+    // registering PassPouch's own OAuth apps and restoring the client IDs in
+    // DropboxAPI / GoogleDriveAPI / OneDriveAPI.
     public static let allValues: [RemoteConnectionType] = [
-        .dropboxPersonal(scope: .fullAccess),
-        .dropboxPersonal(scope: .appFolder),
-        .dropboxBusiness(scope: .fullAccess),
-        .dropboxBusiness(scope: .appFolder),
-        .googleDrive(scope: .fullAccess),
-        .googleDrive(scope: .appFolder),
-        .googleWorkspace(scope: .fullAccess),
-        .googleWorkspace(scope: .appFolder),
-        .oneDrivePersonal(scope: .fullAccess),
-        .oneDrivePersonal(scope: .appFolder),
-        .oneDriveForBusiness(scope: .fullAccess),
-        .oneDriveForBusiness(scope: .appFolder),
         .genericHTTP,
         .hetzner,
         .hiDriveIonos,

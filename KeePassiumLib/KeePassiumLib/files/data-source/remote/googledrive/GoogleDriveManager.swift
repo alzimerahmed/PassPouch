@@ -44,7 +44,7 @@ final public class GoogleDriveManager: NSObject, RemoteDataSourceManager {
 
     private static let backgroundQueue: OperationQueue = {
         let queue = OperationQueue()
-        queue.name = "com.keepassium.GoogleDriveManager"
+        queue.name = "com.passpouch.GoogleDriveManager"
         queue.qualityOfService = .userInitiated
         queue.maxConcurrentOperationCount = 4
         return queue
@@ -73,6 +73,11 @@ extension GoogleDriveManager {
         completion: @escaping (Result<OAuthToken, RemoteError>) -> Void
     ) {
         Diag.info("Authenticating with Google Drive")
+        guard !GoogleDriveAPI.clientID.isEmpty else {
+            Diag.error("Google Drive is disabled: no OAuth client credentials (ADR-005)")
+            completion(.failure(.appInternalError(message: "Google Drive is disabled in PassPouch")))
+            return
+        }
         let webAuthSession = ASWebAuthenticationSession(
             url: getAuthURL(scope: scope),
             callbackURLScheme: GoogleDriveAPI.callbackURLScheme,

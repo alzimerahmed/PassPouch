@@ -41,7 +41,7 @@ final public class DropboxManager: NSObject {
 
     private static let backgroundQueue: OperationQueue = {
         let queue = OperationQueue()
-        queue.name = "com.keepassium.DropboxManager"
+        queue.name = "com.passpouch.DropboxManager"
         queue.qualityOfService = .userInitiated
         queue.maxConcurrentOperationCount = 4
         return queue
@@ -64,6 +64,11 @@ final public class DropboxManager: NSObject {
         completion: @escaping (Result<OAuthToken, RemoteError>) -> Void
     ) {
         Diag.info("Authenticating with Dropbox")
+        guard !DropboxAPI.clientID(scope: scope).isEmpty else {
+            Diag.error("Dropbox is disabled: no OAuth client credentials (ADR-005)")
+            completion(.failure(.appInternalError(message: "Dropbox is disabled in PassPouch")))
+            return
+        }
         let codeVerifier = "\(UUID().uuidString)-\(UUID().uuidString)"
         let webAuthSession = ASWebAuthenticationSession(
             url: getAuthURL(codeVerifier: codeVerifier, scope: scope),

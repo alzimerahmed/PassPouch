@@ -53,7 +53,7 @@ extension URL {
 }
 
 public enum DropboxURLHelper {
-    public static let schemePrefix = "keepassium"
+    public static let schemePrefix = "passpouch"
     public static let scheme = "dropbox"
     public static let prefixedScheme = schemePrefix + String(urlSchemePrefixSeparator) + scheme
 

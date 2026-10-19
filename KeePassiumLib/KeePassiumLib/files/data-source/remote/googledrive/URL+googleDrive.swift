@@ -27,7 +27,7 @@ extension URL {
 }
 
 public enum GoogleDriveURLHelper {
-    public static let schemePrefix = "keepassium"
+    public static let schemePrefix = "passpouch"
     public static let scheme = "googledrive"
     public static let prefixedScheme = schemePrefix + String(urlSchemePrefixSeparator) + scheme
 
