@@ -144,10 +144,22 @@ public extension Passkey {
             let privateKey = try P256.Signing.PrivateKey(rawRepresentation: scalar)
             // If the optional [1] public key BIT STRING is present
             // (03 42 04 <65-byte uncompressed point>), verify it matches.
+            let derived = privateKey.publicKey.rawRepresentation
             if let publicKeyPoint = embeddedUncompressedPublicKey(in: bytes, after: scalarStart + 32) {
-                let derived = privateKey.publicKey.rawRepresentation
                 guard derived == publicKeyPoint else {
                     Diag.error("Extracted private scalar does not match the embedded public key")
+                    return nil
+                }
+            } else {
+                // Fail closed: if the embedded public key exists in any
+                // length/tag encoding it must literally contain the derived
+                // point; otherwise the key is unverifiable.
+                let tail = Array(bytes[(scalarStart + 32)...])
+                if firstOccurrence(of: [UInt8](derived), in: tail) != nil {
+                    return scalar
+                }
+                if tail.contains(0xA1) {
+                    Diag.error("Public key attribute present but unverifiable")
                     return nil
                 }
             }

@@ -98,9 +98,10 @@ struct CSVImportMapper {
         let customFieldColumns = format.customFieldColumns(
             headerRow: headerRow,
             mapping: mapping)
-        // Standard field names (case-insensitive) must never be overwritten
-        // by unmapped custom-field columns; such columns are renamed
-        // "<name> (n)" instead of silently dropped.
+        // Standard field names must never be overwritten by unmapped
+        // custom-field columns; KDBX field names are case-sensitive, so the
+        // check is exact and such columns are renamed "<name> (n)" instead of
+        // silently dropped.
         let reservedNames = Set([
             EntryField.title,
             EntryField.userName,
@@ -109,7 +110,7 @@ struct CSVImportMapper {
             EntryField.notes,
             EntryField.otp,
             EntryField.totp,
-        ].map { $0.lowercased() })
+        ])
 
         for row in dataRows {
             switch classifyRow(row, mapping: mapping) {
@@ -148,18 +149,17 @@ struct CSVImportMapper {
                 }
             }
 
-            // Unmapped columns must not collide with standard field names.
+            // Unmapped columns must not collide with standard field names or
+            // with each other: the first collision is renamed "<name> (2)".
             var seenNames = [String: Int]()
             for name in reservedNames { seenNames[name] = 1 }
             for column in customFieldColumns where column < row.count {
                 let rawName = column < headerRow.count ? headerRow[column] : "field\(column)"
-                let normalized = rawName.trimmingCharacters(in: .whitespaces).lowercased()
-                guard !normalized.isEmpty else { continue }
-                // Deduplicate repeated or reserved header names so same-named
-                // columns do not overwrite each other's values.
-                let occurrence = (seenNames[normalized] ?? 0) + 1
-                seenNames[normalized] = occurrence
-                let fieldName = occurrence == 1 ? rawName : "\(rawName) (\(occurrence))"
+                let fieldBaseName = rawName.trimmingCharacters(in: .whitespaces)
+                guard !fieldBaseName.isEmpty else { continue }
+                let occurrence = (seenNames[fieldBaseName] ?? 0) + 1
+                seenNames[fieldBaseName] = occurrence
+                let fieldName = occurrence == 1 ? fieldBaseName : "\(fieldBaseName) (\(occurrence))"
                 let fieldValue = row[column]
                 guard !fieldValue.isEmpty else { continue }
                 entry.setField(name: fieldName, value: fieldValue, isProtected: false)

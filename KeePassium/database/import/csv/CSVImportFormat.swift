@@ -126,8 +126,6 @@ enum CSVImportFormat: Int, CaseIterable, Identifiable {
                 "url": .url,
                 "username": .username,
                 "password": .password,
-                "note": .notes,
-                "notes": .notes,
             ]
         case .firefox:
             return [
@@ -160,22 +158,39 @@ enum CSVImportFormat: Int, CaseIterable, Identifiable {
 
     /// Detects the format from a header row. Returns nil when no format
     /// matches or when two formats tie (the wizard then asks for a manual
-    /// override).
+    /// override). Ranking: a format whose required headers are ALL present
+    /// beats any partial match; among equal completeness, higher coverage
+    /// (matched / required) wins; then more required headers (a superset
+    /// header like Apple Passwords' is more specific than 1Password's).
     public static func detect(headerRow: [String]) -> CSVImportFormat? {
         let normalized = Set(headerRow.map { $0.trimmingCharacters(in: .whitespaces).lowercased() })
-        var bestScore = 0
-        var bestFormats = [CSVImportFormat]()
+        var best: (isComplete: Bool, coverage: Double, requiredCount: Int, format: CSVImportFormat)?
+        var ambiguous = false
         for format in CSVImportFormat.allCases {
             let score = format.requiredHeaders.intersection(normalized).count
-            if score > bestScore {
-                bestScore = score
-                bestFormats = [format]
-            } else if score == bestScore && score > 0 {
-                bestFormats.append(format)
+            guard score > 0 else { continue }
+            let isComplete = score == format.requiredHeaders.count
+            let coverage = Double(score) / Double(format.requiredHeaders.count)
+            guard let current = best else {
+                best = (isComplete, coverage, format.requiredHeaders.count, format)
+                continue
+            }
+            let isBetter = isComplete != current.isComplete
+                ? isComplete
+                : (coverage != current.coverage
+                    ? coverage > current.coverage
+                    : format.requiredHeaders.count > current.requiredCount)
+            if isBetter {
+                best = (isComplete, coverage, format.requiredHeaders.count, format)
+                ambiguous = false
+            } else if isComplete == current.isComplete
+                        && coverage == current.coverage
+                        && format.requiredHeaders.count == current.requiredCount {
+                ambiguous = true
             }
         }
-        guard bestFormats.count == 1 else { return nil }
-        return bestFormats.first
+        guard let result = best, !ambiguous else { return nil }
+        return result.format
     }
 
     /// Automatic role→column-index mapping for this format's header row.
