@@ -164,33 +164,42 @@ enum CSVImportFormat: Int, CaseIterable, Identifiable {
     /// header like Apple Passwords' is more specific than 1Password's).
     public static func detect(headerRow: [String]) -> CSVImportFormat? {
         let normalized = Set(headerRow.map { $0.trimmingCharacters(in: .whitespaces).lowercased() })
-        var best: (isComplete: Bool, coverage: Double, requiredCount: Int, format: CSVImportFormat)?
+        var bestFormat: CSVImportFormat?
+        var bestIsComplete = false
+        var bestCoverage = 0.0
+        var bestRequiredCount = 0
         var ambiguous = false
         for format in CSVImportFormat.allCases {
             let score = format.requiredHeaders.intersection(normalized).count
             guard score > 0 else { continue }
             let isComplete = score == format.requiredHeaders.count
             let coverage = Double(score) / Double(format.requiredHeaders.count)
-            guard let current = best else {
-                best = (isComplete, coverage, format.requiredHeaders.count, format)
+            guard let current = bestFormat else {
+                bestFormat = format
+                bestIsComplete = isComplete
+                bestCoverage = coverage
+                bestRequiredCount = format.requiredHeaders.count
                 continue
             }
-            let isBetter = isComplete != current.isComplete
+            let isBetter = isComplete != bestIsComplete
                 ? isComplete
-                : (coverage != current.coverage
-                    ? coverage > current.coverage
-                    : format.requiredHeaders.count > current.requiredCount)
+                : (coverage != bestCoverage
+                    ? coverage > bestCoverage
+                    : format.requiredHeaders.count > bestRequiredCount)
             if isBetter {
-                best = (isComplete, coverage, format.requiredHeaders.count, format)
+                bestFormat = format
+                bestIsComplete = isComplete
+                bestCoverage = coverage
+                bestRequiredCount = format.requiredHeaders.count
                 ambiguous = false
-            } else if isComplete == current.isComplete
-                        && coverage == current.coverage
-                        && format.requiredHeaders.count == current.requiredCount {
+            } else if isComplete == bestIsComplete
+                        && coverage == bestCoverage
+                        && format.requiredHeaders.count == bestRequiredCount {
                 ambiguous = true
             }
         }
-        guard let result = best, !ambiguous else { return nil }
-        return result.format
+        guard !ambiguous else { return nil }
+        return bestFormat
     }
 
     /// Automatic role→column-index mapping for this format's header row.
