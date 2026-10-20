@@ -124,15 +124,17 @@ public extension Passkey {
             Diag.error("PKCS#8 blob does not contain the P-256 curve OID")
             return nil
         }
-        // The version+key marker must follow the algorithm identifier.
+        // The version+key marker follows the algorithm identifier, inside the
+        // OCTET STRING wrapping the ECPrivateKey SEQUENCE.
         let searchStart = oidRange.upperBound
-        guard searchStart + marker.count + 32 <= bytes.count,
-              Array(bytes[searchStart..<(searchStart + marker.count)]) == marker
+        guard let markerRange = firstOccurrence(of: marker, in: Array(bytes[searchStart...]))
+            .map({ $0.lowerBound + searchStart..<$0.upperBound + searchStart }),
+              markerRange.upperBound + 32 <= bytes.count
         else {
             Diag.error("PKCS#8 blob does not contain the expected EC private key marker")
             return nil
         }
-        let scalarStart = searchStart + marker.count
+        let scalarStart = markerRange.upperBound
         let scalar = Data(bytes[scalarStart..<(scalarStart + 32)])
         // A valid EC scalar is non-zero (and < curve order; CryptoKit
         // validates that when constructing the key).

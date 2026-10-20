@@ -269,11 +269,10 @@ struct WebDAVProvider {
         let normalizedBase = basePath.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         let normalizedPrefix = expandedPrefix.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
 
-        if normalizedBase.isEmpty {
-            components?.path = "/\(normalizedPrefix)"
-        } else {
-            components?.path = "/\(normalizedBase)/\(normalizedPrefix)"
-        }
+        let joined = normalizedBase.isEmpty
+            ? "/\(normalizedPrefix)"
+            : "/\(normalizedBase)/\(normalizedPrefix)"
+        components?.path = expandedPrefix.hasSuffix("/") ? joined + "/" : joined
 
         return components?.url ?? baseURL
     }
