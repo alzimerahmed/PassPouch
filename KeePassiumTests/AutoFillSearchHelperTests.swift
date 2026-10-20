@@ -76,19 +76,19 @@ final class AutoFillSearchHelperTests: XCTestCase {
         let results = find(
             serviceIdentifier: "https://example.com/login",
             type: .URL)
-        XCTAssertEqual(results.perfectMatch, entry as Entry?, "Identical URL must be a perfect match")
+        XCTAssertTrue(results.perfectMatch === entry, "Identical URL must be a perfect match")
     }
 
     func testDomainMatchIsExact() {
         let entry = addEntry(title: "Example", url: "https://example.com")
         let results = find(serviceIdentifier: "example.com")
-        XCTAssertEqual(results.perfectMatch, entry as Entry?, "Host equal to the service domain must be exact")
+        XCTAssertTrue(results.perfectMatch === entry, "Host equal to the service domain must be exact")
     }
 
     func testCaseInsensitiveDomainMatch() {
         let entry = addEntry(title: "Example", url: "https://EXAMPLE.com")
         let results = find(serviceIdentifier: "example.com")
-        XCTAssertEqual(results.perfectMatch, entry as Entry?, "Matching must be case-insensitive")
+        XCTAssertTrue(results.perfectMatch === entry, "Matching must be case-insensitive")
     }
 
     // MARK: - Fuzzy matching
@@ -129,8 +129,8 @@ final class AutoFillSearchHelperTests: XCTestCase {
         let partialEntry = addEntry(title: "Example", url: "https://login.example.com")
         let exactEntry = addEntry(title: "Example Direct", url: "https://example.com")
         let results = find(serviceIdentifier: "example.com")
-        XCTAssertEqual(results.perfectMatch, exactEntry as Entry?, "Exact host must outrank subdomain")
-        XCTAssertNotEqual(results.perfectMatch, partialEntry as Entry?)
+        XCTAssertTrue(results.perfectMatch === exactEntry, "Exact host must outrank subdomain")
+        XCTAssertFalse(results.perfectMatch === partialEntry)
     }
 
     // MARK: - TOTP / item kind filtering
