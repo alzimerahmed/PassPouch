@@ -388,7 +388,8 @@ final class Phase9ImportTests: XCTestCase {
         let entry = try XCTUnwrap(root.entries.first)
         XCTAssertEqual(entry.rawPassword, "real-secret")
         XCTAssertTrue(entry.getField(EntryField.password)?.isProtected ?? false)
-        XCTAssertNil(entry.getField("Password"))
+        XCTAssertEqual(entry.fields.filter { $0.name == "Password" }.count, 1)
+        XCTAssertEqual(entry.getField("Password (2)")?.value, "leak-attempt")
     }
 
     func testDuplicateHeaderNamesDoNotLoseData() throws {

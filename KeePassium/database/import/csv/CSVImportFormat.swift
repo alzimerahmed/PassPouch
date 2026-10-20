@@ -126,6 +126,8 @@ enum CSVImportFormat: Int, CaseIterable, Identifiable {
                 "url": .url,
                 "username": .username,
                 "password": .password,
+                "note": .notes,
+                "notes": .notes,
             ]
         case .firefox:
             return [
@@ -150,7 +152,7 @@ enum CSVImportFormat: Int, CaseIterable, Identifiable {
             return []
         case .firefox:
             return [
-                "formactionorigin", "guid",
+                "guid",
                 "timecreated", "timelastused", "timepasswordchanged",
             ]
         }
