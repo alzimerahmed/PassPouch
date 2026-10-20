@@ -72,5 +72,24 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return pluginClass.init()
     }
+
+    // Phase 11d (ADR-017): Catalyst menu item to open the quick-access window.
+    override func buildMenu(with builder: UIMenuBuilder) {
+        super.buildMenu(with: builder)
+        guard builder.menu(for: .file) != nil else { return }
+        builder.insertChild(
+            UIAction(
+                title: NSLocalizedString(
+                    "quickAccess.menuItem.title",
+                    value: "Quick Access",
+                    comment: "macOS File menu: open the quick-access window"),
+                image: nil,
+                action: #selector(openQuickAccessWindow)
+            ), atEndOfMenu: .file)
+    }
+
+    @objc private func openQuickAccessWindow() {
+        QuickAccessWindowController.shared.showWindow()
+    }
     #endif
 }

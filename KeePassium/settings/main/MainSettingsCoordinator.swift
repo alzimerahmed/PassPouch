@@ -8,6 +8,7 @@
 
 import KeePassiumLib
 import LocalAuthentication.LAContext
+import SwiftUI
 
 final class MainSettingsCoordinator: BaseCoordinator {
     private let mainSettingsVC: MainSettingsVC
@@ -96,6 +97,21 @@ extension MainSettingsCoordinator: MainSettingsVC.Delegate {
 
     func didPressBackupSettings(in viewController: MainSettingsVC) {
         let coordinator = BackupSettingsCoordinator(router: _router)
+        coordinator.start()
+        addChildCoordinator(coordinator, onDismiss: nil)
+    }
+
+    func didPressWatchSettings(in viewController: MainSettingsVC) {
+        // Phase 11a (ADR-013): SwiftUI screen per ADR-009.
+        WatchConnectivityService.shared.activate()
+        let hostingController = UIHostingController(rootView: WatchSettingsView())
+        hostingController.navigationItem.title = LString.titleWatchSettings
+        _router.push(hostingController, animated: true, onPop: nil)
+    }
+
+    func didPressEmergencyAccess(in viewController: MainSettingsVC) {
+        // Phase 11c (ADR-016): offline emergency access, SwiftUI per ADR-009.
+        let coordinator = EmergencyAccessCoordinator(router: _router)
         coordinator.start()
         addChildCoordinator(coordinator, onDismiss: nil)
     }

@@ -25,8 +25,6 @@ extension DatabaseViewerCoordinator {
         addChildCoordinator(settingsCoordinator, onDismiss: nil)
         _presenterForModals.present(modalRouter, animated: true, completion: nil)
     }
-
-    }
 }
 
 extension DatabaseViewerCoordinator: EncryptionSettingsCoordinatorDelegate {

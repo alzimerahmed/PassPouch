@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PassPouch original glyph: simple self-drawn "drive" (triangle ring)
+     mark for the Google Drive file provider. Drawn from scratch for
+     PassPouch (GPLv3) — NOT derived from Icons8 or any third-party icon
+     set. -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="128" height="110" viewBox="0 0 128 110">
+  <path fill="#000000" fill-rule="evenodd" stroke="none"
+    d="M64,0 L128,110 L0,110 Z M64,32 L96,96 L32,96 Z"/>
+</svg>

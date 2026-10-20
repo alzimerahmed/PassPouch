@@ -40,6 +40,7 @@ final class AutoFillSearchHelperTests: XCTestCase {
         totp: String? = nil
     ) -> Entry2 {
         let entry = Entry2(database: database)
+        entry.uuid = UUID()
         entry.setField(name: EntryField.title, value: title)
         entry.setField(name: EntryField.userName, value: userName)
         entry.setField(name: EntryField.password, value: password, isProtected: true)
@@ -50,7 +51,7 @@ final class AutoFillSearchHelperTests: XCTestCase {
             entry.setField(name: EntryField.notes, value: notes)
         }
         if let totp {
-            entry.setField(name: EntryField.totp, value: totp)
+            entry.setField(name: EntryField.otp, value: totp)
         }
         webGroup?.add(entry: entry)
         return entry
@@ -76,19 +77,19 @@ final class AutoFillSearchHelperTests: XCTestCase {
         let results = find(
             serviceIdentifier: "https://example.com/login",
             type: .URL)
-        XCTAssertEqual(results.perfectMatch, entry as Entry?, "Identical URL must be a perfect match")
+        XCTAssertTrue(results.perfectMatch === entry, "Identical URL must be a perfect match")
     }
 
     func testDomainMatchIsExact() {
         let entry = addEntry(title: "Example", url: "https://example.com")
         let results = find(serviceIdentifier: "example.com")
-        XCTAssertEqual(results.perfectMatch, entry as Entry?, "Host equal to the service domain must be exact")
+        XCTAssertTrue(results.perfectMatch === entry, "Host equal to the service domain must be exact")
     }
 
     func testCaseInsensitiveDomainMatch() {
         let entry = addEntry(title: "Example", url: "https://EXAMPLE.com")
         let results = find(serviceIdentifier: "example.com")
-        XCTAssertEqual(results.perfectMatch, entry as Entry?, "Matching must be case-insensitive")
+        XCTAssertTrue(results.perfectMatch === entry, "Matching must be case-insensitive")
     }
 
     // MARK: - Fuzzy matching
@@ -103,7 +104,7 @@ final class AutoFillSearchHelperTests: XCTestCase {
     }
 
     func testTitleMatchIsPartial() {
-        let entry = addEntry(title: "Example Portal", url: nil)
+        let entry = addEntry(title: "example.com Portal", url: nil)
         let results = find(serviceIdentifier: "example.com")
         XCTAssertNil(results.perfectMatch, "Title-only match must not be perfect")
         XCTAssertTrue(
@@ -129,8 +130,8 @@ final class AutoFillSearchHelperTests: XCTestCase {
         let partialEntry = addEntry(title: "Example", url: "https://login.example.com")
         let exactEntry = addEntry(title: "Example Direct", url: "https://example.com")
         let results = find(serviceIdentifier: "example.com")
-        XCTAssertEqual(results.perfectMatch, exactEntry as Entry?, "Exact host must outrank subdomain")
-        XCTAssertNotEqual(results.perfectMatch, partialEntry as Entry?)
+        XCTAssertTrue(results.perfectMatch === exactEntry, "Exact host must outrank subdomain")
+        XCTAssertFalse(results.perfectMatch === partialEntry)
     }
 
     // MARK: - TOTP / item kind filtering

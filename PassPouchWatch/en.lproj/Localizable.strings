@@ -1,0 +1,10 @@
+/* PassPouch watchOS companion — English strings.
+   Keys follow the LString pattern; the values here must match the `value:`
+   arguments in PassPouchWatch/*.swift. */
+
+"[Watch/Empty/title]" = "Unlock PassPouch on your iPhone to see shared entries here.";
+"[Watch/Field/Username]" = "Username";
+"[Watch/Field/Password]" = "Password";
+"[Watch/Field/TOTP]" = "One-time code";
+"[Watch/A11y/PasswordVisible]" = "Password, visible";
+"[Watch/A11y/PasswordHidden]" = "Password, hidden. Press to reveal.";

@@ -32,11 +32,16 @@ extension DatabaseViewerCoordinator {
             return
         }
 
+        guard let parent = _currentGroup ?? _database.root else {
+            Diag.error("Bulk TOTP import: no parent group available")
+            return
+        }
+
         let modalRouter = NavigationRouter.createModal(style: .formSheet)
         let coordinator = OtpauthImportCoordinator(
             router: modalRouter,
             databaseFile: _databaseFile,
-            parent: _currentGroup ?? _database.root)
+            parent: parent)
         coordinator.delegate = self
         coordinator.start()
         addChildCoordinator(coordinator, onDismiss: { [weak self] _ in
@@ -66,22 +71,12 @@ final class OtpauthImportCoordinator: BaseCoordinator, DatabaseSaving {
     weak var delegate: Delegate?
 
     private let databaseFile: DatabaseFile
-    private let parent: Group
+    private let parent: KeePassiumLib.Group
 
     private var payloadText: String = ""
     private var selectedURIs: Set<String> = []
 
-    private let hostingController: UIHostingController<OtpauthImportView>
-
-    var databaseSaver: DatabaseSaver?
-    var fileExportHelper: FileExportHelper?
-    var savingProgressHost: ProgressViewHost? { return _router }
-    var saveSuccessHandler: (() -> Void)?
-
-    init(router: NavigationRouter, databaseFile: DatabaseFile, parent: Group) {
-        self.databaseFile = databaseFile
-        self.parent = parent
-
+    private lazy var hostingController: UIHostingController<OtpauthImportView> = {
         let view = OtpauthImportView(
             payloadText: .init(
                 get: { [weak self] in self?.payloadText ?? "" },
@@ -93,8 +88,19 @@ final class OtpauthImportCoordinator: BaseCoordinator, DatabaseSaving {
             onSelectAll: { [weak self] selectAll in self?.selectAll(selectAll) },
             onImport: { [weak self] in self?.importSelected() },
             onCancel: { [weak self] in self?.cancel() })
-        hostingController = UIHostingController(rootView: view)
-        hostingController.view.backgroundColor = .systemBackground
+        let controller = UIHostingController(rootView: view)
+        controller.view.backgroundColor = .systemBackground
+        return controller
+    }()
+
+    var databaseSaver: DatabaseSaver?
+    var fileExportHelper: FileExportHelper?
+    var savingProgressHost: ProgressViewHost? { return _router }
+    var saveSuccessHandler: (() -> Void)?
+
+    init(router: NavigationRouter, databaseFile: DatabaseFile, parent: KeePassiumLib.Group) {
+        self.databaseFile = databaseFile
+        self.parent = parent
         super.init(router: router)
     }
 

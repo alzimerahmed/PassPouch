@@ -29,6 +29,7 @@ protocol EntryFieldViewerDelegate: AnyObject {
         in viewController: EntryFieldViewerVC)
 
     func didPressEdit(in viewController: EntryFieldViewerVC)
+    func didPressShareEntry(in viewController: EntryFieldViewerVC)
     func didPressOpenLinkedDatabase(_ info: LinkedDatabaseInfo, in viewController: EntryFieldViewerVC)
 }
 
@@ -46,6 +47,7 @@ final class EntryFieldViewerVC: UITableViewController, Refreshable {
     weak var delegate: EntryFieldViewerDelegate?
 
     private let editButton = UIBarButtonItem()
+    private let shareButton = UIBarButtonItem()
 
     private var isHistoryEntry = false
     private var canEditEntry = false
@@ -72,9 +74,14 @@ final class EntryFieldViewerVC: UITableViewController, Refreshable {
         editButton.title = LString.actionEdit
         editButton.target = self
         editButton.action = #selector(didPressEdit)
-        editButton.accessibilityIdentifier = "edit_entry_button" 
+        editButton.accessibilityIdentifier = "edit_entry_button"
 
-        toolbarItems = [] 
+        shareButton.title = LString.shareEntryActionTitle
+        shareButton.image = .symbol(.squareAndArrowUp)
+        shareButton.target = self
+        shareButton.action = #selector(didPressShare)
+
+        toolbarItems = []
         refresh()
 
         NotificationCenter.default.addObserver(
@@ -167,7 +174,9 @@ final class EntryFieldViewerVC: UITableViewController, Refreshable {
     func refresh() {
         guard isViewLoaded else { return }
         editButton.isEnabled = canEditEntry
-        navigationItem.rightBarButtonItem = editButton
+        // Sharing makes no sense for a history entry — it is a past revision.
+        shareButton.isEnabled = !isHistoryEntry
+        navigationItem.rightBarButtonItems = [editButton, shareButton]
         tableView.reloadData()
     }
 
@@ -200,6 +209,10 @@ final class EntryFieldViewerVC: UITableViewController, Refreshable {
             return
         }
         delegate?.didPressEdit(in: self)
+    }
+
+    @objc func didPressShare(_ sender: UIBarButtonItem) {
+        delegate?.didPressShareEntry(in: self)
     }
 
     private func didTapRow(at indexPath: IndexPath) {

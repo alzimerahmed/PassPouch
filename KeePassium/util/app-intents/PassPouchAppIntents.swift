@@ -14,12 +14,7 @@ import KeePassiumLib
 struct RecentEntryEntity: AppEntity {
     static let typeDisplayRepresentation: TypeDisplayRepresentation = .init(name: "Entry")
 
-    struct ID: Hashable, CustomStringConvertible {
-        let uuidString: String
-        var description: String { uuidString }
-    }
-
-    let id: ID
+    let id: UUID
     let title: String
     let userName: String
     let databaseName: String
@@ -33,7 +28,7 @@ struct RecentEntryEntity: AppEntity {
     static func allRecent() -> [RecentEntryEntity] {
         WidgetSharedDataSource.recentEntries.map {
             RecentEntryEntity(
-                id: ID(uuidString: $0.entryUUID.uuidString),
+                id: $0.entryUUID,
                 title: $0.title,
                 userName: $0.userName,
                 databaseName: $0.databaseName)
@@ -91,6 +86,7 @@ struct CopyPasswordIntent: AppIntent {
             return .result()
         }
         DeepLinkOpener.requestCopyPassword(uuidString: target.id.uuidString)
+
         return .result()
     }
 }

@@ -10,7 +10,6 @@ import KeePassiumLib
 
 final class AppearanceSettingsVC: BaseSettingsViewController<AppearanceSettingsVC.Section> {
     protocol Delegate: AnyObject {
-        func didPressChangeAppIcon(in viewController: AppearanceSettingsVC)
         func didPressChangeDatabaseIcons(in viewController: AppearanceSettingsVC)
         func didToggleOpenLastUsedTab(_ isOn: Bool, in viewController: AppearanceSettingsVC)
         func didChangeTextScale(_ textScale: Float, in viewController: AppearanceSettingsVC)
@@ -20,7 +19,6 @@ final class AppearanceSettingsVC: BaseSettingsViewController<AppearanceSettingsV
     }
 
     weak var delegate: Delegate?
-    var isSupportsAlternateIcons = false
     var databaseIconSet: DatabaseIconSet = .keepassium
     var isOpenLastUsedTab = false
     var textScale: Float = 1.0
@@ -67,18 +65,6 @@ final class AppearanceSettingsVC: BaseSettingsViewController<AppearanceSettingsV
         var snapshot = Snapshot()
 
         snapshot.appendSections([.icons])
-        if isSupportsAlternateIcons {
-            snapshot.appendItems([
-                .basic(.init(
-                    title: LString.appearanceAppIconTitle,
-                    image: .symbol(.atom),
-                    fixedAccessories: [.disclosureIndicator()],
-                    handler: { [unowned self] in
-                        delegate?.didPressChangeAppIcon(in: self)
-                    }
-                )),
-            ])
-        }
         snapshot.appendItems([
             .basic(.init(
                 title: LString.appearanceDatabaseIconsTitle,

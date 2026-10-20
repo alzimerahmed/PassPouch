@@ -110,29 +110,14 @@ enum CSVParser {
                     currentRow.append(currentField)
                     currentField = ""
                 }
-            case "\r":
-                if isInQuotes {
-                    currentField.append(char)
-                } else if nextIndex < text.endIndex && text[nextIndex] == "\n" {
-                    rows.append(currentRow)
-                    currentRow = []
-                    currentField = ""
-                    line += 1
-                    index = nextIndex
-                } else {
-                    // Lone CR (old Mac line ending).
-                    rows.append(currentRow)
-                    currentRow = []
-                    currentField = ""
-                    line += 1
-                }
-            case "\n":
+            case "\r", "\n", "\r\n":
                 if isInQuotes {
                     currentField.append(char)
                 } else {
+                    currentRow.append(currentField)
+                    currentField = ""
                     rows.append(currentRow)
                     currentRow = []
-                    currentField = ""
                     line += 1
                 }
             default:

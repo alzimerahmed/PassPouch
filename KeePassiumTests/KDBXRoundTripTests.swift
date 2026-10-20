@@ -39,13 +39,14 @@ final class KDBXRoundTripTests: XCTestCase {
         root.add(group: group)
 
         let entry = Entry2(database: db)
+        entry.uuid = UUID()
         entry.setField(name: EntryField.title, value: "Example")
         entry.setField(name: EntryField.userName, value: "alice")
         entry.setField(name: EntryField.password, value: "s3cr3t!", isProtected: true)
         entry.setField(name: EntryField.url, value: "https://example.com/login")
         entry.setField(name: EntryField.notes, value: "Round-trip fixture")
         entry.setField(
-            name: EntryField.totp,
+            name: EntryField.otp,
             value: "otpauth://totp/Example:alice?secret=JBSWY3DPEHPK3PXP&issuer=Example")
         group.add(entry: entry)
 
@@ -68,6 +69,7 @@ final class KDBXRoundTripTests: XCTestCase {
                 memory: 1 << 20,
                 parallelism: 1))
         case .v4_1:
+            db.header.setFormatVersionForTesting(.v4_1)
             db.header.applyEncryptionSettings(settings: EncryptionSettings(
                 dataCipher: .twofish,
                 kdf: .argon2d,

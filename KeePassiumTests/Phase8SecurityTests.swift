@@ -127,7 +127,7 @@ final class Phase8SecurityTests: XCTestCase {
         // Regression test: the old decoder appended the wrong amount of '='
         // padding for this case and failed to decode.
         XCTAssertEqual(Data(base64URLEncoded: "ajA"), Data([0x6A, 0x30]))
-        XCTAssertEqual(Data(base64URLEncoded: "aGk"), Data([0x61, 0x69]))
+        XCTAssertEqual(Data(base64URLEncoded: "aGk"), Data([0x68, 0x69]))
     }
 
     // MARK: - Passkey KPEX field round-trip
@@ -144,6 +144,8 @@ final class Phase8SecurityTests: XCTestCase {
     func testPasskeyEntryFieldRoundTrip() throws {
         let db = try makeDatabase2()
         let entry = Entry2(database: db)
+
+        entry.uuid = UUID()
 
         let credentialID = Data((0..<32).map { UInt8($0) })
         let userHandle = Data([0xDE, 0xAD, 0xBE, 0xEF])
@@ -188,6 +190,7 @@ final class Phase8SecurityTests: XCTestCase {
     func testPasskeyPresenceAbsentForPlainEntry() throws {
         let db = try makeDatabase2()
         let entry = Entry2(database: db)
+        entry.uuid = UUID()
         entry.setField(name: EntryField.title, value: "Just a login")
         entry.setField(name: EntryField.password, value: "hunter2")
         switch Passkey.checkPresence(in: entry) {
@@ -205,7 +208,7 @@ final class Phase8SecurityTests: XCTestCase {
     /// The embedded public key is derived from the scalar (real Bitwarden
     /// exports are self-consistent).
     private func makePKCS8DER(scalar: Data) throws -> Data {
-        let privateKey = try P256.Signing.PrivateKey(dataRepresentation: scalar)
+        let privateKey = try P256.Signing.PrivateKey(rawRepresentation: scalar)
         let publicKey = privateKey.publicKey.rawRepresentation // 0x04 || X || Y
 
         var der = Data()
@@ -250,7 +253,7 @@ final class Phase8SecurityTests: XCTestCase {
         // The produced PEM must parse as the same P-256 key.
         let pem = try XCTUnwrap(passkey?.privateKeyPEM)
         let key = try P256.Signing.PrivateKey(pemRepresentation: pem)
-        XCTAssertEqual(key.dataRepresentation, scalar)
+        XCTAssertEqual(key.rawRepresentation, scalar)
     }
 
     func testBitwardenFIDO2CredentialRejectsGarbage() {
@@ -348,6 +351,7 @@ final class Phase8SecurityTests: XCTestCase {
         let db = try makeDatabase2()
         let root = try XCTUnwrap(db.root as? Group2)
         let entry = Entry2(database: db)
+        entry.uuid = UUID()
         entry.setField(name: EntryField.title, value: "Passkey entry")
         entry.setField(
             name: EntryField.passkeyCredentialID,

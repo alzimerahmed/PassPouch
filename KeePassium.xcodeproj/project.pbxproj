@@ -38,6 +38,7 @@
 		F33344362E844F90002EE262 /* WhatsNewKit in Frameworks */ = {isa = PBXBuildFile; productRef = F33344352E844F90002EE262 /* WhatsNewKit */; };
 		F37CAA492A88F7E30000EF64 /* YubiKit in Frameworks */ = {isa = PBXBuildFile; productRef = F37CAA482A88F7E30000EF64 /* YubiKit */; };
 		F37CAA4B2A88F7E30000EF64 /* Zxcvbn in Frameworks */ = {isa = PBXBuildFile; productRef = F37CAA4A2A88F7E30000EF64 /* Zxcvbn */; };
+		F3C0DE5E7F00000000000004 /* PassPouchWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F3C0DE5E7F00000000000001 /* PassPouchWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,13 @@
 			remoteGlobalIDString = F3C0DE5E6F00000000000007;
 			remoteInfo = PassPouchWidgets;
 		};
+		F3C0DE5E7F00000000000005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 754BF0732082A6BD00E3A292 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3C0DE5E7F00000000000007;
+			remoteInfo = PassPouchWatch;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -140,6 +148,17 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3C0DE5E7F0000000000000E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 1;
+			files = (
+				F3C0DE5E7F00000000000004 /* PassPouchWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +177,7 @@
 		F37CAA392A88F7330000EF64 /* KeePassiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeePassiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C0DE5E5F00000000000001 /* KeePassiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeePassiumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C0DE5E6F00000000000001 /* PassPouchWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PassPouchWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C0DE5E7F00000000000001 /* PassPouchWatch.app */ = {isa = PBXFileReference; explicitFileType = "wrapper.application"; includeInIndex = 0; path = PassPouchWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -175,8 +195,6 @@
 				/Localized/database/unlocker/DatabaseUnlockerVC.storyboard,
 				"/Localized/general/file-info/FileInfoVC.storyboard",
 				/Localized/general/PasscodeInputVC.storyboard,
-				"app-icon-pro.icon",
-				"app-icon.icon",
 				Assets.xcassets,
 				"challenge-response/ChallengeResponseManager.swift",
 				"challenge-response/MFIKeyActionSheet/MFIKeyActionSheetView.swift",
@@ -362,8 +380,6 @@
 				/Localized/database/unlocker/DatabaseUnlockerVC.storyboard,
 				"/Localized/general/file-info/FileInfoVC.storyboard",
 				/Localized/general/PasscodeInputVC.storyboard,
-				"app-icon-pro.icon",
-				"app-icon.icon",
 				Assets.xcassets,
 				"challenge-response/ChallengeResponseManager.swift",
 				"challenge-response/MFIKeyActionSheet/MFIKeyActionSheetView.swift",
@@ -571,12 +587,6 @@
 			);
 			target = 75D7DF7A233E5E310029AD87 /* KeePassium Pro AutoFill */;
 		};
-		753F5EEC2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				util/QuickAutoFillPrompt.swift,
-			);
-		};
 		F3C0DE5E5F0000000000000C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -601,14 +611,22 @@
 			);
 			target = F3C0DE5E6F00000000000007 /* PassPouchWidgets */;
 		};
+		F3C0DE5E7F00000000000003 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F3C0DE5E7F00000000000007 /* PassPouchWatch */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		753F586F2E285A6700F4C290 /* KeePassium */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (753F5DCE2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DCF2E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD02E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD12E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5DD32E285A6700F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F3C0DE5E5F0000000000000C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = KeePassium; sourceTree = "<group>"; };
-		753F5EB42E285A7200F4C290 /* KeePassium AutoFill */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (753F5EE82E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EE92E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEA2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEB2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEC2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F3C0DE5E5F0000000000000D /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "KeePassium AutoFill"; sourceTree = "<group>"; };
+		753F5EB42E285A7200F4C290 /* KeePassium AutoFill */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (753F5EE82E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EE92E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEA2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 753F5EEB2E285A7200F4C290 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F3C0DE5E5F0000000000000D /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "KeePassium AutoFill"; sourceTree = "<group>"; };
 		753F5F022E285B1A00F4C290 /* KeePassiumTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = KeePassiumTests; sourceTree = "<group>"; };
 		F3C0DE5E5F00000000000002 /* KeePassiumUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = KeePassiumUITests; sourceTree = "<group>"; };
 		F3C0DE5E6F00000000000006 /* PassPouchWidgets */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F3C0DE5E6F00000000000005 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = PassPouchWidgets; sourceTree = "<group>"; };
+		F3C0DE5E7F00000000000002 /* PassPouchWatch */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F3C0DE5E7F00000000000003 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = PassPouchWatch; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -692,6 +710,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3C0DE5E7F0000000000000C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -717,6 +742,7 @@
 				753F5F022E285B1A00F4C290 /* KeePassiumTests */,
 				F3C0DE5E5F00000000000002 /* KeePassiumUITests */,
 				F3C0DE5E6F00000000000006 /* PassPouchWidgets */,
+				F3C0DE5E7F00000000000002 /* PassPouchWatch */,
 				754BF07C2082A6BD00E3A292 /* Products */,
 				16DE7C3A873A37E1B4636309 /* Frameworks */,
 			);
@@ -735,6 +761,7 @@
 				F37CAA392A88F7330000EF64 /* KeePassiumTests.xctest */,
 				F3C0DE5E5F00000000000001 /* KeePassiumUITests.xctest */,
 				F3C0DE5E6F00000000000001 /* PassPouchWidgets.appex */,
+				F3C0DE5E7F00000000000001 /* PassPouchWatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -791,6 +818,7 @@
 				754BF0772082A6BD00E3A292 /* Sources */,
 				754BF0782082A6BD00E3A292 /* Frameworks */,
 				754BF0792082A6BD00E3A292 /* Resources */,
+				F3C0DE5E7F0000000000000E /* Embed Watch Content */,
 				757687DC21940CE800305F97 /* Embed Frameworks */,
 				7550D241215D758800360E0C /* Embed App Extensions */,
 			);
@@ -800,6 +828,7 @@
 				750CFBD221BA9ACD00E62B09 /* PBXTargetDependency */,
 				75060C5B2B8CEADF006C7B50 /* PBXTargetDependency */,
 				F3C0DE5E6F00000000000004 /* PBXTargetDependency */,
+				F3C0DE5E7F00000000000006 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				753F586F2E285A6700F4C290 /* KeePassium */,
@@ -937,6 +966,28 @@
 			productReference = F3C0DE5E6F00000000000001 /* PassPouchWidgets.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		F3C0DE5E7F00000000000007 /* PassPouchWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C0DE5E7F0000000000000A /* Build configuration list for PBXNativeTarget "PassPouchWatch" */;
+			buildPhases = (
+				F3C0DE5E7F0000000000000B /* Sources */,
+				F3C0DE5E7F0000000000000C /* Frameworks */,
+				F3C0DE5E7F0000000000000D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F3C0DE5E7F00000000000002 /* PassPouchWatch */,
+			);
+			name = PassPouchWatch;
+			packageProductDependencies = (
+			);
+			productName = PassPouchWatch;
+			productReference = F3C0DE5E7F00000000000001 /* PassPouchWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1007,6 +1058,10 @@
 						CreatedOnToolsVersion = 16.0;
 						ProvisioningStyle = Automatic;
 					};
+					F3C0DE5E7F00000000000007 = {
+						CreatedOnToolsVersion = 16.0;
+						ProvisioningStyle = Automatic;
+					};
 					F37CAA382A88F7330000EF64 = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 754BF07A2082A6BD00E3A292;
@@ -1063,6 +1118,7 @@
 				F3C0DE5E5F00000000000008 /* KeePassiumUITests */,
 				75060C542B8CEA84006C7B50 /* MacUtils */,
 				F3C0DE5E6F00000000000007 /* PassPouchWidgets */,
+				F3C0DE5E7F00000000000007 /* PassPouchWatch */,
 			);
 		};
 /* End PBXProject section */
@@ -1118,6 +1174,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F3C0DE5E6F0000000000000D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C0DE5E7F0000000000000D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1205,6 +1268,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3C0DE5E7F0000000000000B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1244,6 +1314,11 @@
 			isa = PBXTargetDependency;
 			target = F3C0DE5E6F00000000000007 /* PassPouchWidgets */;
 			targetProxy = F3C0DE5E6F00000000000003 /* PBXContainerItemProxy */;
+		};
+		F3C0DE5E7F00000000000006 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3C0DE5E7F00000000000007 /* PassPouchWatch */;
+			targetProxy = F3C0DE5E7F00000000000005 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1400,7 +1475,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 173;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1422,7 +1497,7 @@
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.6;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
@@ -1471,7 +1546,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 173;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1487,7 +1562,7 @@
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.6;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
@@ -1505,7 +1580,6 @@
 			buildSettings = {
 				APP_URL_SCHEME = passpouch;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon";
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = KeePassium/KeePassium.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "KeePassium/KeePassium-macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1540,7 +1614,6 @@
 			buildSettings = {
 				APP_URL_SCHEME = passpouch;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon";
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = KeePassium/KeePassium.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "KeePassium/KeePassium-macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1574,8 +1647,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APP_URL_SCHEME = passpouch.pro;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon-pro";
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon";
 				CODE_SIGN_ENTITLEMENTS = KeePassium/KeePassium.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "KeePassium/KeePassium-macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1608,8 +1680,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APP_URL_SCHEME = passpouch.pro;
-				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon-pro";
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon";
 				CODE_SIGN_ENTITLEMENTS = KeePassium/KeePassium.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "KeePassium/KeePassium-macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1789,7 +1860,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PassPouchWidgets/PassPouchWidgets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 173;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 84W4PHXS24;
 				INFOPLIST_FILE = PassPouchWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "PassPouch Widgets";
@@ -1799,7 +1870,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 2.6;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1817,7 +1888,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PassPouchWidgets/PassPouchWidgets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 173;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 84W4PHXS24;
 				INFOPLIST_FILE = PassPouchWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "PassPouch Widgets";
@@ -1827,7 +1898,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 2.6;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1835,6 +1906,58 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3C0DE5E7F00000000000008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 84W4PHXS24;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PassPouchWatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PassPouch;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		F3C0DE5E7F00000000000009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 84W4PHXS24;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PassPouchWatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PassPouch;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.passpouch.ios.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1918,6 +2041,15 @@
 			buildConfigurations = (
 				F3C0DE5E6F00000000000008 /* Debug */,
 				F3C0DE5E6F00000000000009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C0DE5E7F0000000000000A /* Build configuration list for PBXNativeTarget "PassPouchWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C0DE5E7F00000000000008 /* Debug */,
+				F3C0DE5E7F00000000000009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

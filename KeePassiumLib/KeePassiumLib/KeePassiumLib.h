@@ -17,9 +17,9 @@ FOUNDATION_EXPORT const unsigned char KeePassiumLibVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <KeePassiumLib/PublicHeader.h>
 
 #import <CommonCrypto/CommonCrypto.h>
-#import "Core/crypto/salsa20/salsa20.h"
-#import "Core/crypto/chacha20/chacha20.h"
-#import "Core/crypto/argon2/argon2.h"
-#import "Core/crypto/twofish/twofish.h"
-#import "Core/crypto/aeskdf/aeskdf.h"
+#import "salsa20.h"
+#import "chacha20.h"
+#import "argon2.h"
+#import "twofish.h"
+#import "aeskdf.h"
 

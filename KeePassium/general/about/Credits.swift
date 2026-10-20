@@ -82,11 +82,6 @@ extension Credits {
                 url: URL(string: "https://designmodo.com/linecons-free/")
             ),
             Credits(
-                title: LString.creditsIcons8,
-                license: .proprietary,
-                url: URL(string: "https://icons8.com/paid-license-99")
-            ),
-            Credits(
                 title: LString.creditsNuvolaIcons,
                 license: .lgpl,
                 url: URL(string: "https://en.wikipedia.org/wiki/Nuvola")
@@ -266,12 +261,11 @@ extension LString {
         value: "Linecons by Andrian Valeanu",
         comment: "Item in the credits list"
     )
-    public static let creditsIcons8 = NSLocalizedString(
-        "[Credits/Item/icons8]",
-        bundle: Bundle.main,
-        value: "Icons by Icons8",
-        comment: "Item in the credits list"
-    )
+    // NOTE: the former Icons8 *proprietary paid-license* credits entry was
+    // removed in Phase 12 — its only asset (the Google Drive file-provider
+    // glyph) was replaced with a PassPouch original drawing. Icons8's
+    // MIT-licensed flat-color-icons remain in use via the KeePassXC-derived
+    // db-icons and stay covered by the KeePassXC icons credit.
     public static let creditsNuvolaIcons = NSLocalizedString(
         "[Credits/Item/nuvolaIcons]",
         bundle: Bundle.main,

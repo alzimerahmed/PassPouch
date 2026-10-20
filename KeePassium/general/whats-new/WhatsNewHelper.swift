@@ -11,7 +11,7 @@ import UIKit
 import WhatsNewKit
 
 final class WhatsNewHelper {
-    private static let version = WhatsNew.Version(stringLiteral: "2.4")
+    private static let version = WhatsNew.Version(stringLiteral: "1.0.0")
     private static let versionStore = UserDefaultsWhatsNewVersionStore(userDefaults: .appGroupShared)
 
     static func makeAnnouncement(

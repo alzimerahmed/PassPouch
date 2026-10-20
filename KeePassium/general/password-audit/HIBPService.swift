@@ -67,7 +67,7 @@ final class HIBPService {
 
         let task = urlSession.dataTask(with: .init(url: url)) { data, _, error in
             if let error {
-                Diag.error("HIBP request failed [hasPrefix: \(hashPrefix), error: \(error)]")
+                Diag.error("HIBP request failed [error: \(error)]")
                 completionHandler(.failure(.requestError(error)))
                 return
             }
@@ -75,7 +75,7 @@ final class HIBPService {
             guard let data,
                   let string = String(data: data, encoding: .utf8)
             else {
-                Diag.error("HIBP request failed because of empty response [hashPrefix: \(hashPrefix)]")
+                Diag.error("HIBP request failed because of empty response")
                 completionHandler(.failure(.invalidResponse))
                 return
             }

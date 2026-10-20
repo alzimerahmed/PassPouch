@@ -32,6 +32,7 @@ final class MalformedKDBXTests: XCTestCase {
             throw DatabaseError.loadError(reason: .formatError(reason: "No root group"))
         }
         let entry = Entry2(database: db)
+        entry.uuid = UUID()
         entry.setField(name: EntryField.title, value: "Example")
         entry.setField(name: EntryField.password, value: "s3cr3t!", isProtected: true)
         root.add(entry: entry)

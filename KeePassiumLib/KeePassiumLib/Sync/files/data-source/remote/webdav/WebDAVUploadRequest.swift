@@ -14,12 +14,16 @@ final class WebDAVUploadRequest: WebDAVRequestBase {
     let completionQueue: OperationQueue
     let completion: Completion
     let dataToUpload: ByteArray
+    /// ETag observed at the last download/info request; sent as `If-Match`
+    /// so the server rejects the upload with 412 if the file changed since.
+    let ifMatch: String?
 
     init(
         url: URL,
         credential: URLCredential,
         allowUntrustedCertificate: Bool,
         data: ByteArray,
+        ifMatch: String? = nil,
         timeout: Timeout,
         completionQueue: OperationQueue,
         completion: @escaping Completion
@@ -27,6 +31,7 @@ final class WebDAVUploadRequest: WebDAVRequestBase {
         self.completionQueue = completionQueue
         self.completion = completion
         self.dataToUpload = data
+        self.ifMatch = ifMatch
         super.init(
             url: url,
             credential: credential,
@@ -43,7 +48,20 @@ final class WebDAVUploadRequest: WebDAVRequestBase {
         )
         request.httpMethod = "PUT"
         request.httpBody = dataToUpload.asData
+        if let ifMatch = WebDAVETagPrecondition.ifMatchHeader(observedETag: ifMatch) {
+            request.addValue(ifMatch, forHTTPHeaderField: "If-Match")
+        }
         return request
+    }
+
+    override func handleResponse(_ httpResponse: HTTPURLResponse) {
+        if WebDAVETagPrecondition.isConflict(statusCode: httpResponse.statusCode) {
+            Diag.error("WebDAV upload rejected: file modified on the server (412)")
+            finishWith(error: .serverSideError(
+                message: LString.errorWebDAVFileModifiedRemotely))
+            return
+        }
+        super.handleResponse(httpResponse)
     }
 
     override func finishWith(error: FileAccessError) {

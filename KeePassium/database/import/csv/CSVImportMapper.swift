@@ -35,13 +35,25 @@ struct CSVImportMapper {
     let headerRow: [String]
     let dataRows: [[String]]
 
+    /// A row is malformed when it has more columns than the header, or when
+    /// it is so short that a mapped title/username/password column is out of
+    /// bounds. Shorter rows that still cover those columns are importable:
+    /// real exports commonly omit trailing empty cells.
+    private func isMalformed(_ row: [String], mapping: [CSVColumnRole: Int]) -> Bool {
+        if row.count > headerRow.count { return true }
+        let lastRequiredColumn = [CSVColumnRole.title, .username, .password]
+            .compactMap { mapping[$0] }
+            .max() ?? -1
+        return row.count <= lastRequiredColumn
+    }
+
     /// Validates data rows against the mapping and returns the rows that can
-    /// be imported. Rows with a wrong column count fail; rows without any of
+    /// be imported. Malformed rows fail; rows without any of
     /// title/username/password are skipped as empty.
     func prepareRows(mapping: [CSVColumnRole: Int]) -> [PreparedRow] {
         var prepared = [PreparedRow]()
         for (index, row) in dataRows.enumerated() {
-            guard row.count == headerRow.count else {
+            guard !isMalformed(row, mapping: mapping) else {
                 // Wrong column count — cannot map reliably; counted as failed.
                 continue
             }
@@ -53,7 +65,7 @@ struct CSVImportMapper {
 
     /// Classifies a single data row (for preview/summary accounting).
     func classifyRow(_ row: [String], mapping: [CSVColumnRole: Int]) -> RowOutcome {
-        guard row.count == headerRow.count else {
+        guard !isMalformed(row, mapping: mapping) else {
             return .failed(reason: LString.CSVImport.rowWrongColumnCount)
         }
         guard hasMeaningfulContent(row, mapping: mapping) else {
@@ -86,9 +98,11 @@ struct CSVImportMapper {
         let customFieldColumns = format.customFieldColumns(
             headerRow: headerRow,
             mapping: mapping)
-        // Standard field names (case-insensitive) must never be overwritten
-        // by unmapped custom-field columns.
-        let reservedNames: Set<String> = [
+        // Standard field names must never be overwritten by unmapped
+        // custom-field columns; KDBX field names are case-sensitive, so the
+        // check is exact and such columns are renamed "<name> (n)" instead of
+        // silently dropped.
+        let reservedNames = Set([
             EntryField.title,
             EntryField.userName,
             EntryField.password,
@@ -96,7 +110,7 @@ struct CSVImportMapper {
             EntryField.notes,
             EntryField.otp,
             EntryField.totp,
-        ]
+        ])
 
         for row in dataRows {
             switch classifyRow(row, mapping: mapping) {
@@ -135,17 +149,17 @@ struct CSVImportMapper {
                 }
             }
 
-            // Unmapped columns must not collide with standard field names.
+            // Unmapped columns must not collide with standard field names or
+            // with each other: the first collision is renamed "<name> (2)".
             var seenNames = [String: Int]()
+            for name in reservedNames { seenNames[name] = 1 }
             for column in customFieldColumns where column < row.count {
                 let rawName = column < headerRow.count ? headerRow[column] : "field\(column)"
-                let normalized = rawName.trimmingCharacters(in: .whitespaces).lowercased()
-                guard !normalized.isEmpty, !reservedNames.contains(normalized) else { continue }
-                // Deduplicate repeated header names so same-named columns do
-                // not overwrite each other's values.
-                let occurrence = (seenNames[normalized] ?? 0) + 1
-                seenNames[normalized] = occurrence
-                let fieldName = occurrence == 1 ? rawName : "\(rawName) (\(occurrence))"
+                let fieldBaseName = rawName.trimmingCharacters(in: .whitespaces)
+                guard !fieldBaseName.isEmpty else { continue }
+                let occurrence = (seenNames[fieldBaseName] ?? 0) + 1
+                seenNames[fieldBaseName] = occurrence
+                let fieldName = occurrence == 1 ? fieldBaseName : "\(fieldBaseName) (\(occurrence))"
                 let fieldValue = row[column]
                 guard !fieldValue.isEmpty else { continue }
                 entry.setField(name: fieldName, value: fieldValue, isProtected: false)

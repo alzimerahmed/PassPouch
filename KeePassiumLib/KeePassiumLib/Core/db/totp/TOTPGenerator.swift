@@ -14,7 +14,7 @@ public enum TOTPHashAlgorithm {
     case sha256
     case sha512
 
-    var asString: String {
+    public var asString: String {
         switch self {
         case .sha1: return "SHA1"
         case .sha256: return "SHA256"
