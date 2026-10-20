@@ -32,6 +32,7 @@ final class Phase11WatchTests: XCTestCase {
         timeOtpSecret: String? = nil
     ) -> Entry2 {
         let entry = Entry2(database: group.database)
+        entry.uuid = UUID()
         entry.rawTitle = title
         entry.rawUserName = userName
         entry.rawPassword = password
@@ -264,7 +265,7 @@ final class Phase11WatchTests: XCTestCase {
         )
         XCTAssertEqual(
             WatchTOTPCore.generateCode(params: rfcParams(digits: 8), at: t1111111109),
-            "14050471"
+            "07081804"
         )
         XCTAssertEqual(
             WatchTOTPCore.generateCode(params: rfcParams(digits: 6), at: t59),
@@ -274,8 +275,8 @@ final class Phase11WatchTests: XCTestCase {
 
     func testTOTPSHA256Vector() {
         // RFC 6238: SHA256, seed = "12345678901234567890123456789012" (32 bytes),
-        // T=1111111109 → 680847 (8 digits). Base32 of that seed:
-        let seed32 = "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ"
+        // T=1111111109 → 68084774 (8 digits). Base32 of that seed:
+        let seed32 = "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZA===="
         let params = WatchTOTPParams(
             base32Seed: seed32,
             period: 30,
@@ -284,7 +285,7 @@ final class Phase11WatchTests: XCTestCase {
         )
         XCTAssertEqual(
             WatchTOTPCore.generateCode(params: params, at: Date(timeIntervalSince1970: 1_111_111_109)),
-            "680847"
+            "68084774"
         )
     }
 

@@ -34,7 +34,8 @@ final class Phase11SharingTests: XCTestCase {
     // MARK: - Share payload: round-trip
 
     private func makeEntry() -> Entry {
-        let entry = Entry(database: nil)
+        let entry = Entry2(database: nil)
+        entry.uuid = UUID()
         entry.setField(name: EntryField.title, value: "Example Site")
         entry.setField(name: EntryField.userName, value: "alice@example.com")
         entry.setField(name: EntryField.password, value: "s3cr3t-π-password")
@@ -84,7 +85,8 @@ final class Phase11SharingTests: XCTestCase {
     }
 
     func testEmptyValuesAreExcluded() throws {
-        let entry = Entry(database: nil)
+        let entry = Entry2(database: nil)
+        entry.uuid = UUID()
         entry.setField(name: EntryField.title, value: "Only title")
         let payload = try EntrySharePayload.make(
             from: entry, fields: [.title, .password], expiresAt: nil)

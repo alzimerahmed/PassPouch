@@ -31,9 +31,23 @@ final class KeePassiumUITests: XCTestCase {
     }
 
     func testSettingsNavigation() {
+        // First launch with no databases shows the onboarding sheet, which
+        // covers the toolbar — walk through it with Skip/Continue.
+        for _ in 0..<6 {
+            let skipButton = app.buttons["Skip"]
+            let continueButton = app.buttons["Continue"]
+            if skipButton.exists && skipButton.isHittable {
+                skipButton.tap()
+            } else if continueButton.exists && continueButton.isHittable {
+                continueButton.tap()
+            } else {
+                break
+            }
+        }
+
         let settingsButton = app.buttons["settings_button"]
         XCTAssertTrue(
-            settingsButton.waitForExistence(timeout: 15),
+            settingsButton.waitForExistence(timeout: 15) && settingsButton.isHittable,
             "Settings entry point must be reachable from the database picker")
         settingsButton.tap()
         let settingsScreen = app.navigationBars["Settings"]

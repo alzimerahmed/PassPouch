@@ -40,6 +40,7 @@ final class AutoFillSearchHelperTests: XCTestCase {
         totp: String? = nil
     ) -> Entry2 {
         let entry = Entry2(database: database)
+        entry.uuid = UUID()
         entry.setField(name: EntryField.title, value: title)
         entry.setField(name: EntryField.userName, value: userName)
         entry.setField(name: EntryField.password, value: password, isProtected: true)
@@ -50,7 +51,7 @@ final class AutoFillSearchHelperTests: XCTestCase {
             entry.setField(name: EntryField.notes, value: notes)
         }
         if let totp {
-            entry.setField(name: EntryField.totp, value: totp)
+            entry.setField(name: EntryField.otp, value: totp)
         }
         webGroup?.add(entry: entry)
         return entry
@@ -103,7 +104,7 @@ final class AutoFillSearchHelperTests: XCTestCase {
     }
 
     func testTitleMatchIsPartial() {
-        let entry = addEntry(title: "Example Portal", url: nil)
+        let entry = addEntry(title: "example.com Portal", url: nil)
         let results = find(serviceIdentifier: "example.com")
         XCTAssertNil(results.perfectMatch, "Title-only match must not be perfect")
         XCTAssertTrue(

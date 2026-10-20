@@ -29,6 +29,7 @@ final class Phase11QuickAccessTests: XCTestCase {
         timeOtpSecret: String? = nil
     ) -> Entry2 {
         let entry = Entry2(database: group.database)
+        entry.uuid = UUID()
         entry.rawTitle = title
         entry.rawUserName = userName
         entry.rawPassword = password
@@ -101,7 +102,7 @@ final class Phase11QuickAccessTests: XCTestCase {
     // MARK: - Entry mapping
 
     func testMapEntriesExtractsFields() throws {
-        let (_, root) = try makeDatabase()
+        let (db, root) = try makeDatabase()
         let entry = makeEntry(
             in: root,
             title: "Bank",
@@ -119,20 +120,20 @@ final class Phase11QuickAccessTests: XCTestCase {
     }
 
     func testMapEntriesDetectsTOTP() throws {
-        let (_, root) = try makeDatabase()
+        let (db, root) = try makeDatabase()
         _ = makeEntry(
             in: root,
             title: "TOTP Site",
             password: "secret",
             timeOtpSecret: "JBSWY3DPEHPK3PXP")
         let items = QuickAccessViewModel.mapEntries(
-            QuickAccessViewModel.entries(in: try XCTUnwrap(root.database)))
+            QuickAccessViewModel.entries(in: db))
         XCTAssertEqual(items.count, 1)
         XCTAssertTrue(items[0].hasTOTP)
     }
 
     func testEntriesInDatabaseWalksGroups() throws {
-        let (_, root) = try makeDatabase()
+        let (db, root) = try makeDatabase()
         _ = makeEntry(in: root, title: "Top", password: "a")
         let subGroup = Group2(database: root.database)
         subGroup.name = "Sub"
@@ -140,7 +141,7 @@ final class Phase11QuickAccessTests: XCTestCase {
         _ = makeEntry(in: subGroup, title: "Nested", password: "b")
 
         let items = QuickAccessViewModel.mapEntries(
-            QuickAccessViewModel.entries(in: try XCTUnwrap(root.database)))
+            QuickAccessViewModel.entries(in: db))
         XCTAssertEqual(Set(items.map(\.title)), ["Top", "Nested"])
     }
 
@@ -159,11 +160,11 @@ final class Phase11QuickAccessTests: XCTestCase {
     }
 
     func testSetDatabasePopulatesAndClearResets() throws {
-        let (_, root) = try makeDatabase()
+        let (db, root) = try makeDatabase()
         _ = makeEntry(in: root, title: "Bank", password: "x")
 
         let viewModel = QuickAccessViewModel()
-        viewModel.setDatabase(try XCTUnwrap(root.database))
+        viewModel.setDatabase(db)
         XCTAssertEqual(viewModel.entries.count, 1)
 
         viewModel.clear()
