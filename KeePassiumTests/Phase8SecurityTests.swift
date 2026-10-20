@@ -205,7 +205,7 @@ final class Phase8SecurityTests: XCTestCase {
     /// The embedded public key is derived from the scalar (real Bitwarden
     /// exports are self-consistent).
     private func makePKCS8DER(scalar: Data) throws -> Data {
-        let privateKey = try P256.Signing.PrivateKey(dataRepresentation: scalar)
+        let privateKey = try P256.Signing.PrivateKey(rawRepresentation: scalar)
         let publicKey = privateKey.publicKey.rawRepresentation // 0x04 || X || Y
 
         var der = Data()
@@ -250,7 +250,7 @@ final class Phase8SecurityTests: XCTestCase {
         // The produced PEM must parse as the same P-256 key.
         let pem = try XCTUnwrap(passkey?.privateKeyPEM)
         let key = try P256.Signing.PrivateKey(pemRepresentation: pem)
-        XCTAssertEqual(key.dataRepresentation, scalar)
+        XCTAssertEqual(key.rawRepresentation, scalar)
     }
 
     func testBitwardenFIDO2CredentialRejectsGarbage() {

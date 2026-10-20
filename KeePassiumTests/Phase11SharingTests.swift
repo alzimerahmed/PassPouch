@@ -45,7 +45,7 @@ final class Phase11SharingTests: XCTestCase {
 
     func testRoundTripAllFields() throws {
         let entry = makeEntry()
-        let allFields = Set(EntryShareField.allCases.subtracting([.totp]))
+        let allFields = Set(EntryShareField.allCases.filter { $0 != .totp })
         let payload = try EntrySharePayload.make(from: entry, fields: allFields, expiresAt: nil)
         let (payloadData, key) = try EntrySharePayload.encrypt(payload)
         let decrypted = try EntrySharePayload.decrypt(payloadData, key: key)

@@ -163,7 +163,7 @@ final class Phase11QuickAccessTests: XCTestCase {
         _ = makeEntry(in: root, title: "Bank", password: "x")
 
         let viewModel = QuickAccessViewModel()
-        viewModel.setDatabase(root.database)
+        viewModel.setDatabase(try XCTUnwrap(root.database))
         XCTAssertEqual(viewModel.entries.count, 1)
 
         viewModel.clear()
